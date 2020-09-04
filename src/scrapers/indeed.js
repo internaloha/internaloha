@@ -6,11 +6,12 @@ async function fetchInfo(page, selector) {
   let result = '';
   try {
 
-    await page.waitForSelector(selector);
+    await page.waitForSelector(selector, { timeout: 1000 });
     result = await page.evaluate((select) => document.querySelector(select).textContent, selector);
   } catch (error) {
     console.log('Our Error: fetchInfo() failed.\n', error.message);
     result = 'Error';
+    throw error;
   }
   return result;
 }
@@ -82,25 +83,21 @@ async function fetchInfo(page, selector) {
     );
 
     if (internshipDropdown.length === 1) {
-      await page.goto(`https://www.indeed.com${internshipDropdown[0]}`)
+      await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
       console.log('Filtering by internship tag...');
     } else {
       console.log('No internship tag.');
     }
 
     const data = [];
+    const skippedLinks = [];
     let totalJobs = 0;
+    const urls = [];
 
     let hasNext = true;
 
+    // while there a next page, keep clicking
     while (hasNext === true) {
-
-      await page.waitForSelector('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"]');
-      const elements = await page.$$('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"]');
-
-      console.log('Scraping Jobs:', elements.length);
-      totalJobs += elements.length;
-
       // getting all job link for that page
       await page.waitForSelector('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a');
       const url = await page.evaluate(
@@ -111,48 +108,9 @@ async function fetchInfo(page, selector) {
           ),
       );
 
-      for (let i = 0; i < elements.length; i++) {
-        const element = elements[i];
-        await element.click();
-        
-        await page.waitForSelector('div[id="vjs-container"]');
-        const position = await fetchInfo(page, 'div[id="vjs-jobtitle"]');
-        let company = '';
-        try {
-          company = await fetchInfo(page, 'span[id="vjs-cn"]');
-
-        } catch (err3) {
-          console.log('Our Error:', err3.message);
-        }
-        const location = await fetchInfo(page, 'span[id="vjs-loc"]');
-        const posted = await fetchInfo(page, 'div[class="result-link-bar"] span[class="date date-a11y"]');
-        const description = await fetchInfo(page, 'div[id="vjs-desc"]');
-        const lastScraped = new Date();
-        const skills = 'N/A';
-
-        let state = '';
-        if (!location.match(/([^,]*)/g)[2]) {
-          state = 'United States';
-        } else {
-          state = location.match(/([^,]*)/g)[2].trim();
-        }
-
-        data.push({
-          position: position,
-          company: company,
-          location: {
-            city: location.match(/([^,]*)/g)[0],
-            state: state,
-          },
-          posted: posted,
-          url: `https://www.indeed.com${url[i]}`,
-          skills: skills,
-          lastScraped: lastScraped,
-          description: description,
-        });
-
-        console.log(position);
-      }
+      urls.push(url);
+      console.log(urls);
+      console.log('Total pages:', urls.length);
 
       // keep clicking next until it reaches end
       try {
@@ -164,12 +122,78 @@ async function fetchInfo(page, selector) {
       }
     }
 
+    // go through urls array to fetch info
+    for (let i = 0; i < urls.length; i++) {
+      for (let j = 0; j < urls[i].length; j++) {
+
+        totalJobs++;
+        await page.goto(`https://www.indeed.com${urls[i][j]}`);
+
+        try {
+          let position = '';
+          // position alternates between two different css class
+          try {
+            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container jobsearch-JobInfoHeader-title-containerEji"]');
+          } catch (noClassError) {
+            console.log('--- Trying with other class name ---');
+            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container"]');
+          }
+          const company = await fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]');
+          const location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
+
+          const posted = await fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]');
+
+          const description = await fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]');
+          const lastScraped = new Date();
+          const skills = 'N/A';
+
+          let state = '';
+          if (!location.match(/([^,]*)/g)[2]) {
+            state = 'United States';
+          } else {
+            state = location.match(/([^,\d])+/g)[1].trim();
+          }
+
+          let zip = location.match(/([^\D,])+/g);
+
+          if (zip != null) {
+            zip = zip[0];
+          } else {
+            zip = 'N/A';
+          }
+
+          data.push({
+            position: position,
+            company: company,
+            location: {
+              city: location.match(/([^,]*)/g)[0],
+              state: state,
+              zip: zip,
+            },
+            posted: posted,
+            url: `https://www.indeed.com${urls[i][j]}`,
+            skills: skills,
+            lastScraped: lastScraped,
+            description: description,
+          });
+
+          console.log(position);
+        } catch (err6) {
+          console.log('--- Error with scraping... Skipping ---');
+          console.log(err6.message);
+          skippedLinks.push(`https://www.indeed.com${urls[i][j]}`);
+        }
+      }
+
+    }
+
     // write results to JSON file
     await fs.writeFile('scrapers/data/canonical/indeed.canonical.data.json',
         JSON.stringify(data, null, 4), 'utf-8',
         err => (err ? console.log('\nData not written!', err) :
             console.log('\nData successfully written!')));
 
+    console.log('Total links skipped:', skippedLinks.length);
     console.log('Total internships scraped:', totalJobs);
     await browser.close();
 
