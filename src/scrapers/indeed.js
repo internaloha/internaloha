@@ -107,10 +107,8 @@ async function fetchInfo(page, selector) {
               a => a.getAttribute('href'),
           ),
       );
-
+      totalJobs += url.length;
       urls.push(url);
-      console.log(urls);
-      console.log('Total pages:', urls.length);
 
       // keep clicking next until it reaches end
       try {
@@ -122,11 +120,13 @@ async function fetchInfo(page, selector) {
       }
     }
 
+    console.log('Total pages:', urls.length);
+    console.log('Total jobs: ', totalJobs);
+
     // go through urls array to fetch info
     for (let i = 0; i < urls.length; i++) {
       for (let j = 0; j < urls[i].length; j++) {
 
-        totalJobs++;
         await page.goto(`https://www.indeed.com${urls[i][j]}`);
 
         try {
@@ -139,8 +139,13 @@ async function fetchInfo(page, selector) {
             position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container"]');
           }
           const company = await fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]');
-          const location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
-
+          let location = '';
+          try {
+            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
+          } catch (noLocation) {
+            console.log('--- Trying with other class name ---');
+            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child');
+          }
           const posted = await fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]');
 
           const description = await fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]');
@@ -195,6 +200,7 @@ async function fetchInfo(page, selector) {
 
     console.log('Total links skipped:', skippedLinks.length);
     console.log('Total internships scraped:', totalJobs);
+    console.log(skippedLinks);
     await browser.close();
 
   } catch (e) {
