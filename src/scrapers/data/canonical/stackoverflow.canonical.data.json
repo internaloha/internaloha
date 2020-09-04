@@ -1,0 +1,55 @@
+[
+    {
+        "position": "Software Engineer Intern (Research) - Fall 2020",
+        "company": "GrammaTech, Inc.",
+        "location": {
+            "city": "Ithaca",
+            "state": "NY"
+        },
+        "posted": "2020-08-22T00:36:53.277Z",
+        "url": "https://stackoverflow.com/jobs/426123/software-engineer-intern-research-fall-2020-grammatech-inc?a=2iUk2f3Ywmze&so=i&pg=1&offset=0&total=3&so_medium=Internal&so_source=JobSearch&j=internship",
+        "skills": [
+            "c++",
+            "python",
+            "java",
+            "javascript",
+            "security"
+        ],
+        "lastScraped": "2020-09-04T00:36:53.277Z",
+        "description": "Job description\n\nOverview:\n\nGrammaTech’s internship program offers students the opportunity to gain real experience in a friendly, open, and supportive environment. We choose projects based on real needs, and interns work closely with engineers to make sure that projects are completed successfully.\n\nLocation:  Due to the COVID Pandemic, managers may allow interns with the appropriate skills to work remotely but preference is our Ithaca, NY office.\n\nResponsibilities:\n\nResearch projects at GrammaTech can take on a wide variety of topics and challenges. Projects focus on software assurance, software protection, reverse engineering, and software producibility. We do both static and dynamic analysis on both source and object code, in order to tackle serious problems with practical solutions.\n\nPotential projects include:\n\nApply compiler optimizations to binaries. Develop some classic compiler optimizations on top of our IR.\nCompile benchmark programs, design and run a large-scale Bug-Injector experiment\nWeb development of a reverse-engineering diagram viewer and editor\nImprove precision and recall of similar machine code search, including feature engineering, run experiments to identify gaps, and implement solutions\nWork on automatically injecting known bugs into JavaScript programs, i.e., building a JavaScript front-end for Bug Injector\nExpand testing for vulnerability detection and rewriting for embedded systems. Set up sample systems, identify vulnerabilities, test if our tools offer strong protection.\n\nQualifications:\n\nRequired\n\nCurrently enrolled in a BS, MS, or PhD in Computer Science\nExcellent programming skills (C++, Java, Javascript, Python) in Linux or Windows environments\n\nPreferred\n\nEnrollment in a Computer Science PhD program"
+    },
+    {
+        "position": "Software Engineer Intern",
+        "company": "HENNGE K.K.",
+        "location": {
+            "city": "Tokyo",
+            "state": "Japan"
+        },
+        "posted": "2020-08-19T00:36:54.104Z",
+        "url": "https://stackoverflow.com/jobs/380987/software-engineer-intern-hennge-kk?a=23LOAbbUg8De&so=i&pg=1&offset=1&total=3&so_medium=Internal&so_source=JobSearch&j=internship",
+        "skills": [
+            "python",
+            "go",
+            "amazon-web-services",
+            "google-cloud-platform"
+        ],
+        "lastScraped": "2020-09-04T00:36:54.104Z",
+        "description": "Job description\n\nJoin us for a unique 6-8 week internship in Japan that will offer you both personal and professional development opportunities. Experience working in a Japanese company that prides itself on cultivating an internationally diverse culture. You will work alongside our experienced Cloud Product Development engineers with a dedicated mentor. In the HENNGE Global Internship Program (GIP), you will acquire practical application development skills using Python and Go. GIP will provide hands-on experience using state-of-the-art cloud platforms such as Amazon Web Services and Google Cloud Platform to develop applications. Japanese is not required as English is our primary language.\n\nInternship Duration \n6 or 8 weeks (from 10AM until 7PM from Monday to Friday) \n\nInternship Slots \n\nOur Global Internship Program is open year-round and the internship slots are every two months.\n\nPlease check our website for the updated slots of 2021 batches along with our recent statement regarding the ongoing Covid-19 pandemic.\n\nhennge.com/global/gip\n\n\nQualifications\n\n\nAt least second-year completed (Junior or Senior) or fresh graduate with BS, MS, or PhD in Computer Science or a related area of study\nExperience in systems, software or algorithms\nKnowledge of Unix/Linux environment\nProficiency with Python or Go\nFamiliarity with TCP/IP and network programming\nFluency in English (Japanese is not required)\n\nThose interested in seeking a career in Japan will be at a significant advantage.\n\nBenefits\n\n\nUp to 150,000 JPY/month subsidy. HENNGE Global Internship Program is a training program without salary. The subsidy is provided to cover living costs such as meals, commuting expenses, and accommodation.\nRound-trip airfare coverage\nMedical insurance\nSupport for visa acquisition & full guidance for incoming preparation\n10 free Get-To-Know-You lunches\nJapanese cultural events\nMonthly Technical Session: internal mini-conference where the engineers will share knowledge or recent trends\nRefresh room & office parties\n\n\nResidency Requirements\nAll candidates considered, including international students\n\nApplication Procedures \nThe internship slots are handled on a first-come, first-served basis. Our team will review applications on a rolling basis and so it is in your best interest to apply early. There is no deadline for submission of the admission challenge, and time taken to complete it will not be considered in the application. Due to the time required for visa and internship preparation, we suggest you apply at least 3 months before your preferred slot.\n\nSelection Process \n1. HENNGE Admission Challenge\n2. Screening process\n3. Online interview"
+    },
+    {
+        "position": "Intern IT Security - for Hamburg’s first Unicorn company",
+        "company": "ABOUT YOU GmbH",
+        "location": {
+            "city": "Hamburg",
+            "state": "Deutschland"
+        },
+        "posted": "2020-08-20T00:36:56.260Z",
+        "url": "https://stackoverflow.com/jobs/379291/intern-it-security-for-hamburg-s-first-unicorn-about-you-gmbh?a=23cyaB6YqEko&so=i&pg=1&offset=2&total=3&so_medium=Internal&so_source=JobSearch&j=internship",
+        "skills": [
+            "security",
+            "testing"
+        ],
+        "lastScraped": "2020-09-04T00:36:56.260Z",
+        "description": "Job description\n\nWe are currently looking for an Intern IT Security who is eager to learn and join our Information Security Team for 3 – 6 months.\n\nOur Security Team ensures that customers of our online shop have a safe shopping experience and their personal data is secure with us. In addition, the team also protects our corporate data and the hardware of our employees. Protecting customer and company information is an important part of our business and our team is passionate about bringing security to the next level. Our goal is to create a secure environment without restricting or slowing down business processes.\n\nWe are looking for an Intern IT Security who wants to start their career in the security field, is passionate to work on security-related topics and wants to build up knowledge in penetration testing, security monitoring, automation other topics.\n\nWhat you will do\n\nAssist the team in triaging vulnerability reports submitted through our bug bounty program\nInvestigate and respond to security incidents in our systems\nParticipate in employee security awareness training\nParticipate in penetration testing of internal systems\nImprove our monitoring and scanning tools to detect security issues and automate routine tasks\nReview and write security policies and guidelines\n\nWho you are\n\nYou are curious about Web Application security and want to understand how things work and how to break them\nYou have some background in Computer Science, IT Administration and/or Security\nYou are able to write simple scripts and programs in any programming language\nYou like challenges, ideally you play CTF or solve hacking challenges online\nYou have good communication and presentation skills\nFluent English skills (spoken & written)\n\nBenefits\n\nGrow together with one of the fastest growing eCommerce companies in Europe\nFlexible working times\n40% discount on our online shop\nFresh fruits + drinks everywhere\nLanguage courses (German & English)\nFree sports courses & reduced price for gym membership\nSubsidized public transportation ticket\nFree choice of hardware and operating system (Mac, Windows, Linux) also for private usage\nState-of-the-art tech stack running on AWS\nModern office in the city center of Hamburg\nInternational working environment and English as company language\nCompany flats (subject to availability)\nAgile work environment (MOVE) and cross-functional teams\nFree access to Germany’s greatest developer conference code.talks\nCompany pension scheme\nFree Laracasts and Egghead account \nHelp in relocation and VISA process\n\nWe are looking forward to receiving your application – preferably via our online application portal! Thus, we can ensure a faster process and for you it is very easy to upload your application documents. :)"
+    }
+]

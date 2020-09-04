@@ -124,7 +124,7 @@ function InternshipListingCard2(props) {
         <Modal closeIcon trigger={
           <Item.Content>
             <Item.Header>
-              <a href={props.internship.url}>
+              <a href={props.internship.url} target="_blank" rel='noopener noreferrer'>
                 <Header as={'h3'} style={{ color: '#263763', paddingTop: '2rem' }}>
                   {props.internship.position}
                 </Header>
@@ -179,7 +179,7 @@ function InternshipListingCard2(props) {
               <Icon name='star'/>
               Add to Favorites
             </Button>
-            <a href={props.internship.url}>
+            <a href={props.internship.url} target="_blank" rel='noopener noreferrer'>
               <Button style={{ backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
                 Go to Listing: {siteName(props.internship.url)}
                 <Icon name='chevron right'/>

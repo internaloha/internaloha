@@ -16,6 +16,7 @@
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
     "preval.macro": "^5.0.0",
+    "puppeteer": "^5.2.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
@@ -30,7 +31,8 @@
     "typescript": "^3.8.3",
     "uniforms": "^2.6.9",
     "uniforms-bridge-simple-schema-2": "^2.6.7",
-    "uniforms-semantic": "^2.6.9"
+    "uniforms-semantic": "^2.6.9",
+    "user-agents": "^1.0.559"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -51,10 +53,21 @@
     "deploy-help": "gh-pages --help",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "node test.js",
     "eject": "react-scripts eject",
     "lint": "eslint --quiet --ext .jsx --ext .js ./src",
-    "statistics": "node src/statistics.js"
+    "statistics": "node src/statistics.js",
+    "internships": "node scrapers/internships.js",
+    "simply": "node scrapers/simplyHired.js",
+    "zip": "node scrapers/zipRecruiter.js",
+    "idealist": "node scrapers/idealist.js",
+    "indeed": "node scrapers/indeed.js",
+    "monster": "node scrapers/monster.js",
+    "linkedin": "node scrapers/linkedin.js",
+    "natural": "node scrapers/naturalTest.js",
+    "youtern": "node scrapers/Youtern.js",
+    "cool": "node scrapers/Cooworks.js",
+    "stackoverflow": "node scrapers/stackoverflow.js"
   },
   "eslintConfig": {
     "extends": "react-app"

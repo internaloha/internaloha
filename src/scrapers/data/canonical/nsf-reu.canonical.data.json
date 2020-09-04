@@ -1,0 +1,1651 @@
+[
+  {
+    "position": "Sensor Signal and Information Processing (SenSIP)",
+    "contact": "Andreas Spanias, (480) 965-5311, spanias@asu.edu",
+    "skills": [
+      "Sensors and signal processing algorithms",
+      "sensor design and fabrication",
+      "signal processing",
+      "wearable and flexible sensors",
+      "machine learning",
+      "interface circuits",
+      "sensors for Internet of Things"
+    ],
+    "location": {
+      "city": "Tempe",
+      "state": "Arizona",
+      "zip": "85287"
+    },
+    "url": "https://engineering.asu.edu/sensip/reu-index-html/"
+  },
+  {
+    "position": "Research Experience for Undergraduate on Smart UAVs",
+    "contact": "Saad Biaz, (334) 844-6307, biazsaa@auburn.edu",
+    "skills": [
+      "Unmanned Aerial Vehicles (UAVs)",
+      "Autonomous Flight"
+    ],
+    "location": {
+      "city": "Auburn",
+      "state": "Alabama",
+      "zip": "36849"
+    },
+    "url": "http://www.eng.auburn.edu/comp/research/impact/"
+  },
+  {
+    "position": "REU Site: Parallel and Distributed Computing",
+    "contact": "Sanjeev Baskiyar, (334) 844-6306, baskisa@auburn.edu",
+    "skills": [
+      "CPU temperature control for energy reduction",
+      "indoor localization using deep learning",
+      "thermal friendly architecture",
+      "smart utility networks",
+      "distributed analytics",
+      "machine learning algorithms"
+    ],
+    "location": {
+      "city": "Auburn",
+      "state": "Alabama",
+      "zip": ""
+    },
+    "url": "http://www.eng.auburn.edu/csse/research/research-experience-for-undergraduates-reu-in-parallel-and-distributed-computing/index.html"
+  },
+  {
+    "position": "Data-driven Security",
+    "contact": "Francesca Spezzano, (208) 426-2491, francescaspezzano@boisestate.edu",
+    "skills": [
+      "National and cyber security: counter-terrorism",
+      "online misbehavior and misinformation detection and mitigation",
+      "intrusion detection systems",
+      "side-channel attacks",
+      "lightweight cryptography"
+    ],
+    "location": {
+      "city": "Boise",
+      "state": "Idaho",
+      "zip": "83725-2055"
+    },
+    "url": "https://datadrivensecurity.boisestate.edu/UndergraduateResearch"
+  },
+  {
+    "position": "Undergraduate Research Experiences in  Big Data Security and Privacy",
+    "contact": "Tingting Chen, (909) 869-4842, tingtingchen@cpp.edu",
+    "skills": [
+      "Genomic data privacy",
+      "secure multiparty cloud computation",
+      "hybrid data center security",
+      "big data privacy preserving techniques",
+      "privacy preserving federated search",
+      "security compliance measurement"
+    ],
+    "location": {
+      "city": "Pomona",
+      "state": "California",
+      "zip": "91768"
+    },
+    "url": "http://www.cpp.edu/~bigdatasec-reu/"
+  },
+  {
+    "position": "Interdisciplinary Software Engineering",
+    "contact": "Joshua Sunshine, (412) 268-1097, reuse@cs.cmu.edu",
+    "skills": [
+      "Software API usability",
+      "green computing",
+      "programming language design",
+      "security and privacy",
+      "automated program analysis and repair",
+      "self-adaptive systems",
+      "and software development tools"
+    ],
+    "location": {
+      "city": "Pittsburgh",
+      "state": "Pennsylvania",
+      "zip": "15213"
+    },
+    "url": "http://reuse.cs.cmu.edu"
+  },
+  {
+    "position": "Robotics and Intelligent Systems Scholars",
+    "contact": "Rachel Burcin, (412) 268-4272, rburcin@andrew.cmu.edu",
+    "skills": [
+      "Artificial intelligence",
+      "aerial robotics",
+      "autonomous navigation",
+      "field robotics",
+      "human-robot interaction",
+      "machine learning",
+      "manipulation",
+      "medical robotics",
+      "mobile robots",
+      "motion planning",
+      "multi-agent"
+    ],
+    "location": {
+      "city": "Pittsburgh",
+      "state": "Pennsylvania",
+      "zip": "15213"
+    },
+    "url": "https://riss.ri.cmu.edu/"
+  },
+  {
+    "position": "REU Site: High Performance Computing with Engineering Applications",
+    "contact": "Daqing Hou, (315) 268-7675, dhou@clarkson.edu",
+    "skills": [
+      "High Performance Computing",
+      "Parallel and Distributed Computing",
+      "Computer Architecture",
+      "Computing Performance Optimization",
+      "Engineering Applications",
+      "Mathematical Modeling",
+      "Algorithm Development"
+    ],
+    "location": {
+      "city": "Potsdam",
+      "state": "New York",
+      "zip": "13699-5720"
+    }
+  },
+  {
+    "position": "REU Site on Security and Privacy for Mobile Sensing and the Internet of Things",
+    "contact": "Alfredo J. Perez, (706) 507-8194, perez_alfredo@columbusstate.edu",
+    "skills": [
+      "Security",
+      "privacy",
+      "mobile sensing",
+      "internet of things."
+    ],
+    "location": {
+      "city": "Columbus",
+      "state": "Georgia",
+      "zip": "31909"
+    },
+    "url": "http://www.reucsu.org/"
+  },
+  {
+    "position": "REU Site in IoT Security",
+    "contact": "Yong Wang, (605) 256-5690, yong.wang@dsu.edu",
+    "skills": [
+      "IoT security",
+      "vulnerability discovery",
+      "malware analysis",
+      "ethical hacking",
+      "cloud vulnerability exploitation",
+      "IoT forensics",
+      "risk mitigation",
+      "access control",
+      "IoT and user privacy",
+      "security remediation"
+    ],
+    "location": {
+      "city": "Madison",
+      "state": "South Dakota",
+      "zip": "57042"
+    },
+    "url": "http://www.cybertraining.pro"
+  },
+  {
+    "position": "Medical Informatics Experiences (MedIX) in undergraduate research",
+    "contact": "Daniela  Raicu, (312) 362-5512, draicu@cti.depaul.edu",
+    "skills": [
+      "Medical informatics",
+      "image processing",
+      "computer vision",
+      "artificial intelligence",
+      "machine learning",
+      "data mining",
+      "knowledge discovery"
+    ],
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "zip": "60604"
+    },
+    "url": "http://facweb.cs.depaul.edu/research/vc/medix/index.htm"
+  },
+  {
+    "position": "Cybersecurity Research of Unmanned Aerial Vehicles",
+    "contact": "Eduardo Rojas, (386) 226-7701, rojase1@erau.edu",
+    "skills": [
+      "Unmanned aerial vehicles",
+      "cybersecurity",
+      "data privacy",
+      "network security",
+      "secure UAV control"
+    ],
+    "location": {
+      "city": "Daytona Beach",
+      "state": "Florida",
+      "zip": "32114-3966"
+    },
+    "url": "https://sites.google.com/view/nsf-reu-erau/"
+  },
+  {
+    "position": "Sensing and Smart Systems",
+    "contact": "Jason O. Hallstrom, (561) 297-4748, jhallstrom@fau.edu",
+    "skills": [
+      "IoT security",
+      "battery-free computing",
+      "emotion sensing",
+      "robotic prosthetics",
+      "cardiac analysis",
+      "traffic control",
+      "vehicle-based sensing",
+      "data embedding in media",
+      "smart energy systems",
+      "underwater sensing"
+    ],
+    "location": {
+      "city": "Boca Raton",
+      "state": "Florida",
+      "zip": "33431"
+    },
+    "url": "http://isense.fau.edu/reu/reu-home-2020.php"
+  },
+  {
+    "position": "REU SITE: Research Experiences for Undergraduates in Advanced Secured Sensor Enabling Technologies",
+    "contact": "Niki Pissinou, (305) 348-3716, pissinouci@fiu.edu",
+    "skills": [
+      "Optimization methods and software for \r\nrobust",
+      "secure",
+      "context aware",
+      "reconfigurable and adaptable computing \r\nsystems for emerging multidisciplinary \r\napplications"
+    ],
+    "location": {
+      "city": "Miami",
+      "state": "Florida",
+      "zip": "33199"
+    },
+    "url": "http://it2.fiu.edu/IT2_REU.php"
+  },
+  {
+    "position": "REU Site: Security of Smart Things",
+    "contact": "Kemal Akkaya, (305) 348-3017, kakkaya@fiu.edu",
+    "skills": [
+      "Internet-of-things",
+      "cyber-physical systems",
+      "security of smart things",
+      "security of critical infrastructures",
+      "user privacy",
+      "cybersecurity",
+      "hardware security"
+    ],
+    "location": {
+      "city": "Miami",
+      "state": "Florida",
+      "zip": "33174"
+    },
+    "url": "https://sst-reu.fiu.edu/"
+  },
+  {
+    "position": "Accessible Information and Communications Technology (AICT)",
+    "contact": "Raja Kushalnagar, (202) 750-2458, raja.kushalnagar@gallaudet.edu",
+    "skills": [
+      "Accessible computing",
+      "human-computer interaction",
+      "multimodal interaction",
+      "automatic-speech-recognition",
+      "automatic-sign-recognition"
+    ],
+    "location": {
+      "city": "Washington",
+      "state": "District Of Columbia",
+      "zip": "20002"
+    },
+    "url": "http://aict.gallaudet.edu"
+  },
+  {
+    "position": "Undergraduate Research in Educational Data Mining",
+    "contact": "Mark Snyder, (703) 993-5624, msnyde14@gmu.edu",
+    "skills": [
+      "Educational data mining",
+      "data mining",
+      "visualization",
+      "learning technologies",
+      "data analytics"
+    ],
+    "location": {
+      "city": "Fairfax",
+      "state": "Virginia",
+      "zip": "22030"
+    },
+    "url": "https://cs.gmu.edu/~reu/"
+  },
+  {
+    "position": "Civic Data Science",
+    "contact": "Bistra Dilkina, , bdilkina@cc.gatech.edu",
+    "skills": [
+      "Data analytics",
+      "machine learning",
+      "information visualization",
+      "optimization applied in areas of civic importance such as social issues",
+      "sustainability",
+      "environment",
+      "urban planning",
+      "public safety"
+    ],
+    "location": {
+      "city": "Atlanta",
+      "state": "Georgia",
+      "zip": "30332"
+    },
+    "url": "http://civicdatascience.gatech.edu"
+  },
+  {
+    "position": "Developing Smart and Autonomous Internet-of-Things Systems",
+    "contact": "Ashwin Ashok, (404) 413-6657, aashok@gsu.edu",
+    "skills": [
+      "Internet of Things (IoT)",
+      "artificial intelligence",
+      "computer vision",
+      "robotics",
+      "mobile computing",
+      "sensor networks",
+      "visible light communication"
+    ],
+    "location": {
+      "city": "Atlanta",
+      "state": "Georgia",
+      "zip": "30303"
+    },
+    "url": "http://tinman.cs.gsu.edu/~iot-reu-gsu/index.php"
+  },
+  {
+    "position": "Research Experience for Undergraduates in Immersive Media Computing",
+    "contact": "Zhisheng Yan, (404) 413-5120, zyan@gsu.edu",
+    "skills": [
+      "Augmented reality",
+      "virtual reality",
+      "computer vision",
+      "video communication and networking",
+      "GPU rendering",
+      "parallel computing",
+      "image processing"
+    ],
+    "location": {
+      "city": "Atlanta",
+      "state": "Georgia",
+      "zip": "30303"
+    },
+    "url": "https://grid.cs.gsu.edu/reu-immersive-computing/"
+  },
+  {
+    "position": "REU Site in Computer Systems",
+    "contact": "Zachary Dodds, (909) 607-1813, dodds@cs.hmc.edu",
+    "skills": [
+      "Algorithms for active transportation",
+      "kinetic typography",
+      "human gaze response to feature films",
+      "human-robot learning"
+    ],
+    "location": {
+      "city": "Claremont",
+      "state": "California",
+      "zip": "91711"
+    },
+    "url": "http://www.cs.hmc.edu/reu/"
+  },
+  {
+    "position": "BigDataX: From Theory to Practice in Big Data Computing at Extreme Scales",
+    "contact": "Ioan Raicu, (312) 567-5704, iraicu@cs.iit.edu",
+    "skills": [
+      "Distributed systems many-core computing",
+      "cluster computing",
+      "grid computing",
+      "cloud computing",
+      "supercomputing",
+      "parallel computing & languages",
+      "big data",
+      "scientific computing",
+      "data sciences",
+      "databases"
+    ],
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "zip": "60616"
+    },
+    "url": "http://datasys.cs.iit.edu/grants/BigDataX/index.html"
+  },
+  {
+    "position": "Proactive Health Informatics Research Experience for Undergraduates",
+    "contact": "Katie Siek, (812) 856-0598, ksiek@indiana.edu",
+    "skills": [
+      "Human computer interaction",
+      "pervasive computing (mobile or wearable)",
+      "environmental sensing (ambient and on-body)",
+      "machine learning (vision recognition and signal processing)"
+    ],
+    "location": {
+      "city": "Bloomington",
+      "state": "Indiana",
+      "zip": "47408"
+    },
+    "url": "http://prohealth.soic.indiana.edu/reu/"
+  },
+  {
+    "position": "Data Science of Risk and Human Activity",
+    "contact": "George Mohler, (805) 252-0656, gmohler@iupui.edu",
+    "skills": [
+      "Data science",
+      "machine learning",
+      "statistics",
+      "applications to risk and human activity"
+    ],
+    "location": {
+      "city": "Indianapolis",
+      "state": "Indiana",
+      "zip": "46223"
+    },
+    "url": "https://www.datareu.com"
+  },
+  {
+    "position": "Enhancing Undergraduate Research Experiences in Mobile Cloud and DataSecurity",
+    "contact": "Feng Li, (317) 278-8391, fengli@iupui.edu",
+    "skills": [
+      "Cyber security",
+      "mobile computing",
+      "wireless communication",
+      "mobile cloud"
+    ],
+    "location": {
+      "city": "Indianapolis",
+      "state": "Indiana",
+      "zip": "46202"
+    },
+    "url": "https://et.iupui.edu/departments/cigt/research/reu/"
+  },
+  {
+    "position": "Summer Program for Interdisciplinary Research and Education-Emerging Interface Technologies",
+    "contact": "Stephen B. Gilbert, (515) 294-6782, gilbert@iastate.edu",
+    "skills": [
+      "human computer interaction",
+      "interface design",
+      "interaction design",
+      "human centered computing",
+      "virtual reality",
+      "haptics",
+      "usability",
+      "augmented reality",
+      "multitouch",
+      "social computing",
+      "robotics",
+      "information"
+    ],
+    "location": {
+      "city": "Ames",
+      "state": "Iowa",
+      "zip": "50011"
+    },
+    "url": "http://www.vrac.iastate.edu/hci/reu/"
+  },
+  {
+    "position": "Intelligent and Scalable Systems",
+    "contact": "Brian Davison, (610) 758-3453, davison@cse.lehigh.edu",
+    "skills": [
+      "Machine learning",
+      "parallel computing",
+      "data mining",
+      "artificial intelligence",
+      "distributed computing",
+      "data science",
+      "cybersecurity",
+      "privacy"
+    ],
+    "location": {
+      "city": "Bethlehem",
+      "state": "Pennsylvania",
+      "zip": "18015"
+    },
+    "url": "http://www.cse.lehigh.edu/REU/"
+  },
+  {
+    "position": "Interdisciplinary Research Experience in Computational Sciences",
+    "contact": "Juana Moreno, (225) 578-7586, moreno@lsu.edu",
+    "skills": [
+      "Cyberinfrastructure",
+      "High Performance Computing",
+      "Computational Sciences",
+      "Mathematics",
+      "Computer Science",
+      "Physics",
+      "Civil Engineering",
+      "Oceanography and Coastal Sciences",
+      "Petroleum Engineering",
+      "Mechanical"
+    ],
+    "location": {
+      "city": "Baton Rouge",
+      "state": "Louisiana",
+      "zip": "70803"
+    },
+    "url": "http://reu.cct.lsu.edu/"
+  },
+  {
+    "position": "Data Science Across Disciplines",
+    "contact": "Praveen Madiraju, (414) 288-6340, praveen.madiraju@marquette.edu",
+    "skills": [
+      "Data Science",
+      "Machine Learning",
+      "Health Informatics",
+      "Exercise Analytics",
+      "Spatial Analytics",
+      "Data Science Ethics"
+    ],
+    "location": {
+      "city": "Milwaukee",
+      "state": "Wisconsin",
+      "zip": "53201"
+    },
+    "url": "https://reu.cs.mu.edu/index.php/Main_Page"
+  },
+  {
+    "position": "REU Site: Undergraduate Research in Computational Biology at Mississippi State University",
+    "contact": "Andy Perkins, (662) 325-0004, perkins@cse.msstate.edu",
+    "skills": [
+      "biology",
+      "biosciences",
+      "computational biology",
+      "genomics"
+    ],
+    "location": {
+      "city": "Mississippi State",
+      "state": "Mississippi",
+      "zip": "39762"
+    },
+    "url": "http://www.cse.msstate.edu/~compbio"
+  },
+  {
+    "position": "Research Experiences in Cybersecurity Algorithms",
+    "contact": "Clemente Izurieta, (406) 994-3720, clemente.izurieta@montana.edu",
+    "skills": [
+      "Cybersecurity algorithms with a focus on software engineering",
+      "machine learning",
+      "vulnerability analysis",
+      "attack detection",
+      "network threats",
+      "blockchain"
+    ],
+    "location": {
+      "city": "Bozeman",
+      "state": "Montana",
+      "zip": "59718"
+    },
+    "url": "http://www.bobcatsoftwarefactory.com/nsf-reu-2020"
+  },
+  {
+    "position": "Research Experience for Undergraduates on Computational Data Analytics for Advancing Human Services",
+    "contact": "Zhi Wei, (973) 642-4497, zhiwei@njit.edu",
+    "skills": [
+      "Data analytics",
+      "data mining",
+      "machine learning",
+      "statistical modeling"
+    ],
+    "location": {
+      "city": "Newark",
+      "state": "New Jersey",
+      "zip": "07102"
+    },
+    "url": "http://cda.njit.edu/"
+  },
+  {
+    "position": "Research Experiences for Undergraduates - Emerging Issues in Cybersecurity",
+    "contact": "Jun Zheng, (575) 835-6182, jun.zheng@nmt.edu",
+    "skills": [
+      "Malware detection",
+      "botnet detection",
+      "smart grid security",
+      "mobile security and privacy",
+      "human factors in cybersecurity",
+      "network security",
+      "usable security"
+    ],
+    "location": {
+      "city": "Socorro",
+      "state": "New Mexico",
+      "zip": "87801"
+    },
+    "url": "https://www.cs.nmt.edu/reu"
+  },
+  {
+    "position": "BIGDatA - Big Data Analytics for Cyber-physical Systems",
+    "contact": "Huiping Cao, (575) 646-4600, hcao@nmsu.edu",
+    "skills": [
+      "Big data",
+      "machine learning",
+      "data mining",
+      "data sciences",
+      "cyber-physical systems (CPS)",
+      "smart grids",
+      "smart homes",
+      "unmanned aerial vehicles (UAVs)",
+      "wireless sensor networks",
+      "CPS security",
+      "visualization"
+    ],
+    "location": {
+      "city": "Las Cruces",
+      "state": "New Mexico",
+      "zip": "88011"
+    },
+    "url": "https://www.cs.nmsu.edu/reu/"
+  },
+  {
+    "position": "REU Site: Research on Security of Mobile Devices and Wireless Networks at NYIT",
+    "contact": "Sertac Artan, (212) 261-1732, nartan@nyit.edu",
+    "skills": [
+      "mobile device and wireless network security including active authentication",
+      "biometrics",
+      "cryptography",
+      "botnets",
+      "emotional analysis",
+      "mobile malware",
+      "privacy",
+      "medical data and vehicular security"
+    ],
+    "location": {
+      "city": "New York",
+      "state": "New York",
+      "zip": "10023"
+    },
+    "url": "http://www.nyit.edu/reu"
+  },
+  {
+    "position": "Socially Relevant Computing and Analytics",
+    "contact": "Tiffany Barnes, (919) 523-1353, tiffany.barnes@gmail.com",
+    "skills": [
+      "Analytics & machine learning for education",
+      "healthcare",
+      "and graph-based learning; serious games; narrative & interactive visual media; tools for computational creativity; canine-computer interaction"
+    ],
+    "location": {
+      "city": "Raleigh",
+      "state": "North Carolina",
+      "zip": "27606"
+    },
+    "url": "http://go.ncsu.edu/srca-reu"
+  },
+  {
+    "position": "REU Site: Undergraduate Computer Research (UnCoRe) in Cybersecurity",
+    "contact": "Huirong Fu, (248) 370-4456, fu@oakland.edu",
+    "skills": [
+      "Security and privacy of autonomous driving",
+      "software security",
+      "system security",
+      "cloud security",
+      "IoT security",
+      "and digital forensics"
+    ],
+    "location": {
+      "city": "Rochester",
+      "state": "Michigan",
+      "zip": "48309"
+    },
+    "url": "http://cse-reu.secs.oakland.edu/"
+  },
+  {
+    "position": "Deep Learning Driven Cybersecurity Research in a Multidisciplinary Environment",
+    "contact": "Chunsheng Xin, (757) 683-5294, cxin@odu.edu",
+    "skills": [
+      "Mobile/smartphone security",
+      "network security",
+      "malware",
+      "Internet of Things (IoT) security",
+      "intrusion detection",
+      "risk management",
+      "human factors of cybersecurity"
+    ],
+    "location": {
+      "city": "Norfolk",
+      "state": "Virginia",
+      "zip": "23529"
+    },
+    "url": "https://www.odureu.org/cyber"
+  },
+  {
+    "position": "Robotics in the Real World",
+    "contact": "Cindy M. Grimm, (541) 737-4914, cindy.grimm@oregonstate.edu",
+    "skills": [
+      "Robotics",
+      "human-robot interaction",
+      "dynamics and controls",
+      "machine learning",
+      "multi-agent learning",
+      "reinforcement learning",
+      "privacy"
+    ],
+    "location": {
+      "city": "Corvallis",
+      "state": "Oregon",
+      "zip": "97331"
+    },
+    "url": "http://robotics.oregonstate.edu/reu"
+  },
+  {
+    "position": "Machine Learning in Cybersecurity",
+    "contact": "Dongwon Lee, (814) 865-0687, dongwon@psu.edu",
+    "skills": [
+      "Machine learning",
+      "cybersecurity",
+      "privacy",
+      "social frauds",
+      "misinformation detection",
+      "user misbehavior modeling"
+    ],
+    "location": {
+      "city": "State College",
+      "state": "Pennsylvania",
+      "zip": "16802"
+    },
+    "url": "https://reu.ist.psu.edu/"
+  },
+  {
+    "position": "Computational Modeling Serving the City",
+    "contact": "Christof Teuscher, (503) 725-2817, reucomputing@pdx.edu",
+    "skills": [
+      "computational modeling"
+    ],
+    "location": {
+      "city": "Portland",
+      "state": "Oregon",
+      "zip": "97207"
+    },
+    "url": "http://www.teuscher-lab.com/reucomputing/"
+  },
+  {
+    "position": "Cultivating Next Generation Software Engineering Researchers",
+    "contact": "Mehdi Mirakhorli, , mxmvse@rit.edu",
+    "skills": [
+      "Software engineering"
+    ],
+    "location": {
+      "city": "Rochester",
+      "state": "New York",
+      "zip": "14623"
+    },
+    "url": "https://reu.se.rit.edu/"
+  },
+  {
+    "position": "REU Site: Computational Sensing for Human-centered AI",
+    "contact": "Cecilia Ovesdotter Alm, (585) 475-7327, coagla@rit.edu",
+    "skills": [
+      "This Site is not active in summer 2020"
+    ],
+    "location": {
+      "city": "Rochester",
+      "state": "New York",
+      "zip": "14623"
+    },
+    "url": "http://cs.rit.edu/~reu/"
+  },
+  {
+    "position": "DIMACS REU in Algorithms from Foundations to Applications",
+    "contact": "Lazaros Gallos, (848) 445-0075, lgallos@dimacs.rutgers.edu",
+    "skills": [
+      "Discrete mathematics",
+      "computer science",
+      "algorithms",
+      "computer science theory",
+      "complexity",
+      "data science",
+      "cyber security",
+      "statistics",
+      "biomathematics",
+      "biomedical applications"
+    ],
+    "location": {
+      "city": "Piscataway",
+      "state": "New Jersey",
+      "zip": "08854"
+    },
+    "url": "http://reu.dimacs.rutgers.edu"
+  },
+  {
+    "position": "REU Site: EXERCISE - Explore Emerging Computing in Science and Engineering",
+    "contact": "Enyue (Annie) Lu, (410) 543-6144, ealu@salisbury.edu",
+    "skills": [
+      "Parallel computing",
+      "cloud computing",
+      "GPU computing",
+      "MapReduce",
+      "data mining",
+      "cybersecurity",
+      "image processing",
+      "concurrent software",
+      "multiprocessor architectures",
+      "machine learning",
+      "natural language processing"
+    ],
+    "location": {
+      "city": "Salisbury",
+      "state": "Maryland",
+      "zip": "21801"
+    },
+    "url": "http://faculty.salisbury.edu/~ealu/REU/REU.html"
+  },
+  {
+    "position": "REU Site: Computational and Mathematical Modeling of Complex Systems",
+    "contact": "Carla Shedivy, (505) 946-2724, education@santafe.edu",
+    "skills": [
+      "Computational simulations",
+      "mathematical modeling",
+      "and statistical analysis of data of a physical",
+      "biological or social system; testing results against theoretical predictions and real-world data sets."
+    ],
+    "location": {
+      "city": "Santa Fe",
+      "state": "New Mexico",
+      "zip": "87501"
+    },
+    "url": "http://santafe.edu/education/fellowships/undergraduate/undergrad-overview/"
+  },
+  {
+    "position": "Research Experiences in Pervasive Computing for Smart Health, Safety, and Well-being",
+    "contact": "Jamie Payton, (215) 204-8245, payton@temple.edu",
+    "skills": [
+      "Pervasive computing",
+      "Internet of Things",
+      "computer vision",
+      "networking",
+      "smart health and well-being",
+      "smart spaces",
+      "machine learning",
+      "data science",
+      "socially relevant computing"
+    ],
+    "location": {
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "zip": "19122"
+    },
+    "url": "http://odin.cis.temple.edu/~reu"
+  },
+  {
+    "position": "Secure and Privacy Preserving Cyber Physical Sustems",
+    "contact": "Mohamed Mahmoud, (931) 310-5074, mmahmoud@tntech.edu",
+    "skills": [
+      "Secure vehicular networks and electric vehicles communications",
+      "anomaly detection",
+      "formal security analytics",
+      "physical layer security",
+      "hardware insecurities",
+      "and secure programmable logic controllers"
+    ],
+    "location": {
+      "city": "Cookeville",
+      "state": "Tennessee",
+      "zip": "38505"
+    },
+    "url": "http://www.cae.tntech.edu/~mmahmoud/REU/REU.htm"
+  },
+  {
+    "position": "Applied Computing Research in Unmanned Aerial Systems (UAS)",
+    "contact": "Dulal Kar, (361) 825-5878, dulal.kar@tamucc.edu",
+    "skills": [
+      "Autonomous tracking of shorelines",
+      "digital mapping for coastal geoinformatics",
+      "protecting UAS against cyberattacks",
+      "automatic crop yield protection",
+      "exploring needs of next-generation UAS"
+    ],
+    "location": {
+      "city": "Corpus Christi",
+      "state": "Texas",
+      "zip": "78412"
+    },
+    "url": "http://csreu.tamucc.edu"
+  },
+  {
+    "position": "Research Experiences for Undergraduates in Smart & Connected Communities",
+    "contact": "Vangelis Metsis, (512) 245-7509, vmetsis@txstate.edu",
+    "skills": [
+      "Intelligent transportation systems",
+      "cyber-physical systems",
+      "smart infrastructure",
+      "smart health",
+      "smart human-environment interaction",
+      "sensor data analysis"
+    ],
+    "location": {
+      "city": "San Marcos",
+      "state": "Texas",
+      "zip": "78666"
+    },
+    "url": "http://reuscc.wp.txstate.edu"
+  },
+  {
+    "position": "Research Experiences for Undergraduates in Software Systems and Analysis",
+    "contact": "Guowei Yang, (512) 245-3409, gyang@txstate.edu",
+    "skills": [
+      "Analysis of software qualities such as reliability",
+      "performance",
+      "and energy efficiency for software systems including mobile software",
+      "internet of things",
+      "green computing",
+      "big data",
+      "parallel systems."
+    ],
+    "location": {
+      "city": "San Marcos",
+      "state": "Texas",
+      "zip": "78666-4684"
+    },
+    "url": "http://reussa.cs.txstate.edu"
+  },
+  {
+    "position": "Long Range Communications, using Ham Radios, Cool Algorithms, and Innovative Antennas",
+    "contact": "Nancy Emptage, (520) 621-6189, emptagen@email.arizona.edu",
+    "skills": [
+      "Wireless communication",
+      "artificial intelligence",
+      "machine learning",
+      "signal processing",
+      "novel antennas",
+      "EM propagations",
+      "reliable and secure networking",
+      "hardware and circuit design",
+      "cognitive algorithms"
+    ],
+    "location": {
+      "city": "Tucson",
+      "state": "Arizona",
+      "zip": "85721"
+    },
+    "url": "http://www.hftelecomm.arizona.edu/"
+  },
+  {
+    "position": "REU Site: Cat Vehicle: TheCognitive and Autonomous Test Vehicle",
+    "contact": "Nancy Emptage, , emptagen@ece.arizona.edu",
+    "skills": [
+      "Autonomous cars",
+      "cognitive radio",
+      "model-based design",
+      "wireless networks",
+      "embedded control systems",
+      "sensor fusion",
+      "Vehicle to Vehicle (V2V) and Vehicle to Infrastructure (V2I)communications"
+    ],
+    "location": {
+      "city": "Tucson",
+      "state": "Arizona",
+      "zip": "85721"
+    },
+    "url": "http://catvehicle.arizona.edu/"
+  },
+  {
+    "position": "Cultivating the I0T-enabled Smart Community (IoT-SITY)",
+    "contact": "Sharnnia Artis, (949) 824-7134, oai@uci.edu",
+    "skills": [
+      "Internet-of-things",
+      "smart communities",
+      "cyberphysical systems",
+      "infrastructure resilience",
+      "smart manufacturing",
+      "smart buildings",
+      "IoT networks",
+      "IoT data management",
+      "machine learning",
+      "IoT deployments"
+    ],
+    "location": {
+      "city": "Irvine",
+      "state": "California",
+      "zip": "92697"
+    },
+    "url": "http://sites.uci.edu/iotsity/"
+  },
+  {
+    "position": "Summer Undergraduate Progarm in Engineering Research at Berkeley (SUPERB) Collecting and Using Big Data for the Public Good",
+    "contact": "James Demmel, (510) 642-7699, demmel@eecs.berkeley.edu",
+    "skills": [
+      "Big data",
+      "security",
+      "databases",
+      "parallel programming",
+      "AI",
+      "HCI",
+      "MEMS",
+      "graphics"
+    ],
+    "location": {
+      "city": "Berkeley",
+      "state": "California",
+      "zip": "94720"
+    },
+    "url": "https://eecs.berkeley.edu/resources/undergrads/research/superb"
+  },
+  {
+    "position": "REU Site: Engineers for Exploration",
+    "contact": "Ryan Kastner, (858) 534-8908, rkastner@ucsd.edu",
+    "skills": [
+      "Remote sensing",
+      "robotics",
+      "sensors",
+      "system prototyping",
+      "field deployments",
+      "computer vision",
+      "machine learning",
+      "digital signal processing"
+    ],
+    "location": {
+      "city": "San Diego",
+      "state": "California",
+      "zip": "92093"
+    },
+    "url": "http://e4e.ucsd.edu"
+  },
+  {
+    "position": "Research Experiences in the Internet of Things",
+    "contact": "Damla Turgut, (407) 823-6171, turgut@cs.ucf.edu",
+    "skills": [
+      "Internet of Things",
+      "sensors and actuators",
+      "smart grids",
+      "smart home",
+      "smart healthcare",
+      "AR/VR",
+      "machine learning",
+      "artificial intelligence"
+    ],
+    "location": {
+      "city": "Orlando",
+      "state": "Florida",
+      "zip": ""
+    },
+    "url": "http://iotreu.cs.ucf.edu/"
+  },
+  {
+    "position": "Research for Undergraduates in Computer Vision",
+    "contact": "Mubarak Shah, (407) 823-5077, shah@crcv.ucf.edu",
+    "skills": [
+      "Convolutional Neural Networks",
+      "Artificial Intelligence",
+      "Computer Vision",
+      "Deep Learning",
+      "Machine Learning",
+      "Facial Recognition",
+      "Medical AI",
+      "Cancer Detection",
+      "Autonomous Vehicles",
+      "Explainable AI"
+    ],
+    "location": {
+      "city": "Orlando",
+      "state": "Florida",
+      "zip": "32816-2365"
+    },
+    "url": "https://www.crcv.ucf.edu/nsf-projects/reu/"
+  },
+  {
+    "position": "BigDataX: From Theory to Practice in Big Data Computing at Extreme Scales",
+    "contact": "Kyle Chard, (773) 702-4107, chard@uchicago.edu",
+    "skills": [
+      "Distributed systems",
+      "many-core computing",
+      "cluster computing",
+      "grid computing",
+      "cloud computing",
+      "supercomputing",
+      "parallel computing & languages",
+      "big data",
+      "scientific computing",
+      "data science",
+      "databases"
+    ],
+    "location": {
+      "city": "Chicago",
+      "state": "Illinois",
+      "zip": "60637"
+    },
+    "url": "http://datasys.cs.iit.edu/grants/BigDataX/index.html"
+  },
+  {
+    "position": "Trustable Embedded Systems Security Research",
+    "contact": "Omer Khan, (860) 486-2192, khan@uconn.edu",
+    "skills": [
+      "Secure Quantum Crypto; Internet Routing; Communications; Mobile Healthcare; Voting",
+      "Neuromorphic and Anti-tamper Systems; Embedded Processors; Authenticated Hardware; System Vulnerability Analysis"
+    ],
+    "location": {
+      "city": "Storrs",
+      "state": "Connecticut",
+      "zip": "06269-2157"
+    },
+    "url": "http://ccc.engr.uconn.edu/reu"
+  },
+  {
+    "position": "Undergraduate Research Experience in Frontiers of Data-Driven Computing.",
+    "contact": "Ernst L. Leiss, (713) 743-3359, coscel@cs.uh.edu",
+    "skills": [
+      "Data-centric computing",
+      "data analytics",
+      "big data",
+      "cybersecurity"
+    ],
+    "location": {
+      "city": "Houston",
+      "state": "Texas",
+      "zip": "77204"
+    },
+    "url": "http://www.cs.uh.edu/reu"
+  },
+  {
+    "position": "CARR: Combinatorics and Algorithms Applied to Real Problems",
+    "contact": "William Gasarch, (301) 405-2698, gasarch@cs.umd.edu",
+    "skills": [
+      "Machine learning",
+      "cryptography",
+      "security",
+      "allocation problems",
+      "quantum computing"
+    ],
+    "location": {
+      "city": "College Park",
+      "state": "Maryland",
+      "zip": "20742"
+    },
+    "url": "http://www.cs.umd.edu/projects/reucaar/"
+  },
+  {
+    "position": "Scientific Computing for Structure in Big or Complex Datasets",
+    "contact": "Burton Rosenberg, (305) 284-2141, burt@cs.miami.edu",
+    "skills": [
+      "Computational chemistry",
+      "computational neuroscience and brain science",
+      "visualization of ensemble data",
+      "GPU enabled cryptography",
+      "neural networks in visual processing modeling human social behavior"
+    ],
+    "location": {
+      "city": "Miami",
+      "state": "Florida",
+      "zip": "33164"
+    },
+    "url": "http://www.cs.miami.edu/reu-csc"
+  },
+  {
+    "position": "Computational Methods for Discovery Driven by Big Data",
+    "contact": "George Karypis, (612) 625-7524, karypis@umn.edu",
+    "skills": [
+      "machine learning",
+      "virtual social behaviors",
+      "immersive virtual environments",
+      "mobile cloud platforms",
+      "biological networks",
+      "Earth climate analysis using graph-based methods"
+    ],
+    "location": {
+      "city": "Minneapolis",
+      "state": "Minnesota",
+      "zip": "55455"
+    },
+    "url": "http://reubigdata.cs.umn.edu/"
+  },
+  {
+    "position": "Undergraduate Research in Consumer Networking Technologies",
+    "contact": "Prasad Calyam, (573) 882-9747, calyamp@missouri.edu",
+    "skills": [
+      "Software-defined networking/virtualization",
+      "visual computing at the network edge",
+      "social health networking",
+      "body-area sensing and environment recognition"
+    ],
+    "location": {
+      "city": "Columbia",
+      "state": "Missouri",
+      "zip": "65211"
+    },
+    "url": "http://reu.rnet.missouri.edu"
+  },
+  {
+    "position": "Undergraduate Research Opportunities in Unmanned Systems Foundations and Applications",
+    "contact": "Brittany Duncan, (402) 472-5073, nimbus-reu@unl.edu",
+    "skills": [
+      "Unmanned aerial systems",
+      "attitude control of nanosatellites",
+      "robots in complex environments",
+      "vehicles for atmospheric profiling",
+      "asset management during wildfires"
+    ],
+    "location": {
+      "city": "Lincoln",
+      "state": "Nebraska",
+      "zip": "68588"
+    },
+    "url": "https://www.unl.edu/summerprogram/unmanned"
+  },
+  {
+    "position": "Collaborative Human-Robot Interaction",
+    "contact": "David Feil-Seifer, (775) 784-6469, dave@cse.unr.edu",
+    "skills": [
+      "Autonomous underground robotic inspection",
+      "socially-appropriate interaction",
+      "language-based human-robot collaboration",
+      "network management of heterogeneous robotics",
+      "paths for dirt cleaning robots"
+    ],
+    "location": {
+      "city": "Reno",
+      "state": "Nevada",
+      "zip": "89557"
+    },
+    "url": "https://www.unr.edu/cse/research/intelligent-and-autonomous-systems/reu"
+  },
+  {
+    "position": "Making Future Communities:Infrastructure and Interaction Design for Cyber-Physical Systems",
+    "contact": "David Wilson, (704) 687-8585, davils@uncc.edu",
+    "skills": [
+      "Cyber-physical systems",
+      "Internet of Things",
+      "makerspace",
+      "human computer interaction",
+      "visualization",
+      "security",
+      "networking"
+    ],
+    "location": {
+      "city": "Charlotte",
+      "state": "North Carolina",
+      "zip": "28223"
+    },
+    "url": "https://reu.uncc.edu"
+  },
+  {
+    "position": "Data Analytics and Information Retrieval",
+    "contact": "Junhua Ding, (940) 565-2186, junhua.ding@unt.edu",
+    "skills": [
+      "Data analytics",
+      "information retrieval",
+      "information retrieval of text and image collections",
+      "information retrieval for disaster research",
+      "data analytics for software security"
+    ],
+    "location": {
+      "city": "Denton",
+      "state": "Texas",
+      "zip": "76203"
+    },
+    "url": "https://reu.ci.unt.edu"
+  },
+  {
+    "position": "REU Site: Software Assurance and Security in Emerging Technologies: Research Experience for Undergraduates",
+    "contact": "Renee Bryce, (940) 565-4176, Renee.Bryce@unt.edu",
+    "skills": [
+      "Software assurance",
+      "security",
+      "emerging technologies",
+      "mobile applications"
+    ],
+    "location": {
+      "city": "Denton",
+      "state": "Texas",
+      "zip": "76203"
+    },
+    "url": "http://www.cse.unt.edu/~reneebryce/Renee_Bryce/REU.html"
+  },
+  {
+    "position": "Vehicular Edge Computing and Security: Research Experience for Undergraduates",
+    "contact": "Song Fu, (940) 565-2341, song.fu@unt.edu",
+    "skills": [
+      "Connected and autonomous vehicles",
+      "vehicular edge computing",
+      "vehicular sensor data fusion",
+      "trustworthy information sharing among vehicles",
+      "privacy protection"
+    ],
+    "location": {
+      "city": "Denton",
+      "state": "Texas",
+      "zip": "76203"
+    },
+    "url": "https://www.cse.unt.edu/~song/REU/"
+  },
+  {
+    "position": "AWaRE - Advanced Wireless Research Experiences",
+    "contact": "Dr. Bertrand Hochwald, (574) 631-8875, bhochwald@nd.edu",
+    "skills": [
+      "Millimeter-wave wireless communications",
+      "circuits",
+      "antennas",
+      "sensing",
+      "spectrum",
+      "WIFI",
+      "networking",
+      "robotics",
+      "optical",
+      "microwave",
+      "communication",
+      "systems",
+      "radar",
+      "signal",
+      "processing",
+      "drones"
+    ],
+    "location": {
+      "city": "Notre Dame",
+      "state": "Indiana",
+      "zip": "46556-5637"
+    },
+    "url": "http://wireless.nd.edu/REU"
+  },
+  {
+    "position": "Computational Methods for Understanding Music, Media, and Minds",
+    "contact": "Ajay Anand, (585) 276-3149, gids-reu@rochester.edu",
+    "skills": [
+      "Machine learning",
+      "audio engineering",
+      "data science",
+      "computer vision",
+      "music"
+    ],
+    "location": {
+      "city": "Rochester",
+      "state": "New York",
+      "zip": ""
+    },
+    "url": "http://www.sas.rochester.edu/dsc/undergraduate/reu.html"
+  },
+  {
+    "position": "Applied Computational Robotics",
+    "contact": "Jason O'Kane, (803) 777-1791, jokane@cse.sc.edu",
+    "skills": [
+      "Field robotics",
+      "robotic perception and planning",
+      "human-robot interaction",
+      "security",
+      "software engineering"
+    ],
+    "location": {
+      "city": "Columbia",
+      "state": "South Carolina",
+      "zip": "29208"
+    },
+    "url": "http://reu.cse.sc.edu"
+  },
+  {
+    "position": "Human Communication in a Connected World",
+    "contact": "Jelena Mirkovic, (310) 448-9170, sunshine@isi.edu",
+    "skills": [
+      "Information flow and structure of social networks",
+      "information extraction and summarization",
+      "cybersecurity and communication networks and protocols"
+    ],
+    "location": {
+      "city": "Marina del Rey",
+      "state": "California",
+      "zip": "90292"
+    },
+    "url": "http://reu.isi.edu/"
+  },
+  {
+    "position": "REU Site: Research in Interactive Virtual Experiences",
+    "contact": "Ron Artstein, (310) 448-0313, artstein@ict.usc.edu",
+    "skills": [
+      "Virtual Reality",
+      "Human-Computer Interaction",
+      "Virtual Humans",
+      "Graphics",
+      "Natural Language Understanding"
+    ],
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "zip": "90066"
+    },
+    "url": "http://ict.usc.edu/reu/"
+  },
+  {
+    "position": "REU Site: SCEC Undergraduate Studies in Earthquake Information Technology (SCEC/UseIT)",
+    "contact": "Thomas H Jordan, 213-821-1237, tjordan@usc.edu",
+    "skills": [
+      "object-oriented",
+      "open-source",
+      "internet-\r\nenabled software",
+      "interactive",
+      "4D display",
+      "earthquake"
+    ],
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "zip": "90089"
+    },
+    "url": "http://www.scec.org/education/college/internships/UseIT.html"
+  },
+  {
+    "position": "Robotics and Autonomous Systems",
+    "contact": "Nora Ayanian, (213) 740-5377, ayanian@usc.edu",
+    "skills": [
+      "Cooperative robotics",
+      "bio-inspired robots",
+      "robotic networks",
+      "socially assistive robots",
+      "software-defined radars for UAVs",
+      "perception-action-learning systems",
+      "autonomy for aquatic robots"
+    ],
+    "location": {
+      "city": "Los Angeles",
+      "state": "California",
+      "zip": "90089"
+    },
+    "url": "https://www.cs.usc.edu/reu/"
+  },
+  {
+    "position": "REU Site on Ubiquitous Sensing",
+    "contact": "Dr. Miguel A. Labrador, (813) 974-3260, labrador@cse.usf.edu",
+    "skills": [
+      "Participatory Sensing",
+      "Human-Centric Sensing",
+      "Location-Based Services"
+    ],
+    "location": {
+      "city": "Tampa",
+      "state": "Florida",
+      "zip": ""
+    },
+    "url": "http://www.csee.usf.edu/REU/home.html"
+  },
+  {
+    "position": "REU Program at the University of Texas at Arlington: Assistive Technologies for People with Disabilities",
+    "contact": "Ishfaq Ahmad, (817) 272-3605, iahmad@cse.uta.edu",
+    "skills": [
+      "Assistive technologies",
+      "vision",
+      "sensors",
+      "sign language",
+      "facial recognition",
+      "emotion and behavior analysis",
+      "smart augmented reality",
+      "data analytics",
+      "robots",
+      "human-machine interaction"
+    ],
+    "location": {
+      "city": "Arlington",
+      "state": "Texas",
+      "zip": "76019"
+    },
+    "url": "http://ranger.uta.edu/~reu"
+  },
+  {
+    "position": "REU Site: Cyberinfrastructure (CI) Research 4 Social Change",
+    "contact": "Rosalia Gomez, (512) 471-6785, rosie@tacc.utexas.edu",
+    "skills": [
+      "High performance computing",
+      "visualization",
+      "data intensive computing",
+      "science",
+      "engineering",
+      "and computational medicine."
+    ],
+    "location": {
+      "city": "Austin",
+      "state": "Texas",
+      "zip": "78758"
+    },
+    "url": "https://www.tacc.utexas.edu/reu"
+  },
+  {
+    "position": "REU Site: Software Safety and Reliability: Research and Application",
+    "contact": "Eric Wong, (972) 883-6619, ewong@utdallas.edu",
+    "skills": [
+      "Software safety and reliability",
+      "quality assurance",
+      "verification and validation",
+      "cost effectiveness",
+      "safety standard and evolution",
+      "reliability modeling and prediction"
+    ],
+    "location": {
+      "city": "Richardson",
+      "state": "Texas",
+      "zip": "75024"
+    },
+    "url": "http://paris.utdallas.edu/reu"
+  },
+  {
+    "position": "Program for Access to Training in Healt Informatics (PATH)",
+    "contact": "Kim Unertl, (615) 936-5035, kim.unertl@vanderbilt.edu",
+    "skills": [
+      "Health/medical informatics",
+      "data science",
+      "predictive analytics",
+      "data privacy",
+      "precision health",
+      "phenome-& genome-wide association studies",
+      "human-computer interaction",
+      "sociotechnical systems"
+    ],
+    "location": {
+      "city": "Nashville",
+      "state": "Tennessee",
+      "zip": "37203"
+    }
+  },
+  {
+    "position": "Multidisciplinary Undergraduate Research Training in Wearable Computing",
+    "contact": "Hassan Ghasemzadeh, (509) 335-8260, hassan.ghasemzadeh@wsu.edu",
+    "skills": [
+      "Wearable computing",
+      "algorithms",
+      "pervasive computing",
+      "machine learning",
+      "physical health monitoring",
+      "mental health monitoring",
+      "health promotion."
+    ],
+    "location": {
+      "city": "Pullman",
+      "state": "Washington",
+      "zip": "99163"
+    },
+    "url": "http://epsl.eecs.wsu.edu/"
+  },
+  {
+    "position": "REU Site: Undergraduate Research in Smart Environments",
+    "contact": "Larry Holder, (509) 335-6138, holder@wsu.edu",
+    "skills": [
+      "Computer Science",
+      "Smart Environments",
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Data Mining",
+      "Pervasive Computing",
+      "Energy Efficiency",
+      "Psychology",
+      "Medical and Health Technologies"
+    ],
+    "location": {
+      "city": "Pullman",
+      "state": "Washington",
+      "zip": "99163"
+    },
+    "url": "http://reu.eecs.wsu.edu"
+  },
+  {
+    "position": "Big Data Analytics",
+    "contact": "Douglas Shook, , dshook@wustl.edu",
+    "skills": [
+      "Machine learning",
+      "data science",
+      "artificial intelligence",
+      "parallel computing for big data",
+      "big data in computer vision",
+      "computational biology",
+      "and multi-agent systems applications"
+    ],
+    "location": {
+      "city": "St. Louis",
+      "state": "Missouri",
+      "zip": "63130"
+    },
+    "url": "http://reu.cse.wustl.edu/"
+  },
+  {
+    "position": "REU Site: Undergraduate Robotics Research in Human-Swarm Interaction",
+    "contact": "Yu Gu, (304) 293-3992, RoboticsREU@mail.wvu.edu",
+    "skills": [
+      "robotics",
+      "swarm",
+      "bio-inspired design",
+      "human-robot interaction",
+      "autonomy",
+      "search and rescue",
+      "cooperative systems",
+      "virtual reality",
+      "augmented reality",
+      "microprocessor",
+      "instrumentation",
+      "controls"
+    ],
+    "location": {
+      "city": "Morgantown",
+      "state": "West Virginia",
+      "zip": "26506"
+    },
+    "url": "http://robotics.wvu.edu/nsf-reu-site"
+  },
+  {
+    "position": "Enhancing Undergraduate Research Experiences in Networked Cyber-Physical Systems",
+    "contact": "Vinod Namboodiri, (316) 978-3922, vinod.namboodiri@wichita.edu",
+    "skills": [
+      "Wireless localization",
+      "indoor mapping and navigation",
+      "UAV multimedia networking",
+      "cognitive radio networks",
+      "secure manufacturing",
+      "cloud computing",
+      "security and privacy of wearable devices"
+    ],
+    "location": {
+      "city": "Wichita",
+      "state": "Kansas",
+      "zip": "67260"
+    },
+    "url": "http://www.wichita.edu/NetCPSREU"
+  },
+  {
+    "position": "Data Science Research for Healthy Communities in the Digital Age",
+    "contact": "Elke Rundensteiner, (508) 831-5815, rundenst@wpi.edu",
+    "skills": [
+      "Data science",
+      "smart and connected communities",
+      "health analytics",
+      "sustainability",
+      "cybersecurity",
+      "social media",
+      "data mining",
+      "machine learning",
+      "big data management",
+      "visualization",
+      "statistical learning"
+    ],
+    "location": {
+      "city": "Worcester",
+      "state": "Massachusetts",
+      "zip": "01609"
+    },
+    "url": "https://www.wpi.edu/academics/departments/data-science/reu-program"
+  }
+]
