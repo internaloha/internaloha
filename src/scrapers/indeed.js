@@ -10,7 +10,6 @@ async function fetchInfo(page, selector) {
     result = await page.evaluate((select) => document.querySelector(select).textContent, selector);
   } catch (error) {
     console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
     throw error;
   }
   return result;
@@ -146,11 +145,27 @@ async function fetchInfo(page, selector) {
             console.log('--- Trying with other class name ---');
             location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child');
           }
-          const posted = await fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]');
+          let posted = await fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]');
 
           const description = await fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]');
           const lastScraped = new Date();
           const skills = 'N/A';
+
+          const todayDate = new Date();
+          let daysBack = 0;
+
+          if (posted.includes('hours') || (posted.includes('hour')) || (posted.includes('minute'))
+              || (posted.includes('minutes'))) {
+            daysBack = 0;
+          } else
+            if ((posted.includes('week')) || (posted.includes('weeks'))) {
+              daysBack = posted.match(/\d+/g) * 7;
+            } else {
+              daysBack = posted.match(/\d+/g);
+            }
+
+          todayDate.setDate(todayDate.getDate() - daysBack);
+          posted = todayDate;
 
           let state = '';
           if (!location.match(/([^,]*)/g)[2]) {
@@ -183,9 +198,10 @@ async function fetchInfo(page, selector) {
           });
 
           console.log(position);
+
         } catch (err6) {
           console.log('--- Error with scraping... Skipping ---');
-          console.log(err6.message);
+          // console.log(err6.message);
           skippedLinks.push(`https://www.indeed.com${urls[i][j]}`);
         }
       }
