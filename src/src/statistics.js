@@ -6,7 +6,7 @@ const zipData = require('./data/ziprecruiter.parsed.data');
 const cheggData = require('./data/internships.parsed.data');
 const monsterData = require('./data/monster.parsed.data');
 const nsfData = require('./data/nsf-reu.parsed.data');
-const youternData = require('./data/youturn.parsed.data');
+const youternData = require('./data/youtern.parsed.data');
 const iHire = require('./data/iHireTech.parsed.data');
 const glassData = require('./data/glassdoor.parsed.data');
 const indeedData = require('./data/indeed.parsed.data');
@@ -28,6 +28,7 @@ function getStatistics(name, data) {
   let qualifications = 0;
   let description = 0;
   let skills = 0;
+  const lastScraped = data[0].lastScraped;
 
   for (let i = 0; i < data.length; i++) {
     if ((data[i].position) && data[i].position !== 'Error') {
@@ -70,6 +71,7 @@ function getStatistics(name, data) {
 
   list = {
     site: name,
+    lastScraped: lastScraped,
     entries: data.length,
     position: position,
     company: company,
@@ -114,8 +116,6 @@ statistics.push(
     getStatistics('AngelList', angelData),
     getStatistics('Total', data),
 );
-
-
 
 console.log(statistics);
 

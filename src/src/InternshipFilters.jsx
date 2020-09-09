@@ -4,7 +4,7 @@ import simplyData from './data/simplyhired.parsed.data';
 import zipData from './data/ziprecruiter.parsed.data';
 import cheggData from './data/internships.parsed.data';
 import monsterData from './data/monster.parsed.data';
-import youternData from './data/youturn.parsed.data';
+import youternData from './data/youtern.parsed.data';
 import nsfData from './data/nsf-reu.parsed.data';
 import iHire from './data/iHireTech.parsed.data';
 import glassData from './data/glassdoor.parsed.data';
