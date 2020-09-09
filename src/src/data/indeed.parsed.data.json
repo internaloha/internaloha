@@ -4,7 +4,7 @@
         "company": "GRANT THORNTON",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94111"
         },
         "posted": "2020-09-04T08:03:07.228Z",
@@ -24,7 +24,7 @@
         "company": "Internet Brands",
         "location": {
             "city": "Los Angeles",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:11.358Z",
@@ -43,7 +43,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Manassas",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "20110"
         },
         "posted": "2020-09-04T08:03:13.329Z",
@@ -62,7 +62,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Manassas",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "20110"
         },
         "posted": "2020-09-04T08:03:15.393Z",
@@ -82,7 +82,7 @@
         "company": "Fujitsu",
         "location": {
             "city": "Richardson",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75082"
         },
         "posted": "2020-09-04T08:03:18.000Z",
@@ -102,7 +102,7 @@
         "company": "Micron",
         "location": {
             "city": "Boise",
-            "state": "ID",
+            "state": "Idaho",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:20.189Z",
@@ -124,7 +124,7 @@
         "company": "Commonwealth Care Alliance, Inc.",
         "location": {
             "city": "Boston",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "02111"
         },
         "posted": "2020-09-04T08:03:22.342Z",
@@ -147,7 +147,7 @@
         "company": "PayPal",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94105"
         },
         "posted": "2020-09-04T08:03:23.264Z",
@@ -171,7 +171,7 @@
         "company": "Fivestars",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94103"
         },
         "posted": "2020-09-04T08:03:24.114Z",
@@ -194,7 +194,7 @@
         "company": "PayPal",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94107"
         },
         "posted": "2020-09-04T08:03:26.211Z",
@@ -217,7 +217,7 @@
         "company": "PayPal",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94107"
         },
         "posted": "2020-09-04T08:03:27.454Z",
@@ -239,7 +239,7 @@
         "company": "Goodyear",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:28.457Z",
@@ -262,7 +262,7 @@
         "company": "Splunk",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:30.107Z",
@@ -280,7 +280,7 @@
         "company": "Cockroach Labs",
         "location": {
             "city": "New York",
-            "state": "NY",
+            "state": "New York",
             "zip": "10010"
         },
         "posted": "2020-09-04T08:03:32.887Z",
@@ -303,7 +303,7 @@
         "company": "Teleflex",
         "location": {
             "city": "Morrisville",
-            "state": "NC",
+            "state": "North Carolina",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:35.313Z",
@@ -326,7 +326,7 @@
         "company": "Fujitsu",
         "location": {
             "city": "Richardson",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75082"
         },
         "posted": "2020-09-04T08:03:37.473Z",
@@ -347,7 +347,7 @@
         "company": "Bayer",
         "location": {
             "city": "St. Louis",
-            "state": "MO",
+            "state": "Missouri",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:38.503Z",
@@ -370,7 +370,7 @@
         "company": "KnowBe4",
         "location": {
             "city": "Clearwater",
-            "state": "FL",
+            "state": "Florida",
             "zip": "33755"
         },
         "posted": "2020-08-31T08:03:40.282Z",
@@ -393,7 +393,7 @@
         "company": "Marvell",
         "location": {
             "city": "Rochester",
-            "state": "MN",
+            "state": "Minnesota",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:42.121Z",
@@ -412,7 +412,7 @@
         "company": "Marvell",
         "location": {
             "city": "Burlington",
-            "state": "VT",
+            "state": "Vermont",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:43.879Z",
@@ -431,7 +431,7 @@
         "company": "Brink's Incorporated",
         "location": {
             "city": "Coppell",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75019"
         },
         "posted": "2020-09-04T08:03:44.937Z",
@@ -453,7 +453,7 @@
         "company": "KnowBe4",
         "location": {
             "city": "Clearwater",
-            "state": "FL",
+            "state": "Florida",
             "zip": "33755"
         },
         "posted": "2020-08-31T08:03:46.782Z",
@@ -478,7 +478,7 @@
         "company": "UBS",
         "location": {
             "city": "New York",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:48.807Z",
@@ -498,7 +498,7 @@
         "company": "KnowBe4",
         "location": {
             "city": "Clearwater",
-            "state": "FL",
+            "state": "Florida",
             "zip": "33755"
         },
         "posted": "2020-08-31T08:03:50.819Z",
@@ -521,7 +521,7 @@
         "company": "KnowBe4",
         "location": {
             "city": "Clearwater",
-            "state": "FL",
+            "state": "Florida",
             "zip": "33755"
         },
         "posted": "2020-08-31T08:03:52.959Z",
@@ -546,7 +546,7 @@
         "company": "Marvell",
         "location": {
             "city": "Rochester",
-            "state": "MN",
+            "state": "Minnesota",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:03:54.801Z",
@@ -565,7 +565,7 @@
         "company": "KnowBe4",
         "location": {
             "city": "Clearwater",
-            "state": "FL",
+            "state": "Florida",
             "zip": "33755"
         },
         "posted": "2020-08-31T08:03:56.941Z",
@@ -591,7 +591,7 @@
         "company": "Westinghouse Electric Company",
         "location": {
             "city": "Cranberry Township",
-            "state": "PA",
+            "state": "Pennsylvania",
             "zip": "16066"
         },
         "posted": "2020-09-04T08:03:59.262Z",
@@ -612,7 +612,7 @@
         "company": "Companions on a Journey Grief Support",
         "location": {
             "city": "West Chester",
-            "state": "OH",
+            "state": "Ohio",
             "zip": "45069"
         },
         "posted": "2020-09-04T08:04:02.488Z",
@@ -634,7 +634,7 @@
         "company": "Alephtech2020, LLC",
         "location": {
             "city": "Atlanta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:04:05.570Z",
@@ -655,7 +655,7 @@
         "company": "Brinks",
         "location": {
             "city": "Coppell",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75019"
         },
         "posted": "2020-09-04T08:04:07.074Z",
@@ -677,7 +677,7 @@
         "company": "Total Wine & More",
         "location": {
             "city": "Bethesda",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "20817"
         },
         "posted": "2020-09-04T08:04:08.997Z",
@@ -696,7 +696,7 @@
         "company": "Robotiquality",
         "location": {
             "city": "Indianapolis",
-            "state": "IN",
+            "state": "Indiana",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:04:12.210Z",
@@ -715,7 +715,7 @@
         "company": "AccuWeather Careers",
         "location": {
             "city": "State College",
-            "state": "PA",
+            "state": "Pennsylvania",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:04:15.215Z",
@@ -734,7 +734,7 @@
         "company": "GRANT THORNTON",
         "location": {
             "city": "Arlington",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "22209"
         },
         "posted": "2020-09-04T08:04:17.278Z",
@@ -754,7 +754,7 @@
         "company": "Colony Brands, Inc.",
         "location": {
             "city": "Monroe",
-            "state": "WI",
+            "state": "Wisconsin",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:04:19.397Z",
@@ -775,7 +775,7 @@
         "company": "Waupaca Foundry, Inc.",
         "location": {
             "city": "Marinette",
-            "state": "WI",
+            "state": "Wisconsin",
             "zip": "54143"
         },
         "posted": "2020-09-04T08:04:21.419Z",
@@ -795,7 +795,7 @@
         "company": "Waupaca Foundry, Inc.",
         "location": {
             "city": "Waupaca",
-            "state": "WI",
+            "state": "Wisconsin",
             "zip": "N/A"
         },
         "posted": "2020-09-04T08:04:23.389Z",
@@ -817,7 +817,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Palo Alto",
-            "state": "CA",
+            "state": "California",
             "zip": "94304"
         },
         "posted": "2020-09-03T08:04:25.297Z",
@@ -840,7 +840,7 @@
         "company": "National Security Agency",
         "location": {
             "city": "Fort Meade",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:04:26.361Z",
@@ -859,7 +859,7 @@
         "company": "Ambarella",
         "location": {
             "city": "Santa Clara",
-            "state": "CA",
+            "state": "California",
             "zip": "95054"
         },
         "posted": "2020-09-03T08:04:28.290Z",
@@ -878,7 +878,7 @@
         "company": "Ambarella",
         "location": {
             "city": "Santa Clara",
-            "state": "CA",
+            "state": "California",
             "zip": "95054"
         },
         "posted": "2020-09-03T08:04:30.971Z",
@@ -899,7 +899,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:04:33.073Z",
@@ -918,7 +918,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "San Mateo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:04:34.825Z",
@@ -941,7 +941,7 @@
         "company": "RAPT Therapeutics, Inc.",
         "location": {
             "city": "South San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94080"
         },
         "posted": "2020-09-03T08:04:37.611Z",
@@ -962,7 +962,7 @@
         "company": "Keysight Technologies",
         "location": {
             "city": "Calabasas",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:04:39.681Z",
@@ -982,7 +982,7 @@
         "company": "National Security Agency",
         "location": {
             "city": "Honolulu",
-            "state": "HI",
+            "state": "Hawaii",
             "zip": "96813"
         },
         "posted": "2020-09-03T08:04:40.908Z",
@@ -1000,7 +1000,7 @@
         "company": "Hewlett Packard Enterprise",
         "location": {
             "city": "Houston",
-            "state": "TX",
+            "state": "Texas",
             "zip": "77070"
         },
         "posted": "2020-09-03T08:04:42.800Z",
@@ -1024,7 +1024,7 @@
         "company": "GLOBALFOUNDRIES",
         "location": {
             "city": "East Fishkill",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:04:44.826Z",
@@ -1043,7 +1043,7 @@
         "company": "Cambridge Investment Research, Inc.",
         "location": {
             "city": "Fairfield",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "52556"
         },
         "posted": "2020-09-03T08:04:46.590Z",
@@ -1059,7 +1059,7 @@
         "company": "Cambridge Investment Research, Inc.",
         "location": {
             "city": "Fairfield",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "52556"
         },
         "posted": "2020-09-03T08:04:48.413Z",
@@ -1079,7 +1079,7 @@
         "company": "Enterprise Tax Solutions, Inc.",
         "location": {
             "city": "Mount Pleasant",
-            "state": "MI",
+            "state": "Michigan",
             "zip": "48858"
         },
         "posted": "2020-09-03T08:04:51.310Z",
@@ -1104,7 +1104,7 @@
         "company": "Lyondell Chemical Company",
         "location": {
             "city": "Houston",
-            "state": "TX",
+            "state": "Texas",
             "zip": "77010"
         },
         "posted": "2020-09-03T08:04:53.352Z",
@@ -1125,7 +1125,7 @@
         "company": "Facebook",
         "location": {
             "city": "Bellevue",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:04:55.323Z",
@@ -1145,7 +1145,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Fort Worth",
-            "state": "TX",
+            "state": "Texas",
             "zip": "76108"
         },
         "posted": "2020-09-03T08:04:57.393Z",
@@ -1167,7 +1167,7 @@
         "company": "Nike",
         "location": {
             "city": "Beaverton",
-            "state": "OR",
+            "state": "Oregon",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:04:59.411Z",
@@ -1191,7 +1191,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Marietta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30063"
         },
         "posted": "2020-09-03T08:05:01.360Z",
@@ -1212,7 +1212,7 @@
         "company": "National Security Agency",
         "location": {
             "city": "Fort Meade",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:03.063Z",
@@ -1231,7 +1231,7 @@
         "company": "Lazard Ltd.",
         "location": {
             "city": "New York",
-            "state": "NY",
+            "state": "New York",
             "zip": "10112"
         },
         "posted": "2020-09-03T08:05:04.878Z",
@@ -1251,7 +1251,7 @@
         "company": "Jelecos",
         "location": {
             "city": "Omaha",
-            "state": "NE",
+            "state": "Nebraska",
             "zip": "68114"
         },
         "posted": "2020-09-03T08:05:06.879Z",
@@ -1270,7 +1270,7 @@
         "company": "National Security Agency",
         "location": {
             "city": "Fort Gordon",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:08.760Z",
@@ -1290,7 +1290,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Mount Laurel",
-            "state": "NJ",
+            "state": "New Jersey",
             "zip": "08054"
         },
         "posted": "2020-09-03T08:05:10.813Z",
@@ -1308,7 +1308,7 @@
         "company": "GLOBALFOUNDRIES",
         "location": {
             "city": "East Fishkill",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:12.882Z",
@@ -1327,7 +1327,7 @@
         "company": "Cambridge Investment Research, Inc.",
         "location": {
             "city": "Fairfield",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "52556"
         },
         "posted": "2020-09-03T08:05:14.664Z",
@@ -1343,7 +1343,7 @@
         "company": "Brand Knew",
         "location": {
             "city": "Los Angeles",
-            "state": "CA",
+            "state": "California",
             "zip": "90025"
         },
         "posted": "2020-09-03T08:05:17.756Z",
@@ -1361,7 +1361,7 @@
         "company": "Macy's",
         "location": {
             "city": "Johns Creek",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30097"
         },
         "posted": "2020-09-03T08:05:19.330Z",
@@ -1383,7 +1383,7 @@
         "company": "PetSmart",
         "location": {
             "city": "Phoenix",
-            "state": "AZ",
+            "state": "Arizona",
             "zip": "85027"
         },
         "posted": "2020-09-03T08:05:21.819Z",
@@ -1406,7 +1406,7 @@
         "company": "Splunk",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:23.676Z",
@@ -1424,7 +1424,7 @@
         "company": "GLOBALFOUNDRIES",
         "location": {
             "city": "East Fishkill",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:25.725Z",
@@ -1443,7 +1443,7 @@
         "company": "GLOBALFOUNDRIES",
         "location": {
             "city": "East Fishkill",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:28.125Z",
@@ -1464,7 +1464,7 @@
         "company": "Techable",
         "location": {
             "city": "Arlington Heights",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60005"
         },
         "posted": "2020-09-03T08:05:31.224Z",
@@ -1481,7 +1481,7 @@
         "company": "Moog Inc.",
         "location": {
             "city": "Blacksburg",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "24060"
         },
         "posted": "2020-09-03T08:05:33.240Z",
@@ -1501,7 +1501,7 @@
         "company": "ADP",
         "location": {
             "city": "Alpharetta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30009"
         },
         "posted": "2020-09-03T08:05:36.062Z",
@@ -1525,7 +1525,7 @@
         "company": "Leidos",
         "location": {
             "city": "Orlando",
-            "state": "FL",
+            "state": "Florida",
             "zip": "32826"
         },
         "posted": "2020-09-03T08:05:37.848Z",
@@ -1548,7 +1548,7 @@
         "company": "Cambridge Investment Research, Inc.",
         "location": {
             "city": "Fairfield",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "52556"
         },
         "posted": "2020-09-03T08:05:39.587Z",
@@ -1564,7 +1564,7 @@
         "company": "Store Space Self Storage",
         "location": {
             "city": "Winter Garden",
-            "state": "FL",
+            "state": "Florida",
             "zip": "34787"
         },
         "posted": "2020-09-04T08:05:42.920Z",
@@ -1579,7 +1579,7 @@
         "company": "National Security Agency",
         "location": {
             "city": "Fort Meade",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:44.885Z",
@@ -1599,7 +1599,7 @@
         "company": "New Millennium Building Systems | Steel Dynamics Inc.",
         "location": {
             "city": "Fort Wayne",
-            "state": "IN",
+            "state": "Indiana",
             "zip": "46804"
         },
         "posted": "2020-09-03T08:05:47.668Z",
@@ -1616,7 +1616,7 @@
         "company": "PetSmart",
         "location": {
             "city": "Phoenix",
-            "state": "AZ",
+            "state": "Arizona",
             "zip": "85027"
         },
         "posted": "2020-09-03T08:05:49.635Z",
@@ -1639,7 +1639,7 @@
         "company": "GLOBALFOUNDRIES",
         "location": {
             "city": "East Fishkill",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-03T08:05:52.233Z",
@@ -1660,7 +1660,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "San Mateo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:05:54.446Z",
@@ -1683,7 +1683,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "Aliso Viejo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:05:56.293Z",
@@ -1707,7 +1707,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "Aliso Viejo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:05:58.120Z",
@@ -1728,7 +1728,7 @@
         "company": "Hitachi Chemical Company America, Ltd.",
         "location": {
             "city": "San Jose",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:01.892Z",
@@ -1748,7 +1748,7 @@
         "company": "Kitware",
         "location": {
             "city": "Clifton Park",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:04.777Z",
@@ -1768,7 +1768,7 @@
         "company": "iCIMS",
         "location": {
             "city": "Holmdel",
-            "state": "NJ",
+            "state": "New Jersey",
             "zip": "07733"
         },
         "posted": "2020-09-02T08:06:07.232Z",
@@ -1792,7 +1792,7 @@
         "company": "Nutanix",
         "location": {
             "city": "San Jose",
-            "state": "CA",
+            "state": "California",
             "zip": "95110"
         },
         "posted": "2020-09-02T08:06:09.300Z",
@@ -1815,7 +1815,7 @@
         "company": "iCIMS Talent Acquisition",
         "location": {
             "city": "Holmdel",
-            "state": "NJ",
+            "state": "New Jersey",
             "zip": "07733"
         },
         "posted": "2020-09-02T08:06:11.366Z",
@@ -1839,7 +1839,7 @@
         "company": "National Security Agency",
         "location": {
             "city": "Fort Meade",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:13.452Z",
@@ -1859,7 +1859,7 @@
         "company": "Swiss Re",
         "location": {
             "city": "Armonk",
-            "state": "NY",
+            "state": "New York",
             "zip": "10504"
         },
         "posted": "2020-09-02T08:06:15.371Z",
@@ -1879,7 +1879,7 @@
         "company": "Brinks",
         "location": {
             "city": "Coppell",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75019"
         },
         "posted": "2020-09-04T08:06:16.480Z",
@@ -1901,7 +1901,7 @@
         "company": "Business Credentialing Services, Inc.",
         "location": {
             "city": "Provo",
-            "state": "UT",
+            "state": "Utah",
             "zip": "84604"
         },
         "posted": "2020-09-02T08:06:19.666Z",
@@ -1921,7 +1921,7 @@
         "company": "Travelers",
         "location": {
             "city": "Saint Paul",
-            "state": "MN",
+            "state": "Minnesota",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:20.709Z",
@@ -1939,7 +1939,7 @@
         "company": "Parsons",
         "location": {
             "city": "Dahlgren",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:22.192Z",
@@ -1964,7 +1964,7 @@
         "company": "Advanced Micro Devices, Inc.",
         "location": {
             "city": "Santa Clara",
-            "state": "CA",
+            "state": "California",
             "zip": "95054"
         },
         "posted": "2020-09-02T08:06:24.376Z",
@@ -1984,7 +1984,7 @@
         "company": "World Wide Technology, Inc.",
         "location": {
             "city": "Edwardsville",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:26.512Z",
@@ -2004,7 +2004,7 @@
         "company": "Travelers",
         "location": {
             "city": "Hartford",
-            "state": "CT",
+            "state": "Connecticut",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:27.648Z",
@@ -2026,7 +2026,7 @@
         "company": "PenLink",
         "location": {
             "city": "Lincoln",
-            "state": "NE",
+            "state": "Nebraska",
             "zip": "68516"
         },
         "posted": "2020-09-02T08:06:30.698Z",
@@ -2050,7 +2050,7 @@
         "company": "SV Summit Inc",
         "location": {
             "city": "Santa Clara",
-            "state": "CA",
+            "state": "California",
             "zip": "95054"
         },
         "posted": "2020-09-02T08:06:34.175Z",
@@ -2072,7 +2072,7 @@
         "company": "World Wide Technology, Inc.",
         "location": {
             "city": "Edwardsville",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:36.479Z",
@@ -2092,7 +2092,7 @@
         "company": "FireEye, Inc.",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:38.521Z",
@@ -2114,7 +2114,7 @@
         "company": "Marvell",
         "location": {
             "city": "Burlington",
-            "state": "VT",
+            "state": "Vermont",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:40.412Z",
@@ -2136,7 +2136,7 @@
         "company": "National Security Agency",
         "location": {
             "city": "Fort Meade",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:42.259Z",
@@ -2157,7 +2157,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Baltimore",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "21220"
         },
         "posted": "2020-09-02T08:06:44.392Z",
@@ -2179,7 +2179,7 @@
         "company": "Verisk Financial",
         "location": {
             "city": "White Plains",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:46.493Z",
@@ -2202,7 +2202,7 @@
         "company": "Federal Reserve Board of Governors",
         "location": {
             "city": "Washington",
-            "state": "DC",
+            "state": "District Of Columbia",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:48.412Z",
@@ -2221,7 +2221,7 @@
         "company": "Pacific Northwest National Laboratory",
         "location": {
             "city": "College Park",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:50.456Z",
@@ -2239,7 +2239,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Baltimore",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "21220"
         },
         "posted": "2020-09-02T08:06:53.208Z",
@@ -2261,7 +2261,7 @@
         "company": "LOCKHEED MARTIN CORPORATION",
         "location": {
             "city": "Stratford",
-            "state": "CT",
+            "state": "Connecticut",
             "zip": "06615"
         },
         "posted": "2020-09-02T08:06:55.374Z",
@@ -2281,7 +2281,7 @@
         "company": "NextEra Energy",
         "location": {
             "city": "Juno Beach",
-            "state": "FL",
+            "state": "Florida",
             "zip": "33408"
         },
         "posted": "2020-09-02T08:06:57.481Z",
@@ -2305,7 +2305,7 @@
         "company": "Verisk Financial",
         "location": {
             "city": "White Plains",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:06:59.483Z",
@@ -2324,7 +2324,7 @@
         "company": "Verisk Financial",
         "location": {
             "city": "White Plains",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:07:01.521Z",
@@ -2346,7 +2346,7 @@
         "company": "BDO",
         "location": {
             "city": "Atlanta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30309"
         },
         "posted": "2020-09-02T08:07:02.512Z",
@@ -2367,7 +2367,7 @@
         "company": "Fidelity & Guaranty Life",
         "location": {
             "city": "Des Moines",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "50309"
         },
         "posted": "2020-09-02T08:07:03.786Z",
@@ -2388,7 +2388,7 @@
         "company": "Siemens",
         "location": {
             "city": "Hoffman Estates",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60192"
         },
         "posted": "2020-09-02T08:07:04.842Z",
@@ -2408,7 +2408,7 @@
         "company": "CGI Group, Inc.",
         "location": {
             "city": "Frankfort",
-            "state": "KY",
+            "state": "Kentucky",
             "zip": "40601"
         },
         "posted": "2020-09-02T08:07:06.065Z",
@@ -2430,7 +2430,7 @@
         "company": "NextEra Energy",
         "location": {
             "city": "Juno Beach",
-            "state": "FL",
+            "state": "Florida",
             "zip": "33408"
         },
         "posted": "2020-09-02T08:07:08.069Z",
@@ -2454,7 +2454,7 @@
         "company": "Framatome",
         "location": {
             "city": "Lynchburg",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:07:09.967Z",
@@ -2477,7 +2477,7 @@
         "company": "Verisk Financial",
         "location": {
             "city": "White Plains",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:07:12.111Z",
@@ -2495,7 +2495,7 @@
         "company": "Expedien",
         "location": {
             "city": "Houston",
-            "state": "TX",
+            "state": "Texas",
             "zip": "77002"
         },
         "posted": "2020-09-02T08:07:14.128Z",
@@ -2512,7 +2512,7 @@
         "company": "Brinks",
         "location": {
             "city": "Coppell",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75019"
         },
         "posted": "2020-09-04T08:07:15.193Z",
@@ -2534,7 +2534,7 @@
         "company": "Save-A-Suit",
         "location": {
             "city": "Bethel",
-            "state": "CT",
+            "state": "Connecticut",
             "zip": "06801"
         },
         "posted": "2020-09-02T08:07:18.272Z",
@@ -2559,7 +2559,7 @@
         "company": "Johns Hopkins Applied Physics Laboratory (APL)",
         "location": {
             "city": "Laurel",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "20708"
         },
         "posted": "2020-09-02T08:07:20.279Z",
@@ -2579,7 +2579,7 @@
         "company": "Applied Software Inc.",
         "location": {
             "city": "Fulton",
-            "state": "MD",
+            "state": "Maryland",
             "zip": "20759"
         },
         "posted": "2020-09-01T08:07:23.069Z",
@@ -2599,7 +2599,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "San Mateo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:24.966Z",
@@ -2618,7 +2618,7 @@
         "company": "xSCAPE Games",
         "location": {
             "city": "Los Angeles",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:28.388Z",
@@ -2643,7 +2643,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:30.269Z",
@@ -2665,7 +2665,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "Aliso Viejo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:32.210Z",
@@ -2689,7 +2689,7 @@
         "company": "Sony Interactive Entertainment PlayStation",
         "location": {
             "city": "San Mateo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:34.043Z",
@@ -2713,7 +2713,7 @@
         "company": "Lenovo",
         "location": {
             "city": "Morrisville",
-            "state": "NC",
+            "state": "North Carolina",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:36.099Z",
@@ -2733,7 +2733,7 @@
         "company": "ServiceNow",
         "location": {
             "city": "San Diego",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:38.176Z",
@@ -2753,7 +2753,7 @@
         "company": "Kepler Fi",
         "location": {
             "city": "New York",
-            "state": "NY",
+            "state": "New York",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:41.030Z",
@@ -2771,7 +2771,7 @@
         "company": "Nike",
         "location": {
             "city": "Beaverton",
-            "state": "OR",
+            "state": "Oregon",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:43.753Z",
@@ -2794,7 +2794,7 @@
         "company": "MAXIMUS",
         "location": {
             "city": "Blacksburg",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "24061"
         },
         "posted": "2020-09-01T08:07:45.244Z",
@@ -2813,7 +2813,7 @@
         "company": "VIZION 360",
         "location": {
             "city": "Independence",
-            "state": "OH",
+            "state": "Ohio",
             "zip": "N/A"
         },
         "posted": null,
@@ -2837,7 +2837,7 @@
         "company": "Datix",
         "location": {
             "city": "St. Louis",
-            "state": "MO",
+            "state": "Missouri",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:07:51.814Z",
@@ -2859,7 +2859,7 @@
         "company": "Friedkin Companies, Inc.",
         "location": {
             "city": "Houston",
-            "state": "TX",
+            "state": "Texas",
             "zip": "77001"
         },
         "posted": "2020-09-01T08:07:53.823Z",
@@ -2877,7 +2877,7 @@
         "company": "Fujitsu",
         "location": {
             "city": "Richardson",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75082"
         },
         "posted": "2020-09-01T08:07:55.870Z",
@@ -2899,7 +2899,7 @@
         "company": "Framatome",
         "location": {
             "city": "Richland",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:07:57.775Z",
@@ -2922,7 +2922,7 @@
         "company": "World Wide Technology, Inc.",
         "location": {
             "city": "St. Louis",
-            "state": "MO",
+            "state": "Missouri",
             "zip": "63102"
         },
         "posted": "2020-09-01T08:07:59.611Z",
@@ -2942,7 +2942,7 @@
         "company": "World Wide Technology, Inc.",
         "location": {
             "city": "Edwardsville",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:08:01.437Z",
@@ -2962,7 +2962,7 @@
         "company": "World Wide Technology, Inc.",
         "location": {
             "city": "Edwardsville",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:08:03.486Z",
@@ -2983,7 +2983,7 @@
         "company": "PathAI",
         "location": {
             "city": "Boston",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "02215"
         },
         "posted": "2020-09-01T08:08:06.523Z",
@@ -3005,7 +3005,7 @@
         "company": "Veritex Community Bank",
         "location": {
             "city": "Plano",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75093"
         },
         "posted": "2020-09-01T08:08:08.558Z",
@@ -3022,7 +3022,7 @@
         "company": "MVP Health Care",
         "location": {
             "city": "Schenectady",
-            "state": "NY",
+            "state": "New York",
             "zip": "12305"
         },
         "posted": "2020-09-01T08:08:10.924Z",
@@ -3039,7 +3039,7 @@
         "company": "Neenah, Inc.",
         "location": {
             "city": "Alpharetta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30005"
         },
         "posted": "2020-09-01T08:08:12.881Z",
@@ -3056,7 +3056,7 @@
         "company": "DTCC",
         "location": {
             "city": "Jersey City",
-            "state": "NJ",
+            "state": "New Jersey",
             "zip": "07310"
         },
         "posted": "2020-09-01T08:08:14.812Z",
@@ -3077,7 +3077,7 @@
         "company": "Platform9 Systems",
         "location": {
             "city": "Mountain View",
-            "state": "CA",
+            "state": "California",
             "zip": "94040"
         },
         "posted": null,
@@ -3099,7 +3099,7 @@
         "company": "Yext",
         "location": {
             "city": "Washington",
-            "state": "DC",
+            "state": "District Of Columbia",
             "zip": "N/A"
         },
         "posted": "2020-08-31T08:08:20.173Z",
@@ -3121,7 +3121,7 @@
         "company": "ICG LLC",
         "location": {
             "city": "Orlando",
-            "state": "FL",
+            "state": "Florida",
             "zip": "N/A"
         },
         "posted": "2020-08-31T08:08:23.268Z",
@@ -3145,7 +3145,7 @@
         "company": "McKinsey & Company",
         "location": {
             "city": "San Jose",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-30T08:08:25.369Z",
@@ -3165,7 +3165,7 @@
         "company": "TuSimple, Inc.",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-30T08:08:28.233Z",
@@ -3185,7 +3185,7 @@
         "company": "TuSimple, Inc.",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-30T08:08:31.024Z",
@@ -3205,7 +3205,7 @@
         "company": "Parker Hannifin Corporation",
         "location": {
             "city": "Cleveland",
-            "state": "OH",
+            "state": "Ohio",
             "zip": "44124"
         },
         "posted": "2020-08-30T08:08:32.131Z",
@@ -3228,7 +3228,7 @@
         "company": "Samsara",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94123"
         },
         "posted": "2020-08-29T08:08:34.193Z",
@@ -3251,7 +3251,7 @@
         "company": "Hewlett Packard Enterprise",
         "location": {
             "city": "San Jose",
-            "state": "CA",
+            "state": "California",
             "zip": "95002"
         },
         "posted": "2020-08-29T08:08:36.231Z",
@@ -3274,7 +3274,7 @@
         "company": "Infineon Technologies",
         "location": {
             "city": "El Segundo",
-            "state": "CA",
+            "state": "California",
             "zip": "90245"
         },
         "posted": "2020-08-29T08:08:37.268Z",
@@ -3297,7 +3297,7 @@
         "company": "Honeywell",
         "location": {
             "city": "Atlanta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30308"
         },
         "posted": "2020-08-29T08:08:39.297Z",
@@ -3319,7 +3319,7 @@
         "company": "Facebook",
         "location": {
             "city": "Menlo Park",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:08:41.344Z",
@@ -3337,7 +3337,7 @@
         "company": "Moog Inc.",
         "location": {
             "city": "East Aurora",
-            "state": "NY",
+            "state": "New York",
             "zip": "14052"
         },
         "posted": "2020-08-29T08:08:43.410Z",
@@ -3358,7 +3358,7 @@
         "company": "TuSimple",
         "location": {
             "city": "San Diego",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:08:46.166Z",
@@ -3378,7 +3378,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:08:48.333Z",
@@ -3399,7 +3399,7 @@
         "company": "Church Mutual Insurance, S.I.",
         "location": {
             "city": "Merrill",
-            "state": "WI",
+            "state": "Wisconsin",
             "zip": "54452"
         },
         "posted": "2020-08-29T08:08:51.101Z",
@@ -3421,7 +3421,7 @@
         "company": "Sunpro Solar, DBA",
         "location": {
             "city": "Mandeville",
-            "state": "LA",
+            "state": "Louisiana",
             "zip": "70471"
         },
         "posted": "2020-08-29T08:08:53.184Z",
@@ -3444,7 +3444,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:08:55.475Z",
@@ -3465,7 +3465,7 @@
         "company": "Brinks",
         "location": {
             "city": "Coppell",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75019"
         },
         "posted": "2020-09-04T08:08:57.519Z",
@@ -3487,7 +3487,7 @@
         "company": "Store Space Self Storage",
         "location": {
             "city": "Winter Garden",
-            "state": "FL",
+            "state": "Florida",
             "zip": "34787"
         },
         "posted": "2020-09-04T08:09:00.800Z",
@@ -3502,7 +3502,7 @@
         "company": "Datix",
         "location": {
             "city": "St. Louis",
-            "state": "MO",
+            "state": "Missouri",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:09:04.316Z",
@@ -3524,7 +3524,7 @@
         "company": "Pella Corporation",
         "location": {
             "city": "Pella",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "50219"
         },
         "posted": "2020-08-29T08:09:06.820Z",
@@ -3542,7 +3542,7 @@
         "company": "Micron",
         "location": {
             "city": "Lehi",
-            "state": "UT",
+            "state": "Utah",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:09:08.893Z",
@@ -3563,7 +3563,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:09:11.030Z",
@@ -3582,7 +3582,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:09:13.208Z",
@@ -3603,7 +3603,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-29T08:09:15.348Z",
@@ -3623,7 +3623,7 @@
         "company": "GE Gas Power",
         "location": {
             "city": "Atlanta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30339"
         },
         "posted": "2020-08-29T08:09:17.987Z",
@@ -3642,7 +3642,7 @@
         "company": "Key Bank- Campus",
         "location": {
             "city": "Buffalo",
-            "state": "NY",
+            "state": "New York",
             "zip": "14226"
         },
         "posted": "2020-08-29T08:09:20.045Z",
@@ -3667,7 +3667,7 @@
         "company": "Fidelity & Guaranty Life",
         "location": {
             "city": "Des Moines",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "50309"
         },
         "posted": "2020-08-29T08:09:21.235Z",
@@ -3683,7 +3683,7 @@
         "company": "Samsara",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94123"
         },
         "posted": "2020-08-27T08:09:23.418Z",
@@ -3706,7 +3706,7 @@
         "company": "Coursera",
         "location": {
             "city": "Mountain View",
-            "state": "CA",
+            "state": "California",
             "zip": "94041"
         },
         "posted": "2020-08-26T08:09:25.322Z",
@@ -3726,7 +3726,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:09:27.802Z",
@@ -3747,7 +3747,7 @@
         "company": "Plaid",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:09:29.688Z",
@@ -3764,7 +3764,7 @@
         "company": "TechNet Inc.",
         "location": {
             "city": "Folsom",
-            "state": "CA",
+            "state": "California",
             "zip": "95630"
         },
         "posted": "2020-08-26T08:09:32.845Z",
@@ -3785,7 +3785,7 @@
         "company": "Bayer",
         "location": {
             "city": "Kīhei",
-            "state": "HI",
+            "state": "Hawaii",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:09:33.785Z",
@@ -3806,7 +3806,7 @@
         "company": "Wind River",
         "location": {
             "city": "Alameda",
-            "state": "CA",
+            "state": "California",
             "zip": "94501"
         },
         "posted": "2020-08-22T08:09:35.870Z",
@@ -3825,7 +3825,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:09:37.823Z",
@@ -3870,7 +3870,7 @@
         "company": "Global Atlantic Financial Group",
         "location": {
             "city": "Des Moines",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "50309"
         },
         "posted": "2020-08-22T08:09:41.699Z",
@@ -3934,7 +3934,7 @@
         "company": "AMPLY Power",
         "location": {
             "city": "Mountain View",
-            "state": "CA",
+            "state": "California",
             "zip": "94043"
         },
         "posted": "2020-08-22T08:09:49.779Z",
@@ -3957,7 +3957,7 @@
         "company": "Lucid Motors",
         "location": {
             "city": "Newark",
-            "state": "CA",
+            "state": "California",
             "zip": "94560"
         },
         "posted": "2020-08-22T08:09:50.755Z",
@@ -3999,7 +3999,7 @@
         "company": "Marvell",
         "location": {
             "city": "Santa Clara",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:09:54.886Z",
@@ -4018,7 +4018,7 @@
         "company": "MomentMD",
         "location": {
             "city": "Palo Alto",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:09:58.582Z",
@@ -4039,7 +4039,7 @@
         "company": "iHealth Labs Inc.",
         "location": {
             "city": "Sunnyvale",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-22T08:10:00.616Z",
@@ -4056,7 +4056,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:10:02.561Z",
@@ -4078,7 +4078,7 @@
         "company": "OpptIn",
         "location": {
             "city": "Seattle",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:10:05.559Z",
@@ -4098,7 +4098,7 @@
         "company": "Marvell",
         "location": {
             "city": "Santa Clara",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:10:07.730Z",
@@ -4118,7 +4118,7 @@
         "company": "Coinbase",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94111"
         },
         "posted": "2020-08-25T08:10:09.587Z",
@@ -4142,7 +4142,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:10:11.496Z",
@@ -4163,7 +4163,7 @@
         "company": "Microsoft",
         "location": {
             "city": "Redmond",
-            "state": "WA",
+            "state": "Washington",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:10:13.462Z",
@@ -4184,7 +4184,7 @@
         "company": "Bayer",
         "location": {
             "city": "Waco",
-            "state": "NE",
+            "state": "Nebraska",
             "zip": "N/A"
         },
         "posted": "2020-08-27T08:10:14.428Z",
@@ -4203,7 +4203,7 @@
         "company": "Verkada",
         "location": {
             "city": "San Mateo",
-            "state": "CA",
+            "state": "California",
             "zip": "94401"
         },
         "posted": "2020-08-25T08:10:17.105Z",
@@ -4223,7 +4223,7 @@
         "company": "Kent Corporation",
         "location": {
             "city": "Muscatine",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "52761"
         },
         "posted": "2020-08-28T08:10:18.252Z",
@@ -4245,7 +4245,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:10:20.166Z",
@@ -4266,7 +4266,7 @@
         "company": "Zume Inc.",
         "location": {
             "city": "Camarillo",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:10:23.201Z",
@@ -4285,7 +4285,7 @@
         "company": "Grainger",
         "location": {
             "city": "Chicago",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60603"
         },
         "posted": "2020-08-26T08:10:25.252Z",
@@ -4308,7 +4308,7 @@
         "company": "GRANT THORNTON",
         "location": {
             "city": "San Francisco",
-            "state": "CA",
+            "state": "California",
             "zip": "94111"
         },
         "posted": "2020-08-27T08:10:27.194Z",
@@ -4326,7 +4326,7 @@
         "company": "FORNIDA LLC.",
         "location": {
             "city": "Plano",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75074"
         },
         "posted": "2020-08-26T08:10:30.143Z",
@@ -4347,7 +4347,7 @@
         "company": "Verkada",
         "location": {
             "city": "San Mateo",
-            "state": "CA",
+            "state": "California",
             "zip": "94401"
         },
         "posted": "2020-08-25T08:10:32.967Z",
@@ -4366,7 +4366,7 @@
         "company": "Micron",
         "location": {
             "city": "Boise",
-            "state": "ID",
+            "state": "Idaho",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:10:35.631Z",
@@ -4388,7 +4388,7 @@
         "company": "Datix",
         "location": {
             "city": "St. Louis",
-            "state": "MO",
+            "state": "Missouri",
             "zip": "N/A"
         },
         "posted": "2020-09-02T08:10:39.104Z",
@@ -4410,7 +4410,7 @@
         "company": "ANDURIL INDUSTRIES",
         "location": {
             "city": "Irvine",
-            "state": "CA",
+            "state": "California",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:10:42.006Z",
@@ -4434,7 +4434,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:10:43.928Z",
@@ -4453,7 +4453,7 @@
         "company": "Dynetics",
         "location": {
             "city": "Huntsville",
-            "state": "AL",
+            "state": "Alabama",
             "zip": "N/A"
         },
         "posted": "2020-08-22T08:10:45.768Z",
@@ -4474,7 +4474,7 @@
         "company": "Cargill",
         "location": {
             "city": "Wayzata",
-            "state": "MN",
+            "state": "Minnesota",
             "zip": "55391"
         },
         "posted": "2020-08-22T08:10:47.731Z",
@@ -4495,7 +4495,7 @@
         "company": "Scientific Games",
         "location": {
             "city": "Las Vegas",
-            "state": "NV",
+            "state": "Nevada",
             "zip": "89118"
         },
         "posted": "2020-08-27T08:10:49.506Z",
@@ -4518,7 +4518,7 @@
         "company": "Carus Group",
         "location": {
             "city": "Peru",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "61354"
         },
         "posted": "2020-08-26T08:10:52.895Z",
@@ -4537,7 +4537,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:10:54.958Z",
@@ -4558,7 +4558,7 @@
         "company": "Cowen, Inc",
         "location": {
             "city": "New York",
-            "state": "NY",
+            "state": "New York",
             "zip": "10019"
         },
         "posted": "2020-08-22T08:10:58.045Z",
@@ -4580,7 +4580,7 @@
         "company": "Unisys",
         "location": {
             "city": "Eagan",
-            "state": "MN",
+            "state": "Minnesota",
             "zip": "55121"
         },
         "posted": "2020-08-28T08:11:00.947Z",
@@ -4621,7 +4621,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:11:06.449Z",
@@ -4645,7 +4645,7 @@
         "company": "Marvell",
         "location": {
             "city": "Chandler",
-            "state": "AZ",
+            "state": "Arizona",
             "zip": "85286"
         },
         "posted": "2020-08-28T08:11:08.675Z",
@@ -4666,7 +4666,7 @@
         "company": "Church Mutual Insurance, S.I.",
         "location": {
             "city": "Merrill",
-            "state": "WI",
+            "state": "Wisconsin",
             "zip": "54452"
         },
         "posted": "2020-08-27T08:11:11.712Z",
@@ -4688,7 +4688,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:11:13.795Z",
@@ -4711,7 +4711,7 @@
         "company": "IT Trailblazers",
         "location": {
             "city": "Township of Woodbridge",
-            "state": "NJ",
+            "state": "New Jersey",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:11:17.126Z",
@@ -4730,7 +4730,7 @@
         "company": "ISO New England Inc.",
         "location": {
             "city": "Holyoke",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "01040"
         },
         "posted": "2020-08-25T08:11:20.493Z",
@@ -4748,7 +4748,7 @@
         "company": "Consolidated Aerospace Manufacturing",
         "location": {
             "city": "Cleveland",
-            "state": "OH",
+            "state": "Ohio",
             "zip": "44113"
         },
         "posted": "2020-08-28T08:11:23.432Z",
@@ -4768,7 +4768,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Chicago",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60603"
         },
         "posted": "2020-08-26T08:11:25.743Z",
@@ -4789,7 +4789,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:11:27.830Z",
@@ -4808,7 +4808,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:11:30.005Z",
@@ -4827,7 +4827,7 @@
         "company": "SICK, Inc.",
         "location": {
             "city": "Stoughton",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "02072"
         },
         "posted": "2020-08-26T08:11:32.111Z",
@@ -4848,7 +4848,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:11:35.086Z",
@@ -4869,7 +4869,7 @@
         "company": "Micron",
         "location": {
             "city": "Allen",
-            "state": "TX",
+            "state": "Texas",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:11:37.308Z",
@@ -4890,7 +4890,7 @@
         "company": "Ocado Group",
         "location": {
             "city": "Tysons Corner",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:11:39.095Z",
@@ -4909,7 +4909,7 @@
         "company": "VOSS INDUSTRIES",
         "location": {
             "city": "Berea",
-            "state": "OH",
+            "state": "Ohio",
             "zip": "44017"
         },
         "posted": "2020-08-27T08:11:41.121Z",
@@ -4929,7 +4929,7 @@
         "company": "Tyler Technologies",
         "location": {
             "city": "Plano",
-            "state": "TX",
+            "state": "Texas",
             "zip": "N/A"
         },
         "posted": "2020-08-22T08:11:42.037Z",
@@ -4947,7 +4947,7 @@
         "company": "Tyler Technologies, Inc.",
         "location": {
             "city": "Plano",
-            "state": "TX",
+            "state": "Texas",
             "zip": "N/A"
         },
         "posted": "2020-08-27T08:11:43.220Z",
@@ -4965,7 +4965,7 @@
         "company": "Jacobs",
         "location": {
             "city": "Hudson",
-            "state": "NH",
+            "state": "New Hampshire",
             "zip": "03051"
         },
         "posted": "2020-08-22T08:11:45.321Z",
@@ -4985,7 +4985,7 @@
         "company": "Walmart",
         "location": {
             "city": "Bentonville",
-            "state": "AR",
+            "state": "Arkansas",
             "zip": "72712"
         },
         "posted": "2020-08-22T08:11:46.802Z",
@@ -5004,7 +5004,7 @@
         "company": "ISO New England Inc.",
         "location": {
             "city": "Holyoke",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "01040"
         },
         "posted": "2020-08-25T08:11:49.919Z",
@@ -5023,7 +5023,7 @@
         "company": "The CBORD Group Inc.",
         "location": {
             "city": "Waco",
-            "state": "TX",
+            "state": "Texas",
             "zip": "76701"
         },
         "posted": "2020-08-26T08:11:52.859Z",
@@ -5047,7 +5047,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Skokie",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:11:54.920Z",
@@ -5071,7 +5071,7 @@
         "company": "ISO New England Inc.",
         "location": {
             "city": "Holyoke",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "01040"
         },
         "posted": "2020-08-25T08:11:58.661Z",
@@ -5089,7 +5089,7 @@
         "company": "Grainger",
         "location": {
             "city": "Chicago",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60603"
         },
         "posted": "2020-08-26T08:12:01.079Z",
@@ -5110,7 +5110,7 @@
         "company": "ISO New England Inc.",
         "location": {
             "city": "Holyoke",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "01040"
         },
         "posted": "2020-08-25T08:12:04.293Z",
@@ -5129,7 +5129,7 @@
         "company": "Bankers Healthcare Group",
         "location": {
             "city": "Davie",
-            "state": "FL",
+            "state": "Florida",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:12:06.374Z",
@@ -5148,7 +5148,7 @@
         "company": "ANDURIL INDUSTRIES",
         "location": {
             "city": "Boston",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "N/A"
         },
         "posted": "2020-08-22T08:12:09.323Z",
@@ -5169,7 +5169,7 @@
         "company": "Fujitsu",
         "location": {
             "city": "Richardson",
-            "state": "TX",
+            "state": "Texas",
             "zip": "75082"
         },
         "posted": "2020-08-28T08:12:11.579Z",
@@ -5187,7 +5187,7 @@
         "company": "Norfolk Southern Corp",
         "location": {
             "city": "Atlanta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30309"
         },
         "posted": "2020-08-27T08:12:13.620Z",
@@ -5208,7 +5208,7 @@
         "company": "Bayer",
         "location": {
             "city": "Waco",
-            "state": "NE",
+            "state": "Nebraska",
             "zip": "N/A"
         },
         "posted": "2020-08-27T08:12:14.675Z",
@@ -5226,7 +5226,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Skokie",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:12:16.780Z",
@@ -5244,7 +5244,7 @@
         "company": "Oracle",
         "location": {
             "city": "Morrisville",
-            "state": "NC",
+            "state": "North Carolina",
             "zip": "N/A"
         },
         "posted": "2020-08-27T08:12:18.820Z",
@@ -5264,7 +5264,7 @@
         "company": "SICK, Inc.",
         "location": {
             "city": "Savage",
-            "state": "MN",
+            "state": "Minnesota",
             "zip": "55378"
         },
         "posted": "2020-08-26T08:12:20.847Z",
@@ -5283,7 +5283,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:12:23.036Z",
@@ -5303,7 +5303,7 @@
         "company": "IT Trailblazers",
         "location": {
             "city": "Township of Woodbridge",
-            "state": "NJ",
+            "state": "New Jersey",
             "zip": "N/A"
         },
         "posted": "2020-09-01T08:12:26.253Z",
@@ -5322,7 +5322,7 @@
         "company": "Kech Development",
         "location": {
             "city": "New York",
-            "state": "NY",
+            "state": "New York",
             "zip": "10001"
         },
         "posted": "2020-08-24T08:12:28.647Z",
@@ -5343,7 +5343,7 @@
         "company": "Internship Positions at Global Atlantic Financial Group",
         "location": {
             "city": "Des Moines",
-            "state": "IA",
+            "state": "Iowa",
             "zip": "N/A"
         },
         "posted": "2020-08-22T08:12:29.670Z",
@@ -5364,7 +5364,7 @@
         "company": "Innovative Systems",
         "location": {
             "city": "Pittsburgh",
-            "state": "PA",
+            "state": "Pennsylvania",
             "zip": "15220"
         },
         "posted": "2020-08-26T08:12:31.908Z",
@@ -5386,7 +5386,7 @@
         "company": "City of South Haven",
         "location": {
             "city": "South Haven",
-            "state": "MI",
+            "state": "Michigan",
             "zip": "49090"
         },
         "posted": "2020-08-26T08:12:34.983Z",
@@ -5404,7 +5404,7 @@
         "company": "Anderson ZurMuehlen",
         "location": {
             "city": "Helena",
-            "state": "MT",
+            "state": "Montana",
             "zip": "N/A"
         },
         "posted": "2020-08-27T08:12:37.660Z",
@@ -5423,7 +5423,7 @@
         "company": "Cavan Solutions",
         "location": {
             "city": "Washington",
-            "state": "DC",
+            "state": "District Of Columbia",
             "zip": "20024"
         },
         "posted": "2020-08-28T08:12:40.681Z",
@@ -5444,7 +5444,7 @@
         "company": "Susquehanna International Group",
         "location": {
             "city": "Philadelphia",
-            "state": "PA",
+            "state": "Pennsylvania",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:12:42.967Z",
@@ -5467,7 +5467,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:12:45.144Z",
@@ -5488,7 +5488,7 @@
         "company": "Syntech Systems, Tallahassee, FL",
         "location": {
             "city": "Tallahassee",
-            "state": "FL",
+            "state": "Florida",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:12:48.286Z",
@@ -5529,7 +5529,7 @@
         "company": "ISO New England Inc.",
         "location": {
             "city": "Holyoke",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "01040"
         },
         "posted": "2020-08-25T08:12:54.745Z",
@@ -5546,7 +5546,7 @@
         "company": "GRANT THORNTON",
         "location": {
             "city": "Atlanta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30309"
         },
         "posted": "2020-08-27T08:12:57.158Z",
@@ -5567,7 +5567,7 @@
         "company": "Cavan Solutions",
         "location": {
             "city": "Washington",
-            "state": "DC",
+            "state": "District Of Columbia",
             "zip": "20024"
         },
         "posted": "2020-08-28T08:13:00.051Z",
@@ -5588,7 +5588,7 @@
         "company": "Norfolk Southern Corp",
         "location": {
             "city": "Atlanta",
-            "state": "GA",
+            "state": "Georgia",
             "zip": "30309"
         },
         "posted": "2020-08-26T08:13:02.186Z",
@@ -5609,7 +5609,7 @@
         "company": "Shure Incorporated",
         "location": {
             "city": "Niles",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60714"
         },
         "posted": "2020-08-26T08:13:04.625Z",
@@ -5630,7 +5630,7 @@
         "company": "CapTech Consulting",
         "location": {
             "city": "Richmond",
-            "state": "VA",
+            "state": "Virginia",
             "zip": "N/A"
         },
         "posted": "2020-08-25T08:13:06.838Z",
@@ -5651,7 +5651,7 @@
         "company": "Restaurant Brands International Campus Opportunities",
         "location": {
             "city": "Miami",
-            "state": "FL",
+            "state": "Florida",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:13:08.846Z",
@@ -5672,7 +5672,7 @@
         "company": "GRANT THORNTON",
         "location": {
             "city": "Chicago",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60604"
         },
         "posted": "2020-08-27T08:13:10.913Z",
@@ -5690,7 +5690,7 @@
         "company": "The Wright Star LLC",
         "location": {
             "city": "United",
-            "state": "PA",
+            "state": "Pennsylvania",
             "zip": "N/A"
         },
         "posted": "2020-08-23T08:13:14.059Z",
@@ -5710,7 +5710,7 @@
         "company": "GRANT THORNTON",
         "location": {
             "city": "Chicago",
-            "state": "IL",
+            "state": "Illinois",
             "zip": "60604"
         },
         "posted": "2020-08-26T08:13:16.299Z",
@@ -5730,7 +5730,7 @@
         "company": "Restaurant Brands International Campus Opportunities",
         "location": {
             "city": "Miami",
-            "state": "FL",
+            "state": "Florida",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:13:18.330Z",
@@ -5774,7 +5774,7 @@
         "company": "SV Summit Inc",
         "location": {
             "city": "Santa Clara",
-            "state": "CA",
+            "state": "California",
             "zip": "95054"
         },
         "posted": "2020-08-26T08:13:23.754Z",
@@ -5795,7 +5795,7 @@
         "company": "Anderson ZurMuehlen",
         "location": {
             "city": "Helena",
-            "state": "MT",
+            "state": "Montana",
             "zip": "N/A"
         },
         "posted": "2020-08-27T08:13:25.920Z",
@@ -5814,7 +5814,7 @@
         "company": "Syntech Systems, Tallahassee, FL",
         "location": {
             "city": "Tallahassee",
-            "state": "FL",
+            "state": "Florida",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:13:29.012Z",
@@ -5835,7 +5835,7 @@
         "company": "Belden",
         "location": {
             "city": "Indianapolis",
-            "state": "IN",
+            "state": "Indiana",
             "zip": "46262"
         },
         "posted": "2020-08-25T08:13:31.599Z",
@@ -5858,7 +5858,7 @@
         "company": "Innovative Systems",
         "location": {
             "city": "Pittsburgh",
-            "state": "PA",
+            "state": "Pennsylvania",
             "zip": "15220"
         },
         "posted": "2020-08-25T08:13:33.813Z",
@@ -5880,7 +5880,7 @@
         "company": "SAS Institute Inc",
         "location": {
             "city": "Cary",
-            "state": "NC",
+            "state": "North Carolina",
             "zip": "27513"
         },
         "posted": "2020-08-22T08:13:35.948Z",
@@ -5899,7 +5899,7 @@
         "company": "Wipfli LLP",
         "location": {
             "city": "Minneapolis",
-            "state": "MN",
+            "state": "Minnesota",
             "zip": "55435"
         },
         "posted": "2020-08-25T08:13:38.286Z",
@@ -5917,7 +5917,7 @@
         "company": "Lincoln Financial",
         "location": {
             "city": "Hartford",
-            "state": "CT",
+            "state": "Connecticut",
             "zip": "06103"
         },
         "posted": "2020-08-27T08:13:40.814Z",
@@ -5935,7 +5935,7 @@
         "company": "Raytheon Missiles & Defense",
         "location": {
             "city": "Andover",
-            "state": "MA",
+            "state": "Massachusetts",
             "zip": "N/A"
         },
         "posted": "2020-08-26T08:13:43.173Z",
@@ -5955,7 +5955,7 @@
         "company": "Raytheon Missiles & Defense",
         "location": {
             "city": "Tucson",
-            "state": "AZ",
+            "state": "Arizona",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:13:45.617Z",
@@ -5980,7 +5980,7 @@
         "company": "Love's Travel Stops & Country Stores",
         "location": {
             "city": "Oklahoma City",
-            "state": "OK",
+            "state": "Oklahoma",
             "zip": "73120"
         },
         "posted": "2020-08-27T08:13:48.068Z",
@@ -6000,7 +6000,7 @@
         "company": "Raytheon Missiles & Defense",
         "location": {
             "city": "Tucson",
-            "state": "AZ",
+            "state": "Arizona",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:13:51.144Z",
@@ -6026,7 +6026,7 @@
         "company": "Love's Travel Stops & Country Stores",
         "location": {
             "city": "Oklahoma City",
-            "state": "OK",
+            "state": "Oklahoma",
             "zip": "73120"
         },
         "posted": "2020-08-27T08:13:53.250Z",
@@ -6047,7 +6047,7 @@
         "company": "Raytheon Missiles & Defense",
         "location": {
             "city": "Tucson",
-            "state": "AZ",
+            "state": "Arizona",
             "zip": "N/A"
         },
         "posted": "2020-08-28T08:13:55.401Z",
@@ -6071,7 +6071,7 @@
         "company": "Lenovo",
         "location": {
             "city": "Morrisville",
-            "state": "NC",
+            "state": "North Carolina",
             "zip": "N/A"
         },
         "posted": "2020-08-21T08:13:57.722Z",
@@ -6091,7 +6091,7 @@
         "company": "Lenovo",
         "location": {
             "city": "Morrisville",
-            "state": "NC",
+            "state": "North Carolina",
             "zip": "N/A"
         },
         "posted": "2020-08-21T08:14:00.010Z",
@@ -6111,7 +6111,7 @@
         "company": "Lenovo",
         "location": {
             "city": "Morrisville",
-            "state": "NC",
+            "state": "North Carolina",
             "zip": "N/A"
         },
         "posted": "2020-08-21T08:14:03.545Z",

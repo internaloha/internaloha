@@ -4,7 +4,7 @@
         "company": "KnowBe4 - 4.6",
         "location": {
             "city": "Clearwater",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "Time managementITILCommunication skillsInformation securityCustomer serviceBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:37:52.653Z",
@@ -24,7 +24,7 @@
         "company": "Commonwealth Care Alliance, Inc. - 3.4",
         "location": {
             "city": "Boston",
-            "state": "MA"
+            "state": "Massachusetts"
         },
         "qualifications": "Application development.NETAPIsJavaScriptMobile applicationsWork authorization",
         "posted": "2020-09-04T00:37:52.717Z",
@@ -47,7 +47,7 @@
         "company": "Fidelity & Guaranty Life - 3.2",
         "location": {
             "city": "Des Moines",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "Time managementMicrosoft ExcelInternal auditsCommunication skillsMicrosoft Office",
         "posted": "2020-08-29T00:37:53.025Z",
@@ -63,7 +63,7 @@
         "company": "Techable - ",
         "location": {
             "city": "Arlington Heights",
-            "state": "IL"
+            "state": "Illinois"
         },
         "qualifications": "Computer scienceE-Commerce",
         "posted": "2020-09-03T00:37:53.322Z",
@@ -80,7 +80,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Signal processingAIData structuresDiscrete mathAssemblyPass polygraph test",
         "posted": "2020-09-02T00:37:53.620Z",
@@ -100,7 +100,7 @@
         "company": "Datix - ",
         "location": {
             "city": "St. Louis",
-            "state": "MO"
+            "state": "Missouri"
         },
         "qualifications": "PHP.NETSoftware developmentC#Bachelor's degree",
         "posted": "2020-09-02T00:37:53.897Z",
@@ -119,7 +119,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "HTML5Pass polygraph test",
         "posted": "2020-09-02T00:37:54.177Z",
@@ -140,7 +140,7 @@
         "company": "Fivestars - 4.0",
         "location": {
             "city": "San Francisco",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "ReactMicrosoft ExcelKafkaAPIsElasticsearchBachelor's degree",
         "posted": "2020-09-04T00:37:54.479Z",
@@ -160,7 +160,7 @@
         "company": "Marvell - 3.5",
         "location": {
             "city": "Burlington",
-            "state": "VT"
+            "state": "Vermont"
         },
         "qualifications": "LinuxC/C++Microsoft ExcelBSDBachelor's degree",
         "posted": "2020-09-04T00:37:54.804Z",
@@ -179,7 +179,7 @@
         "company": "Teleflex - 3.7",
         "location": {
             "city": "Morrisville",
-            "state": "NC"
+            "state": "North Carolina"
         },
         "qualifications": "SharePointLayout designCommunication skillsJavaScriptCustomer serviceBachelor's degree",
         "posted": "2020-09-04T00:37:55.107Z",
@@ -199,7 +199,7 @@
         "company": "Bayer - 4.2",
         "location": {
             "city": "St. Louis",
-            "state": "MO"
+            "state": "Missouri"
         },
         "qualifications": "RubyCommunication skillsFunctional testingScalaJavaScriptBachelor's degree",
         "posted": "2020-09-04T00:37:55.418Z",
@@ -219,7 +219,7 @@
         "company": "KnowBe4 - 4.6",
         "location": {
             "city": "Clearwater",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "S3JiraConfluenceAWSJavaScriptBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:37:55.692Z",
@@ -241,7 +241,7 @@
         "company": "Commonwealth Care Alliance, Inc. - 3.4",
         "location": {
             "city": "Boston",
-            "state": "MA"
+            "state": "Massachusetts"
         },
         "qualifications": "Application development.NETAPIsJavaScriptMobile applicationsWork authorization",
         "posted": "2020-09-04T00:37:55.995Z",
@@ -264,7 +264,7 @@
         "company": "KnowBe4 - 4.6",
         "location": {
             "city": "Clearwater",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "Root cause analysisInformation securityBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:37:56.259Z",
@@ -284,7 +284,7 @@
         "company": "Marvell - 3.5",
         "location": {
             "city": "Rochester",
-            "state": "MN"
+            "state": "Minnesota"
         },
         "qualifications": "LinuxPerlSoCBSDPythonBachelor's degree",
         "posted": "2020-09-04T00:37:56.526Z",
@@ -303,7 +303,7 @@
         "company": "Cockroach Labs - ",
         "location": {
             "city": "New York",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "C/C++ReactReduxJavaScriptDistributed systems",
         "posted": "2020-09-04T00:37:56.791Z",
@@ -326,7 +326,7 @@
         "company": "Fujitsu - 3.7",
         "location": {
             "city": "Richardson",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "Database designC/C++JSONXMLREST",
         "posted": "2020-09-04T00:37:57.061Z",
@@ -347,7 +347,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "C/C++Operating systemsAssemblyComputer networkingHTML5Pass polygraph test",
         "posted": "2020-09-03T00:37:57.341Z",
@@ -366,7 +366,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Bachelor's degreePass polygraph test",
         "posted": "2020-09-03T00:37:57.627Z",
@@ -386,7 +386,7 @@
         "company": "KnowBe4 - 4.6",
         "location": {
             "city": "Clearwater",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "Time managementReactCommunication skillsDockerAWSBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:37:59.108Z",
@@ -408,7 +408,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Honolulu",
-            "state": "HI"
+            "state": "Hawaii"
         },
         "qualifications": "C/C++Operating systemsAssemblyPass polygraph test",
         "posted": "2020-09-03T00:37:59.171Z",
@@ -426,7 +426,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Computer forensicsCommunication skillsHTML5ResearchCSSPass polygraph test",
         "posted": "2020-09-03T00:37:59.484Z",
@@ -445,7 +445,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Gordon",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "HTML5Pass polygraph test",
         "posted": "2020-09-03T00:37:59.791Z",
@@ -465,7 +465,7 @@
         "company": "KnowBe4 - 4.6",
         "location": {
             "city": "Clearwater",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "Time managementCommunication skillsDockerAWSJavaScriptBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:38:00.143Z",
@@ -488,7 +488,7 @@
         "company": "Total Wine & More - 3.4",
         "location": {
             "city": "Bethesda",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Microsoft Windows ServerLinuxPivot tablesPowerShellMicrosoft Excel",
         "posted": "2020-09-04T00:38:00.422Z",
@@ -507,7 +507,7 @@
         "company": "Marvell - 3.5",
         "location": {
             "city": "Rochester",
-            "state": "MN"
+            "state": "Minnesota"
         },
         "qualifications": "LinuxPerlSoCBSDPythonBachelor's degree",
         "posted": "2020-09-04T00:38:00.727Z",
@@ -526,7 +526,7 @@
         "company": "Colony Brands, Inc. - 3.6",
         "location": {
             "city": "Monroe",
-            "state": "WI"
+            "state": "Wisconsin"
         },
         "qualifications": "Communication skillsMicrosoft Office",
         "posted": "2020-09-04T00:38:00.995Z",
@@ -544,7 +544,7 @@
         "company": "Westinghouse Electric Company - 3.4",
         "location": {
             "city": "Cranberry Township",
-            "state": "PA"
+            "state": "Pennsylvania"
         },
         "qualifications": "Bachelor's degree",
         "posted": "2020-09-04T00:38:01.273Z",
@@ -561,7 +561,7 @@
         "company": "Companions on a Journey Grief Support - ",
         "location": {
             "city": "West Chester",
-            "state": "OH"
+            "state": "Ohio"
         },
         "qualifications": "Analysis skillsData visualizationMicrosoft ExcelForecastingCommunication skillsMaster's degree",
         "posted": "2020-09-04T00:38:01.526Z",
@@ -580,7 +580,7 @@
         "company": "Alephtech2020, LLC - ",
         "location": {
             "city": "Atlanta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "Time managementContent creationCommunication skillsWriting skillsSEOBachelor's degree",
         "posted": "2020-09-04T00:38:01.804Z",
@@ -598,7 +598,7 @@
         "company": "Robotiquality - ",
         "location": {
             "city": "Indianapolis",
-            "state": "IN"
+            "state": "Indiana"
         },
         "qualifications": "C/C++GitCommunication skillsSoftware developmentRust",
         "posted": "2020-09-04T00:38:02.129Z",
@@ -617,7 +617,7 @@
         "company": "AccuWeather Careers - ",
         "location": {
             "city": "State College",
-            "state": "PA"
+            "state": "Pennsylvania"
         },
         "qualifications": "Product managementExperience designWriting skills18 years or older",
         "posted": "2020-09-04T00:38:02.362Z",
@@ -636,7 +636,7 @@
         "company": "GRANT THORNTON - 3.7",
         "location": {
             "city": "Arlington",
-            "state": "VA"
+            "state": "Virginia"
         },
         "qualifications": "Time managementCertified Internal AuditorCISSPCertified Information Systems AuditorCommunication skillsBachelor's degreeMaster's degree",
         "posted": "2020-09-04T00:38:02.622Z",
@@ -653,7 +653,7 @@
         "company": "Waupaca Foundry, Inc. - 3.3",
         "location": {
             "city": "Etowah",
-            "state": "TN"
+            "state": "Tennessee"
         },
         "qualifications": "Communication skillsSoftware troubleshootingCustomer serviceBachelor's degreeAssociate's degreeHigh school diploma or GED18 years or olderReference checkPass drug screening",
         "posted": "2020-09-04T00:38:03.917Z",
@@ -672,7 +672,7 @@
         "company": "Waupaca Foundry, Inc. - 3.3",
         "location": {
             "city": "Marinette",
-            "state": "WI"
+            "state": "Wisconsin"
         },
         "qualifications": "Computer literacyMicrosoft OfficeCustomer serviceBachelor's degreeAssociate's degreeHigh school diploma or GED18 years or olderReference checkPass drug screening",
         "posted": "2020-09-04T00:38:03.996Z",
@@ -689,7 +689,7 @@
         "company": "ADP - 3.8",
         "location": {
             "city": "Alpharetta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "LinuxReactMicrosoft ExcelScriptingNode.jsBachelor's degree",
         "posted": "2020-09-04T00:38:04.308Z",
@@ -710,7 +710,7 @@
         "company": "Nike - 4.2",
         "location": {
             "city": "Beaverton",
-            "state": "OR"
+            "state": "Oregon"
         },
         "qualifications": "Microsoft SQL ServerMongoDBWarehouse management systemReactHadoopBachelor's degree",
         "posted": "2020-09-04T00:38:04.626Z",
@@ -731,7 +731,7 @@
         "company": "Keysight Technologies - 3.9",
         "location": {
             "city": "Calabasas",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "UsabilityLinuxC/C++MathMATLAB",
         "posted": "2020-09-04T00:38:04.924Z",
@@ -751,7 +751,7 @@
         "company": "Ambarella - 3.6",
         "location": {
             "city": "Santa Clara",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "C/C++ScriptingMachine learningPythonMaster's degree",
         "posted": "2020-09-04T00:38:05.838Z",
@@ -770,7 +770,7 @@
         "company": "Lyondell Chemical Company - 3.8",
         "location": {
             "city": "Houston",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "Analysis skillsLaboratory experienceInformation securityBachelor's degreeWork authorization18 years or older",
         "posted": "2020-09-04T00:38:06.815Z",
@@ -788,7 +788,7 @@
         "company": "GLOBALFOUNDRIES - 3.3",
         "location": {
             "city": "East Fishkill",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Bachelor's degreePass drug screening",
         "posted": "2020-09-04T00:38:07.112Z",
@@ -807,7 +807,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Fort Worth",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "OOPJavaPythonHTML5Bachelor's degree",
         "posted": "2020-09-04T00:38:07.393Z",
@@ -826,7 +826,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Marietta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "Bachelor's degreeWork authorization",
         "posted": "2020-09-04T00:38:07.650Z",
@@ -843,7 +843,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Palo Alto",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Signal processingAIMathMATLABSensors",
         "posted": "2020-09-04T00:38:07.897Z",
@@ -863,7 +863,7 @@
         "company": "Waupaca Foundry, Inc. - 3.3",
         "location": {
             "city": "Waupaca",
-            "state": "WI"
+            "state": "Wisconsin"
         },
         "qualifications": "Communication skillsSoftware troubleshootingCustomer serviceBachelor's degreeAssociate's degreeHigh school diploma or GED18 years or olderReference checkPass drug screening",
         "posted": "2020-09-04T00:38:09.192Z",
@@ -882,7 +882,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Mount Laurel",
-            "state": "NJ"
+            "state": "New Jersey"
         },
         "qualifications": "Microsoft Windows ServerLinuxCommunication skillsCompTIA Security+Python",
         "posted": "2020-09-04T00:38:09.243Z",
@@ -900,7 +900,7 @@
         "company": "Ambarella - 3.6",
         "location": {
             "city": "Santa Clara",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "C/C++MATLABDeep learningADASComputer visionDoctoral degreeMaster's degree",
         "posted": "2020-09-04T00:38:09.541Z",
@@ -921,7 +921,7 @@
         "company": "GLOBALFOUNDRIES - 3.3",
         "location": {
             "city": "East Fishkill",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Communication skillsOrganizational skillsBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:38:09.833Z",
@@ -940,7 +940,7 @@
         "company": "GLOBALFOUNDRIES - 3.3",
         "location": {
             "city": "East Fishkill",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Data collectionBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:38:10.107Z",
@@ -958,7 +958,7 @@
         "company": "GLOBALFOUNDRIES - 3.3",
         "location": {
             "city": "East Fishkill",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Machine learningBachelor's degreeMaster's degreePass drug screening",
         "posted": "2020-09-04T00:38:10.398Z",
@@ -977,7 +977,7 @@
         "company": "GLOBALFOUNDRIES - 3.3",
         "location": {
             "city": "East Fishkill",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Data collectionBachelor's degreePass drug screening",
         "posted": "2020-09-04T00:38:10.701Z",
@@ -995,7 +995,7 @@
         "company": "Leidos - 3.7",
         "location": {
             "city": "Orlando",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "C/C++JavaScriptSoftware developmentJavaPythonBachelor's degree",
         "posted": "2020-09-04T00:38:10.979Z",
@@ -1018,7 +1018,7 @@
         "company": "Brand Knew - ",
         "location": {
             "city": "Los Angeles",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Adobe IllustratorCommunication skillsWriting skillsLeverAdobe PhotoshopBachelor's degree",
         "posted": "2020-09-04T00:38:11.262Z",
@@ -1033,7 +1033,7 @@
         "company": "Microsoft - 4.2",
         "location": {
             "city": "Redmond",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "C/C++Product developmentCommunication skillsFirmwareC#Doctoral degree",
         "posted": "2020-09-03T00:38:11.520Z",
@@ -1053,7 +1053,7 @@
         "company": "Save-A-Suit - ",
         "location": {
             "city": "Bethel",
-            "state": "CT"
+            "state": "Connecticut"
         },
         "qualifications": "UsabilityInformation architectureUXMicrosoft ExcelJiraBachelor's degreeMaster's degreeReliable transportation",
         "posted": "2020-09-03T00:38:11.800Z",
@@ -1075,7 +1075,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Baltimore",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "LabViewC/C++MATLABBachelor's degree",
         "posted": "2020-09-03T00:38:13.209Z",
@@ -1094,7 +1094,7 @@
         "company": "Jelecos - 2.0",
         "location": {
             "city": "Omaha",
-            "state": "NE"
+            "state": "Nebraska"
         },
         "qualifications": "LinuxMicrosoft ExcelCommunication skillsMicrosoft OfficeCentOSHigh school diploma or GEDWork authorization",
         "posted": "2020-09-03T00:38:13.265Z",
@@ -1113,7 +1113,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Baltimore",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Web servicesLinuxC/C++VirtualizationAgileBachelor's degree",
         "posted": "2020-09-03T00:38:13.559Z",
@@ -1132,7 +1132,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Honolulu",
-            "state": "HI"
+            "state": "Hawaii"
         },
         "qualifications": "C/C++Operating systemsAssemblyPass polygraph test",
         "posted": "2020-09-03T00:38:13.874Z",
@@ -1150,7 +1150,7 @@
         "company": "Cambridge Investment Research, Inc. - 3.6",
         "location": {
             "city": "Fairfield",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "SharePointDatabase administration",
         "posted": "2020-09-03T00:38:14.144Z",
@@ -1166,7 +1166,7 @@
         "company": "Hewlett Packard Enterprise - 3.8",
         "location": {
             "city": "Houston",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "Microsoft SQL ServerMongoDBDevOpsGitData warehouse",
         "posted": "2020-09-03T00:38:14.398Z",
@@ -1190,7 +1190,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Stratford",
-            "state": "CT"
+            "state": "Connecticut"
         },
         "qualifications": "System designMicrosoft ExcelRequirements managementCommunication skillsOrganizational skillsBachelor's degreeMaster's degree",
         "posted": "2020-09-03T00:38:14.652Z",
@@ -1207,7 +1207,7 @@
         "company": "Enterprise Tax Solutions, Inc. - ",
         "location": {
             "city": "Mount Pleasant",
-            "state": "MI"
+            "state": "Michigan"
         },
         "qualifications": "Microsoft ExcelMicrosoft OfficeMicrosoft WordVisual BasicMicrosoft PowerpointBachelor's degree",
         "posted": "2020-09-03T00:38:14.893Z",
@@ -1229,7 +1229,7 @@
         "company": "Verisk Financial - 3.6",
         "location": {
             "city": "White Plains",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Microsoft ExcelCommunication skillsRMachine learningBig dataBachelor's degreeMaster's degree",
         "posted": "2020-09-03T00:38:15.173Z",
@@ -1249,7 +1249,7 @@
         "company": "Moog Inc. - 3.8",
         "location": {
             "city": "Blacksburg",
-            "state": "VA"
+            "state": "Virginia"
         },
         "qualifications": "Communication skillsBachelor's degreeMaster's degreeWork authorization",
         "posted": "2020-09-03T00:38:15.474Z",
@@ -1266,7 +1266,7 @@
         "company": "LOCKHEED MARTIN CORPORATION - 4.0",
         "location": {
             "city": "Orlando",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "System designBachelor's degree",
         "posted": "2020-09-03T00:38:15.751Z",
@@ -1283,7 +1283,7 @@
         "company": "Cambridge Investment Research, Inc. - 3.6",
         "location": {
             "city": "Fairfield",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "",
         "posted": "2020-09-03T00:38:17.121Z",
@@ -1299,7 +1299,7 @@
         "company": "Cambridge Investment Research, Inc. - 3.6",
         "location": {
             "city": "Fairfield",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "Microsoft SQL ServerSQL Server Management Studio.NETASP.NETContinuous integration",
         "posted": "2020-09-03T00:38:17.164Z",
@@ -1319,7 +1319,7 @@
         "company": "Cambridge Investment Research, Inc. - 3.6",
         "location": {
             "city": "Fairfield",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "",
         "posted": "2020-09-03T00:38:17.427Z",
@@ -1335,7 +1335,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "San Mateo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Signal processingLinuxC/C++SDKsPythonBachelor's degreeMaster's degree",
         "posted": "2020-09-03T00:38:17.687Z",
@@ -1355,7 +1355,7 @@
         "company": "Lazard Ltd. - 3.9",
         "location": {
             "city": "New York",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Data visualizationPower BIMATLABCommunication skillsData analytics",
         "posted": "2020-09-03T00:38:17.948Z",
@@ -1375,7 +1375,7 @@
         "company": "Siemens - 4.0",
         "location": {
             "city": "Hoffman Estates",
-            "state": "IL"
+            "state": "Illinois"
         },
         "qualifications": "C/C++",
         "posted": "2020-09-03T00:38:18.208Z",
@@ -1395,7 +1395,7 @@
         "company": "New Millennium Building Systems | Steel Dynamics Inc. - ",
         "location": {
             "city": "Fort Wayne",
-            "state": "IN"
+            "state": "Indiana"
         },
         "qualifications": "Communication skillsMicrosoft OfficeComputer skillsBachelor's degree",
         "posted": "2020-09-03T00:38:18.472Z",
@@ -1409,7 +1409,7 @@
         "company": "RAPT Therapeutics, Inc. - ",
         "location": {
             "city": "South San Francisco",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "PerlRPythonBachelor's degreeWork authorization",
         "posted": "2020-09-03T00:38:18.731Z",
@@ -1426,7 +1426,7 @@
         "company": "Verisk Financial - 3.6",
         "location": {
             "city": "White Plains",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Statistical softwareSASCommunication skillsData miningMachine learningMaster's degree",
         "posted": "2020-09-03T00:38:18.998Z",
@@ -1444,7 +1444,7 @@
         "company": "Framatome - 3.9",
         "location": {
             "city": "Lynchburg",
-            "state": "VA"
+            "state": "Virginia"
         },
         "qualifications": "LabViewC/C++System designSolidWorksMathBachelor's degree",
         "posted": "2020-09-03T00:38:19.270Z",
@@ -1464,7 +1464,7 @@
         "company": "Macy's - 3.7",
         "location": {
             "city": "Johns Creek",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "LeadershipCommunication skillsOperating systemsAgileJavaBachelor's degree",
         "posted": "2020-09-03T00:38:19.554Z",
@@ -1483,7 +1483,7 @@
         "company": "Verisk Financial - 3.6",
         "location": {
             "city": "White Plains",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Microsoft SQL ServerElectrical discharge machiningSSISHadoopInformaticaBachelor's degree",
         "posted": "2020-09-03T00:38:20.960Z",
@@ -1502,7 +1502,7 @@
         "company": "PetSmart - 3.5",
         "location": {
             "city": "Phoenix",
-            "state": "AZ"
+            "state": "Arizona"
         },
         "qualifications": "Analysis skillsCommunication skillsData miningBusiness process modelingJavaBachelor's degree",
         "posted": "2020-09-03T00:38:53.478Z",
@@ -1522,7 +1522,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Computer forensicsCommunication skillsHTML5ResearchCSSPass polygraph test",
         "posted": "2020-09-03T00:38:53.545Z",
@@ -1541,7 +1541,7 @@
         "company": "BDO - 3.7",
         "location": {
             "city": "Atlanta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "Microsoft ExcelLeadershipCommunication skillsMicrosoft OfficeMicrosoft WordBachelor's degreeMaster's degree",
         "posted": "2020-09-03T00:38:53.847Z",
@@ -1559,7 +1559,7 @@
         "company": "ServiceNow - 3.6",
         "location": {
             "city": "Kirkland",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "Web servicesC/C++ReactGitServiceNowBachelor's degreeMaster's degreeWork authorization",
         "posted": "2020-09-02T00:38:54.154Z",
@@ -1576,7 +1576,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Signal processingAIData structuresDiscrete mathAssemblyPass polygraph test",
         "posted": "2020-09-02T00:38:54.433Z",
@@ -1596,7 +1596,7 @@
         "company": "PenLink - ",
         "location": {
             "city": "Lincoln",
-            "state": "NE"
+            "state": "Nebraska"
         },
         "qualifications": ".NETVisual StudioSoftware architectureGitHubSDLC",
         "posted": "2020-09-02T00:38:54.734Z",
@@ -1617,7 +1617,7 @@
         "company": "Kepler Fi - ",
         "location": {
             "city": "New York",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Data miningDatabasesMachine learningSQLPython",
         "posted": "2020-09-02T00:38:55.037Z",
@@ -1635,7 +1635,7 @@
         "company": "iCIMS - 3.3",
         "location": {
             "city": "Holmdel",
-            "state": "NJ"
+            "state": "New Jersey"
         },
         "qualifications": "Analysis skillsReactHadoopApache HiveNode.jsBachelor's degreeMaster's degree",
         "posted": "2020-09-02T00:38:55.334Z",
@@ -1656,7 +1656,7 @@
         "company": "Parsons - 4.0",
         "location": {
             "city": "Dahlgren",
-            "state": "VA"
+            "state": "Virginia"
         },
         "qualifications": "Analysis skillsMongoDBLinuxReactApacheBachelor's degree",
         "posted": "2020-09-02T00:38:55.615Z",
@@ -1677,7 +1677,7 @@
         "company": "Business Credentialing Services, Inc. - ",
         "location": {
             "city": "Provo",
-            "state": "UT"
+            "state": "Utah"
         },
         "qualifications": "Microsoft SQL ServerReactReact NativeGit.NET",
         "posted": "2020-09-02T00:38:55.932Z",
@@ -1697,7 +1697,7 @@
         "company": "SV Summit Inc - ",
         "location": {
             "city": "Santa Clara",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Microsoft ExcelCommunication skillsWriting skillsMicrosoft WordComputer skillsBachelor's degreeMaster's degree",
         "posted": "2020-09-02T00:38:56.207Z",
@@ -1717,7 +1717,7 @@
         "company": "Swiss Re - 4.0",
         "location": {
             "city": "Armonk",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Analysis skillsHadoopNatural language processingGitApache Hive",
         "posted": "2020-09-02T00:38:57.540Z",
@@ -1737,7 +1737,7 @@
         "company": "Fidelity & Guaranty Life - 3.2",
         "location": {
             "city": "Des Moines",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "Analysis skillsActive DirectoryApplication developmentSIEMLeadershipBachelor's degreeAssociate's degree",
         "posted": "2020-09-02T00:38:57.585Z",
@@ -1755,7 +1755,7 @@
         "company": "National Security Agency - 4.2",
         "location": {
             "city": "Fort Meade",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "HTML5Pass polygraph test",
         "posted": "2020-09-02T00:38:57.868Z",
@@ -1776,7 +1776,7 @@
         "company": "xSCAPE Games - ",
         "location": {
             "city": "Los Angeles",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "C/C++OOPEmbedded softwareUnityGitBachelor's degree",
         "posted": "2020-09-02T00:38:58.160Z",
@@ -1798,7 +1798,7 @@
         "company": "Kitware - ",
         "location": {
             "city": "Clifton Park",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "C/C++Communication skillsSoftware developmentDoctoral degree",
         "posted": "2020-09-02T00:38:58.449Z",
@@ -1818,7 +1818,7 @@
         "company": "NextEra Energy - 4.0",
         "location": {
             "city": "Juno Beach",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "C/C++Strategic planningHadoopMicrosoft ExcelKafkaBachelor's degreeHigh school diploma or GED",
         "posted": "2020-09-02T00:38:58.726Z",
@@ -1839,7 +1839,7 @@
         "company": "Federal Reserve Board of Governors - 4.1",
         "location": {
             "city": "Washington",
-            "state": "DC"
+            "state": "District Of Columbia"
         },
         "qualifications": "Writing skillsResearch",
         "posted": "2020-09-02T00:38:59.002Z",
@@ -1858,7 +1858,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "San Mateo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "C/C++Communication skillsComputer visionTensorFlowCalibrationBachelor's degreeDoctoral degreeMaster's degree",
         "posted": "2020-09-02T00:38:59.284Z",
@@ -1878,7 +1878,7 @@
         "company": "Friedkin Companies, Inc. - 3.5",
         "location": {
             "city": "Houston",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "DevOpsWork authorization",
         "posted": "2020-09-02T00:38:59.558Z",
@@ -1896,7 +1896,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "Aliso Viejo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "GitNode.jsCommunication skillsSeleniumJavaScriptBachelor's degreeDoctoral degreeMaster's degree",
         "posted": "2020-09-02T00:38:59.811Z",
@@ -1917,7 +1917,7 @@
         "company": "Framatome - 3.9",
         "location": {
             "city": "Richland",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "LinuxC/C++FortranCommunication skillsMicrosoft OfficeBachelor's degree",
         "posted": "2020-09-02T00:39:00.077Z",
@@ -1937,7 +1937,7 @@
         "company": "Hitachi Chemical Company America, Ltd. - ",
         "location": {
             "city": "San Jose",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Communication skillsComputer hardwareWindowsBachelor's degreeMaster's degree",
         "posted": "2020-09-02T00:39:01.449Z",
@@ -1954,7 +1954,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "Aliso Viejo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "LinuxC/C++Communication skillsMac OSDebuggingBachelor's degreeMaster's degree",
         "posted": "2020-09-02T00:39:01.497Z",
@@ -1972,7 +1972,7 @@
         "company": "iCIMS Talent Acquisition - 3.3",
         "location": {
             "city": "Holmdel",
-            "state": "NJ"
+            "state": "New Jersey"
         },
         "qualifications": "Analysis skillsReactHadoopApache HiveNode.jsBachelor's degreeMaster's degree",
         "posted": "2020-09-02T00:39:01.870Z",
@@ -1993,7 +1993,7 @@
         "company": "World Wide Technology, Inc. - 3.7",
         "location": {
             "city": "Edwardsville",
-            "state": "IL"
+            "state": "Illinois"
         },
         "qualifications": "Analysis skillsLeadershipCommunication skillsBachelor's degreeReliable transportation",
         "posted": "2020-09-02T00:39:02.167Z",
@@ -2010,7 +2010,7 @@
         "company": "Pacific Northwest National Laboratory - 4.1",
         "location": {
             "city": "College Park",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Communication skillsResearchDoctoral degreeMaster's degreeWork authorization",
         "posted": "2020-09-02T00:39:02.459Z",
@@ -2028,7 +2028,7 @@
         "company": "NextEra Energy - 4.0",
         "location": {
             "city": "Juno Beach",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "C/C++Strategic planningMicrosoft ExcelMicrosoft OfficeAgileBachelor's degreeHigh school diploma or GED",
         "posted": "2020-09-02T00:39:02.721Z",
@@ -2049,7 +2049,7 @@
         "company": "Advanced Micro Devices, Inc. - 3.8",
         "location": {
             "city": "Santa Clara",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "AIC/C++Electrical engineeringPerlAssemblyDoctoral degreeMaster's degree",
         "posted": "2020-09-02T00:39:02.984Z",
@@ -2069,7 +2069,7 @@
         "company": "Nike - 4.2",
         "location": {
             "city": "Beaverton",
-            "state": "OR"
+            "state": "Oregon"
         },
         "qualifications": "TableauSpringSQLPythonBachelor's degree",
         "posted": "2020-09-02T00:39:03.251Z",
@@ -2089,7 +2089,7 @@
         "company": "Travelers - 3.7",
         "location": {
             "city": "Hartford",
-            "state": "CT"
+            "state": "Connecticut"
         },
         "qualifications": "Microsoft SQL ServerAnalyticsCommunication skillsArcGISGISBachelor's degreeMaster's degreeWork authorization",
         "posted": "2020-09-02T00:39:03.533Z",
@@ -2108,7 +2108,7 @@
         "company": "Marvell - 3.5",
         "location": {
             "city": "Burlington",
-            "state": "VT"
+            "state": "Vermont"
         },
         "qualifications": "Bachelor's degree",
         "posted": "2020-09-02T00:39:03.816Z",
@@ -2127,7 +2127,7 @@
         "company": "Nutanix - 3.9",
         "location": {
             "city": "San Jose",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Adobe Creative SuiteSketchUser researchBachelor's degreeMaster's degree",
         "posted": "2020-09-02T00:39:04.069Z",
@@ -2147,7 +2147,7 @@
         "company": "World Wide Technology, Inc. - 3.7",
         "location": {
             "city": "Edwardsville",
-            "state": "IL"
+            "state": "Illinois"
         },
         "qualifications": "Analysis skillsLeadershipCommunication skillsBachelor's degreeReliable transportation",
         "posted": "2020-09-02T00:39:05.461Z",
@@ -2164,7 +2164,7 @@
         "company": "CGI Group, Inc. - 3.6",
         "location": {
             "city": "Frankfort",
-            "state": "KY"
+            "state": "Kentucky"
         },
         "qualifications": "Analysis skillsSystem designIntellectual property lawCommunication skillsComputer skillsBachelor's degreeWork authorization",
         "posted": "2020-09-02T00:39:05.501Z",
@@ -2183,7 +2183,7 @@
         "company": "Johns Hopkins Applied Physics Laboratory (APL) - 4.0",
         "location": {
             "city": "Laurel",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": [
             "U.S Citizen"
@@ -2202,7 +2202,7 @@
         "company": "Expedien - 4.4",
         "location": {
             "city": "Houston",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "Bachelor's degree",
         "posted": "2020-09-02T00:39:06.084Z",
@@ -2219,7 +2219,7 @@
         "company": "World Wide Technology, Inc. - 3.7",
         "location": {
             "city": "Edwardsville",
-            "state": "IL"
+            "state": "Illinois"
         },
         "qualifications": "Analysis skillsLeadershipCommunication skillsBachelor's degreeReliable transportation",
         "posted": "2020-09-02T00:39:06.365Z",
@@ -2237,7 +2237,7 @@
         "company": "Applied Software Inc. - ",
         "location": {
             "city": "Fulton",
-            "state": "MD"
+            "state": "Maryland"
         },
         "qualifications": "Microsoft SQL ServerAnalysis skillsMathSystems analysisCommunication skills",
         "posted": "2020-09-01T00:39:06.633Z",
@@ -2257,7 +2257,7 @@
         "company": "MVP Health Care - 3.4",
         "location": {
             "city": "Schenectady",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "Microsoft OfficeSoftware troubleshootingWindowsBachelor's degree",
         "posted": "2020-09-01T00:39:06.931Z",
@@ -2274,7 +2274,7 @@
         "company": "Fujitsu - 3.7",
         "location": {
             "city": "Richardson",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "PHPTelecommunicationC/C++Embedded softwareMicrosoft ExcelBachelor's degree",
         "posted": "2020-09-01T00:39:07.191Z",
@@ -2293,7 +2293,7 @@
         "company": "Lenovo - 3.9",
         "location": {
             "city": "Morrisville",
-            "state": "NC"
+            "state": "North Carolina"
         },
         "qualifications": "Bachelor's degree",
         "posted": "2020-09-01T00:39:07.464Z",
@@ -2310,7 +2310,7 @@
         "company": "Neenah, Inc. - 3.5",
         "location": {
             "city": "Alpharetta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "Analysis skillsSharePointWindowsBachelor's degree",
         "posted": "2020-09-01T00:39:07.735Z",
@@ -2327,7 +2327,7 @@
         "company": "MAXIMUS - 3.2",
         "location": {
             "city": "Blacksburg",
-            "state": "VA"
+            "state": "Virginia"
         },
         "qualifications": "MongoDBC/C++KafkaMATLABDeep learningMaster's degreeHigh school diploma or GED",
         "posted": "2020-09-01T00:39:08.030Z",
@@ -2346,7 +2346,7 @@
         "company": "VIZION 360 - ",
         "location": {
             "city": "Independence",
-            "state": "OH"
+            "state": "Ohio"
         },
         "qualifications": "Microsoft Excel.NETJavaScriptC#HTML5Bachelor's degree",
         "posted": "2020-09-01T00:39:09.342Z",
@@ -2367,7 +2367,7 @@
         "company": "PathAI - ",
         "location": {
             "city": "Boston",
-            "state": "MA"
+            "state": "Massachusetts"
         },
         "qualifications": "AISoftware developmentIntelligence experienceMachine learningPythonBachelor's degreeMaster's degree",
         "posted": "2020-09-01T00:39:09.394Z",
@@ -2386,7 +2386,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "San Francisco",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "LinuxChefRubyNoSQLAWSBachelor's degreeMaster's degree",
         "posted": "2020-09-01T00:39:09.660Z",
@@ -2405,7 +2405,7 @@
         "company": "Veritex Community Bank - 2.9",
         "location": {
             "city": "Plano",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "Microsoft ExcelMicrosoft OfficeMicrosoft WordMicrosoft PowerpointBanking",
         "posted": "2020-09-01T00:39:09.938Z",
@@ -2422,7 +2422,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "Aliso Viejo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "SASSReactCommunication skillsAPIsRESTBachelor's degreeMaster's degree",
         "posted": "2020-09-01T00:39:10.216Z",
@@ -2443,7 +2443,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "San Mateo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "LinuxC/C++JenkinsWriting skillsDockerBachelor's degreeMaster's degree",
         "posted": "2020-09-01T00:39:10.467Z",
@@ -2464,7 +2464,7 @@
         "company": "DTCC - 3.7",
         "location": {
             "city": "Jersey City",
-            "state": "NJ"
+            "state": "New Jersey"
         },
         "qualifications": "Analysis skillsAIPower BICommunication skillsMicrosoft PowerpointMaster's degreeWork authorization",
         "posted": "2020-09-01T00:39:10.776Z",
@@ -2482,7 +2482,7 @@
         "company": "World Wide Technology, Inc. - 3.7",
         "location": {
             "city": "St. Louis",
-            "state": "MO"
+            "state": "Missouri"
         },
         "qualifications": "Analysis skillsLeadershipCommunication skillsBachelor's degreeReliable transportation",
         "posted": "2020-09-01T00:39:11.047Z",
@@ -2499,7 +2499,7 @@
         "company": "Sony Interactive Entertainment PlayStation - 3.7",
         "location": {
             "city": "San Mateo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Communication skillsBachelor's degreeMaster's degree",
         "posted": "2020-09-01T00:39:11.350Z",
@@ -2515,7 +2515,7 @@
         "company": "World Wide Technology, Inc. - 3.7",
         "location": {
             "city": "Edwardsville",
-            "state": "IL"
+            "state": "Illinois"
         },
         "qualifications": "Analysis skillsCybersecurityLeadershipCommunication skillsData analyticsBachelor's degreeMaster's degreeReliable transportation",
         "posted": "2020-09-01T00:39:11.632Z",
@@ -2532,7 +2532,7 @@
         "company": "Yext - 3.8",
         "location": {
             "city": "Washington",
-            "state": "DC"
+            "state": "District Of Columbia"
         },
         "qualifications": "SASSC/C++OOPSCSSNode.js",
         "posted": "2020-08-31T00:39:11.894Z",
@@ -2554,7 +2554,7 @@
         "company": "Platform9 Systems - ",
         "location": {
             "city": "Mountain View",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "LinuxC/C++UIJavaScriptDistributed systemsBachelor's degreeDoctoral degree",
         "posted": "2020-08-31T00:39:13.182Z",
@@ -2576,7 +2576,7 @@
         "company": "ICG LLC - ",
         "location": {
             "city": "Miami",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "LinuxOOPDriver's LicensePowerShellSharePointWork authorization",
         "posted": "2020-08-31T00:39:13.233Z",
@@ -2600,7 +2600,7 @@
         "company": "Parker Hannifin Corporation - 3.8",
         "location": {
             "city": "Cleveland",
-            "state": "OH"
+            "state": "Ohio"
         },
         "qualifications": "Communication skillsBachelor's degreeHigh school diploma or GED",
         "posted": "2020-08-30T00:39:13.514Z",
@@ -2619,7 +2619,7 @@
         "company": "Infineon Technologies - 4.0",
         "location": {
             "city": "El Segundo",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "ScriptingXMLCommunication skillsJavaC#Bachelor's degree",
         "posted": "2020-08-30T00:39:13.799Z",
@@ -2639,7 +2639,7 @@
         "company": "McKinsey & Company - 4.3",
         "location": {
             "city": "San Jose",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Microsoft SQL ServerTime managementSSISPricingHadoop",
         "posted": "2020-08-30T00:39:14.073Z",
@@ -2659,7 +2659,7 @@
         "company": "Key Bank- Campus - 3.6",
         "location": {
             "city": "Buffalo",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "DevOpsPowerShellMicrosoft ExcelSharePointJenkinsBachelor's degree",
         "posted": "2020-08-30T00:39:14.343Z",
@@ -2681,7 +2681,7 @@
         "company": "Microsoft - 4.2",
         "location": {
             "city": "Redmond",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "LinuxC/C++Data structuresTCP/IPComputer scienceDoctoral degree",
         "posted": "2020-08-30T00:39:14.621Z",
@@ -2702,7 +2702,7 @@
         "company": "Microsoft - 4.2",
         "location": {
             "city": "Redmond",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "AIDevOpsC/C++KanbanGitDoctoral degree",
         "posted": "2020-08-30T00:39:14.900Z",
@@ -2723,7 +2723,7 @@
         "company": "TuSimple, Inc. - ",
         "location": {
             "city": "San Francisco",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Signal processingAIC/C++System designComputer visionDoctoral degreeMaster's degree",
         "posted": "2020-08-30T00:39:15.164Z",
@@ -2743,7 +2743,7 @@
         "company": "TuSimple - ",
         "location": {
             "city": "San Diego",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Signal processingAIC/C++System designComputer visionDoctoral degreeMaster's degree",
         "posted": "2020-08-30T00:39:15.438Z",
@@ -2763,7 +2763,7 @@
         "company": "Microsoft - 4.2",
         "location": {
             "city": "Redmond",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "AINatural language processingCommunication skillsSoftware developmentDoctoral degree",
         "posted": "2020-08-30T00:39:15.697Z",
@@ -2782,7 +2782,7 @@
         "company": "Microsoft - 4.2",
         "location": {
             "city": "Redmond",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "AIC/C++Natural language processingMATLABLaboratory experienceDoctoral degree",
         "posted": "2020-08-30T00:39:17.032Z",
@@ -2803,7 +2803,7 @@
         "company": "TuSimple, Inc. - ",
         "location": {
             "city": "San Francisco",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Signal processingAIC/C++System designComputer visionDoctoral degreeMaster's degree",
         "posted": "2020-08-30T00:39:17.071Z",
@@ -2823,7 +2823,7 @@
         "company": "Microsoft - 4.2",
         "location": {
             "city": "Redmond",
-            "state": "WA"
+            "state": "Washington"
         },
         "qualifications": "Signal processingNatural language processingDeep learningCommunication skillsSoftware developmentDoctoral degree",
         "posted": "2020-08-30T00:39:17.356Z",
@@ -2843,7 +2843,7 @@
         "company": "Honeywell - 3.7",
         "location": {
             "city": "Atlanta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "BambooC/C++GitMATLABApache HiveMaster's degree",
         "posted": "2020-08-29T00:39:17.626Z",
@@ -2865,7 +2865,7 @@
         "company": "Castleton Commodities International LLC - 3.2",
         "location": {
             "city": "Stamford",
-            "state": "CT"
+            "state": "Connecticut"
         },
         "qualifications": "Analysis skillsPower BIAnalyticsAPIsTableauBachelor's degree",
         "posted": "2020-08-29T00:39:17.901Z",
@@ -2885,7 +2885,7 @@
         "company": "Moog Inc. - 3.8",
         "location": {
             "city": "East Aurora",
-            "state": "NY"
+            "state": "New York"
         },
         "qualifications": "SharePointNetwork administrationCommunication skillsDatabase administrationBachelor's degreeMaster's degreeWork authorization",
         "posted": "2020-08-29T00:39:18.163Z",
@@ -2903,7 +2903,7 @@
         "company": "Pella Corporation - 3.9",
         "location": {
             "city": "Pella",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "Microsoft Windows ServerLinuxActive DirectoryMicrosoft ExcelLeadershipBachelor's degreeWork authorization",
         "posted": "2020-08-29T00:39:18.438Z",
@@ -2921,7 +2921,7 @@
         "company": "Facebook - 4.2",
         "location": {
             "city": "Menlo Park",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Communication skillsSurvey designProject managementMentoringQuantitative researchDoctoral degreeMaster's degreeWork authorization",
         "posted": "2020-08-29T00:39:18.718Z",
@@ -2939,7 +2939,7 @@
         "company": "Hewlett Packard Enterprise - 3.8",
         "location": {
             "city": "San Jose",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "Analysis skillsLinuxC/C++DebuggingBachelor's degreeMaster's degree",
         "posted": "2020-08-29T00:39:18.997Z",
@@ -2959,7 +2959,7 @@
         "company": "Samsara - 4.7",
         "location": {
             "city": "San Francisco",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "LinuxReactReact NativeData structuresTypeScriptBachelor's degreeMaster's degree",
         "posted": "2020-08-29T00:39:19.266Z",
@@ -2979,7 +2979,7 @@
         "company": "Church Mutual Insurance, S.I. - ",
         "location": {
             "city": "Merrill",
-            "state": "WI"
+            "state": "Wisconsin"
         },
         "qualifications": "Communication skillsJava",
         "posted": "2020-08-29T00:39:19.512Z",
@@ -2998,7 +2998,7 @@
         "company": "Sunpro Solar, DBA - 2.9",
         "location": {
             "city": "Mandeville",
-            "state": "LA"
+            "state": "Louisiana"
         },
         "qualifications": "Time managementStatistical analysisAnalysis skillsMicrosoft ExcelData warehouseBachelor's degreeWork authorization",
         "posted": "2020-08-29T00:39:20.851Z",
@@ -3017,7 +3017,7 @@
         "company": "GE Gas Power - 3.9",
         "location": {
             "city": "Atlanta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "Analysis skillsDriver's LicenseLeadershipCommunication skillsTableauWork authorization18 years or olderPass drug screeningReliable transportation",
         "posted": "2020-08-29T00:39:20.900Z",
@@ -3036,7 +3036,7 @@
         "company": "Micron - 3.8",
         "location": {
             "city": "Lehi",
-            "state": "UT"
+            "state": "Utah"
         },
         "qualifications": "Communication skillsBachelor's degree",
         "posted": "2020-08-29T00:39:21.216Z",
@@ -3054,7 +3054,7 @@
         "company": "Fujitsu - 3.7",
         "location": {
             "city": "Richardson",
-            "state": "TX"
+            "state": "Texas"
         },
         "qualifications": "LeadershipCommunication skillsWriting skillsOrganizational skillsMicrosoft Office",
         "posted": "2020-08-29T00:39:21.482Z",
@@ -3072,7 +3072,7 @@
         "company": "Raytheon Missiles & Defense - 3.9",
         "location": {
             "city": "Tucson",
-            "state": "AZ"
+            "state": "Arizona"
         },
         "qualifications": "Analysis skillsC/C++System designMATLABCommunication skillsBachelor's degreeMaster's degree",
         "posted": "2020-08-29T00:39:21.749Z",
@@ -3092,7 +3092,7 @@
         "company": "Fidelity & Guaranty Life - 3.2",
         "location": {
             "city": "Des Moines",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "Time managementMicrosoft ExcelInternal auditsCommunication skillsMicrosoft Office",
         "posted": "2020-08-29T00:39:22.029Z",
@@ -3108,7 +3108,7 @@
         "company": "Bankers Healthcare Group - 4.1",
         "location": {
             "city": "Davie",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "Analysis skillsPower BIMicrosoft ExcelMicrosoft PowerpointR18 years or older",
         "posted": "2020-08-28T00:39:22.310Z",
@@ -3127,7 +3127,7 @@
         "company": "Kent Corporation - 3.5",
         "location": {
             "city": "Muscatine",
-            "state": "IA"
+            "state": "Iowa"
         },
         "qualifications": "Application development.NETCommunication skillsComputer networkingSoftware development",
         "posted": "2020-08-28T00:39:22.600Z",
@@ -3146,7 +3146,7 @@
         "company": "Restaurant Brands International Campus Opportunities - 3.2",
         "location": {
             "city": "Miami",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "AILinuxHadoopNeo4jApacheBachelor's degreeMaster's degree",
         "posted": "2020-08-28T00:39:22.911Z",
@@ -3166,7 +3166,7 @@
         "company": "Marvell - 3.5",
         "location": {
             "city": "Santa Clara",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "SecurityC/C++FirmwareAssemblyFPGABachelor's degree",
         "posted": "2020-08-28T00:39:23.197Z",
@@ -3185,7 +3185,7 @@
         "company": "Marvell - 3.5",
         "location": {
             "city": "Chandler",
-            "state": "AZ"
+            "state": "Arizona"
         },
         "qualifications": "C/C++Communication skillsSystem architectureSoftware developmentUnit testingBachelor's degree",
         "posted": "2020-08-28T00:39:23.459Z",
@@ -3206,7 +3206,7 @@
         "company": "Norfolk Southern Corp - 3.0",
         "location": {
             "city": "Atlanta",
-            "state": "GA"
+            "state": "Georgia"
         },
         "qualifications": "Deep learningSoftware deploymentSparkImage processingTensorFlowDoctoral degreeMaster's degree",
         "posted": "2020-08-28T00:39:24.798Z",
@@ -3227,7 +3227,7 @@
         "company": "Consolidated Aerospace Manufacturing - ",
         "location": {
             "city": "Cleveland",
-            "state": "OH"
+            "state": "Ohio"
         },
         "qualifications": "Active DirectoryCommunication skillsMicrosoft OfficeWindowsBachelor's degree",
         "posted": "2020-08-28T00:39:24.839Z",
@@ -3244,7 +3244,7 @@
         "company": "Restaurant Brands International Campus Opportunities - 3.2",
         "location": {
             "city": "Miami",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "Communication skillsFood safetyMobile applicationsRestaurant experienceMachine learningBachelor's degreeMaster's degree",
         "posted": "2020-08-28T00:39:25.135Z",
@@ -3283,7 +3283,7 @@
         "company": "Marvell - 3.5",
         "location": {
             "city": "Santa Clara",
-            "state": "CA"
+            "state": "California"
         },
         "qualifications": "LinuxC/C++JenkinsJiraCI/CDBachelor's degree",
         "posted": "2020-08-28T00:39:25.677Z",
@@ -3303,7 +3303,7 @@
         "company": "Cavan Solutions - ",
         "location": {
             "city": "Washington",
-            "state": "DC"
+            "state": "District Of Columbia"
         },
         "qualifications": "Wiki systemsLinuxGitScriptingShell Scripting",
         "posted": "2020-08-28T00:39:25.932Z",
@@ -3321,7 +3321,7 @@
         "company": "Cavan Solutions - ",
         "location": {
             "city": "Washington",
-            "state": "DC"
+            "state": "District Of Columbia"
         },
         "qualifications": "XSLTJava",
         "posted": "2020-08-28T00:39:26.231Z",
@@ -3339,7 +3339,7 @@
         "company": "GRANT THORNTON - 3.7",
         "location": {
             "city": "Tampa",
-            "state": "FL"
+            "state": "Florida"
         },
         "qualifications": "Time managementCertified Internal AuditorCISSPCertified Information Systems AuditorCommunication skillsBachelor's degreeMaster's degree",
         "posted": "2020-08-28T00:39:26.520Z",
@@ -3356,7 +3356,7 @@
         "company": "Raytheon Missiles & Defense - 3.9",
         "location": {
             "city": "Tucson",
-            "state": "AZ"
+            "state": "Arizona"
         },
         "qualifications": "Signal processingAnalysis skillsStatisticsLinuxC/C++Bachelor's degree",
         "posted": "2020-08-28T00:39:26.812Z",
@@ -3378,7 +3378,7 @@
         "company": "Raytheon Missiles & Defense - 3.9",
         "location": {
             "city": "Tucson",
-            "state": "AZ"
+            "state": "Arizona"
         },
         "qualifications": "C/C++System designMATLABProduct developmentCommunication skillsBachelor's degreeMaster's degree",
         "posted": "2020-08-28T00:39:27.062Z",
@@ -3400,7 +3400,7 @@
         "company": "Raytheon Missiles & Defense - 3.9",
         "location": {
             "city": "Tucson",
-            "state": "AZ"
+            "state": "Arizona"
         },
         "qualifications": "C/C++System designMATLABProduct developmentCommunication skillsBachelor's degreeMaster's degree",
         "posted": "2020-08-28T00:39:28.357Z",

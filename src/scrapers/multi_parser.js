@@ -343,6 +343,116 @@ function getContact(textInput) {
 
 }
 
+/**
+ * Converts abbreviation to full name and vice-versa
+ * @param input   Name
+ * @param to What we want to convert (name/abbr)
+ * @returns {string} The conversion
+ */
+function convertRegion(input, to) {
+  const states = [
+    ['Alabama', 'AL'],
+    ['Alaska', 'AK'],
+    ['American Samoa', 'AS'],
+    ['Arizona', 'AZ'],
+    ['Arkansas', 'AR'],
+    ['Armed Forces Americas', 'AA'],
+    ['Armed Forces Europe', 'AE'],
+    ['Armed Forces Pacific', 'AP'],
+    ['California', 'CA'],
+    ['Colorado', 'CO'],
+    ['Connecticut', 'CT'],
+    ['Delaware', 'DE'],
+    ['District Of Columbia', 'DC'],
+    ['Florida', 'FL'],
+    ['Georgia', 'GA'],
+    ['Guam', 'GU'],
+    ['Hawaii', 'HI'],
+    ['Idaho', 'ID'],
+    ['Illinois', 'IL'],
+    ['Indiana', 'IN'],
+    ['Iowa', 'IA'],
+    ['Kansas', 'KS'],
+    ['Kentucky', 'KY'],
+    ['Louisiana', 'LA'],
+    ['Maine', 'ME'],
+    ['Marshall Islands', 'MH'],
+    ['Maryland', 'MD'],
+    ['Massachusetts', 'MA'],
+    ['Michigan', 'MI'],
+    ['Minnesota', 'MN'],
+    ['Mississippi', 'MS'],
+    ['Missouri', 'MO'],
+    ['Montana', 'MT'],
+    ['Nebraska', 'NE'],
+    ['Nevada', 'NV'],
+    ['New Hampshire', 'NH'],
+    ['New Jersey', 'NJ'],
+    ['New Mexico', 'NM'],
+    ['New York', 'NY'],
+    ['North Carolina', 'NC'],
+    ['North Dakota', 'ND'],
+    ['Northern Mariana Islands', 'NP'],
+    ['Ohio', 'OH'],
+    ['Oklahoma', 'OK'],
+    ['Oregon', 'OR'],
+    ['Pennsylvania', 'PA'],
+    ['Puerto Rico', 'PR'],
+    ['Rhode Island', 'RI'],
+    ['South Carolina', 'SC'],
+    ['South Dakota', 'SD'],
+    ['Tennessee', 'TN'],
+    ['Texas', 'TX'],
+    ['US Virgin Islands', 'VI'],
+    ['Utah', 'UT'],
+    ['Vermont', 'VT'],
+    ['Virginia', 'VA'],
+    ['Washington', 'WA'],
+    ['West Virginia', 'WV'],
+    ['Wisconsin', 'WI'],
+    ['Wyoming', 'WY'],
+  ];
+
+  // So happy that Canada and the US have distinct abbreviations
+  const provinces = [
+    ['Alberta', 'AB'],
+    ['British Columbia', 'BC'],
+    ['Manitoba', 'MB'],
+    ['New Brunswick', 'NB'],
+    ['Newfoundland', 'NF'],
+    ['Northwest Territory', 'NT'],
+    ['Nova Scotia', 'NS'],
+    ['Nunavut', 'NU'],
+    ['Ontario', 'ON'],
+    ['Prince Edward Island', 'PE'],
+    ['Quebec', 'QC'],
+    ['Saskatchewan', 'SK'],
+    ['Yukon', 'YT'],
+  ];
+
+  const regions = states.concat(provinces);
+
+  let i; // Reusable loop variable
+  if (to === 'abbr') {
+    input = input.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+    for (i = 0; i < regions.length; i++) {
+      if (regions[i][0] === input) {
+        return (regions[i][1]);
+      }
+    }
+  } else if (to === 'name') {
+    const alreadyFull = input;
+    input = input.toUpperCase();
+    for (i = 0; i < regions.length; i++) {
+      if (regions[i][1] === input) {
+        return (regions[i][0]);
+      }
+    }
+    // if the format doesn't match any of the valid fields or is already full name
+    return alreadyFull;
+  }
+}
+
 /** Gets qualification using string.includes() method
  * @param  {String} file  Relative path for the file we want to parse
  * @return N/A       Doesn't return anything
@@ -493,6 +603,9 @@ function multi_parser(file) {
     // if text has no location.state or it is empty
     if (!text[i].location.state || text[i].location.state === '') {
       text[i].location.state = 'Unknown';
+    } else {
+      const convertedState = convertRegion(text[i].location.state, 'name');
+      text[i].location.state = convertedState;
     }
   }
 
@@ -542,6 +655,7 @@ function fromDir(startPath, filter) {
   }
   return results;
 }
+
 
 const files = fromDir('./scrapers/data/canonical', '.json');
 
