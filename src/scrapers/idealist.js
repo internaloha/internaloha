@@ -1,3 +1,4 @@
+/* eslint-disable no-await-in-loop */
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const moment = require('moment');
@@ -22,7 +23,7 @@ async function fetchInfo(page, selector) {
 
     await page.waitForSelector(selector);
     // eslint-disable-next-line no-undef
-    result = await page.evaluate((select) => document.querySelector(select).textContent, selector);
+    result = await page.evaluate((select) => document.querySelector(select).innerText, selector);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log('Our Error: fetchInfo() failed.\n', error.message);
@@ -62,8 +63,7 @@ async function getElements(page) {
       getLinks(page).then(links => {
         elements.push(links);
       });
-      // eslint-disable-next-line no-await-in-loop,max-len
-      await page.waitForSelector('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
+      await page.waitFor(1000);
       // eslint-disable-next-line max-len,no-await-in-loop
       const nextPage = await page.$('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
       // eslint-disable-next-line no-await-in-loop
@@ -73,14 +73,14 @@ async function getElements(page) {
       // eslint-disable-next-line no-console
       console.log(e.message);
       // eslint-disable-next-line no-console
-      console.log(elements);
+      // console.log(elements);
       hasNext = false;
       // eslint-disable-next-line no-console
       console.log('\nReached the end of pages!');
     }
   }
   // eslint-disable-next-line no-console
-  console.log(elements);
+  // console.log(elements);
   return elements;
 }
 
@@ -110,24 +110,25 @@ async function getData(page, elements) {
         let locationArray = {};
         try {
           // eslint-disable-next-line no-await-in-loop
-          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dDSGrp"]');
-          const loc = location.match(/\| [^,]*, \w{2}/g);
-          console.log(`loc: ${loc}`);
-          const loc2 = loc.toString().substring(2);
-          console.log(`loc2: ${loc2}`);
-          const city = loc2.split(',')[0];
-          const state = loc2.split(',')[1].substring(1);
-          console.log(`city, state: ${city}, ${state}`);
+          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"]');
+          location = location.match(/\|\D+[^Share]/gm);
+          let loc = location[0].split('| ');
+          loc = loc[1].split(', ');
+          // console.log(loc)
+          const city = loc[0].trim();
+          const state = loc[1].trim();
+          // console.log(`city, state: ${city}, ${state}`);
           locationArray = { city: city, state: state };
           // console.log(city);
         } catch (e) {
+          console.log(e.message);
           console.log('No location found');
           location = 'N/A';
         }
         let time = '';
         try {
           // eslint-disable-next-line max-len,no-await-in-loop
-          time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 jmLLTt"]');
+          time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 cWSRKM"]');
           // create a new Date (shows current time)
           const date = new Date();
           let daysBack = 0;
@@ -154,7 +155,8 @@ async function getData(page, elements) {
         }
         let start = '';
         try {
-          // eslint-disable-next-line no-await-in-loop
+          // try to click the element. If it doesn't exist, we know there's no start date
+          await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
           start = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]');
           // eslint-disable-next-line no-useless-escape
           const newDate = start.match(/\b(\w*Start Date\w*)\b ([0-9]){1,2}\, ([0-9]){4}/g);
@@ -171,7 +173,8 @@ async function getData(page, elements) {
         }
         let due = '';
         try {
-          // eslint-disable-next-line no-await-in-loop
+          // try to click the element. If it doesn't exist, we know there's no due date
+          await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
           due = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]');
           // eslint-disable-next-line no-useless-escape
           const newDate = due.match(/\b(\w*Deadline\w*)\b ([0-9]){1,2}\, ([0-9]){4}/g);
@@ -189,10 +192,11 @@ async function getData(page, elements) {
         }
         // eslint-disable-next-line no-await-in-loop,max-len
         const lastScraped = new Date();
-        // eslint-disable-next-line no-await-in-loop,max-len
-        const description = await fetchInfo(page, '.Text-sc-1wv914u-0.dlxdi.idlst-rchtxt.Text__StyledRichText-sc-1wv914u-1.ctyuXi');
+        // clicking read more description
+        await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
+
+        const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 ctyuXi"]');
         // eslint-disable-next-line no-console
-        console.log(position);
         if (due !== '') {
           data.push({
             position: position,
@@ -248,6 +252,12 @@ async function getData(page, elements) {
     await page.goto('https://www.idealist.org/en/');
     // eslint-disable-next-line max-len
     await page.waitForSelector('#layout-root > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.lnKqQM > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.dCQmbn.BaseLayout__PageContent-sc-10xtgtb-2.heQjSt > div.Box__BaseBox-sc-1wooqli-0.bsSECh > div > div.Box__BaseBox-sc-1wooqli-0.hpEILX > div.Box__BaseBox-sc-1wooqli-0.datyjK > div > div > div.idlst-flx.idlst-lgncntr.Box__BaseBox-sc-1wooqli-0.cDmdoN > div > form > div.Box__BaseBox-sc-1wooqli-0.ejycyy > div > input');
+
+    // Selecting internships
+    await page.click('div[class="css-bg1rzq-control react-select__control"]');
+    await page.click('div[id="react-select-2-option-2"]');
+
+    // inputting search query
     await page.type('input[data-qa-id="search-input"]', searchQuery);
     await page.waitForSelector('button[data-qa-id="search-button"]');
     await page.click('button[data-qa-id="search-button"]');
@@ -266,4 +276,5 @@ async function getData(page, elements) {
     // eslint-disable-next-line no-console
     console.log(e);
   }
+
 })();
