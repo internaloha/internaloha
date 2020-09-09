@@ -83,7 +83,7 @@ const myArgs = process.argv.slice(2);
           try {
             // Test to see which UI loads
             await page.waitFor(500);
-            await page.evaluate(() => document.querySelector('.rpContent.ViewJob.ViewJob-redesign.ViewJob-v3').textContent);
+            await page.evaluate(() => document.querySelector('.rpContent.ViewJob.ViewJob-redesign.ViewJob-v3').innerHTML);
 
             console.log('Loaded up with new UI... \n');
 
@@ -104,13 +104,13 @@ const myArgs = process.argv.slice(2);
               await page.waitForSelector('.viewjob-labelWithIcon:last-child');
               await page.waitForSelector('.viewjob-jobDescription > div.p');
 
-              const position = await page.evaluate(() => document.querySelector('.RightPane > aside h2 ').textContent);
-              const company = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon').textContent);
-              const location = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon:last-child').textContent);
+              const position = await page.evaluate(() => document.querySelector('.RightPane > aside h2 ').innerHTML);
+              const company = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon').innerHTML);
+              const location = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon:last-child').innerHTML);
 
               let qualifications = '';
               try {
-                qualifications = await page.evaluate(() => document.querySelector('.viewjob-section.viewjob-qualifications.viewjob-entities ul').textContent);
+                qualifications = await page.evaluate(() => document.querySelector('.viewjob-section.viewjob-qualifications.viewjob-entities ul').innerHTML);
               } catch (err6) {
                 console.log('Does not have qualifications section. Assigning it as N/A');
                 skills = 'N/A';
@@ -120,7 +120,7 @@ const myArgs = process.argv.slice(2);
               let posted = '';
 
               try {
-                posted = await page.evaluate(() => document.querySelector('.viewjob-labelWithIcon.viewjob-age span').textContent);
+                posted = await page.evaluate(() => document.querySelector('.viewjob-labelWithIcon.viewjob-age span').innerHTML);
               } catch (err2) {
                 posted = 'N/A';
                 console.log('No date found. Setting posted as: N/A');
@@ -183,14 +183,14 @@ const myArgs = process.argv.slice(2);
                 await page.waitForSelector('.viewjob-header span.location');
                 await page.waitForSelector('div.viewjob-description.ViewJob-description');
 
-                const position = await page.evaluate(() => document.querySelector('.viewjob-header h1').textContent);
-                const company = await page.evaluate(() => document.querySelector('.viewjob-header span.company').textContent);
-                const location = await page.evaluate(() => document.querySelector('.viewjob-header span.location').textContent);
-                const description = await page.evaluate(() => document.querySelector('div.viewjob-description.ViewJob-description').textContent);
+                const position = await page.evaluate(() => document.querySelector('.viewjob-header h1').innerHTML);
+                const company = await page.evaluate(() => document.querySelector('.viewjob-header span.company').innerHTML);
+                const location = await page.evaluate(() => document.querySelector('.viewjob-header span.location').innerHTML);
+                const description = await page.evaluate(() => document.querySelector('div.viewjob-description.ViewJob-description').innerHTML);
                 let posted = '';
 
                 try {
-                  posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').textContent);
+                  posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').innerHTML);
 
                 } catch (err4) {
                   posted = 'N/A';
