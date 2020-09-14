@@ -92,6 +92,7 @@ async function fetchInfo(page, selector) {
       console.log('Error scraping links:', er2.message);
     }
 
+    console.log(jobArray);
     // write json file
     fs.writeFile('scrapers/data/canonical/youtern.canonical.data.json', JSON.stringify(jobArray, null, 4), 'utf-8', function (err) {
       if (err) throw err;
