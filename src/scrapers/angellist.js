@@ -43,7 +43,7 @@ async function fetchInfo(page, selector) {
   try {
 
     await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).textContent, selector);
+    result = await page.evaluate((select) => document.querySelector(select).innerHTML, selector);
   } catch (error) {
     console.log('Our Error: fetchInfo() failed.\n', error.message);
     result = 'Error';
