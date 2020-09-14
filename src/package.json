@@ -70,6 +70,7 @@
     "youtern": "node scrapers/Youtern.js",
     "cool": "node scrapers/Cooworks.js",
     "stackoverflow": "node scrapers/stackoverflow.js",
+    "glassdoor": "node scrapers/Glassdoor.js",
     "multi-parse": "node scrapers/multi_parser.js && node src/statistics.js"
   },
   "eslintConfig": {
