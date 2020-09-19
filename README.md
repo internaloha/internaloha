@@ -148,23 +148,23 @@ This script provides relevant information about each site that was scraped. The 
  correspond to how many fields were **not** empty. 
  
 ```json
-  {
-    site: 'Total',
-    lastScraped: '2020-09-04T00:45:30.335Z',
-    entries: 3286,
-    position: 3284,
-    company: 3284,
-    contact: 417,
-    location: 3286,
-    posted: 2772,
-    due: 93,
-    start: 98,
-    end: 0,
-    compensation: 811,
-    qualifications: 1295,
-    skills: 3240,
-    description: 3284
-  }
+{
+  "site": "Total",
+  "lastScraped": "2020-09-04T00:45:30.335Z",
+  "entries": 3286,
+  "position": 3284,
+  "company": 3284,
+  "contact": 417,
+  "location": 3286,
+  "posted": 2772,
+  "due": 93,
+  "start": 98,
+  "end": 0,
+  "compensation": 811,
+  "qualifications": 1295,
+  "skills": 3240,
+  "description": 3284
+}
 ``` 
   
 You have to manually add the newly listed site
@@ -209,7 +209,7 @@ The files are **not** upload to the site. This serves as a test run.
 The scrapers for each site are listed under the ```/scrapers``` directory. All the data are
  stored under ```/scrapers/data/canonical``` and **not** upload to the site.
 
-The following scrapers require a search query parameter (Eg. ```npm run simply computer science```: 
+The following scrapers require a search query parameter (Eg. ```npm run simply computer science```): 
 - SimplyHired
 - Internships (Chegg)
 - Monsters.com
@@ -227,7 +227,7 @@ The following scrapers require login in parameters:
 - AngelList
 
 
-SimplyHired: 
+**SimplyHired:** 
  
  ```npm run simply [search query]```. For example:  ``npm run simply computer
  science``. Result from the run is available at: [simplyHiredData.json](https://github.com/radgrad/internbit/blob/master/src/scrapers/data/canonical/simplyHired.canonical.data.json)
@@ -235,11 +235,11 @@ SimplyHired:
     * Date Relevance: 10 days
     * Any distance
  
-Idealist
+**Idealist:**
 
 ```npm run idealist [search query]```. Result from the run is available at: [simplyHiredData.json](https://github.com/radgrad/internbit/blob/master/src/scrapers/data/canonical/idealist.canonical.data.json)
         
-Internships (Chegg): 
+**Internships (Chegg):** 
 
 ```npm run internships [search query]```.  Result from the run is available
  at: [internships.data.json](https://github.com/radgrad/internbit/blob/master/src/scrapers/data/canonical/internships.canonical.data.json)
@@ -252,14 +252,14 @@ Internships (Chegg):
       * Hawaii
       * Sorted by Date
 
-Monsters.com: 
+**Monsters.com:**
 
 ```npm run monster [search query]```. For example:  ``npm run monster computer
  science intern`` Result from the run is available at: [monster.data.json](https://github.com/radgrad/internbit/blob/master/src/scrapers/data/canonical/monster.canonical.data.json)
 *  Current filters:
    *  Only show jobs posted within last 30 days
 
-LinkedIn: 
+**LinkedIn:** 
 
 Run ```npm run linkedin``` to start the script.
            Result from the run is available at: [linkedin.data.json](https://github.com/radgrad/internbit/blob/master/src/scrapers/data/canonical/linkedin.canonical.data.json)         
@@ -268,14 +268,15 @@ Run ```npm run linkedin``` to start the script.
     * Only show those listed as internships
     * Sorted by last posted
 
-StackOverflow: 
+**StackOverflow:** 
 
 Run ```npm run stackoverflow``` to start the script.
 Result from the run is available at: [stackoverflow.data.json](https://github.com/radgrad/internbit/blob/master/src/scrapers/data/canonical/stackoverflow.canonical.data.json)
                   
-GlassDoor:
+**GlassDoor:**
 
-Run ```npm run glassdoor```.
+Run ```npm run glassdoor``` to start the script. Result from the run is available at: [stackoverflow
+.data.json](https://github.com/radgrad/internbit/blob/master/src/scrapers/data/canonical/glassdoor.canonical.data.json)
 
 
 ## License
