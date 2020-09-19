@@ -11,6 +11,9 @@ const iHire = require('./data/iHireTech.parsed.data');
 const glassData = require('./data/glassdoor.parsed.data');
 const indeedData = require('./data/indeed.parsed.data');
 const angelData = require('./data/angellist.parsed.data');
+const manualData = require('./data/manualInput.data');
+const stackoverflow = require('./data/stackoverflow.parsed.data');
+const idealist = require('./data/idealist.parsed.data');
 
 const statistics = [];
 
@@ -101,6 +104,9 @@ data = lodash.concat(data, iHire);
 data = lodash.concat(data, glassData);
 data = lodash.concat(data, indeedData);
 data = lodash.concat(data, angelData);
+data = lodash.concat(data, manualData);
+data = lodash.concat(data, stackoverflow);
+data = lodash.concat(data, idealist);
 
 statistics.push(
     getStatistics('simplyHired', simplyData),
@@ -113,7 +119,10 @@ statistics.push(
     getStatistics('iHireTech', iHire),
     getStatistics('Glassdoor', glassData),
     getStatistics('Indeed', indeedData),
+    getStatistics('Idealist', idealist),
     getStatistics('AngelList', angelData),
+    getStatistics('Stackoverflow', stackoverflow),
+    getStatistics('Manual', manualData),
     getStatistics('Total', data),
 );
 
