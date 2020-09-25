@@ -13,9 +13,17 @@ import angelData from './data/angellist.parsed.data';
 
 class InternshipsFilters {
 
-  /* Returns total number of internship listing */
+  /**
+   * Returns total number of internship listing
+   * @param data
+   * @returns {*} Returns total number of internship listing
+   */
   total = (data) => data.length;
 
+  /**
+   * Combines all the internship data into 1
+   * @returns {Array} All the internship data
+   */
   mergeData() {
     let data = [];
     data = _.concat(zipData, simplyData);
@@ -44,11 +52,16 @@ class InternshipsFilters {
     return data;
   }
 
-  /* Returns array of companies for us to be able to pass into semantic ui's dropdown. Format:
+  /* Format:
   * key: unique key of the company
   * text: Text that shows up in dropdown
   * value: value used to search
   * num: the number of internships with said company */
+  /**
+   * Returns array of companies for us to be able to pass into semantic ui's dropdown.
+   * @param data The information being passed
+   * @returns {[]} Returns array of companies for us to be able to pass into semantic ui's dropdown.
+   */
   dropdownCompany(data) {
     let companies = _.map(data, 'company');
     const categories = _.flattenDeep(companies);
@@ -76,11 +89,16 @@ class InternshipsFilters {
     return info;
   }
 
-  /* Returns array of companies for us to be able to pass into semantic ui's dropdown. Format:
+  /* Format:
  * key: unique key of the company
  * text: Text that shows up in dropdown
  * value: value used to search
  * num: the number of internships with said company */
+  /**
+   * Returns array of companies for us to be able to pass into semantic ui's dropdown.
+   * @param The information being passed
+   * @returns {[]} Array of companies for us to be able to pass into semantic ui's dropdown.
+   */
   dropdownLocation(data) {
     let location = _.map(data, 'location.state');
     // console.log(location);
@@ -110,21 +128,32 @@ class InternshipsFilters {
     return info;
   }
 
-  /* Returns array of skills for us to be able to pass into semantic ui's dropdown. Format:
+  /* Format:
 * key: unique key of the skill
 * text: Text that shows up in dropdown
 * value: value used to search
 * num: the number of internships with the associated skills */
+  /**
+   * Returns array of skills for us to be able to pass into semantic ui's dropdown.
+   * @returns {[]} Returns array of skills for us to be able to pass into semantic ui's dropdown.
+   */
   dropdownSkills() {
-    const skills = _.map(this.mergeData(), 'skills');
-    // console.log(skills);
-    const flattenSkills = _.flattenDeep(skills);
-    // console.log(flattenSkills);
-    const uniqueSkills = _.uniq(flattenSkills).sort();
-    // console.log(uniqueSkills);
 
-    const number = _.groupBy(flattenSkills);
-    // console.log(number);
+    // get skills for each position
+    const skills = _.map(this.mergeData(), 'skills');
+
+    // flatten so it's just 1 array
+    const flattenSkills = _.flattenDeep(skills);
+
+    // map through skills and convert them to lowercase
+    let uniqueSkills = flattenSkills.map(skill => skill.toLowerCase());
+    // console.log(_.groupBy(uniqueSkills));
+
+    // group the skills (Eg. java: [java, java, java...]
+    const number = _.groupBy(uniqueSkills);
+
+    // Only show the skills once so no repeat
+    uniqueSkills = _.uniq(uniqueSkills);
 
     const info = [];
 
@@ -139,7 +168,13 @@ class InternshipsFilters {
     return info;
   }
 
-  /* Sorts list by given parameters */
+
+  /**
+   * Sorts the data by given parameters
+   * @param data Data we want to sort
+   * @param String How we want to sort it. (Date/Company)
+   * @returns {Array} Sorted data
+   */
   sortedBy(data, value) {
     if (value === 'date') {
       return _.orderBy(data, ['posted'], ['desc']);
@@ -150,7 +185,12 @@ class InternshipsFilters {
     return _.orderBy(data, ['position'], ['asc']);
   }
 
-  /* Returns a list based on skill/tags inputs */
+  /**
+   * Returns a list based on skill/tags inputs
+   * @param data Data we want to sort
+   * @param The skill the user selected
+   * @returns {Array} An array based off the user selection
+   */
   filterBySkills(data, tags) {
     if (tags.length === 0) {
       return data;
@@ -162,7 +202,8 @@ class InternshipsFilters {
     for (let i = 0; i < data.length; i++) {
       // if any of the tags exist in data set, push it to skills and go to next
         while (counter < tags.length && exists === false) {
-          if (data[i].skills.includes(tags[counter])) {
+          const skillLowerCase = data[i].skills.toString().toLowerCase();
+          if (skillLowerCase.includes(tags[counter])) {
             skills.push(data[i]);
             exists = true;
           }
@@ -175,6 +216,12 @@ class InternshipsFilters {
   }
 
   /* Returns a sorted list by company name */
+  /**
+   * Returns a list based on company selected
+   * @param data Data we want to sort
+   * @param The company the user selected
+   * @returns {Array} An array based off the user selection
+   */
   filterByCompany(data, company) {
     if (company === 'any') {
       return data;
@@ -182,7 +229,12 @@ class InternshipsFilters {
     return _.filter(data, ['company', company]);
   }
 
-  /* Returns a list based on search query */
+  /**
+   * Returns a list based on search query of TITLE
+   * @param data Data we want to sort
+   * @param The location the user selected
+   * @returns {Array} An array based off the user selection
+   */
   filterBySearch(data, searchQuery) {
     // console.log(searchQuery);
     if (searchQuery.length === 0) {
@@ -199,7 +251,12 @@ class InternshipsFilters {
     return list;
   }
 
-  /* Returns a sorted list by location */
+  /**
+   * Returns a sorted list by location
+   * @param data Data we want to sort
+   * @param The search query
+   * @returns {Array} An array consisting of user selection
+   */
   filterByLocation(data, input) {
     if (input === 'any') {
       return data;
