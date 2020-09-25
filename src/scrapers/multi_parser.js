@@ -432,6 +432,11 @@ function convertRegion(input, to) {
 
   const regions = states.concat(provinces);
 
+  // If state follows California (CA), we split it as [New York, (NY)]
+  input = input.match(/([\w ]+)/g);
+  // Input is now New York
+  input = input[0].trim();
+
   let i; // Reusable loop variable
   if (to === 'abbr') {
     input = input.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
@@ -440,6 +445,7 @@ function convertRegion(input, to) {
         return (regions[i][1]);
       }
     }
+    // if it doesn't match any
   } else if (to === 'name') {
     const alreadyFull = input;
     input = input.toUpperCase();
@@ -603,6 +609,8 @@ function multi_parser(file) {
     // if text has no location.state or it is empty
     if (!text[i].location.state || text[i].location.state === '') {
       text[i].location.state = 'Unknown';
+    } else if (text[i].location.state === 'states' || text[i].location.state === 'States') {
+      text[i].location.state = 'United States';
     } else {
       const convertedState = convertRegion(text[i].location.state, 'name');
       text[i].location.state = convertedState;

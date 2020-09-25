@@ -64,6 +64,8 @@ async function playTest(url) {
   await page.keyboard.type(credentials[1]);
   await page.click(CTA_SELECTOR);
   await page.waitForNavigation();
+  await page.waitFor(5000);
+  await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
   await autoScroll(page);
   await autoScroll(page);
   await autoScroll(page);
@@ -102,7 +104,10 @@ async function playTest(url) {
         {
           position: title.trim(),
           company: company.trim(),
-          location: location.trim(),
+          location: {
+            city: location.trim(),
+            state: '',
+          },
           url: currentURL,
           skills: skills,
           lastScraped: lastScraped,

@@ -4,7 +4,7 @@
         "company": "Teach Plus",
         "location": {
             "city": "Boston",
-            "state": "Texas (TX)",
+            "state": "Texas",
             "zip": "02108"
         },
         "posted": "07/01/2020",
@@ -26,7 +26,7 @@
         "company": "MoonRift Entertainment",
         "location": {
             "city": "Scottsdale",
-            "state": "Arizona (AZ)",
+            "state": "Arizona",
             "zip": "85251"
         },
         "posted": "06/21/2020",
@@ -47,7 +47,7 @@
         "company": "Sustainable",
         "location": {
             "city": "Nashville",
-            "state": "Tennessee (TN)",
+            "state": "Tennessee",
             "zip": "47209"
         },
         "posted": "06/07/2020",
@@ -66,7 +66,7 @@
         "company": "Hypepicks",
         "location": {
             "city": "Venice Beach",
-            "state": "California (CA)",
+            "state": "California",
             "zip": "90291"
         },
         "posted": "06/07/2020",

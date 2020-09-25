@@ -107,8 +107,8 @@ function onLeave(e) {
 function description(internshipDescription) {
   try {
     return (
-        internshipDescription.split('\n').map((item, key) =>
-            <span key={key}>{item}<br/></span>)
+        // <span dangerouslySetInnerHTML={{ __html: internshipDescription }}/>
+        internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
     );
   } catch (e) {
     console.log('No description field.');
@@ -171,6 +171,7 @@ function InternshipListingCard2(props) {
           <Modal.Header>Description</Modal.Header>
           <Modal.Content>
             <Modal.Description>
+              {/* <span dangerouslySetInnerHTML={{ __html: props.internship.description }}/> */}
               {description(props.internship.description)}
             </Modal.Description>
           </Modal.Content>
