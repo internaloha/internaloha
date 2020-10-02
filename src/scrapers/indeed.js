@@ -124,14 +124,16 @@ const scraperFunction = require('./scraperFunctions');
           let position = '';
           // position alternates between two different css class
           try {
-            position = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container"]','innerText');
+            await page.click('div[class="jobsearch-JobInfoHeader-title-container"]');
+            position = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container"]', 'innerText');
           } catch (noClassError) {
             console.log('--- Trying with other class name ---');
             position = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container jobsearch-JobInfoHeader-title-containerEji"]', 'innerText');
           }
-          const company = await scraperFunction.fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]','innerText');
+          const company = await scraperFunction.fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText');
           let location = '';
           try {
+            await page.click('div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
             location = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)', 'innerText');
           } catch (noLocation) {
             console.log('--- Trying with other class name ---');
