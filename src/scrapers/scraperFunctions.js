@@ -4,17 +4,17 @@ module.exports = {
    * Fetches the information from the page.
    * @param page The page we are scraping
    * @param selector The CSS Selector
-   * @param attributeType The attribute we want to get. Common ones are innerHTML, innerText, textContent
+   * @param DOM_Element The DOM element we want to use. Common ones are innerHTML, innerText, textContent
    * @returns {Promise<*>} The information as a String.
    */
-  fetchInfo: async function fetchInfo(page, selector, attributeType) {
+  fetchInfo: async function fetchInfo(page, selector, DOM_Element) {
     let result = '';
 
     try {
 
-      await page.waitForSelector(selector);
+      await page.waitForSelector(selector, { timeout: 10000 });
       // eslint-disable-next-line no-undef
-      result = await page.evaluate((select, attribute) => document.querySelector(select)[attribute], selector, attributeType);
+      result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
 
     } catch (error) {
       console.log('Our Error: fetchInfo() failed.\n', error.message);

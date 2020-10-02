@@ -107,8 +107,8 @@ function onLeave(e) {
 function description(internshipDescription) {
   try {
     return (
-        // <span dangerouslySetInnerHTML={{ __html: internshipDescription }}/>
-        internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
+         <span dangerouslySetInnerHTML={{ __html: internshipDescription }}/>
+        // internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
     );
   } catch (e) {
     console.log('No description field.');

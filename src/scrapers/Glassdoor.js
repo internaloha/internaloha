@@ -5,7 +5,7 @@ const fs = require('fs');
 const scraperFunction = require('./scraperFunctions');
 
 async function scrapeInfo(page, posted, url, data) {
-  const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]');
+  const position = await scraperFunction.fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
   await page.waitForSelector('div[class="css-16nw49e e11nt52q1"]');
   let company = '';
   try {
@@ -136,6 +136,7 @@ async function scrapeInfo(page, posted, url, data) {
         await scrapeInfo(page, postedDates[i], urlArray[i], data);
 
       } catch (err5) {
+        console.log(err5.message);
         console.log('Loading error, skipping');
         skippedJobs.push(urlArray[i]);
         skippedDates.push(postedDates[i]);

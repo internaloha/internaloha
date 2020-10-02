@@ -14,6 +14,7 @@ const angelData = require('./data/angellist.parsed.data');
 const manualData = require('./data/manualInput.data');
 const stackoverflow = require('./data/stackoverflow.parsed.data');
 const idealist = require('./data/idealist.parsed.data');
+const ACM = require('./data/acm.parsed.data');
 
 const statistics = [];
 
@@ -107,6 +108,7 @@ data = lodash.concat(data, angelData);
 data = lodash.concat(data, manualData);
 data = lodash.concat(data, stackoverflow);
 data = lodash.concat(data, idealist);
+data = lodash.concat(data, ACM);
 
 statistics.push(
     getStatistics('simplyHired', simplyData),
@@ -122,6 +124,7 @@ statistics.push(
     getStatistics('Idealist', idealist),
     getStatistics('AngelList', angelData),
     getStatistics('Stackoverflow', stackoverflow),
+    getStatistics('ACM', ACM),
     getStatistics('Manual', manualData),
     getStatistics('Total', data),
 );

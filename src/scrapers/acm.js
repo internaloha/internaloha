@@ -1,21 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-// Function referenced from linkedin.js
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    // eslint-disable-next-line no-undef
-    result = await page.evaluate((select) => document.querySelector(select).innerText, selector);
-  } catch (error) {
-    // eslint-disable-next-line no-console
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    throw error;
-  }
-  return result;
-}
+const scraperFunction = require('./scraperFunctions');
 
 (async () => {
   try {
@@ -55,32 +41,32 @@ async function fetchInfo(page, selector) {
           // eslint-disable-next-line no-await-in-loop
           await page.goto(urls[j]);
           // eslint-disable-next-line no-await-in-loop
-          const position = await fetchInfo(page, 'h1[itemprop="title"]');
+          const position = await scraperFunction.fetchInfo(page, 'h1[itemprop="title"]', 'innerText');
           // eslint-disable-next-line no-console
           console.log(position);
 
           // eslint-disable-next-line no-await-in-loop
-          const company = await fetchInfo(page, 'div[class="arDetailCompany"]');
+          const company = await scraperFunction.fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText');
           // eslint-disable-next-line no-console
           console.log(company);
 
           // eslint-disable-next-line no-await-in-loop
-          const description = await fetchInfo(page, 'div[itemprop="description"]');
+          const description = await scraperFunction.fetchInfo(page, 'div[itemprop="description"]', 'innerHTML');
           // eslint-disable-next-line no-console
           console.log(description);
 
           // eslint-disable-next-line no-await-in-loop
-          const city = await fetchInfo(page, 'span[itemprop="addressLocality"]');
+          const city = await scraperFunction.fetchInfo(page, 'span[itemprop="addressLocality"]','innerText');
           // eslint-disable-next-line no-console
           console.log(city);
 
           // eslint-disable-next-line no-await-in-loop
-          const state = await fetchInfo(page, 'span[itemprop="addressRegion"]');
+          const state = await scraperFunction.fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText');
           // eslint-disable-next-line no-console
           console.log(state);
 
           // eslint-disable-next-line no-await-in-loop
-          const zip = await fetchInfo(page, 'span[itemprop="postalCode"]');
+          const zip = await scraperFunction.fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText');
           // eslint-disable-next-line no-console
           console.log(zip);
 

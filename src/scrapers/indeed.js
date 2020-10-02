@@ -10,6 +10,8 @@ const scraperFunction = require('./scraperFunctions');
     headless: false,
   });
 
+  const data = [];
+
   try {
 
     const page = await browser.newPage();
@@ -33,7 +35,7 @@ const scraperFunction = require('./scraperFunctions');
 
     // closing module that pops up
     try {
-      await page.waitForSelector('a[class="icl-CloseButton popover-x-button-close"]');
+      await page.waitForSelector('a[class="icl-CloseButton popover-x-button-close"]', { timeout: 5000} );
       await page.waitFor(2000);
       await page.click('a[class="icl-CloseButton popover-x-button-close"]');
     } catch (err2) {
@@ -79,7 +81,6 @@ const scraperFunction = require('./scraperFunctions');
       console.log('No internship tag.');
     }
 
-    const data = [];
     const skippedLinks = [];
     let totalJobs = 0;
     const urls = [];
@@ -211,6 +212,10 @@ const scraperFunction = require('./scraperFunctions');
     await browser.close();
 
   } catch (e) {
+    await fs.writeFile('scrapers/data/canonical/indeed.canonical.data.json',
+        JSON.stringify(data, null, 4), 'utf-8',
+        err => (err ? console.log('\nData not written!', err) :
+            console.log('\nData successfully written!')));
     console.log('Our Error:', e.message);
     await browser.close();
   }
