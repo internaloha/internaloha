@@ -1,7 +1,7 @@
 /* eslint-disable max-len,no-param-reassign */
-const natural = require('natural');
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import natural from 'natural';
+import path from 'path';
 
 /** Removes duplicate in skills
  * @param  {Array} skills    The word we're looking for

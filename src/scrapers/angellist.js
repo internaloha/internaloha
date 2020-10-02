@@ -1,7 +1,6 @@
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { fetchInfo, autoScroll } from './scraperFunctions.js';
 
 const USERNAME_SELECTOR = '#user_email';
 const PASSWORD_SELECTOR = '#user_password';
@@ -34,9 +33,9 @@ async function playTest(url) {
   await page.waitForNavigation();
   await page.waitFor(5000);
   await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
-  await scraperFunction.autoScroll(page);
-  await scraperFunction.autoScroll(page);
-  await scraperFunction.autoScroll(page);
+  await autoScroll(page);
+  await autoScroll(page);
+  await autoScroll(page);
   await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
   const elements = await page.evaluate(
       () => Array.from(
@@ -62,10 +61,10 @@ async function playTest(url) {
     const element = `http://angel.co${elements[i]}`;
     await page.goto(element, { waitUntil: 'domcontentloaded' });
     const currentURL = page.url();
-    const description = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.content_6572f > div', 'innerHTML');
-    const location = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.sidebar_f82a8 > div > div.component_4105f > div:nth-child(1) > dd > div > span', 'innerText');
-    const title = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.title_927e9 > div > h2', 'innerText');
-    const company = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > section > div > div.name_af83c > div > div.styles_component__1WTsC.styles_flexRow__35QHu > h1 > a', 'innerText');
+    const description = await fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.content_6572f > div', 'innerHTML');
+    const location = await fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.sidebar_f82a8 > div > div.component_4105f > div:nth-child(1) > dd > div > span', 'innerText');
+    const title = await fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.title_927e9 > div > h2', 'innerText');
+    const company = await fetchInfo(page, '#main > div.component_70709 > div > div > div > section > div > div.name_af83c > div > div.styles_component__1WTsC.styles_flexRow__35QHu > h1 > a', 'innerText');
     const skills = 'N/A';
     const lastScraped = new Date();
     data.push(

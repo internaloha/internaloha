@@ -1,7 +1,6 @@
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { fetchInfo } from './scraperFunctions.js';
 
 (async () => {
 
@@ -28,7 +27,7 @@ const scraperFunction = require('./scraperFunctions');
     await page.click('div[id="popover-background"] button');
 
     await page.waitFor(2000);
-    const text = await scraperFunction.fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
+    const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
     const number = text.match(/\d+/gm);
     console.log('Internships found:', number[0]);
 
@@ -47,11 +46,11 @@ const scraperFunction = require('./scraperFunctions');
     for (let i = 0; i < number[0]; i++) {
       await page.goto(elements[i]);
 
-      const position = await scraperFunction.fetchInfo(page, 'div[class="grid--cell fl1 sm:mb12"] h1', 'innerText');
-      const company = await scraperFunction.fetchInfo(page, 'div[class="fc-black-700 fs-body3"] a', 'innerText');
-      const location = await scraperFunction.fetchInfo(page,'div[class="fc-black-700 fs-body3"] span', 'innerText');
-      const posted = await scraperFunction.fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]', 'innerText');
-      const description = await scraperFunction.fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
+      const position = await fetchInfo(page, 'div[class="grid--cell fl1 sm:mb12"] h1', 'innerText');
+      const company = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] a', 'innerText');
+      const location = await fetchInfo(page,'div[class="fc-black-700 fs-body3"] span', 'innerText');
+      const posted = await fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]', 'innerText');
+      const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
 
       const skills = await page.evaluate(
           () => Array.from(

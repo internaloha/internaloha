@@ -1,20 +1,19 @@
 /* eslint-disable no-await-in-loop */
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { fetchInfo } from './scraperFunctions.js';
 
 async function scrapeInfo(page, posted, url, data) {
-  const position = await scraperFunction.fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
+  const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
   await page.waitForSelector('div[class="css-16nw49e e11nt52q1"]');
   let company = '';
   try {
     company = await page.evaluate(() => document.querySelector('div[class="css-16nw49e e11nt52q1"]').childNodes[0].nodeValue);
   } catch (err5) {
-    company = await scraperFunction.fetchInfo(page, 'div[class="css-16nw49e e11nt52q1"]', 'innerText');
+    company = await fetchInfo(page, 'div[class="css-16nw49e e11nt52q1"]', 'innerText');
   }
-  const location = await scraperFunction.fetchInfo(page, 'div[class="css-1v5elnn e11nt52q2"]', 'innerText');
-  const description = await scraperFunction.fetchInfo(page, 'div[class="desc css-58vpdc ecgq1xb4"]', 'innerHTML');
+  const location = await fetchInfo(page, 'div[class="css-1v5elnn e11nt52q2"]', 'innerText');
+  const description = await fetchInfo(page, 'div[class="desc css-58vpdc ecgq1xb4"]', 'innerHTML');
 
   const date = new Date();
   let daysBack = 0;
@@ -90,7 +89,7 @@ async function scrapeInfo(page, posted, url, data) {
     const skippedJobs = [];
     const skippedDates = [];
 
-    let pageLimit = await scraperFunction.fetchInfo(page, 'div[class="cell middle hideMob padVertSm"]', 'innerHTML');
+    let pageLimit = await fetchInfo(page, 'div[class="cell middle hideMob padVertSm"]', 'innerHTML');
     pageLimit = pageLimit.match(/(\d)+$/gm);
     let currentPage = 1;
     console.log('Pages: ', pageLimit[0]);

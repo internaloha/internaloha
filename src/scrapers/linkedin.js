@@ -1,8 +1,7 @@
 /* eslint-disable max-len,no-await-in-loop,no-console */
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { fetchInfo, autoScroll } from './scraperFunctions.js';
 
 (async () => {
 
@@ -81,7 +80,7 @@ const scraperFunction = require('./scraperFunctions');
 
         await page.waitForSelector('section.results__list');
         console.log('Fetching jobs...');
-        await scraperFunction.autoScroll(page);
+        await autoScroll(page);
 
         let loadMore = true;
         let loadCount = 0;
@@ -128,10 +127,10 @@ const scraperFunction = require('./scraperFunctions');
           try {
 
             await page.waitForSelector('div[class="details-pane__content details-pane__content--show"]');
-            const position = await scraperFunction.fetchInfo(page, 'h2.topcard__title', 'innerText');
-            const company = await scraperFunction.fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name" ]', 'innerText');
-            const location = await scraperFunction.fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
-            const description = await scraperFunction.fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML');
+            const position = await fetchInfo(page, 'h2.topcard__title', 'innerText');
+            const company = await fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name" ]', 'innerText');
+            const location = await fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
+            const description = await fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML');
 
             const date = new Date();
             let daysBack = 0;
@@ -188,11 +187,11 @@ const scraperFunction = require('./scraperFunctions');
           await page.goto(skippedURLs[i]);
           await page.waitForSelector('section.core-rail');
 
-          const position = await scraperFunction.fetchInfo(page, 'h1.topcard__title', 'innerText');
-          const company = await scraperFunction.fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name"]', 'innerText');
-          const location = await scraperFunction.fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
-          const description = await scraperFunction.fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML');
-          const time = await scraperFunction.fetchInfo(page, 'span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
+          const position = await fetchInfo(page, 'h1.topcard__title', 'innerText');
+          const company = await fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name"]', 'innerText');
+          const location = await fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
+          const description = await fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML');
+          const time = await fetchInfo(page, 'span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
           const skills = 'N/A';
 
           const date = new Date();

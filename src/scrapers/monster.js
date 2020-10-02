@@ -1,9 +1,8 @@
 /* eslint-disable no-await-in-loop */
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const userAgent = require('user-agents');
-
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { fetchInfo } from './scraperFunctions.js';
+import userAgent from 'user-agents';
 
 // const myArgs = process.argv.slice(2);
 
@@ -110,8 +109,8 @@ const scraperFunction = require('./scraperFunctions');
       await element.click();
       await page.waitForSelector('div[id="JobPreview"]');
       await page.waitFor(500);
-      const location = await scraperFunction.fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
-      const description = await scraperFunction.fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
+      const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
+      const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
       const url = await page.url();
 
       let daysToGoBack = 0;

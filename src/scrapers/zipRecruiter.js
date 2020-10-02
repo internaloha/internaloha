@@ -1,7 +1,7 @@
 /* eslint-disable max-len,no-console,no-await-in-loop */
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { fetchInfo, autoScroll } from './scraperFunctions.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -69,7 +69,7 @@ const myArgs = process.argv.slice(2);
       await page.click('.load_more_jobs');
 
       // Jobs listed using infinite scroll, scrolls until it reaches ending
-      await scraperFunction.autoScroll(page);
+      await autoScroll(page);
 
     } catch (err) {
       console.log('--- All jobs are Listed, no "Load More" button --- ');
@@ -108,11 +108,11 @@ const myArgs = process.argv.slice(2);
         await page.waitForSelector('.pc_message');
         await page.click('.pc_message');
 
-        const position = await scraperFunction.fetchInfo(page, '.job_title', 'innerText');
-        const company = await scraperFunction.fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText');
-        const location = await scraperFunction.fetchInfo(page, 'span[data-name="address"]', 'innerText');
-        const description = await scraperFunction.fetchInfo(page, '.jobDescriptionSection', 'innerHTML');
-        const posted = await scraperFunction.fetchInfo(page, '.job_more span[class="data"]', 'innerText');
+        const position = await fetchInfo(page, '.job_title', 'innerText');
+        const company = await fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText');
+        const location = await fetchInfo(page, 'span[data-name="address"]', 'innerText');
+        const description = await fetchInfo(page, '.jobDescriptionSection', 'innerHTML');
+        const posted = await fetchInfo(page, '.job_more span[class="data"]', 'innerText');
 
         const date = new Date();
         let daysBack = 0;

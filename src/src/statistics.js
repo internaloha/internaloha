@@ -1,20 +1,36 @@
-const fs = require('fs');
-const lodash = require('lodash');
-const simplyData = require('./data/simplyhired.parsed.data');
-const linkedInData = require('./data/linkedin.parsed.data');
-const zipData = require('./data/ziprecruiter.parsed.data');
-const cheggData = require('./data/internships.parsed.data');
-const monsterData = require('./data/monster.parsed.data');
-const nsfData = require('./data/nsf-reu.parsed.data');
-const youternData = require('./data/youtern.parsed.data');
-const iHire = require('./data/iHireTech.parsed.data');
-const glassData = require('./data/glassdoor.parsed.data');
-const indeedData = require('./data/indeed.parsed.data');
-const angelData = require('./data/angellist.parsed.data');
-const manualData = require('./data/manualInput.data');
-const stackoverflow = require('./data/stackoverflow.parsed.data');
-const idealist = require('./data/idealist.parsed.data');
-const ACM = require('./data/acm.parsed.data');
+import fs from 'fs';
+import { _ } from 'lodash';
+
+import simplyData from './data/simplyhired.parsed.data';
+import linkedInData from './data/linkedin.parsed.data';
+import zipData from './data/ziprecruiter.parsed.data';
+import cheggData from './data/internships.parsed.data';
+import monsterData from './data/monster.parsed.data';
+import nsfData from './data/nsf-reu.parsed.data';
+import youternData from './data/youtern.parsed.data';
+import iHire from './data/iHireTech.parsed.data';
+import glassData from './data/glassdoor.parsed.data';
+import indeedData from './data/indeed.parsed.data';
+import angelData from './data/angellist.parsed.data';
+import manualData from './data/manualInput.data';
+import stackoverflow from './data/stackoverflow.parsed.data';
+import idealist from './data/idealist.parsed.data';
+import ACM from './data/acm.parsed.data';
+// const simplyData = './data/simplyhired.parsed.data');
+// const linkedInData = './data/linkedin.parsed.data');
+// const zipData = './data/ziprecruiter.parsed.data');
+// const cheggData = './data/internships.parsed.data');
+// const monsterData = './data/monster.parsed.data');
+// const nsfData = './data/nsf-reu.parsed.data');
+// const youternData = './data/youtern.parsed.data');
+// const iHire = './data/iHireTech.parsed.data');
+// const glassData = './data/glassdoor.parsed.data');
+// const indeedData = './data/indeed.parsed.data');
+// const angelData = './data/angellist.parsed.data');
+// const manualData = './data/manualInput.data');
+// const stackoverflow = './data/stackoverflow.parsed.data');
+// const idealist = './data/idealist.parsed.data');
+// const ACM = './data/acm.parsed.data');
 
 const statistics = [];
 
@@ -95,20 +111,20 @@ function getStatistics(name, data) {
 }
 
 let data = [];
-data = lodash.concat(zipData, simplyData);
-data = lodash.concat(data, cheggData);
-data = lodash.concat(data, monsterData);
-data = lodash.concat(data, linkedInData);
-data = lodash.concat(data, youternData);
-data = lodash.concat(data, nsfData);
-data = lodash.concat(data, iHire);
-data = lodash.concat(data, glassData);
-data = lodash.concat(data, indeedData);
-data = lodash.concat(data, angelData);
-data = lodash.concat(data, manualData);
-data = lodash.concat(data, stackoverflow);
-data = lodash.concat(data, idealist);
-data = lodash.concat(data, ACM);
+data = _.concat(zipData, simplyData);
+data = _.concat(data, cheggData);
+data = _.concat(data, monsterData);
+data = _.concat(data, linkedInData);
+data = _.concat(data, youternData);
+data = _.concat(data, nsfData);
+data = _.concat(data, iHire);
+data = _.concat(data, glassData);
+data = _.concat(data, indeedData);
+data = _.concat(data, angelData);
+data = _.concat(data, manualData);
+data = _.concat(data, stackoverflow);
+data = _.concat(data, idealist);
+data = _.concat(data, ACM);
 
 statistics.push(
     getStatistics('simplyHired', simplyData),

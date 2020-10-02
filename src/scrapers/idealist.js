@@ -1,9 +1,8 @@
 /* eslint-disable no-await-in-loop */
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const moment = require('moment');
-
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import moment from 'moment';
+import { fetchInfo } from './scraperFunctions.js';
 
 const searchQuery = process.argv.slice(2).join(' ');
 
@@ -83,11 +82,11 @@ async function getData(page, elements) {
         // eslint-disable-next-line no-await-in-loop
         await page.goto(element, { waitUntil: 'domcontentloaded' });
         // eslint-disable-next-line no-await-in-loop
-        const position = await scraperFunction.fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
+        const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
         let company = '';
         try {
           // eslint-disable-next-line no-await-in-loop
-          company = await scraperFunction.fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
+          company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
         } catch (e) {
           // eslint-disable-next-line no-console
           console.log('No company found. Setting to N/A');
@@ -97,7 +96,7 @@ async function getData(page, elements) {
         let locationArray = {};
         try {
           // eslint-disable-next-line no-await-in-loop
-          location = await scraperFunction.fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"]', 'innerText');
+          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"]', 'innerText');
           location = location.match(/\|\D+[^Share]/gm);
           let loc = location[0].split('| ');
           loc = loc[1].split(', ');
@@ -115,7 +114,7 @@ async function getData(page, elements) {
         let time = '';
         try {
           // eslint-disable-next-line max-len,no-await-in-loop
-          time = await scraperFunction.fetchInfo(page, 'div[class="Text-sc-1wv914u-0 cWSRKM"]', 'innerText');
+          time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 cWSRKM"]', 'innerText');
           // create a new Date (shows current time)
           const date = new Date();
           let daysBack = 0;
@@ -144,7 +143,7 @@ async function getData(page, elements) {
         try {
           // try to click the element. If it doesn't exist, we know there's no start date
           await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
-          start = await scraperFunction.fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
+          start = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
           // eslint-disable-next-line no-useless-escape
           const newDate = start.match(/\b(\w*Start Date\w*)\b ([0-9]){1,2}\, ([0-9]){4}/g);
           if (newDate != null) {
@@ -162,7 +161,7 @@ async function getData(page, elements) {
         try {
           // try to click the element. If it doesn't exist, we know there's no due date
           await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
-          due = await scraperFunction.fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
+          due = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
           // eslint-disable-next-line no-useless-escape
           const newDate = due.match(/\b(\w*Deadline\w*)\b ([0-9]){1,2}\, ([0-9]){4}/g);
           console.log(newDate);
@@ -182,7 +181,7 @@ async function getData(page, elements) {
         // clicking read more description
         await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
 
-        const description = await scraperFunction.fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 ctyuXi"]', 'innerHTML');
+        const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 ctyuXi"]', 'innerHTML');
         // eslint-disable-next-line no-console
         if (due !== '') {
           data.push({

@@ -1,9 +1,8 @@
 /* eslint-disable no-console,no-undef,no-await-in-loop,no-loop-func,max-len */
 // eslint-disable-next-line global-require
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-
-const scraperFunction = require('./scraperFunctions');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import { fetchInfo } from './scraperFunctions.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -102,9 +101,9 @@ const myArgs = process.argv.slice(2);
               const elementLink = elements[i - 1];
 
 
-              const position = await scraperFunction.fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
-              const company = await scraperFunction.fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
-              const location = await scraperFunction.fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
+              const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
+              const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
+              const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
 
 
                   // page.evaluate(() => document.querySelector('.RightPane > aside h2 ').innerHTML);
@@ -113,18 +112,18 @@ const myArgs = process.argv.slice(2);
 
               let qualifications = '';
               try {
-                qualifications = await scraperFunction.fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
+                qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
                 // qualifications = await page.evaluate(() => document.querySelector('.viewjob-section.viewjob-qualifications.viewjob-entities ul').innerHTML);
               } catch (err6) {
                 console.log('Does not have qualifications section. Assigning it as N/A');
                 skills = 'N/A';
               }
 
-              const description = await scraperFunction.fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
+              const description = await fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
               let posted = '';
 
               try {
-                posted = await scraperFunction.fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
+                posted = await fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
               } catch (err2) {
                 posted = 'N/A';
                 console.log('No date found. Setting posted as: N/A');
@@ -193,13 +192,14 @@ const myArgs = process.argv.slice(2);
                 // const description = await page.evaluate(() => document.querySelector('div.viewjob-description.ViewJob-description').innerHTML);
                 // let posted = '';
 
-                const position = await scraperFunction.fetchInfo(page, '.viewjob-header h1', 'innerText');
-                const company = await scraperFunction.fetchInfo(page, '.viewjob-header span.company', 'innerText');
-                const location = await scraperFunction.fetchInfo(page, '.viewjob-header span.location', 'innerText');
+                const position = await fetchInfo(page, '.viewjob-header h1', 'innerText');
+                const company = await fetchInfo(page, '.viewjob-header span.company', 'innerText');
+                const location = await fetchInfo(page, '.viewjob-header span.location', 'innerText');
+                const description = await fetchInfo(page, 'div.viewjob-description.ViewJob-description', 'innerHTML');
 
                 try {
                   // posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').innerHTML);
-                  posted = await scraperFunction.fetchInfo(page, '.extra-info .info-unit i.far.fa-clock + span', 'innerText');
+                  posted = await fetchInfo(page, '.extra-info .info-unit i.far.fa-clock + span', 'innerText');
 
                 } catch (err4) {
                   posted = 'N/A';
