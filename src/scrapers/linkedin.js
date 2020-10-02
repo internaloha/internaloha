@@ -2,52 +2,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-async function autoScroll(page) {
-  await page.evaluate(async () => {
-    await new Promise((resolve, reject) => {
-      let totalHeight = 0;
-      const distance = 100;
-      const timer = setInterval(() => {
-        const scrollHeight = document.body.scrollHeight;
-        window.scrollBy(0, distance);
-        totalHeight += distance;
-
-        if (totalHeight >= scrollHeight) {
-          clearInterval(timer);
-          resolve();
-        }
-      }, 150);
-    });
-  });
-}
-
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).innerText, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-    throw error;
-  }
-  return result;
-}
-
-async function fetchLink(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).href, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-    throw error;
-  }
-  return result;
-}
+const scraperFunction = require('./scraperFunctions');
 
 (async () => {
 
@@ -60,82 +15,84 @@ async function fetchLink(page, selector) {
 
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
-        await page.goto('https://www.linkedin.com/jobs');
+        await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
 
-        await page.waitForSelector('input[aria-label="Search job titles or companies"]');
-        await page.type('input[aria-label="Search job titles or companies"]', 'computer science');
-
-        await page.waitForSelector('button[data-searchbar-type="JOBS"]');
-        await page.click('button[data-searchbar-type="JOBS"]');
-
-        await page.waitForSelector('input[aria-label="Location"]');
-        await page.type('input[aria-label="Location"]', 'United States');
-        await page.waitFor(500);
-        await page.keyboard.press('Enter');
-
-        // filter for internships only
-        await page.waitForSelector('header.header');
-        await page.waitFor(1500);
-        await page.waitForSelector('button[data-tracking-control-name="public_jobs_JOB_TYPE-dropdown"]');
-        await page.click('button[data-tracking-control-name="public_jobs_JOB_TYPE-dropdown"]');
-        await page.waitForSelector('label[for="JOB_TYPE-3"]');
-        await page.click('label[for="JOB_TYPE-3"]');
-        await page.waitForSelector('button[data-tracking-control-name="f_JT-done-btn"]');
-        await page.click('button[data-tracking-control-name="f_JT-done-btn"]');
-        console.log('Filtering by internship tag...');
-
-        // sort by most recent
-        await page.waitForSelector('header.header');
-        await page.waitFor(1500);
-        await page.waitForSelector('button[data-tracking-control-name="public_jobs_-dropdown"]');
-        await page.click('button[data-tracking-control-name="public_jobs_-dropdown"]');
-        await page.waitForSelector('label[for="-1"]');
-        await page.click('label[for="-1"]');
-        await page.waitForSelector('button[data-tracking-control-name="sortBy-done-btn"]');
-        await page.click('button[data-tracking-control-name="sortBy-done-btn"]');
-        console.log('Sorting by most recent...');
-
-        // sort by posted within last month
-        await page.waitForSelector('header.header');
-        await page.waitFor(1500);
-        await page.waitForSelector('button[data-tracking-control-name="public_jobs_TIME_POSTED-dropdown"]');
-        await page.click('button[data-tracking-control-name="public_jobs_TIME_POSTED-dropdown"]');
-        await page.waitForSelector('label[for="TIME_POSTED-2"]');
-        await page.click('label[for="TIME_POSTED-2"]');
-        await page.waitForSelector('button[data-tracking-control-name="f_TP-done-btn"]');
-        await page.click('button[data-tracking-control-name="f_TP-done-btn"]');
-        console.log('Only showing results within past month...');
-
-        // sort by experience - internship
-        try {
-          await page.waitForSelector('header.header');
-          await page.waitFor(1500);
-          await page.waitForSelector('button[data-tracking-control-name="public_jobs_EXPERIENCE-dropdown"]');
-          await page.click('button[data-tracking-control-name="public_jobs_EXPERIENCE-dropdown"]');
-          await page.evaluate(() => {
-            [...document.querySelectorAll('div[id="EXPERIENCE-dropdown"] label')]
-                .find(element => element.textContent.includes('Internship')).click();
-          });
-          await page.waitForSelector('button[data-tracking-control-name="f_E-done-btn"]');
-          await page.click('button[data-tracking-control-name="f_E-done-btn"]');
-          console.log('Setting experience as "Internship"...');
-        } catch (err2) {
-          console.log('Our error: Unable to filter by experience - Internship');
-          console.log(err2.message);
-        }
+        // await page.waitForSelector('input[aria-label="Search job titles or companies"]');
+        // await page.type('input[aria-label="Search job titles or companies"]', 'computer science');
+        //
+        // await page.waitForSelector('button[data-searchbar-type="JOBS"]');
+        // await page.click('button[data-searchbar-type="JOBS"]');
+        //
+        // await page.waitForSelector('input[aria-label="Location"]');
+        // await page.type('input[aria-label="Location"]', 'United States');
+        // await page.waitFor(500);
+        // await page.keyboard.press('Enter');
+        //
+        // // filter for internships only
+        // await page.waitForSelector('header.header');
+        // await page.waitFor(1500);
+        // await page.waitForSelector('button[data-tracking-control-name="public_jobs_JOB_TYPE-dropdown"]');
+        // await page.click('button[data-tracking-control-name="public_jobs_JOB_TYPE-dropdown"]');
+        // await page.waitForSelector('label[for="JOB_TYPE-3"]');
+        // await page.click('label[for="JOB_TYPE-3"]');
+        // await page.waitForSelector('button[data-tracking-control-name="f_JT-done-btn"]');
+        // await page.click('button[data-tracking-control-name="f_JT-done-btn"]');
+        // console.log('Filtering by internship tag...');
+        //
+        // // sort by most recent
+        // await page.waitForSelector('header.header');
+        // await page.waitFor(1500);
+        // await page.waitForSelector('button[data-tracking-control-name="public_jobs_-dropdown"]');
+        // await page.click('button[data-tracking-control-name="public_jobs_-dropdown"]');
+        // await page.waitForSelector('label[for="-1"]');
+        // await page.click('label[for="-1"]');
+        // await page.waitForSelector('button[data-tracking-control-name="sortBy-done-btn"]');
+        // await page.click('button[data-tracking-control-name="sortBy-done-btn"]');
+        // console.log('Sorting by most recent...');
+        //
+        // // sort by posted within last month
+        // await page.waitForSelector('header.header');
+        // await page.waitFor(1500);
+        // await page.waitForSelector('button[data-tracking-control-name="public_jobs_TIME_POSTED-dropdown"]');
+        // await page.click('button[data-tracking-control-name="public_jobs_TIME_POSTED-dropdown"]');
+        // await page.waitForSelector('label[for="TIME_POSTED-2"]');
+        // await page.click('label[for="TIME_POSTED-2"]');
+        // await page.waitForSelector('button[data-tracking-control-name="f_TP-done-btn"]');
+        // await page.click('button[data-tracking-control-name="f_TP-done-btn"]');
+        // console.log('Only showing results within past month...');
+        //
+        // // sort by experience - internship
+        // try {
+        //   await page.waitForSelector('header.header');
+        //   await page.waitFor(1500);
+        //   await page.waitForSelector('button[data-tracking-control-name="public_jobs_EXPERIENCE-dropdown"]');
+        //   await page.click('button[data-tracking-control-name="public_jobs_EXPERIENCE-dropdown"]');
+        //   await page.evaluate(() => {
+        //     [...document.querySelectorAll('div[id="EXPERIENCE-dropdown"] label')]
+        //         .find(element => element.textContent.includes('Internship')).click();
+        //   });
+        //   await page.waitForSelector('button[data-tracking-control-name="f_E-done-btn"]');
+        //   await page.click('button[data-tracking-control-name="f_E-done-btn"]');
+        //   console.log('Setting experience as "Internship"...');
+        // } catch (err2) {
+        //   console.log('Our error: Unable to filter by experience - Internship');
+        //   console.log(err2.message);
+        // }
 
         await page.waitForSelector('section.results__list');
         console.log('Fetching jobs...');
-        await autoScroll(page);
+        await scraperFunction.autoScroll(page);
 
         let loadMore = true;
+        let loadCount = 0;
         let totalInternships = 0;
 
         // Sometimes infinite scroll stops and switches to a "load more" button
-        while (loadMore === true) {
+        while (loadMore === true && loadCount <= 15) {
           try {
             await page.waitFor(1000);
             await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
+            loadCount++;
           } catch (e2) {
             loadMore = false;
             console.log('Finished loading...');
@@ -171,10 +128,10 @@ async function fetchLink(page, selector) {
           try {
 
             await page.waitForSelector('div[class="details-pane__content details-pane__content--show"]');
-            const position = await fetchInfo(page, 'h2.topcard__title');
-            const company = await fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name" ]');
-            const location = await fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]');
-            const description = await fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]');
+            const position = await scraperFunction.fetchInfo(page, 'h2.topcard__title', 'innerText');
+            const company = await scraperFunction.fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name" ]', 'innerText');
+            const location = await scraperFunction.fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
+            const description = await scraperFunction.fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML');
 
             const date = new Date();
             let daysBack = 0;
@@ -231,11 +188,11 @@ async function fetchLink(page, selector) {
           await page.goto(skippedURLs[i]);
           await page.waitForSelector('section.core-rail');
 
-          const position = await fetchInfo(page, 'h2.topcard__title');
-          const company = await fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name"]');
-          const location = await fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]');
-          const description = await fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]');
-          const time = await fetchInfo(page, 'span.topcard__flavor--metadata.posted-time-ago__text');
+          const position = await scraperFunction.fetchInfo(page, 'h1.topcard__title', 'innerText');
+          const company = await scraperFunction.fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name"]', 'innerText');
+          const location = await scraperFunction.fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
+          const description = await scraperFunction.fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML');
+          const time = await scraperFunction.fetchInfo(page, 'span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
           const skills = 'N/A';
 
           const date = new Date();
@@ -276,7 +233,7 @@ async function fetchLink(page, selector) {
             description: description,
           });
 
-          console.log(position)
+          console.log(position);
           totalInternships++;
 
         }

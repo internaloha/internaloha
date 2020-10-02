@@ -1,18 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).innerText, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-  }
-  return result;
-}
+const scraperFunction = require('./scraperFunctions');
 
 (async () => {
 
@@ -39,7 +28,7 @@ async function fetchInfo(page, selector) {
     await page.click('div[id="popover-background"] button');
 
     await page.waitFor(2000);
-    const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]');
+    const text = await scraperFunction.fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
     const number = text.match(/\d+/gm);
     console.log('Internships found:', number[0]);
 
@@ -58,11 +47,11 @@ async function fetchInfo(page, selector) {
     for (let i = 0; i < number[0]; i++) {
       await page.goto(elements[i]);
 
-      const position = await fetchInfo(page, 'div[class="grid--cell fl1 sm:mb12"] h1');
-      const company = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] a');
-      const location = await fetchInfo(page,'div[class="fc-black-700 fs-body3"] span');
-      const posted = await fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]');
-      const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]');
+      const position = await scraperFunction.fetchInfo(page, 'div[class="grid--cell fl1 sm:mb12"] h1', 'innerText');
+      const company = await scraperFunction.fetchInfo(page, 'div[class="fc-black-700 fs-body3"] a', 'innerText');
+      const location = await scraperFunction.fetchInfo(page,'div[class="fc-black-700 fs-body3"] span', 'innerText');
+      const posted = await scraperFunction.fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]', 'innerText');
+      const description = await scraperFunction.fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
 
       const skills = await page.evaluate(
           () => Array.from(

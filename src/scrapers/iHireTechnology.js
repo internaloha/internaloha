@@ -1,6 +1,8 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
+const scraperFunction = require('./scraperFunctions');
+
 // get all links from one page
 async function getLinks(page) {
   const pageLinks = await page.evaluate(
@@ -12,18 +14,6 @@ async function getLinks(page) {
   );
 
   return pageLinks;
-}
-
-// fetch info on page with selector
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-    result = await page.evaluate((select) => document.querySelector(select).innerHTML, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-  }
-  return result;
 }
 
 // main function
@@ -54,6 +44,8 @@ async function fetchInfo(page, selector) {
     //   await page.click('button[id=end-button]');
     // }
 
+    await page.waitFor(5000);
+
     // type technology
     await page.waitForSelector('input[class=form-control]');
     await page.type('input[class=form-control]', 'technology');
@@ -71,8 +63,8 @@ async function fetchInfo(page, selector) {
     await page.click('button.btn.btn-primary.loading-indicator.radius-fix');
     await page.waitFor(3000);
 
-    await page.waitForSelector('button[id="end-button"]');
-    await page.click('button[id="end-button"]');
+    // await page.waitForSelector('button[id="end-button"]');
+    // await page.click('button[id="end-button"]');
 
     // click checkboxes filters
     // past 30 days
@@ -131,16 +123,16 @@ async function fetchInfo(page, selector) {
 
           // scrape info off each website
           // use natural parser to scrape qulifications and other info
-          const position = await fetchInfo(page, 'h3[class=text-blue]');
-          const location = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(2)');
+          const position = await scraperFunction.fetchInfo(page, 'h3[class=text-blue]', 'innerText');
+          const location = await scraperFunction.fetchInfo(page, 'div[class=col-xs-8] li:nth-child(2)', 'innerText');
           let state = '';
           if (!location.match(/([^,]*)/g)[2]) {
             state = 'United States';
           } else {
             state = location.match(/([^,]*)/g)[2].trim();
           }
-          const description = await fetchInfo(page, 'div.jobdescription');
-          const company = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(1)');
+          const description = await scraperFunction.fetchInfo(page, 'div.jobdescription','innerHTML');
+          const company = await scraperFunction.fetchInfo(page, 'div[class=col-xs-8] li:nth-child(1)', 'innerText');
           // const qualifications = await fetchInfo(page, 'div.jobdescription p:nth-child(4)');
           // const compensation = await fetchInfo(page, 'div.jobdescription p:nth-child(3)');
           // // if start includes a month and year then copy it into let variable then return that
@@ -151,7 +143,7 @@ async function fetchInfo(page, selector) {
           // }
           const lastScraped = new Date();
 
-          const posted = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(3)');
+          const posted = await scraperFunction.fetchInfo(page, 'div[class=col-xs-8] li:nth-child(3)', 'innerText');
           const date = new Date();
           let daysBack = 0;
           if (posted.includes('day') || posted.includes('days')) {

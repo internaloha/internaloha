@@ -1,21 +1,12 @@
+/* eslint-disable no-await-in-loop */
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 const userAgent = require('user-agents');
 
-const myArgs = process.argv.slice(2);
+const scraperFunction = require('./scraperFunctions');
 
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
+// const myArgs = process.argv.slice(2);
 
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).innerText, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-  }
-  return result;
-}
 
 (async () => {
 
@@ -31,35 +22,40 @@ async function fetchInfo(page, selector) {
       width: 1100, height: 700,
     });
 
-    await page.goto('https://www.monster.com/');
-    await page.waitForSelector('input[id="q2"]');
-    await page.waitForSelector('button[id="doQuickSearch2"]');
+    await page.goto('https://www.monster.com/jobs/search/?q=computer-science-intern&intcid=skr_navigation_nhpso_searchMain&tm=30');
+    // await page.waitForSelector('input[id="q2"]');
+    // await page.waitForSelector('button[id="doQuickSearch2"]');
+    //
+    // const searchQuery = myArgs.join(' ');
 
-    const searchQuery = myArgs.join(' ');
-
-    await page.type('input[id="q2"]', searchQuery);
-    await page.click('button[id="doQuickSearch2"]');
-
-    await page.waitFor(3000);
-    await page.waitForSelector('button[id="filter-flyout"]');
-    await page.click('button[id="filter-flyout"]');
-
-    await page.waitFor(1000);
-    await page.waitForSelector('select[id="FilterPosted"]');
-    await page.click('select[id="FilterPosted"]');
-
-    await page.waitFor(2000);
-
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');
-    await page.keyboard.press('ArrowDown');  // <-- comment out this line if want to filter by '14' days
-    await page.keyboard.press('Enter');
-    await page.click('button[id="use-filter-btn"]');
-
-    console.log('Setting filter for 30 days...');
+    // await page.type('input[id="q2"]', searchQuery);
+    // await page.click('button[id="doQuickSearch2"]');
+    //
+    // await page.waitFor(3000);
+    // await page.waitForSelector('button[id="filter-flyout"]');
+    // await page.click('button[id="filter-flyout"]');
+    //
+    // await page.waitFor(1000);
+    // await page.waitForSelector('select[id="FilterPosted"]');
+    // await page.click('select[id="FilterPosted"]');
+    //
+    // await page.click('select[id="FilterPosted"]');
+    //
+    // await page.waitFor(2000);
+    //
+    // await page.waitForSelector('select[id="FilterPosted"] option[value="30"]');
+    // await page.click('select[id="FilterPosted"] option[value="30"]');
+    //
+    // // await page.keyboard.press('ArrowDown');
+    // // await page.keyboard.press('ArrowDown');
+    // // await page.keyboard.press('ArrowDown');
+    // // await page.keyboard.press('ArrowDown');
+    // // await page.keyboard.press('ArrowDown');
+    // // await page.keyboard.press('ArrowDown');  // <-- comment out this line if want to filter by '14' days
+    // // await page.keyboard.press('Enter');
+    // await page.click('button[id="use-filter-btn"]');
+    //
+    // console.log('Setting filter for 30 days...');
 
     let nextPage = true;
 
@@ -114,8 +110,8 @@ async function fetchInfo(page, selector) {
       await element.click();
       await page.waitForSelector('div[id="JobPreview"]');
       await page.waitFor(500);
-      const location = await fetchInfo(page, 'div.heading h2.subtitle');
-      const description = await fetchInfo(page, 'div[id="JobDescription"]');
+      const location = await scraperFunction.fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
+      const description = await scraperFunction.fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
       const url = await page.url();
 
       let daysToGoBack = 0;

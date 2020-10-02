@@ -2,18 +2,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector, { timeout: 1000 });
-    result = await page.evaluate((select) => document.querySelector(select).innerHTML, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    throw error;
-  }
-  return result;
-}
+const scraperFunction = require('./scraperFunctions');
 
 (async () => {
 
@@ -24,6 +13,8 @@ async function fetchInfo(page, selector) {
   try {
 
     const page = await browser.newPage();
+    // time out after 10 seconds
+    await page.setDefaultNavigationTimeout(10000);
     await page.setViewport({
       width: 1100, height: 900,
     });
@@ -132,22 +123,22 @@ async function fetchInfo(page, selector) {
           let position = '';
           // position alternates between two different css class
           try {
-            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container jobsearch-JobInfoHeader-title-containerEji"]');
+            position = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container"]','innerText');
           } catch (noClassError) {
             console.log('--- Trying with other class name ---');
-            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container"]');
+            position = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container jobsearch-JobInfoHeader-title-containerEji"]', 'innerText');
           }
-          const company = await fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]');
+          const company = await scraperFunction.fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]','innerText');
           let location = '';
           try {
-            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
+            location = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)', 'innerText');
           } catch (noLocation) {
             console.log('--- Trying with other class name ---');
-            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child');
+            location = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child', 'innerText');
           }
-          let posted = await fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]');
+          let posted = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText');
 
-          const description = await fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]');
+          const description = await scraperFunction.fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML');
           const lastScraped = new Date();
           const skills = 'N/A';
 

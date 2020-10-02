@@ -2,6 +2,8 @@
 const puppeteer = require('puppeteer-extra');
 const { performance } = require('perf_hooks');
 
+const scraperFunction = require('./scraperFunctions');
+
 // add stealth plugin and use defaults (all evasion techniques)
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
@@ -15,19 +17,6 @@ const myArgs = process.argv.slice(2);
 function removeDuplicates(skills) {
   return [...new Set(skills)];
 };
-
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).innerText, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-  }
-  return result;
-}
 
 async function autoScroll(page) {
 
@@ -147,12 +136,12 @@ async function autoScroll(page) {
         const element = elementLoaded[currentCounter];
         await element.click();
 
-        const position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]');
-        let company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span');
-        const location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]');
-        const posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]');
+        const position = await scraperFunction.fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
+        let company = await scraperFunction.fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
+        const location = await scraperFunction.fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
+        const posted = await scraperFunction.fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
         const url = page.url();
-        const description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]');
+        const description = await scraperFunction.fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
 
         if (company === undefined) {
           company = 'N/A';

@@ -1,8 +1,12 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+
+const scraperFunction = require('./scraperFunctions');
+
 const USERNAME_SELECTOR = '#user_email';
 const PASSWORD_SELECTOR = '#user_password';
 const CTA_SELECTOR = '#new_user > div:nth-child(6) > input';
+
 
 // angellist2
 const commandLine = process.argv.slice(2);
@@ -13,42 +17,6 @@ async function startBrowser() {
   const browser = await puppeteer.launch({ headless: false });
   const page = await browser.newPage();
   return { browser, page };
-}
-
-async function closeBrowser(browser) {
-  return browser.close();
-}
-
-async function autoScroll(page) {
-  await page.evaluate(async () => {
-    await new Promise((resolve, reject) => {
-      var totalHeight = 0;
-      var distance = 400;
-      var timer = setInterval(() => {
-        var scrollHeight = document.body.scrollHeight;
-        window.scrollBy(0, distance);
-        totalHeight += distance;
-
-        if (totalHeight >= scrollHeight) {
-          clearInterval(timer);
-          resolve();
-        }
-      }, 400);
-    });
-  });
-}
-
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).innerHTML, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-  }
-  return result;
 }
 
 async function playTest(url) {
@@ -66,9 +34,9 @@ async function playTest(url) {
   await page.waitForNavigation();
   await page.waitFor(5000);
   await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
-  await autoScroll(page);
-  await autoScroll(page);
-  await autoScroll(page);
+  await scraperFunction.autoScroll(page);
+  await scraperFunction.autoScroll(page);
+  await scraperFunction.autoScroll(page);
   await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
   const elements = await page.evaluate(
       () => Array.from(
@@ -94,10 +62,10 @@ async function playTest(url) {
     const element = `http://angel.co${elements[i]}`;
     await page.goto(element, { waitUntil: 'domcontentloaded' });
     const currentURL = page.url();
-    const description = await fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.content_6572f > div');
-    const location = await fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.sidebar_f82a8 > div > div.component_4105f > div:nth-child(1) > dd > div > span');
-    const title = await fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.title_927e9 > div > h2');
-    const company = await fetchInfo(page, '#main > div.component_70709 > div > div > div > section > div > div.name_af83c > div > div.styles_component__1WTsC.styles_flexRow__35QHu > h1 > a');
+    const description = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.content_6572f > div', 'innerHTML');
+    const location = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.sidebar_f82a8 > div > div.component_4105f > div:nth-child(1) > dd > div > span', 'innerText');
+    const title = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.title_927e9 > div > h2', 'innerText');
+    const company = await scraperFunction.fetchInfo(page, '#main > div.component_70709 > div > div > div > section > div > div.name_af83c > div > div.styles_component__1WTsC.styles_flexRow__35QHu > h1 > a', 'innerText');
     const skills = 'N/A';
     const lastScraped = new Date();
     data.push(

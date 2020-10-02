@@ -1,40 +1,9 @@
 /* eslint-disable max-len,no-console,no-await-in-loop */
 const puppeteer = require('puppeteer');
 const fs = require('fs');
+const scraperFunction = require('./scraperFunctions');
 
 const myArgs = process.argv.slice(2);
-
-async function autoScroll(page) {
-  await page.evaluate(async () => {
-    await new Promise((resolve, reject) => {
-      let totalHeight = 0;
-      const distance = 100;
-      const timer = setInterval(() => {
-        const scrollHeight = document.body.scrollHeight;
-        window.scrollBy(0, distance);
-        totalHeight += distance;
-
-        if (totalHeight >= scrollHeight) {
-          clearInterval(timer);
-          resolve();
-        }
-      }, 100);
-    });
-  });
-}
-
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).innerText, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-  }
-  return result;
-}
 
 (async () => {
 
@@ -64,6 +33,8 @@ async function fetchInfo(page, selector) {
     await page.waitForSelector('.modal-dialog');
 
     await page.mouse.click(1000, 800);
+
+    await page.waitFor(5000);
 
     // Filters based on jobs posted within last 10 days
     await page.click('button[class="select-menu-header"]');
@@ -98,7 +69,7 @@ async function fetchInfo(page, selector) {
       await page.click('.load_more_jobs');
 
       // Jobs listed using infinite scroll, scrolls until it reaches ending
-      await autoScroll(page);
+      await scraperFunction.autoScroll(page);
 
     } catch (err) {
       console.log('--- All jobs are Listed, no "Load More" button --- ');
@@ -137,11 +108,11 @@ async function fetchInfo(page, selector) {
         await page.waitForSelector('.pc_message');
         await page.click('.pc_message');
 
-        const position = await fetchInfo(page, '.job_title');
-        const company = await fetchInfo(page, '.hiring_company_text.t_company_name');
-        const location = await fetchInfo(page, 'span[data-name="address"]');
-        const description = await fetchInfo(page, '.jobDescriptionSection');
-        const posted = await fetchInfo(page, '.job_more span[class="data"]');
+        const position = await scraperFunction.fetchInfo(page, '.job_title', 'innerText');
+        const company = await scraperFunction.fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText');
+        const location = await scraperFunction.fetchInfo(page, 'span[data-name="address"]', 'innerText');
+        const description = await scraperFunction.fetchInfo(page, '.jobDescriptionSection', 'innerHTML');
+        const posted = await scraperFunction.fetchInfo(page, '.job_more span[class="data"]', 'innerText');
 
         const date = new Date();
         let daysBack = 0;

@@ -1,18 +1,7 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-async function fetchInfo(page, selector) {
-  let result = '';
-  try {
-
-    await page.waitForSelector(selector);
-    result = await page.evaluate((select) => document.querySelector(select).innerHTML, selector);
-  } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
-    result = 'Error';
-  }
-  return result;
-}
+const scraperFunction = require('./scraperFunctions');
 
 (async () => {
   const browser = await puppeteer.launch({ devtools: true }); // Slow down by 250 ms
@@ -56,16 +45,16 @@ async function fetchInfo(page, selector) {
       // go through each link and fetch info
       for (let i = 0; i < links.length; i++) {
         await page.goto(links[i]);
-        const position = await fetchInfo(page, 'div.left h2');
-        const posted = await fetchInfo(page, 'td[class="f vac_item_post_date"] + td');
-        const company = await fetchInfo(page, 'td[class="f vac_item_employer"] + td');
-        const city = await fetchInfo(page, 'td[class="f vac_item_city"] + td');
-        const state = await fetchInfo(page, 'td[class="f vac_item_state"] + td');
-        const zip = await fetchInfo(page, 'td[class="f vac_item_post_code"] + td');
-        const qualifications = await fetchInfo(page, 'td[class="f vac_item_completed_education"] + td');
-        const compensation = await fetchInfo(page, 'td[class="f vac_item_paid"] + td');
-        const description = await fetchInfo(page, 'td[class="f vac_item_job_description"] + td');
-        const due = await fetchInfo(page, 'td[class="f vac_item_expiration_date"] + td');
+        const position = await scraperFunction.fetchInfo(page, 'div.left h2', 'innerText');
+        const posted = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_post_date"] + td', 'innerText');
+        const company = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_employer"] + td', 'innerText');
+        const city = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_city"] + td', 'innerText');
+        const state = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_state"] + td', 'innerText');
+        const zip = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_post_code"] + td', 'innerText');
+        const qualifications = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_completed_education"] + td', 'innerText');
+        const compensation = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_paid"] + td', 'innerText');
+        const description = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_job_description"] + td', 'innerHTML');
+        const due = await scraperFunction.fetchInfo(page, 'td[class="f vac_item_expiration_date"] + td', 'innerText');
         const lastScraped = new Date();
 
         jobArray.push({

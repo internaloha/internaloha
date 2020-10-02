@@ -3,6 +3,8 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
 
+const scraperFunction = require('./scraperFunctions');
+
 const myArgs = process.argv.slice(2);
 
 (async () => {
@@ -99,28 +101,30 @@ const myArgs = process.argv.slice(2);
               const element = elements[i];
               const elementLink = elements[i - 1];
 
-              await page.waitForSelector('h2.viewjob-jobTitle');
-              await page.waitForSelector('.viewjob-labelWithIcon');
-              await page.waitForSelector('.viewjob-labelWithIcon:last-child');
-              await page.waitForSelector('.viewjob-jobDescription > div.p');
 
-              const position = await page.evaluate(() => document.querySelector('.RightPane > aside h2 ').innerHTML);
-              const company = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon').innerHTML);
-              const location = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon:last-child').innerHTML);
+              const position = await scraperFunction.fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
+              const company = await scraperFunction.fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
+              const location = await scraperFunction.fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
+
+
+                  // page.evaluate(() => document.querySelector('.RightPane > aside h2 ').innerHTML);
+              // const company = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon').innerHTML);
+              // const location = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon:last-child').innerHTML);
 
               let qualifications = '';
               try {
-                qualifications = await page.evaluate(() => document.querySelector('.viewjob-section.viewjob-qualifications.viewjob-entities ul').innerHTML);
+                qualifications = await scraperFunction.fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
+                // qualifications = await page.evaluate(() => document.querySelector('.viewjob-section.viewjob-qualifications.viewjob-entities ul').innerHTML);
               } catch (err6) {
                 console.log('Does not have qualifications section. Assigning it as N/A');
                 skills = 'N/A';
               }
 
-              const description = await page.evaluate(() => document.querySelector('.viewjob-jobDescription > div.p').innerText);
+              const description = await scraperFunction.fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
               let posted = '';
 
               try {
-                posted = await page.evaluate(() => document.querySelector('.viewjob-labelWithIcon.viewjob-age span').innerHTML);
+                posted = await scraperFunction.fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
               } catch (err2) {
                 posted = 'N/A';
                 console.log('No date found. Setting posted as: N/A');
@@ -183,14 +187,19 @@ const myArgs = process.argv.slice(2);
                 await page.waitForSelector('.viewjob-header span.location');
                 await page.waitForSelector('div.viewjob-description.ViewJob-description');
 
-                const position = await page.evaluate(() => document.querySelector('.viewjob-header h1').innerHTML);
-                const company = await page.evaluate(() => document.querySelector('.viewjob-header span.company').innerHTML);
-                const location = await page.evaluate(() => document.querySelector('.viewjob-header span.location').innerHTML);
-                const description = await page.evaluate(() => document.querySelector('div.viewjob-description.ViewJob-description').innerHTML);
-                let posted = '';
+                // const position = await page.evaluate(() => document.querySelector('.viewjob-header h1').innerHTML);
+                // const company = await page.evaluate(() => document.querySelector('.viewjob-header span.company').innerHTML);
+                // const location = await page.evaluate(() => document.querySelector('.viewjob-header span.location').innerHTML);
+                // const description = await page.evaluate(() => document.querySelector('div.viewjob-description.ViewJob-description').innerHTML);
+                // let posted = '';
+
+                const position = await scraperFunction.fetchInfo(page, '.viewjob-header h1', 'innerText');
+                const company = await scraperFunction.fetchInfo(page, '.viewjob-header span.company', 'innerText');
+                const location = await scraperFunction.fetchInfo(page, '.viewjob-header span.location', 'innerText');
 
                 try {
-                  posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').innerHTML);
+                  // posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').innerHTML);
+                  posted = await scraperFunction.fetchInfo(page, '.extra-info .info-unit i.far.fa-clock + span', 'innerText');
 
                 } catch (err4) {
                   posted = 'N/A';
