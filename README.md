@@ -16,10 +16,14 @@ This repo contains the static site for InternBit. It is based on https://github.
 
 To install the system, first [install NPM](https://www.npmjs.com/get-npm).
 
-Second, download your newly created repository to your computer.0
+Second, download your newly created repository to your computer.
 
-Third, cd into the src/ directory of the "src" branch, and type `npm install` to download the
- libraries necessary to build and deploy the system:
+Third, type ``npm install `` to download the correct libraries. The repo is split up in the
+ following way:
+ - scraper: contains all the scrapers and scraped data 
+ - src: the actual static site
+
+Each of the folder has its own ``package.json`` so cd into the correct directory.
 
 ```
 
@@ -38,6 +42,7 @@ found 4978 vulnerabilities (4971 low, 7 high)
   run `npm audit fix` to fix them, or `npm audit` for details
 
 ```
+
 
 If all goes as planned, you should now be able to run `npm start` to view the system in your browser at http://localhost:3000/:
 
@@ -110,20 +115,14 @@ If the script fails with an authentication error, the simplest solution I've fou
 **Important Note**: `npm run deploy` only commits and pushes the "master" branch of the repository, which contains the rendered version of the site. It does NOT commit the "src" branch of the repository. So, make sure that you push your changes to the src branch to GitHub as well using your git client of choice.
 
 ## Scripts
-Located in package.json. Use them to scrape the website. More info on how found in [Scrapers
+Located in package.json under the ``scraper`` directory. Use them to scrape the website. More
+ info on how
+ found in
+ [Scrapers
 ](#scrapers) section below. 
 
 ```javascript
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "deploy-noclean": "gh-pages -d build -a",
-    "deploy-help": "gh-pages --help",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "node test.js",
-    "eject": "react-scripts eject",
-    "lint": "eslint --quiet --ext .jsx --ext .js ./src",
     "statistics": "node src/statistics.js",
     "internships": "node scrapers/internships.js",
     "simply": "node scrapers/simplyHired.js",
@@ -168,20 +167,21 @@ This script provides relevant information about each site that was scraped. The 
 ``` 
   
 You have to manually add the newly listed site
-  so it is scraped.   
+  so its statistics are generated.   
 ```javascript
-const glassData = require('./data/glassdoor.parsed.data');
-const indeedData = require('./data/indeed.parsed.data');
+const zipData = readFile('./data/parsed/ziprecruiter.parsed.data.json');
+const simplyData = readFile('./data/parsed/simplyhired.parsed.data.json');
 
-const statistics = [];
-data = lodash.concat(data, glassData);
-data = lodash.concat(data, indeedData);
+let data = [];
+data = _.concat(zipData, simplyData);
+data = _.concat(data, cheggData);
 
 statistics.push(
     getStatistics('Glassdoor', glassData),
     getStatistics('Indeed', indeedData),
     getStatistics('Total', data),
-)...
+)
+...
 ```
  
 
@@ -189,13 +189,15 @@ statistics.push(
 
 This script goes through all canonical data and uses NLP/Regex to extract relevant information
  about skills, qualifications, compensation, and start/end date for each internship posting. It also ensures that each file is the correct format so it does not break the site. Once it is
-  done, the new files are saved under ```/src/data``` and statistics are updated.
+  done, the new files are saved under ```/src/src/data``` and statistics are updated. 
+  **The files generated here are used by the static site.**
 
 **Single-Parse:** ```npm run single-parse```
 Extracts relevant information about skills, qualifications, compensation, and start/end date for
  a single file. At the moment, you must change the variables to parse the file you want:
  ```jsx harmony
-const text = require('./data/canonical/angellist.canonical.data');
+const rawData = fs.readFileSync('./data/canonical/angellist.canonical.data.json');
+const text = JSON.parse(rawData);
 ...
 fs.writeFile('data/parsed/angellist.parsed.data.json',
     JSON.stringify(text, null, 4), 'utf-8',
@@ -203,7 +205,6 @@ fs.writeFile('data/parsed/angellist.parsed.data.json',
         console.log('\nData successfully written!')));
 ```
 
-The files are **not** upload to the site. This serves as a test run.
 
 ## Scrapers
 The scrapers for each site are listed under the ```/scrapers``` directory. All the data are
