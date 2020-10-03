@@ -145,7 +145,7 @@ async function fetchInfo(page, selector) {
     try {
       getAllLinks(page).then((allLinks => {
         getPageInfo(page, allLinks).then((details => {
-          fs.writeFile('scrapers/coolworksP.canonical.data.json', JSON.stringify(details), function (e) {
+          fs.writeFile('./data/canonical/coolworks.canonical.data.json', JSON.stringify(details), function (e) {
             if (e) throw e;
             console.log('Your info has been written into the coolworksP.canonical.data.JSON file');
           });

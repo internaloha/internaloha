@@ -86,21 +86,21 @@ function getStatistics(name, data) {
   return list;
 }
 
-const zipData = readFile('./scrapers/data/parsed/ziprecruiter.parsed.data.json');
-const simplyData = readFile('./scrapers/data/parsed/simplyhired.parsed.data.json');
-const cheggData = readFile('./scrapers/data/parsed/internships.parsed.data.json');
-const monsterData = readFile('./scrapers/data/parsed/monster.parsed.data.json');
-const linkedInData = readFile('./scrapers/data/parsed/linkedin.parsed.data.json');
-const youternData = readFile('./scrapers/data/parsed/youtern.parsed.data.json');
-const nsfData = readFile('./scrapers/data/parsed/nsf-reu.parsed.data.json');
-const iHire = readFile('./scrapers/data/parsed/iHireTech.parsed.data.json');
-const glassData = readFile('./scrapers/data/parsed/glassdoor.parsed.data.json');
-const indeedData = readFile('./scrapers/data/parsed/indeed.parsed.data.json');
-const angelData = readFile('./scrapers/data/parsed/angellist.parsed.data.json');
-const manualData = readFile('./scrapers/data/parsed/manualInput.data.json');
-const stackoverflow = readFile('./scrapers/data/parsed/stackoverflow.parsed.data.json');
-const idealist = readFile('./scrapers/data/parsed/idealist.parsed.data.json');
-const ACM = readFile('./scrapers/data/parsed/acm.parsed.data.json');
+const zipData = readFile('./data/parsed/ziprecruiter.parsed.data.json');
+const simplyData = readFile('./data/parsed/simplyhired.parsed.data.json');
+const cheggData = readFile('./data/parsed/internships.parsed.data.json');
+const monsterData = readFile('./data/parsed/monster.parsed.data.json');
+const linkedInData = readFile('./data/parsed/linkedin.parsed.data.json');
+const youternData = readFile('./data/parsed/youtern.parsed.data.json');
+const nsfData = readFile('./data/parsed/nsf-reu.parsed.data.json');
+const iHire = readFile('./data/parsed/iHireTech.parsed.data.json');
+const glassData = readFile('./data/parsed/glassdoor.parsed.data.json');
+const indeedData = readFile('./data/parsed/indeed.parsed.data.json');
+const angelData = readFile('./data/parsed/angellist.parsed.data.json');
+const manualData = readFile('./data/parsed/manualInput.data.json');
+const stackoverflow = readFile('./data/parsed/stackoverflow.parsed.data.json');
+const idealist = readFile('./data/parsed/idealist.parsed.data.json');
+const ACM = readFile('./data/parsed/acm.parsed.data.json');
 
 let data = [];
 data = _.concat(zipData, simplyData);
@@ -139,7 +139,7 @@ statistics.push(
 
 console.log(statistics);
 
-fs.writeFile('./scrapers/data/statistics.data.json',
+fs.writeFile('./data/statistics.data.json',
     JSON.stringify(statistics, null, 4), 'utf-8',
     err => (err ? console.log('\nData not written!', err) :
         console.log('\nData successfully written!')));

@@ -189,7 +189,7 @@ async function getLinks(page) {
     console.log(jobArray);
     console.log(jobNumber);
     // write json file
-    fs.writeFile('scrapers/data/canonical/iHireTech.canonical.data.json', JSON.stringify(jobArray, null, 4), 'utf-8', function (err) {
+    fs.writeFile('./data/canonical/iHireTech.canonical.data.json', JSON.stringify(jobArray, null, 4), 'utf-8', function (err) {
       if (err) throw err;
       console.log('Your info has been written into JSON file');
     });

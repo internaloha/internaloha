@@ -19,7 +19,7 @@ async function createDate(date, sub) {
 }
 
 async function writeData(data) {
-  await fs.writeFile('scrapers/data/canonical/idealist.canonical.data.json',
+  await fs.writeFile('./data/canonical/idealist.canonical.data.json',
       JSON.stringify(data, null, 4), 'utf-8',
       // eslint-disable-next-line no-console
       err => (err ? console.log('\nData not written!', err) :

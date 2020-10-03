@@ -27,7 +27,6 @@
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-meteor": "^6.0.0",
     "eslint-utils": "^2.0.0",
     "minimist": "^1.2.5"
   },
@@ -52,9 +51,6 @@
     "angellist": "node scrapers/angellist.js",
     "acm": "node scrapers/acm.js",
     "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [

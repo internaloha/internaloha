@@ -247,7 +247,7 @@ import { fetchInfo, autoScroll } from './scraperFunctions.js';
       }
 
       // write results to JSON file
-      await fs.writeFile('scrapers/data/canonical/linkedin.canonical.data.json',
+      await fs.writeFile('./data/canonical/linkedin.canonical.data.json',
           JSON.stringify(data, null, 4), 'utf-8',
           err => (err ? console.log('\nData not written!', err) :
               console.log('\nData successfully written!')));

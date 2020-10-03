@@ -215,7 +215,7 @@ async function autoScroll(page) {
     console.log('Total jobs skipped:', skipped);
 
     // write results to JSON file
-    await fs.writeFile('scrapers/data/canonical/internships.canonical.data.json',
+    await fs.writeFile('./data/canonical/internships.canonical.data.json',
         JSON.stringify(data, null, 4), 'utf-8',
         err => (err ? console.log('\nData not written!', err) :
             console.log('\nData successfully written!')));

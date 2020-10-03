@@ -202,7 +202,7 @@ import { fetchInfo } from './scraperFunctions.js';
     }
 
     // write results to JSON file
-    await fs.writeFile('scrapers/data/canonical/indeed.canonical.data.json',
+    await fs.writeFile('./data/canonical/indeed.canonical.data.json',
         JSON.stringify(data, null, 4), 'utf-8',
         err => (err ? console.log('\nData not written!', err) :
             console.log('\nData successfully written!')));
@@ -213,7 +213,7 @@ import { fetchInfo } from './scraperFunctions.js';
     await browser.close();
 
   } catch (e) {
-    await fs.writeFile('scrapers/data/canonical/indeed.canonical.data.json',
+    await fs.writeFile('./data/canonical/indeed.canonical.data.json',
         JSON.stringify(data, null, 4), 'utf-8',
         err => (err ? console.log('\nData not written!', err) :
             console.log('\nData successfully written!')));

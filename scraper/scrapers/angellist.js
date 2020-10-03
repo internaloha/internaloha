@@ -82,7 +82,7 @@ async function playTest(url) {
         },
     );
   }
-  await fs.writeFileSync('scrapers/data/canonical/angellist.canonical.data.json', JSON.stringify(data, null, 4),
+  await fs.writeFileSync('./data/canonical/angellist.canonical.data.json', JSON.stringify(data, null, 4),
       (err) => {
         if (err) {
           console.log(err);

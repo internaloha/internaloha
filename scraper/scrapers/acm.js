@@ -96,7 +96,7 @@ import { fetchInfo } from './scraperFunctions.js';
     console.log(data);
 
     // write results to JSON file
-    await fs.writeFile('scrapers/data/canonical/acm.canonical.data.json',
+    await fs.writeFile('./data/canonical/acm.canonical.data.json',
         JSON.stringify(data, null, 4), 'utf-8',
         // eslint-disable-next-line no-console
         err => (err ? console.log('\nData not written!', err) :
