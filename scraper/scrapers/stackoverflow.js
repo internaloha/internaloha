@@ -90,7 +90,7 @@ import { fetchInfo } from './scraperFunctions.js';
 
     }
 
-    await fs.writeFile('scrapers/data/canonical/stackoverflow.canonical.data.json',
+    await fs.writeFile('./data/canonical/stackoverflow.canonical.data.json',
         JSON.stringify(data, null, 4), 'utf-8',
         err => (err ? console.log('\nData not written!', err) :
             console.log('\nData successfully written!')));
