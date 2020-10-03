@@ -624,7 +624,7 @@ function multi_parser(file) {
 
   let fileName = file.match(/([[a-zA-Z-])+/g);
   fileName = fileName[2];
-  fs.writeFileSync(`./data/parsed/${fileName}.parsed.data.json`, JSON.stringify(text, null, 4), 'utf-8');
+  fs.writeFileSync(`../src/src/data/${fileName}.parsed.data.json`, JSON.stringify(text, null, 4), 'utf-8');
 
   // fs.writeFile(`data/parsed/${fileName}.parsed.data.json`,
   //     JSON.stringify(text, null, 4), 'utf-8',
