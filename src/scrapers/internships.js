@@ -1,16 +1,10 @@
 /* eslint-disable max-len,no-console,no-await-in-loop */
-const puppeteer = require('puppeteer-extra');
-const { performance } = require('perf_hooks');
 
-const scraperFunction = require('./scraperFunctions');
-
-// add stealth plugin and use defaults (all evasion techniques)
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-
-puppeteer.use(StealthPlugin());
-
-const fs = require('fs');
-const userAgent = require('user-agents');
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import performance from 'perf_hooks';
+import { fetchInfo } from './scraperFunctions.js';
+import userAgent from 'user-agents';
 
 const myArgs = process.argv.slice(2);
 
@@ -136,12 +130,12 @@ async function autoScroll(page) {
         const element = elementLoaded[currentCounter];
         await element.click();
 
-        const position = await scraperFunction.fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
-        let company = await scraperFunction.fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
-        const location = await scraperFunction.fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
-        const posted = await scraperFunction.fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
+        const position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
+        let company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
+        const location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
+        const posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
         const url = page.url();
-        const description = await scraperFunction.fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
+        const description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
 
         if (company === undefined) {
           company = 'N/A';

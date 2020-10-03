@@ -59,7 +59,7 @@
     "test": "node test.js",
     "eject": "react-scripts eject",
     "lint": "eslint --quiet --ext .jsx --ext .js ./src",
-    "statistics": "node src/statistics.js",
+    "statistics": "node scrapers/statistics.js",
     "internships": "node scrapers/internships.js",
     "simply": "node scrapers/simplyHired.js",
     "zip": "node scrapers/zipRecruiter.js",
@@ -75,7 +75,7 @@
     "ihire": "node scrapers/iHireTechnology.js",
     "angellist": "node scrapers/angellist.js",
     "acm": "node scrapers/acm.js",
-    "multi-parse": "node scrapers/multi_parser.js && node src/statistics.js"
+    "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,8 +1,9 @@
 /* eslint-disable max-len,no-param-reassign */
-const natural = require('natural');
-const fs = require('fs');
+import fs from 'fs';
+import natural from 'natural';
 
-const text = require('./data/canonical/angellist.canonical.data');
+const rawData = fs.readFileSync('./data/canonical/angellist.canonical.data');
+const text = JSON.parse(rawData);
 
 // remove duplicate in skills since I parse both the description and position for skills
 function removeDuplicates(skills) {
