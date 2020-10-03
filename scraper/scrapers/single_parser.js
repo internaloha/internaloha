@@ -2,7 +2,7 @@
 import fs from 'fs';
 import natural from 'natural';
 
-const rawData = fs.readFileSync('./data/canonical/angellist.canonical.data');
+const rawData = fs.readFileSync('./data/canonical/angellist.canonical.data.json');
 const text = JSON.parse(rawData);
 
 // remove duplicate in skills since I parse both the description and position for skills
@@ -471,7 +471,7 @@ console.log('Total entries:', text.length);
 console.log('Total descriptions with empty skills field:', count);
 console.log('Total entries with empty compensation field:', compCount);
 
-fs.writeFile('data/parsed/angellist.parsed.data.json',
+fs.writeFile('./data/parsed/angellist.parsed.data.json',
     JSON.stringify(text, null, 4), 'utf-8',
     err => (err ? console.log('\nData not written!', err) :
         console.log('\nData successfully written!')));

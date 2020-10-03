@@ -623,8 +623,8 @@ function multi_parser(file) {
   console.log('');
 
   let fileName = file.match(/([[a-zA-Z-])+/g);
-  fileName = fileName[3];
-  fs.writeFileSync(`./src/data/${fileName}.parsed.data.json`, JSON.stringify(text, null, 4), 'utf-8');
+  fileName = fileName[2];
+  fs.writeFileSync(`./data/parsed/${fileName}.parsed.data.json`, JSON.stringify(text, null, 4), 'utf-8');
 
   // fs.writeFile(`data/parsed/${fileName}.parsed.data.json`,
   //     JSON.stringify(text, null, 4), 'utf-8',
@@ -665,7 +665,7 @@ function fromDir(startPath, filter) {
 }
 
 
-const files = fromDir('./scrapers/data/canonical', '.json');
+const files = fromDir('./data/canonical', '.json');
 
 for (let i = 0; i < files.length; i++) {
   multi_parser(files[i]);
