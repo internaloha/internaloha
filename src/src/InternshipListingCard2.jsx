@@ -106,8 +106,9 @@ function onLeave(e) {
 
 function description(internshipDescription) {
   try {
+    const noScriptDescript = internshipDescription.replace(/<script>(.*?)<\/script>/gi, '');
     return (
-         <span dangerouslySetInnerHTML={{ __html: internshipDescription }}/>
+         <span dangerouslySetInnerHTML={{ __html: noScriptDescript }}/>
         // internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
     );
   } catch (e) {
