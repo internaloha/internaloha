@@ -18,7 +18,8 @@
         "qualifications": [
             "Bachelor's degree",
             "Eligible to work in the U.S"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Internships in Information Technology (IT)",
@@ -39,7 +40,8 @@
         "qualifications": [
             "Bachelor's degree",
             "Eligible to work in the U.S"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Entry-level Information Technology (IT) Role",
@@ -60,7 +62,8 @@
         "qualifications": [
             "Bachelor's degree",
             "Eligible to work in the U.S"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer Technology Intern - AI",
@@ -80,7 +83,8 @@
             "artificial intelligence",
             "robotics",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer Technology Intern - AI",
@@ -100,7 +104,8 @@
             "artificial intelligence",
             "robotics",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer Technology Intern - AI",
@@ -120,7 +125,8 @@
             "artificial intelligence",
             "robotics",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer Technology Intern - AI",
@@ -140,7 +146,8 @@
             "artificial intelligence",
             "robotics",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer Technology Intern - AI",
@@ -160,7 +167,8 @@
             "artificial intelligence",
             "robotics",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Information Technology It /Data Analyst Intern",
@@ -180,7 +188,8 @@
             "data visualization",
             "machine learning",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Compute Performance Developer Technology Intern - CUDA",
@@ -199,7 +208,8 @@
             "software engineering",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Compute Performance Developer Technology Intern - CUDA",
@@ -218,7 +228,8 @@
             "software engineering",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Information Technology - App Developer (Digital) - Intern",
@@ -237,7 +248,8 @@
             "machine learning",
             "software engineering",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Kiewit Technology Group (Summer 2021)",
@@ -259,7 +271,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Campus Recruitment - 2021 Infrastructure Engineer Summer Internship, Global Infrastructure & Digital Workplace Technology - Mainframe Systems",
@@ -281,7 +294,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Application Development Intern",
@@ -300,7 +314,8 @@
             "machine learning",
             "information technology",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer Technology Intern - AI",
@@ -320,7 +335,8 @@
             "artificial intelligence",
             "robotics",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "DevOps Technology Intern",
@@ -340,7 +356,8 @@
             "python",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Business Analyst Intern - Kiewit Technology Group",
@@ -359,7 +376,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Kiewit Technology Group",
@@ -381,7 +399,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Kiewit Technology Group",
@@ -403,7 +422,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Internship, Stores Technology - College Recruiting",
@@ -427,7 +447,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Internship, Supply Chain Technology - College Recruiting",
@@ -451,7 +472,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Hardware Machine Learning Engineer",
@@ -475,7 +497,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -497,7 +520,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - SSD Firmware Engineer",
@@ -518,7 +542,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Software Engineer",
@@ -542,7 +567,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Cyber Internship- New Jersey",
@@ -562,7 +588,8 @@
             "java",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Cyber Summer Internship- Maryland",
@@ -582,7 +609,8 @@
             "java",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Software Engineer (Chatbot)",
@@ -606,7 +634,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Entry Level IT Desktop Support Analyst",
@@ -622,7 +651,8 @@
         "skills": [
             "information technology",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer - Bachelor Intern - Summer 2021",
@@ -643,7 +673,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -666,7 +697,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -685,7 +717,8 @@
             "javascript",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -706,7 +739,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Helpdesk Intern",
@@ -722,7 +756,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Summer Internship - Software Engineer, Enterprise Device Platform",
@@ -739,7 +774,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Entry Level IT Desktop Support Analyst",
@@ -755,7 +791,8 @@
         "skills": [
             "information technology",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Photomask Data Scientist",
@@ -778,7 +815,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Full Stack Developer Intern - Cognizant Career Accelerator",
@@ -797,7 +835,8 @@
             "python",
             "java",
             "DevOps"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Mobile Engineer, Intern (Summer 2021)",
@@ -816,7 +855,8 @@
             "information technology",
             "java",
             "javascript"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -839,7 +879,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern - Applications Engineer, NAND Components",
@@ -858,7 +899,8 @@
             "information technology"
         ],
         "compensation": "paid",
-        "contact": "1-800-336-8918"
+        "contact": "1-800-336-8918",
+        "remote": false
     },
     {
         "position": "Devops/Cloud engineer (Internship)",
@@ -880,7 +922,8 @@
             "cloud computing",
             "information technology"
         ],
-        "contact": "602-814-0709"
+        "contact": "602-814-0709",
+        "remote": false
     },
     {
         "position": "Intern - Applications Engineer, NAND Components",
@@ -899,7 +942,8 @@
             "information technology"
         ],
         "compensation": "paid",
-        "contact": "1-800-336-8918"
+        "contact": "1-800-336-8918",
+        "remote": false
     },
     {
         "position": "Information Technologies (IT) Intern",
@@ -918,7 +962,8 @@
             "machine learning"
         ],
         "compensation": "paid",
-        "contact": "hnicareers@hnicorp.com, 563-272-7400"
+        "contact": "hnicareers@hnicorp.com, 563-272-7400",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -934,7 +979,8 @@
         "skills": [
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer 2021 Internship - Assoc Dev/Programmer Analyst",
@@ -951,7 +997,8 @@
             "information technology",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -972,7 +1019,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -993,7 +1041,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1014,7 +1063,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1035,7 +1085,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1056,7 +1107,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1077,7 +1129,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1098,7 +1151,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1119,7 +1173,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1140,7 +1195,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1161,7 +1217,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1182,7 +1239,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1203,7 +1261,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1224,7 +1283,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1245,7 +1305,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1266,7 +1327,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1287,7 +1349,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1308,7 +1371,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1329,7 +1393,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1350,7 +1415,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1371,7 +1437,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1392,7 +1459,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1413,7 +1481,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1434,7 +1503,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1455,7 +1525,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1476,7 +1547,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1497,7 +1569,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate (Summer2021)",
@@ -1518,7 +1591,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate (Summer2021)",
@@ -1539,7 +1613,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1560,7 +1635,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1581,7 +1657,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1602,7 +1679,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1623,7 +1701,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1644,7 +1723,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1665,7 +1745,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1686,7 +1767,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate (Summer 2021)",
@@ -1707,7 +1789,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1728,7 +1811,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1749,7 +1833,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1770,7 +1855,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1791,7 +1877,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1812,7 +1899,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1833,7 +1921,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1854,7 +1943,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1875,7 +1965,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1896,7 +1987,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1917,7 +2009,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -1938,7 +2031,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1959,7 +2053,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -1980,7 +2075,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2001,7 +2097,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2022,7 +2119,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2043,7 +2141,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2064,7 +2163,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2085,7 +2185,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2106,7 +2207,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2127,7 +2229,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2148,7 +2251,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate (Summer 2021) (JC169111814)",
@@ -2169,7 +2273,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2190,7 +2295,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2211,7 +2317,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2232,7 +2339,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2253,7 +2361,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2274,7 +2383,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2295,7 +2405,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2316,7 +2427,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2337,7 +2449,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2358,7 +2471,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2379,7 +2493,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2400,7 +2515,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2421,7 +2537,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2442,7 +2559,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2463,7 +2581,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2484,7 +2603,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2505,7 +2625,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2526,7 +2647,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2547,7 +2669,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2568,7 +2691,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2589,7 +2713,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2610,7 +2735,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2631,7 +2757,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2652,7 +2779,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2673,7 +2801,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2694,7 +2823,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2715,7 +2845,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2736,7 +2867,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2757,7 +2889,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2778,7 +2911,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2799,7 +2933,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2820,7 +2955,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2841,7 +2977,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2862,7 +2999,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -2883,7 +3021,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate (Summer 2021)",
@@ -2904,7 +3043,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2925,7 +3065,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2946,7 +3087,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2967,7 +3109,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -2988,7 +3131,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -3009,7 +3153,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -3030,7 +3175,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -3051,7 +3197,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Graduate",
@@ -3072,7 +3219,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -3093,7 +3241,8 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Developer/Engineer Intern - Undergraduate",
@@ -3114,6 +3263,7 @@
             "C and C++",
             "machine learning",
             "robotics"
-        ]
+        ],
+        "remote": false
     }
 ]

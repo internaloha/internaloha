@@ -2,6 +2,9 @@
 import fs from 'fs';
 import natural from 'natural';
 import path from 'path';
+import { isRemote } from './scraperFunctions.js';
+
+const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
 
 /** Removes duplicate in skills
  * @param  {Array} skills    The word we're looking for
@@ -439,24 +442,27 @@ function convertRegion(input, to) {
 
   let i; // Reusable loop variable
   if (to === 'abbr') {
-    input = input.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+    input = input.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
     for (i = 0; i < regions.length; i++) {
       if (regions[i][0] === input) {
         return (regions[i][1]);
       }
     }
     // if it doesn't match any
-  } else if (to === 'name') {
-    const alreadyFull = input;
-    input = input.toUpperCase();
-    for (i = 0; i < regions.length; i++) {
-      if (regions[i][1] === input) {
-        return (regions[i][0]);
+  } else
+    if (to === 'name') {
+      const alreadyFull = input;
+      input = input.toUpperCase();
+      for (i = 0; i < regions.length; i++) {
+        if (regions[i][1] === input) {
+          return (regions[i][0]);
+        }
       }
+      // if the format doesn't match any of the valid fields or is already full name
+      return alreadyFull;
     }
-    // if the format doesn't match any of the valid fields or is already full name
-    return alreadyFull;
-  }
 }
 
 /** Gets qualification using string.includes() method
@@ -465,7 +471,7 @@ function convertRegion(input, to) {
  */
 function multi_parser(file) {
 
-  console.log('Parsing: ', file);
+  console.log('Parsing:', file);
 
   const text = JSON.parse(fs.readFileSync(file, 'utf8'));
 
@@ -486,6 +492,7 @@ function multi_parser(file) {
   let positionResults = '';
   let compensation = '';
 
+  // Goes thorugh every internship listing
   for (let i = 0; i < text.length; i++) {
 
     const position = text[i].position;
@@ -509,7 +516,6 @@ function multi_parser(file) {
     }
 
     const data = [];
-    const remote = [];
     const comp = [];
 
     // adding compensation
@@ -536,15 +542,8 @@ function multi_parser(file) {
         data.push(positionResults[j].label);
       }
 
-      // for possible location filter? (eg. remote / in-state, out of state, etc...)
-      if (position.includes('Remote') || (position.includes('remote'))) {
-        remote.push('Remote');
-      }
-
     }
 
-    // console.log(position);
-    // console.log(positionResults);
 
     // count the amount of internships where there we no apparent matches
     if (data.length === 0) {
@@ -606,15 +605,40 @@ function multi_parser(file) {
       getQualifications(text[i]);
     }
 
+    // if there is no remote section
+    try {
+      if (!text[i].remote) {
+        let remote = false;
+        if (isRemote(text[i].position) || isRemote(text[i].description)
+            || isRemote(text[i].location.city) || isRemote(text[i].location.state)) {
+          remote = true;
+        }
+        text[i].remote = remote;
+      }
+    } catch (e) {
+      text[i].remote = false;
+    }
+
     // if text has no location.state or it is empty
     if (!text[i].location.state || text[i].location.state === '') {
-      text[i].location.state = 'Unknown';
-    } else if (text[i].location.state === 'states' || text[i].location.state === 'States') {
-      text[i].location.state = 'United States';
-    } else {
-      const convertedState = convertRegion(text[i].location.state, 'name');
-      text[i].location.state = convertedState;
-    }
+
+      text[i].location.state = 'Out of Country';
+
+      // Check to see if it's USA
+      for (let k = 0; k < cities.length; k++) {
+        if (text[i].location.city.includes(cities[k].City) || text[i].location.city.includes(cities[k].State)) {
+          text[i].location.state = 'United States';
+        }
+      }
+
+    } else
+      if (text[i].location.state === 'states' || text[i].location.state === 'States') {
+        text[i].location.state = 'United States';
+      } else {
+        const convertedState = convertRegion(text[i].location.state, 'name');
+        text[i].location.state = convertedState;
+      }
+
   }
 
   console.log('Total entries:', text.length);
@@ -663,7 +687,6 @@ function fromDir(startPath, filter) {
   }
   return results;
 }
-
 
 const files = fromDir('./data/canonical', '.json');
 

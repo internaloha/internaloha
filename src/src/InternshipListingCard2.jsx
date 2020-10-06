@@ -2,8 +2,8 @@ import { Button, Grid, Icon, Label, Item, Header, Popup, Modal } from 'semantic-
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function isRemote(city) {
-  if (city === 'Remote') {
+function isRemote(remote) {
+  if (remote) {
     return (
         <Label circular style={{
           backgroundColor: '#263763',
@@ -163,7 +163,7 @@ function InternshipListingCard2(props) {
               {props.internship.skills.map((skill) => (
                   hasSkill(skill)
               ))}
-              {isRemote(props.internship.location.city)}
+              {isRemote(props.internship.remote)}
             </Item.Extra>
             <Item.Extra style={{ paddingBottom: '2rem' }}>
             </Item.Extra>

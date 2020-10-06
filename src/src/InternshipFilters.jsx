@@ -58,6 +58,7 @@ class InternshipsFilters {
     const info = [];
 
     for (let i = 0; i < companies.length; i++) {
+
       info.push({
         key: companies[i],
         text: `${companies[i]} (${number[companies[i]].length})`,
@@ -92,9 +93,19 @@ class InternshipsFilters {
     const info = [];
 
     for (let i = 0; i < location.length; i++) {
+
+      let locationAmount = number[location[i]].length;
+      // if (location[i] === 'Remote') {
+      //   locationAmount = _.filter(data, ['remote', true]).length
+      //       + number[location[i]].length;
+      //
+      // } else {
+      //   locationAmount = number[location[i]].length;
+      // }
+
       info.push({
         key: location[i],
-        text: `${location[i]} (${number[location[i]].length})`,
+        text: `${location[i]} (${locationAmount})`,
         value: location[i],
         num: number[location[i]].length,
       });
@@ -129,13 +140,13 @@ class InternshipsFilters {
     const info = [];
 
     for (let i = 0; i < uniqueSkills.length; i++) {
-        info.push({
-          key: uniqueSkills[i],
-          text: `${uniqueSkills[i]} (${number[uniqueSkills[i]].length})`,
-          value: uniqueSkills[i],
-          num: number[uniqueSkills[i]].length,
-        });
-      }
+      info.push({
+        key: uniqueSkills[i],
+        text: `${uniqueSkills[i]} (${number[uniqueSkills[i]].length})`,
+        value: uniqueSkills[i],
+        num: number[uniqueSkills[i]].length,
+      });
+    }
     return info;
   }
 
@@ -161,12 +172,12 @@ class InternshipsFilters {
     let counter = 0;
     for (let i = 0; i < data.length; i++) {
       // if any of the tags exist in data set, push it to skills and go to next
-        while (counter < tags.length && exists === false) {
-          if (data[i].skills.includes(tags[counter])) {
-            skills.push(data[i]);
-            exists = true;
-          }
-          counter++;
+      while (counter < tags.length && exists === false) {
+        if (data[i].skills.includes(tags[counter])) {
+          skills.push(data[i]);
+          exists = true;
+        }
+        counter++;
       }
       counter = 0;
       exists = false;
@@ -204,7 +215,21 @@ class InternshipsFilters {
     if (input === 'any') {
       return data;
     }
+
+    // // Add all the internships where remote == true and those who have remote in state
+    // if (input === 'Remote') {
+    //   const byState = _.filter(data, ['location.state', input]);
+    //   const remote = _.filter(data, ['remote', true]);
+    //   return _.concat(byState, remote);
+    // }
     return _.filter(data, ['location.state', input]);
+  }
+
+  isRemote(data, value) {
+    if (value === false) {
+      return data;
+    }
+     return _.filter(data, ['remote', true]);
   }
 }
 

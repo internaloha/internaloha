@@ -18,7 +18,8 @@
         },
         "url": "https://engineering.asu.edu/sensip/reu-index-html/",
         "company": "N/A",
-        "description": "Contact: Andreas Spanias, (480) 965-5311, spanias@asu.edu"
+        "description": "Contact: Andreas Spanias, (480) 965-5311, spanias@asu.edu",
+        "remote": false
     },
     {
         "position": "Research Experience for Undergraduate on Smart UAVs",
@@ -34,7 +35,8 @@
         },
         "url": "http://www.eng.auburn.edu/comp/research/impact/",
         "company": "N/A",
-        "description": "Contact: Saad Biaz, (334) 844-6307, biazsaa@auburn.edu"
+        "description": "Contact: Saad Biaz, (334) 844-6307, biazsaa@auburn.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Parallel and Distributed Computing",
@@ -54,7 +56,8 @@
         },
         "url": "http://www.eng.auburn.edu/csse/research/research-experience-for-undergraduates-reu-in-parallel-and-distributed-computing/index.html",
         "company": "N/A",
-        "description": "Contact: Sanjeev Baskiyar, (334) 844-6306, baskisa@auburn.edu"
+        "description": "Contact: Sanjeev Baskiyar, (334) 844-6306, baskisa@auburn.edu",
+        "remote": false
     },
     {
         "position": "Data-driven Security",
@@ -73,7 +76,8 @@
         },
         "url": "https://datadrivensecurity.boisestate.edu/UndergraduateResearch",
         "company": "N/A",
-        "description": "Contact: Francesca Spezzano, (208) 426-2491, francescaspezzano@boisestate.edu"
+        "description": "Contact: Francesca Spezzano, (208) 426-2491, francescaspezzano@boisestate.edu",
+        "remote": false
     },
     {
         "position": "Undergraduate Research Experiences in  Big Data Security and Privacy",
@@ -93,7 +97,8 @@
         },
         "url": "http://www.cpp.edu/~bigdatasec-reu/",
         "company": "N/A",
-        "description": "Contact: Tingting Chen, (909) 869-4842, tingtingchen@cpp.edu"
+        "description": "Contact: Tingting Chen, (909) 869-4842, tingtingchen@cpp.edu",
+        "remote": false
     },
     {
         "position": "Interdisciplinary Software Engineering",
@@ -114,7 +119,8 @@
         },
         "url": "http://reuse.cs.cmu.edu",
         "company": "N/A",
-        "description": "Contact: Joshua Sunshine, (412) 268-1097, reuse@cs.cmu.edu"
+        "description": "Contact: Joshua Sunshine, (412) 268-1097, reuse@cs.cmu.edu",
+        "remote": false
     },
     {
         "position": "Robotics and Intelligent Systems Scholars",
@@ -139,7 +145,8 @@
         },
         "url": "https://riss.ri.cmu.edu/",
         "company": "N/A",
-        "description": "Contact: Rachel Burcin, (412) 268-4272, rburcin@andrew.cmu.edu"
+        "description": "Contact: Rachel Burcin, (412) 268-4272, rburcin@andrew.cmu.edu",
+        "remote": false
     },
     {
         "position": "REU Site: High Performance Computing with Engineering Applications",
@@ -159,7 +166,8 @@
             "zip": "13699-5720"
         },
         "company": "N/A",
-        "description": "Contact: Daqing Hou, (315) 268-7675, dhou@clarkson.edu"
+        "description": "Contact: Daqing Hou, (315) 268-7675, dhou@clarkson.edu",
+        "remote": false
     },
     {
         "position": "REU Site on Security and Privacy for Mobile Sensing and the Internet of Things",
@@ -177,7 +185,8 @@
         },
         "url": "http://www.reucsu.org/",
         "company": "N/A",
-        "description": "Contact: Alfredo J. Perez, (706) 507-8194, perez_alfredo@columbusstate.edu"
+        "description": "Contact: Alfredo J. Perez, (706) 507-8194, perez_alfredo@columbusstate.edu",
+        "remote": false
     },
     {
         "position": "REU Site in IoT Security",
@@ -201,7 +210,8 @@
         },
         "url": "http://www.cybertraining.pro",
         "company": "N/A",
-        "description": "Contact: Yong Wang, (605) 256-5690, yong.wang@dsu.edu"
+        "description": "Contact: Yong Wang, (605) 256-5690, yong.wang@dsu.edu",
+        "remote": false
     },
     {
         "position": "Medical Informatics Experiences (MedIX) in undergraduate research",
@@ -222,7 +232,8 @@
         },
         "url": "http://facweb.cs.depaul.edu/research/vc/medix/index.htm",
         "company": "N/A",
-        "description": "Contact: Daniela  Raicu, (312) 362-5512, draicu@cti.depaul.edu"
+        "description": "Contact: Daniela  Raicu, (312) 362-5512, draicu@cti.depaul.edu",
+        "remote": false
     },
     {
         "position": "Cybersecurity Research of Unmanned Aerial Vehicles",
@@ -241,7 +252,8 @@
         },
         "url": "https://sites.google.com/view/nsf-reu-erau/",
         "company": "N/A",
-        "description": "Contact: Eduardo Rojas, (386) 226-7701, rojase1@erau.edu"
+        "description": "Contact: Eduardo Rojas, (386) 226-7701, rojase1@erau.edu",
+        "remote": false
     },
     {
         "position": "Sensing and Smart Systems",
@@ -265,7 +277,8 @@
         },
         "url": "http://isense.fau.edu/reu/reu-home-2020.php",
         "company": "N/A",
-        "description": "Contact: Jason O. Hallstrom, (561) 297-4748, jhallstrom@fau.edu"
+        "description": "Contact: Jason O. Hallstrom, (561) 297-4748, jhallstrom@fau.edu",
+        "remote": false
     },
     {
         "position": "REU SITE: Research Experiences for Undergraduates in Advanced Secured Sensor Enabling Technologies",
@@ -283,7 +296,8 @@
         },
         "url": "http://it2.fiu.edu/IT2_REU.php",
         "company": "N/A",
-        "description": "Contact: Niki Pissinou, (305) 348-3716, pissinouci@fiu.edu"
+        "description": "Contact: Niki Pissinou, (305) 348-3716, pissinouci@fiu.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Security of Smart Things",
@@ -304,7 +318,8 @@
         },
         "url": "https://sst-reu.fiu.edu/",
         "company": "N/A",
-        "description": "Contact: Kemal Akkaya, (305) 348-3017, kakkaya@fiu.edu"
+        "description": "Contact: Kemal Akkaya, (305) 348-3017, kakkaya@fiu.edu",
+        "remote": false
     },
     {
         "position": "Accessible Information and Communications Technology (AICT)",
@@ -323,7 +338,8 @@
         },
         "url": "http://aict.gallaudet.edu",
         "company": "N/A",
-        "description": "Contact: Raja Kushalnagar, (202) 750-2458, raja.kushalnagar@gallaudet.edu"
+        "description": "Contact: Raja Kushalnagar, (202) 750-2458, raja.kushalnagar@gallaudet.edu",
+        "remote": false
     },
     {
         "position": "Undergraduate Research in Educational Data Mining",
@@ -342,7 +358,8 @@
         },
         "url": "https://cs.gmu.edu/~reu/",
         "company": "N/A",
-        "description": "Contact: Mark Snyder, (703) 993-5624, msnyde14@gmu.edu"
+        "description": "Contact: Mark Snyder, (703) 993-5624, msnyde14@gmu.edu",
+        "remote": false
     },
     {
         "position": "Civic Data Science",
@@ -364,7 +381,8 @@
         },
         "url": "http://civicdatascience.gatech.edu",
         "company": "N/A",
-        "description": "Contact: Bistra Dilkina, , bdilkina@cc.gatech.edu"
+        "description": "Contact: Bistra Dilkina, , bdilkina@cc.gatech.edu",
+        "remote": false
     },
     {
         "position": "Developing Smart and Autonomous Internet-of-Things Systems",
@@ -385,7 +403,8 @@
         },
         "url": "http://tinman.cs.gsu.edu/~iot-reu-gsu/index.php",
         "company": "N/A",
-        "description": "Contact: Ashwin Ashok, (404) 413-6657, aashok@gsu.edu"
+        "description": "Contact: Ashwin Ashok, (404) 413-6657, aashok@gsu.edu",
+        "remote": false
     },
     {
         "position": "Research Experience for Undergraduates in Immersive Media Computing",
@@ -406,7 +425,8 @@
         },
         "url": "https://grid.cs.gsu.edu/reu-immersive-computing/",
         "company": "N/A",
-        "description": "Contact: Zhisheng Yan, (404) 413-5120, zyan@gsu.edu"
+        "description": "Contact: Zhisheng Yan, (404) 413-5120, zyan@gsu.edu",
+        "remote": false
     },
     {
         "position": "REU Site in Computer Systems",
@@ -424,7 +444,8 @@
         },
         "url": "http://www.cs.hmc.edu/reu/",
         "company": "N/A",
-        "description": "Contact: Zachary Dodds, (909) 607-1813, dodds@cs.hmc.edu"
+        "description": "Contact: Zachary Dodds, (909) 607-1813, dodds@cs.hmc.edu",
+        "remote": false
     },
     {
         "position": "BigDataX: From Theory to Practice in Big Data Computing at Extreme Scales",
@@ -448,7 +469,8 @@
         },
         "url": "http://datasys.cs.iit.edu/grants/BigDataX/index.html",
         "company": "N/A",
-        "description": "Contact: Ioan Raicu, (312) 567-5704, iraicu@cs.iit.edu"
+        "description": "Contact: Ioan Raicu, (312) 567-5704, iraicu@cs.iit.edu",
+        "remote": false
     },
     {
         "position": "Proactive Health Informatics Research Experience for Undergraduates",
@@ -466,7 +488,8 @@
         },
         "url": "http://prohealth.soic.indiana.edu/reu/",
         "company": "N/A",
-        "description": "Contact: Katie Siek, (812) 856-0598, ksiek@indiana.edu"
+        "description": "Contact: Katie Siek, (812) 856-0598, ksiek@indiana.edu",
+        "remote": false
     },
     {
         "position": "Data Science of Risk and Human Activity",
@@ -484,7 +507,8 @@
         },
         "url": "https://www.datareu.com",
         "company": "N/A",
-        "description": "Contact: George Mohler, (805) 252-0656, gmohler@iupui.edu"
+        "description": "Contact: George Mohler, (805) 252-0656, gmohler@iupui.edu",
+        "remote": false
     },
     {
         "position": "Enhancing Undergraduate Research Experiences in Mobile Cloud and DataSecurity",
@@ -502,7 +526,8 @@
         },
         "url": "https://et.iupui.edu/departments/cigt/research/reu/",
         "company": "N/A",
-        "description": "Contact: Feng Li, (317) 278-8391, fengli@iupui.edu"
+        "description": "Contact: Feng Li, (317) 278-8391, fengli@iupui.edu",
+        "remote": false
     },
     {
         "position": "Summer Program for Interdisciplinary Research and Education-Emerging Interface Technologies",
@@ -528,7 +553,8 @@
         },
         "url": "http://www.vrac.iastate.edu/hci/reu/",
         "company": "N/A",
-        "description": "Contact: Stephen B. Gilbert, (515) 294-6782, gilbert@iastate.edu"
+        "description": "Contact: Stephen B. Gilbert, (515) 294-6782, gilbert@iastate.edu",
+        "remote": false
     },
     {
         "position": "Intelligent and Scalable Systems",
@@ -550,7 +576,8 @@
         },
         "url": "http://www.cse.lehigh.edu/REU/",
         "company": "N/A",
-        "description": "Contact: Brian Davison, (610) 758-3453, davison@cse.lehigh.edu"
+        "description": "Contact: Brian Davison, (610) 758-3453, davison@cse.lehigh.edu",
+        "remote": false
     },
     {
         "position": "Interdisciplinary Research Experience in Computational Sciences",
@@ -574,7 +601,8 @@
         },
         "url": "http://reu.cct.lsu.edu/",
         "company": "N/A",
-        "description": "Contact: Juana Moreno, (225) 578-7586, moreno@lsu.edu"
+        "description": "Contact: Juana Moreno, (225) 578-7586, moreno@lsu.edu",
+        "remote": false
     },
     {
         "position": "Data Science Across Disciplines",
@@ -594,7 +622,8 @@
         },
         "url": "https://reu.cs.mu.edu/index.php/Main_Page",
         "company": "N/A",
-        "description": "Contact: Praveen Madiraju, (414) 288-6340, praveen.madiraju@marquette.edu"
+        "description": "Contact: Praveen Madiraju, (414) 288-6340, praveen.madiraju@marquette.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Undergraduate Research in Computational Biology at Mississippi State University",
@@ -612,7 +641,8 @@
         },
         "url": "http://www.cse.msstate.edu/~compbio",
         "company": "N/A",
-        "description": "Contact: Andy Perkins, (662) 325-0004, perkins@cse.msstate.edu"
+        "description": "Contact: Andy Perkins, (662) 325-0004, perkins@cse.msstate.edu",
+        "remote": false
     },
     {
         "position": "Research Experiences in Cybersecurity Algorithms",
@@ -632,7 +662,8 @@
         },
         "url": "http://www.bobcatsoftwarefactory.com/nsf-reu-2020",
         "company": "N/A",
-        "description": "Contact: Clemente Izurieta, (406) 994-3720, clemente.izurieta@montana.edu"
+        "description": "Contact: Clemente Izurieta, (406) 994-3720, clemente.izurieta@montana.edu",
+        "remote": false
     },
     {
         "position": "Research Experience for Undergraduates on Computational Data Analytics for Advancing Human Services",
@@ -650,7 +681,8 @@
         },
         "url": "http://cda.njit.edu/",
         "company": "N/A",
-        "description": "Contact: Zhi Wei, (973) 642-4497, zhiwei@njit.edu"
+        "description": "Contact: Zhi Wei, (973) 642-4497, zhiwei@njit.edu",
+        "remote": false
     },
     {
         "position": "Research Experiences for Undergraduates - Emerging Issues in Cybersecurity",
@@ -671,7 +703,8 @@
         },
         "url": "https://www.cs.nmt.edu/reu",
         "company": "N/A",
-        "description": "Contact: Jun Zheng, (575) 835-6182, jun.zheng@nmt.edu"
+        "description": "Contact: Jun Zheng, (575) 835-6182, jun.zheng@nmt.edu",
+        "remote": false
     },
     {
         "position": "BIGDatA - Big Data Analytics for Cyber-physical Systems",
@@ -696,7 +729,8 @@
         },
         "url": "https://www.cs.nmsu.edu/reu/",
         "company": "N/A",
-        "description": "Contact: Huiping Cao, (575) 646-4600, hcao@nmsu.edu"
+        "description": "Contact: Huiping Cao, (575) 646-4600, hcao@nmsu.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Research on Security of Mobile Devices and Wireless Networks at NYIT",
@@ -718,7 +752,8 @@
         },
         "url": "http://www.nyit.edu/reu",
         "company": "N/A",
-        "description": "Contact: Sertac Artan, (212) 261-1732, nartan@nyit.edu"
+        "description": "Contact: Sertac Artan, (212) 261-1732, nartan@nyit.edu",
+        "remote": false
     },
     {
         "position": "Socially Relevant Computing and Analytics",
@@ -735,7 +770,8 @@
         },
         "url": "http://go.ncsu.edu/srca-reu",
         "company": "N/A",
-        "description": "Contact: Tiffany Barnes, (919) 523-1353, tiffany.barnes@gmail.com"
+        "description": "Contact: Tiffany Barnes, (919) 523-1353, tiffany.barnes@gmail.com",
+        "remote": false
     },
     {
         "position": "REU Site: Undergraduate Computer Research (UnCoRe) in Cybersecurity",
@@ -755,7 +791,8 @@
         },
         "url": "http://cse-reu.secs.oakland.edu/",
         "company": "N/A",
-        "description": "Contact: Huirong Fu, (248) 370-4456, fu@oakland.edu"
+        "description": "Contact: Huirong Fu, (248) 370-4456, fu@oakland.edu",
+        "remote": false
     },
     {
         "position": "Deep Learning Driven Cybersecurity Research in a Multidisciplinary Environment",
@@ -776,7 +813,8 @@
         },
         "url": "https://www.odureu.org/cyber",
         "company": "N/A",
-        "description": "Contact: Chunsheng Xin, (757) 683-5294, cxin@odu.edu"
+        "description": "Contact: Chunsheng Xin, (757) 683-5294, cxin@odu.edu",
+        "remote": false
     },
     {
         "position": "Robotics in the Real World",
@@ -797,7 +835,8 @@
         },
         "url": "http://robotics.oregonstate.edu/reu",
         "company": "N/A",
-        "description": "Contact: Cindy M. Grimm, (541) 737-4914, cindy.grimm@oregonstate.edu"
+        "description": "Contact: Cindy M. Grimm, (541) 737-4914, cindy.grimm@oregonstate.edu",
+        "remote": false
     },
     {
         "position": "Machine Learning in Cybersecurity",
@@ -817,7 +856,8 @@
         },
         "url": "https://reu.ist.psu.edu/",
         "company": "N/A",
-        "description": "Contact: Dongwon Lee, (814) 865-0687, dongwon@psu.edu"
+        "description": "Contact: Dongwon Lee, (814) 865-0687, dongwon@psu.edu",
+        "remote": false
     },
     {
         "position": "Computational Modeling Serving the City",
@@ -832,7 +872,8 @@
         },
         "url": "http://www.teuscher-lab.com/reucomputing/",
         "company": "N/A",
-        "description": "Contact: Christof Teuscher, (503) 725-2817, reucomputing@pdx.edu"
+        "description": "Contact: Christof Teuscher, (503) 725-2817, reucomputing@pdx.edu",
+        "remote": false
     },
     {
         "position": "Cultivating Next Generation Software Engineering Researchers",
@@ -847,7 +888,8 @@
         },
         "url": "https://reu.se.rit.edu/",
         "company": "N/A",
-        "description": "Contact: Mehdi Mirakhorli, , mxmvse@rit.edu"
+        "description": "Contact: Mehdi Mirakhorli, , mxmvse@rit.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Computational Sensing for Human-centered AI",
@@ -862,7 +904,8 @@
         },
         "url": "http://cs.rit.edu/~reu/",
         "company": "N/A",
-        "description": "Contact: Cecilia Ovesdotter Alm, (585) 475-7327, coagla@rit.edu"
+        "description": "Contact: Cecilia Ovesdotter Alm, (585) 475-7327, coagla@rit.edu",
+        "remote": false
     },
     {
         "position": "DIMACS REU in Algorithms from Foundations to Applications",
@@ -886,7 +929,8 @@
         },
         "url": "http://reu.dimacs.rutgers.edu",
         "company": "N/A",
-        "description": "Contact: Lazaros Gallos, (848) 445-0075, lgallos@dimacs.rutgers.edu"
+        "description": "Contact: Lazaros Gallos, (848) 445-0075, lgallos@dimacs.rutgers.edu",
+        "remote": false
     },
     {
         "position": "REU Site: EXERCISE - Explore Emerging Computing in Science and Engineering",
@@ -911,7 +955,8 @@
         },
         "url": "http://faculty.salisbury.edu/~ealu/REU/REU.html",
         "company": "N/A",
-        "description": "Contact: Enyue (Annie) Lu, (410) 543-6144, ealu@salisbury.edu"
+        "description": "Contact: Enyue (Annie) Lu, (410) 543-6144, ealu@salisbury.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Computational and Mathematical Modeling of Complex Systems",
@@ -929,7 +974,8 @@
         },
         "url": "http://santafe.edu/education/fellowships/undergraduate/undergrad-overview/",
         "company": "N/A",
-        "description": "Contact: Carla Shedivy, (505) 946-2724, education@santafe.edu"
+        "description": "Contact: Carla Shedivy, (505) 946-2724, education@santafe.edu",
+        "remote": false
     },
     {
         "position": "Research Experiences in Pervasive Computing for Smart Health, Safety, and Well-being",
@@ -952,7 +998,8 @@
         },
         "url": "http://odin.cis.temple.edu/~reu",
         "company": "N/A",
-        "description": "Contact: Jamie Payton, (215) 204-8245, payton@temple.edu"
+        "description": "Contact: Jamie Payton, (215) 204-8245, payton@temple.edu",
+        "remote": false
     },
     {
         "position": "Secure and Privacy Preserving Cyber Physical Sustems",
@@ -972,7 +1019,8 @@
         },
         "url": "http://www.cae.tntech.edu/~mmahmoud/REU/REU.htm",
         "company": "N/A",
-        "description": "Contact: Mohamed Mahmoud, (931) 310-5074, mmahmoud@tntech.edu"
+        "description": "Contact: Mohamed Mahmoud, (931) 310-5074, mmahmoud@tntech.edu",
+        "remote": false
     },
     {
         "position": "Applied Computing Research in Unmanned Aerial Systems (UAS)",
@@ -991,7 +1039,8 @@
         },
         "url": "http://csreu.tamucc.edu",
         "company": "N/A",
-        "description": "Contact: Dulal Kar, (361) 825-5878, dulal.kar@tamucc.edu"
+        "description": "Contact: Dulal Kar, (361) 825-5878, dulal.kar@tamucc.edu",
+        "remote": false
     },
     {
         "position": "Research Experiences for Undergraduates in Smart & Connected Communities",
@@ -1011,7 +1060,8 @@
         },
         "url": "http://reuscc.wp.txstate.edu",
         "company": "N/A",
-        "description": "Contact: Vangelis Metsis, (512) 245-7509, vmetsis@txstate.edu"
+        "description": "Contact: Vangelis Metsis, (512) 245-7509, vmetsis@txstate.edu",
+        "remote": false
     },
     {
         "position": "Research Experiences for Undergraduates in Software Systems and Analysis",
@@ -1032,7 +1082,8 @@
         },
         "url": "http://reussa.cs.txstate.edu",
         "company": "N/A",
-        "description": "Contact: Guowei Yang, (512) 245-3409, gyang@txstate.edu"
+        "description": "Contact: Guowei Yang, (512) 245-3409, gyang@txstate.edu",
+        "remote": false
     },
     {
         "position": "Long Range Communications, using Ham Radios, Cool Algorithms, and Innovative Antennas",
@@ -1055,7 +1106,8 @@
         },
         "url": "http://www.hftelecomm.arizona.edu/",
         "company": "N/A",
-        "description": "Contact: Nancy Emptage, (520) 621-6189, emptagen@email.arizona.edu"
+        "description": "Contact: Nancy Emptage, (520) 621-6189, emptagen@email.arizona.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Cat Vehicle: TheCognitive and Autonomous Test Vehicle",
@@ -1076,7 +1128,8 @@
         },
         "url": "http://catvehicle.arizona.edu/",
         "company": "N/A",
-        "description": "Contact: Nancy Emptage, , emptagen@ece.arizona.edu"
+        "description": "Contact: Nancy Emptage, , emptagen@ece.arizona.edu",
+        "remote": false
     },
     {
         "position": "Cultivating the I0T-enabled Smart Community (IoT-SITY)",
@@ -1100,7 +1153,8 @@
         },
         "url": "http://sites.uci.edu/iotsity/",
         "company": "N/A",
-        "description": "Contact: Sharnnia Artis, (949) 824-7134, oai@uci.edu"
+        "description": "Contact: Sharnnia Artis, (949) 824-7134, oai@uci.edu",
+        "remote": false
     },
     {
         "position": "Summer Undergraduate Progarm in Engineering Research at Berkeley (SUPERB) Collecting and Using Big Data for the Public Good",
@@ -1122,7 +1176,8 @@
         },
         "url": "https://eecs.berkeley.edu/resources/undergrads/research/superb",
         "company": "N/A",
-        "description": "Contact: James Demmel, (510) 642-7699, demmel@eecs.berkeley.edu"
+        "description": "Contact: James Demmel, (510) 642-7699, demmel@eecs.berkeley.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Engineers for Exploration",
@@ -1144,7 +1199,8 @@
         },
         "url": "http://e4e.ucsd.edu",
         "company": "N/A",
-        "description": "Contact: Ryan Kastner, (858) 534-8908, rkastner@ucsd.edu"
+        "description": "Contact: Ryan Kastner, (858) 534-8908, rkastner@ucsd.edu",
+        "remote": false
     },
     {
         "position": "Research Experiences in the Internet of Things",
@@ -1166,7 +1222,8 @@
         },
         "url": "http://iotreu.cs.ucf.edu/",
         "company": "N/A",
-        "description": "Contact: Damla Turgut, (407) 823-6171, turgut@cs.ucf.edu"
+        "description": "Contact: Damla Turgut, (407) 823-6171, turgut@cs.ucf.edu",
+        "remote": false
     },
     {
         "position": "Research for Undergraduates in Computer Vision",
@@ -1190,7 +1247,8 @@
         },
         "url": "https://www.crcv.ucf.edu/nsf-projects/reu/",
         "company": "N/A",
-        "description": "Contact: Mubarak Shah, (407) 823-5077, shah@crcv.ucf.edu"
+        "description": "Contact: Mubarak Shah, (407) 823-5077, shah@crcv.ucf.edu",
+        "remote": false
     },
     {
         "position": "BigDataX: From Theory to Practice in Big Data Computing at Extreme Scales",
@@ -1215,7 +1273,8 @@
         },
         "url": "http://datasys.cs.iit.edu/grants/BigDataX/index.html",
         "company": "N/A",
-        "description": "Contact: Kyle Chard, (773) 702-4107, chard@uchicago.edu"
+        "description": "Contact: Kyle Chard, (773) 702-4107, chard@uchicago.edu",
+        "remote": false
     },
     {
         "position": "Trustable Embedded Systems Security Research",
@@ -1231,7 +1290,8 @@
         },
         "url": "http://ccc.engr.uconn.edu/reu",
         "company": "N/A",
-        "description": "Contact: Omer Khan, (860) 486-2192, khan@uconn.edu"
+        "description": "Contact: Omer Khan, (860) 486-2192, khan@uconn.edu",
+        "remote": false
     },
     {
         "position": "Undergraduate Research Experience in Frontiers of Data-Driven Computing.",
@@ -1249,7 +1309,8 @@
         },
         "url": "http://www.cs.uh.edu/reu",
         "company": "N/A",
-        "description": "Contact: Ernst L. Leiss, (713) 743-3359, coscel@cs.uh.edu"
+        "description": "Contact: Ernst L. Leiss, (713) 743-3359, coscel@cs.uh.edu",
+        "remote": false
     },
     {
         "position": "CARR: Combinatorics and Algorithms Applied to Real Problems",
@@ -1268,7 +1329,8 @@
         },
         "url": "http://www.cs.umd.edu/projects/reucaar/",
         "company": "N/A",
-        "description": "Contact: William Gasarch, (301) 405-2698, gasarch@cs.umd.edu"
+        "description": "Contact: William Gasarch, (301) 405-2698, gasarch@cs.umd.edu",
+        "remote": false
     },
     {
         "position": "Scientific Computing for Structure in Big or Complex Datasets",
@@ -1287,7 +1349,8 @@
         },
         "url": "http://www.cs.miami.edu/reu-csc",
         "company": "N/A",
-        "description": "Contact: Burton Rosenberg, (305) 284-2141, burt@cs.miami.edu"
+        "description": "Contact: Burton Rosenberg, (305) 284-2141, burt@cs.miami.edu",
+        "remote": false
     },
     {
         "position": "Computational Methods for Discovery Driven by Big Data",
@@ -1307,7 +1370,8 @@
         },
         "url": "http://reubigdata.cs.umn.edu/",
         "company": "N/A",
-        "description": "Contact: George Karypis, (612) 625-7524, karypis@umn.edu"
+        "description": "Contact: George Karypis, (612) 625-7524, karypis@umn.edu",
+        "remote": false
     },
     {
         "position": "Undergraduate Research in Consumer Networking Technologies",
@@ -1325,7 +1389,8 @@
         },
         "url": "http://reu.rnet.missouri.edu",
         "company": "N/A",
-        "description": "Contact: Prasad Calyam, (573) 882-9747, calyamp@missouri.edu"
+        "description": "Contact: Prasad Calyam, (573) 882-9747, calyamp@missouri.edu",
+        "remote": false
     },
     {
         "position": "Undergraduate Research Opportunities in Unmanned Systems Foundations and Applications",
@@ -1344,7 +1409,8 @@
         },
         "url": "https://www.unl.edu/summerprogram/unmanned",
         "company": "N/A",
-        "description": "Contact: Brittany Duncan, (402) 472-5073, nimbus-reu@unl.edu"
+        "description": "Contact: Brittany Duncan, (402) 472-5073, nimbus-reu@unl.edu",
+        "remote": false
     },
     {
         "position": "Collaborative Human-Robot Interaction",
@@ -1363,7 +1429,8 @@
         },
         "url": "https://www.unr.edu/cse/research/intelligent-and-autonomous-systems/reu",
         "company": "N/A",
-        "description": "Contact: David Feil-Seifer, (775) 784-6469, dave@cse.unr.edu"
+        "description": "Contact: David Feil-Seifer, (775) 784-6469, dave@cse.unr.edu",
+        "remote": false
     },
     {
         "position": "Making Future Communities:Infrastructure and Interaction Design for Cyber-Physical Systems",
@@ -1384,7 +1451,8 @@
         },
         "url": "https://reu.uncc.edu",
         "company": "N/A",
-        "description": "Contact: David Wilson, (704) 687-8585, davils@uncc.edu"
+        "description": "Contact: David Wilson, (704) 687-8585, davils@uncc.edu",
+        "remote": false
     },
     {
         "position": "Data Analytics and Information Retrieval",
@@ -1403,7 +1471,8 @@
         },
         "url": "https://reu.ci.unt.edu",
         "company": "N/A",
-        "description": "Contact: Junhua Ding, (940) 565-2186, junhua.ding@unt.edu"
+        "description": "Contact: Junhua Ding, (940) 565-2186, junhua.ding@unt.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Software Assurance and Security in Emerging Technologies: Research Experience for Undergraduates",
@@ -1421,7 +1490,8 @@
         },
         "url": "http://www.cse.unt.edu/~reneebryce/Renee_Bryce/REU.html",
         "company": "N/A",
-        "description": "Contact: Renee Bryce, (940) 565-4176, Renee.Bryce@unt.edu"
+        "description": "Contact: Renee Bryce, (940) 565-4176, Renee.Bryce@unt.edu",
+        "remote": false
     },
     {
         "position": "Vehicular Edge Computing and Security: Research Experience for Undergraduates",
@@ -1440,7 +1510,8 @@
         },
         "url": "https://www.cse.unt.edu/~song/REU/",
         "company": "N/A",
-        "description": "Contact: Song Fu, (940) 565-2341, song.fu@unt.edu"
+        "description": "Contact: Song Fu, (940) 565-2341, song.fu@unt.edu",
+        "remote": false
     },
     {
         "position": "AWaRE - Advanced Wireless Research Experiences",
@@ -1470,7 +1541,8 @@
         },
         "url": "http://wireless.nd.edu/REU",
         "company": "N/A",
-        "description": "Contact: Dr. Bertrand Hochwald, (574) 631-8875, bhochwald@nd.edu"
+        "description": "Contact: Dr. Bertrand Hochwald, (574) 631-8875, bhochwald@nd.edu",
+        "remote": false
     },
     {
         "position": "Computational Methods for Understanding Music, Media, and Minds",
@@ -1489,7 +1561,8 @@
         },
         "url": "http://www.sas.rochester.edu/dsc/undergraduate/reu.html",
         "company": "N/A",
-        "description": "Contact: Ajay Anand, (585) 276-3149, gids-reu@rochester.edu"
+        "description": "Contact: Ajay Anand, (585) 276-3149, gids-reu@rochester.edu",
+        "remote": false
     },
     {
         "position": "Applied Computational Robotics",
@@ -1508,7 +1581,8 @@
         },
         "url": "http://reu.cse.sc.edu",
         "company": "N/A",
-        "description": "Contact: Jason O'Kane, (803) 777-1791, jokane@cse.sc.edu"
+        "description": "Contact: Jason O'Kane, (803) 777-1791, jokane@cse.sc.edu",
+        "remote": false
     },
     {
         "position": "Human Communication in a Connected World",
@@ -1525,7 +1599,8 @@
         },
         "url": "http://reu.isi.edu/",
         "company": "N/A",
-        "description": "Contact: Jelena Mirkovic, (310) 448-9170, sunshine@isi.edu"
+        "description": "Contact: Jelena Mirkovic, (310) 448-9170, sunshine@isi.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Research in Interactive Virtual Experiences",
@@ -1544,7 +1619,8 @@
         },
         "url": "http://ict.usc.edu/reu/",
         "company": "N/A",
-        "description": "Contact: Ron Artstein, (310) 448-0313, artstein@ict.usc.edu"
+        "description": "Contact: Ron Artstein, (310) 448-0313, artstein@ict.usc.edu",
+        "remote": false
     },
     {
         "position": "REU Site: SCEC Undergraduate Studies in Earthquake Information Technology (SCEC/UseIT)",
@@ -1564,7 +1640,8 @@
         },
         "url": "http://www.scec.org/education/college/internships/UseIT.html",
         "company": "N/A",
-        "description": "Contact: Thomas H Jordan, 213-821-1237, tjordan@usc.edu"
+        "description": "Contact: Thomas H Jordan, 213-821-1237, tjordan@usc.edu",
+        "remote": false
     },
     {
         "position": "Robotics and Autonomous Systems",
@@ -1585,7 +1662,8 @@
         },
         "url": "https://www.cs.usc.edu/reu/",
         "company": "N/A",
-        "description": "Contact: Nora Ayanian, (213) 740-5377, ayanian@usc.edu"
+        "description": "Contact: Nora Ayanian, (213) 740-5377, ayanian@usc.edu",
+        "remote": false
     },
     {
         "position": "REU Site on Ubiquitous Sensing",
@@ -1602,7 +1680,8 @@
         },
         "url": "http://www.csee.usf.edu/REU/home.html",
         "company": "N/A",
-        "description": "Contact: Dr. Miguel A. Labrador, (813) 974-3260, labrador@cse.usf.edu"
+        "description": "Contact: Dr. Miguel A. Labrador, (813) 974-3260, labrador@cse.usf.edu",
+        "remote": false
     },
     {
         "position": "REU Program at the University of Texas at Arlington: Assistive Technologies for People with Disabilities",
@@ -1626,7 +1705,8 @@
         },
         "url": "http://ranger.uta.edu/~reu",
         "company": "N/A",
-        "description": "Contact: Ishfaq Ahmad, (817) 272-3605, iahmad@cse.uta.edu"
+        "description": "Contact: Ishfaq Ahmad, (817) 272-3605, iahmad@cse.uta.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Cyberinfrastructure (CI) Research 4 Social Change",
@@ -1646,7 +1726,8 @@
         },
         "url": "https://www.tacc.utexas.edu/reu",
         "company": "N/A",
-        "description": "Contact: Rosalia Gomez, (512) 471-6785, rosie@tacc.utexas.edu"
+        "description": "Contact: Rosalia Gomez, (512) 471-6785, rosie@tacc.utexas.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Software Safety and Reliability: Research and Application",
@@ -1666,7 +1747,8 @@
         },
         "url": "http://paris.utdallas.edu/reu",
         "company": "N/A",
-        "description": "Contact: Eric Wong, (972) 883-6619, ewong@utdallas.edu"
+        "description": "Contact: Eric Wong, (972) 883-6619, ewong@utdallas.edu",
+        "remote": false
     },
     {
         "position": "Program for Access to Training in Healt Informatics (PATH)",
@@ -1687,7 +1769,8 @@
             "zip": "37203"
         },
         "company": "N/A",
-        "description": "Contact: Kim Unertl, (615) 936-5035, kim.unertl@vanderbilt.edu"
+        "description": "Contact: Kim Unertl, (615) 936-5035, kim.unertl@vanderbilt.edu",
+        "remote": false
     },
     {
         "position": "Multidisciplinary Undergraduate Research Training in Wearable Computing",
@@ -1708,7 +1791,8 @@
         },
         "url": "http://epsl.eecs.wsu.edu/",
         "company": "N/A",
-        "description": "Contact: Hassan Ghasemzadeh, (509) 335-8260, hassan.ghasemzadeh@wsu.edu"
+        "description": "Contact: Hassan Ghasemzadeh, (509) 335-8260, hassan.ghasemzadeh@wsu.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Undergraduate Research in Smart Environments",
@@ -1731,7 +1815,8 @@
         },
         "url": "http://reu.eecs.wsu.edu",
         "company": "N/A",
-        "description": "Contact: Larry Holder, (509) 335-6138, holder@wsu.edu"
+        "description": "Contact: Larry Holder, (509) 335-6138, holder@wsu.edu",
+        "remote": false
     },
     {
         "position": "Big Data Analytics",
@@ -1752,7 +1837,8 @@
         },
         "url": "http://reu.cse.wustl.edu/",
         "company": "N/A",
-        "description": "Contact: Douglas Shook, , dshook@wustl.edu"
+        "description": "Contact: Douglas Shook, , dshook@wustl.edu",
+        "remote": false
     },
     {
         "position": "REU Site: Undergraduate Robotics Research in Human-Swarm Interaction",
@@ -1778,7 +1864,8 @@
         },
         "url": "http://robotics.wvu.edu/nsf-reu-site",
         "company": "N/A",
-        "description": "Contact: Yu Gu, (304) 293-3992, RoboticsREU@mail.wvu.edu"
+        "description": "Contact: Yu Gu, (304) 293-3992, RoboticsREU@mail.wvu.edu",
+        "remote": false
     },
     {
         "position": "Enhancing Undergraduate Research Experiences in Networked Cyber-Physical Systems",
@@ -1799,7 +1886,8 @@
         },
         "url": "http://www.wichita.edu/NetCPSREU",
         "company": "N/A",
-        "description": "Contact: Vinod Namboodiri, (316) 978-3922, vinod.namboodiri@wichita.edu"
+        "description": "Contact: Vinod Namboodiri, (316) 978-3922, vinod.namboodiri@wichita.edu",
+        "remote": false
     },
     {
         "position": "Data Science Research for Healthy Communities in the Digital Age",
@@ -1824,6 +1912,7 @@
         },
         "url": "https://www.wpi.edu/academics/departments/data-science/reu-program",
         "company": "N/A",
-        "description": "Contact: Elke Rundensteiner, (508) 831-5815, rundenst@wpi.edu"
+        "description": "Contact: Elke Rundensteiner, (508) 831-5815, rundenst@wpi.edu",
+        "remote": false
     }
 ]

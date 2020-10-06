@@ -13,7 +13,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/internship-opportunities-for-students-attending-conferences-acirc-128-147-software-engineer-redmond-wa-98052-119174084-d?contextType=search&networkView=national",
@@ -29,7 +30,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-internship-knoxville-tn-37902-119092410-d?contextType=search&networkView=national",
@@ -48,7 +50,8 @@
             "matlab",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-internship-knoxville-tn-37902-119092501-d?contextType=search&networkView=national",
@@ -68,7 +71,8 @@
             "machine learning",
             "C and C++"
         ],
-        "start": "2021-06-01T10:00:00.000Z"
+        "start": "2021-06-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-hillsboro-or-97123-119125075-d?contextType=search&networkView=national",
@@ -90,7 +94,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-systems-engineer-dulles-va-20164-119181949-d?contextType=search&networkView=national",
@@ -105,7 +110,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-systems-engineer-dulles-va-20164-119182442-d?contextType=search&networkView=national",
@@ -120,7 +126,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-software-engineer-mclean-va-22101-119222583-d?contextType=search&networkView=national",
@@ -136,7 +143,8 @@
             "software engineering",
             "java",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-119101265-d?contextType=search&networkView=national",
@@ -155,7 +163,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-119101273-d?contextType=search&networkView=national",
@@ -171,7 +180,8 @@
             "information technology",
             "software engineering",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/data-analyst-internship-tarrytown-ny-10591-119092337-d?contextType=search&networkView=national",
@@ -191,7 +201,8 @@
         "start": "2021-06-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-118826212-d?contextType=search&networkView=national",
@@ -210,7 +221,8 @@
             "data visualization",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-118826249-d?contextType=search&networkView=national",
@@ -232,7 +244,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-hillsboro-or-97123-118528491-d?contextType=search&networkView=national",
@@ -250,7 +263,8 @@
             "java",
             "python",
             "javascript"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-119331591-d?contextType=search&networkView=national",
@@ -267,7 +281,8 @@
             "software engineering",
             "javascript",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-dulles-va-20164-119325589-d?contextType=search&networkView=national",
@@ -288,7 +303,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-melbourne-fl-32912-118991382-d?contextType=search&networkView=national",
@@ -309,7 +325,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-windsor-locks-ct-06096-118991282-d?contextType=search&networkView=national",
@@ -327,7 +344,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-vergennes-vt-05491-118991331-d?contextType=search&networkView=national",
@@ -347,7 +365,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-vergennes-vt-05491-118991333-d?contextType=search&networkView=national",
@@ -367,7 +386,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-119331591-d?contextType=search&networkView=national",
@@ -384,7 +404,8 @@
             "software engineering",
             "javascript",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/graduate-intern-software-compiler-engineer-santa-clara-ca-95050-119331614-d?contextType=search&networkView=national",
@@ -401,7 +422,8 @@
             "software engineering",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "url": "https://jobs.acm.org/jobs/2021-emea-software-engineer-program-summer-internship-dublin-dublin-tx-76446-119328503-d?contextType=search&networkView=national",
@@ -416,7 +438,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/2021-emea-software-engineer-program-summer-internship-bournemouth-glasgow-london-london-mi-48159-119328491-d?contextType=search&networkView=national",
@@ -431,7 +454,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/2021-emea%C3%A2-software-engineer-immersion-program-summer-internship-bournemouth-glasgow-dorset-vt-05251-119330035-d?contextType=search&networkView=national",
@@ -446,7 +470,8 @@
         "skills": [
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-dulles-va-20164-119325589-d?contextType=search&networkView=national",
@@ -467,7 +492,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-development-engineer-intern-compiler-california-city-ca-93505-119320891-d?contextType=search&networkView=national",
@@ -484,7 +510,8 @@
             "software engineering",
             "information technology"
         ],
-        "start": "2020-05-01T10:00:00.000Z"
+        "start": "2020-05-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/audible-software-development-engineer-internship-jersey-city-nj-07305-119320976-d?contextType=search&networkView=national",
@@ -499,7 +526,8 @@
         "skills": [
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-development-engineer-intern-ml-apps-california-city-ca-93505-119320878-d?contextType=search&networkView=national",
@@ -516,7 +544,8 @@
             "software engineering",
             "information technology"
         ],
-        "start": "2020-05-01T10:00:00.000Z"
+        "start": "2020-05-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/undergrad-software-engineer-intern-hillsboro-or-97123-119314971-d?contextType=search&networkView=national",
@@ -537,7 +566,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/graduate-software-engineer-intern-hillsboro-or-97123-119314972-d?contextType=search&networkView=national",
@@ -558,7 +588,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/undergrad-hardware-engineer-intern-folsom-ca-95630-119314962-d?contextType=search&networkView=national",
@@ -578,7 +609,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/graduate-hardware-engineer-intern-folsom-ca-95630-119314935-d?contextType=search&networkView=national",
@@ -598,7 +630,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/ssd-media-system-engineer-graduate-intern-folsom-ca-95630-119314939-d?contextType=search&networkView=national",
@@ -614,7 +647,8 @@
             "information technology",
             "software engineering",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-developer-intern-position-sts-gl-sisw-plm-223347-austin-tx-78701-119305824-d?contextType=search&networkView=national",
@@ -631,7 +665,8 @@
             "software engineering",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-mapping-redmond-wa-98052-119298428-d?contextType=search&networkView=national",
@@ -650,7 +685,8 @@
             "robotics",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-editor-and-tools-redmond-wa-98052-119298438-d?contextType=search&networkView=national",
@@ -667,7 +703,8 @@
             "software engineering",
             "python",
             "data visualization"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-tensorrt-santa-clara-ca-95050-119298445-d?contextType=search&networkView=national",
@@ -689,7 +726,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-cloud-redmond-wa-98052-119298459-d?contextType=search&networkView=national",
@@ -708,7 +746,8 @@
             "javascript",
             "data visualization",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-information-security-analyst-austin-tx-78701-119300242-d?contextType=search&networkView=national",
@@ -725,7 +764,8 @@
             "python",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-iva-applications-summer-2021-santa-clara-ca-95050-119298316-d?contextType=search&networkView=national",
@@ -745,7 +785,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-embedded-system-software-summer-2021-santa-clara-ca-95050-119298353-d?contextType=search&networkView=national",
@@ -765,7 +806,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-algorithms-and-machine-learning-santa-clara-ca-95050-119298319-d?contextType=search&networkView=national",
@@ -782,7 +824,8 @@
             "software engineering",
             "data visualization",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/wireless-systems-engineer-intern-summer-2021-plano-tx-75074-119300263-d?contextType=search&networkView=national",
@@ -801,7 +844,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/wireless-systems-engineering-intern-summer-2021-plano-tx-75074-119299505-d?contextType=search&networkView=national",
@@ -816,7 +860,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/wireless-networks-systems-support-engineer-intern-summer-2021-plano-tx-75074-119299417-d?contextType=search&networkView=national",
@@ -834,7 +879,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/gpu-compute-and-deep-learning-software-engineer-intern-santa-clara-ca-95050-119297864-d?contextType=search&networkView=national",
@@ -852,7 +898,8 @@
             "machine learning",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/gpu-compute-and-deep-learning-software-engineer-intern-santa-clara-ca-95050-119297895-d?contextType=search&networkView=national",
@@ -870,7 +917,8 @@
             "machine learning",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-development-engineer-intern-ml-apps-california-city-ca-93505-119292690-d?contextType=search&networkView=national",
@@ -887,7 +935,8 @@
             "software engineering",
             "information technology"
         ],
-        "start": "2021-01-01T10:00:00.000Z"
+        "start": "2021-01-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-development-engineer-internship-winter-2021-us-seattle-wa-98104-119292584-d?contextType=search&networkView=national",
@@ -904,7 +953,8 @@
             "machine learning",
             "information technology"
         ],
-        "start": "2020-01-01T10:00:00.000Z"
+        "start": "2020-01-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119281245-d?contextType=search&networkView=national",
@@ -924,7 +974,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-bachelor-intern-summer-2021-cambridge-ma-02238-119281203-d?contextType=search&networkView=national",
@@ -944,7 +995,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-sepp-intern-summer-2021-sterling-va-20167-119281191-d?contextType=search&networkView=national",
@@ -962,7 +1014,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-sepp-intern-summer-2021-cedar-rapids-ia-52401-119281248-d?contextType=search&networkView=national",
@@ -982,7 +1035,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-sepp-intern-summer-2021-cedar-rapids-ia-52401-119281220-d?contextType=search&networkView=national",
@@ -1002,7 +1056,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-sepp-intern-summer-2021-cedar-rapids-ia-52401-119281222-d?contextType=search&networkView=national",
@@ -1024,7 +1079,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-sepp-intern-summer-2021-cedar-rapids-ia-52401-119281247-d?contextType=search&networkView=national",
@@ -1043,7 +1099,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-sepp-intern-summer-2021-carlsbad-ca-92008-119281252-d?contextType=search&networkView=national",
@@ -1061,7 +1118,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-sepp-intern-summer-2021-sterling-va-20167-119281193-d?contextType=search&networkView=national",
@@ -1082,7 +1140,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/bios-project-manager-technical-intern-hillsboro-or-97123-119278827-d?contextType=search&networkView=national",
@@ -1098,7 +1157,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/sepp-software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119254599-d?contextType=search&networkView=national",
@@ -1118,7 +1178,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/principal-technical-program-manager-prime-video-international-expansion-seattle-wa-98104-119237043-d?contextType=search&networkView=national",
@@ -1130,7 +1191,8 @@
             "zip": "98104"
         },
         "description": "<h3>DESCRIPTION</h3><p>Prime Video is changing the way people around the world watch movies and TV shows, with thousands of titles available on an unlimited basis through Prime Video, all on hundreds of devices, including Kindle Fire, Fire TV and Stick, iPads, smart phones, smart TVs and game consoles.<br>Our service is available in more than 200 territories globally, and we're just getting started.<br><br><br>The Prime Video International team is seeking a Principal Technical Program Manager (TPM) to be the program leader for International Commerce whose mission is to offer a localized commerce (payments) experience to customers across the globe. All commerce projects under this charter are integration heavy and requires excellent leadership skills, strategic thinking, strong technical expertise, the ability to partner effectively across teams within and outside of Amazon, and the ability to manage high-impact projects.We are looking for a highly analytical, resourceful, customer focused, team oriented individual who also has the ability to work independently under time constraints to meet deadlines. He or she will have a proven track record in taking on end-to-end ownership and successfully delivering results in a fast-paced and dynamic business environment.<br><br></p>",
-        "skills": []
+        "skills": [],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-summer-2021-interns-cyber-marlborough-ma-01752-119229100-d?contextType=search&networkView=national",
@@ -1149,7 +1211,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-software-engineer-mclean-va-22101-119222583-d?contextType=search&networkView=national",
@@ -1165,7 +1228,8 @@
             "software engineering",
             "java",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-cyber-software-engineering-cincinnati-oh-45217-119222590-d?contextType=search&networkView=national",
@@ -1180,7 +1244,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-systems-engineer-dulles-va-20164-119181949-d?contextType=search&networkView=national",
@@ -1195,7 +1260,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-systems-engineer-dulles-va-20164-119182442-d?contextType=search&networkView=national",
@@ -1210,7 +1276,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/intern-technical-project-management-dulles-va-20164-119181935-d?contextType=search&networkView=national",
@@ -1226,7 +1293,8 @@
             "machine learning",
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/internship-opportunities-for-students-attending-conferences-acirc-128-147-software-engineer-redmond-wa-98052-119174084-d?contextType=search&networkView=national",
@@ -1242,7 +1310,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/system-power-analog-control-summer-2021-internship-mckinney-tx-mckinney-tx-75069-119170489-d?contextType=search&networkView=national",
@@ -1263,7 +1332,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/duo-security-software-engineer-bachelor-s-intern-united-states-ann-arbor-mi-48104-119166686-d?contextType=search&networkView=national",
@@ -1282,7 +1352,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/strategic-student-program-cas-software-developer-intern-summer-2021-charlotte-nc-sisw-plm-charlotte-nc-28202-119167449-d?contextType=search&networkView=national",
@@ -1304,7 +1375,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/autism-hiring-program-internship-opportunities-for-students-software-engineer-redmond-wa-98052-119158666-d?contextType=search&networkView=national",
@@ -1319,7 +1391,8 @@
         "skills": [
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119150956-d?contextType=search&networkView=national",
@@ -1340,7 +1413,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119150953-d?contextType=search&networkView=national",
@@ -1360,7 +1434,8 @@
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-annapolis-md-21401-119150902-d?contextType=search&networkView=national",
@@ -1380,7 +1455,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-burnsville-mn-55306-119150921-d?contextType=search&networkView=national",
@@ -1400,7 +1476,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-annapolis-md-21401-119150989-d?contextType=search&networkView=national",
@@ -1420,7 +1497,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-undergraduate-intern-summer-2021-columbia-md-21045-119150991-d?contextType=search&networkView=national",
@@ -1435,7 +1513,8 @@
         "skills": [
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-hillsboro-or-97123-119125075-d?contextType=search&networkView=national",
@@ -1457,7 +1536,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119105175-d?contextType=search&networkView=national",
@@ -1476,7 +1556,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-annapolis-md-21401-119105278-d?contextType=search&networkView=national",
@@ -1496,7 +1577,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-burnsville-mn-55306-119105246-d?contextType=search&networkView=national",
@@ -1515,7 +1597,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/system-power-analog-control-summer-2021-internship-tucson-az-tucson-az-85702-119105208-d?contextType=search&networkView=national",
@@ -1536,7 +1619,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-119101273-d?contextType=search&networkView=national",
@@ -1552,7 +1636,8 @@
             "information technology",
             "software engineering",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-phoenix-az-85003-119101265-d?contextType=search&networkView=national",
@@ -1571,7 +1656,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/flight-displays-software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119095386-d?contextType=search&networkView=national",
@@ -1593,7 +1679,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-internship-knoxville-tn-37902-119092501-d?contextType=search&networkView=national",
@@ -1613,7 +1700,8 @@
             "machine learning",
             "C and C++"
         ],
-        "start": "2021-06-01T10:00:00.000Z"
+        "start": "2021-06-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/data-analyst-internship-tarrytown-ny-10591-119092337-d?contextType=search&networkView=national",
@@ -1633,7 +1721,8 @@
         "start": "2021-06-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-internship-knoxville-tn-37902-119092410-d?contextType=search&networkView=national",
@@ -1652,7 +1741,8 @@
             "matlab",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/financial-data-analyst-intern-summer-2021-annapolis-md-21401-119072611-d?contextType=search&networkView=national",
@@ -1669,7 +1759,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119072547-d?contextType=search&networkView=national",
@@ -1691,7 +1782,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/sepp-software-engineering-intern-summer-2021-cedar-rapids-ia-52401-119072585-d?contextType=search&networkView=national",
@@ -1711,7 +1803,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-development-engineer-intern-amazon-robotics-summer-2021-westborough-ma-01581-119051107-d?contextType=search&networkView=national",
@@ -1728,7 +1821,8 @@
             "robotics",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/system-power-analog-controls-summer-2021-internship-huntsville-al-huntsville-al-35808-119042348-d?contextType=search&networkView=national",
@@ -1749,7 +1843,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/electrical-computer-engineering-internship-hoffman-estates-il-60169-119038942-d?contextType=search&networkView=national",
@@ -1767,7 +1862,8 @@
             "machine learning"
         ],
         "start": "2021-01-01T10:00:00.000Z",
-        "due": "2021-01-01T10:00:00.000Z"
+        "due": "2021-01-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/data-analyst-intern-san-antionio-tx-san-antonio-tx-78205-119035180-d?contextType=search&networkView=national",
@@ -1783,7 +1879,8 @@
             "data visualization",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-development-engineer-internship-summer-2021-us-seattle-wa-98104-119026917-d?contextType=search&networkView=national",
@@ -1800,7 +1897,8 @@
             "java",
             "C and C++",
             "SQL"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-development-engineer-ii-international-expansion-newark-nj-07102-119002103-d?contextType=search&networkView=national",
@@ -1816,7 +1914,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-vergennes-vt-05491-118991293-d?contextType=search&networkView=national",
@@ -1834,7 +1933,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-windsor-locks-ct-06096-118991282-d?contextType=search&networkView=national",
@@ -1852,7 +1952,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-vergennes-vt-05491-118991333-d?contextType=search&networkView=national",
@@ -1872,7 +1973,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-melbourne-fl-32912-118991383-d?contextType=search&networkView=national",
@@ -1893,7 +1995,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-vergennes-vt-05491-118991331-d?contextType=search&networkView=national",
@@ -1913,7 +2016,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-vergennes-vt-05491-118991293-d?contextType=search&networkView=national",
@@ -1931,7 +2035,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-vergennes-vt-05491-118991334-d?contextType=search&networkView=national",
@@ -1951,7 +2056,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-melbourne-fl-32912-118991382-d?contextType=search&networkView=national",
@@ -1972,7 +2078,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/control-systems-engineering-intern-summer-2021-windsor-locks-ct-06096-118991409-d?contextType=search&networkView=national",
@@ -1990,7 +2097,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-system-integration-intern-summer-2021-cedar-rapids-ia-52401-118991251-d?contextType=search&networkView=national",
@@ -2008,7 +2116,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/air-combat-training-software-engineering-intern-summer-2021-carlsbad-ca-92008-118991245-d?contextType=search&networkView=national",
@@ -2029,7 +2138,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/control-systems-engineering-intern-summer-2021-windsor-locks-ct-06096-118991295-d?contextType=search&networkView=national",
@@ -2047,7 +2157,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/air-combat-training-software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118991308-d?contextType=search&networkView=national",
@@ -2068,7 +2179,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/electrical-engineering-intern-summer-2021-melbourne-fl-32912-118972453-d?contextType=search&networkView=national",
@@ -2091,7 +2203,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972247-d?contextType=search&networkView=national",
@@ -2110,7 +2223,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972248-d?contextType=search&networkView=national",
@@ -2130,7 +2244,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-richardson-tx-75081-118972266-d?contextType=search&networkView=national",
@@ -2148,7 +2263,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-richardson-tx-75081-118972268-d?contextType=search&networkView=national",
@@ -2166,7 +2282,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-annapolis-md-21401-118972164-d?contextType=search&networkView=national",
@@ -2188,7 +2305,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-annapolis-md-21401-118972466-d?contextType=search&networkView=national",
@@ -2210,7 +2328,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972234-d?contextType=search&networkView=national",
@@ -2230,7 +2349,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972133-d?contextType=search&networkView=national",
@@ -2248,7 +2368,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972242-d?contextType=search&networkView=national",
@@ -2266,7 +2387,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972209-d?contextType=search&networkView=national",
@@ -2284,7 +2406,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972314-d?contextType=search&networkView=national",
@@ -2302,7 +2425,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972229-d?contextType=search&networkView=national",
@@ -2321,7 +2445,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972113-d?contextType=search&networkView=national",
@@ -2339,7 +2464,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972114-d?contextType=search&networkView=national",
@@ -2358,7 +2484,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972121-d?contextType=search&networkView=national",
@@ -2377,7 +2504,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-annapolis-md-21401-118972470-d?contextType=search&networkView=national",
@@ -2397,7 +2525,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-annapolis-md-21401-118972468-d?contextType=search&networkView=national",
@@ -2417,7 +2546,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-tulsa-ok-74152-118972364-d?contextType=search&networkView=national",
@@ -2436,7 +2566,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-spring-summer-2021-bothell-wa-98021-118972148-d?contextType=search&networkView=national",
@@ -2455,7 +2586,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-burnsville-mn-55306-118972404-d?contextType=search&networkView=national",
@@ -2476,7 +2608,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-summer-2021-raleigh-nc-27608-118972353-d?contextType=search&networkView=national",
@@ -2495,7 +2628,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-sterling-va-20167-118972438-d?contextType=search&networkView=national",
@@ -2517,7 +2651,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-phoenix-az-85067-118972256-d?contextType=search&networkView=national",
@@ -2538,7 +2673,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-sterling-va-20167-118972436-d?contextType=search&networkView=national",
@@ -2558,7 +2694,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-air-combat-training-summer-2021-cedar-rapids-ia-52401-118972249-d?contextType=search&networkView=national",
@@ -2576,7 +2713,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-systems-engineering-intern-summer-2021-richardson-tx-75081-118972265-d?contextType=search&networkView=national",
@@ -2594,7 +2732,8 @@
             "python",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/airport-systems-commercial-management-intern-summer-2021-annapolis-md-21401-118972163-d?contextType=search&networkView=national",
@@ -2613,7 +2752,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/sepp-software-engineering-intern-summer-2021-wilsonville-or-97070-118972157-d?contextType=search&networkView=national",
@@ -2632,7 +2772,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-intern-air-combat-training-summer-2021-cedar-rapids-ia-52401-118972249-d?contextType=search&networkView=national",
@@ -2650,7 +2791,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/sepp-software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972105-d?contextType=search&networkView=national",
@@ -2671,7 +2813,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/hardware-electrical-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972222-d?contextType=search&networkView=national",
@@ -2690,7 +2833,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-security-engineering-intern-summer-2021-cedar-rapids-ia-52401-118972236-d?contextType=search&networkView=national",
@@ -2710,7 +2854,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineering-flight-sciences-intern-summer-2021-burnsville-mn-55306-118972419-d?contextType=search&networkView=national",
@@ -2728,7 +2873,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/satcom-hardware-engineering-intern-summer-2021-melbourne-fl-32912-118972442-d?contextType=search&networkView=national",
@@ -2747,7 +2893,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/sepp-software-engineering-intern-summer-2021-melbourne-fl-32912-118972349-d?contextType=search&networkView=national",
@@ -2767,7 +2914,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/sepp-systems-engineer-intern-summer-2021-melbourne-fl-32912-118972447-d?contextType=search&networkView=national",
@@ -2789,7 +2937,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-air-combat-training-intern-summer-2021-cedar-rapids-ia-52401-118972102-d?contextType=search&networkView=national",
@@ -2809,7 +2958,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/airport-systems-commercial-management-intern-summer-2021-annapolis-md-21401-118972163-d?contextType=search&networkView=national",
@@ -2828,7 +2978,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/systems-engineer-intern-prague-czech-republic-sales-republic-mo-65738-118940735-d?contextType=search&networkView=national",
@@ -2848,7 +2999,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118929404-d?contextType=search&networkView=national",
@@ -2870,7 +3022,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-vergennes-vt-05491-118929411-d?contextType=search&networkView=national",
@@ -2888,7 +3041,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-chula-vista-ca-91910-118926764-d?contextType=search&networkView=national",
@@ -2910,7 +3064,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-windsor-locks-ct-06096-118923125-d?contextType=search&networkView=national",
@@ -2928,7 +3083,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-sterling-va-20167-118923190-d?contextType=search&networkView=national",
@@ -2947,7 +3103,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineer-intern-habana-labs-austin-tx-78701-118866056-d?contextType=search&networkView=national",
@@ -2965,7 +3122,8 @@
             "information technology",
             "deep learning",
             "C and C++"
-        ]
+        ],
+        "remote": true
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118844250-d?contextType=search&networkView=national",
@@ -2985,7 +3143,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "url": "https://jobs.acm.org/jobs/software-engineering-intern-summer-2021-cedar-rapids-ia-52401-118844260-d?contextType=search&networkView=national",
@@ -3005,6 +3164,7 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     }
 ]

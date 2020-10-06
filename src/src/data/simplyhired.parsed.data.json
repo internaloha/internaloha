@@ -18,7 +18,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Error",
@@ -35,7 +36,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Embedded Software Engineer",
@@ -54,7 +56,8 @@
             "C and C++",
             "cloud computing"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Error",
@@ -74,7 +77,8 @@
             "C and C++",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Error",
@@ -93,7 +97,8 @@
             "cybersecurity",
             "SQL"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "IT Support Internship",
@@ -111,7 +116,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Error",
@@ -128,7 +134,8 @@
         "skills": [
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -149,7 +156,8 @@
             "C and C++",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Research Intern - Interaction Tracking (PhD)",
@@ -171,7 +179,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "WLAN Engineer Intern",
@@ -192,7 +201,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Data Science Bell Labs Summer Intern",
@@ -212,7 +222,8 @@
             "python",
             "data visualization",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Intern, Optical Sciences - Polarization (PhD)",
@@ -234,7 +245,8 @@
             "software engineering",
             "artificial intelligence"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Web Developer Intern - Non-Paid - Remote",
@@ -254,7 +266,8 @@
             "data visualization",
             "web development",
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Manufacturing Engineering Software Developer Intern",
@@ -273,7 +286,8 @@
             "javascript",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Drive Engineering Intern",
@@ -293,7 +307,8 @@
             "data visualization",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Cyber Engineering Intern",
@@ -311,7 +326,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Bell Labs APSS Lab Summer Intern",
@@ -331,7 +347,8 @@
             "javascript",
             "python",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Perception Intern/Co-op for Marine Autonomy",
@@ -351,7 +368,8 @@
             "python",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern Software Developer",
@@ -371,7 +389,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "Group 76--Summer Research Program Intern",
@@ -390,7 +409,8 @@
             "information technology",
             "software engineering",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Aruba High Touch Engineering Intern",
@@ -410,7 +430,8 @@
             "python",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "ARC V&V Engineering Co-op",
@@ -427,7 +448,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "MBA Intern, Corporate Strategy- Product Management- Product Marketing Manager (Summer 2021)",
@@ -445,7 +467,8 @@
             "information technology",
             "software engineering",
             "cloud computing"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Intern, Web Application Development",
@@ -467,7 +490,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Summer Intern, Mobile Engineering (Android)",
@@ -488,7 +512,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Programmer Intern",
@@ -509,7 +534,8 @@
             "software engineering"
         ],
         "compensation": "paid",
-        "start": "2020-10-01T10:00:00.000Z"
+        "start": "2020-10-01T10:00:00.000Z",
+        "remote": true
     },
     {
         "position": "IT Technician Intern",
@@ -527,7 +553,8 @@
             "information technology",
             "software engineering",
             "data visualization"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Error",
@@ -548,7 +575,8 @@
             "java",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Summer Intern, Mobile Engineering (iOS)",
@@ -568,7 +596,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Summer Intern Scientist, Content Science",
@@ -588,7 +617,8 @@
             "java",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "IT Security Operations Intern",
@@ -607,7 +637,8 @@
             "machine learning",
             "software engineering"
         ],
-        "contact": "Americas@marvell.com, 408-222-3604"
+        "contact": "Americas@marvell.com, 408-222-3604",
+        "remote": false
     },
     {
         "position": "Summer Intern, Technical Project Manager",
@@ -627,7 +658,8 @@
             "software engineering",
             "cloud computing"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Systems Engineering - Summer 2021 Interns",
@@ -647,7 +679,8 @@
             "java",
             "matlab",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Intern, Ad Operations Developer",
@@ -668,7 +701,8 @@
             "information technology",
             "SQL"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Technical Intern - Data Analytics",
@@ -687,7 +721,8 @@
             "python",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Summer Scientist Intern, Radio & Music Informatics",
@@ -708,7 +743,8 @@
             "python",
             "java"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Summer Scientist Intern, Shared Foundation, Search, & Voice Intern",
@@ -729,7 +765,8 @@
             "java",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "DAI Intern",
@@ -749,7 +786,8 @@
             "python",
             "data visualization",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer 2021 Debug and Validation Tools Co-op/Intern Engineer - (80786)",
@@ -770,7 +808,8 @@
             "java",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern - Front End",
@@ -791,7 +830,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "PORTFOLIO MANAGEMENT INTERN",
@@ -809,7 +849,8 @@
             "information technology",
             "machine learning"
         ],
-        "contact": "602-542-5482"
+        "contact": "602-542-5482",
+        "remote": false
     },
     {
         "position": "Machine Learning Engineer Intern",
@@ -830,7 +871,8 @@
             "java",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineer Intern, Systems",
@@ -850,7 +892,8 @@
             "C and C++",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Spring 2021 Tech Recruiting Intern",
@@ -870,7 +913,8 @@
             "software engineering"
         ],
         "compensation": "paid",
-        "contact": "viacomaccommodations@viacom.com"
+        "contact": "viacomaccommodations@viacom.com",
+        "remote": false
     },
     {
         "position": "SoC & AI for Access BL Summer Intern",
@@ -890,7 +934,8 @@
             "software engineering",
             "robotics",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data intern- Wood Mackenzie 2021 Summer internship program- CR",
@@ -909,7 +954,8 @@
             "information technology",
             "python",
             "data visualization"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Networking Bell Labs Summer Intern",
@@ -928,7 +974,8 @@
             "software engineering",
             "robotics",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Network Systems Bell Labs Intern",
@@ -947,7 +994,8 @@
             "software engineering",
             "robotics",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern - Mobile",
@@ -968,7 +1016,8 @@
             "machine learning",
             "information technology",
             "mobile development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern - Back End",
@@ -989,7 +1038,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -1007,7 +1057,8 @@
             "python",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer - Intern",
@@ -1028,7 +1079,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (Summer 2021)",
@@ -1046,7 +1098,8 @@
             "software engineering",
             "information technology"
         ],
-        "due": "2021-12-01T10:00:00.000Z"
+        "due": "2021-12-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -1067,7 +1120,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Software Engineer Intern",
@@ -1085,7 +1139,8 @@
             "software engineering",
             "python",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Machine Learning Internship",
@@ -1106,7 +1161,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Intern, Data Management",
@@ -1123,7 +1179,8 @@
         "skills": [
             "data visualization",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Summer Intern, Software Test",
@@ -1143,7 +1200,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Blacksburg Engineering Internship/Co-Op",
@@ -1160,7 +1218,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "HSN Intern- Information Technology - Summer 2021",
@@ -1181,7 +1240,8 @@
             "machine learning",
             "mobile development"
         ],
-        "contact": "CareersUS@QVC.com"
+        "contact": "CareersUS@QVC.com",
+        "remote": false
     },
     {
         "position": "Infrastructure Tech - Intern",
@@ -1200,7 +1260,8 @@
             "machine learning",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Informational Technology Intern (Melbourne, FL)",
@@ -1220,7 +1281,8 @@
             "python",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Information Technology Intern (Melbourne, FL)",
@@ -1240,7 +1302,8 @@
             "python",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Performance/Test Engineering",
@@ -1258,7 +1321,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Intern, Machine Learning for Image Synthesis (PhD)",
@@ -1281,7 +1345,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Error",
@@ -1300,7 +1365,8 @@
             "C and C++",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Service Desk Engineer Intern",
@@ -1319,7 +1385,8 @@
             "software engineering",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Error",
@@ -1339,7 +1406,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Cyber Security Intern",
@@ -1356,7 +1424,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Cyber Engineering Intern",
@@ -1376,7 +1445,8 @@
             "python",
             "C and C++",
             "mobile development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Intern, Photorealistic Telepresence (PhD)",
@@ -1398,7 +1468,8 @@
             "C and C++",
             "robotics"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Product Management Intern",
@@ -1415,7 +1486,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Infrastructure & Technical Service Intern",
@@ -1432,7 +1504,8 @@
         "skills": [
             "information technology",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Application Development Intern",
@@ -1453,7 +1526,8 @@
             "machine learning",
             "web development",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Intern, Business Intelligence/Integration",
@@ -1471,7 +1545,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Legal Intern (Intellectual Property)",
@@ -1491,7 +1566,8 @@
             "software engineering",
             "cloud computing"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "2021 Internship: Deep Learning Research Engineer (MS / PhD)",
@@ -1510,7 +1586,8 @@
             "deep learning",
             "software engineering",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Technical Support Intern - Summer 2021",
@@ -1528,7 +1605,8 @@
             "information technology",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Precision Solutions Product Validation Field Test Engineer Intern",
@@ -1547,7 +1625,8 @@
             "machine learning",
             "information technology"
         ],
-        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422"
+        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422",
+        "remote": false
     },
     {
         "position": "National Consulting - San Francisco - Consultant Development Program - Technology Consulting - Platforms Intern - Summer 2021",
@@ -1570,7 +1649,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Integration Intern [2021 Internship Program]",
@@ -1588,7 +1668,8 @@
             "machine learning",
             "information technology"
         ],
-        "start": "2020-08-01T10:00:00.000Z"
+        "start": "2020-08-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "National Consulting - San Francisco - Consultant Development Program - Technology Consulting - Engineering Intern - Summer 2021",
@@ -1611,7 +1692,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "IT Support Internship",
@@ -1628,7 +1710,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Digital Marketing Intern",
@@ -1645,7 +1728,8 @@
         "skills": [
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Summer Internship: Systems Engineering (Junior / Senior / Post Grad)",
@@ -1663,7 +1747,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "National Consulting - San Francisco - Consultant Development Program - Technology Consulting - Data & Analytics Intern - Summer 2021",
@@ -1686,7 +1771,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "CAMPUS: Environmental Data Analyst Cooperative Education or Internship Opportunity - Fall/Spring",
@@ -1704,7 +1790,8 @@
             "information technology",
             "software engineering",
             "data visualization"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "National Consulting - Tysons - Consultant Development Program - Technology Consulting - Platforms Intern - Summer 2021",
@@ -1727,7 +1814,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "National Consulting - Tysons - Consultant Development Program - Technology Consulting - Data & Analytics Intern - Summer 2021",
@@ -1750,7 +1838,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "National Consulting - Tysons - Consultant Development Program - Technology Consulting - Engineering Intern - Summer 2021",
@@ -1773,7 +1862,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Machine Learning Intern",
@@ -1793,7 +1883,8 @@
             "python",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Co-Op/Intern (Data Integrity)",
@@ -1812,7 +1903,8 @@
             "cybersecurity",
             "SQL"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "System Engineering Intern",
@@ -1833,7 +1925,8 @@
             "robotics",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Research Intern, Computer Vision and Augmented Reality (PhD)",
@@ -1855,7 +1948,8 @@
             "robotics",
             "C and C++"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -1875,7 +1969,8 @@
             "data visualization",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Intern - PC Technician",
@@ -1892,7 +1987,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Engineering Intern",
@@ -1913,7 +2009,8 @@
             "python",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "IT Co-Op/Intern (Application Development)",
@@ -1933,7 +2030,8 @@
             "C and C++",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Big Data Intern",
@@ -1952,7 +2050,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Error",
@@ -1970,7 +2069,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Applied Machine Learning Engineer Intern",
@@ -1990,7 +2090,8 @@
             "software engineering",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Error",
@@ -2012,7 +2113,8 @@
             "machine learning",
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Intern, Computational Imaging - Optics (PhD)",
@@ -2033,7 +2135,8 @@
             "information technology",
             "artificial intelligence"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Error",
@@ -2052,7 +2155,8 @@
             "machine learning",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "IT Co-Op/Intern (Infrastructure)",
@@ -2069,7 +2173,8 @@
         "skills": [
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Developer, Intern",
@@ -2091,7 +2196,8 @@
             "information technology",
             "react"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Software Engineer Intern",
@@ -2113,7 +2219,8 @@
             "C and C++",
             "machine learning",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "QA Test Engineer Intern",
@@ -2134,7 +2241,8 @@
             "python",
             "java"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Error",
@@ -2152,7 +2260,8 @@
             "machine learning",
             "information technology"
         ],
-        "start": "2020-07-01T10:00:00.000Z"
+        "start": "2020-07-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer, Intern",
@@ -2173,7 +2282,8 @@
             "javascript",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer, Intern",
@@ -2194,7 +2304,8 @@
             "javascript",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern ( Fall 2020)",
@@ -2214,7 +2325,8 @@
             "DevOps",
             "machine learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2236,7 +2348,8 @@
             "java",
             "javascript",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Automation Engineer Intern",
@@ -2255,7 +2368,8 @@
             "software engineering",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2276,7 +2390,8 @@
             "python",
             "java",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Error",
@@ -2294,7 +2409,8 @@
             "machine learning",
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Cloud DevOps Intern",
@@ -2316,7 +2432,8 @@
             "java",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineer Intern - Quality Development",
@@ -2337,7 +2454,8 @@
             "java",
             "javascript",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern",
@@ -2357,7 +2475,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Network Automation TME Intern",
@@ -2377,7 +2496,8 @@
             "python",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Technology Intern Summer 2021",
@@ -2397,7 +2517,8 @@
             "javascript",
             "java",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern- Business Development",
@@ -2418,7 +2539,8 @@
             "java",
             "C and C++"
         ],
-        "contact": "1-800-336-8918"
+        "contact": "1-800-336-8918",
+        "remote": false
     },
     {
         "position": "Network Engineer Intern",
@@ -2437,7 +2559,8 @@
             "software engineering",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Intern, Cyber",
@@ -2455,7 +2578,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "US Controlling Intern",
@@ -2471,7 +2595,8 @@
         "description": "YOUR TASKS AND RESPONSIBILITIES\n<br><br>\nThe primary responsibilities of this role, U.S. Controlling Intern, are to:\n<br><br>\nSupport functional controllers in their reporting and steering responsibilities;\n<br>Analyze data, summarize conclusions and prepare senior stakeholder overviews;\n<br>Engage in strategic Controlling projects that promote continuous improvement and advance the CFO priorities;\n<br>Use the main reporting, data.one dashboard, to support change management lead in promoting the financial efficiencies of the tool and new planning processes;\n<br>Participate in short-term projects across the organization to better leverage capabilities and expertise of the FACT community.\n<br><br>\nWHO YOU ARE\n<br><br>\nYour success will be driven by your demonstration of our LIFE values. More specifically related to this position, Bayer seeks an incumbent who possesses the following:\n<br><br>\n<b>Required Qualifications:</b><br>\nStudent pursuing a Bachelor’s degree in Finance, Economics, Business Administration, Data Analytics, Computer Science or any related discipline;\n<br>Demonstrated analytical skills, structured approach, proactive and self-motivated;\n<br>Strong conceptual thinking and problem-solving skills;\n<br>Continuous improvement mind-set;\n<br>Exceptional communication and relationship building skills;\n<br>Capable of interacting with all levels of the organization;\n<br>Team spirit.\n<br><br>\nYour application\n<br><br>\nBayer offers a wide variety of competitive compensation and benefits programs. If you meet the requirements of this unique opportunity, and you have the \"Passion to Innovate\" and the \"Power to Change\", we encourage you to apply now. To all recruitment agencies: Bayer does not accept unsolicited third party resumes.\n<br><br>\nBayer is an Equal Opportunity Employer/Disabled/Veterans\n<br><br>\nBayer is committed to providing access and reasonable accommodations in its application process for individuals with disabilities and encourages applicants with disabilities to request any needed accommodation(s) using the contact information below.",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Intern, Audio Hardware (PhD)",
@@ -2491,7 +2616,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Product Manager, Intern",
@@ -2510,7 +2636,8 @@
             "information technology",
             "react"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Summer Intern",
@@ -2528,7 +2655,8 @@
             "information technology",
             "software engineering"
         ],
-        "due": "2020-11-29T10:00:00.000Z"
+        "due": "2020-11-29T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Control Unit Intern",
@@ -2548,7 +2676,8 @@
             "javascript",
             "C and C++",
             "web development"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Research Intern, Virtual Acoustics and Audio Experiences (PhD)",
@@ -2566,7 +2695,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Administrative Intern - IT Project Manager",
@@ -2582,7 +2712,8 @@
         "description": "Powered by endlessly curious people with an unwavering mission focus, Ball Aerospace pioneers discoveries that enable our customers to perform beyond expectation and protect what matters most.\n<br><br>\nWe create innovative space solutions, enable more accurate weather forecasts, drive insightful observations of our planet, deliver actionable data and intelligence, and ensure those who defend our freedom go forward bravely and return home safely.\n<br><br>\nThe Operations Strategic Support Unit plays a fundamental role in enabling efficient business and program execution – from technologies and investments to supply chain, manufacturing and test operations, facilities management, and information technology services.\n<br><br>\nThe Ball Aerospace Internship Program is a 10-week summer program that provides interns with practical experience working on relevant projects while working with designated mentors; access to state-of-the-art equipment; a competitive wage; relocation reimbursement; in-house training; group activities; possible future employment and the ability to participate in the Ball Aerospace Remote Sensing Team (BIRST) program to build and launch a rocket or high-altitude balloon. At the conclusion of your internship, you will be required to prepare and deliver a formal presentation of your project work to your respective department.\n<br><br>\nAdministrative Intern – IT Project Manager\n<br><br>\n<b>What You’ll Do:</b><br>\nUnder immediate direction of ITS Project Management Leadership, assist and support ITS in prioritization and execution of projects.\n<br>Utilize Microsoft Office products.\n<br>Perform related duties in support of project efforts in areas of project prioritization.\n<br>Provide support for project meetings (schedule project meetings, assist with project documentation, document meeting minutes, and project action/task items as appropriate).\n<br>Create/analyze process documentation to increase efficiency.\n<br>Supports project prioritization methodology including interviewing for details. Organize and report on requests.\n<br>Create and maintains files, draft internal correspondence, and perform general and/or clerical duties as assigned.\n<br>Maintain a regular and predictable work schedule.\n<br>Establish and maintain effective working relationships within the department, the Strategic Business Units, Strategic Support Units and the Company. Interact appropriately with others in order to maintain a positive and productive work environment.\n<br>Perform other duties as necessary.\n<br><br>\n<b>What You’ll Need:</b><br>\nMust have completed your sophomore or junior year and be enrolled in a degree program for the fall of 2021. We will also accept students enrolled in a post graduate program.\n<br>Degree must be from a university, college, or school which is accredited by an agency recognized by the US Secretary of Education, US Department of Education.\n<br>Pursing a degree program in Information Technology, Computer Science, Project Management, Business or a related field is preferred.\n<br>Experience or training in Project Management is preferred.\n<br>Have a conceptual understanding of Information Technology\n<br>Strong computer knowledge and organizational skills.\n<br>Must be proficient with Microsoft Office (Outlook, Excel, Word, SharePoint, and PowerPoint).\n<br>Solid communication skills and ability to lead meetings and speak in front of groups.\n<br>Willingness to work in a team environment and the ability to work independently as needed.\n<br>Detail-oriented, hardworking, positive and enthusiastic.\n<br><br>\n<b>Working Conditions:</b><br>\nWork is performed in an office environment.\n<br>Travel and local commute between Ball campuses and other possible non-Ball locations may be required\n<br><br>\nRelocation for this position is available.\n<br><br>\nUS CITIZENSHIP MAY BE REQUIRED\n<br><br>\nBall Aerospace is an Equal Opportunity/Affirmative Action Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, pregnancy, sexual orientation, gender identity, national origin, age, protected veteran status, or disability status.",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "FSO - Charlotte - Technology Consulting Intern - Summer 2021",
@@ -2605,7 +2736,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Research Intern, Platform Aware Model Optimization (PhD)",
@@ -2623,7 +2755,8 @@
             "machine learning",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Research Intern, Audio-Visual Learning (PhD)",
@@ -2645,7 +2778,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Mirror X Bell Labs Summer Intern",
@@ -2666,7 +2800,8 @@
             "robotics",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Fall Failure Analysis Co-op/Intern Engineer - (80735)",
@@ -2684,7 +2819,8 @@
             "information technology",
             "software engineering",
             "data visualization"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "CAMPUS: GIS Cooperative Education or Internship Opportunity - Fall 2020/Spring 2021",
@@ -2701,7 +2837,8 @@
         "skills": [
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Software Developer in Test (12 month work term)",
@@ -2721,7 +2858,8 @@
             "java",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Summer 2021 Failure Analysis Co-op/Intern Engineer - (80734)",
@@ -2739,7 +2877,8 @@
             "information technology",
             "software engineering",
             "data visualization"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "FSO - San Antonio - Risk Consulting Intern - Summer 2021",
@@ -2757,7 +2896,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Research Intern, Computer Vision and Augmented Reality (PhD)",
@@ -2779,7 +2919,8 @@
             "robotics",
             "C and C++"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2799,7 +2940,8 @@
             "python",
             "java",
             "matlab"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern (Roseville, CA)",
@@ -2820,7 +2962,8 @@
             "java",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern (Duham, NC)",
@@ -2841,7 +2984,8 @@
             "java",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2861,7 +3005,8 @@
             "python",
             "angular",
             "javascript"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internship",
@@ -2880,7 +3025,8 @@
             "python",
             "software engineering",
             "artificial intelligence"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "I.T. (Internship)",
@@ -2897,7 +3043,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2917,7 +3064,8 @@
             "python",
             "C and C++"
         ],
-        "contact": "Americas@marvell.com, 408-222-3604"
+        "contact": "Americas@marvell.com, 408-222-3604",
+        "remote": false
     },
     {
         "position": "Web UI Intern (Software Engineering)",
@@ -2939,7 +3087,8 @@
             "information technology",
             "react"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Data Analytics Intern",
@@ -2958,7 +3107,8 @@
             "information technology",
             "data visualization",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "I.T. Help Desk (Internship)",
@@ -2977,7 +3127,8 @@
             "data visualization",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "FSO - Boston - Technology Consulting Intern - Summer 2021",
@@ -3000,7 +3151,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -3019,7 +3171,8 @@
             "software engineering",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Engineering Internship",
@@ -3039,7 +3192,8 @@
             "python",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Technician",
@@ -3056,7 +3210,8 @@
         "skills": [
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "UI/UX Developer Intern",
@@ -3077,7 +3232,8 @@
             "software engineering",
             "web development"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Error",
@@ -3096,7 +3252,8 @@
             "software engineering",
             "C and C++"
         ],
-        "contact": "1-800-336-8918"
+        "contact": "1-800-336-8918",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (Summer 2021)",
@@ -3114,7 +3271,8 @@
             "machine learning",
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -3134,7 +3292,8 @@
             "data visualization",
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "ASIC Verification Engineering Intern",
@@ -3155,7 +3314,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Undergraduate Privacy Analyst Internship",
@@ -3173,7 +3333,8 @@
             "information technology",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Hacker Young Professional (Intern)",
@@ -3194,7 +3355,8 @@
             "machine learning",
             "web development",
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineer Intern",
@@ -3216,7 +3378,8 @@
             "java",
             "javascript",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Systems Developer Intern",
@@ -3234,7 +3397,8 @@
             "java",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Engineer Intern",
@@ -3252,7 +3416,8 @@
             "information technology",
             "software engineering",
             "cloud computing"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Systems Verification Engineer, Intern",
@@ -3271,7 +3436,8 @@
             "software engineering",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Desktop Support Intern (Summer 2021 | Minneapolis)",
@@ -3288,7 +3454,8 @@
         "skills": [
             "information technology",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Quantitative Internship Program - Summer 2021",
@@ -3309,7 +3476,8 @@
             "information technology",
             "software engineering"
         ],
-        "start": "2021-06-01T10:00:00.000Z"
+        "start": "2021-06-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Quantitative Research Internship",
@@ -3325,7 +3493,8 @@
         "description": "Geode is a systematic, research driven investment manager, offering a wide range of investment strategies across multiple asset classes. Since our inception in 2001, we have used a combination of theory, data and technology to better understand financial markets and develop innovative investment solutions for our clients.\n<br><br>\nYour internship at Geode will be centered around a 12 week research project, where you will:\n<br>Develop hypotheses and theoretical models describing how investors behave and markets operate\n<br>Collect and analyze data needed to test these models\n<br>Test theory against data, refining hypotheses and models in the process\n<br>Distill the evidence and theory into new insights about how financial markets work\n<br>Your research project may lead to implementation, impacting the way Geode invests.\n<br><br>\nDuring your internship you will collaborate closely with the research team, a collaborative, yet demanding group of individuals. They will provide guidance, support and ideas. You will also be exposed to the research of others, participating in research meetings and discussions, where you will be expected to offer your own suggestions and ideas.\n<br><br>\n<b>Qualifications:</b><br>\nPursuing a technical degree (undergraduate, graduate or PhD) in fields like mathematics, statistics, physics, computer science, economics and finance\n<br>Expected graduation date between December 2021 and June 2022\n<br>Intermediate skill in one programming language\n<br>Deep intellectual curiosity and creative approach to problem solving\n<br>Strong analytic and quantitative skills\n<br>Rigorous and structured thought process\n<br>Collaborates effectively with team members\n<br>Desire to pursue a career in investment management\n<br>Ability to communicate complex ideas effectively",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Engineering Standards Intern",
@@ -3344,7 +3513,8 @@
             "software engineering",
             "information technology"
         ],
-        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422"
+        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422",
+        "remote": false
     },
     {
         "position": "Graphic Design Internship",
@@ -3362,7 +3532,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "Business Support Intern",
@@ -3381,7 +3552,8 @@
             "software engineering",
             "robotics",
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Error",
@@ -3400,7 +3572,8 @@
             "software engineering",
             "robotics",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3420,7 +3593,8 @@
             "python",
             "java",
             "matlab"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Error",
@@ -3438,7 +3612,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Central - Tampa - Risk Consulting M&E Intern - Winter 2021",
@@ -3456,7 +3631,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "FSO - Tysons - Risk Consulting P&C Intern - Summer 2021",
@@ -3475,7 +3651,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Central - Raleigh - Risk Assurance Intern - Summer 2021",
@@ -3493,7 +3670,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "UI/UX Design Intern",
@@ -3512,7 +3690,8 @@
             "information technology",
             "cloud computing"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Design Engineering Intern",
@@ -3531,7 +3710,8 @@
             "python",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern",
@@ -3553,7 +3733,8 @@
             "python",
             "angular"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Software QA Intern",
@@ -3574,7 +3755,8 @@
             "robotics",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Quality Engineer Intern",
@@ -3592,7 +3774,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -3609,7 +3792,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Information Security Intern",
@@ -3626,7 +3810,8 @@
         "skills": [
             "information technology",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Actuarial Internship",
@@ -3644,7 +3829,8 @@
             "machine learning",
             "information technology"
         ],
-        "contact": "260-455-2558"
+        "contact": "260-455-2558",
+        "remote": false
     },
     {
         "position": "Network & Systems Engineer Intern",
@@ -3663,7 +3849,8 @@
             "software engineering",
             "python",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Error",
@@ -3681,7 +3868,8 @@
             "machine learning",
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Spring 2021 Intern, Electronics Simulation Research and Development - MS or PhD",
@@ -3704,7 +3892,8 @@
             "machine learning"
         ],
         "compensation": "paid",
-        "start": "2021-01-01T10:00:00.000Z"
+        "start": "2021-01-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Sales Operations Intern",
@@ -3720,7 +3909,8 @@
         "description": "<b>Summary of Major Responsibilities:</b><br>\nThe Commercial Enablement Intern will assist in the execution of daily assignments supporting the entire commercial team. The position is intended to be a short-term opportunity for an undergraduate to obtain hands-on project management, analytical, and problem solving experience in sales, marketing, and operations while contributing to the Commercial Team effort.\n<br><br>\n<b>Essential Duties and Responsibilities:</b><br>\nSupport Commercial Enablement Initiatives as assigned.\n<br>Interface with business analysts and project managers to document business need requirements based on functional specifications in a highly collaborative project environment.\n<br>Provide internal customers with timely resolution of production issues, being able to diagnose and resolve defects.\n<br>Assist in the design and development of processes to enhance operational excellence, including targeting and alignment updates, standard operating procedures (such as tactical plans, compliance reporting, etc), and performance reporting.\n<br>Enable collaborative culture and drive organization to improve customer/client satisfaction levels and responsiveness.\n<br>Collaborate with various stakeholders (marketing, IT, laboratory, sales management) to establish and maintain data stewardship processes and principles.\n<br>Lead the way identifying data quality issues within the data and create efficient solutions to resolve these anomalies.\n<br>Perform Change Request Process and research providers.\n<br>OpenData scrubbing and matching up records.\n<br>Update Data/Alignments/New Ordering Provider Process.\n<br>Respond to Data requests/Build Basic Reports.\n<br>Perform Roster Management duties.\n<br>In Box Watch.\n<br>Newsletter support.\n<br>Uphold company mission and values through accountability, innovation, integrity, quality, and teamwork.\n<br>Support and comply with the company’s Quality Management System policies and procedures.\n<br>Regular and reliable attendance.\n<br>Ability and means to travel between Madison locations.\n<br><br>\n<b>Qualifications:</b><br>\nMinimum Qualifications\n<br><br>\nBasic proficiency with the Microsoft Office Suite.\n<br>Enrollment towards Bachelor’s degree in Life sciences, Business, Computer Science, IT Applications, etc..\n<br>Preference giving to candidates with a record of outstanding academic achievement.\n<br><br>\n#LI-SR1\n<br><br>\n<b>EEO Disclosure:</b><br>\nWe are an equal employment opportunity employer. All qualified applicants will receive consideration for employment without regard to age, color, creed, disability, gender identity, national origin, protected veteran status, race, religion, sex, sexual orientation, and any other status protected by applicable local, state or federal law. Applicable portions of the Company’s affirmative action program are available to any applicant or employee for inspection upon request.",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern",
@@ -3740,7 +3930,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Programmer Intern - Agritech Startup",
@@ -3759,7 +3950,8 @@
             "software engineering",
             "machine learning",
             "web development"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Computational Photography and Computer Vision Algorithm Design Engineer Intern",
@@ -3783,7 +3975,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Trace",
@@ -3801,7 +3994,8 @@
             "machine learning",
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Application/Tools Engineer Intern",
@@ -3823,7 +4017,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "WEST - Houston - Risk Consulting Intern - Fall 2021",
@@ -3841,7 +4036,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "IRRT Hiring Event - Internship IT Positions, Returning and Rotating",
@@ -3862,7 +4058,8 @@
             "python",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Firmware Development Intern",
@@ -3884,7 +4081,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Deep Learning Computer Vision Researcher-Scientist Intern",
@@ -3908,7 +4106,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Server Architecture",
@@ -3927,7 +4126,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer in Test Intern",
@@ -3948,7 +4148,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Analytics",
@@ -3969,7 +4170,8 @@
             "data visualization",
             "javascript",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Engineering Operations",
@@ -3988,7 +4190,8 @@
             "software engineering",
             "DevOps",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Security Intern",
@@ -4005,7 +4208,8 @@
         "skills": [
             "information technology",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Actuarial Internship",
@@ -4023,7 +4227,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Processing, Imaging & Productions",
@@ -4043,7 +4248,8 @@
             "javascript",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Embedded Software Engineering Intern",
@@ -4065,7 +4271,8 @@
             "machine learning",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Analytics Engineer Intern",
@@ -4089,7 +4296,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Performance Analysis Engineer Intern",
@@ -4113,7 +4321,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern at The Bear Institute",
@@ -4134,7 +4343,8 @@
             "data visualization",
             "machine learning",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Machine Learning Engineer Intern",
@@ -4157,7 +4367,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Platform",
@@ -4175,7 +4386,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Cloud Engineering",
@@ -4196,7 +4408,8 @@
             "cloud computing",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Enterprise SSD Test Engineer Intern",
@@ -4220,7 +4433,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Data Engineer Intern",
@@ -4239,7 +4453,8 @@
             "software engineering",
             "information technology",
             "SQL"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Security Engineer Intern",
@@ -4259,7 +4474,8 @@
             "python",
             "java",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern, Solution Developer for Conversion Services Group",
@@ -4278,7 +4494,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "Careers@Hyland.com"
+        "contact": "Careers@Hyland.com",
+        "remote": false
     },
     {
         "position": "Enterprise SSD System Engineer Intern",
@@ -4301,7 +4518,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "SSD Research Intern",
@@ -4323,7 +4541,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, Big Data (Summer 2021)",
@@ -4343,7 +4562,8 @@
             "java",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Embedded Software Engineer",
@@ -4362,7 +4582,8 @@
             "C and C++",
             "cloud computing"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Review/Core",
@@ -4384,7 +4605,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "GNSS Software Engineer Intern - Tracker Team",
@@ -4408,7 +4630,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Enterprise SSD Firmware Engineer Intern",
@@ -4432,7 +4655,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, Android (Summer 2021)",
@@ -4454,7 +4678,8 @@
             "java",
             "machine learning",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, Web Application (Summer 2021)",
@@ -4473,7 +4698,8 @@
             "software engineering",
             "javascript",
             "angular"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Distributed Storage System Test and Automation Engineer Intern",
@@ -4496,7 +4722,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Intern",
@@ -4514,7 +4741,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "WEST - San Jose - Risk Consulting Intern - Summer 2021",
@@ -4532,7 +4760,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Storage Systems Architect Intern",
@@ -4555,7 +4784,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, Full Stack (Summer 2021)",
@@ -4575,7 +4805,8 @@
             "python",
             "java",
             "javascript"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, Infrastructure (Summer 2021)",
@@ -4596,7 +4827,8 @@
             "python",
             "java",
             "javascript"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Image Processing Intern",
@@ -4619,7 +4851,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Spring 2021 Test Engineer Co-op/Intern - (80654)",
@@ -4640,7 +4873,8 @@
             "java",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "System Modeling Intern",
@@ -4662,7 +4896,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Intern, Internal Audit",
@@ -4678,7 +4913,8 @@
         "description": "Assist IT Audit Sr. Manager with planning, organizing, and executing audit work – including observations, interviews, analytical procedures, and testing\n<br>Obtain an understanding of operations and IT areas under review\n<br>Perform information technology general control (ITGC-SOX) testing\n<br>Contribute to the development of data-driven audit procedures\n<br><br>\n<b>QUALIFICATIONS:</b><br>\nDemonstrated leadership potential\n<br>Self-motivated and results-oriented\n<br>Motivated to contribute to development of data-driven audit procedures\n<br>Strong research capabilities to quickly understand technologies and related risks\n<br>Strong verbal and written communication skills\n<br>Exceptional problem solving and critical thinking abilities\n<br>Attention to detail\n<br>Proficient in Excel, Word, and PowerPoint\n<br>Understanding of core information technology concepts\n<br>Flexible and adaptable to changing priorities\n<br>Currently enrolled and pursuing a 4-year degree or Master’s degree, preferably in Computer Science, Information Technology, Business Analytics, Accounting or a related field\n<br>A minimum GPA of 3.0\n<br>Available to work out of our Greensboro, NC office\n<br><br>\nThe above duties are not intended to be all-inclusive or permanent. The requirements of the position may change based on the business need. Duties, responsibilities, and activities may change.\n<br><br>\n<b>Position Location:</b> Greensboro,NC",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "DATA GOVERNANCE INTERN",
@@ -4694,7 +4930,8 @@
         "description": "EXTRAORDINARY PEOPLE. EXCITING POSSIBILITIES. GREAT OPPORTUNITY.\n<br><br>\nCustom Truck One Source has changed the way the industry looks at specialized truck and heavy equipment solutions. With sales, rentals, aftermarket parts and service, equipment customization, remanufacturing, financing solutions, and asset disposal, our team of experts, vast equipment breadth and integrated network of locations across North America offer superior service and unmatched efficiency for our customers. Your success is what's next with Custom Truck One Source.\n<br><br>\nSummary\n<br><br>\nCustom Truck One Source is seeking a Data Governance Intern, to assist in all activities associated with the ongoing optimization of company data.\n<br><br>\nEssential Duties and Responsibilities\n<br><br>\nSanitize, validate and enrich large data sets to ensure company data meets precise standards and upholds high integrity\n<br>Utilize data cleaning tools and methods to perform manual sanitization of company data and all associated activities, including:\n<br>Identifying and removing duplicate data\n<br>Validating data accuracy and taking corrective measures in cases of outliers\n<br>Managing missing data\n<br>Removing unqualified data\n<br>Align formatting of cleaned data sets for optimal upload compatibility\n<br>Set, maintain and uphold precise standards for future data entries\n<br><br>\nRequired Skills and Qualifications\n<br><br>\n<b>Qualifications include:</b><br>\nBachelor’s degree in information technology, business, or related field, or equivalent combination of education and experience required\n<br>1+ years of experience in data quality\n<br>Advanced level of proficiency with Microsoft Excel and intermediate level of proficiency in other Microsoft Office programs\n<br>Strong understanding of databases and data structures\n<br>Self-motivated and able to handle tasks and meet deadlines with minimal supervision\n<br>Excellent written and verbal communication skills\n<br>Strong analytical and time management skills\n<br><br>\nThis job description is not designed to cover or contain a comprehensive listing of activities, duties or responsibilities that are required of the employee. Duties, responsibilities and activities may change, or new ones may be assigned at any time with or without notice.\n<br><br>\nEqual Employment Opportunity Employer\n<br><br>\nCustom Truck One Source provides equal employment opportunities to all employees and applicants for employment and prohibits discrimination and harassment of any type without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state or local laws.",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Analystics Intern",
@@ -4714,7 +4951,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, iOS (Summer 2021)",
@@ -4735,7 +4973,8 @@
             "C and C++",
             "machine learning",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "FSO - Boston - Technology Consulting Intern - Summer 2021",
@@ -4758,7 +4997,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "WEST - Houston - Risk Consulting Intern - Fall 2021",
@@ -4776,7 +5016,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Perception Intern/Co-op for Marine Autonomy",
@@ -4796,7 +5037,8 @@
             "python",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern, Global Services, Healthcare Admin Services I",
@@ -4815,7 +5057,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "Careers@Hyland.com"
+        "contact": "Careers@Hyland.com",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, DevOps/SRE (Summer 2021)",
@@ -4836,7 +5079,8 @@
             "DevOps",
             "python",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "GNSS Software Engineer Intern - SW Sys Team",
@@ -4860,7 +5104,8 @@
         ],
         "compensation": "paid",
         "start": "2021-06-01T10:00:00.000Z",
-        "due": "2020-09-01T10:00:00.000Z"
+        "due": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Internship - Building Automation/Controls (Summer 2021)",
@@ -4878,7 +5123,8 @@
             "information technology",
             "software engineering",
             "cybersecurity"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Fall 2021 Test Engineer Co-op/Intern - (80656)",
@@ -4899,7 +5145,8 @@
             "java",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer 2021 Test Engineer Co-op/Intern - (80653)",
@@ -4920,7 +5167,8 @@
             "java",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -4942,7 +5190,8 @@
             "machine learning",
             "information technology",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Full Stack Developer - Founding team",
@@ -4964,7 +5213,8 @@
             "python",
             "angular"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "WEST - San Jose - Risk Consulting Intern - Summer 2021",
@@ -4982,7 +5232,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (Boise, ID)",
@@ -5003,7 +5254,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -5025,7 +5277,8 @@
             "angular",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Behavioral Health Software Company: Research Intern",
@@ -5044,7 +5297,8 @@
             "software engineering",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Software Application Developer (Entry-Level)",
@@ -5064,7 +5318,8 @@
             "react",
             "cloud computing"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Error",
@@ -5083,7 +5338,8 @@
             "C and C++",
             "information technology",
             "artificial intelligence"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Research Internship",
@@ -5100,7 +5356,8 @@
         "skills": [
             "C and C++",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Support Technician (Internship position)",
@@ -5120,7 +5377,8 @@
             "machine learning",
             "software engineering",
             "mobile development"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "IT Cyber Security Intern - Summer 2021",
@@ -5136,7 +5394,8 @@
         "description": "<b>Gypsum Management &amp; Supply, Inc. (NYSE:</b> GMS) is the largest leading North American specialty distributor of interior building products. The company’s product offerings of wallboard, ceilings and complementary interior construction products are designed to provide a comprehensive solution for its core customer, the interior contractor who installs these products in commercial and residential buildings. As a leading specialty distributor, GMS serves as a critical link between its suppliers and a highly fragmented customer base of over 20,000 contractors. The company’s operating model combines a national platform with a local go-to-market strategy, enabling GMS to generate economies of scale while maintaining the high service levels, entrepreneurial culture and customer intimacy of a local business.\n<br><br>\nFounded in 1971, GMS operates a national network of over 250 distribution centers across the U.S. and Canada and provides a one-stop-shop for all customers. The Yard Support Center in Tucker, Georgia serves each GMS location, providing the support needed to enable them to continue their outstanding service to contractors and builders in their local communities.\n<br><br>\nGMS has continued to grow through organic growth and acquisitions. The company completed five acquisitions and added ten new locations in fiscal 2018; it also completed three business acquisitions and eight greenfield openings during fiscal 2019. This included the strategic acquisition of WSB Titan, which increased GMS’ scale and footprint in North America, provided a leadership entry into the Canadian market and created a well-balanced platform for long-term growth.\n<br><br>\nGMS KEY FACTS\n<br><br>\n<b>Headquarters:</b> Tucker, Georgia (20 min. from downtown Atlanta)\n<br><b>Employees:</b> Over 5,800 people who embrace a strong entrepreneurial culture\n<br><b>2019 Revenues:</b> $3.1 billion\n<br><b>NYSE:</b> GMS (IPO in 2016)\n<br><br>\nGMS' STRATEGIC ADVANTAGE\n<br><br>\nPOISED FOR CONTINUED GROWTH\n<br><br>\nMarket-leading distributor of interior building products with significant scale and local expertise\n<br>Differentiated service model drives market leadership\n<br><b>Multiple levers to drive growth:</b> organic, greenfields, M&amp;A, operating leverage\n<br>Capitalizing on growth in large, diverse end markets\n<br>Entrepreneurial culture with dedicated employees and experienced leadership driving superior execution\n<br><br>\nVISION, MISSION, AND VALUES\n<br><br>\n<b>Vision:</b> We will be the premier distributor in every market we serve through embracing our unique culture and professional humility.\n<br><br>\n<b>Mission:</b> We create opportunities, build significant relationships and deliver solutions.\n<br><br>\n<b>Values:</b> At GMS –\n<br><br>\nOur people have the independence and authority to make a\n<br>We invest in relationships, and every person is\n<br>Our highest priority is serving\n<br>We passionately pursue a safe work environment along with a relentless focus on operational excellence.\n<br>We believe you can never go wrong doing the right\n<br><br>\n<b>VIDEO:</b> Who We Are: the GMS Story\n<br><br>\n<b>VIDEO:</b> What We Do: the Customer Experience at GMS\n<br><br>\n<b>VIDEO:</b> How We Work: the GMS Difference\n<br><br>\nFor more information, visit www.gms.com.\n<br><br>\n<b>Duties &amp; Responsibilities:</b><br>\nMaintain working knowledge of cyber threat tactics and techniques\n<br>Research, identify, and understand new threats\n<br>Assist with conducting risk assessments, security audits, vulnerability/penetration tests with commercial, open-source, and self-developed tools and techniques\n<br>Assist with digital forensic investigations involving data breaches and litigation support\n<br>Document and present findings to the team and clients\n<br>Excel as a self-motivated individual who can work on their own as well as integrated with a team in a variety of situations\n<br>Provide immediate onsite support for security incidents\n<br>Work with and support lead incident response handlers\n<br>Research, identify and understand new artifacts in enterprise computing environments\n<br><br>\n<b>Basic Qualifications:</b><br>\nBachelor's degree in Computer Science and/or Security preferred (in progress or completed)\n<br>Strong networking knowledge with a focus on security and digital forensics\n<br>Experience with Windows client/server architecture. Familiarity with Linux/Unix desired\n<br>Experience with scripting languages preferred\n<br>Knowledge about TCP/IP networks and architecture\n<br>Strong verbal and written skills\n<br><br>\n<b>Other Competencies:</b><br>\nAbility to self-manage, show initiative and meet deadlines\n<br>Detail oriented and excellent organizational skills\n<br>Ability to handle multiple projects and deadlines\n<br>Strong analytical and problem-solving skills, with a bias towards simple solutions\n<br><br>\n<b>Physical Demands:</b><br>\nMust be able to remain in stationary position 70%\n<br>Occasionally, will move about inside the office to access files, office machinery, etc.\n<br>Must be able to operate basic office machinery\n<br>Must be able to communicate with team and management and be able to exchange accurate information in these situations.\n<br>Constantly working in office environment\n<br><br>\n<b>Mental Demands:</b><br>\nMust be able to problem solve and prioritize tasks\n<br>Must be able to manage stress depending on tasks\n<br>Must be able to multitask\n<br>Must be able to receive and analyze technical information\n<br>Must be able to quickly communicate solutions if problems occur\n<br>Must be able to demonstrate a high degree of sound judgement\n<br><br>\nThis job description is subject to change at any time.\n<br><br>\nLaunch your career with a national building materials distributor and discover opportunities for growth and advancement. Our people have the independence and authority to make a difference. We invest in relationships, and every person is important. Our highest priority is serving others. We passionately pursue a safe work environment along with a relentless focus on operational excellence. We believe you can never go wrong doing the right thing.\n<br><br>\nEQUAL OPPORTUNITY EMPLOYER",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "ATC ETL - Software Engineering Intern, Akron Test Center - Akron, OH",
@@ -5156,7 +5415,8 @@
             "data visualization",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - CAD Engineer",
@@ -5178,7 +5438,8 @@
             "data visualization",
             "C and C++"
         ],
-        "contact": "1-800-336-8918"
+        "contact": "1-800-336-8918",
+        "remote": false
     },
     {
         "position": "IT Help Desk Technician",
@@ -5197,7 +5458,8 @@
             "software engineering",
             "mobile development"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Error",
@@ -5215,7 +5477,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Web Application & Analytics Development Intern",
@@ -5237,7 +5500,8 @@
             "react",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Global Technology - Data Platform Engineering Intern - Akron",
@@ -5256,7 +5520,8 @@
             "software engineering",
             "javascript",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Customer Service Internship - Spring 2021",
@@ -5275,7 +5540,8 @@
             "machine learning",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Information Assurance/Cyber Intern",
@@ -5295,7 +5561,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Error",
@@ -5314,7 +5581,8 @@
             "software engineering",
             "information technology",
             "artificial intelligence"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern — FPGA Engineer (Winter/Spring 2021)",
@@ -5331,7 +5599,8 @@
         "skills": [
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Intern - Emerging Memory Optimization Engineer",
@@ -5350,7 +5619,8 @@
             "software engineering",
             "machine learning"
         ],
-        "contact": "1-800-336-8918"
+        "contact": "1-800-336-8918",
+        "remote": false
     },
     {
         "position": "Error",
@@ -5367,7 +5637,8 @@
         "skills": [
             "software engineering",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Engineering Intern",
@@ -5387,6 +5658,7 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     }
 ]
