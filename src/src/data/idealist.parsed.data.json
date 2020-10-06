@@ -41,7 +41,8 @@
         "url": "https://www.idealist.org/en/nonprofit-internship/57361cd724d84324a42fdb2a32fff8a6-remote-public-policyjournalism-internship-citizens-union-new-york",
         "lastScraped": "2020-10-02T02:35:32.085Z",
         "description": "<p>Our interns play a vital role in Citizens Union’s success.&nbsp;We are looking for interns with an interest in research and journalism for the fall semester. The following are some of the responsibilities of Citizens Union’s policy interns for fall 2020:</p><ul><li>Conducting research on candidates running for local office, including biographical and policy research;</li><li>Identifying all candidates in a particular race using news reports, campaign material, and public documents;</li><li>Liaising and scheduling interviews with candidates and elected officials;</li><li>Conducting research on public policy issues of importance, including civics education, campaign finance, felony disfranchisement, ethics, as well as other issues of good governance; and</li><li>Researching for, writing, and editing issue summaries, analyses and reports, policy briefings, memos of support, organizational position statements, and correspondence to public officials.</li><li>The ideal intern will be a college graduate, postgraduate, or undergraduate with:</li><li>Experience in journalism;</li><li>&nbsp;A background or interest in government, political science, public administration, history, law, or a related field;</li><li>&nbsp;Excellent written communication skills;</li><li>Online research skills, including mining media reports and social media platforms, and basic computer proficiency;</li><li>Public policy research experience;</li><li>Comfort making cold calls; and</li><li>The availability to commit a minimum of 15 hours per week.</li></ul><p>If you have some, but not all, of these qualifications and feel you would make a positive contribution to the team, we encourage you to apply. In light of the COVID-19 pandemic, the internship will take place entirely remotely for the foreseeable future. As such, candidates can apply from anywhere in the United States. We are willing to work with your academic institution if you are interested in receiving credit. Priority will be given to candidates that can begin immediately.</p><p>Citizens Union is an Equal Opportunity Employer and encourages applicants of all backgrounds and experiences to apply.</p>",
-        "skills": []
+        "skills": [],
+        "remote": true
     },
     {
         "position": "Rule of Law Internship",
@@ -61,6 +62,7 @@
         "due": "2020-11-02T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     }
 ]

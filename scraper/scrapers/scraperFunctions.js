@@ -45,4 +45,18 @@ async function autoScroll(page) {
   });
 }
 
-export { fetchInfo, autoScroll };
+
+/**
+ * Checks to see if the data contains the word 'remote'
+ * @param data String The data we're checking
+ * @returns boolean true if found, else false
+ */
+function isRemote(data) {
+  const parsed = data.replace(/([\[\]()-])gmi/, '').toLowerCase();
+  if (parsed.includes('remote')) {
+    return true;
+  }
+  return false;
+}
+
+export { fetchInfo, autoScroll, isRemote };

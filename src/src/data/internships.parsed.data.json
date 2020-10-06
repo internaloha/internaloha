@@ -15,7 +15,8 @@
             "python",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern (Computer Science)",
@@ -31,7 +32,8 @@
         "skills": [
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Intern (Computer Science)",
@@ -47,7 +49,8 @@
         "skills": [
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Technology Program Summer 2020 Internship - Computer Science",
@@ -65,7 +68,8 @@
             "information technology",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Technology Program Summer 2020 Internship - Computer Science",
@@ -83,7 +87,8 @@
             "information technology",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Science Intern IV",
@@ -106,7 +111,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern",
@@ -125,7 +131,8 @@
             "C and C++",
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Internship in Management Information Systems - Fall",
@@ -143,7 +150,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "STEM Software Engineering Intern Air Traffic Control",
@@ -163,7 +171,8 @@
             "C and C++"
         ],
         "compensation": "paid",
-        "contact": "leidos@leidos.com"
+        "contact": "leidos@leidos.com",
+        "remote": false
     },
     {
         "position": "High School Technology Program  Summer 2020 Internship - Computer Science",
@@ -181,7 +190,8 @@
             "information technology",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern IT Innovation: Computer Science fields of Data, Innovation, Architecture, Cyber Security & Analytics",
@@ -200,7 +210,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Stem Software Engineering Intern - Air Traffic Control",
@@ -220,7 +231,8 @@
             "C and C++"
         ],
         "compensation": "paid",
-        "contact": "leidos@leidos.com"
+        "contact": "leidos@leidos.com",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -237,7 +249,8 @@
             "C and C++",
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -253,7 +266,8 @@
         "skills": [
             "software engineering"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "Stem Software Engineering Intern - Air Traffic Control",
@@ -273,7 +287,8 @@
             "C and C++"
         ],
         "compensation": "paid",
-        "contact": "leidos@leidos.com"
+        "contact": "leidos@leidos.com",
+        "remote": false
     },
     {
         "position": "Software Development Internship for Video Surveillance Software",
@@ -292,7 +307,8 @@
             "java",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Fall 2020-Software Engineering/Computer Science Intern",
@@ -311,7 +327,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "National Business, Marketing, Media, Film, Computer Science, Management, Entrepreneurial, Virtual Internship",
@@ -330,7 +347,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "Fall 2020-Software Engineering/Computer Science Intern",
@@ -349,7 +367,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Summer Technician Intern - Data Science",
@@ -364,7 +383,8 @@
         "description": "2021 Summer Tech Intern - Data Science at PIMCO in Newport Beach, California\n\nPosted in Other about 3 hours ago.\n\nType: Full Time\n\n------------\n\nJob Description:\n\nGENERAL INFORMATION\n\nRef #: 28732\n\nEmployee Type: Internship\n\nLocation: Flexible - US\n\nDate published: 21-Aug-2019",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern IT Innovation: Computer Science fields of Data, Innovation, Architecture, Cyber Security & Analytics",
@@ -383,7 +403,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Internship for Video Surveillance Software",
@@ -402,7 +423,8 @@
             "java",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Computer Engineer Internship",
@@ -419,7 +441,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Masters Intern National Security Masters Intern - Computing and Analytics (NSIP)",
@@ -438,7 +461,8 @@
             "software engineering",
             "data visualization"
         ],
-        "start": "2020-09-01T10:00:00.000Z"
+        "start": "2020-09-01T10:00:00.000Z",
+        "remote": true
     },
     {
         "position": "Computer Technician",
@@ -453,7 +477,8 @@
         "description": "Computer Technician Requirements:Pursuing a Degree in Computer Science, Information Science or equivalent.Problem-solving skills.Active listening skills.Knowledge of data storage and data recovery.Service-oriented.Exceptional technical expertise.Superior working knowledge of computer systems.Time and task management.",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Computer Vision Intern",
@@ -475,7 +500,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -494,7 +520,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern IT Innovation: Computer Science fields of Data, Innovation, Architecture, Cyber Security & Analytics",
@@ -513,7 +540,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Vision Intern",
@@ -535,7 +563,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Error",
@@ -558,7 +587,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Error",
@@ -571,7 +601,8 @@
         "url": "https://www.internships.com/app/job/sam_iljYHxOHGC3eimtnMDruDjMev54_5bmsgz4it9lcfGZ2BgoE1cdYSw?context=search",
         "lastScraped": "2020-07-08T00:22:55.958Z",
         "description": "Error",
-        "skills": []
+        "skills": [],
+        "remote": false
     },
     {
         "position": "Mobil App Development Intern",
@@ -592,7 +623,8 @@
         "contact": "KEisentraut@kentdisplays.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -611,7 +643,8 @@
             "python",
             "robotics",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Technical Intern 1",
@@ -626,7 +659,8 @@
         "description": "ARA's Egg Harbor Township, NJ office has a part-time internship opportunity (10 to 20 hours per week) for students interested in a career in aviation, engineering or computer science.\n\nUnder direct supervision, interns perform various tasks for ARA professional staff. This includes conducting technical, mechanical or historical research and data collection to assist in preparation of project deliverables. Interns may also prepare reports and other correspondence.\n\nRequired Skills:\n\nHigh school or college students planning to pursue a career in aviation, engineering, science, mathematics, or computer scienceProficiency in MS Word and ExcelStrong communication skills (written and verbal)GPA of at least 3.0\n",
         "skills": [
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Engineering Intern",
@@ -648,7 +682,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Autonomous Vehicle Intern",
@@ -670,7 +705,8 @@
         ],
         "qualifications": [
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Science Internship",
@@ -688,7 +724,8 @@
             "data visualization",
             "software engineering",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Science Internship",
@@ -706,7 +743,8 @@
             "data visualization",
             "software engineering",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - PC Technician",
@@ -722,7 +760,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "STEM Software Engineering Intern Air Traffic Control",
@@ -742,7 +781,8 @@
             "C and C++"
         ],
         "compensation": "paid",
-        "contact": "leidos@leidos.com"
+        "contact": "leidos@leidos.com",
+        "remote": false
     },
     {
         "position": "Programmer Intern",
@@ -762,7 +802,8 @@
             "software engineering",
             "web development"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Research Intern, Artificial Intelligence",
@@ -784,7 +825,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software development Intern - Javascript",
@@ -801,7 +843,8 @@
             "software engineering",
             "javascript"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "iOS Developer",
@@ -814,7 +857,8 @@
         "url": "https://www.internships.com/app/job/ccm_2f3ef133-c817-49f8-ba76-19b51870ea7f?context=search",
         "lastScraped": "2020-07-08T00:23:59.493Z",
         "description": "· Minimum 0-1 year experience with mobile development with Swift, Xcode and the iOS SDK· Understanding of Apple’s design principles and interface guidelines· Basic computer science knowledge in algorithms and data structures· Experience in iOS 12 & iOS13· Experience with Git, CocoaPods and designing StoryBoard· Experience with AlamoFire· Experience with developing network and geolocation-based applications· Experience with CI/CD and MVC design modelGeneral Responsibilities:· Attend regular meetings with team members, whether online or in-person· Complete all tasks assigned to you on time· Be able to work in a group with others· Update the rest of the team on your progress via discord· Be open to sharing your ideas with the rest of the team",
-        "skills": []
+        "skills": [],
+        "remote": true
     },
     {
         "position": "Research Intern, Artificial Intelligence",
@@ -836,7 +880,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Iot Software Development Intern Round",
@@ -854,7 +899,8 @@
             "software engineering",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -873,7 +919,8 @@
             "python",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "2020 AIG Early Career Technology Summer Internship Program",
@@ -894,7 +941,8 @@
         "due": "2022-06-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -916,7 +964,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern",
@@ -935,7 +984,8 @@
             "python",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "2020 AIG Early Career Technology Summer Internship Program",
@@ -956,7 +1006,8 @@
         "due": "2022-06-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -975,7 +1026,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Development And Test Intern Student",
@@ -994,7 +1046,8 @@
             "python",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern, Software Engineering",
@@ -1018,7 +1071,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern, Software Engineering",
@@ -1042,7 +1096,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Information Technology Internship",
@@ -1058,7 +1113,8 @@
         "skills": [
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Stem Software Engineering Intern - Air Traffic Control",
@@ -1078,7 +1134,8 @@
             "C and C++"
         ],
         "compensation": "paid",
-        "contact": "leidos@leidos.com"
+        "contact": "leidos@leidos.com",
+        "remote": false
     },
     {
         "position": "2020 TechX Software Engineering & Development Internship",
@@ -1099,7 +1156,8 @@
             "python",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "3D Engineering / Data Science Developer Intern",
@@ -1116,7 +1174,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "2020 TechX Software Engineering & Development Internship",
@@ -1137,7 +1196,8 @@
             "python",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "VIRTUAL COMPUTER SCIENCE, CYBERSECURITY, IT WEB DEVELOPMENT INTERNSHIP",
@@ -1153,7 +1213,8 @@
         "skills": [
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Intern Software Engineer (Java/JavaScript/Python/HTML)",
@@ -1176,7 +1237,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Internship - Software Tester",
@@ -1195,7 +1257,8 @@
             "C and C++",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer (Intern)",
@@ -1216,7 +1279,8 @@
             "C and C++",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Computer Engineering Intern",
@@ -1238,7 +1302,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer (Intern)",
@@ -1259,7 +1324,8 @@
             "C and C++",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Developer Internship - Fall",
@@ -1278,7 +1344,8 @@
             "java",
             "C and C++",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Engineering Intern - Next Gen Platform/Validation",
@@ -1300,7 +1367,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "R&D Software Engineering Intern - Gap Year",
@@ -1318,7 +1386,8 @@
             "robotics",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Internship - Fall",
@@ -1337,7 +1406,8 @@
             "java",
             "C and C++",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -1355,7 +1425,8 @@
             "javascript",
             "java",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -1373,7 +1444,8 @@
             "javascript",
             "java",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -1393,7 +1465,8 @@
             "data visualization",
             "java",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1408,7 +1481,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "R&D Software Engineering Intern - Gap Year",
@@ -1426,7 +1500,8 @@
             "robotics",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1441,7 +1516,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -1463,7 +1539,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1478,7 +1555,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -1496,7 +1574,8 @@
             "software engineering",
             "machine learning",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "National Business, Marketing, Media, Film, Computer Science, Management, Entrepreneurial, Virtual Internship",
@@ -1515,7 +1594,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1530,7 +1610,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1545,7 +1626,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1560,7 +1642,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1575,7 +1658,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Intern",
@@ -1594,7 +1678,8 @@
             "python",
             "java",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1609,7 +1694,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1624,7 +1710,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -1641,7 +1728,8 @@
             "software engineering",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -1661,7 +1749,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1676,7 +1765,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -1692,7 +1782,8 @@
         "skills": [
             "software engineering",
             "cybersecurity"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Intern in Computer Vision",
@@ -1711,7 +1802,8 @@
             "robotics",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -1730,7 +1822,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern",
@@ -1746,7 +1839,8 @@
         "skills": [
             "software engineering",
             "cybersecurity"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2020 Summer Intern Software Engineer",
@@ -1769,7 +1863,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1784,7 +1879,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Intern in Computer Vision",
@@ -1803,7 +1899,8 @@
             "robotics",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (BE) ",
@@ -1818,7 +1915,8 @@
         "description": "Chegg CareerMatch is developing unique partnerships with companies like Paychex, Capgemini, DocuSign, and AWS to highlight great candidates early for their open jobs and next internship season. When you take this Software Engineering (BE) Intern assessment and score well, we will recommend you to our partners when they open internships and jobs that match your profile and proven skills.WHAT TO EXPECTAfter clicking \"Start assessment\", you will have 60 minutes to complete the assessment.After starting the assessment, you will not be able to stop and restart.You may only take the assessment 1 time.",
         "skills": [
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1833,7 +1931,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -1854,7 +1953,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern - Pc Technician",
@@ -1870,7 +1970,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": " Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1885,7 +1986,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -1907,7 +2009,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -1929,7 +2032,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1944,7 +2048,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": " Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -1959,7 +2064,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Internship",
@@ -1984,7 +2090,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -2003,7 +2110,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern (Fall 2020)",
@@ -2019,7 +2127,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern",
@@ -2037,7 +2146,8 @@
             "python",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": " Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2052,7 +2162,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2067,7 +2178,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2082,7 +2194,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -2101,7 +2214,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2116,7 +2230,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2131,7 +2246,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2146,7 +2262,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2161,7 +2278,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2176,7 +2294,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -2194,7 +2313,8 @@
             "python",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2209,7 +2329,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern Hillsboro, OR",
@@ -2226,7 +2347,8 @@
             "information technology",
             "software engineering",
             "C and C++"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2241,7 +2363,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2256,7 +2379,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2271,7 +2395,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Software Engineering Intern",
@@ -2288,7 +2413,8 @@
             "software engineering",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -2303,7 +2429,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Software Engineering Intern",
@@ -2320,7 +2447,8 @@
             "software engineering",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Healthcare Data Science Intern",
@@ -2342,7 +2470,8 @@
         "contact": "workday_recruiting@iqvia.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer - INTERN",
@@ -2361,7 +2490,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Tableau Data Analyst Intern",
@@ -2378,7 +2508,8 @@
             "python",
             "data visualization",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer, Intern",
@@ -2394,7 +2525,8 @@
         "skills": [
             "software engineering",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -2416,7 +2548,8 @@
         "compensation": "unpaid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2431,7 +2564,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2446,7 +2580,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2467,7 +2602,8 @@
             "DevOps",
             "machine learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2487,7 +2623,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2507,7 +2644,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2522,7 +2660,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2537,7 +2676,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "iOS Developer",
@@ -2550,7 +2690,8 @@
         "url": "https://www.internships.com/app/job/ccm_2f3ef133-c817-49f8-ba76-19b51870ea7f?context=search",
         "lastScraped": "2020-07-08T00:33:55.002Z",
         "description": "· Minimum 0-1 year experience with mobile development with Swift, Xcode and the iOS SDK· Understanding of Apple’s design principles and interface guidelines· Basic computer science knowledge in algorithms and data structures· Experience in iOS 12 & iOS13· Experience with Git, CocoaPods and designing StoryBoard· Experience with AlamoFire· Experience with developing network and geolocation-based applications· Experience with CI/CD and MVC design modelGeneral Responsibilities:· Attend regular meetings with team members, whether online or in-person· Complete all tasks assigned to you on time· Be able to work in a group with others· Update the rest of the team on your progress via discord· Be open to sharing your ideas with the rest of the team",
-        "skills": []
+        "skills": [],
+        "remote": true
     },
     {
         "position": "Developer Technology Intern - Ai",
@@ -2571,7 +2712,8 @@
             "data visualization",
             "C and C++",
             "robotics"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2592,7 +2734,8 @@
             "DevOps",
             "machine learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2613,7 +2756,8 @@
             "DevOps",
             "machine learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2628,7 +2772,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2649,7 +2794,8 @@
             "DevOps",
             "machine learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2664,7 +2810,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Electronics computer specialist",
@@ -2677,7 +2824,8 @@
         "url": "https://www.internships.com/app/job/ccm_df2ebe2d-a771-41b8-8d75-7d6fcd3d938b?context=search",
         "lastScraped": "2020-07-08T00:34:47.229Z",
         "description": "Electronics / computer technician to ability to repair, trouble-shoot all mobile, tablet devices, to include windows, and IOS computer systems.  malware removal, upgrade, and optimizations of computer/ laptops. Ability to use CRM system to create tickets, create invoices. Ability to use POS system, entering and maintaining inventory of parts.  ",
-        "skills": []
+        "skills": [],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2692,7 +2840,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -2711,7 +2860,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2726,7 +2876,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "PhD Intern National Security PhD Intern - Computing and Analytics (NSIP)",
@@ -2745,7 +2896,8 @@
             "software engineering",
             "data visualization"
         ],
-        "start": "2020-09-01T10:00:00.000Z"
+        "start": "2020-09-01T10:00:00.000Z",
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2760,7 +2912,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -2779,7 +2932,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -2798,7 +2952,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -2817,7 +2972,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2832,7 +2988,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -2851,7 +3008,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -2870,7 +3028,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2885,7 +3044,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -2904,7 +3064,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -2923,7 +3084,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -2942,7 +3104,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -2957,7 +3120,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -2976,7 +3140,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -2995,7 +3160,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3010,7 +3176,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3025,7 +3192,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -3044,7 +3212,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -3063,7 +3232,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Intern",
@@ -3081,7 +3251,8 @@
             "software engineering",
             "SQL"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3096,7 +3267,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Tech Writing Virtual Internship Or Co-Op",
@@ -3112,7 +3284,8 @@
         "skills": [
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern",
@@ -3134,7 +3307,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3149,7 +3323,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3172,7 +3347,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Spring Data Science Intern",
@@ -3192,7 +3368,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3215,7 +3392,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3230,7 +3408,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -3249,7 +3428,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Intern",
@@ -3267,7 +3447,8 @@
             "software engineering",
             "SQL"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -3286,7 +3467,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "PAID INTERNSHIP- Healthcare, Lodging, Transportation Provided",
@@ -3299,7 +3481,8 @@
         "url": "https://www.internships.com/app/job/ccm_e85ba70b-f566-4a4e-9343-c9ef628f145c?context=search",
         "lastScraped": "2020-07-08T00:39:26.265Z",
         "description": "Entry Level. No degree or diploma required. Training Provided.Apply at https://vipnccc.com/applyRecommended Skills:AdaptabilityAttentivenessConflict resolutionCreative ThinkingEffective communicationTime ManagementOrganizational SkillsTeamworkBasic PC skillsCareer Interest Areas:Business- all focus areasEnvironmental- including forestry and fire science, sustainability, geographyHealth- public health, health education, healthcare interestPublic- social services, public services, program development, counseling, non-profit management, government, educationDevelopment- construction management, building trades, health & safety, eco-design, energy management, urban/rural planningCommunication- academic research, English, Spanish, Sign Language, history, writing, marketing, communicationsAdministrative Services- HR, office management, personnel supervision, personnel training, budget managementTechnology- GIS/GPS systems, computer science, networking, cybersecurity, database management911- emergency management, emergency services, disaster response, project management, homeland securityApply at https://vipnccc.com/apply",
-        "skills": []
+        "skills": [],
+        "remote": false
     },
     {
         "position": "Data Science Internships Remote",
@@ -3318,7 +3501,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -3337,7 +3521,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3352,7 +3537,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Phd Intern - National Security Phd Intern Computing And Analytics",
@@ -3371,7 +3557,8 @@
             "software engineering",
             "data visualization"
         ],
-        "start": "2020-09-01T10:00:00.000Z"
+        "start": "2020-09-01T10:00:00.000Z",
+        "remote": true
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3386,7 +3573,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3401,7 +3589,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3416,7 +3605,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Threat Intelligence Services Engineer Intern",
@@ -3433,7 +3623,8 @@
             "software engineering",
             "python",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Disaster Response Training- High School/College Students, New Graduates",
@@ -3448,7 +3639,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.-Every year disasters put millions of Americans in danger and costs billions of dollars in property damage. But every year, all year, the Federal Emergency Management Agency (FEMA) is on the job —as part of a team helping communities reduce risk, helping emergency officials prepare for all hazards, and helping people get back on their feet after their lives are disrupted by a disaster. FEMA is the federal coordinator for the operational and logistical disaster response needed to save and sustain lives, minimize suffering, and protect property in a timely and effective manner in communities that become overwhelmed by disasters.  -This training program is excellent for those interested in disaster response, emergency management, computer science/IT, GIS mapping and geospatial products, database development, public health, public education, public administration, homeland security, human services and survivor support, building trades, environmental protection, warehouse logistics and distribution, shelter services, action planning non-profit coordination, volunteer management, or careers with local, state or federal government and organizations.-Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "High School Quality Assurance Intern for Weapons Effects Software",
@@ -3470,7 +3662,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "2020 STEMcoding / AFIT Summer Teacher Internship",
@@ -3491,7 +3684,8 @@
         ],
         "qualifications": [
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Helpdesk Technician- Internship/Temporary Employment",
@@ -3511,7 +3705,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Engineering Intern",
@@ -3532,7 +3727,8 @@
             "java",
             "C and C++",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Backend Software Engineering Intern",
@@ -3552,7 +3748,8 @@
             "machine learning",
             "information technology",
             "mobile development"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern (IT-PMO)",
@@ -3569,7 +3766,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Network Operations Intern Information Technology",
@@ -3587,7 +3785,8 @@
             "python",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Data Science/Stats Intern",
@@ -3603,7 +3802,8 @@
         "skills": [
             "python",
             "information technology"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -3622,7 +3822,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Intern",
@@ -3638,7 +3839,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "PhD Intern National Security PhD Intern - Computing and Analytics (NSIP)",
@@ -3657,7 +3859,8 @@
             "software engineering",
             "data visualization"
         ],
-        "start": "2020-09-01T10:00:00.000Z"
+        "start": "2020-09-01T10:00:00.000Z",
+        "remote": true
     },
     {
         "position": "Data Science Internships Remote",
@@ -3676,7 +3879,8 @@
             "java",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern - PC Technician",
@@ -3692,7 +3896,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -3715,7 +3920,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -3738,7 +3944,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -3753,7 +3960,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering/Development Intern",
@@ -3770,7 +3978,8 @@
             "software engineering",
             "angular",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -3785,7 +3994,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "R&D Software Development for Accessible Tablet",
@@ -3803,7 +4013,8 @@
             "software engineering",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -3818,7 +4029,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern Hillsboro, OR",
@@ -3838,7 +4050,8 @@
             "information technology",
             "web development",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern/Co-op: Software Engineering",
@@ -3863,7 +4076,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -3878,7 +4092,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -3893,7 +4108,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -3908,7 +4124,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern In , | Careers At",
@@ -3928,7 +4145,8 @@
             "machine learning",
             "information technology",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -3948,7 +4166,8 @@
             "angular",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -3968,7 +4187,8 @@
             "angular",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Virtual Career Event- High School and College Students",
@@ -3985,7 +4205,8 @@
             "information technology",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Software Engineering Intern",
@@ -4006,7 +4227,8 @@
             "web development"
         ],
         "compensation": "unpaid",
-        "due": "2020-06-30T10:00:00.000Z"
+        "due": "2020-06-30T10:00:00.000Z",
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4029,7 +4251,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Developer (Internship) REMOTE",
@@ -4048,7 +4271,8 @@
             "C and C++",
             "information technology",
             "web development"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Intern",
@@ -4067,7 +4291,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4090,7 +4315,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "QA Automation Engineer Intern",
@@ -4105,7 +4331,8 @@
         "description": "Summary: As a QA Automation Engineer Intern, you will collaborate directly with all members of the team and support existing and new QA automation and testing efforts. You will join a highly focused and small group of experienced engineers. We operate a balanced Agile environment with an emphasis on maintaining a productive team environment while continuously and rapidly adding value to users.\n\nPrimary Responsibilities:\nParticipate in understanding and grooming of user stories, create QA tasks, test cases, and functional automation\nPerform testing, clearly log defects, maintain test data, and monitor test performance over time\nDesign, develop, and execute automated tests\nDevelop and maintain in-house test automation framework\nDevelop and execute integration and regression tests\nMapping requirements to integration and system tests\nEstimating, prioritizing, planning and coordinating quality testing activities\nInvestigate incoming bug reports by reproducing issues and investigating logs\nAbility to promote a culture of collaboration and teamwork\n\nQualifications:\nPursuing a degree in Computer Science preferred\nStrong attention to detail is required\nAble to handle multiple tasks and projects simultaneously in a deadline-driven environment\nEffective communicator, both verbal and written\nLegally Authorized to work in the U.S.",
         "skills": [
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4128,7 +4355,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Intern",
@@ -4150,7 +4378,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4165,7 +4394,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4188,7 +4418,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4211,7 +4442,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4234,7 +4466,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Decision Sciences Internship",
@@ -4250,7 +4483,8 @@
         "skills": [
             "software engineering",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4273,7 +4507,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4296,7 +4531,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4319,7 +4555,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4342,7 +4579,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4365,7 +4603,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4388,7 +4627,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4411,7 +4651,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4434,7 +4675,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Paid Internship (travel, lodging, healthcare provided)",
@@ -4448,7 +4690,8 @@
         "lastScraped": "2020-07-08T00:47:10.225Z",
         "description": "PAID INTERNSHIP- housing, travel, healthcare includedEntry Level. No degree or diploma required. Training Provided.Due to the pandemic, applications are accepted online through https://vipnccc.com/applyRecommended Skills:AdaptabilityAttentivenessConflict resolutionCreative ThinkingEffective communicationTime ManagementOrganizational SkillsTeamworkBasic PC skillsCareer Interest Areas:Business- all focus areasEnvironmental- including forestry and fire science, sustainability, geographyHealth- public health, health education, healthcare interestPublic- social services, public services, program development, counseling, non-profit management, government, educationDevelopment- construction management, building trades, health & safety, eco-design, energy management, urban/rural planningCommunication- academic research, English, Spanish, Sign Language, history, writing, marketing, communicationsAdministrative Services- HR, office management, personnel supervision, personnel training, budget managementTechnology- GIS/GPS systems, computer science, networking, cybersecurity, database management911- emergency management, emergency services, disaster response, project management, homeland securityApply at https://vipnccc.com/applyJob Types: Full-time, InternshipBenefits:Health InsuranceProfessional Development AssistanceTuition ReimbursementSchedule:Monday to FridayOn CallWork authorization:United States (Required)Additional Compensation:Other formsWork Location:Multiple locationsWork Remotely:No",
         "skills": [],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -4463,7 +4706,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4478,7 +4722,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4501,7 +4746,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4524,7 +4770,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4539,7 +4786,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4554,7 +4802,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4577,7 +4826,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4600,7 +4850,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4615,7 +4866,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4638,7 +4890,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "News Technology Internships Remote",
@@ -4661,7 +4914,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Geoinformatics & Data Science Intern",
@@ -4683,7 +4937,8 @@
             "machine learning"
         ],
         "compensation": "unpaid",
-        "due": "2020-07-05T10:00:00.000Z"
+        "due": "2020-07-05T10:00:00.000Z",
+        "remote": true
     },
     {
         "position": "Data Science Intern",
@@ -4705,7 +4960,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4720,7 +4976,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Applied Research Scientist Intern, Computer Vision Summer",
@@ -4740,7 +4997,8 @@
             "data visualization",
             "deep learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -4762,7 +5020,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Engineering Intern - Fall 2020 - Full-Time or Part",
@@ -4779,7 +5038,8 @@
             "software engineering",
             "python",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Engineering Intern - Fall 2020 - Full-Time or Part",
@@ -4796,7 +5056,8 @@
             "software engineering",
             "python",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4819,7 +5080,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4834,7 +5096,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "News Technology Internships Remote",
@@ -4857,7 +5120,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Science Intern",
@@ -4876,7 +5140,8 @@
             "python",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -4891,7 +5156,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Testing Intern - unpaid",
@@ -4912,7 +5178,8 @@
             "machine learning",
             "web development"
         ],
-        "compensation": "unpaid"
+        "compensation": "unpaid",
+        "remote": false
     },
     {
         "position": "Intern - Computer Technician - Indianapolis",
@@ -4928,7 +5195,8 @@
         "skills": [
             "machine learning",
             "mobile development"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -4943,7 +5211,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Science Intern",
@@ -4962,7 +5231,8 @@
             "python",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Paid Federal Training Programs- High School/College Students, New Graduates",
@@ -4977,7 +5247,8 @@
         "description": "Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ***Please attend our info session for program information and application assistance: https://ncccfema.videoshowcase.net/login ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2020 Information Technology Intern",
@@ -5002,7 +5273,8 @@
         "contact": "staffingaadar@merck.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -5017,7 +5289,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Virtual Career Event- Federal Training Programs",
@@ -5032,7 +5305,8 @@
         "description": "Please attend our virtual event for program information and application assistance (available 24/7). https://ncccfema.videoshowcase.net/login ***Disaster Response. Environmental Projects. Community Support. Rebuilding Neighborhoods. Human Services. Technology. Urban & Rural Planning. Public Relations. Management. Logistics & Transportation. Grant Development. Education Programs.***Build your employment portfolio with relevant experience, gain new skills and leadership experience, replace traditional student jobs like waiting tables, sandwich artist, cashier, food delivery driver and retail work on your resume- and really impress the next person who interviews you. Receive an educational award to pay off student debt, or to acquire more education or job training in the future. Use these programs as an inroad to federal or state government careers. Enhance your resume for any future employer or non-profit organization through hands-on experience in your field. Gain management and leadership experience. Earn additional college credits for continuing education.***An excellent option for those interested in business, computer science/IT, construction, carpentry, building trades, animal care, education, environmental management, environmental conservation/sustainability, emergency services, forestry, disaster response, public administration, social sciences, law enforcement, homeland security, public health, public relations, writing/journalism, counseling, human services, recreation, non-profit services, or careers with local, state or federal government and organizations. ",
         "skills": [
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -5051,6 +5325,7 @@
             "python",
             "DevOps",
             "artificial intelligence"
-        ]
+        ],
+        "remote": true
     }
 ]

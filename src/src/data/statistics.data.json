@@ -14,24 +14,26 @@
         "compensation": 106,
         "qualifications": 272,
         "skills": 272,
-        "description": 252
+        "description": 252,
+        "remote": 38
     },
     {
         "site": "LinkedIn",
-        "lastScraped": "2020-10-02T02:25:02.781Z",
+        "lastScraped": "2020-10-03T07:41:42.274Z",
         "entries": 549,
         "position": 549,
         "company": 549,
-        "contact": 44,
+        "contact": 12,
         "location": 549,
         "posted": 549,
-        "due": 25,
-        "start": 36,
+        "due": 6,
+        "start": 28,
         "end": 0,
-        "compensation": 144,
-        "qualifications": 244,
-        "skills": 546,
-        "description": 549
+        "compensation": 108,
+        "qualifications": 66,
+        "skills": 549,
+        "description": 549,
+        "remote": 39
     },
     {
         "site": "ZipRecruiter",
@@ -48,7 +50,8 @@
         "compensation": 20,
         "qualifications": 73,
         "skills": 147,
-        "description": 147
+        "description": 147,
+        "remote": 13
     },
     {
         "site": "Chegg Internships",
@@ -65,7 +68,8 @@
         "compensation": 49,
         "qualifications": 63,
         "skills": 269,
-        "description": 273
+        "description": 273,
+        "remote": 78
     },
     {
         "site": "Monster",
@@ -82,7 +86,8 @@
         "compensation": 57,
         "qualifications": 106,
         "skills": 250,
-        "description": 250
+        "description": 250,
+        "remote": 15
     },
     {
         "site": "NSF-REU",
@@ -98,7 +103,8 @@
         "compensation": 0,
         "qualifications": 0,
         "skills": 89,
-        "description": 89
+        "description": 89,
+        "remote": 0
     },
     {
         "site": "YouTern",
@@ -115,7 +121,8 @@
         "compensation": 1,
         "qualifications": 1,
         "skills": 1,
-        "description": 1
+        "description": 1,
+        "remote": 1
     },
     {
         "site": "iHireTech",
@@ -132,7 +139,8 @@
         "compensation": 13,
         "qualifications": 20,
         "skills": 150,
-        "description": 150
+        "description": 150,
+        "remote": 1
     },
     {
         "site": "Glassdoor",
@@ -149,7 +157,8 @@
         "compensation": 280,
         "qualifications": 407,
         "skills": 923,
-        "description": 930
+        "description": 930,
+        "remote": 134
     },
     {
         "site": "Indeed",
@@ -166,7 +175,8 @@
         "compensation": 114,
         "qualifications": 170,
         "skills": 359,
-        "description": 360
+        "description": 360,
+        "remote": 47
     },
     {
         "site": "Idealist",
@@ -183,7 +193,8 @@
         "compensation": 2,
         "qualifications": 1,
         "skills": 3,
-        "description": 4
+        "description": 4,
+        "remote": 2
     },
     {
         "site": "AngelList",
@@ -200,11 +211,12 @@
         "compensation": 127,
         "qualifications": 31,
         "skills": 499,
-        "description": 549
+        "description": 549,
+        "remote": 414
     },
     {
         "site": "Stackoverflow",
-        "lastScraped": "2020-10-03T03:03:18.831Z",
+        "lastScraped": "2020-10-06T00:13:20.980Z",
         "entries": 3,
         "position": 3,
         "company": 3,
@@ -217,7 +229,8 @@
         "compensation": 1,
         "qualifications": 0,
         "skills": 3,
-        "description": 3
+        "description": 3,
+        "remote": 0
     },
     {
         "site": "ACM",
@@ -233,7 +246,8 @@
         "compensation": 6,
         "qualifications": 106,
         "skills": 159,
-        "description": 160
+        "description": 160,
+        "remote": 4
     },
     {
         "site": "Manual",
@@ -250,7 +264,8 @@
         "compensation": 1,
         "qualifications": 0,
         "skills": 1,
-        "description": 1
+        "description": 1,
+        "remote": 0
     },
     {
         "site": "Total",
@@ -258,15 +273,16 @@
         "entries": 3740,
         "position": 3718,
         "company": 3718,
-        "contact": 402,
+        "contact": 370,
         "location": 3740,
         "posted": 2937,
-        "due": 127,
-        "start": 170,
+        "due": 108,
+        "start": 162,
         "end": 0,
-        "compensation": 921,
-        "qualifications": 1494,
-        "skills": 3671,
-        "description": 3718
+        "compensation": 885,
+        "qualifications": 1316,
+        "skills": 3674,
+        "description": 3718,
+        "remote": 786
     }
 ]

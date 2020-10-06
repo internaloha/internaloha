@@ -2,6 +2,7 @@
 import fs from 'fs';
 import natural from 'natural';
 import path from 'path';
+import { isRemote } from './scraperFunctions.js';
 
 /** Removes duplicate in skills
  * @param  {Array} skills    The word we're looking for
@@ -439,24 +440,27 @@ function convertRegion(input, to) {
 
   let i; // Reusable loop variable
   if (to === 'abbr') {
-    input = input.replace(/\w\S*/g, function (txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+    input = input.replace(/\w\S*/g, function (txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
     for (i = 0; i < regions.length; i++) {
       if (regions[i][0] === input) {
         return (regions[i][1]);
       }
     }
     // if it doesn't match any
-  } else if (to === 'name') {
-    const alreadyFull = input;
-    input = input.toUpperCase();
-    for (i = 0; i < regions.length; i++) {
-      if (regions[i][1] === input) {
-        return (regions[i][0]);
+  } else
+    if (to === 'name') {
+      const alreadyFull = input;
+      input = input.toUpperCase();
+      for (i = 0; i < regions.length; i++) {
+        if (regions[i][1] === input) {
+          return (regions[i][0]);
+        }
       }
+      // if the format doesn't match any of the valid fields or is already full name
+      return alreadyFull;
     }
-    // if the format doesn't match any of the valid fields or is already full name
-    return alreadyFull;
-  }
 }
 
 /** Gets qualification using string.includes() method
@@ -606,15 +610,31 @@ function multi_parser(file) {
       getQualifications(text[i]);
     }
 
+    // if there is no remote section
+    try {
+      if (!text[i].remote) {
+        let remote = false;
+        if (isRemote(text[i].position) || isRemote(text[i].description)
+            || isRemote(text[i].location.city) || isRemote(text[i].location.state)) {
+          remote = true;
+        }
+        text[i].remote = remote;
+      }
+    } catch (e) {
+
+    }
+
     // if text has no location.state or it is empty
     if (!text[i].location.state || text[i].location.state === '') {
       text[i].location.state = 'Unknown';
-    } else if (text[i].location.state === 'states' || text[i].location.state === 'States') {
-      text[i].location.state = 'United States';
-    } else {
-      const convertedState = convertRegion(text[i].location.state, 'name');
-      text[i].location.state = convertedState;
-    }
+    } else
+      if (text[i].location.state === 'states' || text[i].location.state === 'States') {
+        text[i].location.state = 'United States';
+      } else {
+        const convertedState = convertRegion(text[i].location.state, 'name');
+        text[i].location.state = convertedState;
+      }
+
   }
 
   console.log('Total entries:', text.length);
@@ -663,7 +683,6 @@ function fromDir(startPath, filter) {
   }
   return results;
 }
-
 
 const files = fromDir('./data/canonical', '.json');
 
