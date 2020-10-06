@@ -4,6 +4,8 @@ import natural from 'natural';
 import path from 'path';
 import { isRemote } from './scraperFunctions.js';
 
+const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
+
 /** Removes duplicate in skills
  * @param  {Array} skills    The word we're looking for
  * @return {Array}     Returns an array with no duplicates
@@ -469,7 +471,7 @@ function convertRegion(input, to) {
  */
 function multi_parser(file) {
 
-  console.log('Parsing: ', file);
+  console.log('Parsing:', file);
 
   const text = JSON.parse(fs.readFileSync(file, 'utf8'));
 
@@ -490,6 +492,7 @@ function multi_parser(file) {
   let positionResults = '';
   let compensation = '';
 
+  // Goes thorugh every internship listing
   for (let i = 0; i < text.length; i++) {
 
     const position = text[i].position;
@@ -513,7 +516,6 @@ function multi_parser(file) {
     }
 
     const data = [];
-    const remote = [];
     const comp = [];
 
     // adding compensation
@@ -540,15 +542,8 @@ function multi_parser(file) {
         data.push(positionResults[j].label);
       }
 
-      // for possible location filter? (eg. remote / in-state, out of state, etc...)
-      if (position.includes('Remote') || (position.includes('remote'))) {
-        remote.push('Remote');
-      }
-
     }
 
-    // console.log(position);
-    // console.log(positionResults);
 
     // count the amount of internships where there we no apparent matches
     if (data.length === 0) {
@@ -626,7 +621,16 @@ function multi_parser(file) {
 
     // if text has no location.state or it is empty
     if (!text[i].location.state || text[i].location.state === '') {
-      text[i].location.state = 'Unknown';
+
+      text[i].location.state = 'Out of Country';
+
+      // Check to see if it's USA
+      for (let k = 0; k < cities.length; k++) {
+        if (text[i].location.city.includes(cities[k].City) || text[i].location.city.includes(cities[k].State)) {
+          text[i].location.state = 'United States';
+        }
+      }
+
     } else
       if (text[i].location.state === 'states' || text[i].location.state === 'States') {
         text[i].location.state = 'United States';
