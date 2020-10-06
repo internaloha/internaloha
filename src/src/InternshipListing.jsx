@@ -32,7 +32,6 @@ function InternshipListing() {
     setSort(sortVal);
     setSearch(searchQueryVal);
     setSkills(skillsVal);
-    console.log(isRemote)
     setRemote(isRemote);
     setPage(1);
     setPaginatedData(passedData.slice(0, 40));

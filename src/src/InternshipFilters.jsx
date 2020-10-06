@@ -226,7 +226,10 @@ class InternshipsFilters {
   }
 
   isRemote(data, value) {
-    return _.filter(data, ['remote', value]);
+    if (value === false) {
+      return data;
+    }
+     return _.filter(data, ['remote', true]);
   }
 }
 
