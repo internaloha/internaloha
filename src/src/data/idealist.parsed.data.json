@@ -14,7 +14,8 @@
             "information technology",
             "cloud computing"
         ],
-        "start": "2020-12-01T10:00:00.000Z"
+        "start": "2020-12-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Fall/Winter Internship Opportunity",
@@ -29,7 +30,8 @@
         "skills": [
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "REMOTE PUBLIC POLICY/JOURNALISM INTERNSHIP",

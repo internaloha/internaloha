@@ -90,19 +90,18 @@ class InternshipsFilters {
     // console.log(location);
 
     const number = _.groupBy(data, 'location.state');
-    console.log(number);
     const info = [];
 
     for (let i = 0; i < location.length; i++) {
 
-      let locationAmount = '';
-      if (location[i] === 'Remote') {
-        locationAmount = _.filter(data, ['remote', true]).length
-            + number[location[i]].length;
-
-      } else {
-        locationAmount = number[location[i]].length;
-      }
+      let locationAmount = number[location[i]].length;
+      // if (location[i] === 'Remote') {
+      //   locationAmount = _.filter(data, ['remote', true]).length
+      //       + number[location[i]].length;
+      //
+      // } else {
+      //   locationAmount = number[location[i]].length;
+      // }
 
       info.push({
         key: location[i],
@@ -217,13 +216,17 @@ class InternshipsFilters {
       return data;
     }
 
-    // Add all the internships where remote == true and those who have remote in state
-    if (input === 'Remote') {
-      const byState = _.filter(data, ['location.state', input]);
-      const remote = _.filter(data, ['remote', true]);
-      return _.concat(byState, remote);
-    }
+    // // Add all the internships where remote == true and those who have remote in state
+    // if (input === 'Remote') {
+    //   const byState = _.filter(data, ['location.state', input]);
+    //   const remote = _.filter(data, ['remote', true]);
+    //   return _.concat(byState, remote);
+    // }
     return _.filter(data, ['location.state', input]);
+  }
+
+  isRemote(data, value) {
+    return _.filter(data, ['remote', value]);
   }
 }
 

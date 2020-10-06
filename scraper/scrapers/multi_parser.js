@@ -621,7 +621,7 @@ function multi_parser(file) {
         text[i].remote = remote;
       }
     } catch (e) {
-
+      text[i].remote = false;
     }
 
     // if text has no location.state or it is empty
