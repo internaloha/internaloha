@@ -51,6 +51,7 @@
     "angellist": "node scrapers/angellist.js",
     "acm": "node scrapers/acm.js",
     "coolworks": "node scrapers/Coolworks.js",
+    "aexpress": "node scrapers/aexpress.js",
     "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js"
   },
   "browserslist": {

@@ -78,7 +78,7 @@ import { fetchInfo } from './scraperFunctions.js';
             city: location.match(/([^,]*)/g)[0].trim(),
             state: state.trim(),
           },
-          description: description,
+          description: description.trim(),
         });
 
       }
