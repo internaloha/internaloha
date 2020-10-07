@@ -24,6 +24,7 @@ function getStatistics(name, data) {
   let qualifications = 0;
   let description = 0;
   let skills = 0;
+  let remote = 0;
   const lastScraped = data[0].lastScraped;
 
   for (let i = 0; i < data.length; i++) {
@@ -57,6 +58,9 @@ function getStatistics(name, data) {
     if (data[i].qualifications) {
       qualifications++;
     }
+    if (data[i].remote) {
+      remote++;
+    }
     if (data[i].description && data[i].position !== 'Error') {
       description++;
     }
@@ -81,6 +85,7 @@ function getStatistics(name, data) {
     qualifications: qualifications,
     skills: skills,
     description: description,
+    remote: remote,
   };
 
   return list;

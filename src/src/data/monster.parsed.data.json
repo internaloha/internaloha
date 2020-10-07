@@ -16,7 +16,8 @@
             "software engineering",
             "cybersecurity"
         ],
-        "contact": "1-866-836-7067"
+        "contact": "1-866-836-7067",
+        "remote": false
     },
     {
         "position": "Software Engineering/Development Intern",
@@ -34,7 +35,8 @@
             "software engineering",
             "angular",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern - Spring 2021",
@@ -58,7 +60,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Integration Developer Intern",
@@ -80,7 +83,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Technical Service Application Engineering Intern",
@@ -99,7 +103,8 @@
             "software engineering",
             "machine learning"
         ],
-        "contact": "1-866-836-7067"
+        "contact": "1-866-836-7067",
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -120,7 +125,8 @@
             "java",
             "javascript",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Technical Service Application Engineering Intern",
@@ -139,7 +145,8 @@
             "software engineering",
             "machine learning"
         ],
-        "contact": "1-866-836-7067"
+        "contact": "1-866-836-7067",
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -159,7 +166,8 @@
             "angular",
             "java",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Technical Service Application Engineering Intern (Semiconductor Materials)",
@@ -178,7 +186,8 @@
             "software engineering",
             "machine learning"
         ],
-        "contact": "1-866-836-7067"
+        "contact": "1-866-836-7067",
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -199,7 +208,8 @@
             "angular",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Technical Service Application Engineering Intern (Semiconductor Materials)",
@@ -218,7 +228,8 @@
             "software engineering",
             "machine learning"
         ],
-        "contact": "1-866-836-7067"
+        "contact": "1-866-836-7067",
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -239,7 +250,8 @@
             "angular",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Application Engineering Intern - Summer 2021",
@@ -257,7 +269,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "1-866-836-7067"
+        "contact": "1-866-836-7067",
+        "remote": false
     },
     {
         "position": "Jr Data Scientist Intern",
@@ -278,7 +291,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Science / Data Analytics Intern or Temp Position",
@@ -299,7 +313,8 @@
             "robotics",
             "software engineering"
         ],
-        "contact": "apply@linevisioninc.com"
+        "contact": "apply@linevisioninc.com",
+        "remote": true
     },
     {
         "position": "Intern, Engineer / Computer Science",
@@ -317,7 +332,8 @@
             "information technology",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Computer Science Intern - Lab Based Opportunity (Indianapolis, IN)",
@@ -337,7 +353,8 @@
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT & Computer Science Intern",
@@ -355,7 +372,8 @@
             "information technology",
             "machine learning"
         ],
-        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422"
+        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422",
+        "remote": true
     },
     {
         "position": "Summer College Intern - Geologist (Gas Infrastructure)",
@@ -379,7 +397,8 @@
         "contact": "844-694-4748",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Laboratory Support Intern",
@@ -398,7 +417,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - Iselin- Intern - Summer 2021",
@@ -422,7 +442,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern - Express Scripts",
@@ -443,7 +464,8 @@
             "python",
             "bioinformatics"
         ],
-        "contact": "SeeYourself@cigna.com"
+        "contact": "SeeYourself@cigna.com",
+        "remote": false
     },
     {
         "position": "Sr. Data Scientist Intern, Chief Analytics Office- 2021 Summer Intern",
@@ -463,7 +485,8 @@
             "software engineering",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern Scientist",
@@ -483,7 +506,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "GIS Specialist Intern (Summer 2021)",
@@ -504,7 +528,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "GIS Specialist Intern (Summer 2021)",
@@ -525,7 +550,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern- Workload Analytics Engineer",
@@ -550,7 +576,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern Scientist",
@@ -570,7 +597,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Data Scientist Intern",
@@ -592,7 +620,8 @@
             "deep learning",
             "C and C++"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Data Scientist Intern",
@@ -612,7 +641,8 @@
             "data visualization",
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern -TITANS - Math & Analytics - Graduate Summer 2021",
@@ -633,7 +663,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Data Scientist & Engineering Intern",
@@ -661,7 +692,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "PROCESS CHEMICAL ENGINEER INTERN",
@@ -677,7 +709,8 @@
         "description": "<p style=\"text-align%3Acenter%3B\"><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><strong>A Great Opportunity for Growth within a Successful Company!</strong></span></p>\n      <p><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><strong>&nbsp;</strong>Join one of the United States' most progressive and innovative construction, automation and engineering firms. EAD supports clients' projects on hundreds of systems in industrial manufacturing facilities specializing in food, pharmaceutical and parcel. This opportunity will enable you to enjoy a fast-paced environment working on projects of all sizes and complexities!&nbsp; </span></p>\n      <p><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Our firm has been amazing clients and employees since 2001 and has an outstanding culture filled with comradery, teamwork and fun.&nbsp; We believe in supporting each other in the office and in the field and when a customer, co-worker or the company needs assistance we are a TEAM.</span></p>\n      <p><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><strong><u><span style=\"text-decoration%3Anone%3B\">&nbsp;</span></u></strong><strong><u>Responsibilitie</u></strong></span></p>\n      <ul><li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Assist with process design with of developing process heat and material balances, develop Flow Diagrams (PFDs) and Process &amp; Instrumentation Diagrams (P&amp;IDs) per client requirements</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Work with engineers, designers and drafters to produce detailed designs</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Work alongside full-time employees on various projects to provide deliverable documents</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Obtain experience working on designs for industrial and commercial projects</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Responsible for adhering to all EAD's safety standards and practices</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Perform other related duties as assigned</span></li>\n      </ul><p><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><strong><u>Requirements:</u></strong></span></p>\n      <ul><li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Completion of 2-3 years of Process Engineering coursework preferable with an emphasis in Chemical Engineering</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">No experience required </span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Ability to work 35-40 hours per week at the facility located in Omaha, NE</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Knowledge of chemical engineering fundamentals</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Possess organizational skills</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Excellent written and verbal communication skills </span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Knowledge of Excel including macros</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Strong attention to detail</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Knowledge of AutoCAD a plus</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Possess and able to maintain a valid driver's license</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Proficient in Microsoft Office</span></li>\n      </ul><p><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><strong><u>Working Conditions:</u></strong></span></p>\n      <ul><li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Office, plant, or client site environment*</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><u></u>Ability to sit and work at computer for an extended period of time</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><u></u>Ability to walk up numerous flights of stairs/ladders multiple times a day and/or work in tight spaces in extreme conditions</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><u></u>May work near moving mechanical parts and equipment*</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><u></u>Office, Commercial and/or Industrial setting with the potential of exposure to fumes or airborne particles, toxic or caustic chemicals*</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><u></u>Ability to lift and/or move up to 50 lbs.*</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><u></u>Periodic weekend, holiday or evening work as needed</span></li>\n      <li><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">Travel required &nbsp;</span></li>\n      </ul><p><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\">*EAD will provide training, administrative/engineering controls, and personal protective equipment as necessary.</span></p>\n      <p style=\"text-align%3Acenter%3B\"><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><em>We strongly believe that diversity of experience, perspectives, and background will lead to a better workplace for our employees and a better </em></span></p>\n      <p style=\"text-align%3Acenter%3B\"><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><em>product for our customers.</em></span></p>\n      <p style=\"text-align%3Acenter%3B\"><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><em>EAD is an Equal Opportunity Employer - Minorities/Females/Disabled/Veterans</em></span></p>\n      <p><span style=\"font-family%3Aarial%2C+helvetica%2C+sans-serif%3Bfont-size%3A12pt%3B\"><em>&nbsp;</em></span></p>\n      <p>&nbsp;</p>",
         "skills": [
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Laboratory Assistant (Part Time)/ Intern",
@@ -694,7 +727,8 @@
         "skills": [
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "PROCESS CHEMICAL ENGINEER INTERN",
@@ -712,7 +746,8 @@
             "information technology",
             "software engineering",
             "web development"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Geographical Information Systems (GIS)",
@@ -733,7 +768,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Summer Intern Materials Science",
@@ -755,7 +791,8 @@
         "start": "2020-05-26T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern",
@@ -776,7 +813,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Scientist Intern, Advertising & Marketing Science",
@@ -797,7 +835,8 @@
             "java",
             "software engineering"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - Los Angeles - Intern - Summer 2021",
@@ -821,7 +860,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Sr. Data Scientist Intern, Chief Analytics Office- 2021 Summer Intern",
@@ -841,7 +881,8 @@
             "software engineering",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern - Express Scripts",
@@ -862,7 +903,8 @@
             "python",
             "bioinformatics"
         ],
-        "contact": "SeeYourself@cigna.com"
+        "contact": "SeeYourself@cigna.com",
+        "remote": false
     },
     {
         "position": "Intern Scientist",
@@ -882,7 +924,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern Scientist",
@@ -902,7 +945,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Photomask Data Scientist",
@@ -926,7 +970,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer College Intern - Data Scientist (Gas Infrastructure)",
@@ -948,7 +993,8 @@
         "contact": "844-694-4748",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Data Scientist Intern",
@@ -970,7 +1016,8 @@
             "deep learning",
             "C and C++"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "GIS Specialists Intern (Manchester, NH Summer 2021)",
@@ -991,7 +1038,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Plant Biology Intern - Lab Based Opportunity (Indianapolis, IN)",
@@ -1011,7 +1059,8 @@
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - TITANS - Math & Analytics - Undergraduate Summer 2021",
@@ -1029,7 +1078,8 @@
             "machine learning",
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Laboratory Support Intern",
@@ -1048,7 +1098,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "EV Infrastructure Data Scientist Internship (Spring 2021)",
@@ -1068,7 +1119,8 @@
             "software engineering",
             "python"
         ],
-        "start": "2021-02-01T10:00:00.000Z"
+        "start": "2021-02-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Amway Data Scientist Internship (Ada, MI, US)",
@@ -1086,7 +1138,8 @@
             "information technology",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist (Pipeline Analyst) Internship - FALL 2020",
@@ -1105,7 +1158,8 @@
             "bioinformatics",
             "machine learning"
         ],
-        "start": "2020-09-01T10:00:00.000Z"
+        "start": "2020-09-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Genetic Counselor Assistant Internship (Atlanta, GA, US, 30329)",
@@ -1124,7 +1178,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Internship - Data Scientist Aircraft Predictive Analyst",
@@ -1148,7 +1203,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Internship - Data Scientist Aircraft Predictive Analyst",
@@ -1173,7 +1229,8 @@
         "qualifications": [
             "Bachelor's degree",
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Scientist Intern, Shared Foundation, Search, & Voice Intern",
@@ -1194,7 +1251,8 @@
             "java",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - San Francisco - Intern - Summer 2021",
@@ -1218,7 +1276,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern, Chief Analytics Office- 2021 Summer Intern",
@@ -1239,7 +1298,8 @@
             "data visualization",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern - Express Scripts",
@@ -1260,7 +1320,8 @@
             "python",
             "bioinformatics"
         ],
-        "contact": "SeeYourself@cigna.com"
+        "contact": "SeeYourself@cigna.com",
+        "remote": false
     },
     {
         "position": "Research Data Scientist Intern",
@@ -1282,7 +1343,8 @@
             "deep learning",
             "C and C++"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Intern Scientist",
@@ -1298,7 +1360,8 @@
         "description": "<p>Charged particle optics, electron and ion focusing systems, and high-brightness sources are at the heart of Thermo Fisher’s Scanning Electron Microscope (SEM), Focused Ion Beam (FIB), and Dual Beam tools serving the Nanotechnology market. The FIB Group seeks an intern to assist with the development and characterization of the next generation FIB columns. Activities include one or more of the following:</p><ul><li>Develop and perform experiments to help characterize focused ion beams performance</li><li>Analyze experimental data and write reports</li><li>Perform simulations of charged particles optics systems for focused ion columns</li><li>Analyze electromagnetic fields, high voltage design, magnetic shielding, mechanical design, vacuum systems, and material selection</li><li>Maintain, troubleshoot, and repair laboratory equipment as necessary</li></ul><p>Minimum Education, Experience and Qualifications:</p><ul><li>Typically requires a degree in Physics or Engineering</li><li>Experience operating Thermo Fisher’s Dual Beam systems and microscopes is a plus</li><li>Demonstrated laboratory experience and hands-on skills</li><li>Computer programming experience is desired</li></ul><br><span style=\"background%3Ayellow%3B\"><span style=\"background-color%3A%23FFFFFF%3B\">To qualify, applicants must be legally authorized to work in the United States, and should not require, now or in the future, sponsorship for employment visa status.</span></span><br>",
         "skills": [
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "GIS Specialists Intern (Manchester, NH Summer 2021)",
@@ -1319,7 +1382,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Analytical Chemistry Intern - Lab Based Opportunity (Indianapolis, IN)",
@@ -1339,7 +1403,8 @@
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern Scientist",
@@ -1356,7 +1421,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Intern Scientist, Content Science",
@@ -1376,7 +1442,8 @@
             "java",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - Charlotte - Intern - Summer 2021",
@@ -1400,7 +1467,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern, Chief Analytics Office- 2021 Summer Intern",
@@ -1421,7 +1489,8 @@
             "data visualization",
             "python",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Research Data Scientist Intern",
@@ -1443,7 +1512,8 @@
             "deep learning",
             "C and C++"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "GIS Specialist Intern (Summer 2021)",
@@ -1464,7 +1534,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Formulation & Material Science Intern - Lab Based Opportunity (Indianapolis, IN)",
@@ -1484,7 +1555,8 @@
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Scientist Intern, Shared Foundation, Search, & Voice Intern",
@@ -1505,7 +1577,8 @@
             "java",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - Atlanta - Intern - Summer 2021",
@@ -1529,7 +1602,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Engineer, Analytics, Intern",
@@ -1552,7 +1626,8 @@
         "contact": "ext@fb.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Jr. Data Scientist (Undergraduate), Chief Analytics Office 2021 Intern",
@@ -1572,7 +1647,8 @@
             "python",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "GIS Specialists Intern (Raleigh, NC Summer 2021)",
@@ -1593,7 +1669,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Organic Chemistry Intern - Lab Based Opportunity (Indianapolis, IN)",
@@ -1613,7 +1690,8 @@
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Scientist Intern, Shared Foundation, Search, & Voice Intern",
@@ -1634,7 +1712,8 @@
             "java",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - Boston - Intern - Summer 2021",
@@ -1658,7 +1737,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern, Analytics (PhD)",
@@ -1679,7 +1759,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Jr. Data Scientist (Undergraduate), Chief Analytics Office 2021 Intern",
@@ -1699,7 +1780,8 @@
             "python",
             "data visualization",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "GIS Specialists Intern (Raleigh, NC Summer 2021)",
@@ -1720,7 +1802,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Intern Scientist, Content Science",
@@ -1740,7 +1823,8 @@
             "java",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Forensics - Washington DC - Technology - FDA & Discovery - Intern - Summer 2021",
@@ -1764,7 +1848,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Engineer, Analytics, Intern",
@@ -1787,7 +1872,8 @@
         "contact": "ext@fb.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Scientist Intern, Shared Foundation, Search, & Voice Intern",
@@ -1808,7 +1894,8 @@
             "java",
             "data visualization"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - Houston - Intern - Winter 2021",
@@ -1832,7 +1919,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist, Analytics, Intern",
@@ -1856,7 +1944,8 @@
         "contact": "ext@fb.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - Houston - Intern - Summer 2021",
@@ -1880,7 +1969,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern, Analytics (PhD)",
@@ -1901,7 +1991,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Forensics - Technology - FDA & Discovery - New York - Intern - Summer 2021",
@@ -1925,7 +2016,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist, Analytics, Intern",
@@ -1949,7 +2041,8 @@
         "contact": "ext@fb.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Engineer, Analytics, Intern",
@@ -1972,7 +2065,8 @@
         "contact": "ext@fb.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Core Data Science Intern, Computational Social Science (PhD)",
@@ -1993,7 +2087,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Data Scientist, Analytics, Intern",
@@ -2017,7 +2112,8 @@
         "contact": "ext@fb.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Engineer, Analytics, Intern",
@@ -2040,7 +2136,8 @@
         "contact": "ext@fb.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Data Scientist Intern, Analytics (PhD)",
@@ -2061,7 +2158,8 @@
             "information technology",
             "software engineering"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Software Dev Eng in Test Intern",
@@ -2083,7 +2181,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern AutoOEM",
@@ -2102,7 +2201,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2124,7 +2224,8 @@
             "information technology"
         ],
         "compensation": "paid",
-        "due": "2020-10-31T10:00:00.000Z"
+        "due": "2020-10-31T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "2021 Summer Intern - Software/Hardware Engineering",
@@ -2145,7 +2246,8 @@
             "machine learning",
             "mobile development"
         ],
-        "due": "2020-12-06T10:00:00.000Z"
+        "due": "2020-12-06T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2167,7 +2269,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "AI Research Intern",
@@ -2188,7 +2291,8 @@
             "python",
             "deep learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern, Platform",
@@ -2206,7 +2310,8 @@
             "software engineering",
             "python",
             "java"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Eng - New Grad (Summer 2021)",
@@ -2226,7 +2331,8 @@
             "java",
             "DevOps",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Internship",
@@ -2246,7 +2352,8 @@
             "python",
             "angular",
             "javascript"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer Graphics Internship",
@@ -2270,7 +2377,8 @@
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer in Test Intern",
@@ -2293,7 +2401,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2313,7 +2422,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern, iOS",
@@ -2331,7 +2441,8 @@
             "software engineering",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2351,7 +2462,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Eng Intern - Subscriptions",
@@ -2369,7 +2481,8 @@
             "software engineering",
             "java",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern, Server",
@@ -2388,7 +2501,8 @@
             "software engineering",
             "information technology",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2408,7 +2522,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -2427,7 +2542,8 @@
             "java",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern, Android",
@@ -2447,7 +2563,8 @@
             "mobile development",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2467,7 +2584,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2488,7 +2606,8 @@
             "java",
             "information technology",
             "react"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2508,7 +2627,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -2531,7 +2651,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2550,7 +2671,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (Telemetry & Analytics",
@@ -2570,7 +2692,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -2589,7 +2712,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Dev Eng in Test Intern",
@@ -2606,7 +2730,8 @@
         "skills": [
             "software engineering",
             "java"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Cloud Data Intern",
@@ -2628,7 +2753,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer in Test Intern",
@@ -2652,7 +2778,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -2672,7 +2799,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Computer Vision/Machine Learning Intern",
@@ -2696,7 +2824,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "SDET Intern",
@@ -2720,7 +2849,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "AI Programming Intern",
@@ -2739,7 +2869,8 @@
             "artificial intelligence",
             "C and C++",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -2757,7 +2888,8 @@
             "software engineering",
             "javascript",
             "java"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Dev Eng in Test Intern",
@@ -2779,7 +2911,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Cloud Front-End Engineering Intern",
@@ -2802,7 +2935,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -2825,7 +2959,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Gameplay Machine Learning Intern",
@@ -2843,7 +2978,8 @@
             "machine learning",
             "python",
             "artificial intelligence"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern, Front-End (Engineerin",
@@ -2863,7 +2999,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Frontend Application Developer Intern",
@@ -2884,7 +3021,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Engineering Intern (Summer 2021) - Irvine",
@@ -2906,7 +3044,8 @@
             "C and C++",
             "machine learning"
         ],
-        "due": "2021-12-01T10:00:00.000Z"
+        "due": "2021-12-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Development Engineering Intern (Summer 2021) - Irvine",
@@ -2928,7 +3067,8 @@
             "C and C++",
             "machine learning"
         ],
-        "due": "2021-12-01T10:00:00.000Z"
+        "due": "2021-12-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Oracle Analytics Cloud (OAC)",
@@ -2954,7 +3094,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern-Software Engineering",
@@ -2976,7 +3117,8 @@
             "machine learning"
         ],
         "compensation": "paid",
-        "start": "2021-06-07T10:00:00.000Z"
+        "start": "2021-06-07T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Applications Engineering Intern",
@@ -2993,7 +3135,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer - Intern (Cayce, SC, US, 29033-3712)",
@@ -3016,7 +3159,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Robotics Software Engineer Co-Op/Intern",
@@ -3038,7 +3182,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (m/f/d)",
@@ -3057,7 +3202,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern",
@@ -3077,7 +3223,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern, Software Engineer",
@@ -3094,7 +3241,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 - IT National Data Hub/National Data Cloud Intern Position (Geared for students graduating in 2021 or 2022)",
@@ -3119,7 +3267,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Duolingo Thrive Intern - Software Engineering",
@@ -3142,7 +3291,8 @@
         "due": "2020-10-28T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern Summer 2021 (Application Window #2: Sep 28th - Oct 2nd)",
@@ -3164,7 +3314,8 @@
         "contact": "ext@snap.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -3189,7 +3340,8 @@
         "contact": "leidos@leidos.com",
         "qualifications": [
             "U.S Citizen"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3211,7 +3363,8 @@
             "java",
             "javascript",
             "python"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 - IT National Data Hub/National Data Cloud Remote Intern Position (Geared for students graduating in 2021 or 2022)",
@@ -3236,7 +3389,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern 2021",
@@ -3258,7 +3412,8 @@
             "java"
         ],
         "compensation": "paid",
-        "contact": "accommodations@hioscar.com"
+        "contact": "accommodations@hioscar.com",
+        "remote": false
     },
     {
         "position": "Cloud DevOps Intern",
@@ -3280,7 +3435,8 @@
             "java",
             "machine learning",
             "C and C++"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3300,7 +3456,8 @@
             "java",
             "C and C++"
         ],
-        "start": "2021-05-01T10:00:00.000Z"
+        "start": "2021-05-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Applications/Industrial Engineer Intern -2021",
@@ -3322,7 +3479,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "AI/Machine Learning Intern, Metropolis - Summer 2021",
@@ -3346,7 +3504,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3366,7 +3525,8 @@
             "java",
             "C and C++"
         ],
-        "start": "2021-05-01T10:00:00.000Z"
+        "start": "2021-05-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Intern - Software Engineering - TB/TP - LYH - May 2021",
@@ -3387,7 +3547,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Intern - FUTURE OPPORTUNITIES - Summer 2021",
@@ -3407,7 +3568,8 @@
             "robotics",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3427,7 +3589,8 @@
             "java",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - US and Canada",
@@ -3448,7 +3611,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern Conversion - Research Software Engineer 2021",
@@ -3472,7 +3636,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern (Software Development Undergraduate - Summer)",
@@ -3491,7 +3656,8 @@
             "software engineering",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3513,7 +3679,8 @@
         "contact": "applyassistance@fortive.com, 1-866-272-5573",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern at The Bear Institute",
@@ -3532,7 +3699,8 @@
             "software engineering",
             "data visualization",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3553,7 +3721,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3574,7 +3743,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3595,7 +3765,8 @@
             "matlab",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3617,7 +3788,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer, Summer Intern 2021",
@@ -3638,7 +3810,8 @@
             "data visualization",
             "python",
             "javascript"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "ATC ETL - Software Engineering Intern, Akron Test Center - Akron, OH",
@@ -3661,7 +3834,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern - Software Engineer (Chatbot)",
@@ -3686,7 +3860,8 @@
         "contact": "1-800-336-8918",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3707,7 +3882,8 @@
             "matlab",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer - Intern (Summer 2021)",
@@ -3728,7 +3904,8 @@
             "python",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern- Orlando",
@@ -3745,7 +3922,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Applications Development Intern",
@@ -3767,7 +3945,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer (Intern) (ITC#2488)",
@@ -3784,7 +3963,8 @@
         "skills": [
             "information technology",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3805,7 +3985,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern - Summer 2021",
@@ -3830,7 +4011,8 @@
         "due": "2020-10-23T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Intern - Applications Engineer - Part-time",
@@ -3849,7 +4031,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern, Field/Application/Commercial Eng",
@@ -3867,7 +4050,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Engineering Intern",
@@ -3889,7 +4073,8 @@
             "machine learning",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "IDeaS Application Developer Intern - Summer 2021 (MN Location)",
@@ -3908,7 +4093,8 @@
             "javascript",
             "java",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Co-Op or Intern: 2020-2021 Academic Year",
@@ -3929,7 +4115,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Application Developer Intern - Agency Systems",
@@ -3951,7 +4138,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -3970,7 +4158,8 @@
             "DevOps",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IDeaS Application Developer Intern - Summer 2021 (MN Location)",
@@ -3989,7 +4178,8 @@
             "javascript",
             "java",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, Systems and Infrastructure (PhD)",
@@ -4009,7 +4199,8 @@
             "java",
             "C and C++"
         ],
-        "contact": "ext@fb.com"
+        "contact": "ext@fb.com",
+        "remote": false
     },
     {
         "position": "Web Software Engineering Intern - Spring/Summer 2021",
@@ -4031,7 +4222,8 @@
             "web development",
             "react"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern (Python)",
@@ -4051,7 +4243,8 @@
             "python",
             "information technology"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineering Intern 2021",
@@ -4069,7 +4262,8 @@
             "software engineering",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": true
     },
     {
         "position": "Software Engineer Intern (C++)",
@@ -4088,7 +4282,8 @@
             "java",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -4111,7 +4306,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Kiewit Technology Group",
@@ -4134,7 +4330,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Software Development Intern-Summer 2021 (Akron, OH, US, 44320)",
@@ -4157,7 +4354,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Duo Security Software Engineer Bachelor's (Intern) - United States",
@@ -4178,7 +4376,8 @@
             "java",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern SDS",
@@ -4200,7 +4399,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer College Intern - IT Cloud Computing (AWS)",
@@ -4225,7 +4425,8 @@
         "contact": "844-694-4748",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Cloud Operations Engineering Intern (June 2021- May 2022)",
@@ -4246,7 +4447,8 @@
             "cloud computing",
             "java",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Summer Intern 2021: Software Engineer, Infrastructure",
@@ -4264,7 +4466,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern",
@@ -4283,7 +4486,8 @@
             "python",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -4305,7 +4509,8 @@
             "javascript",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern: Application Engineering",
@@ -4321,7 +4526,8 @@
         "description": "<p><strong>Position Summary: &nbsp;</strong>Reporting to the Application Engineering Manager this position will assist the department with initiatives which will improve the accuracy and efficiency of processes, tools, and documents used every day.</p>\n      \n      <p>&nbsp;</p>\n      \n      <p><strong>Primary/Essential Responsibilities:&nbsp; </strong></p>\n      \n      <ul>\n      \t<li>\n      \t<p>Working on department improvement initiatives on quotation and order process flow&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\n      \t</li>\n      \t<li>\n      \t<p>Improving documents and forms</p>\n      \t</li>\n      </ul>\n      \n      <ul>\n      \t<li>\n      \t<p>Develop and improve quotation tools</p>\n      \t</li>\n      \t<li>\n      \t<p>Various tasks to support the department, as assigned by the manager</p>\n      \n      \t<p>&nbsp;</p>\n      \t</li>\n      </ul>\n      \n      <p><strong>Required Qualifications: </strong></p>\n      \n      <ul>\n      \t<li>\n      \t<p>Currently pursuing a&nbsp;degree from an accredited university</p>\n      \t</li>\n      \t<li>\n      \t<p>Electrical Engineering, Mechanical Engineering, General Engineering, or Computer Science Major</p>\n      \t</li>\n      \t<li>\n      \t<p>Familiarity with Microsoft Excel, and PowerPoint</p>\n      \t</li>\n      \t<li>\n      \t<p>Exhibiting strong organization skills</p>\n      \t</li>\n      \t<li>\n      \t<p>Self-starter</p>\n      \t</li>\n      \t<li>\n      \t<p>Minimum 3.0 GPA</p>\n      \t</li>\n      \t<li>\n      \t<p>Any background with power is preferred</p>\n      \t</li>\n      \t<li>\n      \t<p>Programming skills are&nbsp;preferred</p>\n      \t</li>\n      </ul>\n      \n      <p>G&amp;W Electric is proud to be an Equal Opportunity Employer. All employees and applicants will receive consideration for employment without regard to age, color, disability, gender, national origin, race, religion, sexual orientation, gender identity, protected veteran status, or any other classification protected by federal, state, or local law.</p>\n      \n      <p>VEVRAA Federal Contractor</p>",
         "skills": [
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern-Machine Learning Software Engineer",
@@ -4343,7 +4549,8 @@
             "C and C++"
         ],
         "compensation": "paid",
-        "contact": "1-800-336-8918"
+        "contact": "1-800-336-8918",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern AutoOEM (Novi, MI - Summer 2021)",
@@ -4362,7 +4569,8 @@
             "C and C++",
             "machine learning"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -4383,7 +4591,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (Remote) - Summer 2021",
@@ -4404,7 +4613,8 @@
             "data visualization",
             "C and C++"
         ],
-        "contact": "recruiters@techsmith.com, 517-381-2300"
+        "contact": "recruiters@techsmith.com, 517-381-2300",
+        "remote": true
     },
     {
         "position": "Summer 2021 Intern - Software Engineer - Tableau",
@@ -4422,7 +4632,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -4443,7 +4654,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -4464,7 +4676,8 @@
             "python",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Software Developer Intern",
@@ -4489,7 +4702,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Developer Intern",
@@ -4509,7 +4723,8 @@
             "data visualization",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Java Developer Intern",
@@ -4527,7 +4742,8 @@
             "java",
             "machine learning",
             "software engineering"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern - Audacy",
@@ -4544,7 +4760,8 @@
         "skills": [
             "software engineering",
             "cybersecurity"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Computer & Software Engineering Intern",
@@ -4563,7 +4780,8 @@
             "machine learning",
             "information technology"
         ],
-        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422"
+        "contact": "narecruitingmailbox@cnhind.com, 1-800-889-4422",
+        "remote": true
     },
     {
         "position": "Software Development Intern",
@@ -4582,7 +4800,8 @@
             "software engineering",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Intern",
@@ -4600,7 +4819,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT Software Developer Intern, Summer 2021",
@@ -4618,7 +4838,8 @@
             "software engineering",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, EDA Automation",
@@ -4638,7 +4859,8 @@
             "python",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Front end/UI Software Engineer Intern (Summer 2021)",
@@ -4665,7 +4887,8 @@
         "contact": "accessiblecareers@splunk.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (Summer 2021)",
@@ -4686,7 +4909,8 @@
             "java",
             "C and C++"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Intern -TITANS Software Engineering R&D Undergraduate Year-Round",
@@ -4704,7 +4928,8 @@
             "information technology",
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": true
     },
     {
         "position": "Software Development Intern",
@@ -4723,7 +4948,8 @@
             "software engineering",
             "C and C++",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "IT - Software Engineering & Cyber Security Summer Intern 2021a",
@@ -4746,7 +4972,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern/Co-op - Software Engineering & Development - Summer 2021",
@@ -4768,7 +4995,8 @@
             "information technology",
             "web development"
         ],
-        "compensation": "paid"
+        "compensation": "paid",
+        "remote": false
     },
     {
         "position": "Cloud Operations Engineer Intern, IT - Tysons Corner, VA",
@@ -4790,7 +5018,8 @@
             "machine learning"
         ],
         "compensation": "paid",
-        "due": "2020-12-01T10:00:00.000Z"
+        "due": "2020-12-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Technology Internship Program: Software Engineer Intern - Architecture (June 2021)",
@@ -4816,7 +5045,8 @@
         "due": "2021-06-01T10:00:00.000Z",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -4839,7 +5069,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -4864,7 +5095,8 @@
         "contact": "paypalglobaltalentacquisition@paypal.com",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -4885,7 +5117,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "2021 Intern - Software Engineer (UAS & ATAP)",
@@ -4909,7 +5142,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern (Summer 2021)",
@@ -4930,7 +5164,8 @@
             "DevOps",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineering Intern - Summer 2021",
@@ -4954,7 +5189,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Undergrad Software Engineering Intern (Summer 2021)",
@@ -4980,7 +5216,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Spring Intern - Software Engineering",
@@ -5001,7 +5238,8 @@
             "C and C++",
             "machine learning",
             "information technology"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Development Engineering Intern (Summer 2021) - San Diego",
@@ -5023,7 +5261,8 @@
             "C and C++",
             "machine learning"
         ],
-        "due": "2021-12-01T10:00:00.000Z"
+        "due": "2021-12-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Development Engineering Intern (Summer 2021) - Coppell",
@@ -5045,7 +5284,8 @@
             "C and C++",
             "machine learning"
         ],
-        "due": "2021-12-01T10:00:00.000Z"
+        "due": "2021-12-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern - Oracle Analytics Cloud (OAC)",
@@ -5071,7 +5311,8 @@
         ],
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern-Software Engineering",
@@ -5093,7 +5334,8 @@
             "machine learning"
         ],
         "compensation": "paid",
-        "start": "2021-06-07T10:00:00.000Z"
+        "start": "2021-06-07T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Intern, Software Engineer",
@@ -5110,7 +5352,8 @@
         "skills": [
             "software engineering",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer - Intern (Cayce, SC, US, 29033)",
@@ -5134,7 +5377,8 @@
         "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -5154,7 +5398,8 @@
             "python",
             "java",
             "matlab"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -5174,7 +5419,8 @@
             "java",
             "C and C++"
         ],
-        "start": "2021-05-01T10:00:00.000Z"
+        "start": "2021-05-01T10:00:00.000Z",
+        "remote": false
     },
     {
         "position": "Software Engineer Intern, Editor and Tools",
@@ -5194,7 +5440,8 @@
             "python",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Intern (Software Development Undergraduate - Summer)",
@@ -5213,7 +5460,8 @@
             "software engineering",
             "C and C++",
             "machine learning"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Software Engineer Intern",
@@ -5235,7 +5483,8 @@
         "contact": "applyassistance@fortive.com, 1-866-272-5573",
         "qualifications": [
             "Bachelor's degree"
-        ]
+        ],
+        "remote": false
     },
     {
         "position": "Cloud Operations Engineer Intern, IT",
@@ -5257,6 +5506,7 @@
             "machine learning"
         ],
         "compensation": "paid",
-        "due": "2020-12-01T10:00:00.000Z"
+        "due": "2020-12-01T10:00:00.000Z",
+        "remote": false
     }
 ]

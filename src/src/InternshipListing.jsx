@@ -18,19 +18,21 @@ function InternshipListing() {
   const [sort, setSort] = useState('date');
   const [search, setSearch] = useState('');
   const [skills, setSkills] = useState([]);
+  const [remote, setRemote] = useState(false);
   const [page, setPage] = useState(1);
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
 
   /* Passes data up from SearchInternshipFeature. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
-  function handleChildClick(passedData, locationVal, companyVal, sortVal, searchQueryVal, skillsVal) {
+  function handleChildClick(passedData, locationVal, companyVal, sortVal, searchQueryVal, skillsVal, isRemote) {
     setData(passedData);
     setLocation(locationVal);
     setCompany(companyVal);
     setSort(sortVal);
     setSearch(searchQueryVal);
     setSkills(skillsVal);
+    setRemote(isRemote);
     setPage(1);
     setPaginatedData(passedData.slice(0, 40));
   }
@@ -84,7 +86,7 @@ function InternshipListing() {
           <Grid.Column width={4}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
-                                     searchQuery={search} skillsVal={skills}/>
+                                     searchQuery={search} skillsVal={skills} isRemote={remote}/>
           </Grid.Column>
 
           <Grid.Column>

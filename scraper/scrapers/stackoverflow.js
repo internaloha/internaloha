@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, isRemote } from './scraperFunctions.js';
 
 (async () => {
 
@@ -48,7 +48,7 @@ import { fetchInfo } from './scraperFunctions.js';
 
       const position = await fetchInfo(page, 'div[class="grid--cell fl1 sm:mb12"] h1', 'innerText');
       const company = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] a', 'innerText');
-      const location = await fetchInfo(page,'div[class="fc-black-700 fs-body3"] span', 'innerText');
+      const location = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] span', 'innerText');
       const posted = await fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]', 'innerText');
       const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
 
@@ -71,13 +71,22 @@ import { fetchInfo } from './scraperFunctions.js';
       }
 
       date.setDate(date.getDate() - daysBack);
+      const city = location.match(/([^ –\n][^,]*)/g)[0].trim();
+      const state = location.match(/([^,]*)/g)[2].trim();
+
+      let remote = false;
+      if ( isRemote(position) ||  isRemote(city) ||  isRemote(description)
+          ||  isRemote(city) ||  isRemote(state)) {
+        remote = true;
+      }
+
 
       data.push({
         position: position.trim(),
         company: company.trim(),
         location: {
-          city: location.match(/([^ –\n][^,]*)/g)[0].trim(),
-          state: location.match(/([^,]*)/g)[2].trim(),
+          city: city,
+          state: state,
         },
         posted: date,
         url: elements[i],
@@ -94,7 +103,6 @@ import { fetchInfo } from './scraperFunctions.js';
         JSON.stringify(data, null, 4), 'utf-8',
         err => (err ? console.log('\nData not written!', err) :
             console.log('\nData successfully written!')));
-
 
     await browser.close();
   } catch (err) {

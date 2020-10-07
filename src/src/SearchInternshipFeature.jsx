@@ -1,10 +1,10 @@
 import React from 'react';
-import { Segment, Header, Dropdown, Label, Input, Form, Grid, Popup } from 'semantic-ui-react';
+import { Segment, Header, Dropdown, Label, Input, Form, Checkbox, Popup } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
 
-function SearchInternshipFeature({ onChildClick, passedData, locationVal, companyVal, sortVal, searchQuery, skillsVal }) {
+function SearchInternshipFeature({ onChildClick, passedData, locationVal, companyVal, sortVal, searchQuery, skillsVal, isRemote }) {
 
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
@@ -14,6 +14,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
   let sortChange = sortVal;
   let searchQueryChange = searchQuery;
   let skillChange = skillsVal;
+  let remoteCheck = isRemote;
 
   const sortBy = [
     { key: 'date', text: 'date', value: 'date' },
@@ -25,12 +26,13 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
   const company = internships.dropdownCompany(data);
 
   const setFilters = () => {
-    const searchFiltered = internships.filterBySearch(data, searchQueryChange);
+    const remoteFilter = internships.isRemote(data, remoteCheck);
+    const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
     const skillsFiltered = internships.filterBySkills(searchFiltered, skillChange);
     const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
     const companyFiltered = internships.filterByCompany(locationFiltered, companyChange);
     const sorted = internships.sortedBy(companyFiltered, sortChange);
-    onChildClick(sorted, locationChange, companyChange, sortChange, searchQueryChange, skillChange);
+    onChildClick(sorted, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck);
     window.scrollTo({
       top: 70,
       left: 100,
@@ -40,6 +42,15 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
 
   const handleSearchChange = (event) => {
     searchQueryChange = event.target.value;
+  };
+
+  const getRemote = () => {
+    if (remoteCheck) {
+      remoteCheck = false;
+    } else {
+      remoteCheck = true;
+    }
+    setFilters();
   };
 
   const handleSubmit = () => {
@@ -141,6 +152,8 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                     fluid selection options={internships.dropdownLocation(passedData)}
                     search
           />
+          <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
+                    onClick={getRemote}/>
         </div>
 
         <div style={{ paddingTop: '2rem' }}>
@@ -174,6 +187,7 @@ SearchInternshipFeature.propTypes = {
   sortVal: PropTypes.string.isRequired,
   searchQuery: PropTypes.string.isRequired,
   skillsVal: PropTypes.array.isRequired,
+  isRemote: PropTypes.bool.isRequired,
 };
 
 export default SearchInternshipFeature;
