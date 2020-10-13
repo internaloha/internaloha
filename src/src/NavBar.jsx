@@ -13,21 +13,21 @@ class NavBar extends React.Component {
           <Menu className={'top meni fixed borderless'}
                 style={{ backgroundColor: '#C1C8E4', border: 0, boxShadow: '0 0 BLACK' }}>
             <Menu.Item>
-              <a href={'/'}>
+              <a href={'/internbit'}>
                 <Image src={'images/logo.png'} size={'small'}/>
               </a>
             </Menu.Item>
             <Menu.Item>
-              <Link to='/all-internships' style={linkStyle}>All Internships</Link>
+              <Link to='/internbit/all-internships' style={linkStyle}>All Internships</Link>
             </Menu.Item>
             <Menu.Item>Recommended Internships</Menu.Item>
             <Menu.Item>
-              <Link to="/statistics" style={linkStyle}>Statistics</Link>
+              <Link to="/internbit/statistics" style={linkStyle}>Statistics</Link>
             </Menu.Item>
             <Menu.Item position='right'>
               <Dropdown text="John Foo" pointing="top right" icon={'user'}>
                 <Dropdown.Menu>
-                  <Dropdown.Item icon="user" text="Profile" as={NavLink} exact to={'/profile'} />
+                  <Dropdown.Item icon="user" text="Profile" as={NavLink} exact to={'/internbit/profile'} />
                 </Dropdown.Menu>
               </Dropdown>
               {/*<Icon className='user circle'/>Profile*/}

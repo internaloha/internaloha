@@ -16,9 +16,9 @@ const App = () => (
     <Router>
       <NavBar/>
       <Switch>
-        <Route exact path={'/'} component={Landing}/>
-        <Route exact path={'/all-internships'} component={InternshipListing}/>
-        <Route exact path={'/statistics'} component={Statistics}/>
+        <Route exact path={'/internbit'} component={Landing}/>
+        <Route exact path={'/internbit/all-internships'} component={InternshipListing}/>
+        <Route exact path={'/internbit/statistics'} component={Statistics}/>
       </Switch>
     </Router>
 );
