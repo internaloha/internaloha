@@ -3,11 +3,11 @@ import { render } from 'react-dom';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import 'semantic-ui-css/semantic.css';
 import './index.css';
-// import { Router } from '@reach/router';
 import Landing from './Landing';
 import InternshipListing from './InternshipListing';
 import Statistics from './Statistcs';
 import NavBar from './NavBar';
+import Profile from './Profile';
 
 /**
  * The top level layout for the site.
@@ -19,6 +19,7 @@ const App = () => (
         <Route exact path={'/internbit'} component={Landing}/>
         <Route exact path={'/internbit/all-internships'} component={InternshipListing}/>
         <Route exact path={'/internbit/statistics'} component={Statistics}/>
+        <Route exact path={'/internbit/profile'} component={Profile}/>
       </Switch>
     </Router>
 );
