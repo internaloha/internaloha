@@ -9,9 +9,9 @@ class Statistics extends React.Component {
   render() {
     return (
         <div>
-          <Container>
+          <Container style={{ marginTop: '10rem', marginBottom: '4rem' }}>
             <Header textAlign={'center'}
-                    as={'h4'}
+                    as={'h2'}
                     style={{ marginBottom: '2rem' }}>
               Statistics
             </Header>
