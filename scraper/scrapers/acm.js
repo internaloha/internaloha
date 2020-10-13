@@ -39,6 +39,9 @@ import { fetchInfo } from './scraperFunctions.js';
         for (let j = 0; j < urlsListLength; j++) {
           // eslint-disable-next-line no-await-in-loop
           await page.goto(urls[j]);
+
+          const lastScraped = new Date();
+
           // eslint-disable-next-line no-await-in-loop
           const position = await fetchInfo(page, 'h1[itemprop="title"]', 'innerText');
           // eslint-disable-next-line no-console
@@ -78,6 +81,7 @@ import { fetchInfo } from './scraperFunctions.js';
               state: state,
               zip: zip,
             },
+            lastScraped: lastScraped,
             description: description,
           });
         }

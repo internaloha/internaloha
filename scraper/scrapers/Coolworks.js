@@ -41,6 +41,8 @@ import { fetchInfo } from './scraperFunctions.js';
       for (let i = 0; i < urlListLength; i++) {
         await page.goto(urls[i]);
 
+        const lastScraped = new Date();
+
         const position = await fetchInfo(page, 'h3', 'innerText');
         console.log(position);
 
@@ -74,6 +76,7 @@ import { fetchInfo } from './scraperFunctions.js';
           company: company.trim(),
           contact: contact,
           posted: posted,
+          lastScraped: lastScraped,
           location: {
             city: location.match(/([^,]*)/g)[0].trim(),
             state: state.trim(),
