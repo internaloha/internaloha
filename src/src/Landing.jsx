@@ -31,7 +31,7 @@ class Landing extends React.Component {
                                style={{ marginLeft: 'auto',
                 marginRight: 'auto' }}>
                 <Statistic size='huge'
-                           style={{ marginLeft: `${width / 4}px` }}>
+                           style={{ marginLeft: `${width / 4.3}px` }}>
                   <Statistic.Value>{data.length}</Statistic.Value>
                   <Statistic.Label>Internships</Statistic.Label>
                 </Statistic>
