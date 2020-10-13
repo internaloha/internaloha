@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Statistic, Image, Button } from 'semantic-ui-react';
 import InternshipsFilters from './InternshipFilters';
+import { Link, withRouter, NavLink } from 'react-router-dom';
 
 
 /** A simple static component to render some text for the landing page. */
@@ -40,12 +41,12 @@ class Landing extends React.Component {
                   <Statistic.Label>Companies</Statistic.Label>
                 </Statistic>
               </Statistic.Group>
-              <a href='/internbit/all-internships'>
                 <Button
+                    as={NavLink}
+                    to={'/internbit/all-internships'}
                     style={{ marginTop: '3rem', backgroundColor: '#8860D0', color: 'white' }}>
                   Get connected today!
                 </Button>
-              </a>
             </Container>
           </div>
         </div>
@@ -53,4 +54,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default withRouter(Landing);
