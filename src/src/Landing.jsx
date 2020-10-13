@@ -40,7 +40,7 @@ class Landing extends React.Component {
                   <Statistic.Label>Companies</Statistic.Label>
                 </Statistic>
               </Statistic.Group>
-              <a href='/all'>
+              <a href='/all-internships'>
                 <Button
                     style={{ marginTop: '3rem', backgroundColor: '#8860D0', color: 'white' }}>
                   Get connected today!
