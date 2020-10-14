@@ -1,8 +1,15 @@
 import React from 'react';
-import { Container, Grid, Image, Header, Button, Label, Progress } from 'semantic-ui-react';
+import { Container, Grid, Image, Header, Button, Label, Progress, Item } from 'semantic-ui-react';
 import { withRouter } from 'react-router-dom';
 
 class Profile extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: 'Software Engineering',
+    };
+  }
+
   render() {
 
     const headerStyle = {
@@ -18,12 +25,26 @@ class Profile extends React.Component {
 
     const opportunities = ['HACC', 'LAVA Lab', 'ICSpark'];
 
+    function changeBackground(e) {
+      e.currentTarget.style.boxShadow = 'rgb(195 195 195 / 79%) 0px 0px 6px 5px';
+      e.currentTarget.style.cursor = 'pointer';
+
+    }
+
+    function onLeave(e) {
+      e.currentTarget.style.boxShadow = 'rgba(0, 0, 0, 0) 0px 0px 0px 0px';
+    }
+
     const renderLabels = (label, key) => (
           <Label circular color={'grey'} key={key}
             style={{ margin: '0.4rem 0.5rem', padding: '0.2rem 0.3rem' }}>
             {label}
           </Label>
       );
+
+    const renderTab = (careerPath) => {
+      this.setState({ title: careerPath });
+    };
 
     return (
       <Container style={{ margin: '10rem 0rem 5rem 0rem' }}>
@@ -37,7 +58,8 @@ class Profile extends React.Component {
                   <Image
                       style={{ marginBottom: '1.5rem' }}
                       circular
-                      size={'medium'}
+                      centered
+                      size={'small'}
                       src={'https://images.squarespace-cdn.com/content/v1/54bbd50ce4b05e8a36418abc/1533226867020-NALD4HA8GBL3IUIQE9PM/ke17ZwdGBToddI8pDm48kMh3mVmBaCAeGwqCLG3iONRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PITeQtWPcxF65ANawkK25DREOmFck9peR6QL8AnpRiPJE/rachel-rouhana-profile-picture-circle.png?format=500w'}>
                   </Image>
                   <Header style={{ margin: '0.7rem' }}>
@@ -77,18 +99,22 @@ class Profile extends React.Component {
                   <Header style={{ margin: '1rem 0rem' }}>
                     Progress
                   </Header>
-                  <Progress value='7.4' total='10' progress='percent' label='Software Engineering' />
-                  <Progress value='6' total='10' progress='percent' label='Mobile Development' />
-                  <Progress value='4' total='10' progress='percent' label='Data Science' />
-                  <Progress value='6.1' total='10' progress='percent' label='Education' />
+                  <Progress value='7.4' total='10' progress='percent' label='Software Engineering'
+                    onClick={() => renderTab('Software Engineering')} onMouseEnter={changeBackground} onMouseLeave={onLeave}/>
+                  <Progress value='6' total='10' progress='percent' label='Mobile Development'
+                            onClick={() => renderTab('Mobile Development')} onMouseEnter={changeBackground} onMouseLeave={onLeave}/>
+                  <Progress value='4' total='10' progress='percent' label='Data Science'
+                            onClick={() => renderTab('Data Science')} onMouseEnter={changeBackground} onMouseLeave={onLeave}/>
+                  <Progress value='6.1' total='10' progress='percent' label='Education'
+                            onClick={() => renderTab('Education')} onMouseEnter={changeBackground} onMouseLeave={onLeave}/>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
           </Grid.Column>
           <Grid.Column width={6}
                        style={{ backgroundColor: '#e5e5e5', borderRadius: '1rem' }}>
-            <Header style={{ margin: '1rem 0rem' }} textAlign={'center'}>
-              Software Engineering
+            <Header dividing style={{ margin: '1rem 0rem' }} textAlign={'center'}>
+              {this.state.title}
             </Header>
             <Header as={'h3'} style={headerStyle}>
               Courses
