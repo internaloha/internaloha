@@ -28,6 +28,7 @@ class NavBar extends React.Component {
               <Dropdown text="John Foo" pointing="top right" icon={'user'}>
                 <Dropdown.Menu>
                   <Dropdown.Item icon="user" text="Profile" as={NavLink} exact to={'/internbit/profile'} />
+                  <Dropdown.Item icon="file text" text="Applications" as={NavLink} exact to={'/internbit/applications'} />
                 </Dropdown.Menu>
               </Dropdown>
               {/*<Icon className='user circle'/>Profile*/}

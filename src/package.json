@@ -29,6 +29,7 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
     "simpl-schema": "^1.8.0",
+    "sweetalert": "^2.1.2",
     "typescript": "^3.8.3",
     "uniforms": "^2.6.9",
     "uniforms-bridge-simple-schema-2": "^2.6.7",
