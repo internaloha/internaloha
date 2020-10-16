@@ -1,6 +1,16 @@
 import React from 'react';
-import { Container, Grid, Image, Header, Button, Label, Progress, Item } from 'semantic-ui-react';
-import { withRouter } from 'react-router-dom';
+import {
+  Container,
+  Grid,
+  Image,
+  Header,
+  Button,
+  Label,
+  Progress,
+  Item,
+  Dropdown
+} from 'semantic-ui-react';
+import { Link, withRouter, NavLink } from 'react-router-dom';
 
 class Profile extends React.Component {
   constructor(props) {
@@ -71,7 +81,7 @@ class Profile extends React.Component {
                   <p>
                     Intended Graduation Date | Spring 2021
                   </p>
-                  <Button>
+                  <Button as={NavLink} exact to={'/internbit/edit-profile'}>
                     Edit Profile
                   </Button>
                 </Grid.Column>
