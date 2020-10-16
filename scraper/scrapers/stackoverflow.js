@@ -17,14 +17,15 @@ import { fetchInfo, isRemote } from './scraperFunctions.js';
 
   try {
 
+    await page.goto('https://stackoverflow.com/jobs?q=internship');
+
     // filter by internship tag
-    await page.goto('https://stackoverflow.com/jobs');
-    await page.waitForSelector('button[data-tab="Background"]');
-    await page.click('button[data-tab="Background"]');
-    await page.waitForSelector('input[id="jInternship"]');
-    await page.click('input[id="jInternship"]');
-    await page.waitForSelector('div[id="popover-background"] button');
-    await page.click('div[id="popover-background"] button');
+    // await page.waitForSelector('button[data-tab="Background"]');
+    // await page.click('button[data-tab="Background"]');
+    // await page.waitForSelector('input[id="jInternship"]');
+    // await page.click('input[id="jInternship"]');
+    // await page.waitForSelector('div[id="popover-background"] button');
+    // await page.click('div[id="popover-background"] button');
 
     await page.waitFor(2000);
     const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
@@ -46,56 +47,74 @@ import { fetchInfo, isRemote } from './scraperFunctions.js';
     for (let i = 0; i < number[0]; i++) {
       await page.goto(elements[i]);
 
-      const position = await fetchInfo(page, 'div[class="grid--cell fl1 sm:mb12"] h1', 'innerText');
-      const company = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] a', 'innerText');
-      const location = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] span', 'innerText');
-      const posted = await fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]', 'innerText');
-      const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
+      try {
+        const position = await fetchInfo(page, 'div[class="grid--cell fl1 sm:mb12"] h1', 'innerText');
+        let company = '';
+        try {
+           company = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] a', 'innerText');
+        } catch (noCompany) {
+          company = 'Unknown';
+        }
+        const posted = await fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]', 'innerText');
+        const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
 
-      const skills = await page.evaluate(
-          () => Array.from(
-              // eslint-disable-next-line no-undef
-              document.querySelectorAll('section[class="mb32"]:nth-child(3) a'),
-              a => a.textContent,
-          ),
-      );
+        const skills = await page.evaluate(
+            () => Array.from(
+                // eslint-disable-next-line no-undef
+                document.querySelectorAll('section[class="mb32"]:nth-child(3) a'),
+                a => a.textContent,
+            ),
+        );
 
-      const date = new Date();
-      let daysBack = 0;
-      const lastScraped = new Date();
+        const date = new Date();
+        let daysBack = 0;
+        const lastScraped = new Date();
 
-      if (posted.includes('yesterday')) {
-        daysBack = 1;
-      } else {
-        daysBack = posted.match(/\d+/g);
+        if (posted.includes('yesterday')) {
+          daysBack = 1;
+        } else {
+          daysBack = posted.match(/\d+/g);
+        }
+
+        date.setDate(date.getDate() - daysBack);
+
+        let location = '';
+        let city = '';
+        let state = '';
+        try {
+          location = await fetchInfo(page, 'div[class="fc-black-700 fs-body3"] span', 'innerText');
+          city = location.match(/([^ –\n][^,]*)/g)[0].trim();
+          state = location.match(/([^,]*)/g)[2].trim();
+        } catch (noLocation) {
+          location = '';
+          city = 'Unknown';
+          state = 'Unknown';
+        }
+
+        let remote = false;
+        if (isRemote(position) || isRemote(city) || isRemote(description)
+            || isRemote(city) || isRemote(state)) {
+          remote = true;
+        }
+
+        data.push({
+          position: position.trim(),
+          company: company.trim(),
+          location: {
+            city: city,
+            state: state,
+          },
+          posted: date,
+          url: elements[i],
+          skills: skills,
+          lastScraped: lastScraped,
+          description: description.trim(),
+        });
+
+        console.log(position.trim());
+      } catch (err) {
+        console.log('Our Error: ', err.message);
       }
-
-      date.setDate(date.getDate() - daysBack);
-      const city = location.match(/([^ –\n][^,]*)/g)[0].trim();
-      const state = location.match(/([^,]*)/g)[2].trim();
-
-      let remote = false;
-      if ( isRemote(position) ||  isRemote(city) ||  isRemote(description)
-          ||  isRemote(city) ||  isRemote(state)) {
-        remote = true;
-      }
-
-
-      data.push({
-        position: position.trim(),
-        company: company.trim(),
-        location: {
-          city: city,
-          state: state,
-        },
-        posted: date,
-        url: elements[i],
-        skills: skills,
-        lastScraped: lastScraped,
-        description: description.trim(),
-      });
-
-      console.log(position.trim());
 
     }
 
