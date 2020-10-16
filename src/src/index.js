@@ -9,6 +9,7 @@ import Statistics from './Statistcs';
 import NavBar from './NavBar';
 import Profile from './Profile';
 import JobCart from './JobCart';
+import EditProfile from './EditProfile';
 
 /**
  * The top level layout for the site.
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path={'/internbit/statistics'} component={Statistics}/>
         <Route exact path={'/internbit/profile'} component={Profile}/>
         <Route exact path={'/internbit/applications'} component={JobCart}/>
+        <Route exact path={'/internbit/edit-profile'} component={EditProfile}/>
       </Switch>
     </Router>
 );
