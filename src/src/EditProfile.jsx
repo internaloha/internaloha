@@ -60,7 +60,7 @@ class EditProfile extends React.Component {
           borderRadius: '1rem', padding: '3rem 2rem',
         }}>
           <Form>
-            <Header textAlign={'center'} as={'h2'}>
+            <Header textAlign={'center'} as={'h2'} style={{ marginBottom: '2rem' }}>
               Edit Profile
             </Header>
             <Form.Group widths='equal'>
