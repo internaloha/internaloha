@@ -10,6 +10,7 @@ import NavBar from './NavBar';
 import Profile from './Profile';
 import JobCart from './JobCart';
 import EditProfile from './EditProfile';
+import RecommendedInternships from './RecommendedInternships';
 
 /**
  * The top level layout for the site.
@@ -18,7 +19,8 @@ const App = () => (
     <Router>
       <NavBar/>
       <Switch>
-        <Route exact path={'/internbit'} component={Landing}/>
+        {/*<Route exact path={'/internbit'} component={Landing}/>*/}
+        <Route exact path={'/internbit'} component={RecommendedInternships}/>
         <Route exact path={'/internbit/all-internships'} component={InternshipListing}/>
         <Route exact path={'/internbit/statistics'} component={Statistics}/>
         <Route exact path={'/internbit/profile'} component={Profile}/>
