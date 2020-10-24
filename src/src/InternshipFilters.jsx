@@ -187,10 +187,18 @@ class InternshipsFilters {
 
   /* Returns a sorted list by company name */
   filterByCompany(data, company) {
-    if (company === 'any') {
+    if (company === 'any' || company.length === 0) {
       return data;
     }
-    return _.filter(data, ['company', company]);
+    const list = [];
+    for (let i = 0; i < data.length; i++) {
+      const companies = data[i].company;
+      const lowercase = companies.toString().toLowerCase();
+      if (lowercase.includes(company.toString().toLowerCase())) {
+        list.push(data[i]);
+      }
+    }
+    return list;
   }
 
   /* Returns a list based on search query */
