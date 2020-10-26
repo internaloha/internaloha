@@ -234,20 +234,21 @@
     },
     {
         "site": "ACM",
+        "lastScraped": "2020-10-12T01:59:13.681Z",
         "entries": 160,
         "position": 160,
         "company": 160,
-        "contact": 0,
+        "contact": 1,
         "location": 160,
         "posted": 0,
         "due": 1,
-        "start": 10,
+        "start": 5,
         "end": 0,
-        "compensation": 6,
-        "qualifications": 106,
+        "compensation": 9,
+        "qualifications": 75,
         "skills": 159,
         "description": 160,
-        "remote": 4
+        "remote": 3
     },
     {
         "site": "Manual",
@@ -273,16 +274,16 @@
         "entries": 3740,
         "position": 3718,
         "company": 3718,
-        "contact": 370,
+        "contact": 371,
         "location": 3740,
         "posted": 2937,
         "due": 108,
-        "start": 162,
+        "start": 157,
         "end": 0,
-        "compensation": 885,
-        "qualifications": 1316,
+        "compensation": 888,
+        "qualifications": 1285,
         "skills": 3674,
         "description": 3718,
-        "remote": 786
+        "remote": 785
     }
 ]
