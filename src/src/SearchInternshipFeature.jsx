@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header, Dropdown, Label, Input, Form, Checkbox, Popup } from 'semantic-ui-react';
+import { Segment, Header, Dropdown, Label, Input, Form, Checkbox, Popup, Search } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
@@ -42,6 +42,10 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
 
   const handleSearchChange = (event) => {
     searchQueryChange = event.target.value;
+  };
+
+  const handleCompanyChange = (event) => {
+    companyChange = event.target.value;
   };
 
   const getRemote = () => {
@@ -156,15 +160,27 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                     onClick={getRemote}/>
         </div>
 
+        {/*<div style={{ paddingTop: '2rem' }}>*/}
+        {/*  <Header>Company</Header>*/}
+        {/*  <Dropdown*/}
+        {/*      placeholder='Select a company'*/}
+        {/*      fluid selection options={internships.dropdownCompany(passedData)}*/}
+        {/*      defaultValue={company[0].value}*/}
+        {/*      onChange={getCompany}*/}
+        {/*      search*/}
+        {/*  />*/}
+        {/*</div>*/}
         <div style={{ paddingTop: '2rem' }}>
           <Header>Company</Header>
-          <Dropdown
-              placeholder='Select a company'
-              fluid selection options={internships.dropdownCompany(passedData)}
-              defaultValue={company[0].value}
-              onChange={getCompany}
-              search
-          />
+
+          <Form onSubmit={handleSubmit}>
+            <Input icon='home'
+                   iconPosition='left'
+                   placeholder='Enter a company'
+                   onChange={handleCompanyChange}
+                   fluid
+            />
+          </Form>
         </div>
         <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }} align={'center'}>
           <Header>Key</Header>
