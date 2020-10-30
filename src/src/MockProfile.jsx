@@ -13,27 +13,32 @@ import {
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
+import { recommendation, dropdownCareerInterest } from './RecommendationScript';
 
-function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortVal, searchQuery, skillsVal, isRemote }) {
+function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
 
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
 
-  let locationChange = locationVal;
-  let companyChange = companyVal;
-  let sortChange = sortVal;
-  let searchQueryChange = searchQuery;
+  // let locationChange = locationVal;
+  // let companyChange = companyVal;
+  // let sortChange = sortVal;
+  // let searchQueryChange = searchQuery;
+  // let remoteCheck = isRemote;
+
   let skillChange = skillsVal;
-  let remoteCheck = isRemote;
+  let careerChange = '';
+  let recommendedData = [];
 
   const setFilters = () => {
-    const remoteFilter = internships.isRemote(data, remoteCheck);
-    const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
-    const skillsFiltered = internships.filterBySkills(searchFiltered, skillChange);
-    const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
-    const companyFiltered = internships.filterByCompany(locationFiltered, companyChange);
-    const sorted = internships.sortedBy(companyFiltered, sortChange);
-    onChildClick(sorted, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck);
+    // const remoteFilter = internships.isRemote(data, remoteCheck);
+    // const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
+    // const skillsFiltered = internships.filterBySkills(searchFiltered, skillChange);
+    // const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
+    // const companyFiltered = internships.filterByCompany(locationFiltered, companyChange);
+    // const sorted = internships.sortedBy(companyFiltered, sortChange);
+    onChildClick(recommendedData);
+
     window.scrollTo({
       top: 70,
       left: 100,
@@ -41,40 +46,49 @@ function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortV
     });
   };
 
-  const handleSearchChange = (event) => {
-    searchQueryChange = event.target.value;
-  };
-
-  const getRemote = () => {
-    if (remoteCheck) {
-      remoteCheck = false;
-    } else {
-      remoteCheck = true;
-    }
-    setFilters();
-  };
+  // const handleSearchChange = (event) => {
+  //   searchQueryChange = event.target.value;
+  // };
+  //
+  // const getRemote = () => {
+  //   if (remoteCheck) {
+  //     remoteCheck = false;
+  //   } else {
+  //     remoteCheck = true;
+  //   }
+  //   setFilters();
+  // };
 
   const handleSubmit = () => {
     setFilters();
   };
 
-  const getLocation = (event, { value }) => {
-    locationChange = value;
-    setFilters();
-  };
 
-  const getCompany = (event, { value }) => {
-    companyChange = value;
-    setFilters();
-  };
-
-  const getSort = (event, { value }) => {
-    sortChange = value;
-    setFilters();
-  };
-
+  //
+  // const getLocation = (event, { value }) => {
+  //   locationChange = value;
+  //   setFilters();
+  // };
+  //
+  // const getCompany = (event, { value }) => {
+  //   companyChange = value;
+  //   setFilters();
+  // };
+  //
+  // const getSort = (event, { value }) => {
+  //   sortChange = value;
+  //   setFilters();
+  // };
+  //
   const getSkills = (event, { value }) => {
     skillChange = value;
+    recommendedData = recommendation(skillChange, careerChange, data);
+    setFilters();
+  };
+
+  const getCareerInterest = (event, { value }) => {
+    careerChange = value;
+    recommendedData = recommendation(skillChange, careerChange, data);
     setFilters();
   };
 
@@ -84,11 +98,6 @@ function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortV
     top: '6.5rem',
   };
 
-  const interestOptions = [
-    { key: 'm', text: 'Social Computing', value: 'Social Computing' },
-    { key: 'f', text: 'Web Development', value: 'Web Development' },
-    { key: 'o', text: 'Education', value: 'Education' },
-  ];
 
   return (
       <Segment style={sticky}>
@@ -109,6 +118,7 @@ function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortV
                 label={{ children: 'Skills' }}
                 placeholder='Skills'
                 search
+                onChange={getSkills}
             />
           </Form>
         </div>
@@ -116,11 +126,12 @@ function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortV
           <Form onSubmit={handleSubmit}>
             <Form.Field
                 fluid multiple selection clearable
-                control={Select}
-                options={interestOptions}
+                control={Dropdown}
+                options={dropdownCareerInterest()}
                 label={{ children: 'Career Interest' }}
                 placeholder='Career Interest'
                 search
+                onChange={getCareerInterest}
             />
           </Form>
         </div>

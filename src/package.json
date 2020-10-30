@@ -14,6 +14,7 @@
     "jquery": "^3.5.0",
     "jsonfile": "^6.0.1",
     "lodash": "^4.17.15",
+    "natural": "^2.1.5",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
     "preval.macro": "^5.0.0",

@@ -257,7 +257,7 @@ function trainSkills(classifier) {
 
   classifier.addDocument(['c++', 'c'], 'C and C++');
   classifier.addDocument('machine learning', 'machine learning');
-  classifier.addDocument('DevOps', 'DevOps');
+  classifier.addDocument('devOps', 'devOps');
   classifier.train();
 
 }
