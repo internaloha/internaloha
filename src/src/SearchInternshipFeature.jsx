@@ -44,6 +44,10 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
     searchQueryChange = event.target.value;
   };
 
+  const handleCompanyChange = (event) => {
+    companyChange = event.target.value;
+  };
+
   const getRemote = () => {
     if (remoteCheck) {
       remoteCheck = false;
@@ -156,22 +160,24 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                     onClick={getRemote}/>
         </div>
 
+        {/*<div style={{ paddingTop: '2rem' }}>*/}
+        {/*  <Header>Company</Header>*/}
+        {/*  <Dropdown*/}
+        {/*      placeholder='Select a company'*/}
+        {/*      fluid selection options={internships.dropdownCompany(passedData)}*/}
+        {/*      defaultValue={company[0].value}*/}
+        {/*      onChange={getCompany}*/}
+        {/*      search*/}
+        {/*  />*/}
+        {/*</div>*/}
         <div style={{ paddingTop: '2rem' }}>
           <Header>Company</Header>
-          <Dropdown
-              placeholder='Select a company'
-              fluid selection options={internships.dropdownCompany(passedData)}
-              defaultValue={company[0].value}
-              onChange={getCompany}
-              search
-          />
-        </div>
-        <div style={{ paddingTop: '2rem' }}>
-          <Form>
+
+          <Form onSubmit={handleSubmit}>
             <Input icon='home'
                    iconPosition='left'
                    placeholder='Enter a company'
-                   onChange={getCompany}
+                   onChange={handleCompanyChange}
                    fluid
             />
           </Form>
