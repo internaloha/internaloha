@@ -51,6 +51,18 @@ function siteName(url) {
     if (url.includes('angel')) {
       return 'AngelList';
     }
+    if (url.includes('acm')) {
+      return 'ACM';
+    }
+    if (url.includes('apple')) {
+      return 'Apple';
+    }
+    if (url.includes('americanexpress')) {
+      return 'American Express';
+    }
+    if (url.includes('coolworks')) {
+      return 'Coolworks';
+    }
     return 'NSF-REU';
   } catch (e) {
     return 'Unknown';

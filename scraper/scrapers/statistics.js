@@ -106,6 +106,9 @@ const manualData = readFile('../src/src/data/manualInput.parsed.data.json');
 const stackoverflow = readFile('../src/src/data/stackoverflow.parsed.data.json');
 const idealist = readFile('../src/src/data/idealist.parsed.data.json');
 const ACM = readFile('../src/src/data/acm.parsed.data.json');
+const apple = readFile('../src/src/data/apple.parsed.data.json');
+const coolworks = readFile('../src/src/data/coolworks.parsed.data.json');
+const aexpress = readFile('../src/src/data/aexpress.parsed.data.json');
 
 let data = [];
 data = _.concat(zipData, simplyData);
@@ -122,6 +125,9 @@ data = _.concat(data, manualData);
 data = _.concat(data, stackoverflow);
 data = _.concat(data, idealist);
 data = _.concat(data, ACM);
+data = _.concat(data, coolworks);
+data = _.concat(data, aexpress);
+data = _.concat(data, apple);
 
 statistics.push(
     getStatistics('simplyHired', simplyData),
@@ -138,6 +144,9 @@ statistics.push(
     getStatistics('AngelList', angelData),
     getStatistics('Stackoverflow', stackoverflow),
     getStatistics('ACM', ACM),
+    getStatistics('Coolworks', coolworks),
+    getStatistics('Aexpress', aexpress),
+    getStatistics('Apple', apple),
     getStatistics('Manual', manualData),
     getStatistics('Total', data),
 );

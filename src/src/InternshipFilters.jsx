@@ -10,6 +10,13 @@ import iHire from './data/iHireTech.parsed.data';
 import glassData from './data/glassdoor.parsed.data';
 import indeedData from './data/indeed.parsed.data';
 import angelData from './data/angellist.parsed.data';
+import manualData from './data/manualInput.parsed.data';
+import apple from './data/apple.parsed.data';
+import aexpress from './data/aexpress.parsed.data';
+import ACM from './data/acm.parsed.data';
+import stackoverflow from './data/stackoverflow.parsed.data';
+import idealist from './data/idealist.parsed.data';
+import coolworks from './data/coolworks.parsed.data';
 
 class InternshipsFilters {
 
@@ -23,11 +30,18 @@ class InternshipsFilters {
     data = _.concat(data, monsterData);
     data = _.concat(data, linkedinData);
     data = _.concat(data, youternData);
-    data = _.concat(data, nsfData);
+    // data = _.concat(data, nsfData);
     data = _.concat(data, iHire);
     data = _.concat(data, glassData);
     data = _.concat(data, indeedData);
     data = _.concat(data, angelData);
+    data = _.concat(data, manualData);
+    data = _.concat(data, stackoverflow);
+    data = _.concat(data, idealist);
+    data = _.concat(data, ACM);
+    data = _.concat(data, coolworks);
+    data = _.concat(data, aexpress);
+    data = _.concat(data, apple);
 
     // console.log('zip:', zipData.length);
     // console.log('simply:', simplyData.length);
