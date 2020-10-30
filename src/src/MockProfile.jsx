@@ -27,7 +27,7 @@ function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
   // let remoteCheck = isRemote;
 
   let skillChange = skillsVal;
-  let careerChange = '';
+  let careerChange = careerVal;
   let recommendedData = [];
 
   const setFilters = () => {
@@ -37,7 +37,7 @@ function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
     // const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
     // const companyFiltered = internships.filterByCompany(locationFiltered, companyChange);
     // const sorted = internships.sortedBy(companyFiltered, sortChange);
-    onChildClick(recommendedData);
+    onChildClick(recommendedData, skillChange, careerChange);
 
     window.scrollTo({
       top: 70,

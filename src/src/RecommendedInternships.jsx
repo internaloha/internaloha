@@ -21,11 +21,11 @@ function RecommendedInternships() {
 
   /* Passes data up from MockProfile. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
-  function handleChildClick(passedData) {
+  function handleChildClick(passedData, skillsVal, careerVal) {
     console.log(passedData);
     setData(passedData);
-    // setSkills(skillsVal);
-    // setCareer(careerVal);
+    setSkills(skillsVal);
+    setCareer(careerVal);
     setPage(1);
     setPaginatedData(passedData.slice(0, 40));
   }

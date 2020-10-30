@@ -58,13 +58,13 @@ function recommendation(tags, careers, data) {
 
   careerSkills = _.uniq(careerSkills);
 
-  const lowerCaseTags = [];
+  // const lowerCaseTags = [];
 
-  for (let i = 0; i < tags.length; i++) {
-    lowerCaseTags.push(tags[i].toString().toLowerCase());
-  }
+  // for (let i = 0; i < tags.length; i++) {
+  //   lowerCaseTags.push(tags[i].toString().toLowerCase());
+  // }
 
-  const totalSkills = _.uniq(careerSkills.concat(lowerCaseTags));
+  const totalSkills = _.uniq(careerSkills.concat(tags));
 
   // console.log(totalSkills);
 
