@@ -28,7 +28,8 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-utils": "^2.0.0",
-    "minimist": "^1.2.5"
+    "minimist": "^1.2.5",
+    "scraper": "0.0.9"
   },
   "scripts": {
     "test": "node test.js",
