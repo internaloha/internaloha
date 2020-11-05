@@ -8,7 +8,7 @@ import {
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
-import { recommendation, dropdownCareerInterest, test } from './RecommendationScript';
+import { recommendation, dropdownCareerInterest } from './RecommendationScript';
 
 function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
 

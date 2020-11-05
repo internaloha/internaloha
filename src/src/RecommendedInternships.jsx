@@ -75,7 +75,7 @@ function RecommendedInternships() {
             <div onScroll={handleScroll()} ref={ref}>
               <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard2
-                    internship={internship} key={index}/>)}
+                    internship={internship} key={index} hasSkills={skills}/>)}
               </Item.Group>
             </div>
 

@@ -70,7 +70,7 @@ function siteName(url) {
   }
 }
 
-function hasSkill(skill) {
+function hasSkill(skill, hasSkills) {
   const studentSkills = ['react', 'software engineering'];
 
   const has = {
@@ -84,7 +84,7 @@ function hasSkill(skill) {
     color: '#8f8f8f',
   };
 
-  if (studentSkills.includes(skill)) {
+  if (hasSkills.includes(skill)) {
     return (
         <Label circular key={skill} style={has}>
           {skill}
@@ -173,7 +173,7 @@ function InternshipListingCard2(props) {
             </Item.Description>
             <Item.Extra>
               {props.internship.skills.map((skill) => (
-                  hasSkill(skill)
+                  hasSkill(skill, props.hasSkills)
               ))}
               {isRemote(props.internship.remote)}
             </Item.Extra>
@@ -217,6 +217,7 @@ function InternshipListingCard2(props) {
 
 InternshipListingCard2.propTypes = {
   internship: PropTypes.object.isRequired,
+  hasSkills: PropTypes.array.isRequired,
 };
 
 export default InternshipListingCard2;
