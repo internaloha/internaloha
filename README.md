@@ -1,6 +1,6 @@
-# InternBit 
+# InternAloha
 
-This repo contains the static site for InternBit. It is based on https://github.com/csdl/csdl
+This repo contains the static site for InternAloha. It is based on https://github.com/csdl/csdl
 .github.io.
 
   * The "gh-pages" branch contains the rendered HTML.
