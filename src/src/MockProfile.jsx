@@ -3,17 +3,12 @@ import {
   Segment,
   Header,
   Dropdown,
-  Label,
-  Input,
   Form,
-  Checkbox,
-  Popup,
-  Select
 } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
-import { recommendation, dropdownCareerInterest } from './RecommendationScript';
+import { recommendation, dropdownCareerInterest, test } from './RecommendationScript';
 
 function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
 
@@ -45,6 +40,8 @@ function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
       behavior: 'smooth',
     });
   };
+
+  // console.log(test(data))
 
   // const handleSearchChange = (event) => {
   //   searchQueryChange = event.target.value;
@@ -142,12 +139,8 @@ function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
 MockProfile.propTypes = {
   onChildClick: PropTypes.func.isRequired,
   passedData: PropTypes.array.isRequired,
-  locationVal: PropTypes.string.isRequired,
-  companyVal: PropTypes.string.isRequired,
-  sortVal: PropTypes.string.isRequired,
-  searchQuery: PropTypes.string.isRequired,
   skillsVal: PropTypes.array.isRequired,
-  isRemote: PropTypes.bool.isRequired,
+  careerVal: PropTypes.array.isRequired,
 };
 
 export default MockProfile;
