@@ -19,13 +19,13 @@ const App = () => (
     <Router>
       <NavBar/>
       <Switch>
-        {/*<Route exact path={'/internbit'} component={Landing}/>*/}
-        <Route exact path={'/internbit'} component={RecommendedInternships}/>
-        <Route exact path={'/internbit/all-internships'} component={InternshipListing}/>
-        <Route exact path={'/internbit/statistics'} component={Statistics}/>
-        <Route exact path={'/internbit/profile'} component={Profile}/>
-        <Route exact path={'/internbit/applications'} component={JobCart}/>
-        <Route exact path={'/internbit/edit-profile'} component={EditProfile}/>
+        {/*<Route exact path={'/'} component={Landing}/>*/}
+        <Route exact path={'/'} component={RecommendedInternships}/>
+        <Route exact path={'/all-internships'} component={InternshipListing}/>
+        <Route exact path={'/statistics'} component={Statistics}/>
+        <Route exact path={'/profile'} component={Profile}/>
+        <Route exact path={'/applications'} component={JobCart}/>
+        <Route exact path={'/edit-profile'} component={EditProfile}/>
       </Switch>
     </Router>
 );
