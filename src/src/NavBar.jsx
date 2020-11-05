@@ -13,18 +13,18 @@ class NavBar extends React.Component {
           <Menu className={'top meni fixed borderless'}
                 style={{ backgroundColor: '#C1C8E4', border: 0, boxShadow: '0 0 BLACK' }}>
             <Menu.Item>
-              <a href={'/internbit'}>
+              <a href={'/'}>
                 <Image src={'images/logo.png'} size={'small'}/>
               </a>
             </Menu.Item>
             <Menu.Item>
-              <Link to='/internbit/all-internships' style={linkStyle}>All Internships</Link>
+              <Link to='/all-internships' style={linkStyle}>All Internships</Link>
             </Menu.Item>
             <Menu.Item>
-              <Link to='/internbit' style={linkStyle}>Recommended Internships</Link>
+              <Link to='/' style={linkStyle}>Recommended Internships</Link>
             </Menu.Item>
             <Menu.Item>
-              <Link to="/internbit/statistics" style={linkStyle}>Statistics</Link>
+              <Link to="/statistics" style={linkStyle}>Statistics</Link>
             </Menu.Item>
             {/*<Menu.Item position='right'>*/}
             {/*  <Dropdown text="John Foo" pointing="top right" icon={'user'}>*/}
