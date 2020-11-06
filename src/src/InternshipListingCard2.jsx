@@ -71,6 +71,10 @@ function siteName(url) {
 }
 
 function hasSkill(skill, hasSkills) {
+
+  if (typeof (hasSkills) === 'undefined') {
+    hasSkills = ['react', 'software engineering'];
+  }
   const studentSkills = ['react', 'software engineering'];
 
   const has = {
