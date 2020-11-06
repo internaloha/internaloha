@@ -26,7 +26,7 @@ class InternshipsFilters {
   mergeData() {
     let data = [];
     data = _.concat(zipData, simplyData);
-    data = _.concat(data, cheggData);
+    // data = _.concat(data, cheggData);
     data = _.concat(data, monsterData);
     data = _.concat(data, linkedinData);
     data = _.concat(data, youternData);

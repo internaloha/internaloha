@@ -112,11 +112,11 @@ const aexpress = readFile('../src/src/data/aexpress.parsed.data.json');
 
 let data = [];
 data = _.concat(zipData, simplyData);
-data = _.concat(data, cheggData);
+// data = _.concat(data, cheggData);
 data = _.concat(data, monsterData);
 data = _.concat(data, linkedInData);
 data = _.concat(data, youternData);
-data = _.concat(data, nsfData);
+// data = _.concat(data, nsfData);
 data = _.concat(data, iHire);
 data = _.concat(data, glassData);
 data = _.concat(data, indeedData);
@@ -133,9 +133,9 @@ statistics.push(
     getStatistics('simplyHired', simplyData),
     getStatistics('LinkedIn', linkedInData),
     getStatistics('ZipRecruiter', zipData),
-    getStatistics('Chegg Internships', cheggData),
+    // getStatistics('Chegg Internships', cheggData),
     getStatistics('Monster', monsterData),
-    getStatistics('NSF-REU', nsfData),
+    // getStatistics('NSF-REU', nsfData),
     getStatistics('YouTern', youternData),
     getStatistics('iHireTech', iHire),
     getStatistics('Glassdoor', glassData),
