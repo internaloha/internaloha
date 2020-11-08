@@ -100,9 +100,9 @@ function recommendation(tags, careers, data) {
     }
   }
 
-  const sorted = _.orderBy(skills, ['recommendation'], ['desc'])
+  const sorted = _.orderBy(skills, ['recommendation'], ['desc']);
 
-  // console.log(sorted);
+  console.log(sorted);
 
 // for (let i = 0; i < data.length; i++) {
 //   // if any of the tags exist in data set, push it to skills and go to next
