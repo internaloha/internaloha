@@ -3,28 +3,27 @@ import {
   Segment,
   Header,
   Dropdown,
-  Label,
-  Input,
   Form,
-  Checkbox,
-  Popup,
-  Select
+  Select,
 } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
+import { recommendation } from './RecommendationSystems';
 
-function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortVal, searchQuery, skillsVal, isRemote }) {
+function MockProfile({ onChildClick, passedData, locationVal, companyVal, sortVal, searchQuery, skillsVal, isRemote }) {
 
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
 
-  let locationChange = locationVal;
-  let companyChange = companyVal;
-  let sortChange = sortVal;
-  let searchQueryChange = searchQuery;
+   let locationChange = locationVal;
+   let companyChange = companyVal;
+   let sortChange = sortVal;
+   let searchQueryChange = searchQuery;
+   let remoteCheck = isRemote;
+
   let skillChange = skillsVal;
-  let remoteCheck = isRemote;
+  let recommendedData = [];
 
   const setFilters = () => {
     const remoteFilter = internships.isRemote(data, remoteCheck);
@@ -75,6 +74,7 @@ function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortV
 
   const getSkills = (event, { value }) => {
     skillChange = value;
+    recommendedData = recommendation(skillChange, data);
     setFilters();
   };
 
@@ -109,6 +109,7 @@ function MockProfile ({ onChildClick, passedData, locationVal, companyVal, sortV
                 label={{ children: 'Skills' }}
                 placeholder='Skills'
                 search
+                onChange = {getSkills}
             />
           </Form>
         </div>

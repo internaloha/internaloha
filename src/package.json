@@ -58,7 +58,8 @@
     "test": "node test.js",
     "eject": "react-scripts eject",
     "lint": "eslint --quiet --ext .jsx --ext .js ./src",
-    "rs": "node src/RecommendationSystems.js"
+    "rs": "node src/RecommendationSystems.js",
+    "consoleTest": "node src/testConsole.js"
   },
   "eslintConfig": {
     "extends": "react-app"
