@@ -12,26 +12,20 @@ function RecommendedInternships() {
 
   const [data, setData] = useState(getInternshipData);
   const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
-  const [location, setLocation] = useState('any');
-  const [company, setCompany] = useState('any');
-  const [sort, setSort] = useState('date');
-  const [search, setSearch] = useState('');
+
   const [skills, setSkills] = useState([]);
-  const [remote, setRemote] = useState(false);
+  const [career, setCareer] = useState([]);
   const [page, setPage] = useState(1);
   const [height, setHeight] = useState(0);
   const ref = useRef(null);
 
-  /* Passes data up from SearchInternshipFeature. SetPaginatedData allows data to be rendered
+  /* Passes data up from MockProfile. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
-  function handleChildClick(passedData, locationVal, companyVal, sortVal, searchQueryVal, skillsVal, isRemote) {
+  function handleChildClick(passedData, skillsVal, careerVal) {
+    // console.log(passedData);
     setData(passedData);
-    setLocation(locationVal);
-    setCompany(companyVal);
-    setSort(sortVal);
-    setSearch(searchQueryVal);
     setSkills(skillsVal);
-    setRemote(isRemote);
+    setCareer(careerVal);
     setPage(1);
     setPaginatedData(passedData.slice(0, 40));
   }
@@ -69,8 +63,7 @@ function RecommendedInternships() {
         <Grid columns={'equal'} doubling stackable>
           <Grid.Column width={4}>
             <MockProfile onChildClick={handleChildClick} passedData={data}
-                                     companyVal={company} locationVal={location} sortVal={sort}
-                                     searchQuery={search} skillsVal={skills} isRemote={remote}/>
+                        skillsVal={skills} careerVal={career}/>
           </Grid.Column>
 
           <Grid.Column>
@@ -82,7 +75,7 @@ function RecommendedInternships() {
             <div onScroll={handleScroll()} ref={ref}>
               <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard2
-                    internship={internship} key={index}/>)}
+                    internship={internship} key={index} hasSkills={skills}/>)}
               </Item.Group>
             </div>
 

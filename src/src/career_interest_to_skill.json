@@ -1,0 +1,30 @@
+[
+  {
+    "career": "Full Stack Developer",
+    "skills": [
+      "javascript",
+      "react",
+      "css",
+      "html",
+      "database",
+      "api"
+    ]
+  },
+  {
+    "career": "Mobile Development",
+    "skills": [
+      "react native",
+      "mobile development",
+      "flutter"
+    ]
+  },
+  {
+    "career": "DevOps",
+    "skills": [
+      "javascript",
+      "c and c++",
+      "database",
+      "api"
+    ]
+  }
+]

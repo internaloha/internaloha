@@ -54,24 +54,6 @@
         "remote": 13
     },
     {
-        "site": "Chegg Internships",
-        "lastScraped": "2020-07-08T00:17:31.352Z",
-        "entries": 275,
-        "position": 273,
-        "company": 273,
-        "contact": 8,
-        "location": 275,
-        "posted": 275,
-        "due": 4,
-        "start": 4,
-        "end": 0,
-        "compensation": 49,
-        "qualifications": 63,
-        "skills": 269,
-        "description": 273,
-        "remote": 78
-    },
-    {
         "site": "Monster",
         "lastScraped": "2020-10-02T00:22:57.676Z",
         "entries": 250,
@@ -88,23 +70,6 @@
         "skills": 250,
         "description": 250,
         "remote": 15
-    },
-    {
-        "site": "NSF-REU",
-        "entries": 89,
-        "position": 89,
-        "company": 89,
-        "contact": 89,
-        "location": 89,
-        "posted": 0,
-        "due": 0,
-        "start": 0,
-        "end": 0,
-        "compensation": 0,
-        "qualifications": 0,
-        "skills": 89,
-        "description": 89,
-        "remote": 0
     },
     {
         "site": "YouTern",
@@ -324,19 +289,19 @@
     {
         "site": "Total",
         "lastScraped": "2020-10-02T04:00:43.874Z",
-        "entries": 3808,
-        "position": 3786,
-        "company": 3786,
-        "contact": 406,
-        "location": 3808,
-        "posted": 2982,
-        "due": 113,
-        "start": 159,
+        "entries": 3444,
+        "position": 3424,
+        "company": 3424,
+        "contact": 309,
+        "location": 3444,
+        "posted": 2707,
+        "due": 109,
+        "start": 155,
         "end": 0,
-        "compensation": 895,
-        "qualifications": 1289,
-        "skills": 3739,
-        "description": 3786,
-        "remote": 789
+        "compensation": 846,
+        "qualifications": 1226,
+        "skills": 3381,
+        "description": 3424,
+        "remote": 711
     }
 ]

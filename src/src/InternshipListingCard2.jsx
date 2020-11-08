@@ -1,6 +1,7 @@
-import { Button, Grid, Icon, Label, Item, Header, Popup, Modal } from 'semantic-ui-react';
+import { Button, Grid, Icon, Label, Item, Header, Popup, Modal, Form, Radio } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import React from 'react';
+import swal from 'sweetalert';
 
 function isRemote(remote) {
   if (remote) {
@@ -70,7 +71,11 @@ function siteName(url) {
   }
 }
 
-function hasSkill(skill) {
+function hasSkill(skill, hasSkills) {
+
+  if (typeof (hasSkills) === 'undefined') {
+    hasSkills = ['react', 'software engineering'];
+  }
   const studentSkills = ['react', 'software engineering'];
 
   const has = {
@@ -84,7 +89,7 @@ function hasSkill(skill) {
     color: '#8f8f8f',
   };
 
-  if (studentSkills.includes(skill)) {
+  if (hasSkills.includes(skill)) {
     return (
         <Label circular key={skill} style={has}>
           {skill}
@@ -120,7 +125,7 @@ function description(internshipDescription) {
   try {
     const noScriptDescript = internshipDescription.replace(/<script>(.*?)<\/script>/gi, '');
     return (
-         <span dangerouslySetInnerHTML={{ __html: noScriptDescript }}/>
+        <span dangerouslySetInnerHTML={{ __html: noScriptDescript }}/>
         // internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
     );
   } catch (e) {
@@ -173,7 +178,7 @@ function InternshipListingCard2(props) {
             </Item.Description>
             <Item.Extra>
               {props.internship.skills.map((skill) => (
-                  hasSkill(skill)
+                  hasSkill(skill, props.hasSkills)
               ))}
               {isRemote(props.internship.remote)}
             </Item.Extra>
@@ -211,12 +216,49 @@ function InternshipListingCard2(props) {
               </Button>
             }
         />
+        <Modal closeIcon trigger={
+          <Button style={{ backgroundColor: 'transparent' }}>
+            Report a problem
+          </Button>
+        }>
+          <Modal.Header>Report a Problem</Modal.Header>
+          <Modal.Content>
+            <Modal.Description>
+              <Form>
+                <Form.Field>
+                  <Radio
+                      label='Broken Link'
+                      name='radioGroup'
+                      value='this'
+                      checked={'this'}
+                      // onChange={}
+                  />
+                </Form.Field>
+                <Form.Field>
+                  <Radio
+                      label='Missing Data Fields'
+                      name='radioGroup'
+                      value='that'
+                      checked={'that'}
+                      // onChange={}
+                  />
+                </Form.Field>
+              </Form>
+            </Modal.Description>
+          </Modal.Content>
+          <Modal.Actions>
+            <Button style={{ backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
+              Report
+            </Button>
+          </Modal.Actions>
+        </Modal>
       </Item>
   );
 }
 
 InternshipListingCard2.propTypes = {
   internship: PropTypes.object.isRequired,
+  hasSkills: PropTypes.array.isRequired,
 };
 
 export default InternshipListingCard2;
