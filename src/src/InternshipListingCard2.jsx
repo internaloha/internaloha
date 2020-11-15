@@ -133,27 +133,27 @@ function description(internshipDescription) {
   }
 }
 
-  function onClick(id) {
+function onClick(id) {
   let string = '';
-    try {
-      const e = document.getElementById(id);
-      if (e != null) {
-        string = e.value;
-        console.log(string);
-      } else {
-        string = null;
-        console.log(string);
-      }
-      if (e.style.display === 'none') {
-        e.style.display = 'show';
-      } else {
-        e.style.display = 'none';
-      }
-    } catch (err) {
-      console.log(err);
-      console.log('Still not working');
+  try {
+    const e = document.getElementById(id);
+    if (e != null) {
+      string = e.value;
+      console.log(string);
+    } else {
+      string = null;
+      console.log(string);
     }
+    if (e.style.display === 'none') {
+      e.style.display = 'show';
+    } else {
+      e.style.display = 'none';
+    }
+  } catch (err) {
+    console.log(err);
+    console.log('Still not working');
   }
+}
 
 function InternshipListingCard2(props) {
 
@@ -217,7 +217,6 @@ function InternshipListingCard2(props) {
           <Modal.Header>Description</Modal.Header>
           <Modal.Content>
             <Modal.Description>
-              {/* <span dangerouslySetInnerHTML={{ __html: props.internship.description }}/> */}
               {description(props.internship.description)}
             </Modal.Description>
           </Modal.Content>
