@@ -54,7 +54,7 @@ function RecommendedInternships() {
   return (
       <Container style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Header as='h1' textAlign={'center'}
-                style={{ fontSize: '250%', paddingBottom: '1rem', paddingTop: '3rem', paddingLeft: '17rem' }}>
+                style={{ fontSize: '250%', paddingBottom: '1rem', paddingTop: '3rem', paddingLeft: '18rem' }}>
           <Header.Content>
             <Icon name='graduation cap'/>
             Recommended Internships
