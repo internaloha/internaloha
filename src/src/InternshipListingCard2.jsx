@@ -109,7 +109,6 @@ function formatDate(stringDate) {
     return date;
   }
   return 'Unknown';
-
 }
 
 function changeBackground(e) {
@@ -134,6 +133,28 @@ function description(internshipDescription) {
   }
 }
 
+function showHide(id) {
+  let string = '';
+  try {
+    const e = document.getElementById(id);
+    if (e != null) {
+      string = e.value;
+      console.log(string);
+    } else {
+      string = null;
+      console.log(string);
+    }
+    if (e.style.display === 'none') {
+      e.style.display = 'show';
+    } else {
+      e.style.display = 'none';
+    }
+  } catch (err) {
+    console.log(err);
+    console.log('Still not working');
+  }
+}
+
 function InternshipListingCard2(props) {
 
   return (
@@ -143,53 +164,55 @@ function InternshipListingCard2(props) {
           <Item.Content>
             <Item.Header>
               <a href={props.internship.url} target="_blank" rel='noopener noreferrer'>
-                <Header as={'h3'} style={{ color: '#263763', paddingTop: '2rem' }}>
+                <Header as={'h2'} style={{ color: '#263763', paddingTop: '2rem' }}>
                   {props.internship.position}
                 </Header>
               </a>
-
             </Item.Header>
             <Item.Meta>
               <Item.Meta>
                 <Grid doubling>
-                  <Grid.Row columns={1} style={{ paddingTop: '0.8rem' }}>
+                  <Grid.Row columns={1} style={{ fontSize: '110%', paddingTop: '0.8rem' }}>
                     <Grid.Column floated={'left'} style={{ paddingBottom: '0.3rem' }}>
                       <p style={{ color: 'rgb(89, 119, 199)' }}>
-                        {props.internship.company}
+                        <Icon className='building'/>
+                        <span>{props.internship.company} </span>
                       </p>
                     </Grid.Column>
                     <Grid.Column floated={'left'}>
                       <Icon className='map marker alternate'/>
-                      <span>{props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip} | {formatDate(props.internship.posted)}
-</span>
+                      <span>{props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip} | {formatDate(props.internship.posted)}</span>
+                    </Grid.Column>
+                    <Grid.Column style={{ paddingTop: '0.4rem' }}>
+                      <Icon className='address book'/>
+                      <span>From: {siteName(props.internship.url)} </span>
                     </Grid.Column>
                   </Grid.Row>
-
                 </Grid>
               </Item.Meta>
             </Item.Meta>
-            <Item.Description style={{ paddingTop: '1rem', paddingBottom: '1rem' }}>
+            <Item.Description style={{ paddingBottom: '1rem' }}>
               <div align={'left'}>
-                <Button size={'tiny'} style={{ backgroundColor: 'transparent', padding: '0rem' }}>
-                  From: {siteName(props.internship.url)}
-                </Button>
+                <div style={{ fontSize: '125%', height: '210px', width: '450px', overflow: 'hidden' }}>
+                    {description(props.internship.description)}
+                </div>
               </div>
-
+              <Item.Extra style={{ paddingTop: '1rem' }} >
+              </Item.Extra>
+              <div>
+                {props.internship.skills.map((skill) => (
+                    hasSkill(skill, props.hasSkills)
+                ))}
+                {isRemote(props.internship.remote)}
+              </div>
+              <Item.Extra style={{ paddingBottom: '1rem' }} >
+              </Item.Extra>
             </Item.Description>
-            <Item.Extra>
-              {props.internship.skills.map((skill) => (
-                  hasSkill(skill, props.hasSkills)
-              ))}
-              {isRemote(props.internship.remote)}
-            </Item.Extra>
-            <Item.Extra style={{ paddingBottom: '2rem' }}>
-            </Item.Extra>
           </Item.Content>
         }>
           <Modal.Header>Description</Modal.Header>
           <Modal.Content>
             <Modal.Description>
-              {/* <span dangerouslySetInnerHTML={{ __html: props.internship.description }}/> */}
               {description(props.internship.description)}
             </Modal.Description>
           </Modal.Content>
