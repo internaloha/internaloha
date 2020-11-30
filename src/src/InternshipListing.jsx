@@ -75,13 +75,13 @@ function InternshipListing() {
 
   return (
       <Container style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
-        <Header as='h2' textAlign={'center'}
-                style={{ paddingBottom: '1rem', paddingTop: '3rem' }}>
-          <Header.Content>
-            <Icon name='graduation cap'/>
-            All Internships
-          </Header.Content>
-        </Header>
+        {/*<Header as='h2' textAlign={'center'}*/}
+        {/*        style={{ paddingBottom: '1rem', paddingTop: '3rem' }}>*/}
+        {/*  <Header.Content>*/}
+        {/*    <Icon name='graduation cap'/>*/}
+        {/*    All Internships*/}
+        {/*  </Header.Content>*/}
+        {/*</Header>*/}
         <Grid columns={'equal'} doubling stackable>
           <Grid.Row>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}

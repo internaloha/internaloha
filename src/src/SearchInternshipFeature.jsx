@@ -112,8 +112,8 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
   };
 
   return (
-      <Segment style={sticky}>
-        <Grid stretched columns={'equal'}>
+      <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
+        <Grid columns={'equal'}>
           <div style={{ paddingTop: '2rem' }}>
             <Header>
               <Header.Content>
@@ -170,7 +170,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                           defaultValue={location[0].value}
                           fluid selection options={internships.dropdownLocation(passedData)}
                           search
-                          style={{flexGrow: 0 }}
+                          style={{ flexGrow: 0 }}
                 />
               <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                         onClick={getRemote}/>
@@ -196,8 +196,8 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                   />
                 </Form>
             </Grid.Column>
-            <Grid.Column>
-              <div style={{ paddingBottom: '2rem' }} align={'center'}>
+            <Grid.Row>
+              <div style={{ paddingBottom: '2rem', paddingRight: '0.5rem' }} align={'center'}>
                 <Header>Key</Header>
                 <Label circular style={has}>
                   Have skill
@@ -206,7 +206,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                   Missing skill
                 </Label>
               </div>
-            </Grid.Column>
+            </Grid.Row>
           </Grid.Row>
 
         </Grid>
