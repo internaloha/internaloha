@@ -185,7 +185,7 @@ function InternshipListingCard2(props) {
                     </Grid.Column>
                     <Grid.Column style={{ paddingTop: '0.4rem' }}>
                       <Icon className='address book'/>
-                      <span>From: {siteName(props.internship.url)} </span>
+                      <span>From: {siteName(props.internship.url)} Listing #{props.internship.index} </span>
                     </Grid.Column>
                   </Grid.Row>
                 </Grid>

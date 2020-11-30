@@ -23,6 +23,7 @@
         ],
         "lastScraped": "",
         "description": "How would you use software to make The Post's reporters and editors better? The Publishing Tools team is a group of full-stack engineers whose work is used every day by reporters and editors who write and plan stories for The Washington Post. This team owns the publishing tools that produce The Post's daily report, and we'll be working this summer to add ambitious features to our homegrown content management system to give our newsroom superpowers.\n\nWe do most of our backend work in Node and Java. Our frontends are React, some Angular, and a healthy amount of vanilla JS. We deploy our applications to Amazon Web Services. If you work with tools like these, you'll likely fit in with us technologically. If you haven't worked with all of these tools yet, that's okay! None of them is a requirement for applying.\n\nWe will start reading applications on MONDAY, OCTOBER 5TH, which means we will stop accepting applications after MIDNIGHT (EDT) on SUNDAY, OCTOBER 4TH. Plan accordingly! You don't get credit for applying earlier than our deadline but also, don't wait and miss your chance.\n\nAlso: Our internship is paid.",
+        "index": 1,
         "remote": false
     }
 ]
