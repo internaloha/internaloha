@@ -19,8 +19,6 @@ class StatisticsRow extends React.Component {
     const skills = ((this.props.statistics.skills / total) * 100).toString().substring(0, 5);
     const description = ((this.props.statistics.description / total) * 100).toString().substring(0, 5);
     const lastScraped = this.props.statistics.lastScraped;
-<<<<<<< HEAD
-=======
 
     function formatDate(stringDate) {
       const date = new Date(stringDate).toDateString();
@@ -30,7 +28,6 @@ class StatisticsRow extends React.Component {
       return 'N/A';
     }
 
->>>>>>> ad818ca36341d351a14674432dde918d6ce37482
     function lastRow(site) {
       if (site === 'Total') {
         return (

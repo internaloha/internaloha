@@ -133,28 +133,6 @@ function description(internshipDescription) {
   }
 }
 
-function showHide(id) {
-  let string = '';
-  try {
-    const e = document.getElementById(id);
-    if (e != null) {
-      string = e.value;
-      console.log(string);
-    } else {
-      string = null;
-      console.log(string);
-    }
-    if (e.style.display === 'none') {
-      e.style.display = 'show';
-    } else {
-      e.style.display = 'none';
-    }
-  } catch (err) {
-    console.log(err);
-    console.log('Still not working');
-  }
-}
-
 function InternshipListingCard2(props) {
 
   return (
@@ -181,15 +159,11 @@ function InternshipListingCard2(props) {
                     </Grid.Column>
                     <Grid.Column floated={'left'}>
                       <Icon className='map marker alternate'/>
-<<<<<<< HEAD
                       <span>{props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip}</span>
                     </Grid.Column>
                     <Grid.Column style={{ paddingTop: '0.5rem' }}>
                       <Icon className='calendar alternate'/>
                       <span>Date Posted: {formatDate(props.internship.posted)}</span>
-=======
-                      <span>Internship Location: {props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip} | Last Updated: {formatDate(props.internship.posted)}</span>
->>>>>>> ad818ca36341d351a14674432dde918d6ce37482
                     </Grid.Column>
                     <Grid.Column style={{ paddingTop: '0.4rem' }}>
                       <Icon className='address book'/>
