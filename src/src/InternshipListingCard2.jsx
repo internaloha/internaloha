@@ -181,7 +181,7 @@ function InternshipListingCard2(props) {
                     </Grid.Column>
                     <Grid.Column floated={'left'}>
                       <Icon className='map marker alternate'/>
-                      <span>{props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip} | {formatDate(props.internship.posted)}</span>
+                      <span>Internship Location: {props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip} | Last Updated: {formatDate(props.internship.posted)}</span>
                     </Grid.Column>
                     <Grid.Column style={{ paddingTop: '0.4rem' }}>
                       <Icon className='address book'/>

@@ -19,6 +19,7 @@ class Statistics extends React.Component {
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>Site</Table.HeaderCell>
+                  <Table.HeaderCell>Last Scraped</Table.HeaderCell>
                   <Table.HeaderCell>Total</Table.HeaderCell>
                   <Table.HeaderCell>Position</Table.HeaderCell>
                   <Table.HeaderCell>Company</Table.HeaderCell>
