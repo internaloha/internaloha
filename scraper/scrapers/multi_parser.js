@@ -258,6 +258,8 @@ function trainSkills(classifier) {
   classifier.addDocument(['c++', 'c'], 'C and C++');
   classifier.addDocument('machine learning', 'machine learning');
   classifier.addDocument('devOps', 'devOps');
+  classifier.addDocument('Scala', 'scala');
+
   classifier.train();
 
 }
@@ -494,6 +496,8 @@ function multi_parser(file) {
 
   // Goes thorugh every internship listing
   for (let i = 0; i < text.length; i++) {
+
+    text[i].index = i+1;
 
     const position = text[i].position;
 

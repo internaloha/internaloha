@@ -17,6 +17,7 @@
             "zip": "85287"
         },
         "url": "https://engineering.asu.edu/sensip/reu-index-html/",
+        "index": 1,
         "company": "N/A",
         "description": "Contact: Andreas Spanias, (480) 965-5311, spanias@asu.edu",
         "remote": false
@@ -34,6 +35,7 @@
             "zip": "36849"
         },
         "url": "http://www.eng.auburn.edu/comp/research/impact/",
+        "index": 2,
         "company": "N/A",
         "description": "Contact: Saad Biaz, (334) 844-6307, biazsaa@auburn.edu",
         "remote": false
@@ -55,6 +57,7 @@
             "zip": ""
         },
         "url": "http://www.eng.auburn.edu/csse/research/research-experience-for-undergraduates-reu-in-parallel-and-distributed-computing/index.html",
+        "index": 3,
         "company": "N/A",
         "description": "Contact: Sanjeev Baskiyar, (334) 844-6306, baskisa@auburn.edu",
         "remote": false
@@ -75,6 +78,7 @@
             "zip": "83725-2055"
         },
         "url": "https://datadrivensecurity.boisestate.edu/UndergraduateResearch",
+        "index": 4,
         "company": "N/A",
         "description": "Contact: Francesca Spezzano, (208) 426-2491, francescaspezzano@boisestate.edu",
         "remote": false
@@ -96,6 +100,7 @@
             "zip": "91768"
         },
         "url": "http://www.cpp.edu/~bigdatasec-reu/",
+        "index": 5,
         "company": "N/A",
         "description": "Contact: Tingting Chen, (909) 869-4842, tingtingchen@cpp.edu",
         "remote": false
@@ -118,6 +123,7 @@
             "zip": "15213"
         },
         "url": "http://reuse.cs.cmu.edu",
+        "index": 6,
         "company": "N/A",
         "description": "Contact: Joshua Sunshine, (412) 268-1097, reuse@cs.cmu.edu",
         "remote": false
@@ -144,6 +150,7 @@
             "zip": "15213"
         },
         "url": "https://riss.ri.cmu.edu/",
+        "index": 7,
         "company": "N/A",
         "description": "Contact: Rachel Burcin, (412) 268-4272, rburcin@andrew.cmu.edu",
         "remote": false
@@ -165,6 +172,7 @@
             "state": "New York",
             "zip": "13699-5720"
         },
+        "index": 8,
         "company": "N/A",
         "description": "Contact: Daqing Hou, (315) 268-7675, dhou@clarkson.edu",
         "remote": false
@@ -184,6 +192,7 @@
             "zip": "31909"
         },
         "url": "http://www.reucsu.org/",
+        "index": 9,
         "company": "N/A",
         "description": "Contact: Alfredo J. Perez, (706) 507-8194, perez_alfredo@columbusstate.edu",
         "remote": false
@@ -209,6 +218,7 @@
             "zip": "57042"
         },
         "url": "http://www.cybertraining.pro",
+        "index": 10,
         "company": "N/A",
         "description": "Contact: Yong Wang, (605) 256-5690, yong.wang@dsu.edu",
         "remote": false
@@ -231,6 +241,7 @@
             "zip": "60604"
         },
         "url": "http://facweb.cs.depaul.edu/research/vc/medix/index.htm",
+        "index": 11,
         "company": "N/A",
         "description": "Contact: Daniela  Raicu, (312) 362-5512, draicu@cti.depaul.edu",
         "remote": false
@@ -251,6 +262,7 @@
             "zip": "32114-3966"
         },
         "url": "https://sites.google.com/view/nsf-reu-erau/",
+        "index": 12,
         "company": "N/A",
         "description": "Contact: Eduardo Rojas, (386) 226-7701, rojase1@erau.edu",
         "remote": false
@@ -276,6 +288,7 @@
             "zip": "33431"
         },
         "url": "http://isense.fau.edu/reu/reu-home-2020.php",
+        "index": 13,
         "company": "N/A",
         "description": "Contact: Jason O. Hallstrom, (561) 297-4748, jhallstrom@fau.edu",
         "remote": false
@@ -295,6 +308,7 @@
             "zip": "33199"
         },
         "url": "http://it2.fiu.edu/IT2_REU.php",
+        "index": 14,
         "company": "N/A",
         "description": "Contact: Niki Pissinou, (305) 348-3716, pissinouci@fiu.edu",
         "remote": false
@@ -317,6 +331,7 @@
             "zip": "33174"
         },
         "url": "https://sst-reu.fiu.edu/",
+        "index": 15,
         "company": "N/A",
         "description": "Contact: Kemal Akkaya, (305) 348-3017, kakkaya@fiu.edu",
         "remote": false
@@ -337,6 +352,7 @@
             "zip": "20002"
         },
         "url": "http://aict.gallaudet.edu",
+        "index": 16,
         "company": "N/A",
         "description": "Contact: Raja Kushalnagar, (202) 750-2458, raja.kushalnagar@gallaudet.edu",
         "remote": false
@@ -357,6 +373,7 @@
             "zip": "22030"
         },
         "url": "https://cs.gmu.edu/~reu/",
+        "index": 17,
         "company": "N/A",
         "description": "Contact: Mark Snyder, (703) 993-5624, msnyde14@gmu.edu",
         "remote": false
@@ -380,6 +397,7 @@
             "zip": "30332"
         },
         "url": "http://civicdatascience.gatech.edu",
+        "index": 18,
         "company": "N/A",
         "description": "Contact: Bistra Dilkina, , bdilkina@cc.gatech.edu",
         "remote": false
@@ -402,6 +420,7 @@
             "zip": "30303"
         },
         "url": "http://tinman.cs.gsu.edu/~iot-reu-gsu/index.php",
+        "index": 19,
         "company": "N/A",
         "description": "Contact: Ashwin Ashok, (404) 413-6657, aashok@gsu.edu",
         "remote": false
@@ -424,6 +443,7 @@
             "zip": "30303"
         },
         "url": "https://grid.cs.gsu.edu/reu-immersive-computing/",
+        "index": 20,
         "company": "N/A",
         "description": "Contact: Zhisheng Yan, (404) 413-5120, zyan@gsu.edu",
         "remote": false
@@ -443,6 +463,7 @@
             "zip": "91711"
         },
         "url": "http://www.cs.hmc.edu/reu/",
+        "index": 21,
         "company": "N/A",
         "description": "Contact: Zachary Dodds, (909) 607-1813, dodds@cs.hmc.edu",
         "remote": false
@@ -468,6 +489,7 @@
             "zip": "60616"
         },
         "url": "http://datasys.cs.iit.edu/grants/BigDataX/index.html",
+        "index": 22,
         "company": "N/A",
         "description": "Contact: Ioan Raicu, (312) 567-5704, iraicu@cs.iit.edu",
         "remote": false
@@ -487,6 +509,7 @@
             "zip": "47408"
         },
         "url": "http://prohealth.soic.indiana.edu/reu/",
+        "index": 23,
         "company": "N/A",
         "description": "Contact: Katie Siek, (812) 856-0598, ksiek@indiana.edu",
         "remote": false
@@ -506,6 +529,7 @@
             "zip": "46223"
         },
         "url": "https://www.datareu.com",
+        "index": 24,
         "company": "N/A",
         "description": "Contact: George Mohler, (805) 252-0656, gmohler@iupui.edu",
         "remote": false
@@ -525,6 +549,7 @@
             "zip": "46202"
         },
         "url": "https://et.iupui.edu/departments/cigt/research/reu/",
+        "index": 25,
         "company": "N/A",
         "description": "Contact: Feng Li, (317) 278-8391, fengli@iupui.edu",
         "remote": false
@@ -552,6 +577,7 @@
             "zip": "50011"
         },
         "url": "http://www.vrac.iastate.edu/hci/reu/",
+        "index": 26,
         "company": "N/A",
         "description": "Contact: Stephen B. Gilbert, (515) 294-6782, gilbert@iastate.edu",
         "remote": false
@@ -575,6 +601,7 @@
             "zip": "18015"
         },
         "url": "http://www.cse.lehigh.edu/REU/",
+        "index": 27,
         "company": "N/A",
         "description": "Contact: Brian Davison, (610) 758-3453, davison@cse.lehigh.edu",
         "remote": false
@@ -600,6 +627,7 @@
             "zip": "70803"
         },
         "url": "http://reu.cct.lsu.edu/",
+        "index": 28,
         "company": "N/A",
         "description": "Contact: Juana Moreno, (225) 578-7586, moreno@lsu.edu",
         "remote": false
@@ -621,6 +649,7 @@
             "zip": "53201"
         },
         "url": "https://reu.cs.mu.edu/index.php/Main_Page",
+        "index": 29,
         "company": "N/A",
         "description": "Contact: Praveen Madiraju, (414) 288-6340, praveen.madiraju@marquette.edu",
         "remote": false
@@ -640,6 +669,7 @@
             "zip": "39762"
         },
         "url": "http://www.cse.msstate.edu/~compbio",
+        "index": 30,
         "company": "N/A",
         "description": "Contact: Andy Perkins, (662) 325-0004, perkins@cse.msstate.edu",
         "remote": false
@@ -661,6 +691,7 @@
             "zip": "59718"
         },
         "url": "http://www.bobcatsoftwarefactory.com/nsf-reu-2020",
+        "index": 31,
         "company": "N/A",
         "description": "Contact: Clemente Izurieta, (406) 994-3720, clemente.izurieta@montana.edu",
         "remote": false
@@ -680,6 +711,7 @@
             "zip": "07102"
         },
         "url": "http://cda.njit.edu/",
+        "index": 32,
         "company": "N/A",
         "description": "Contact: Zhi Wei, (973) 642-4497, zhiwei@njit.edu",
         "remote": false
@@ -702,6 +734,7 @@
             "zip": "87801"
         },
         "url": "https://www.cs.nmt.edu/reu",
+        "index": 33,
         "company": "N/A",
         "description": "Contact: Jun Zheng, (575) 835-6182, jun.zheng@nmt.edu",
         "remote": false
@@ -728,6 +761,7 @@
             "zip": "88011"
         },
         "url": "https://www.cs.nmsu.edu/reu/",
+        "index": 34,
         "company": "N/A",
         "description": "Contact: Huiping Cao, (575) 646-4600, hcao@nmsu.edu",
         "remote": false
@@ -751,6 +785,7 @@
             "zip": "10023"
         },
         "url": "http://www.nyit.edu/reu",
+        "index": 35,
         "company": "N/A",
         "description": "Contact: Sertac Artan, (212) 261-1732, nartan@nyit.edu",
         "remote": false
@@ -769,6 +804,7 @@
             "zip": "27606"
         },
         "url": "http://go.ncsu.edu/srca-reu",
+        "index": 36,
         "company": "N/A",
         "description": "Contact: Tiffany Barnes, (919) 523-1353, tiffany.barnes@gmail.com",
         "remote": false
@@ -790,6 +826,7 @@
             "zip": "48309"
         },
         "url": "http://cse-reu.secs.oakland.edu/",
+        "index": 37,
         "company": "N/A",
         "description": "Contact: Huirong Fu, (248) 370-4456, fu@oakland.edu",
         "remote": false
@@ -812,6 +849,7 @@
             "zip": "23529"
         },
         "url": "https://www.odureu.org/cyber",
+        "index": 38,
         "company": "N/A",
         "description": "Contact: Chunsheng Xin, (757) 683-5294, cxin@odu.edu",
         "remote": false
@@ -834,6 +872,7 @@
             "zip": "97331"
         },
         "url": "http://robotics.oregonstate.edu/reu",
+        "index": 39,
         "company": "N/A",
         "description": "Contact: Cindy M. Grimm, (541) 737-4914, cindy.grimm@oregonstate.edu",
         "remote": false
@@ -855,6 +894,7 @@
             "zip": "16802"
         },
         "url": "https://reu.ist.psu.edu/",
+        "index": 40,
         "company": "N/A",
         "description": "Contact: Dongwon Lee, (814) 865-0687, dongwon@psu.edu",
         "remote": false
@@ -871,6 +911,7 @@
             "zip": "97207"
         },
         "url": "http://www.teuscher-lab.com/reucomputing/",
+        "index": 41,
         "company": "N/A",
         "description": "Contact: Christof Teuscher, (503) 725-2817, reucomputing@pdx.edu",
         "remote": false
@@ -887,6 +928,7 @@
             "zip": "14623"
         },
         "url": "https://reu.se.rit.edu/",
+        "index": 42,
         "company": "N/A",
         "description": "Contact: Mehdi Mirakhorli, , mxmvse@rit.edu",
         "remote": false
@@ -903,6 +945,7 @@
             "zip": "14623"
         },
         "url": "http://cs.rit.edu/~reu/",
+        "index": 43,
         "company": "N/A",
         "description": "Contact: Cecilia Ovesdotter Alm, (585) 475-7327, coagla@rit.edu",
         "remote": false
@@ -928,6 +971,7 @@
             "zip": "08854"
         },
         "url": "http://reu.dimacs.rutgers.edu",
+        "index": 44,
         "company": "N/A",
         "description": "Contact: Lazaros Gallos, (848) 445-0075, lgallos@dimacs.rutgers.edu",
         "remote": false
@@ -954,6 +998,7 @@
             "zip": "21801"
         },
         "url": "http://faculty.salisbury.edu/~ealu/REU/REU.html",
+        "index": 45,
         "company": "N/A",
         "description": "Contact: Enyue (Annie) Lu, (410) 543-6144, ealu@salisbury.edu",
         "remote": false
@@ -973,6 +1018,7 @@
             "zip": "87501"
         },
         "url": "http://santafe.edu/education/fellowships/undergraduate/undergrad-overview/",
+        "index": 46,
         "company": "N/A",
         "description": "Contact: Carla Shedivy, (505) 946-2724, education@santafe.edu",
         "remote": false
@@ -997,6 +1043,7 @@
             "zip": "19122"
         },
         "url": "http://odin.cis.temple.edu/~reu",
+        "index": 47,
         "company": "N/A",
         "description": "Contact: Jamie Payton, (215) 204-8245, payton@temple.edu",
         "remote": false
@@ -1018,6 +1065,7 @@
             "zip": "38505"
         },
         "url": "http://www.cae.tntech.edu/~mmahmoud/REU/REU.htm",
+        "index": 48,
         "company": "N/A",
         "description": "Contact: Mohamed Mahmoud, (931) 310-5074, mmahmoud@tntech.edu",
         "remote": false
@@ -1038,6 +1086,7 @@
             "zip": "78412"
         },
         "url": "http://csreu.tamucc.edu",
+        "index": 49,
         "company": "N/A",
         "description": "Contact: Dulal Kar, (361) 825-5878, dulal.kar@tamucc.edu",
         "remote": false
@@ -1059,6 +1108,7 @@
             "zip": "78666"
         },
         "url": "http://reuscc.wp.txstate.edu",
+        "index": 50,
         "company": "N/A",
         "description": "Contact: Vangelis Metsis, (512) 245-7509, vmetsis@txstate.edu",
         "remote": false
@@ -1081,6 +1131,7 @@
             "zip": "78666-4684"
         },
         "url": "http://reussa.cs.txstate.edu",
+        "index": 51,
         "company": "N/A",
         "description": "Contact: Guowei Yang, (512) 245-3409, gyang@txstate.edu",
         "remote": false
@@ -1105,6 +1156,7 @@
             "zip": "85721"
         },
         "url": "http://www.hftelecomm.arizona.edu/",
+        "index": 52,
         "company": "N/A",
         "description": "Contact: Nancy Emptage, (520) 621-6189, emptagen@email.arizona.edu",
         "remote": false
@@ -1127,6 +1179,7 @@
             "zip": "85721"
         },
         "url": "http://catvehicle.arizona.edu/",
+        "index": 53,
         "company": "N/A",
         "description": "Contact: Nancy Emptage, , emptagen@ece.arizona.edu",
         "remote": false
@@ -1152,6 +1205,7 @@
             "zip": "92697"
         },
         "url": "http://sites.uci.edu/iotsity/",
+        "index": 54,
         "company": "N/A",
         "description": "Contact: Sharnnia Artis, (949) 824-7134, oai@uci.edu",
         "remote": false
@@ -1175,6 +1229,7 @@
             "zip": "94720"
         },
         "url": "https://eecs.berkeley.edu/resources/undergrads/research/superb",
+        "index": 55,
         "company": "N/A",
         "description": "Contact: James Demmel, (510) 642-7699, demmel@eecs.berkeley.edu",
         "remote": false
@@ -1198,6 +1253,7 @@
             "zip": "92093"
         },
         "url": "http://e4e.ucsd.edu",
+        "index": 56,
         "company": "N/A",
         "description": "Contact: Ryan Kastner, (858) 534-8908, rkastner@ucsd.edu",
         "remote": false
@@ -1221,6 +1277,7 @@
             "zip": ""
         },
         "url": "http://iotreu.cs.ucf.edu/",
+        "index": 57,
         "company": "N/A",
         "description": "Contact: Damla Turgut, (407) 823-6171, turgut@cs.ucf.edu",
         "remote": false
@@ -1246,6 +1303,7 @@
             "zip": "32816-2365"
         },
         "url": "https://www.crcv.ucf.edu/nsf-projects/reu/",
+        "index": 58,
         "company": "N/A",
         "description": "Contact: Mubarak Shah, (407) 823-5077, shah@crcv.ucf.edu",
         "remote": false
@@ -1272,6 +1330,7 @@
             "zip": "60637"
         },
         "url": "http://datasys.cs.iit.edu/grants/BigDataX/index.html",
+        "index": 59,
         "company": "N/A",
         "description": "Contact: Kyle Chard, (773) 702-4107, chard@uchicago.edu",
         "remote": false
@@ -1289,6 +1348,7 @@
             "zip": "06269-2157"
         },
         "url": "http://ccc.engr.uconn.edu/reu",
+        "index": 60,
         "company": "N/A",
         "description": "Contact: Omer Khan, (860) 486-2192, khan@uconn.edu",
         "remote": false
@@ -1308,6 +1368,7 @@
             "zip": "77204"
         },
         "url": "http://www.cs.uh.edu/reu",
+        "index": 61,
         "company": "N/A",
         "description": "Contact: Ernst L. Leiss, (713) 743-3359, coscel@cs.uh.edu",
         "remote": false
@@ -1328,6 +1389,7 @@
             "zip": "20742"
         },
         "url": "http://www.cs.umd.edu/projects/reucaar/",
+        "index": 62,
         "company": "N/A",
         "description": "Contact: William Gasarch, (301) 405-2698, gasarch@cs.umd.edu",
         "remote": false
@@ -1348,6 +1410,7 @@
             "zip": "33164"
         },
         "url": "http://www.cs.miami.edu/reu-csc",
+        "index": 63,
         "company": "N/A",
         "description": "Contact: Burton Rosenberg, (305) 284-2141, burt@cs.miami.edu",
         "remote": false
@@ -1369,6 +1432,7 @@
             "zip": "55455"
         },
         "url": "http://reubigdata.cs.umn.edu/",
+        "index": 64,
         "company": "N/A",
         "description": "Contact: George Karypis, (612) 625-7524, karypis@umn.edu",
         "remote": false
@@ -1388,6 +1452,7 @@
             "zip": "65211"
         },
         "url": "http://reu.rnet.missouri.edu",
+        "index": 65,
         "company": "N/A",
         "description": "Contact: Prasad Calyam, (573) 882-9747, calyamp@missouri.edu",
         "remote": false
@@ -1408,6 +1473,7 @@
             "zip": "68588"
         },
         "url": "https://www.unl.edu/summerprogram/unmanned",
+        "index": 66,
         "company": "N/A",
         "description": "Contact: Brittany Duncan, (402) 472-5073, nimbus-reu@unl.edu",
         "remote": false
@@ -1428,6 +1494,7 @@
             "zip": "89557"
         },
         "url": "https://www.unr.edu/cse/research/intelligent-and-autonomous-systems/reu",
+        "index": 67,
         "company": "N/A",
         "description": "Contact: David Feil-Seifer, (775) 784-6469, dave@cse.unr.edu",
         "remote": false
@@ -1450,6 +1517,7 @@
             "zip": "28223"
         },
         "url": "https://reu.uncc.edu",
+        "index": 68,
         "company": "N/A",
         "description": "Contact: David Wilson, (704) 687-8585, davils@uncc.edu",
         "remote": false
@@ -1470,6 +1538,7 @@
             "zip": "76203"
         },
         "url": "https://reu.ci.unt.edu",
+        "index": 69,
         "company": "N/A",
         "description": "Contact: Junhua Ding, (940) 565-2186, junhua.ding@unt.edu",
         "remote": false
@@ -1489,6 +1558,7 @@
             "zip": "76203"
         },
         "url": "http://www.cse.unt.edu/~reneebryce/Renee_Bryce/REU.html",
+        "index": 70,
         "company": "N/A",
         "description": "Contact: Renee Bryce, (940) 565-4176, Renee.Bryce@unt.edu",
         "remote": false
@@ -1509,6 +1579,7 @@
             "zip": "76203"
         },
         "url": "https://www.cse.unt.edu/~song/REU/",
+        "index": 71,
         "company": "N/A",
         "description": "Contact: Song Fu, (940) 565-2341, song.fu@unt.edu",
         "remote": false
@@ -1540,6 +1611,7 @@
             "zip": "46556-5637"
         },
         "url": "http://wireless.nd.edu/REU",
+        "index": 72,
         "company": "N/A",
         "description": "Contact: Dr. Bertrand Hochwald, (574) 631-8875, bhochwald@nd.edu",
         "remote": false
@@ -1560,6 +1632,7 @@
             "zip": ""
         },
         "url": "http://www.sas.rochester.edu/dsc/undergraduate/reu.html",
+        "index": 73,
         "company": "N/A",
         "description": "Contact: Ajay Anand, (585) 276-3149, gids-reu@rochester.edu",
         "remote": false
@@ -1580,6 +1653,7 @@
             "zip": "29208"
         },
         "url": "http://reu.cse.sc.edu",
+        "index": 74,
         "company": "N/A",
         "description": "Contact: Jason O'Kane, (803) 777-1791, jokane@cse.sc.edu",
         "remote": false
@@ -1598,6 +1672,7 @@
             "zip": "90292"
         },
         "url": "http://reu.isi.edu/",
+        "index": 75,
         "company": "N/A",
         "description": "Contact: Jelena Mirkovic, (310) 448-9170, sunshine@isi.edu",
         "remote": false
@@ -1618,6 +1693,7 @@
             "zip": "90066"
         },
         "url": "http://ict.usc.edu/reu/",
+        "index": 76,
         "company": "N/A",
         "description": "Contact: Ron Artstein, (310) 448-0313, artstein@ict.usc.edu",
         "remote": false
@@ -1639,6 +1715,7 @@
             "zip": "90089"
         },
         "url": "http://www.scec.org/education/college/internships/UseIT.html",
+        "index": 77,
         "company": "N/A",
         "description": "Contact: Thomas H Jordan, 213-821-1237, tjordan@usc.edu",
         "remote": false
@@ -1661,6 +1738,7 @@
             "zip": "90089"
         },
         "url": "https://www.cs.usc.edu/reu/",
+        "index": 78,
         "company": "N/A",
         "description": "Contact: Nora Ayanian, (213) 740-5377, ayanian@usc.edu",
         "remote": false
@@ -1679,6 +1757,7 @@
             "zip": ""
         },
         "url": "http://www.csee.usf.edu/REU/home.html",
+        "index": 79,
         "company": "N/A",
         "description": "Contact: Dr. Miguel A. Labrador, (813) 974-3260, labrador@cse.usf.edu",
         "remote": false
@@ -1704,6 +1783,7 @@
             "zip": "76019"
         },
         "url": "http://ranger.uta.edu/~reu",
+        "index": 80,
         "company": "N/A",
         "description": "Contact: Ishfaq Ahmad, (817) 272-3605, iahmad@cse.uta.edu",
         "remote": false
@@ -1725,6 +1805,7 @@
             "zip": "78758"
         },
         "url": "https://www.tacc.utexas.edu/reu",
+        "index": 81,
         "company": "N/A",
         "description": "Contact: Rosalia Gomez, (512) 471-6785, rosie@tacc.utexas.edu",
         "remote": false
@@ -1746,6 +1827,7 @@
             "zip": "75024"
         },
         "url": "http://paris.utdallas.edu/reu",
+        "index": 82,
         "company": "N/A",
         "description": "Contact: Eric Wong, (972) 883-6619, ewong@utdallas.edu",
         "remote": false
@@ -1768,6 +1850,7 @@
             "state": "Tennessee",
             "zip": "37203"
         },
+        "index": 83,
         "company": "N/A",
         "description": "Contact: Kim Unertl, (615) 936-5035, kim.unertl@vanderbilt.edu",
         "remote": false
@@ -1790,6 +1873,7 @@
             "zip": "99163"
         },
         "url": "http://epsl.eecs.wsu.edu/",
+        "index": 84,
         "company": "N/A",
         "description": "Contact: Hassan Ghasemzadeh, (509) 335-8260, hassan.ghasemzadeh@wsu.edu",
         "remote": false
@@ -1814,6 +1898,7 @@
             "zip": "99163"
         },
         "url": "http://reu.eecs.wsu.edu",
+        "index": 85,
         "company": "N/A",
         "description": "Contact: Larry Holder, (509) 335-6138, holder@wsu.edu",
         "remote": false
@@ -1836,6 +1921,7 @@
             "zip": "63130"
         },
         "url": "http://reu.cse.wustl.edu/",
+        "index": 86,
         "company": "N/A",
         "description": "Contact: Douglas Shook, , dshook@wustl.edu",
         "remote": false
@@ -1863,6 +1949,7 @@
             "zip": "26506"
         },
         "url": "http://robotics.wvu.edu/nsf-reu-site",
+        "index": 87,
         "company": "N/A",
         "description": "Contact: Yu Gu, (304) 293-3992, RoboticsREU@mail.wvu.edu",
         "remote": false
@@ -1885,6 +1972,7 @@
             "zip": "67260"
         },
         "url": "http://www.wichita.edu/NetCPSREU",
+        "index": 88,
         "company": "N/A",
         "description": "Contact: Vinod Namboodiri, (316) 978-3922, vinod.namboodiri@wichita.edu",
         "remote": false
@@ -1911,6 +1999,7 @@
             "zip": "01609"
         },
         "url": "https://www.wpi.edu/academics/departments/data-science/reu-program",
+        "index": 89,
         "company": "N/A",
         "description": "Contact: Elke Rundensteiner, (508) 831-5815, rundenst@wpi.edu",
         "remote": false

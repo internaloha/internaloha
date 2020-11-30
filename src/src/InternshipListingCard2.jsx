@@ -164,7 +164,7 @@ function InternshipListingCard2(props) {
           <Item.Content>
             <Item.Header>
               <a href={props.internship.url} target="_blank" rel='noopener noreferrer'>
-                <Header as={'h2'} style={{ color: '#263763', paddingTop: '2rem' }}>
+                <Header as={'h2'} style={{ color: 'rgb(0, 102, 204)', paddingTop: '2rem' }}>
                   {props.internship.position}
                 </Header>
               </a>
@@ -174,18 +174,26 @@ function InternshipListingCard2(props) {
                 <Grid doubling>
                   <Grid.Row columns={1} style={{ fontSize: '110%', paddingTop: '0.8rem' }}>
                     <Grid.Column floated={'left'} style={{ paddingBottom: '0.3rem' }}>
-                      <p style={{ color: 'rgb(89, 119, 199)' }}>
+                      <p>
                         <Icon className='building'/>
                         <span>{props.internship.company} </span>
                       </p>
                     </Grid.Column>
                     <Grid.Column floated={'left'}>
                       <Icon className='map marker alternate'/>
-                      <span>{props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip} | {formatDate(props.internship.posted)}</span>
+<<<<<<< HEAD
+                      <span>{props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip}</span>
+                    </Grid.Column>
+                    <Grid.Column style={{ paddingTop: '0.5rem' }}>
+                      <Icon className='calendar alternate'/>
+                      <span>Date Posted: {formatDate(props.internship.posted)}</span>
+=======
+                      <span>Internship Location: {props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip} | Last Updated: {formatDate(props.internship.posted)}</span>
+>>>>>>> ad818ca36341d351a14674432dde918d6ce37482
                     </Grid.Column>
                     <Grid.Column style={{ paddingTop: '0.4rem' }}>
                       <Icon className='address book'/>
-                      <span>From: {siteName(props.internship.url)} </span>
+                      <span>From: {siteName(props.internship.url)} Listing #{props.internship.index} </span>
                     </Grid.Column>
                   </Grid.Row>
                 </Grid>
@@ -193,7 +201,7 @@ function InternshipListingCard2(props) {
             </Item.Meta>
             <Item.Description style={{ paddingBottom: '1rem' }}>
               <div align={'left'}>
-                <div style={{ fontSize: '125%', height: '210px', width: '450px', overflow: 'hidden' }}>
+                <div style={{ fontSize: '125%', height: '214px', width: '450px', overflow: 'hidden' }}>
                     {description(props.internship.description)}
                 </div>
               </div>
@@ -217,12 +225,12 @@ function InternshipListingCard2(props) {
             </Modal.Description>
           </Modal.Content>
           <Modal.Actions>
-            <Button style={{ backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
+            <Button style={{ fontSize: '110%', backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
               <Icon name='star'/>
               Add to Favorites
             </Button>
             <a href={props.internship.url} target="_blank" rel='noopener noreferrer'>
-              <Button style={{ backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
+              <Button style={{ fontSize: '110%', backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
                 Go to Listing: {siteName(props.internship.url)}
                 <Icon name='chevron right'/>
               </Button>

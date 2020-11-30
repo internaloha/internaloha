@@ -1,8 +1,21 @@
 import React from 'react';
-import { Segment, Header, Dropdown, Label, Input, Form, Checkbox, Popup, Search } from 'semantic-ui-react';
+import {
+  Segment,
+  Header,
+  Dropdown,
+  Label,
+  Input,
+  Form,
+  Checkbox,
+  Popup,
+  Search,
+  Menu,
+  Image, Container, Grid
+} from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
+import { Link } from 'react-router-dom';
 
 function SearchInternshipFeature({ onChildClick, passedData, locationVal, companyVal, sortVal, searchQuery, skillsVal, isRemote }) {
 
@@ -99,99 +112,200 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
   };
 
   return (
-      <Segment style={sticky}>
-        <div style={{ paddingTop: '2rem' }}>
-          <Header>
-            <Header.Content>
-              Total results found: {internships.total(passedData)}
-            </Header.Content>
-          </Header>
-        </div>
-        <div style={{ paddingTop: '2rem' }}>
-          <Header>
-            <Header.Content>
-              Sort by {' '}
-              <Dropdown
-                  inline
-                  header='Sort by...'
-                  options={sortBy}
-                  defaultValue={sortBy[0].value}
-                  onChange={getSort}
-              />
-            </Header.Content>
-          </Header>
-        </div>
-        <div style={{ paddingTop: '2rem' }}>
-          <Form onSubmit={handleSubmit}>
-            <Popup
-                trigger={<Input icon='search'
-                                iconPosition='left'
-                                placeholder='Search ...'
-                                onChange={handleSearchChange}
-                                fluid
-                />}
-                content='Press enter to search!'
-                on={'focus'}
-            />
-
-          </Form>
+      <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
+        <Grid columns={'equal'}>
           <div style={{ paddingTop: '2rem' }}>
-            <Header>Skills</Header>
-            <Dropdown
-                placeholder='Skills'
-                fluid
-                multiple
-                search
-                selection
-                options={internships.dropdownSkills()}
-                onChange={getSkills}
-            />
+            <Header>
+              <Header.Content>
+                Total results found: {internships.total(passedData)}
+              </Header.Content>
+            </Header>
           </div>
-        </div>
-        <div style={{ paddingTop: '2rem' }}>
-          <Header>Location</Header>
-          <Dropdown placeholder='Location'
-                    onChange={getLocation}
-                    defaultValue={location[0].value}
-                    fluid selection options={internships.dropdownLocation(passedData)}
+          <Grid.Row>
+            <Grid.Column>
+                <Header>
+                  <Header.Content>
+                    Sort by {' '}
+                    <Dropdown
+                        inline
+                        header='Sort by...'
+                        options={sortBy}
+                        defaultValue={sortBy[0].value}
+                        onChange={getSort}
+                    />
+                  </Header.Content>
+                </Header>
+            </Grid.Column>
+            <Grid.Column>
+                <Form onSubmit={handleSubmit}>
+                  <Popup
+                      trigger={<Input icon='search'
+                                      iconPosition='left'
+                                      placeholder='Search ...'
+                                      onChange={handleSearchChange}
+                                      fluid
+                      />}
+                      content='Press enter to search!'
+                      on={'focus'}
+                  />
+
+                </Form>
+            </Grid.Column>
+            <Grid.Column>
+                <Dropdown
+                    placeholder='Skills'
+                    fluid
+                    multiple
                     search
-          />
-          <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
-                    onClick={getRemote}/>
-        </div>
+                    selection
+                    options={internships.dropdownSkills()}
+                    onChange={getSkills}
+                    style={{flexGrow: 0 }}
 
-        {/*<div style={{ paddingTop: '2rem' }}>*/}
-        {/*  <Header>Company</Header>*/}
-        {/*  <Dropdown*/}
-        {/*      placeholder='Select a company'*/}
-        {/*      fluid selection options={internships.dropdownCompany(passedData)}*/}
-        {/*      defaultValue={company[0].value}*/}
-        {/*      onChange={getCompany}*/}
-        {/*      search*/}
-        {/*  />*/}
-        {/*</div>*/}
-        <div style={{ paddingTop: '2rem' }}>
-          <Header>Company</Header>
+                />
+            </Grid.Column>
+            <Grid.Column>
+                <Dropdown placeholder='Location'
+                          onChange={getLocation}
+                          defaultValue={location[0].value}
+                          fluid selection options={internships.dropdownLocation(passedData)}
+                          search
+                          style={{ flexGrow: 0 }}
+                />
+              <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
+                        onClick={getRemote}/>
+            </Grid.Column>
 
-          <Form onSubmit={handleSubmit}>
-            <Input icon='home'
-                   iconPosition='left'
-                   placeholder='Enter a company'
-                   onChange={handleCompanyChange}
-                   fluid
-            />
-          </Form>
-        </div>
-        <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }} align={'center'}>
-          <Header>Key</Header>
-          <Label circular style={has}>
-            Have skill
-          </Label>
-          <Label circular style={notHave}>
-            Missing skill
-          </Label>
-        </div>
+            {/*<div style={{ paddingTop: '2rem' }}>*/}
+            {/*  <Header>Company</Header>*/}
+            {/*  <Dropdown*/}
+            {/*      placeholder='Select a company'*/}
+            {/*      fluid selection options={internships.dropdownCompany(passedData)}*/}
+            {/*      defaultValue={company[0].value}*/}
+            {/*      onChange={getCompany}*/}
+            {/*      search*/}
+            {/*  />*/}
+            {/*</div>*/}
+            <Grid.Column>
+                <Form onSubmit={handleSubmit}>
+                  <Input icon='home'
+                         iconPosition='left'
+                         placeholder='Enter a company'
+                         onChange={handleCompanyChange}
+                         fluid
+                  />
+                </Form>
+            </Grid.Column>
+            <Grid.Row>
+              <div style={{ paddingBottom: '2rem', paddingRight: '0.5rem' }} align={'center'}>
+                <Header>Key</Header>
+                <Label circular style={has}>
+                  Have skill
+                </Label>
+                <Label circular style={notHave}>
+                  Missing skill
+                </Label>
+              </div>
+            </Grid.Row>
+          </Grid.Row>
+
+        </Grid>
+
       </Segment>
+
+      // <Segment style={sticky}>
+      //   <div style={{ paddingTop: '2rem' }}>
+      //     <Header>
+      //       <Header.Content>
+      //         Total results found: {internships.total(passedData)}
+      //       </Header.Content>
+      //     </Header>
+      //   </div>
+      //   <div style={{ paddingTop: '2rem' }}>
+      //     <Header>
+      //       <Header.Content>
+      //         Sort by {' '}
+      //         <Dropdown
+      //             inline
+      //             header='Sort by...'
+      //             options={sortBy}
+      //             defaultValue={sortBy[0].value}
+      //             onChange={getSort}
+      //         />
+      //       </Header.Content>
+      //     </Header>
+      //   </div>
+      //   <div style={{ paddingTop: '2rem' }}>
+      //     <Form onSubmit={handleSubmit}>
+      //       <Popup
+      //           trigger={<Input icon='search'
+      //                           iconPosition='left'
+      //                           placeholder='Search ...'
+      //                           onChange={handleSearchChange}
+      //                           fluid
+      //           />}
+      //           content='Press enter to search!'
+      //           on={'focus'}
+      //       />
+      //
+      //     </Form>
+      //     <div style={{ paddingTop: '2rem' }}>
+      //       <Header>Skills</Header>
+      //       <Dropdown
+      //           placeholder='Skills'
+      //           fluid
+      //           multiple
+      //           search
+      //           selection
+      //           options={internships.dropdownSkills()}
+      //           onChange={getSkills}
+      //       />
+      //     </div>
+      //   </div>
+      //   <div style={{ paddingTop: '2rem' }}>
+      //     <Header>Location</Header>
+      //     <Dropdown placeholder='Location'
+      //               onChange={getLocation}
+      //               defaultValue={location[0].value}
+      //               fluid selection options={internships.dropdownLocation(passedData)}
+      //               search
+      //     />
+      //     <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
+      //               onClick={getRemote}/>
+      //   </div>
+      //
+      //   {/*<div style={{ paddingTop: '2rem' }}>*/}
+      //   {/*  <Header>Company</Header>*/}
+      //   {/*  <Dropdown*/}
+      //   {/*      placeholder='Select a company'*/}
+      //   {/*      fluid selection options={internships.dropdownCompany(passedData)}*/}
+      //   {/*      defaultValue={company[0].value}*/}
+      //   {/*      onChange={getCompany}*/}
+      //   {/*      search*/}
+      //   {/*  />*/}
+      //   {/*</div>*/}
+      //   <div style={{ paddingTop: '2rem' }}>
+      //     <Header>Company</Header>
+      //
+      //     <Form onSubmit={handleSubmit}>
+      //       <Input icon='home'
+      //              iconPosition='left'
+      //              placeholder='Enter a company'
+      //              onChange={handleCompanyChange}
+      //              fluid
+      //       />
+      //     </Form>
+      //   </div>
+      //   <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }} align={'center'}>
+      //     <Header>Key</Header>
+      //     <Label circular style={has}>
+      //       Have skill
+      //     </Label>
+      //     <Label circular style={notHave}>
+      //       Missing skill
+      //     </Label>
+      //   </div>
+      // </Segment>
   );
 }
 

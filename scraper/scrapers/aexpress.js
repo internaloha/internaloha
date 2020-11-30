@@ -50,6 +50,7 @@ import { fetchInfo, autoScroll } from './scraperFunctions.js';
         const state = 'N/A';
         const company = 'American Express';
         const contact = 'https://careers.americanexpress.com/';
+        const lastScraped = new Date();
 
         const position = await fetchInfo(page, 'h1[itemprop="title"]', 'innerText');
         console.log(position);
@@ -65,6 +66,7 @@ import { fetchInfo, autoScroll } from './scraperFunctions.js';
           company: company,
           contact: contact,
           url: urls[i],
+          lastScraped: lastScraped,
           location: {
             city: city,
             state: state,

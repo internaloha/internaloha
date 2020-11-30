@@ -75,21 +75,21 @@ function InternshipListing() {
 
   return (
       <Container style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
-        <Header as='h2' textAlign={'center'}
-                style={{ paddingBottom: '1rem', paddingTop: '3rem' }}>
-          <Header.Content>
-            <Icon name='graduation cap'/>
-            All Internships
-          </Header.Content>
-        </Header>
+        {/*<Header as='h2' textAlign={'center'}*/}
+        {/*        style={{ paddingBottom: '1rem', paddingTop: '3rem' }}>*/}
+        {/*  <Header.Content>*/}
+        {/*    <Icon name='graduation cap'/>*/}
+        {/*    All Internships*/}
+        {/*  </Header.Content>*/}
+        {/*</Header>*/}
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Column width={4}>
+          <Grid.Row>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote}/>
-          </Grid.Column>
+          </Grid.Row>
 
-          <Grid.Column>
+          <Grid.Row>
             {/*<Card.Group itemsPerRow={3} doubling stackable>*/}
             {/*  {_.map(paginatedData, (internship, index) => <InternshipListingCard*/}
             {/*      internship={internship} key={index}/>)}*/}
@@ -102,7 +102,7 @@ function InternshipListing() {
               </Item.Group>
             </div>
 
-          </Grid.Column>
+          </Grid.Row>
         </Grid>
         <div align={'center'} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
           {/*<Pagination*/}

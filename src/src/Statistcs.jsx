@@ -19,6 +19,7 @@ class Statistics extends React.Component {
               <Table.Header>
                 <Table.Row>
                   <Table.HeaderCell>Site</Table.HeaderCell>
+                  <Table.HeaderCell>Last Scraped</Table.HeaderCell>
                   <Table.HeaderCell>Total</Table.HeaderCell>
                   <Table.HeaderCell>Position</Table.HeaderCell>
                   <Table.HeaderCell>Company</Table.HeaderCell>
@@ -32,6 +33,7 @@ class Statistics extends React.Component {
                   <Table.HeaderCell>Qualifications</Table.HeaderCell>
                   <Table.HeaderCell>Skills</Table.HeaderCell>
                   <Table.HeaderCell>Description</Table.HeaderCell>
+                  <Table.HeaderCell>LastScraped</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
               <Table.Body>

@@ -54,32 +54,28 @@ function RecommendedInternships() {
   return (
       <Container style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Header as='h1' textAlign={'center'}
-                style={{ fontSize: '250%', paddingBottom: '1rem', paddingTop: '3rem', paddingLeft: '18rem' }}>
+                style={{ fontSize: '250%', paddingBottom: '1rem', paddingTop: '3rem' }}>
           <Header.Content>
             <Icon name='graduation cap'/>
             Recommended Internships
           </Header.Content>
         </Header>
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Column width={4}>
-            <MockProfile onChildClick={handleChildClick} passedData={data}
-                        skillsVal={skills} careerVal={career}/>
-          </Grid.Column>
+          <MockProfile onChildClick={handleChildClick} passedData={data}
+                       skillsVal={skills} careerVal={career}/>
 
-          <Grid.Column>
-            {/*<Card.Group itemsPerRow={3} doubling stackable>*/}
-            {/*  {_.map(paginatedData, (internship, index) => <InternshipListingCard*/}
-            {/*      internship={internship} key={index}/>)}*/}
-            {/*</Card.Group>*/}
+          {/*<Card.Group itemsPerRow={3} doubling stackable>*/}
+          {/*  {_.map(paginatedData, (internship, index) => <InternshipListingCard*/}
+          {/*      internship={internship} key={index}/>)}*/}
+          {/*</Card.Group>*/}
 
-            <div onScroll={handleScroll()} ref={ref}>
-              <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
-                {_.map(paginatedData, (internship, index) => <InternshipListingCard2
-                    internship={internship} key={index} hasSkills={skills}/>)}
-              </Item.Group>
-            </div>
+          <div onScroll={handleScroll()} ref={ref}>
+            <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
+              {_.map(paginatedData, (internship, index) => <InternshipListingCard2
+                  internship={internship} key={index} hasSkills={skills}/>)}
+            </Item.Group>
+          </div>
 
-          </Grid.Column>
         </Grid>
         <div align={'center'} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
         </div>
