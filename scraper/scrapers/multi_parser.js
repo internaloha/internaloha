@@ -495,6 +495,8 @@ function multi_parser(file) {
   // Goes thorugh every internship listing
   for (let i = 0; i < text.length; i++) {
 
+    text[i].index = i+1;
+
     const position = text[i].position;
 
     try {
