@@ -33,7 +33,6 @@ class Statistics extends React.Component {
                   <Table.HeaderCell>Qualifications</Table.HeaderCell>
                   <Table.HeaderCell>Skills</Table.HeaderCell>
                   <Table.HeaderCell>Description</Table.HeaderCell>
-                  <Table.HeaderCell>LastScraped</Table.HeaderCell>
                 </Table.Row>
               </Table.Header>
               <Table.Body>

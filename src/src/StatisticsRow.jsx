@@ -107,11 +107,6 @@ class StatisticsRow extends React.Component {
                   {description}%
                 </Header>
               </Table.Cell>
-              <Table.Cell>
-                <Header as='h4' >
-                  N/A
-                </Header>
-              </Table.Cell>
             </Table.Row>
 
         );
@@ -133,7 +128,6 @@ class StatisticsRow extends React.Component {
               <Table.Cell>{qualifications}%</Table.Cell>
               <Table.Cell>{skills}%</Table.Cell>
               <Table.Cell>{description}%</Table.Cell>
-              <Table.Cell>{lastScraped}</Table.Cell>
             </Table.Row>
         );
       }
