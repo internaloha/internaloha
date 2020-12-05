@@ -159,7 +159,7 @@ function InternshipListingCard2(props) {
                     </Grid.Column>
                     <Grid.Column floated={'left'}>
                       <Icon className='map marker alternate'/>
-                      <span>{props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip}</span>
+                      <span>Internship Location: {props.internship.location.city}, {props.internship.location.state} {props.internship.location.zip}</span>
                     </Grid.Column>
                     <Grid.Column style={{ paddingTop: '0.5rem' }}>
                       <Icon className='calendar alternate'/>

@@ -114,64 +114,57 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
   return (
       <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
         <Grid columns={'equal'}>
-          <div style={{ paddingTop: '2rem' }}>
-            <Header>
-              <Header.Content>
-                Total results found: {internships.total(passedData)}
-              </Header.Content>
-            </Header>
-          </div>
           <Grid.Row>
             <Grid.Column>
-                <Header>
-                  <Header.Content>
-                    Sort by {' '}
-                    <Dropdown
-                        inline
-                        header='Sort by...'
-                        options={sortBy}
-                        defaultValue={sortBy[0].value}
-                        onChange={getSort}
-                    />
-                  </Header.Content>
-                </Header>
-            </Grid.Column>
-            <Grid.Column>
-                <Form onSubmit={handleSubmit}>
-                  <Popup
-                      trigger={<Input icon='search'
-                                      iconPosition='left'
-                                      placeholder='Search ...'
-                                      onChange={handleSearchChange}
-                                      fluid
-                      />}
-                      content='Press enter to search!'
-                      on={'focus'}
+              <p>
+                <p>
+                  Sort by {' '}
+                  <Dropdown
+                      inline
+                      header='Sort by...'
+                      options={sortBy}
+                      defaultValue={sortBy[0].value}
+                      onChange={getSort}
                   />
-
-                </Form>
+                </p>
+              </p>
             </Grid.Column>
             <Grid.Column>
-                <Dropdown
-                    placeholder='Skills'
-                    fluid
-                    multiple
-                    search
-                    selection
-                    options={internships.dropdownSkills()}
-                    onChange={getSkills}
-                    style={{flexGrow: 0 }}
-
+              <Form onSubmit={handleSubmit}>
+                <Popup
+                    trigger={<Input icon='search'
+                                    iconPosition='left'
+                                    placeholder='Search ...'
+                                    onChange={handleSearchChange}
+                                    fluid
+                    />}
+                    content='Press enter to search!'
+                    on={'focus'}
                 />
+
+              </Form>
             </Grid.Column>
             <Grid.Column>
-                <Dropdown placeholder='Location'
-                          onChange={getLocation}
-                          defaultValue={location[0].value}
-                          fluid selection options={internships.dropdownLocation(passedData)}
-                          search
-                          style={{ flexGrow: 0 }}
-                />
+              <Dropdown
+                  placeholder='Skills'
+                  fluid
+                  multiple
+                  search
+                  selection
+                  options={internships.dropdownSkills()}
+                  onChange={getSkills}
+                  style={{ flexGrow: 0 }}
+
+              />
+            </Grid.Column>
+            <Grid.Column>
+              <Dropdown placeholder='Location'
+                        onChange={getLocation}
+                        defaultValue={location[0].value}
+                        fluid selection options={internships.dropdownLocation(passedData)}
+                        search
+                        style={{ flexGrow: 0 }}
+              />
               <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                         onClick={getRemote}/>
             </Grid.Column>
@@ -187,26 +180,53 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
             {/*  />*/}
             {/*</div>*/}
             <Grid.Column>
-                <Form onSubmit={handleSubmit}>
-                  <Input icon='home'
-                         iconPosition='left'
-                         placeholder='Enter a company'
-                         onChange={handleCompanyChange}
-                         fluid
-                  />
-                </Form>
+              <Form onSubmit={handleSubmit}>
+                <Input icon='home'
+                       iconPosition='left'
+                       placeholder='Company'
+                       onChange={handleCompanyChange}
+                       fluid
+                />
+              </Form>
             </Grid.Column>
-            <Grid.Row>
-              <div style={{ paddingBottom: '2rem', paddingRight: '0.5rem' }} align={'center'}>
-                <Header>Key</Header>
-                <Label circular style={has}>
-                  Have skill
-                </Label>
-                <Label circular style={notHave}>
-                  Missing skill
-                </Label>
-              </div>
-            </Grid.Row>
+            {/*<Grid.Row>*/}
+            {/*  <div style={{ paddingBottom: '2rem', paddingRight: '0.5rem' }} align={'center'}>*/}
+            {/*    <Header as={'h4'}>Key</Header>*/}
+            {/*    <Label circular style={has}>*/}
+            {/*      Has skill*/}
+            {/*    </Label>*/}
+            {/*    <Label circular style={notHave}>*/}
+            {/*      Missing skill*/}
+            {/*    </Label>*/}
+            {/*  </div>*/}
+            {/*</Grid.Row>*/}
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
+                Total results found: {internships.total(passedData)}
+              </Header>
+            </Grid.Column>
+            <Grid.Column textAlign={'right'}>
+              <Grid.Row>
+                <div style={{ paddingBottom: '0', paddingRight: '0.5rem' }}>
+                  <Header style={{
+                    paddingBottom: '0', margin: '0 0 0 0', paddingRight: '0.5rem',
+                    paddingTop: '0.3rem', lineHeight: '10px',
+                    display: 'inline-block'
+                  }} as={'h4'}>
+                    Key:
+                  </Header>
+                  <Label circular style={has}>
+                    Has skill
+                  </Label>
+                  <Label circular style={notHave}>
+                    Missing skill
+                  </Label>
+                </div>
+              </Grid.Row>
+
+            </Grid.Column>
           </Grid.Row>
 
         </Grid>

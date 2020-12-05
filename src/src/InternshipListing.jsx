@@ -83,7 +83,7 @@ function InternshipListing() {
           </Header.Content>
         </Header>*/}
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row>
+          <Grid.Row style={{ maxWidth: '800px', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote}/>
