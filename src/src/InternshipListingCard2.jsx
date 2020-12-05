@@ -175,7 +175,7 @@ function InternshipListingCard2(props) {
             </Item.Meta>
             <Item.Description style={{ paddingBottom: '1rem' }}>
               <div align={'left'}>
-                <div style={{ fontSize: '125%', height: '214px', width: '450px', overflow: 'hidden' }}>
+                <div style={{ fontSize: '125%', height: '214px', width: '600px', overflow: 'hidden' }}>
                     {description(props.internship.description)}
                 </div>
               </div>
@@ -211,20 +211,20 @@ function InternshipListingCard2(props) {
             </a>
           </Modal.Actions>
         </Modal>
-        <Popup
+         <Popup
             content='Added to favorites!'
             mouseLeaveDelay={200}
             on='click'
             trigger={
-              <Button style={{ backgroundColor: 'transparent' }}>
-                Add to favorites!
-              </Button>
+              <button className="ui icon button" style={{ marginTop: '1em', size: '500%', maxHeight: '50px', backgroundColor: 'transparent' }}>
+                <i className="heart icon" style={{ fontSize: '175%' }}/>
+              </button>
             }
         />
         <Modal closeIcon trigger={
-          <Button style={{ backgroundColor: 'transparent' }}>
-            Report a problem
-          </Button>
+          <button className="ui icon button" style={{ marginTop: '1em', size: '500%', maxHeight: '50px', backgroundColor: 'transparent' }}>
+            <i className="exclamation triangle icon" style={{ fontSize: '175%' }}/>
+          </button>
         }>
           <Modal.Header>Report a Problem</Modal.Header>
           <Modal.Content>

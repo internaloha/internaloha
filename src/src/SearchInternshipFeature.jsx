@@ -10,7 +10,7 @@ import {
   Popup,
   Search,
   Menu,
-  Image, Container, Grid
+  Image, Container, Grid,
 } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';

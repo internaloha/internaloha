@@ -75,13 +75,13 @@ function InternshipListing() {
 
   return (
       <Container style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
-        {/*<Header as='h2' textAlign={'center'}*/}
-        {/*        style={{ paddingBottom: '1rem', paddingTop: '3rem' }}>*/}
-        {/*  <Header.Content>*/}
-        {/*    <Icon name='graduation cap'/>*/}
-        {/*    All Internships*/}
-        {/*  </Header.Content>*/}
-        {/*</Header>*/}
+        {/*<Header as='h1' textAlign={'center'}
+                style={{ fontSize: '250%', paddingTop: '3rem' }}>
+          <Header.Content>
+            <Icon name='graduation cap'/>
+            All Internships
+          </Header.Content>
+        </Header>*/}
         <Grid columns={'equal'} doubling stackable>
           <Grid.Row>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
@@ -95,7 +95,7 @@ function InternshipListing() {
             {/*      internship={internship} key={index}/>)}*/}
             {/*</Card.Group>*/}
 
-            <div onScroll={handleScroll()} ref={ref}>
+            <div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '800px', margin: 'auto' }}>
               <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard2
                     internship={internship} key={index}/>)}

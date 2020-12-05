@@ -3,7 +3,7 @@ import {
   Segment,
   Header,
   Dropdown,
-  Form, Modal, Button
+  Form, Modal, Button,
 } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -11,7 +11,7 @@ import swal from 'sweetalert';
 import InternshipsFilters from './InternshipFilters';
 import { recommendation, dropdownCareerInterest } from './RecommendationScript';
 
-function MockProfile({ onChildClick, passedData, skillsVal, careerVal }) {
+function MockProfile({ onChildClick, skillsVal, careerVal }) {
   const [open, setOpen] = React.useState(true);
 
   const internships = new InternshipsFilters();
