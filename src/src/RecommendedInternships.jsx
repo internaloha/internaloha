@@ -54,27 +54,26 @@ function RecommendedInternships() {
   return (
       <Container style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Header as='h1' textAlign={'center'}
-                style={{ fontSize: '250%', paddingBottom: '1rem', paddingTop: '3rem' }}>
+                style={{ fontSize: '250%', paddingBottom: 0, paddingTop: '3rem' }}>
           <Header.Content>
-            <Icon name='graduation cap'/>
+            <Icon name='graduation cap' style={{paddingBottom: 0}}/>
             Recommended Internships
           </Header.Content>
         </Header>
         <Grid columns={'equal'} doubling stackable>
-          <MockProfile onChildClick={handleChildClick} passedData={data}
-                       skillsVal={skills} careerVal={career}/>
+          <Grid.Row style={{ maxWidth: '800px', margin: 'auto' }}>
+            <MockProfile onChildClick={handleChildClick} passedData={data}
+                         skillsVal={skills} careerVal={career} />
+          </Grid.Row>
+          <Grid.Row>
+            <div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '800px', margin: 'auto' }}>
+              <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
+                {_.map(paginatedData, (internship, index) => <InternshipListingCard2
+                    internship={internship} key={index} hasSkills={skills} passedData={data}/>)}
+              </Item.Group>
+            </div>
+          </Grid.Row>
 
-          {/*<Card.Group itemsPerRow={3} doubling stackable>*/}
-          {/*  {_.map(paginatedData, (internship, index) => <InternshipListingCard*/}
-          {/*      internship={internship} key={index}/>)}*/}
-          {/*</Card.Group>*/}
-
-          <div onScroll={handleScroll()} ref={ref}>
-            <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
-              {_.map(paginatedData, (internship, index) => <InternshipListingCard2
-                  internship={internship} key={index} hasSkills={skills}/>)}
-            </Item.Group>
-          </div>
 
         </Grid>
         <div align={'center'} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>

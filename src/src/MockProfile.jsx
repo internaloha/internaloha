@@ -3,7 +3,7 @@ import {
   Segment,
   Header,
   Dropdown,
-  Form, Modal, Button,
+  Form, Modal, Button, Grid, Popup, Input, Checkbox, Label,
 } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -11,7 +11,7 @@ import swal from 'sweetalert';
 import InternshipsFilters from './InternshipFilters';
 import { recommendation, dropdownCareerInterest } from './RecommendationScript';
 
-function MockProfile({ onChildClick, skillsVal, careerVal }) {
+function MockProfile({ onChildClick, skillsVal, careerVal, passedData }) {
   const [open, setOpen] = React.useState(true);
 
   const internships = new InternshipsFilters();
@@ -109,29 +109,24 @@ function MockProfile({ onChildClick, skillsVal, careerVal }) {
   };
 
   return (
-      <Modal
-          onClose={() => setOpen(false)}
-          onOpen={() => setOpen(true)}
-          open={open}
-          closeOnDimmerClick={false}
-          trigger={<div/>}
-      >
-        <Modal.Header>Enter your Information</Modal.Header>
-        <Modal.Content>
-          <Modal.Description>
-            <Form>
-              <Form.Field
-                  required
-                  fluid multiple selection clearable
-                  control={Dropdown}
-                  options={internships.dropdownSkills()}
-                  label={{ children: 'Skills' }}
-                  placeholder='Skills'
-                  search
-                  onChange={getSkills}
-              />
-            </Form>
-            <div style={{ paddingTop: '2rem' }}>
+      <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
+        <Grid columns={'equal'}>
+          <Grid.Row>
+            <Grid.Column>
+              <Form>
+                <Form.Field
+                    required
+                    fluid multiple selection clearable
+                    control={Dropdown}
+                    options={internships.dropdownSkills()}
+                    label={{ children: 'Skills' }}
+                    placeholder='Skills'
+                    search
+                    onChange={getSkills}
+                />
+              </Form>
+            </Grid.Column>
+            <Grid.Column>
               <Form onSubmit={handleSubmit}>
                 <Form.Field
                     required
@@ -143,21 +138,69 @@ function MockProfile({ onChildClick, skillsVal, careerVal }) {
                     search
                     onChange={getCareerInterest}
                 />
-              </Form>
-            </div>
-          </Modal.Description>
-        </Modal.Content>
-        <Modal.Actions>
-          <Button
-              content="Submit"
-              labelPosition='right'
-              icon='checkmark'
-              onClick={() => onSubmit()}
-              positive
+            </Form>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Grid.Column>
+              <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
+                Total results found: {internships.total(passedData)}
+              </Header>
+            </Grid.Column>
+          </Grid.Row>
 
-          />
-        </Modal.Actions>
-      </Modal>
+        </Grid>
+
+      </Segment>
+      // <Modal
+      //     onClose={() => setOpen(false)}
+      //     onOpen={() => setOpen(true)}
+      //     open={open}
+      //     closeOnDimmerClick={false}
+      //     trigger={<div/>}
+      // >
+      //   <Modal.Header>Enter your Information</Modal.Header>
+      //   <Modal.Content>
+      //     <Modal.Description>
+      //       <Form>
+      //         <Form.Field
+      //             required
+      //             fluid multiple selection clearable
+      //             control={Dropdown}
+      //             options={internships.dropdownSkills()}
+      //             label={{ children: 'Skills' }}
+      //             placeholder='Skills'
+      //             search
+      //             onChange={getSkills}
+      //         />
+      //       </Form>
+      //       <div style={{ paddingTop: '2rem' }}>
+      //         <Form onSubmit={handleSubmit}>
+      //           <Form.Field
+      //               required
+      //               fluid multiple selection clearable
+      //               control={Dropdown}
+      //               options={dropdownCareerInterest()}
+      //               label={{ children: 'Career Interest' }}
+      //               placeholder='Career Interest'
+      //               search
+      //               onChange={getCareerInterest}
+      //           />
+      //         </Form>
+      //       </div>
+      //     </Modal.Description>
+      //   </Modal.Content>
+      //   <Modal.Actions>
+      //     <Button
+      //         content="Submit"
+      //         labelPosition='right'
+      //         icon='checkmark'
+      //         onClick={() => onSubmit()}
+      //         positive
+      //
+      //     />
+      //   </Modal.Actions>
+      // </Modal>
       // <Segment style={sticky}>
       //   <div style={{ paddingTop: '2rem' }}>
       //     <Header>
