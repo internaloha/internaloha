@@ -239,8 +239,8 @@ const myArgs = process.argv.slice(2);
                     city: location.match(/([^ ,])\w+/g)[0],
                     state: location.match(/([^ ,])\w+/g)[1],
                   },
-                  posted: posted,
-                  url: allJobLinks[elementLink],
+                  posted: date,
+                  url: allJobLinks[i-1],
                   lastScraped: lastScraped,
                   description: description,
                 });
