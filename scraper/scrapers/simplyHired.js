@@ -83,7 +83,6 @@ const myArgs = process.argv.slice(2);
 
           try {
             // Test to see which UI loads
-            await page.waitFor(500);
             await page.evaluate(() => document.querySelector('.rpContent.ViewJob.ViewJob-redesign.ViewJob-v3').innerHTML);
 
             console.log('Loaded up with new UI... \n');
@@ -173,6 +172,14 @@ const myArgs = process.argv.slice(2);
 
               await page.waitFor(1000);
 
+              const allJobLinks = await page.evaluate(
+                  () => Array.from(
+                      // eslint-disable-next-line no-undef
+                      document.querySelectorAll('a[class="SerpJob-link card-link"]'),
+                      a => a.href,
+                  ),
+              );
+
               for (let i = 1; i <= elements.length; i++) {
                 const date = new Date();
                 let daysBack = 0;
@@ -181,10 +188,10 @@ const myArgs = process.argv.slice(2);
                 const element = elements[i];
                 const elementLink = elements[i - 1];
 
-                await page.waitForSelector('.viewjob-header h1');
-                await page.waitForSelector('.viewjob-header span.company');
-                await page.waitForSelector('.viewjob-header span.location');
-                await page.waitForSelector('div.viewjob-description.ViewJob-description');
+                // await page.waitForSelector('.viewjob-header h1');
+                // await page.waitForSelector('.viewjob-header span.company');
+                // await page.waitForSelector('.viewjob-header span.location');
+                // await page.waitForSelector('div.viewjob-description.ViewJob-description');
 
                 // const position = await page.evaluate(() => document.querySelector('.viewjob-header h1').innerHTML);
                 // const company = await page.evaluate(() => document.querySelector('.viewjob-header span.company').innerHTML);
@@ -192,27 +199,28 @@ const myArgs = process.argv.slice(2);
                 // const description = await page.evaluate(() => document.querySelector('div.viewjob-description.ViewJob-description').innerHTML);
                 // let posted = '';
 
-                const position = await fetchInfo(page, '.viewjob-header h1', 'innerText');
-                const company = await fetchInfo(page, '.viewjob-header span.company', 'innerText');
-                const location = await fetchInfo(page, '.viewjob-header span.location', 'innerText');
-                const description = await fetchInfo(page, 'div.viewjob-description.ViewJob-description', 'innerHTML');
+                const position = await fetchInfo(page, 'div[class="viewjob-jobTitle h2"]', 'innerText');
+                const company = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
+                const location = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+                const description = await fetchInfo(page, 'div[class="viewjob-jobDescription"]', 'innerHTML');
 
+                let posted = '';
                 try {
                   // posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').innerHTML);
-                  posted = await fetchInfo(page, '.extra-info .info-unit i.far.fa-clock + span', 'innerText');
+                  posted = await fetchInfo(page, 'span[class="viewjob-labelWithIcon viewjob-age"]', 'innerText');
 
                 } catch (err4) {
                   posted = 'N/A';
                   console.log('No date found. Setting posted as: N/A');
                 }
 
-                let savedURL = '';
-                try {
-                  const pageURL = await elementLink.$('.card-link');
-                  savedURL = await page.evaluate(span => span.getAttribute('href'), pageURL);
-                } catch (err6) {
-                  console.log('Error in fetching link for:', position);
-                }
+                // let savedURL = '';
+                // try {
+                //   const pageURL = await elementLink.$('.card-link');
+                //   savedURL = await page.evaluate(span => span.getAttribute('href'), pageURL);
+                // } catch (err6) {
+                //   console.log('Error in fetching link for:', position);
+                // }
 
                 if (posted.includes('hours') || posted.includes('hour')) {
                   daysBack = 0;
@@ -232,7 +240,7 @@ const myArgs = process.argv.slice(2);
                     state: location.match(/([^ ,])\w+/g)[1],
                   },
                   posted: posted,
-                  url: `https://www.simplyhired.com${savedURL}`,
+                  url: allJobLinks[elementLink],
                   lastScraped: lastScraped,
                   description: description,
                 });
@@ -248,11 +256,12 @@ const myArgs = process.argv.slice(2);
             }
           }
 
-          nextPage = await page.$('.next-pagination a');
+          let nextPage = await page.$('a[class="Pagination-link next-pagination"]');
           await nextPage.click();
           totalPages++;
 
         } catch (err5) {
+          console.log(err5.message);
           hasNext = false;
           console.log('\nReached the end of pages!');
         }
