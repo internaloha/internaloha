@@ -116,69 +116,75 @@ async function getLinks(page) {
       // go through each link and fetch info
       for (let i = 0; i < links.length; i++) {
         for (let j = 0; j < links[i].length; j++) {
-          await page.goto(links[i][j]);
-          jobNumber++;
-          await page.waitForSelector('div.jobdescription');
 
-          // scrape info off each website
-          // use natural parser to scrape qulifications and other info
-          const position = await fetchInfo(page, 'h3[class=text-blue]', 'innerText');
-          const location = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(2)', 'innerText');
-          let state = '';
-          if (!location.match(/([^,]*)/g)[2]) {
-            state = 'United States';
-          } else {
-            state = location.match(/([^,]*)/g)[2].trim();
-          }
-          const description = await fetchInfo(page, 'div.jobdescription','innerHTML');
-          const company = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(1)', 'innerText');
-          // const qualifications = await fetchInfo(page, 'div.jobdescription p:nth-child(4)');
-          // const compensation = await fetchInfo(page, 'div.jobdescription p:nth-child(3)');
-          // // if start includes a month and year then copy it into let variable then return that
-          // let start = await fetchInfo(page, 'div.jobdescription p:nth-child(4)');
-          // if (start.includes(month)) {
-          //   let d = start.match(month);
-          //   let startMonth = month[d.getMonth()];
-          // }
-          const lastScraped = new Date();
+          try {
+            await page.goto(links[i][j]);
+            jobNumber++;
+            await page.waitForSelector('div.jobdescription');
 
-          const posted = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(3)', 'innerText');
-          const date = new Date();
-          let daysBack = 0;
-          if (posted.includes('day') || posted.includes('days')) {
-            const matched = posted.match(/(\d+)/);
-            if (matched) {
-              daysBack = matched[0];
+            // scrape info off each website
+            // use natural parser to scrape qulifications and other info
+            const position = await fetchInfo(page, 'h3[class=text-blue]', 'innerText');
+            const location = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(2)', 'innerText');
+            let state = '';
+            if (!location.match(/([^,]*)/g)[2]) {
+              state = 'United States';
+            } else {
+              state = location.match(/([^,]*)/g)[2].trim();
             }
-            // } else if (posted.includes('month') || (posted.includes('months'))) {
-            //     // 'a month ago...'
-            //     if (posted.includes('a')) {
-            //       daysBack = 30;
-            //     } else {
-            //       daysBack = posted.match(/\d+/g) * 30;
-            //     }
-            //   } else {
-            //     daysBack = posted.match(/\d+/g);
-          }
-          date.setDate(date.getDate() - daysBack);
-          const time = date;
+            const description = await fetchInfo(page, 'div.jobdescription', 'innerHTML');
+            const company = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(1)', 'innerText');
+            // const qualifications = await fetchInfo(page, 'div.jobdescription p:nth-child(4)');
+            // const compensation = await fetchInfo(page, 'div.jobdescription p:nth-child(3)');
+            // // if start includes a month and year then copy it into let variable then return that
+            // let start = await fetchInfo(page, 'div.jobdescription p:nth-child(4)');
+            // if (start.includes(month)) {
+            //   let d = start.match(month);
+            //   let startMonth = month[d.getMonth()];
+            // }
+            const lastScraped = new Date();
 
-          jobArray.push({
-            position: position.trim(),
-            location: {
-              city: location.match(/([^,]*)/g)[0],
-              state: state,
-            },
-            company: company.trim(),
-            posted: time,
-            // start: start.trim(),
-            // compensation: compensation.trim(),
-            // qualifications: qualifications.trim(),
-            url: links[i][j],
-            lastScraped: lastScraped,
-            description: description.trim(),
-          });
-          console.log(position);
+            const posted = await fetchInfo(page, 'div[class=col-xs-8] li:nth-child(3)', 'innerText');
+            const date = new Date();
+            let daysBack = 0;
+            if (posted.includes('day') || posted.includes('days')) {
+              const matched = posted.match(/(\d+)/);
+              if (matched) {
+                daysBack = matched[0];
+              }
+              // } else if (posted.includes('month') || (posted.includes('months'))) {
+              //     // 'a month ago...'
+              //     if (posted.includes('a')) {
+              //       daysBack = 30;
+              //     } else {
+              //       daysBack = posted.match(/\d+/g) * 30;
+              //     }
+              //   } else {
+              //     daysBack = posted.match(/\d+/g);
+            }
+            date.setDate(date.getDate() - daysBack);
+            const time = date;
+
+            jobArray.push({
+              position: position.trim(),
+              location: {
+                city: location.match(/([^,]*)/g)[0],
+                state: state,
+              },
+              company: company.trim(),
+              posted: time,
+              // start: start.trim(),
+              // compensation: compensation.trim(),
+              // qualifications: qualifications.trim(),
+              url: links[i][j],
+              lastScraped: lastScraped,
+              description: description.trim(),
+            });
+            console.log(position);
+          } catch (skip) {
+            console.log(skip.message);
+          }
+
         }
       }
 
