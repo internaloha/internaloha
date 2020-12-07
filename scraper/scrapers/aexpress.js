@@ -26,11 +26,11 @@ import { fetchInfo, autoScroll } from './scraperFunctions.js';
     await page.type('input[id="location-search"]', 'United States');
     await page.click('button[id="search-btn"]');
 
-    await page.waitForSelector('mat-select[id="mat-select-3"]');
-    await page.click('mat-select[id="mat-select-3"]');
+    // await page.waitForSelector('mat-select[id="mat-select-3"]');
+    // await page.click('mat-select[id="mat-select-3"]');
 
-    await page.waitForSelector('mat-option[id="mat-option-15"]');
-    await page.click('mat-option[id="mat-option-15"]');
+    // await page.waitForSelector('mat-option[id="mat-option-15"]');
+    // await page.click('mat-option[id="mat-option-15"]');
 
     await page.waitForSelector('mat-panel-title > p > a');
     const urls = await page.evaluate( () => Array.from(

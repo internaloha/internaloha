@@ -34,7 +34,7 @@ import { fetchInfo } from './scraperFunctions.js';
 
     // closing module that pops up
     try {
-      await page.waitForSelector('a[class="icl-CloseButton popover-x-button-close"]', { timeout: 5000} );
+      await page.waitForSelector('a[class="icl-CloseButton popover-x-button-close"]', { timeout: 5000 });
       await page.waitFor(2000);
       await page.click('a[class="icl-CloseButton popover-x-button-close"]');
     } catch (err2) {
@@ -63,15 +63,20 @@ import { fetchInfo } from './scraperFunctions.js';
       console.log('Our Error: No sorting by date posted.');
     }
 
-    await page.waitForSelector('span[id="filter-job-type"] li a[href*="internship"]');
-    // Getting href link for internship filter
-    const internshipDropdown = await page.evaluate(
-        () => Array.from(
-            // eslint-disable-next-line no-undef
-            document.querySelectorAll('span[id="filter-job-type"] li a[href*="internship"]'),
-            a => a.getAttribute('href'),
-        ),
-    );
+    let internshipDropdown = [];
+    try {
+      await page.waitForSelector('ul[id="filter-job-type-menu"] li a[href*="internship"]');
+      // Getting href link for internship filter
+      internshipDropdown = await page.evaluate(
+          () => Array.from(
+              // eslint-disable-next-line no-undef
+              document.querySelectorAll('ul[id="filter-job-type-menu"] li a[href*="internship"]'),
+              a => a.getAttribute('href'),
+          ),
+      );
+    } catch (noInternshipFilter) {
+
+    }
 
     if (internshipDropdown.length === 1) {
       await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
@@ -123,8 +128,8 @@ import { fetchInfo } from './scraperFunctions.js';
           let position = '';
           // position alternates between two different css class
           try {
-            await page.click('div[class="jobsearch-JobInfoHeader-title-container"]');
-            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container"]', 'innerText');
+            await page.click('div[class="jobsearch-JobInfoHeader-title-container "]');
+            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container "]', 'innerText');
           } catch (noClassError) {
             console.log('--- Trying with other class name ---');
             position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container jobsearch-JobInfoHeader-title-containerEji"]', 'innerText');
@@ -132,8 +137,8 @@ import { fetchInfo } from './scraperFunctions.js';
           const company = await fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText');
           let location = '';
           try {
-            await page.click('div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
-            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)', 'innerText');
+            await page.click('div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
+            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)', 'innerText');
           } catch (noLocation) {
             console.log('--- Trying with other class name ---');
             location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child', 'innerText');
