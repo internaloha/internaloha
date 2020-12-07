@@ -543,7 +543,13 @@
         "index": 27,
         "skills": [
             "information technology",
-            "software engineering"
+            "software engineering",
+            "matlab",
+            "devOps",
+            "javascript",
+            "java",
+            "data visualization",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1074,7 +1080,13 @@
         "index": 52,
         "skills": [
             "information technology",
-            "software engineering"
+            "software engineering",
+            "matlab",
+            "devOps",
+            "javascript",
+            "java",
+            "data visualization",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1210,8 +1222,8 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "java",
             "python",
+            "java",
             "C and C++"
         ],
         "compensation": "paid",
@@ -1252,8 +1264,8 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "java",
             "python",
+            "java",
             "C and C++"
         ],
         "compensation": "paid",
@@ -1293,9 +1305,10 @@
             "information technology",
             "software engineering",
             "javascript",
-            "java",
             "python",
-            "bioinformatics"
+            "java",
+            "bioinformatics",
+            "machine learning"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1495,6 +1508,7 @@
             "software engineering",
             "javascript",
             "java",
+            "scala",
             "information technology"
         ],
         "remote": false
@@ -1515,6 +1529,7 @@
             "software engineering",
             "javascript",
             "java",
+            "scala",
             "information technology"
         ],
         "remote": false
@@ -1535,9 +1550,10 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "data visualization",
             "java",
-            "python"
+            "data visualization",
+            "python",
+            "C and C++"
         ],
         "remote": false
     },
@@ -1612,7 +1628,8 @@
             "software engineering",
             "javascript",
             "python",
-            "devOps"
+            "devOps",
+            "machine learning"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1893,7 +1910,8 @@
             "python",
             "robotics",
             "C and C++",
-            "information technology"
+            "information technology",
+            "artificial intelligence"
         ],
         "remote": false
     },
@@ -1914,6 +1932,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -1954,7 +1973,9 @@
             "java",
             "matlab",
             "C and C++",
-            "machine learning"
+            "machine learning",
+            "information technology",
+            "web development"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1995,7 +2016,8 @@
             "python",
             "robotics",
             "C and C++",
-            "information technology"
+            "information technology",
+            "artificial intelligence"
         ],
         "remote": false
     },
@@ -2217,6 +2239,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -2327,6 +2350,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -2736,8 +2760,8 @@
             "python",
             "java",
             "devOps",
-            "machine learning",
-            "C and C++"
+            "C and C++",
+            "machine learning"
         ],
         "remote": false
     },
@@ -2852,8 +2876,8 @@
             "software engineering",
             "artificial intelligence",
             "data visualization",
-            "C and C++",
-            "robotics"
+            "robotics",
+            "C and C++"
         ],
         "remote": false
     },
@@ -2875,8 +2899,8 @@
             "python",
             "java",
             "devOps",
-            "machine learning",
-            "C and C++"
+            "C and C++",
+            "machine learning"
         ],
         "remote": false
     },
@@ -2898,8 +2922,8 @@
             "python",
             "java",
             "devOps",
-            "machine learning",
-            "C and C++"
+            "C and C++",
+            "machine learning"
         ],
         "remote": false
     },
@@ -2938,8 +2962,8 @@
             "python",
             "java",
             "devOps",
-            "machine learning",
-            "C and C++"
+            "C and C++",
+            "machine learning"
         ],
         "remote": false
     },
@@ -3009,6 +3033,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3085,6 +3110,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3106,6 +3132,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3127,6 +3154,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3165,6 +3193,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3186,6 +3215,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3224,6 +3254,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3245,6 +3276,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3266,6 +3298,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3304,6 +3337,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3325,6 +3359,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3380,6 +3415,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3401,6 +3437,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3607,6 +3644,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3648,6 +3686,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3684,6 +3723,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3705,6 +3745,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -3942,9 +3983,9 @@
             "software engineering",
             "javascript",
             "python",
+            "scala",
             "machine learning",
-            "information technology",
-            "mobile development"
+            "information technology"
         ],
         "remote": true
     },
@@ -4022,6 +4063,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -4082,6 +4124,7 @@
             "python",
             "java",
             "data visualization",
+            "scala",
             "machine learning"
         ],
         "remote": true
@@ -4358,11 +4401,11 @@
         "index": 218,
         "skills": [
             "software engineering",
-            "angular",
             "java",
+            "scala",
+            "angular",
             "machine learning",
-            "information technology",
-            "react"
+            "information technology"
         ],
         "remote": false
     },
@@ -5536,10 +5579,10 @@
         "skills": [
             "machine learning",
             "information technology",
+            "javascript",
             "python",
             "data visualization",
-            "matlab",
-            "javascript"
+            "matlab"
         ],
         "compensation": "paid",
         "contact": "staffingaadar@merck.com",
