@@ -127,24 +127,50 @@ async function scrapeInfo(page, posted, url, data) {
       console.log('Reached end. Scrapping pages now...');
 
     }
-
+    let countError = 0;
+    let breakOut = false;
     for (let i = 0; i < urlArray.length; i++) {
+
+      if (breakOut === true) {
+        break;
+      }
 
       try {
         await page.goto(urlArray[i]);
         await scrapeInfo(page, postedDates[i], urlArray[i], data);
 
       } catch (err5) {
+
+        // If we fail to scrape a listing more than 15 times (eg. usually stopped due to recaptcha)
+        if (countError > 15) {
+          breakOut = true;
+        }
+
+        countError++;
         console.log(err5.message);
         console.log('Loading error, skipping');
         skippedJobs.push(urlArray[i]);
         skippedDates.push(postedDates[i]);
+
       }
     }
 
+    // Reset countError
+    countError = 0;
+    breakOut = false;
     for (let i = 0; i < skippedJobs.length; i++) {
+      if (breakOut === true) {
+        break;
+      }
       await page.goto(skippedJobs[i]);
-      await scrapeInfo(page, skippedDates[i], skippedJobs[i], data);
+      try {
+        await scrapeInfo(page, skippedDates[i], skippedJobs[i], data);
+      } catch (err5) {
+        if (countError > 15) {
+          breakOut = true;
+        }
+        countError++;
+      }
     }
 
     console.log('Total Jobs scraped: ', urlArray.length);
