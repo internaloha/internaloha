@@ -87,20 +87,21 @@ function InternshipListing() {
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote}/>
-          </Grid.Row>
-
-          <Grid.Row>
-            {/*<Card.Group itemsPerRow={3} doubling stackable>*/}
-            {/*  {_.map(paginatedData, (internship, index) => <InternshipListingCard*/}
-            {/*      internship={internship} key={index}/>)}*/}
-            {/*</Card.Group>*/}
 
             <div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '800px', margin: 'auto' }}>
-              <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
-                {_.map(paginatedData, (internship, index) => <InternshipListingCard2
+              <Card.Group itemsPerRow={2} doubling stackable>
+                {_.map(paginatedData, (internship, index) => <InternshipListingCard
                     internship={internship} key={index}/>)}
-              </Item.Group>
+              </Card.Group>
             </div>
+
+
+            {/*<div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '800px', margin: 'auto' }}>*/}
+            {/*  <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>*/}
+            {/*    {_.map(paginatedData, (internship, index) => <InternshipListingCard2*/}
+            {/*        internship={internship} key={index}/>)}*/}
+            {/*  </Item.Group>*/}
+            {/*</div>*/}
 
           </Grid.Row>
         </Grid>
