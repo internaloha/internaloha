@@ -13,7 +13,7 @@ const credentials = commandLine.slice(0, 2);
 console.log(credentials);
 
 async function startBrowser() {
-  const browser = await puppeteer.launch({ headless: false });
+  const browser = await puppeteer.launch({ headless: false, devtools: true });
   const page = await browser.newPage();
   return { browser, page };
 }

@@ -12,6 +12,7 @@ import userAgent from 'user-agents';
   const browser = await puppeteer.launch({
     headless: false,
   });
+  const data = [];
 
   try {
 
@@ -99,7 +100,6 @@ import userAgent from 'user-agents';
         ),
     );
 
-    const data = [];
     let totalJobs = 0;
 
     for (let i = 0; i < elements.length; i++) {
@@ -162,6 +162,10 @@ import userAgent from 'user-agents';
 
   } catch (e) {
     console.log('Our Error:', e.message);
+    await fs.writeFile('./data/canonical/monster.canonical.data.json',
+        JSON.stringify(data, null, 4), 'utf-8',
+        err => (err ? console.log('\nData not written!', err) :
+            console.log('\nData successfully written!')));
     await browser.close();
   }
 
