@@ -176,8 +176,8 @@ function InternshipListingCard2(props) {
             <Item.Description style={{ paddingBottom: '1rem' }}>
               <div align={'left'}>
                 <div style={{ fontSize: '125%', height: '214px', width: '600px', overflow: 'hidden' }}>
-                    {description(props.internship.description)}
-                </div>
+                {description(props.internship.description)}
+              </div>
               </div>
               <Item.Extra style={{ paddingTop: '1rem' }} >
               </Item.Extra>

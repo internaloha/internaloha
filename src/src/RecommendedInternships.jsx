@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
-import { Container, Header, Icon, Grid, Item } from 'semantic-ui-react';
-import InternshipListingCard2 from './InternshipListingCard2';
+import { Container, Header, Icon, Grid, Card } from 'semantic-ui-react';
+import InternshipListingCard from './InternshipListingCard';
 import MockProfile from './MockProfile';
 import InternshipsFilters from './InternshipFilters';
 
@@ -61,16 +61,16 @@ function RecommendedInternships() {
           </Header.Content>
         </Header>
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row style={{ maxWidth: '800px', margin: 'auto' }}>
+          <Grid.Row style={{ maxWidth: '100rem', margin: 'auto' }}>
             <MockProfile onChildClick={handleChildClick} passedData={data}
                          skillsVal={skills} careerVal={career} />
           </Grid.Row>
           <Grid.Row>
-            <div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '800px', margin: 'auto' }}>
-              <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>
-                {_.map(paginatedData, (internship, index) => <InternshipListingCard2
+            <div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '100rem', margin: 'auto' }}>
+              <Card.Group itemsPerRow={3} doubling stackable>
+                {_.map(paginatedData, (internship, index) => <InternshipListingCard
                     internship={internship} key={index} hasSkills={skills} passedData={data}/>)}
-              </Item.Group>
+              </Card.Group>
             </div>
           </Grid.Row>
 

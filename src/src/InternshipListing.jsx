@@ -83,13 +83,13 @@ function InternshipListing() {
           </Header.Content>
         </Header>*/}
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row style={{ maxWidth: '800px', margin: 'auto' }}>
+          <Grid.Row style={{ maxWidth: '100rem', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote}/>
 
-            <div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '800px', margin: 'auto' }}>
-              <Card.Group itemsPerRow={2} doubling stackable>
+            <div onScroll={handleScroll()} ref={ref}>
+              <Card.Group itemsPerRow={3} doubling stackable>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard
                     internship={internship} key={index}/>)}
               </Card.Group>
