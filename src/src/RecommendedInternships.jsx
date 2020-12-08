@@ -15,17 +15,22 @@ function RecommendedInternships() {
 
   const [skills, setSkills] = useState([]);
   const [career, setCareer] = useState([]);
+  const [location, setLocation] = useState([]);
   const [page, setPage] = useState(1);
   const [height, setHeight] = useState(0);
+  const [remote, setRemote] = useState(false);
+
   const ref = useRef(null);
 
   /* Passes data up from MockProfile. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
-  function handleChildClick(passedData, skillsVal, careerVal) {
+  function handleChildClick(passedData, skillsVal, careerVal, locationVal, remoteVal) {
     // console.log(passedData);
     setData(passedData);
     setSkills(skillsVal);
     setCareer(careerVal);
+    setLocation(locationVal);
+    setRemote(remoteVal);
     setPage(1);
     setPaginatedData(passedData.slice(0, 40));
   }
@@ -63,7 +68,8 @@ function RecommendedInternships() {
         <Grid columns={'equal'} doubling stackable>
           <Grid.Row style={{ maxWidth: '100rem', margin: 'auto' }}>
             <MockProfile onChildClick={handleChildClick} passedData={data}
-                         skillsVal={skills} careerVal={career} />
+                         skillsVal={skills} careerVal={career} locationVal={location}
+                         isRemote={remote}/>
           </Grid.Row>
           <Grid.Row>
             <div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '100rem', margin: 'auto' }}>

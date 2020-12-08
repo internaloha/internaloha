@@ -151,7 +151,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                   multiple
                   search
                   selection
-                  options={internships.dropdownSkills()}
+                  options={internships.dropdownSkills(passedData)}
                   onChange={getSkills}
                   style={{ flexGrow: 0 }}
 

@@ -13,8 +13,8 @@ import {
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function isRemote(city) {
-  if (city === 'Remote') {
+function isRemote(remote) {
+  if (remote) {
     return (
         <Label circular style={{
           backgroundColor: '#263763',
@@ -167,35 +167,14 @@ function InternshipListingCard(props) {
             <div style={{ overflow: 'auto', maxHeight: '250px' }}>
               {description(props.internship.description)}
             </div>
-            {/*<Modal trigger={*/}
-            {/*  <div align={'center'}>*/}
-            {/*    <Button>Description</Button>*/}
-            {/*  </div>*/}
-            {/*}>*/}
-            {/*  <Modal.Header>Description</Modal.Header>*/}
-            {/*  <Modal.Content>*/}
-            {/*    <Modal.Description>*/}
-            {/*      {props.internship.description.split('\n').map((item, key) =>*/}
-            {/*          <span key={key}>{item}<br/></span>)}*/}
-            {/*    </Modal.Description>*/}
-            {/*  </Modal.Content>*/}
-            {/*  <Modal.Actions>*/}
-            {/*    <Button primary>*/}
-            {/*      <Icon name='star'/>*/}
-            {/*      Add to Favorites*/}
-            {/*    </Button>*/}
-            {/*    <Button primary>*/}
-            {/*      Go to Listing <Icon name='chevron right'/>*/}
-            {/*    </Button>*/}
-            {/*  </Modal.Actions>*/}
-            {/*</Modal>*/}
+
           </Card.Description>
         </Card.Content>
         <Card.Content extra>
           {props.internship.skills.map((skill) => (
               hasSkill(skill)
           ))}
-          {isRemote(props.internship.location.city)}
+          {isRemote(props.internship.remote)}
         </Card.Content>
         <Card.Content extra textAlign={'center'}>
           <a href={props.internship.url}>

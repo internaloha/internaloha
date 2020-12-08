@@ -140,8 +140,8 @@ class InternshipsFilters {
 * text: Text that shows up in dropdown
 * value: value used to search
 * num: the number of internships with the associated skills */
-  dropdownSkills() {
-    const skills = _.map(this.mergeData(), 'skills');
+  dropdownSkills(data) {
+    const skills = _.map(data, 'skills');
     // console.log(skills);
     const flattenSkills = _.flattenDeep(skills);
     // console.log(flattenSkills);

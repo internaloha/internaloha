@@ -7,15 +7,14 @@ import {
 } from 'semantic-ui-react';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import swal from 'sweetalert';
 import InternshipsFilters from './InternshipFilters';
-import { recommendation, dropdownCareerInterest } from './RecommendationScript';
+import { recommendation, dropdownCareerInterest, isRemoteFunc } from './RecommendationScript';
 
-function MockProfile({ onChildClick, skillsVal, careerVal, passedData }) {
-  const [open, setOpen] = React.useState(true);
+function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationVal, isRemote }) {
 
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
+  const location = internships.dropdownLocation(data);
 
   // let locationChange = locationVal;
   // let companyChange = companyVal;
@@ -26,15 +25,14 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData }) {
   let skillChange = skillsVal;
   let careerChange = careerVal;
   let recommendedData = [];
+  let locationChange = locationVal;
+  let remoteCheck = isRemote;
 
   const setFilters = () => {
-    // const remoteFilter = internships.isRemote(data, remoteCheck);
-    // const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
-    // const skillsFiltered = internships.filterBySkills(searchFiltered, skillChange);
+
+    const newData = isRemoteFunc(recommendedData, remoteCheck);
     // const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
-    // const companyFiltered = internships.filterByCompany(locationFiltered, companyChange);
-    // const sorted = internships.sortedBy(companyFiltered, sortChange);
-    onChildClick(recommendedData, skillChange, careerChange);
+    onChildClick(newData, skillChange, careerChange, locationChange, remoteCheck);
 
     window.scrollTo({
       top: 70,
@@ -62,50 +60,32 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData }) {
     setFilters();
   };
 
-  //
-  // const getLocation = (event, { value }) => {
-  //   locationChange = value;
-  //   setFilters();
-  // };
-  //
-  // const getCompany = (event, { value }) => {
-  //   companyChange = value;
-  //   setFilters();
-  // };
-  //
-  // const getSort = (event, { value }) => {
-  //   sortChange = value;
-  //   setFilters();
-  // };
-  //
+  const getRemote = () => {
+    if (remoteCheck) {
+      remoteCheck = false;
+    } else {
+      remoteCheck = true;
+    }
+    recommendedData = recommendation(skillChange, careerChange, data, locationChange);
+    setFilters();
+  };
+
+  const getLocation = (event, { value }) => {
+    locationChange = value;
+    recommendedData = recommendation(skillChange, careerChange, data, locationChange);
+    setFilters();
+  };
+
   const getSkills = (event, { value }) => {
     skillChange = value;
-    recommendedData = recommendation(skillChange, careerChange, data);
+    recommendedData = recommendation(skillChange, careerChange, data, locationChange);
     setFilters();
   };
 
   const getCareerInterest = (event, { value }) => {
     careerChange = value;
-    recommendedData = recommendation(skillChange, careerChange, data);
+    recommendedData = recommendation(skillChange, careerChange, data, locationChange);
     setFilters();
-  };
-
-  const sticky = {
-    position: '-webkit-sticky',
-    position: 'sticky',
-    top: '6.5rem',
-  };
-
-  const onSubmit = () => {
-    if (careerChange.length === 0 || skillChange.length === 0) {
-      swal({
-        title: 'Fields are required',
-        text: '',
-        icon: 'error',
-      });
-      return;
-    }
-    setOpen(false);
   };
 
   return (
@@ -118,7 +98,7 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData }) {
                     required
                     fluid multiple selection clearable
                     control={Dropdown}
-                    options={internships.dropdownSkills()}
+                    options={internships.dropdownSkills(passedData)}
                     label={{ children: 'Skills' }}
                     placeholder='Skills'
                     search
@@ -140,6 +120,20 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData }) {
                 />
             </Form>
             </Grid.Column>
+            <Grid.Column>
+              <Form.Field
+                  fluid selection
+                  control={Dropdown}
+                  defaultValue={location[0].value}
+                  options={internships.dropdownLocation(passedData)}
+                  label={{ children: 'Location' }}
+                  placeholder='Location'
+                  search
+                  onChange={getLocation}
+              />
+              <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
+                        onClick={getRemote}/>
+            </Grid.Column>
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>
@@ -150,93 +144,8 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData }) {
           </Grid.Row>
 
         </Grid>
-
       </Segment>
-      // <Modal
-      //     onClose={() => setOpen(false)}
-      //     onOpen={() => setOpen(true)}
-      //     open={open}
-      //     closeOnDimmerClick={false}
-      //     trigger={<div/>}
-      // >
-      //   <Modal.Header>Enter your Information</Modal.Header>
-      //   <Modal.Content>
-      //     <Modal.Description>
-      //       <Form>
-      //         <Form.Field
-      //             required
-      //             fluid multiple selection clearable
-      //             control={Dropdown}
-      //             options={internships.dropdownSkills()}
-      //             label={{ children: 'Skills' }}
-      //             placeholder='Skills'
-      //             search
-      //             onChange={getSkills}
-      //         />
-      //       </Form>
-      //       <div style={{ paddingTop: '2rem' }}>
-      //         <Form onSubmit={handleSubmit}>
-      //           <Form.Field
-      //               required
-      //               fluid multiple selection clearable
-      //               control={Dropdown}
-      //               options={dropdownCareerInterest()}
-      //               label={{ children: 'Career Interest' }}
-      //               placeholder='Career Interest'
-      //               search
-      //               onChange={getCareerInterest}
-      //           />
-      //         </Form>
-      //       </div>
-      //     </Modal.Description>
-      //   </Modal.Content>
-      //   <Modal.Actions>
-      //     <Button
-      //         content="Submit"
-      //         labelPosition='right'
-      //         icon='checkmark'
-      //         onClick={() => onSubmit()}
-      //         positive
-      //
-      //     />
-      //   </Modal.Actions>
-      // </Modal>
-      // <Segment style={sticky}>
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Header>
-      //       Mock Profile
-      //       <Header.Content>
-      //         Total results found: {internships.total(passedData)}
-      //       </Header.Content>
-      //     </Header>
-      //   </div>
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Form>
-      //       <Form.Field
-      //           fluid multiple selection clearable
-      //           control={Dropdown}
-      //           options={internships.dropdownSkills()}
-      //           label={{ children: 'Skills' }}
-      //           placeholder='Skills'
-      //           search
-      //           onChange={getSkills}
-      //       />
-      //     </Form>
-      //   </div>
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Form onSubmit={handleSubmit}>
-      //       <Form.Field
-      //           fluid multiple selection clearable
-      //           control={Dropdown}
-      //           options={dropdownCareerInterest()}
-      //           label={{ children: 'Career Interest' }}
-      //           placeholder='Career Interest'
-      //           search
-      //           onChange={getCareerInterest}
-      //       />
-      //     </Form>
-      //   </div>
-      // </Segment>
+
   );
 }
 
@@ -245,6 +154,8 @@ MockProfile.propTypes = {
   passedData: PropTypes.array.isRequired,
   skillsVal: PropTypes.array.isRequired,
   careerVal: PropTypes.array.isRequired,
+  locationVal: PropTypes.string.isRequired,
+  isRemote: PropTypes.bool.isRequired,
 };
 
 export default MockProfile;
