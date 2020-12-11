@@ -201,7 +201,7 @@ const myArgs = process.argv.slice(2);
 
                 const position = await fetchInfo(page, 'div[class="viewjob-jobTitle h2"]', 'innerText');
                 const company = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
-                const location = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+                let location = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
                 const description = await fetchInfo(page, 'div[class="viewjob-jobDescription"]', 'innerHTML');
 
                 let posted = '';
@@ -236,8 +236,8 @@ const myArgs = process.argv.slice(2);
                   position: position,
                   company: company,
                   location: {
-                    city: location.match(/([^ ,])\w+/g)[0],
-                    state: location.match(/([^ ,])\w+/g)[1],
+                    city: location.match(/^([^,]*)/)[0],
+                    state: location.match(/([^ ,]*)$/)[0],
                   },
                   posted: date,
                   url: allJobLinks[i-1],
