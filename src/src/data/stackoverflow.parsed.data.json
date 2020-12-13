@@ -31,6 +31,7 @@
             "machine learning",
             "software engineering",
             "python",
+            "project management",
             "C and C++"
         ],
         "lastScraped": "2020-12-06T01:44:29.729Z",
@@ -48,7 +49,8 @@
         "posted": "2020-12-01T01:44:30.423Z",
         "url": "https://stackoverflow.com/jobs/465279/software-engineer-intern-research-common-lisp-grammatech-inc?a=2w2utW0pBvS8&so=i&pg=1&offset=2&total=12&so_medium=Internal&so_source=JobSearch&q=internship",
         "skills": [
-            "software engineering"
+            "software engineering",
+            "project management"
         ],
         "lastScraped": "2020-12-06T01:44:30.423Z",
         "description": "<h2 class=\"fs-subheading mb16 fc-dark\">Job description</h2>\n            <div>\n<p><strong>Overview</strong></p>\n<p>GrammaTech’s internship program offers students the opportunity to gain real experience in a friendly, open, and supportive environment. We choose projects based on real needs, and interns work closely with engineers to make sure that projects are completed successfully.</p>\n<p>GrammaTech will conduct a series of programming tests and screening interviews as part of our process.&nbsp; There are multiple positions available and a position will remain posted until all roles are filled.</p>\n<p><strong>Location:</strong>&nbsp; Remote in the USA only with a possibility (if restrictions are lifted) of being located in our Ithaca, NY office for the summer.&nbsp; (COVID Restrictions will be considered as we get closer to the summer.)</p>\n<p><strong>Responsibilities</strong></p>\n<p>Research projects at GrammaTech can take on a wide variety of topics and challenges. Projects focus on software assurance, software protection, reverse engineering, and software transformation. We do both static and dynamic analysis on both source and object code, in order to tackle serious problems with practical solutions.</p>\n<p>Potential projects include:</p>\n<ul>\n<li>Apply compiler optimizations to binaries. Develop some classic compiler optimizations on top of our Binary IR (<a href=\"https://grammatech.github.io/gtirb/\" rel=\"nofollow\" target=\"_blank\">https://grammatech.github.io/gtirb</a>)</li>\n<li>Develop source-code program transformations for refactoring, optimization, and diversification on top of our Software Evolution Library (<a href=\"https://grammatech.github.io/sel\" rel=\"nofollow\" target=\"_blank\">https://grammatech.github.io/sel</a>)</li>\n<li>Design and run large-scale experiments evaluating automated software modification and automated software engineering tools</li>\n</ul>\n<p><strong>Qualifications</strong></p>\n<p><u>Required</u></p>\n<ul>\n<li>Currently enrolled in a BS, MS, or PhD in Computer Science</li>\n<li>Excellent programming skills with Common LISP</li>\n</ul>\n<p><u>Preferred</u></p>\n<ul>\n<li>Enrollment in a Computer Science PhD program</li>\n</ul>            </div>",
@@ -136,6 +138,7 @@
             "devOps",
             "C and C++",
             "machine learning",
+            "project management",
             "information technology"
         ],
         "lastScraped": "2020-12-06T01:44:34.219Z",

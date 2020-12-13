@@ -64,6 +64,7 @@
         "description": "<span data-reactid=\"148\">We are seeking a highly motivated Controls Design Engineer to contribute to the development of new thermal control algorithms. The candidate will be responsible for developing system identification techniques to model different power/thermal aspects of our systems. This work involves implementation of the estimation algorithm as part of our thermal management architecture.</span>",
         "index": 4,
         "skills": [
+            "project management",
             "software engineering"
         ],
         "company": "N/A",
@@ -117,6 +118,7 @@
         "description": "<span data-reactid=\"146\">Define project plans and schedules. Drive project execution.\n\nLead internal and external multi-functional teams in engineering and validation activities\n\nEnsure tight inter-team coordination and communication\n\nStrong presentation and communication skills required\n\nUnderstand and communicate sophisticated, technical/Engineering issues\n\nIdentify and resolve conflicts, inter-dependencies and program issues quickly and efficiently\n\nLead development budgets and engineering builds</span>",
         "index": 7,
         "skills": [
+            "project management",
             "software engineering"
         ],
         "company": "N/A",
@@ -134,7 +136,8 @@
         "description": "<span data-reactid=\"148\">We are seeking a highly motivated Controls Design Engineer to take part in the development of new thermal control algorithms. The candidate will be responsible for developing system identification techniques to predict hotspot temperatures. The intern will also work on developing and implementing self tuning controllers and linear/nonlinear state observers to be used in our closed-loop thermal management architecture. The role also involves working with the software team to ensure a robust controller implementation.\n</span>",
         "index": 8,
         "skills": [
-            "software engineering"
+            "software engineering",
+            "project management"
         ],
         "company": "N/A",
         "remote": false
@@ -184,6 +187,7 @@
         "index": 11,
         "skills": [
             "machine learning",
+            "project management",
             "information technology",
             "software engineering"
         ],
@@ -202,6 +206,7 @@
         "description": "<span data-reactid=\"156\">Areas of expertise within Manufacturing Design include:\n\n\nMANUFACTURING DESIGN ENGINEER\nAs an MDE, you will handle selection, implementation &amp; optimization of manufacturing processes for mechanical enclosure subassemblies for our legendary products. \n\nUtilize Mechanical Engineering experience and work cross functionally with Product Design Engineering and Industrial Design \n\nAssess product features for manufacturability, and recommend capable processes and equipment.\n\nDeveloping new manufacturing processes to enable future product design and conducting DOEs to validate process capability. \n\nWork with Global Supplier Managers to identify capable suppliers, assess their secondary processes for capacity, quality and cost.\n\nWork with suppliers to define and refine mechanical tooling, fixtures and establish capability / readiness. \n\nAudit supplier processes and assembly processes and support product phase builds from EVT, DVT PVT and ramp. \n\nAssist post production quality / cost improvement activity related to fixtures and processes.\n\n\nMANUFACTURING QUALITY ENGINEER\nAs an MQE, you will utilize Engineering, Factory Management &amp; Supply Chain skills in developing and implementing high efficiency inspection equipment, groundbreaking quality systems and ultimately the best products available.\n\nHelp lead the creation of state of the art inspection &amp; measurement equipment for Apple product.\n\nApply your understanding of quality control and manufacturing concepts to lead the development of specific Product Quality Plans (PQP) appropriate to program and commodity.\n\nProvide technical direction and mentorship to other Quality Engineers supporting the implementation of the PQP.\n\nIdentify and direct studies to implement improvements in measuring method where appropriate.\n\nCoordinate Quality Engineering functions for multiple programs in the product category. \n\nCollaborate with internal and external groups to ensure accurate definition of quality expectations and appropriate assurance techniques are used for the product.\n\nSupplier Quality Management - Assist in supplier selection process for new products and sourcing activities. Assess supplier production control and quality programs, identify shortfalls to expectations, and directly secure agreement to correct. Supervise each supplier's performance through measurement of production line statistics, company inspections, and audits.\n\n\nSUBJECT MATTER AUTHORITY\nOur SME's investigate and develop solutions to overcome difficult technical challenges that require non-standard manufacturing approaches. Apply your engineering skills to develop an in depth understanding of the process drivers that will drive successful implementation of significant improvements to mechanical enclosures. \n\nThe following activities fall within the scope of responsibilities:\n\nAssess mechanical designs and relate design goals to process, equipment, and material requirements to evaluate a set of options to tackle difficult manufacturing problems.\n\nResearch manufacturing processes and evaluate them for potential to achieve technical goals. \n\nPlan and execute development trials to test feasibility, optimize process inputs, and validate capabilities of process options. \n\nPresent analysis to key decision makers used to make significant commercial and design commitments.</span>",
         "index": 12,
         "skills": [
+            "project management",
             "software engineering"
         ],
         "company": "N/A",
@@ -220,6 +225,7 @@
         "index": 13,
         "skills": [
             "machine learning",
+            "project management",
             "information technology"
         ],
         "company": "N/A",
@@ -292,6 +298,7 @@
         "description": "<span data-reactid=\"154\">Ensuring the quality of the SOC \nWorking closely with the team to review specifications, develop attributes, tests &amp; coverage plans, and define methodology &amp; test benches \nTeaming up with the design and micro-architecture teams to understand the functional and performance goals of the design \nWork independently and manage deliverables to align with the project goals plus support cross- functional engineering efforts</span>",
         "index": 17,
         "skills": [
+            "project management",
             "software engineering"
         ],
         "company": "N/A",
@@ -310,8 +317,8 @@
         "index": 18,
         "skills": [
             "software engineering",
-            "information technology",
-            "cybersecurity"
+            "project management",
+            "information technology"
         ],
         "company": "N/A",
         "remote": false
@@ -345,7 +352,8 @@
         "description": "<span data-reactid=\"144\">As an intern, you will get to experience what it’s like to work as an enterprise data scientist, collaborating with your mentor to develop a research project and presenting the results to senior leadership at the end of the program. You will have the opportunity to play in Apple’s enormous data infrastructure, evaluating your new tools and techniques on a giant scale.\n\nOur commitment to you:\nWe will provide you with a challenging opportunity that you will be proud to have accomplished at Apple. As we learn more about you, we’ll help connect you with mentors and teammates that can help guide you in becoming a professional data scientist. You’ll work with teams across Apple and gain valuable experience driving down fraud and waste in a high tech environment.</span>",
         "index": 20,
         "skills": [
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "company": "N/A",
         "remote": false
@@ -397,6 +405,7 @@
         "index": 23,
         "skills": [
             "machine learning",
+            "project management",
             "artificial intelligence"
         ],
         "company": "N/A",
@@ -416,8 +425,9 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
             "machine learning",
+            "project management",
+            "C and C++",
             "information technology"
         ],
         "company": "N/A",
@@ -437,8 +447,9 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
             "machine learning",
+            "project management",
+            "C and C++",
             "information technology"
         ],
         "company": "N/A",
@@ -458,8 +469,9 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
             "machine learning",
+            "project management",
+            "C and C++",
             "information technology"
         ],
         "company": "N/A",
@@ -479,8 +491,9 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
             "machine learning",
+            "project management",
+            "C and C++",
             "information technology"
         ],
         "company": "N/A",
@@ -500,8 +513,9 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
             "machine learning",
+            "project management",
+            "C and C++",
             "information technology"
         ],
         "company": "N/A",
@@ -521,8 +535,9 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
             "machine learning",
+            "project management",
+            "C and C++",
             "information technology"
         ],
         "company": "N/A",
@@ -557,6 +572,7 @@
         "index": 31,
         "skills": [
             "software engineering",
+            "project management",
             "information technology"
         ],
         "company": "N/A",
@@ -573,7 +589,9 @@
         },
         "description": "<span data-reactid=\"156\">Drive automation activities for stringent enclosure and module manufacturing processes as part of Manufacturing Design’s Automation SME team. Work with integrators, suppliers, contract manufacturers, and internal partners to develop advanced automation capabilities and implement them in the supply chain to exacting standards on aggressive project timelines.</span>",
         "index": 32,
-        "skills": [],
+        "skills": [
+            "project management"
+        ],
         "company": "N/A",
         "remote": false
     },
@@ -591,6 +609,7 @@
         "skills": [
             "software engineering",
             "machine learning",
+            "project management",
             "information technology"
         ],
         "company": "N/A",
@@ -610,6 +629,7 @@
         "skills": [
             "software engineering",
             "machine learning",
+            "project management",
             "information technology"
         ],
         "company": "N/A",
@@ -629,6 +649,7 @@
         "skills": [
             "machine learning",
             "artificial intelligence",
+            "project management",
             "software engineering"
         ],
         "company": "N/A",
@@ -648,6 +669,7 @@
         "skills": [
             "machine learning",
             "artificial intelligence",
+            "project management",
             "software engineering"
         ],
         "company": "N/A",
@@ -684,6 +706,7 @@
         "index": 38,
         "skills": [
             "machine learning",
+            "project management",
             "information technology"
         ],
         "company": "N/A",
