@@ -361,6 +361,11 @@ function getContact(textInput) {
  * @returns {string} The conversion
  */
 function convertRegion(input, to) {
+
+  if (input === 'Error') {
+    return 'N/A';
+  }
+
   const states = [
     ['Alabama', 'AL'],
     ['Alaska', 'AK'],
