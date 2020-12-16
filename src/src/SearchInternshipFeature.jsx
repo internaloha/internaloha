@@ -132,39 +132,53 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
             <Grid.Column>
               <Form onSubmit={handleSubmit}>
                 <Popup
-                    trigger={<Input icon='search'
-                                    iconPosition='left'
+                    trigger={
+                      <Form>
+                        <Form.Field icon='search'
+                                    iconPosition='right'
                                     placeholder='Search ...'
                                     onChange={handleSearchChange}
                                     fluid
-                    />}
-                    content='Press enter to search!'
+                                    control={Input}
+                                    label={{ children: 'Search' }}
+                        />
+                      </Form>
+                    }
+                    content='Press enter to search by internship titles!'
                     on={'focus'}
                 />
 
               </Form>
             </Grid.Column>
             <Grid.Column>
-              <Dropdown
-                  placeholder='Skills'
-                  fluid
-                  multiple
-                  search
-                  selection
-                  options={internships.dropdownSkills(passedData)}
-                  onChange={getSkills}
-                  style={{ flexGrow: 0 }}
+              <Form>
+                <Form.Field
+                    label={{ children: 'Skills' }}
+                    placeholder='Skills'
+                    search
+                    fluid multiple selection clearable
+                    control={Dropdown}
+                    options={internships.dropdownSkills(passedData)}
+                    onChange={getSkills}
+                    style={{ flexGrow: 0 }}
 
-              />
+                />
+              </Form>
+
             </Grid.Column>
             <Grid.Column>
-              <Dropdown placeholder='Location'
-                        onChange={getLocation}
-                        defaultValue={location[0].value}
-                        fluid selection options={internships.dropdownLocation(passedData)}
-                        search
-                        style={{ flexGrow: 0 }}
-              />
+              <Form>
+                <Form.Field placeholder='Location'
+                            label={{ children: 'Location' }}
+                            onChange={getLocation}
+                            defaultValue={location[0].value}
+                            search
+                            fluid multiple selection
+                            options={internships.dropdownLocation(passedData)}
+                            control={Dropdown}
+                            style={{ flexGrow: 0 }}
+                />
+              </Form>
               <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                         onClick={getRemote}/>
             </Grid.Column>
@@ -181,11 +195,13 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
             {/*</div>*/}
             <Grid.Column>
               <Form onSubmit={handleSubmit}>
-                <Input icon='home'
-                       iconPosition='left'
-                       placeholder='Company'
-                       onChange={handleCompanyChange}
-                       fluid
+                <Form.Field icon='home'
+                            label={{ children: 'Company' }}
+                            control={Input}
+                            iconPosition='left'
+                            placeholder='Company'
+                            onChange={handleCompanyChange}
+                            fluid
                 />
               </Form>
             </Grid.Column>
