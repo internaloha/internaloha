@@ -517,10 +517,6 @@ function multi_parser(file) {
       results = classifier.getClassifications(descriptionIT);
       positionResults = classifier.getClassifications(position);
 
-      if (position.toString().toLowerCase().includes('data science')) {
-        results.push('data science');
-      }
-
       compensation = classifierComp.getClassifications(text[i].description);
 
     } catch (e) {
@@ -529,6 +525,12 @@ function multi_parser(file) {
 
     const data = [];
     const comp = [];
+
+    // Adding data science. Classifier unable to pick up because 'data science' gets broken up into 'data' and 'science'
+    // which matches everything with 'computer science'
+    if (position.toString().toLowerCase().includes('data science')) {
+      data.push('data science');
+    }
 
     // adding compensation
     for (let j = 0; j < compensation.length; j++) {

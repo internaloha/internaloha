@@ -256,7 +256,9 @@
     {
         "position": "Civic Data Science",
         "contact": "Bistra Dilkina, , bdilkina@cc.gatech.edu",
-        "skills": [],
+        "skills": [
+            "data science"
+        ],
         "location": {
             "city": "Atlanta",
             "state": "Georgia",
@@ -346,7 +348,9 @@
     {
         "position": "Data Science of Risk and Human Activity",
         "contact": "George Mohler, (805) 252-0656, gmohler@iupui.edu",
-        "skills": [],
+        "skills": [
+            "data science"
+        ],
         "location": {
             "city": "Indianapolis",
             "state": "Indiana",
@@ -421,7 +425,9 @@
     {
         "position": "Data Science Across Disciplines",
         "contact": "Praveen Madiraju, (414) 288-6340, praveen.madiraju@marquette.edu",
-        "skills": [],
+        "skills": [
+            "data science"
+        ],
         "location": {
             "city": "Milwaukee",
             "state": "Wisconsin",
@@ -1320,7 +1326,9 @@
     {
         "position": "Data Science Research for Healthy Communities in the Digital Age",
         "contact": "Elke Rundensteiner, (508) 831-5815, rundenst@wpi.edu",
-        "skills": [],
+        "skills": [
+            "data science"
+        ],
         "location": {
             "city": "Worcester",
             "state": "Massachusetts",
