@@ -47,7 +47,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
     const sorted = internships.sortedBy(companyFiltered, sortChange);
     onChildClick(sorted, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck);
     window.scrollTo({
-      top: 70,
+      top: 30,
       left: 100,
       behavior: 'smooth',
     });
@@ -135,7 +135,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                     trigger={
                       <Form>
                         <Form.Field icon='search'
-                                    iconPosition='right'
+                                    iconPosition='left'
                                     placeholder='Search ...'
                                     onChange={handleSearchChange}
                                     fluid
@@ -173,7 +173,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                             onChange={getLocation}
                             defaultValue={location[0].value}
                             search
-                            fluid multiple selection
+                            fluid selection
                             options={internships.dropdownLocation(passedData)}
                             control={Dropdown}
                             style={{ flexGrow: 0 }}
