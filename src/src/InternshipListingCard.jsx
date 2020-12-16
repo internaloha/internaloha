@@ -136,7 +136,7 @@ function InternshipListingCard(props) {
       <Card className={'listings'}>
         <Card.Content>
           <Card.Header textAlign={'center'}>
-            <a href={props.internship.url}>
+            <a href={props.internship.url} target='_blank' rel="noopener noreferrer">
               <p style={{ color: '#263763' }}>
                 {props.internship.position}
               </p>
@@ -177,7 +177,7 @@ function InternshipListingCard(props) {
           {isRemote(props.internship.remote)}
         </Card.Content>
         <Card.Content extra textAlign={'center'}>
-          <a href={props.internship.url}>
+          <a target='_blank' rel="noopener noreferrer" href={props.internship.url}>
             <Button style={{ borderRadius: '10rem' }}>
               From: {siteName(props.internship.url)} Listing #{props.internship.index}
             </Button>
@@ -219,6 +219,7 @@ function InternshipListingCard(props) {
                         // onChange={}
                     />
                   </Form.Field>
+                  <Form.TextArea label='Other' placeholder='Explain the error here. Feel free to provide screenshots or links.' />
                 </Form>
               </Modal.Description>
             </Modal.Content>

@@ -15,9 +15,10 @@
         "skills": [
             "machine learning",
             "information technology",
-            "python",
             "data visualization",
-            "project management"
+            "python",
+            "project management",
+            "software engineering"
         ],
         "compensation": "paid",
         "remote": false
@@ -78,7 +79,7 @@
         "index": 4,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -105,7 +106,7 @@
             "software engineering",
             "javascript",
             "python",
-            "C and C++",
+            "c and c++",
             "project management",
             "web development"
         ],
@@ -158,8 +159,8 @@
             "artificial intelligence",
             "project management",
             "information technology",
-            "python",
-            "data visualization"
+            "data visualization",
+            "python"
         ],
         "remote": false
     },
@@ -179,7 +180,7 @@
         "skills": [
             "data visualization",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -199,10 +200,10 @@
         "skills": [
             "javascript",
             "software engineering",
-            "python",
             "java",
-            "C and C++",
+            "c and c++",
             "project management",
+            "python",
             "web development"
         ],
         "remote": false
@@ -245,7 +246,7 @@
             "software engineering",
             "java",
             "scala",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "due": "2020-02-01T10:00:00.000Z",
@@ -271,7 +272,7 @@
             "angular",
             "machine learning",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -291,10 +292,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "java",
             "javascript",
+            "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -317,9 +318,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -341,7 +342,7 @@
         "index": 15,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -366,7 +367,7 @@
         "skills": [
             "data visualization",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -386,8 +387,8 @@
         "skills": [
             "javascript",
             "software engineering",
-            "python",
             "java",
+            "python",
             "project management",
             "information technology"
         ],
@@ -432,7 +433,7 @@
             "angular",
             "java",
             "matlab",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -457,10 +458,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "matlab",
-            "python",
             "java",
-            "data visualization"
+            "data visualization",
+            "matlab"
         ],
         "remote": true
     },
@@ -502,11 +502,11 @@
         "skills": [
             "project management",
             "software engineering",
+            "java",
             "data visualization",
             "matlab",
             "python",
-            "java",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "contact": "hr@appliedo.com",
@@ -527,11 +527,11 @@
         "index": 23,
         "skills": [
             "machine learning",
-            "python",
             "java",
             "deep learning",
+            "python",
             "project management",
-            "C and C++",
+            "c and c++",
             "software engineering"
         ],
         "contact": "ext@fb.com",
@@ -577,9 +577,9 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "data visualization",
             "matlab",
+            "python",
             "project management",
             "information technology"
         ],
@@ -607,7 +607,6 @@
             "information technology",
             "deep learning",
             "software engineering",
-            "python",
             "java",
             "data visualization"
         ],
@@ -661,7 +660,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -683,9 +682,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "python",
-            "data visualization",
-            "java"
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -843,8 +841,8 @@
         "skills": [
             "machine learning",
             "information technology",
-            "python",
             "data visualization",
+            "python",
             "project management"
         ],
         "compensation": "unpaid",
@@ -891,7 +889,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -914,10 +912,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "matlab",
-            "python",
             "java",
-            "data visualization"
+            "data visualization",
+            "matlab"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -939,11 +936,11 @@
         "index": 40,
         "skills": [
             "machine learning",
-            "python",
             "java",
             "deep learning",
+            "python",
             "project management",
-            "C and C++",
+            "c and c++",
             "software engineering"
         ],
         "contact": "ext@fb.com",
@@ -966,9 +963,9 @@
             "machine learning",
             "project management",
             "software engineering",
-            "python",
             "matlab",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "compensation": "paid",
         "contact": "hr@appliedo.com",
@@ -991,10 +988,10 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
             "data visualization",
+            "python",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1016,9 +1013,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "python",
-            "data visualization",
-            "java"
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1128,11 +1124,11 @@
         "index": 48,
         "skills": [
             "machine learning",
-            "python",
             "java",
             "data visualization",
             "deep learning",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -1175,7 +1171,7 @@
         "index": 50,
         "skills": [
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology",
             "software engineering"
@@ -1196,10 +1192,10 @@
         "description": "**Intro:**  \n        \n      Facebook's mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we're building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together. Whether we're creating new products or helping a small business expand its reach, people at Facebook are builders at heart. Our global teams are constantly iterating, solving problems, and working together to empower people around the world to build community and connect in meaningful ways. Together, we can help people build stronger communities - we're just getting started.\n        \n      **Summary:**  \n        \n      Are you passionate about Facebook's product, analytics and technology? The Analytics team is looking for fast-moving analytics candidates and data junkies who want to make an impact. Candidates will help own analytics for a particular product or business at Facebook and work with product managers and engineers to translate the analysis into meaningful impact to the business. Please note that candidates will have a general interview and then we will make a determination of actual team assignments.\n        \n      **Required Skills:**  \n        \n      1. Perform large-scale data analysis to extract useful business insights\n        \n      2. Identify actionable insights, suggest recommendations and influence the direction of the business by communicating results to cross-functional groups\n        \n      3. Work closely with a Product Manager and Engineering team to proactively create rule and manage decisions\n        \n      4. Classify leads so that the teams work on the most valuable cases\n        \n      5. Suggest improvements in the tools and techniques to help scale the team\n        \n      **Minimum Qualifications:**  \n        \n      6. Currently has, or is in the process of obtaining, a Bachelors or Masters degree in Computer Science, Applied Mathematics, Statistics, Economics, or related technical field\n        \n      7. Experience in solving analytical problems using quantitative approaches (or equivalent)\n        \n      8. Experience with SQL or other programming languages (Python, Java, and/or C++)\n        \n      9. Development experience in at least one scripting language (PHP, Perl, Python, etc.)\n        \n      10. Must obtain work authorization in country of employment at the time of hire, and maintain ongoing work authorization during employment\n        \n      **Preferred Qualifications:**  \n        \n      11. Intent to return to degree-program after the completion of the internship\n        \n      12. Curious, self-driven, analytical and excited to play with data\n        \n      13. Ability to thrive in a fast paced work environment\n        \n      **Industry:**  Internet\n        \n      **Equal Opportunity:**  Facebook is proud to be an Equal Opportunity and Affirmative Action employer. We do not discriminate based upon race, religion, color, national origin, sex (including pregnancy, childbirth, or related medical conditions), sexual orientation, gender, gender identity, gender expression, transgender status, sexual stereotypes, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics. We also consider qualified applicants with criminal histories, consistent with applicable federal, state and local law. Facebook is committed to providing reasonable accommodations for candidates with disabilities in our recruiting process. If you need any assistance or accommodations due to a disability, please let us know at accommodations-ext@fb.com.",
         "index": 51,
         "skills": [
-            "python",
             "java",
-            "C and C++",
+            "c and c++",
             "project management",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -1271,8 +1267,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "data visualization",
+            "python",
             "information technology"
         ],
         "contact": "ext@fb.com",
@@ -1461,9 +1457,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1485,11 +1480,10 @@
         "index": 63,
         "skills": [
             "software engineering",
-            "scala",
-            "python",
-            "angular",
             "java",
-            "javascript"
+            "javascript",
+            "angular",
+            "scala"
         ],
         "contact": "Careers@sap.com",
         "remote": false
@@ -1513,7 +1507,6 @@
             "project management",
             "information technology",
             "software engineering",
-            "python",
             "java"
         ],
         "remote": false
@@ -1533,11 +1526,10 @@
         "index": 65,
         "skills": [
             "software engineering",
-            "scala",
-            "python",
-            "angular",
             "java",
-            "javascript"
+            "javascript",
+            "angular",
+            "scala"
         ],
         "remote": false
     },
@@ -1558,9 +1550,9 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
             "machine learning",
-            "project management"
+            "project management",
+            "c and c++"
         ],
         "compensation": "paid",
         "contact": "leidos@leidos.com",
@@ -1604,7 +1596,7 @@
         "skills": [
             "software engineering",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -1651,8 +1643,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -1676,10 +1668,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "python",
             "java",
             "data visualization",
-            "C and C++",
+            "python",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -1768,7 +1760,7 @@
             "information technology",
             "javascript",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "contact": "accessiblecareers@splunk.com",
@@ -1817,8 +1809,7 @@
             "information technology",
             "javascript",
             "java",
-            "scala",
-            "python"
+            "scala"
         ],
         "remote": true
     },
@@ -1838,7 +1829,7 @@
         "skills": [
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -1860,7 +1851,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -1888,7 +1879,7 @@
             "software engineering",
             "machine learning",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "U.S Citizen"
@@ -1910,12 +1901,12 @@
         "index": 81,
         "skills": [
             "software engineering",
-            "python",
             "java",
-            "devOps",
-            "C and C++",
-            "machine learning",
+            "devops",
+            "python",
             "project management",
+            "c and c++",
+            "machine learning",
             "information technology"
         ],
         "remote": false
@@ -1937,9 +1928,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "javascript",
-            "python"
+            "java"
         ],
         "remote": true
     },
@@ -1986,9 +1976,7 @@
             "software engineering",
             "information technology",
             "javascript",
-            "java",
-            "C and C++",
-            "machine learning"
+            "java"
         ],
         "compensation": "paid",
         "remote": false
@@ -2009,12 +1997,12 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
-            "java",
             "javascript",
+            "java",
+            "python",
             "machine learning",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -2035,8 +2023,8 @@
             "machine learning",
             "software engineering",
             "python",
+            "c and c++",
             "project management",
-            "C and C++",
             "information technology"
         ],
         "remote": true
@@ -2149,7 +2137,7 @@
             "software engineering",
             "information technology",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -2173,10 +2161,10 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
             "machine learning",
             "project management",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -2196,11 +2184,11 @@
         "index": 93,
         "skills": [
             "software engineering",
-            "scala",
             "java",
-            "devOps",
-            "project management",
+            "devops",
+            "scala",
             "machine learning",
+            "project management",
             "information technology"
         ],
         "remote": false
@@ -2222,9 +2210,9 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -2266,10 +2254,10 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
             "machine learning",
             "project management",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -2289,9 +2277,9 @@
         "index": 97,
         "skills": [
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -2338,7 +2326,7 @@
         "skills": [
             "project management",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -2361,10 +2349,10 @@
         "index": 100,
         "skills": [
             "software engineering",
+            "javascript",
             "java",
             "matlab",
-            "javascript",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -2389,7 +2377,7 @@
             "javascript",
             "angular",
             "java",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "remote": false
@@ -2409,9 +2397,9 @@
         "index": 102,
         "skills": [
             "javascript",
-            "devOps",
+            "devops",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "cloud computing",
             "project management",
             "information technology"
@@ -2498,7 +2486,7 @@
         "index": 106,
         "skills": [
             "project management",
-            "C and C++",
+            "c and c++",
             "javascript",
             "software engineering",
             "data visualization",
@@ -2524,9 +2512,9 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -2569,9 +2557,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "javascript",
-            "python"
+            "java"
         ],
         "compensation": "paid",
         "contact": "accommodations@hioscar.com",
@@ -2595,8 +2582,7 @@
             "software engineering",
             "information technology",
             "artificial intelligence",
-            "java",
-            "python"
+            "java"
         ],
         "remote": true
     },
@@ -2639,7 +2625,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "C and C++"
+            "c and c++"
         ],
         "remote": true
     },
@@ -2658,10 +2644,9 @@
         "index": 113,
         "skills": [
             "software engineering",
-            "devOps",
-            "java",
             "javascript",
-            "python"
+            "java",
+            "devops"
         ],
         "compensation": "paid",
         "remote": false
@@ -2685,7 +2670,6 @@
             "project management",
             "information technology",
             "javascript",
-            "python",
             "java",
             "matlab"
         ],
@@ -2710,7 +2694,7 @@
             "information technology",
             "scala",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "remote": false
@@ -2732,10 +2716,10 @@
             "information technology",
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "machine learning",
-            "project management"
+            "python",
+            "project management",
+            "machine learning"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2784,10 +2768,10 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "C and C++",
-            "project management"
+            "c and c++",
+            "project management",
+            "python"
         ],
         "compensation": "paid",
         "remote": false
@@ -2811,9 +2795,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2835,11 +2818,10 @@
         "index": 120,
         "skills": [
             "software engineering",
-            "scala",
-            "python",
-            "angular",
             "java",
-            "javascript"
+            "javascript",
+            "angular",
+            "scala"
         ],
         "contact": "Careers@sap.com",
         "remote": false
@@ -2861,9 +2843,11 @@
             "project management",
             "software engineering",
             "information technology",
-            "python",
             "angular",
-            "devOps"
+            "devops",
+            "python",
+            "c and c++",
+            "machine learning"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2888,7 +2872,7 @@
             "software engineering",
             "information technology",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -2936,7 +2920,7 @@
         "skills": [
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -2997,8 +2981,8 @@
             "project management",
             "software engineering",
             "javascript",
-            "python",
             "java",
+            "python",
             "machine learning",
             "information technology"
         ],
@@ -3023,12 +3007,12 @@
         "skills": [
             "machine learning",
             "software engineering",
+            "javascript",
             "angular",
             "java",
-            "javascript",
-            "python",
             "project management",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": true
     },
@@ -3048,11 +3032,11 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "C and C++",
+            "python",
             "machine learning",
             "project management",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -3074,10 +3058,9 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "scala",
-            "python",
             "java",
-            "devOps"
+            "devops",
+            "scala"
         ],
         "remote": false
     },
@@ -3097,10 +3080,10 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
             "machine learning",
             "project management",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -3121,10 +3104,10 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
             "machine learning",
             "project management",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -3145,10 +3128,10 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "java",
             "project management",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -3214,8 +3197,8 @@
             "software engineering",
             "angular",
             "java",
-            "project management",
             "robotics",
+            "project management",
             "information technology"
         ],
         "remote": false
@@ -3238,7 +3221,7 @@
             "software engineering",
             "java",
             "data visualization",
-            "devOps",
+            "devops",
             "python",
             "project management"
         ],
@@ -3261,9 +3244,9 @@
             "project management",
             "software engineering",
             "information technology",
-            "python",
             "java",
-            "matlab"
+            "matlab",
+            "python"
         ],
         "remote": false
     },
@@ -3361,9 +3344,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3387,8 +3369,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -3412,7 +3394,7 @@
         "skills": [
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -3456,7 +3438,7 @@
             "information technology",
             "javascript",
             "java",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "contact": "leidos@leidos.com",
@@ -3483,10 +3465,10 @@
             "machine learning",
             "software engineering",
             "javascript",
-            "python",
             "java",
+            "python",
+            "c and c++",
             "project management",
-            "C and C++",
             "information technology"
         ],
         "remote": true
@@ -3507,9 +3489,9 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "qualifications": [
@@ -3554,7 +3536,7 @@
         "index": 150,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -3577,9 +3559,9 @@
             "machine learning",
             "software engineering",
             "python",
-            "project management",
             "robotics",
-            "C and C++",
+            "c and c++",
+            "project management",
             "information technology"
         ],
         "compensation": "paid",
@@ -3630,9 +3612,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3654,9 +3635,9 @@
         "index": 154,
         "skills": [
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -3722,7 +3703,7 @@
             "software engineering",
             "javascript",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -3777,9 +3758,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3801,9 +3781,9 @@
         "index": 160,
         "skills": [
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -3850,9 +3830,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3875,10 +3854,10 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "java",
             "project management",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -3902,9 +3881,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3927,9 +3905,9 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "qualifications": [
@@ -3956,9 +3934,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3981,9 +3958,9 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "qualifications": [
@@ -4010,9 +3987,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4035,7 +4011,7 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "qualifications": [
@@ -4062,9 +4038,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4088,7 +4063,7 @@
             "machine learning",
             "software engineering",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "qualifications": [
@@ -4115,9 +4090,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4141,7 +4115,7 @@
             "machine learning",
             "software engineering",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "qualifications": [
@@ -4168,9 +4142,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4194,7 +4167,7 @@
             "machine learning",
             "software engineering",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "qualifications": [
@@ -4221,9 +4194,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4249,9 +4221,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4277,9 +4248,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4305,9 +4275,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4333,9 +4302,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4361,9 +4329,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4389,9 +4356,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4417,9 +4383,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4445,9 +4410,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4473,9 +4437,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4501,9 +4464,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4529,9 +4491,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4557,9 +4518,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4585,9 +4545,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4613,9 +4572,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4641,9 +4599,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4669,9 +4626,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4697,9 +4653,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4725,9 +4680,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4753,9 +4707,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4781,9 +4734,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4809,9 +4761,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4837,9 +4788,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4865,9 +4815,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4893,9 +4842,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4921,9 +4869,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4949,9 +4896,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4977,9 +4923,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5005,9 +4950,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5033,9 +4977,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5061,9 +5004,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5089,9 +5031,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5117,9 +5058,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5145,9 +5085,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5173,9 +5112,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5201,9 +5139,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5229,9 +5166,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5257,9 +5193,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5285,9 +5220,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5313,9 +5247,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5341,9 +5274,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5369,9 +5301,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5397,9 +5328,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"

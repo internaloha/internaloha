@@ -16,7 +16,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -36,7 +36,7 @@
             "machine learning",
             "software engineering",
             "robotics",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -145,8 +145,8 @@
             "java",
             "scala",
             "python",
-            "C and C++",
-            "machine learning"
+            "machine learning",
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -236,11 +236,11 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "matlab",
-            "C and C++",
             "machine learning",
             "project management",
+            "python",
+            "c and c++",
             "information technology"
         ],
         "qualifications": [
@@ -263,10 +263,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "javascript",
+            "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -331,9 +331,9 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Job Title\n<br>System Engineering Intern\n<br><br>\nJob Description\n<br><br>\nIntern - System Test Engineer – San Diego, CA – Summer 2021\n<br><br>\nAre you interested in an Intern opportunity with Philips? We welcome individuals who are currently pursuing an undergraduate (BS) and/or graduate (MS) degree to participate in 3- 6 month paid System Engineer Intern opportunity at our site in San Diego, CA. Through this role you will gain meaningful, hands-on experience in engineering for a HealthTech company.\n<br><br>\nIn this role, you have the opportunity to\n<br><br>\nJoin Philips Image Guided Therapy, we are in the business of treating patients better by innovating procedures so they can go back to living the lives they love.\n<br><br>\nYou are responsible for\n<br><br>\nLearn the interventional physiological measurement devices intended to measure blood pressure and flow.\n<br>Learn about Intravascular Ultrasound devices\n<br>Perform simulations to optimize the design of interventional devices used in Cath Labs\n<br>Apply Adaptive Intelligence to aid the physicians in their decision making process\n<br>Improve clinical workflow by automating tasks which a computer can do for the Physician\n<br>Learn and practice Model based systems engineering\n<br><br>\nYou are a part of\n<br><br>\nIGT Devices, join us for an opportunity to learn the design process for medical devices which help achieve the quadruple aim of improved patient experience, improved staff experience, better health outcomes and lower the cost of care. IGT Devices is the industry leader in the design of intravascular ultrasound devices and interventional devices used for making functional measurements in coronary and peripheral vasculature.\n<br><br>\nTo succeed in this role, you should have the following skills and experience\n<br><br>\nPursuing a degree in Computer Science or similar\n<br>Python programming language\n<br>MATLAB (Neural Network toolbox a plus!)\n<br>Artificial Intelligence based algorithms\n<br>Knowledge of Fluid Mechanics and understanding of Doppler measurements in a laminar flow\n<br>Experience with Flow sensors and PZT devices is preferred\n<br>Experience with bench-top model or fixture development\n<br>Knowledge of Philips products and a basic understanding of their use\n<br>Excellent advocacy and persuasive skills\n<br>Ability to maintain confidentiality\n<br>Ability to assess a problem quickly and determine to what level it should be elevated\n<br>Self-motivated, quick learner and a team player\n<br>Ability to work as a part of a team as well as individually\n<br>Ability to communicate effectively both orally and in writing and to establish and maintain cooperative working relationships with persons contacted in the course of performing assigned duties including Company management and outside business associate\n<br>Ability to represent the Company at professional and business functions in a competent manner\n<br>Ability to hear and speak to employees and outside business associates on the phone and in person\n<br>Ability to see the letters and numbers on a personal computer screen and on memos, reports and other documents (near vision)\n<br><br>\nIn return, we offer you\n<br><br>\nSharpen your talents with new challenges in our dynamic organization. As a market-driven company, we’re used to listening to our customers &amp; apply the same thinking to our employees. We offer a competitive salary, outstanding benefits and flexibility in a career with a positive and supportive atmosphere in which to develop your talents further.\n<br><br>\nUS work authorization is a precondition of employment. The company will not consider candidates who require sponsorship for a work-authorized visa.\n<br><br>\nCompany relocation benefits will not be provided for this position. Candidates need to live within the territory or within commuting distance to San Diego.\n<br><br>\nWhy should you join Philips?\n<br><br>\nWorking at Philips is more than a job. It’s a calling to create a healthier society through meaningful work, focused on improving 3 billion lives a year by delivering innovative solutions across the health continuum. Our people experience a variety of unexpected moments when their lives and careers come together in meaningful ways.\n<br><br>\nTo find out more about what it’s like working for Philips at a personal level, visit the Working at Philips page on our career website, where you can read stories from our employee blog. Once there, you can also learn about our recruitment process, or find answers to some of the frequently asked questions.\n<br><br>\nIt is the policy of Philips to provide equal employment and advancement opportunities to all colleagues and applicants for employment without regard to race, color, ethnicity, religion, gender, pregnancy/childbirth, age, national origin, sexual orientation, gender identity or expression, disability or perceived disability, genetic information, citizenship, veteran or military status or a person’s relationship or association with a protected veteran, including spouses and other family members, marital or domestic partner status, or any other category protected by federal, state and/or local laws.\n<br><br>\nAs an equal opportunity employer, Philips is committed to a diverse workforce. In order to ensure reasonable accommodation for individuals protected by Section 503 of the Rehabilitation Act of 1973, the Vietnam Veterans' Readjustment Act of 1974, and Title I of the Americans with Disabilities Act of 1990, applicants that require accommodation in the job application process may contact 888-367-7223, option 5, for assistance.\n<br><br>\nEqual Employment and Opportunity Employer/Disabled/Veteran\n<br><br>\nContact\n<br><br>\nIf you forgot your password, you can click the Forgot Password button on the Sign In screen to reset it.\n<br><br>\nIf you have any other questions regarding the recruitment process please refer to our FAQs. In case of technical difficulties with the website, please send an email to careersite@philips.com.\n<br><b>(Note:</b> To ensure fairness and legal compliance in our recruitment processes, only technical issues will be monitored through the above inbox. Please do not submit resumes or applications to this email, as they will not be reviewed. Only applications received through the online application process will be considered.)</div><div></div>",
         "index": 15,
         "skills": [
-            "python",
-            "software engineering",
             "matlab",
+            "software engineering",
+            "python",
             "machine learning",
             "project management",
             "information technology"
@@ -406,11 +406,11 @@
         "index": 18,
         "skills": [
             "software engineering",
-            "devOps",
             "javascript",
-            "C and C++",
-            "machine learning",
+            "devops",
             "project management",
+            "c and c++",
+            "machine learning",
             "information technology"
         ],
         "qualifications": [
@@ -432,9 +432,9 @@
         "index": 19,
         "skills": [
             "software engineering",
-            "python",
             "data visualization",
             "scala",
+            "python",
             "machine learning",
             "information technology"
         ],
@@ -459,7 +459,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -482,8 +482,7 @@
             "information technology",
             "software engineering",
             "javascript",
-            "java",
-            "python"
+            "java"
         ],
         "remote": false
     },
@@ -501,9 +500,9 @@
         "index": 22,
         "skills": [
             "software engineering",
-            "python",
             "data visualization",
             "scala",
+            "python",
             "machine learning",
             "information technology"
         ],
@@ -574,7 +573,7 @@
             "machine learning",
             "software engineering",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -592,7 +591,7 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\"><p><b>About this role: </b></p><p>iXopp is a marketplace that provides location-based product search. We help small businesses to grow by transforming their offline businesses online. We are a proud member of 2020-2021 Columbia University Startup Lab.</p><p>iXopp is looking for an iOS development intern to join our engineering team. You will be working with our engineering team to develop and maintain new features on our mobile application. We're looking for an iOS engineer to join a collaborative team and build future iterations of iXopp app.</p><p><b>What you'll be doing: </b></p><ul><li>Work as a part of the iOS team to build, test, and ship regular releases of iXopp app to the App Store</li></ul><ul><li>Define new components and refine existing ones as iXopp advances on an aggressive product roadmap</li></ul><ul><li>Lay a strong foundation for future development by writing Swift code every day</li></ul><p><b>What we are looking for: </b></p><ul><li>Bachelor of Science in Computer Science, Information Systems or related field</li></ul><ul><li>1+ years of experience</li></ul><ul><li>Experience working with Swift</li></ul><ul><li>Experience working with AWS tools</li></ul><ul><li>Experience working with an existing Objective-C codebase and a sense of pragmatism when it comes to rewriting legacy code in Swift.</li></ul><ul><li>Proficiency with Apple frameworks and tools</li></ul><ul><li>Experience writing Unit Tests with XCTest</li></ul><p><b>What would set you apart: </b></p><ul><li>Familiarity and enthusiasm for iXopp: passion for our audience and mission</li></ul><ul><li>Desire to bring iXopp app up to speed with the latest and greatest in iOS</li></ul><ul><li>A history of working with retail applications</li></ul><p><b>Weekly Hours: </b>Minimum of 20 hours</p><p><b>Please note: </b>Interns must have their own laptops and must be available to attend occasional meetings on evenings and weekends as needed.</p><p>iXopp, Inc. is an equal opportunity employer</p><p>Job Type: Internship</p><p>Pay: $0.00 per hour</p><p>Work Location:</p><ul><li>Fully Remote</li></ul><p>Company's website:</p><ul><li>www.ixopp.com</li></ul><p>Work Remotely:</p><ul><li>Yes</li></ul><p>COVID-19 Precaution(s):</p><ul><li>Remote interview process</li><li>Virtual meetings</li></ul></div><div></div>",
         "index": 26,
         "skills": [
-            "C and C++",
+            "c and c++",
             "information technology",
             "software engineering"
         ],
@@ -634,9 +633,9 @@
         "index": 28,
         "skills": [
             "information technology",
-            "python",
             "machine learning",
             "project management",
+            "python",
             "software engineering"
         ],
         "compensation": "paid",
@@ -675,8 +674,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "data visualization",
             "java",
+            "data visualization",
             "project management"
         ],
         "compensation": "paid",
@@ -720,7 +719,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -743,7 +742,7 @@
             "software engineering",
             "python",
             "robotics",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -763,8 +762,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "bioinformatics",
+            "python",
             "information technology"
         ],
         "start": "2020-05-01T10:00:00.000Z",
@@ -871,7 +870,7 @@
             "machine learning",
             "software engineering",
             "project management",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -980,7 +979,7 @@
             "machine learning",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -1003,7 +1002,7 @@
             "software engineering",
             "deep learning",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1046,9 +1045,8 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "scala",
-            "python",
             "java",
+            "scala",
             "deep learning"
         ],
         "remote": false
@@ -1127,11 +1125,11 @@
         "skills": [
             "machine learning",
             "project management",
-            "python",
             "java",
             "data visualization",
             "matlab",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "start": "2021-05-01T10:00:00.000Z",
         "remote": false
@@ -1152,7 +1150,6 @@
             "machine learning",
             "software engineering",
             "artificial intelligence",
-            "python",
             "java",
             "deep learning"
         ],
@@ -1177,8 +1174,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "java",
+            "python",
             "project management",
             "artificial intelligence"
         ],
@@ -1243,7 +1240,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -1265,7 +1262,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -1286,13 +1283,14 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Company Description\n<br><br>\nJoin us and make YOUR mark on the World!\n<br><br>\nAre you interested in joining some of the brightest talent in the world to strengthen the United States’ security? Come join Lawrence Livermore National Laboratory (LLNL) where our employees apply their expertise to create solutions for BIG ideas that make our world a better place.\n<br><br>\nWe are looking for individuals that demonstrate an understanding of working in partnership with team peers, who engage, advocate, and contribute to building an inclusive culture, and provide expertise to solve challenging problems.\n<br><br>\nJob Description\n<br><br>\nWe have multiple openings for our summer internship program in data science. Our openings are for graduate level students or students who have received their Bachelor's or Master's degree to join the Data Science Summer Institute (DSSI). The DSSI is a 12-week summer internship program and selected interns will be given the opportunity to engage in practical research to further their educational goals. The selected interns will work in the data science field and provide technical and/or research support to projects in the area of Machine Learning, Statistics, High Performance Computing and other related fields.\n<br><br>\nIn this role you will\n<br><br>\nStudents will work with scientists, engineers, and technical staff members to provide technical and/or research support to projects in the areas of computational science, numerical methods, mathematics, or other related fields.\n<br>Perform technical assignments of a basic degree of complexity and provide technical support to scientists in scientific research and development projects.\n<br>Support documentation, testing, creation, or modification of Laboratory software, hardware, or Computer operating systems.\n<br>Under limited direction and supervision, conduct research in assigned area. Gather and analyze data and information in support of scientific research.\n<br>Participate in research planning and evaluation discussion.\n<br>Attend relevant seminars and participate in DSSI related courses, meetings, and events.\n<br>Present work through presentations and/or poster sessions during your internship.\n<br>Perform other duties as assigned\n<br><br>\nQualifications\n<br><br>\nMust be a continuing college or university student in good standing at an accredited institution pursuing a graduate degree or has completed their bachelor’s or master’s degree in Computer Science, Statistics, Mathematics, Machine Learning, Computer Vision, Bioengineering or other related fields.\n<br>Effective programming skills in a high-level language such as R, Python or Matlab. Distributed/parallel computing and experience with C/C++ and/or Java a plus.\n<br>Ability to apply principles of data sciences (machine learning, statistics, computer science, mathematics) to solve technical problems.\n<br>Ability to present and communicate concepts and ideas.\n<br>Ability to work in a team environment.\n<br>Effective communication skills.\n<br>Desire to understand and explore why certain algorithms are well-suited to specific applications.\n<br>Desire to participate in individual or team efforts including the LLNL DSSI Challenge Problems.\n<br>Desire to improve skills in public presentation of scientific results by giving presentations and participating in the LLNL student poster competition.\n<br>Eagerness to obtain an understanding of new application areas.\n<br>Exposure through coursework or relevant experience to some of the following topics:\n<br>Statistical modeling and data analysis\n<br>Bayesian and frequentist statistical frameworks\n<br>Inverse problems, uncertainty quantification\n<br>Machine learning\n<br>Computer vision\n<br>Multimedia signal and video processing\n<br>Combinatorics and algorithms\n<br>Graph modeling and social network analysis\n<br>Modeling and Simulation\n<br><br>\nQualifications We Desire\n<br><br>\nGPA of 3.0 or above.\n<br><br>\nAdditional Information\n<br><br>\nWhy Lawrence Livermore National Laboratory?\n<br><br>\nIncluded in 2020 Best Places to Work by Glassdoor!\n<br>Work for a premier innovative national Laboratory\n<br>Comprehensive Benefits Package\n<br>Flexible schedules (*depending on project needs)\n<br>Collaborative, creative, inclusive, and fun team environment\n<br><br>\nLearn more about our company, selection process, position types and security clearances by visiting our Career site.\n<br><br>\nSecurity Clearance\n<br><br>\nLLNL is a Department of Energy (DOE) and National Nuclear Security Administration (NNSA) Laboratory. Most positions will require a DOE L or Q clearance (please reference Security Clearance requirement). If you are selected, we will initiate a Federal background investigation to determine if you meet eligibility requirements for access to classified information or matter. In addition, all L or Q cleared employees are subject to random drug testing. An L or Q clearance requires U.S. citizenship. If you hold multiple citizenships (U.S. and another country), you may be required to renounce your non-U.S. citizenship before a DOE L or Q clearance will be processed/granted. For additional information please see DOE Order 472.2.\n<br><br>\nEqual Employment Opportunity\n<br><br>\nLLNL is an affirmative action and equal opportunity employer that values and hires a diverse workforce. All qualified applicants will receive consideration for employment without regard to race, color, religion, marital status, national origin, ancestry, sex, sexual orientation, gender identity, disability, medical condition, pregnancy, protected veteran status, age, citizenship, or any other characteristic protected by applicable laws.\n<br><br>\nIf you need assistance and/or a reasonable accommodation during the application or the recruiting process, please submit a request via our online form.\n<br><br>\nCalifornia Privacy Notice\n<br><br>\nThe California Consumer Privacy Act (CCPA) grants privacy rights to all California residents. The law also entitles job applicants, employees, and non-employee workers to be notified of what personal information LLNL collects and for what purpose. The Employee Privacy Notice can be accessed here.</div><div></div>",
         "index": 58,
         "skills": [
+            "data science",
             "machine learning",
             "software engineering",
-            "python",
             "java",
             "matlab",
             "project management",
-            "C and C++",
+            "python",
+            "c and c++",
             "information technology"
         ],
         "qualifications": [
@@ -1313,10 +1311,11 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Company Description\n<br><br>\nJoin us and make YOUR mark on the World!\n<br><br>\nAre you interested in joining some of the brightest talent in the world to strengthen the United States’ security? Come join Lawrence Livermore National Laboratory (LLNL) where our employees apply their expertise to create solutions for BIG ideas that make our world a better place.\n<br><br>\nWe are looking for individuals that demonstrate an understanding of working in partnership with team peers, who engage, advocate, and contribute to building an inclusive culture, and provide expertise to solve challenging problems.\n<br><br>\nJob Description\n<br><br>\nWe have multiple openings for our Undergraduate summer internship program in data science. Our openings are for undergraduate level students to join the Data Science Summer Institute (DSSI). The DSSI is a 12-week summer internship program and selected interns will be given the opportunity to engage in practical research to further their educational goals. The selected interns will work in the data science field and provide technical and/or research support to projects in the area of Machine Learning, Statistics, High Performance Computing, and other related fields.\n<br><br>\nIn this role you will\n<br><br>\nStudents will work with scientists, engineers and technical staff members to provide technical and/or research support to projects in the areas of computational science, numerical methods, mathematics, or other related fields.\n<br>Under close supervision, will participate in research in assigned area.\n<br>Gather and analyze data and information in support of scientific research.\n<br>Participate in research planning and evaluation discussion.\n<br>Attend relevant seminars and participate in DSSI related courses, meetings and events.\n<br>Present one seminar or poster on your research project.\n<br>Perform other duties as assigned.\n<br><br>\nQualifications\n<br><br>\nMust be a continuing college or university student in good standing at an accredited institution pursuing an undergraduate degree in Computer Science, Statistics, Mathematics, Machine Learning, Computer Vision, Bioengineering, or other related fields.\n<br>Effective programming skills in a high-level language such as R, Python or Matlab. Ability to apply basic principles of data sciences (machine learning, statistics, computer science, mathematics) to solve technical problems.\n<br>Ability to present and communicate concepts and ideas.\n<br>Ability to work in a team environment.\n<br>Effective communication skills.\n<br>Desire to understand and explore why certain algorithms are well-suited to specific applications.\n<br>Desire to participate in individual or team efforts including the LLNL DSSI Challenge Problems.\n<br>Desire to improve skills in public presentation of scientific results by giving presentations and participating in the LLNL student poster competition.\n<br>Eagerness to obtain an understanding of new application areas.\n<br>Exposure through coursework or relevant experience to some of the following topics:\n<br>Statistical modeling and data analysis\n<br>Bayesian and frequentist statistical frameworks\n<br>Inverse problems, uncertainty quantification\n<br>Machine learning\n<br>Computer vision\n<br>Multimedia signal and video processing\n<br>Combinatorics and algorithms\n<br>Graph modeling and social network analysis\n<br>Modeling and Simulation\n<br><br>\nQualifications We Desire\n<br><br>\nGPA of 3.0 or above.\n<br><br>\nAdditional Information\n<br><br>\nWhy Lawrence Livermore National Laboratory?\n<br><br>\nIncluded in 2020 Best Places to Work by Glassdoor!\n<br>Work for a premier innovative national Laboratory\n<br>Comprehensive Benefits Package\n<br>Flexible schedules (*depending on project needs)\n<br>Collaborative, creative, inclusive, and fun team environment\n<br><br>\nLearn more about our company, selection process, position types and security clearances by visiting our Career site.\n<br><br>\nSecurity Clearance\n<br><br>\nLLNL is a Department of Energy (DOE) and National Nuclear Security Administration (NNSA) Laboratory. Most positions will require a DOE L or Q clearance (please reference Security Clearance requirement). If you are selected, we will initiate a Federal background investigation to determine if you meet eligibility requirements for access to classified information or matter. In addition, all L or Q cleared employees are subject to random drug testing. An L or Q clearance requires U.S. citizenship. If you hold multiple citizenships (U.S. and another country), you may be required to renounce your non-U.S. citizenship before a DOE L or Q clearance will be processed/granted. For additional information please see DOE Order 472.2.\n<br><br>\nEqual Employment Opportunity\n<br><br>\nLLNL is an affirmative action and equal opportunity employer that values and hires a diverse workforce. All qualified applicants will receive consideration for employment without regard to race, color, religion, marital status, national origin, ancestry, sex, sexual orientation, gender identity, disability, medical condition, pregnancy, protected veteran status, age, citizenship, or any other characteristic protected by applicable laws.\n<br><br>\nIf you need assistance and/or a reasonable accommodation during the application or the recruiting process, please submit a request via our online form.\n<br><br>\nCalifornia Privacy Notice\n<br><br>\nThe California Consumer Privacy Act (CCPA) grants privacy rights to all California residents. The law also entitles job applicants, employees, and non-employee workers to be notified of what personal information LLNL collects and for what purpose. The Employee Privacy Notice can be accessed here.</div><div></div>",
         "index": 59,
         "skills": [
+            "data science",
             "machine learning",
-            "python",
             "matlab",
             "project management",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -1356,9 +1355,9 @@
         "index": 61,
         "skills": [
             "software engineering",
+            "c and c++",
             "machine learning",
-            "project management",
-            "C and C++"
+            "project management"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -1380,10 +1379,9 @@
         "index": 62,
         "skills": [
             "machine learning",
-            "devOps",
+            "devops",
             "information technology",
             "software engineering",
-            "python",
             "java"
         ],
         "remote": false
@@ -1449,9 +1447,9 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
-            "C and C++"
+            "machine learning",
+            "c and c++"
         ],
         "contact": "hr@cloudflare.com",
         "remote": false
@@ -1472,8 +1470,8 @@
             "machine learning",
             "software engineering",
             "python",
+            "c and c++",
             "project management",
-            "C and C++",
             "information technology"
         ],
         "remote": true
@@ -1599,7 +1597,7 @@
             "machine learning",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -1619,10 +1617,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "C and C++",
-            "project management"
+            "c and c++",
+            "project management",
+            "python"
         ],
         "start": "2021-06-01T10:00:00.000Z",
         "due": "2021-06-01T10:00:00.000Z",
@@ -1779,7 +1777,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -1841,7 +1839,7 @@
             "machine learning",
             "software engineering",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "contact": "ext@fb.com",
         "remote": false
@@ -1879,11 +1877,11 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Company Description\n<br><br>\nJoin us and make YOUR mark on the World!\n<br><br>\nAre you interested in joining some of the brightest talent in the world to strengthen the United States’ security? Come join Lawrence Livermore National Laboratory (LLNL) where our employees apply their expertise to create solutions for BIG ideas that make our world a better place.\n<br><br>\nWe are looking for individuals that demonstrate an understanding of working in partnership with team peers, who engage, advocate, and contribute to building an inclusive culture, and provide expertise to solve challenging problems.\n<br><br>\nJob Description\n<br><br>\nWe have multiple openings for undergraduate students to join the Cybersecurity Summer Internship (CSI) program and to work on topics related to cybersecurity that align with LLNL’s national security missions. The 2021 CSI program will run during the summer with flexible dates between May 1, 2021 and August 31, 2021. CSI is designed to provide selected candidates an opportunity to apply the skills they have acquired to projects in areas of national importance. The program will include opportunities to participate in Capture the Flag (CTF)-style challenges, network with fellow interns and lab employees, and learn more about work going on at LLNL. These positions will be in the Energy and Homeland Security Program (E Program) within the Global Security Directorate.\n<br><br>\nIn this role you will\n<br><br>\nWork with scientists, engineers, and technical staff members to provide technical and/or research support to projects in the areas of cybersecurity, critical infrastructure, and other related fields.\n<br>Under close supervision, will participate in research in assigned area.\n<br>Gather and analyze data and information in support of scientific research.\n<br>Participate in research planning and evaluation discussions.\n<br>Attend relevant seminars and training classes (at least one per week).\n<br>Present work in at least one seminar or poster.\n<br>Perform other duties as assigned.\n<br><br>\nQualifications\n<br><br>\nMust be a continuing college or university student in good standing at an accredited institution pursuing an undergraduate degree in Cybersecurity, Computer Science, Engineering, Mathematics or other related fields.\n<br>Effective programming skills in C/C++, Java, or Python.\n<br>Ability to apply basic principles of computer science to solve cybersecurity problems.\n<br>Demonstrated effective communication skills.\n<br>Ability to present and communicate concepts and ideas.\n<br>Ability to work in a team environment.\n<br>Demonstrated exposure through coursework or relevant experience to some of the following topics: Network/Protocol Analysis; Intrusion Detection; Cryptography; Reverse Engineering; Incident Response; Malware Analysis; Systems Programming.\n<br><br>\nQualifications We Desire\n<br><br>\nGPA of 3.0 or above.\n<br><br>\nAdditional Information\n<br><br>\nWhy Lawrence Livermore National Laboratory?\n<br><br>\nIncluded in 2020 Best Places to Work by Glassdoor!\n<br>Work for a premier innovative national Laboratory\n<br>Comprehensive Benefits Package\n<br>Flexible schedules (*depending on project needs)\n<br>Collaborative, creative, inclusive, and fun team environment\n<br><br>\nLearn more about our company, selection process, position types and security clearances by visiting our Career site.\n<br><br>\nSecurity Clearance\n<br><br>\nLLNL is a Department of Energy (DOE) and National Nuclear Security Administration (NNSA) Laboratory. Most positions will require a DOE L or Q clearance (please reference Security Clearance requirement). If you are selected, we will initiate a Federal background investigation to determine if you meet eligibility requirements for access to classified information or matter. In addition, all L or Q cleared employees are subject to random drug testing. An L or Q clearance requires U.S. citizenship. If you hold multiple citizenships (U.S. and another country), you may be required to renounce your non-U.S. citizenship before a DOE L or Q clearance will be processed/granted. For additional information please see DOE Order 472.2.\n<br><br>\nEqual Employment Opportunity\n<br><br>\nLLNL is an affirmative action and equal opportunity employer that values and hires a diverse workforce. All qualified applicants will receive consideration for employment without regard to race, color, religion, marital status, national origin, ancestry, sex, sexual orientation, gender identity, disability, medical condition, pregnancy, protected veteran status, age, citizenship, or any other characteristic protected by applicable laws.\n<br><br>\nIf you need assistance and/or a reasonable accommodation during the application or the recruiting process, please submit a request via our online form.\n<br><br>\nCalifornia Privacy Notice\n<br><br>\nThe California Consumer Privacy Act (CCPA) grants privacy rights to all California residents. The law also entitles job applicants, employees, and non-employee workers to be notified of what personal information LLNL collects and for what purpose. The Employee Privacy Notice can be accessed here.</div><div></div>",
         "index": 85,
         "skills": [
-            "python",
             "java",
-            "C and C++",
             "machine learning",
             "project management",
+            "python",
+            "c and c++",
             "information technology",
             "software engineering"
         ],
@@ -2048,9 +2046,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "c and c++",
+            "python"
         ],
         "start": "2020-04-15T10:00:00.000Z",
         "due": "2020-04-15T10:00:00.000Z",
@@ -2142,8 +2140,7 @@
             "software engineering",
             "project management",
             "information technology",
-            "javascript",
-            "python"
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2166,9 +2163,8 @@
             "machine learning",
             "software engineering",
             "javascript",
-            "python",
-            "data visualization",
-            "java"
+            "java",
+            "data visualization"
         ],
         "compensation": "paid",
         "remote": false
@@ -2272,7 +2268,7 @@
             "project management",
             "software engineering",
             "angular",
-            "C and C++",
+            "c and c++",
             "information technology",
             "react"
         ],
@@ -2317,7 +2313,7 @@
             "machine learning",
             "software engineering",
             "robotics",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -2359,7 +2355,7 @@
         "index": 107,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "robotics",
             "information technology"
@@ -2406,7 +2402,6 @@
             "machine learning",
             "information technology",
             "javascript",
-            "python",
             "java"
         ],
         "remote": true
@@ -2427,9 +2422,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
             "deep learning",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -2447,10 +2442,10 @@
         "index": 111,
         "skills": [
             "software engineering",
-            "python",
             "java",
             "matlab",
-            "C and C++",
+            "python",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -2471,8 +2466,8 @@
             "machine learning",
             "robotics",
             "information technology",
+            "c and c++",
             "project management",
-            "C and C++",
             "software engineering"
         ],
         "contact": "1-800-336-8918",
@@ -2698,10 +2693,11 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\"><p><b>Description</b></p><p>Redko is a technology AI services company dedicated to building data/tech based solutions for businesses. In addition to our projects and partnerships, we will be soon coming out with multiple SaaS applications. From computer vision to all business and real life solutions. You'll be working with our CEO who comes from a data science background and a development team.. On top of learning a diverse industry standard skillset, if you are entrepreneurial, you might get to see your ideas come to life! We’re looking for someone who’s eager to grow within the company while also being a reliable, self-starting individual.</p><p><b>Responsibilities &amp; Learning outcomes include</b>:</p><ul><li>Help develop machine learning and statistical models</li></ul><ul><li>Perform analytics across different databases</li></ul><ul><li>Develop visualizations and tools for understanding and annotating data</li></ul><ul><li>Design and run experiments</li></ul><ul><li>Experience in Python and data-science-related packages such as pandas and scikit-learn</li></ul><ul><li>Experience working with databases including familiarity with SQL</li></ul><p><b>Preferred Qualifications</b>:</p><ul><li>Bachelors ,Masters or higher in Computer Science, Data Science or related field</li></ul><ul><li>Experience building Machine Learning models</li></ul><ul><li>Backend skillset</li></ul><ul><li>Experience with deep learning frameworks such as TensorFlow, PyTorch, or equivalent</li></ul><p><b>Requirements</b>:</p><ul><li>Pursuing or recent BS or higher degree in Mathematics, Physics, Computer Science, Engineering, or a related discipline</li></ul><ul><li>Experience with and enthusiasm for machine learning, data analytics, visualization, and/or statistics</li></ul><ul><li>High self motivation and positive attitude</li></ul><p>Job Types: Full-time, Part-time, Internship</p><p>Pay: $0.00 per hour</p><p>Benefits:</p><ul><li>Flexible schedule</li></ul><p>Schedule:</p><ul><li>Monday to Friday</li></ul><p>COVID-19 considerations:<br>Temporary Remote Work</p></div><div></div>",
         "index": 123,
         "skills": [
+            "data science",
             "machine learning",
-            "python",
             "data visualization",
             "deep learning",
+            "python",
             "project management",
             "information technology"
         ],
@@ -2724,11 +2720,12 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Capax-Hitachi has a significant data analytics and management presence across many industries. Our Data Science Internship program is a 2.5month intensive data science and machine learning team-based intensive. You will be working on a streaming data solution that captures, stores, transforms, and models incoming data using cloud analytic tools. Our internship takes place in our downtown Chicago office in the historic Wrigley building, with some ability to work remote.\n<br><br>\n<b>Location:</b> Chicago IL | Remote\n<br><br>\n<b>Travel:</b> None\n<br><br>\n<b>Timeframe:</b> June - August\n<br><br>\nResponsibilities\n<br><br>\nDevelop and code models by applying algorithms to large structured. Develop visualizations to share analysis across a group of business users.\n<br><br>\nDesign strategies and propose algorithms to analyze and leverage data from the telemetry stream.\n<br><br>\nParticipate on a project team of specialists, data scientists, and business subject-matter experts to complete project deliverables and present a final showcase to senior leadership within Capax-Hitachi.\n<br><br>\nQualifications\n<br><br>\nMust be seeking Bachelor’s or Master’s degree from an accredited college/university in Computer Science, Computational Linguistics, Statistics, Mathematics, Engineering, Bioinformatics, Physics, Operations Research or related technical fields.\n<br><br>\nKnowledge of various modeling algorithms e.g. Classification, Regression, tree-based models, neural networks, clustering, PCA, and time series models.\n<br><br>\nSome proficiency in R (e.g. ggplot2, cluster, dplyr, caret), Python (e.g. pandas, scikit-learn, bokeh, nltk), Spark – MLlib, H20; or other statistical tools.\n<br><br>\nKnowledge of databases, data modeling.\n<br><br>\n*** Strong curiosity and desire to learn\n<br><br>\n*** Collaborative team player\n<br><br>\n*** Communication skills</div><div></div>",
         "index": 124,
         "skills": [
+            "data science",
             "machine learning",
             "project management",
             "data visualization",
-            "python",
             "bioinformatics",
+            "python",
             "software engineering"
         ],
         "qualifications": [
@@ -2749,9 +2746,10 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">We are looking for a data science intern to help grow ON’s Business Intelligence &amp; Analytics team capabilities from descriptive to predictive. This is an unprecedented, opportunity to work with the Data Science team within information technology (IT) organization, and a growing, $5.8B+ enterprise that recognizes the need to evolve.\n<br><br>\nOperating in VUCA (volatile, uncertain, complex, and ambiguous) environments, you will build business partnerships, create predictive models, and influence enterprise decisions.\n<br><br>\n<b>Duties and Responsibilities:</b><br>\nThe successful candidate will\n<br><br>\nCollaborate with business partners to identify &amp; align on significant business challenges\n<br>Rapidly prototype / operationalize predictive models to deliver impactful &amp; actionable insights that address said challenges\n<br>Educate senior business leaders on the accuracy, completeness, and value of predictive model insights\n<br>Evangelize and drive consensus for predictive models and their associated roadmaps to business partners, information technology (IT), and other stakeholders\n<br>Develop, analyze, and optimize predictive analytics roadmap based on accuracy, effectiveness, scalability, future-proofing, cost, and efficiency\n<br><br>\nQualifications\n<br><br>\n<b>Competencies and Skills:</b><br>\nCurrently pursuing a degree in data science, industrial engineering, artificial intelligence, applied/traditional statistics, mathematics, computer science, computer engineering, information systems or a related field.\n<br>Experience prototyping / operationalizing predictive models to deliver impactful &amp; actionable insights\n<br>Programing experience in languages such as Python, R\n<br>Familiarity with SQL queries and working with databases\n<br>Must work effectively in VUCA environments\n<br>Must work with little or no direct supervision\n<br>Must work with all levels of the organization\n<br>Excellent communication and documentation skills\n<br>Strong Analytical and Problem Solving Skills\n<br><br>\n<b>Career Benefits of Working at ON Semiconductor:</b><br>\nGlobal, multi-cultural company with international collaboration\n<br>Work with highly-skilled team members across multiple infrastructure and applications disciplines\n<br><br>\n<b>ON Semiconductor (Nasdaq:</b> ON) is driving energy efficient innovations, empowering customers to reduce global energy use. The company is a leading supplier of semiconductor-based solutions, offering a comprehensive portfolio of energy efficient power and signal management, logic, standard and custom devices. The company’s products help engineers solve their unique design challenges in automotive, communications, computing, consumer, industrial, medical and military/aerospace applications. ON Semiconductor operates a responsive, reliable, world-class supply chain and quality program, and a network of manufacturing facilities, sales offices and design centers in key markets throughout North America, Europe and the Asia Pacific regions.\n<br><br>\nEqual Employment Opportunity\n<br><br>\nON Semiconductor is an equal opportunity employer. The Company maintains policies and practices that are designed to prevent discrimination or harassment against any qualified applicant or employee to the extent prohibited by federal, state and local laws and regulations. By way of example, discrimination on the basis of race, ethnicity, color, religion, ancestry, national origin, citizenship, sex (including pregnancy, childbirth, or related medical conditions), age, marital status, sexual orientation physical or mental disability, medical condition, genetic information (including test results), status as a Vietnam-era or special disabled veteran, uniform service member status, political affiliation, union membership, gender identity or gender expression, or any other characteristic protected by applicable law is prohibited.\n<br><br>\n<b>Primary Location:</b> US-AZ-Phoenix\n<br><b>Work Locations:</b> USAZ01 ON HDQTRS US8 5005 E McDowell Rd Phoenix 85008-4229\n<br><b>Job:</b> Intern\n<br><b>Travel:</b> No\n<br><b>Job Posting:</b> Dec 10, 2020, 11:13:04 AM</div><div></div>",
         "index": 125,
         "skills": [
+            "data science",
             "information technology",
-            "python",
             "project management",
+            "python",
             "software engineering"
         ],
         "remote": false
@@ -2790,9 +2788,9 @@
         "index": 127,
         "skills": [
             "software engineering",
-            "C and C++",
-            "machine learning",
             "robotics",
+            "c and c++",
+            "machine learning",
             "information technology"
         ],
         "remote": false
@@ -2836,8 +2834,7 @@
             "information technology",
             "software engineering",
             "javascript",
-            "java",
-            "python"
+            "java"
         ],
         "remote": false
     },
@@ -2897,7 +2894,7 @@
             "software engineering",
             "project management",
             "information technology",
-            "SQL"
+            "sql"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2918,9 +2915,9 @@
         "index": 133,
         "skills": [
             "machine learning",
-            "python",
             "deep learning",
-            "C and C++",
+            "python",
+            "c and c++",
             "information technology",
             "software engineering"
         ],
@@ -2942,11 +2939,11 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "python",
             "java",
             "matlab",
+            "python",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -2966,8 +2963,8 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -3028,9 +3025,9 @@
         "skills": [
             "information technology",
             "data visualization",
-            "robotics",
             "machine learning",
             "project management",
+            "robotics",
             "software engineering"
         ],
         "compensation": "paid",
@@ -3152,8 +3149,8 @@
             "software engineering",
             "javascript",
             "data visualization",
-            "machine learning",
             "project management",
+            "machine learning",
             "information technology",
             "web development",
             "react"
@@ -3177,7 +3174,7 @@
             "information technology",
             "machine learning",
             "project management",
-            "C and C++",
+            "c and c++",
             "software engineering"
         ],
         "remote": false
@@ -3284,8 +3281,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "python",
             "java",
+            "python",
             "machine learning"
         ],
         "compensation": "paid",
@@ -3350,6 +3347,7 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Research Internships at Microsoft provide a dynamic environment for research careers with a network of world-class research labs led by globally-recognized scientists and engineers. Our researchers and engineers pursue innovation in a range of scientific and technical disciplines to help solve complex challenges in diverse fields, including computing, healthcare, economics, and the environment.\n<br><br>\nThere has never been a more exciting time to be working in health and life sciences at Microsoft. Our investments across our organization in research and incubation, world-class talent, and strategic partnerships reflect our CEO Satya Nadella’s vision that many of the next health breakthroughs will come from health and life sciences organizations working in partnership with companies like Microsoft.\n<br><br>\nAs a research intern in our Microsoft Health Next R&amp;D group, you will have the unique opportunity to explore high-impact research careers at Microsoft as part of a network of world-class research and incubation efforts led by globally-recognized scientists and engineers. Our researchers and engineers pursue innovation in a range of scientific and technical disciplines to help solve the world’s most pressing problems.\n<br><br>\nOur Health Futures team, an interdisciplinary team of researchers, engineers, and clinicians focused on developing next generation methods and tools for health and life sciences, is looking for a research intern who will research new methods and tools to help researchers and scientists, especially in low resource settings, leverage multimodal data sets to improve health outcomes. Specifically, we are looking for candidates that are interested in building algorithms to ingest and analyze multifactorial health data and improving utility of these data sets for decision makers.\n<br><br>\n#msfthealthcare #healthfutures #globalhealth #datascience\n<br><br>\nResponsibilities\n<br><br>\nInterns put inquiry and theory into practice. Alongside fellow doctoral candidates and some of the world’s best researchers, interns learn, collaborate, and network for life. Interns not only advance their own careers, but they also contribute to exciting research and development strides. During the 12-week internship, students are paired with mentors and expected to collaborate with other interns and researchers, present findings, and contribute to the vibrant life of the community. Research internships are available in all areas of research, and are offered year-round, though they typically begin in the summer.\n<br><br>\nThe research intern will collaborate with both internal Microsoft engineers and scientists and external stakeholders such as non-profits, academia, pharma to:\n<br><br>\nBuild models and algorithms for multimodal health data mining.\n<br>Handle machine learning training problems that utilize real-world raw health and non-health data (e.g., structured and unstructured EMR, population health, epidemiology, genomics / immunomics, geographic data, etc.)\n<br>Conduct experiments and deliver prototypes for real-world impact.\n<br>Propose novel solutions to unsolved research and engineering problems\n<br>Qualifications\n<br><br>\nIn addition to the qualifications below, you’ll need to submit a minimum of two reference letters for this position. After you submit your application, a request for letters may be sent to your list of references on your behalf. Note that reference letters cannot be requested until after you have submitted your application, and furthermore, that they might not be automatically requested for all candidates. You may wish to alert your letter writers in advance, so they will be ready to submit your letter.\n<br><br>\nRequired Qualifications\n<br>Must be currently enrolled in a PhD program in Computer Science, Statistics, Data Science, or a related STEM field.\n<br>Must have 1 year of experience with applied data mining, applied statistics, or a related STEM field.\n<br>Participation in the Research Internship Program requires that you are physically located in the United States or Canada for the duration of the internship\n<br>Preferred Qualifications\n<br>Hands-on experience with multimodal health data sets.\n<br>Proficiency in Python or any other coding language\n<br>Experience with deep learning platforms PyTorch, Tensor Flow, CNTK.\n<br>Strong communication and presentation skills.\n<br>rack record of scientific publications (conference abstracts and/or paper)\n<br><br>\nMicrosoft is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to age, ancestry, color, family or medical care leave, gender identity or expression, genetic information, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran status, race, religion, sex (including pregnancy), sexual orientation, or any other characteristic protected by applicable laws, regulations and ordinances. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. If you need assistance and/or a reasonable accommodation due to a disability during the application or the recruiting process, please send a request via the Accommodation request form.\n<br><br>\nBenefits/perks listed below may vary depending on the nature of your employment with Microsoft and the country where you work.</div><div></div>",
         "index": 153,
         "skills": [
+            "data science",
             "machine learning",
             "python",
             "information technology",
@@ -3373,10 +3371,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "compensation": "paid",
         "remote": false
@@ -3397,7 +3395,7 @@
             "project management",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -3420,9 +3418,9 @@
             "information technology",
             "software engineering",
             "python",
+            "c and c++",
             "machine learning",
-            "project management",
-            "C and C++"
+            "project management"
         ],
         "compensation": "paid",
         "remote": false
@@ -3485,10 +3483,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "compensation": "paid",
         "remote": false
@@ -3577,9 +3575,9 @@
             "information technology",
             "javascript",
             "python",
+            "c and c++",
             "machine learning",
             "project management",
-            "C and C++",
             "software engineering"
         ],
         "compensation": "unpaid",
@@ -3629,8 +3627,7 @@
             "software engineering",
             "javascript",
             "java",
-            "data visualization",
-            "python"
+            "data visualization"
         ],
         "compensation": "unpaid",
         "qualifications": [
@@ -3696,10 +3693,10 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Job Description\n<br><br>\nAt HPE, we bring together the brightest minds to create breakthrough technology solutions and advance the way people live and work. Our legacy inspires us as we forge ahead dedicated to helping our customers make their mark on the world.\n<br><br>\nLearning does not only happen through training. Relationships are among the most powerful ways for people to learn and grow, and this is part of our HPE culture. In addition to working alongside talented colleagues, you will have many opportunities to learn through coaching and stretch assignment opportunities. You’ll be guided by feedback and support to accelerate your learning and maximize your knowledge. We also have a “reverse mentoring” program which allows us to share our knowledge and strengths across our multi-generation workforce.\n<br><br>\nHewlett Packard Enterprise (HPE) is seeking an outstanding QA Intern to work in the San Jose, CA office. This is a 2020 Summer Intern Position. This QA intern will play a key role in testing and automating test cases in our QA team. You will be joining a focused, high-energy, empowered team, focused on developing automation and analyzing test results on HPE Storage products to provide business value through analytics\n<br><br>\n<b>Responsibilities:</b><br>\nTechnical contributor as a QA engineer in a small, cross-functional team, focused on providing test automation suites for our products\n<br>Develop unit, integration, system or any tests that are needed to help the team deliver value quickly, with high quality, to our customers\n<br>Contribute to the continuous improvement of our test automation and analytical frameworks built in Python\n<br>Leverage big-data technologies including Elasticsearch and Mongo DB (SQL)\n<br><br>\n<b>Education:</b><br>\nCurrently enrolled in a Master's program, studying Computer Science/Engineering/Business Analytics program, or equivalent.\n<br><br>\n<b>Knowledge and Skills:</b><br>\nTeam player with a passion for learning\n<br>Programming/automation skills in Python/C/Java\n<br>Excellent analytical and problem solving skills\n<br>Excellent communications skills\n<br>Networking skills\n<br><br>\n<b>We offer:</b><br>\n<ul><li>A competitive salary and extensive social benefits</li><li>Diverse and dynamic work environment</li><li>Work-life balance and support for career development</li><li>An amazing life inside the element! Want to know more about it?</li></ul>\nThen let’s stay connected!\n<br><br>\nhttps://www.facebook.com/HPECareers\n<br><br>\nhttps://twitter.com/HPE_Careers\n<br><br>\n1070416</div><div></div>",
         "index": 168,
         "skills": [
-            "python",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -3746,7 +3743,7 @@
             "information technology",
             "javascript",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -3811,9 +3808,9 @@
         "index": 173,
         "skills": [
             "information technology",
-            "python",
             "machine learning",
             "project management",
+            "python",
             "software engineering"
         ],
         "compensation": "paid",
@@ -3857,7 +3854,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -3878,7 +3875,7 @@
         "index": 176,
         "skills": [
             "information technology",
-            "C and C++",
+            "c and c++",
             "java",
             "machine learning",
             "project management"
@@ -3946,7 +3943,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -4097,9 +4094,9 @@
         "index": 186,
         "skills": [
             "software engineering",
+            "c and c++",
             "machine learning",
             "project management",
-            "C and C++",
             "information technology"
         ],
         "compensation": "paid",
@@ -4140,11 +4137,11 @@
         "description": "<div class=\"h3\">Full Job Description</div><div class=\"p\">Job Description\n<br><br>\nAt HPE, we bring together the brightest minds to create breakthrough technology solutions and advance the way people live and work. Our legacy inspires us as we forge ahead dedicated to helping our customers make their mark on the world.\n<br><br>\nLearning does not only happen through training. Relationships are among the most powerful ways for people to learn and grow, and this is part of our HPE culture. In addition to working alongside talented colleagues, you will have many opportunities to learn through coaching and stretch assignment opportunities. You’ll be guided by feedback and support to accelerate your learning and maximize your knowledge. We also have a “reverse mentoring” program which allows us to share our knowledge and strengths across our multi-generation workforce.\n<br><br>\nHewlett Packard Enterprise (HPE) is seeking an outstanding QA Intern to work in the San Jose, CA office. This is a 2021 Summer Intern Position. This QA intern will play a key role in testing and automating test cases in our QA team. You will be joining a focused, high-energy, empowered team, focused on developing automation and analyzing test results on HPE Storage products to provide business value through analytics\n<br><br>\n<b>Responsibilities:</b><br>\nTechnical contributor as a QA engineer in a small, cross-functional team, focused on providing test automation suites for our products\n<br>Develop unit, integration, system or any tests that are needed to help the team deliver value quickly, with high quality, to our customers\n<br>Contribute to the continuous improvement of our test automation and analytical frameworks built in Python\n<br>Leverage big-data technologies including Elasticsearch and Mongo DB (SQL)\n<br><br>\n<b>Education:</b><br>\nCurrently enrolled in a Master's program, studying Computer Science/Engineering/Business Analytics program, or equivalent.\n<br><br>\n<b>Knowledge and Skills:</b><br>\nTeam player with a passion for learning\n<br>Programming/automation skills in Python/C/Java\n<br>Excellent analytical and problem solving skills\n<br>Excellent communications skills\n<br>Wired and wireless networking\n<br><br>\n<b>We offer:</b><br>\n<ul><li>A competitive salary and extensive social benefits</li><li>Diverse and dynamic work environment</li><li>Work-life balance and support for career development</li><li>An amazing life inside the element! Want to know more about it?</li></ul>\nThen let’s stay connected!\n<br><br>\nhttps://www.facebook.com/HPECareers\n<br><br>\nhttps://twitter.com/HPE_Careers\n<br><br>\n1070505</div><div></div>",
         "index": 188,
         "skills": [
-            "python",
-            "software engineering",
             "java",
-            "C and C++",
+            "software engineering",
+            "c and c++",
             "machine learning",
+            "python",
             "information technology"
         ],
         "compensation": "paid",
@@ -4166,7 +4163,6 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
             "java",
             "deep learning"
         ],
@@ -4335,7 +4331,7 @@
         "index": 197,
         "skills": [
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -4375,7 +4371,7 @@
         "index": 199,
         "skills": [
             "javascript",
-            "C and C++",
+            "c and c++",
             "project management",
             "web development"
         ],
@@ -4414,11 +4410,11 @@
         "index": 201,
         "skills": [
             "machine learning",
-            "python",
             "java",
             "deep learning",
+            "python",
             "project management",
-            "C and C++",
+            "c and c++",
             "software engineering"
         ],
         "contact": "ext@fb.com",
@@ -4553,9 +4549,9 @@
             "machine learning",
             "software engineering",
             "project management",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4605,7 +4601,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "contact": "1-800-336-8918",
         "qualifications": [
@@ -4627,9 +4623,9 @@
         "index": 210,
         "skills": [
             "machine learning",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "information technology",
             "software engineering"
         ],
@@ -4706,7 +4702,7 @@
         "skills": [
             "software engineering",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -4729,7 +4725,7 @@
             "software engineering",
             "matlab",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "compensation": "paid",

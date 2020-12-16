@@ -6,12 +6,15 @@ import { isRemote } from './scraperFunctions.js';
 
 const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
 
-/** Removes duplicate in skills
+/** Removes duplicate in skills. Also makes them all lowercase.
  * @param  {Array} skills    The word we're looking for
  * @return {Array}     Returns an array with no duplicates
  */
 function removeDuplicates(skills) {
-  return [...new Set(skills)];
+  let newArray = skills.map((skill) => {
+    return skill.toLowerCase();
+  });
+  return [...new Set(newArray)];
 }
 
 /** Fetches the sentences that include the word we are looking for AND has a number.
@@ -358,6 +361,12 @@ function getContact(textInput) {
  * @returns {string} The conversion
  */
 function convertRegion(input, to) {
+
+  // if any of the states are listed as "Error"
+  if (input === 'Error' || input === 'error') {
+    return 'Not Available';
+  }
+
   const states = [
     ['Alabama', 'AL'],
     ['Alaska', 'AK'],
@@ -516,6 +525,7 @@ function multi_parser(file) {
 
       results = classifier.getClassifications(descriptionIT);
       positionResults = classifier.getClassifications(position);
+
       compensation = classifierComp.getClassifications(text[i].description);
 
     } catch (e) {
@@ -524,6 +534,12 @@ function multi_parser(file) {
 
     const data = [];
     const comp = [];
+
+    // Adding data science. Classifier unable to pick up because 'data science' gets broken up into 'data' and 'science'
+    // which matches everything with 'computer science'
+    if (position.toString().toLowerCase().includes('data science')) {
+      data.push('data science');
+    }
 
     // adding compensation
     for (let j = 0; j < compensation.length; j++) {
@@ -545,7 +561,7 @@ function multi_parser(file) {
         data.push(results[j].label);
       }
 
-      if (positionResults[j].value > 0.5) {
+      if (positionResults[j] && positionResults[j].value > 0.5) {
         data.push(positionResults[j].label);
       }
 
@@ -557,8 +573,8 @@ function multi_parser(file) {
       count++;
     }
 
-    // if skills key doesn't already exist or the value is N/A
-    if (!text[i].skills || text[i].skills === 'N/A' || text[i].skills.length === 0) {
+    // Only run when skills exist
+    if (text[i].skills || text[i].skills !== 'N/A' || text[i].skills.length !== 0) {
       text[i].skills = removeDuplicates(data);
     }
 

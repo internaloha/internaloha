@@ -111,9 +111,9 @@
         "index": 6,
         "skills": [
             "software engineering",
-            "python",
             "data visualization",
-            "C and C++",
+            "c and c++",
+            "python",
             "information technology",
             "artificial intelligence"
         ],
@@ -137,7 +137,7 @@
         "skills": [
             "python",
             "robotics",
-            "C and C++",
+            "c and c++",
             "information technology",
             "software engineering"
         ],
@@ -180,7 +180,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -222,11 +222,11 @@
         "index": 11,
         "skills": [
             "information technology",
-            "python",
             "java",
             "machine learning",
             "project management",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -246,7 +246,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -266,7 +266,7 @@
         "description": "At Cadence, we hire and develop leaders and innovators who want to make an impact on the world of technology.Cadence Voltus includes full chip PDN model extraction and analysis. Cadence Sigrity include system level(SI and PI) analysis with Sigrity package and\n\nboard models. As a research and developer intern, you will work on Voltus/Sigrity integration projects.\n\nPosition Requirements:\n\nYou need to have a solid foundation in chip model extraction and circuit simulation. Besides that, you need to have hands on experience in programming and computer science.\n\nCurrently pursuing a Master's or PhD degree in Electrical Engineering, Computer Science or related technical field.\n\nExperience with model extraction and SPICE circuit simulation.\n\nExperience with algorithms, data structures and complexity data processing, Familiarity with programming using C, C++.We’re doing work that matters. Help us solve what others can’t.",
         "index": 13,
         "skills": [
-            "C and C++",
+            "c and c++",
             "software engineering",
             "project management",
             "information technology"
@@ -308,7 +308,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -331,7 +331,7 @@
             "software engineering",
             "javascript",
             "java",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "remote": false
@@ -352,7 +352,7 @@
             "project management",
             "software engineering",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -372,7 +372,7 @@
         "index": 18,
         "skills": [
             "project management",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology",
             "software engineering"
@@ -396,7 +396,7 @@
             "project management",
             "software engineering",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -415,6 +415,7 @@
         "description": "2021 Summer Tech Intern - Data Science at PIMCO in Newport Beach, California\n\nPosted in Other about 3 hours ago.\n\nType: Full Time\n\n------------\n\nJob Description:\n\nGENERAL INFORMATION\n\nRef #: 28732\n\nEmployee Type: Internship\n\nLocation: Flexible - US\n\nDate published: 21-Aug-2019",
         "index": 20,
         "skills": [
+            "data science",
             "information technology"
         ],
         "remote": false
@@ -433,11 +434,11 @@
         "index": 21,
         "skills": [
             "information technology",
-            "python",
             "java",
             "machine learning",
             "project management",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -457,7 +458,7 @@
             "software engineering",
             "javascript",
             "java",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "remote": false
@@ -581,11 +582,11 @@
         "index": 28,
         "skills": [
             "information technology",
-            "python",
             "java",
             "machine learning",
             "project management",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -629,10 +630,10 @@
             "machine learning",
             "software engineering",
             "javascript",
-            "python",
             "java",
             "project management",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -694,7 +695,7 @@
             "javascript",
             "python",
             "robotics",
-            "C and C++",
+            "c and c++",
             "artificial intelligence"
         ],
         "remote": false
@@ -734,7 +735,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree",
@@ -758,7 +759,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -843,7 +844,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -889,7 +890,7 @@
             "machine learning",
             "python",
             "project management",
-            "C and C++",
+            "c and c++",
             "information technology",
             "artificial intelligence"
         ],
@@ -949,7 +950,7 @@
             "machine learning",
             "python",
             "project management",
-            "C and C++",
+            "c and c++",
             "information technology",
             "artificial intelligence"
         ],
@@ -975,7 +976,7 @@
             "software engineering",
             "information technology",
             "java",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1037,6 +1038,7 @@
         "description": "EngineeringThe Data Science team at Frontdoor builds and maintains the technology that helps our customers and contractors take the hassle out of owning a home. Our team is made up of curious, smart, talented, and customer focused people that help make Frontdoor an exceptional company. We hire teammates who are owners, obsess over customers, are transparent, and who do great things every day. We are looking to add members this fall through a data science internship.You must be an analytical problem solver who enjoys diving into data, is excited about designing algorithms, and can interface with technical leadership and business stakeholders. If this sounds like you and you are eager to learn then let's talk!What to ExpectA paid internship where you will work with a high-energy team to work on impactful projects that help take the hassle out of owning a home. You'll get the opportunity to build and improve production services that drive our customer experience or to develop an algorithm that help customers understand more about their home or help inform our business strategy. The internship will provide you with real-world experience that you won't find in the classroom by leading and contributing to projects from start to finish.Where You Will WorkInternships will likely be remote, though we may include some travel to our engineering center in Denver, CO depending on travel guidance with respect to COVID-19.What Does the Frontdoor Data Science Team Do?* Design algorithms, APIs and machine learning models to provide value to the business and a better customer experience* Partner with business stakeholders in product, marketing, and operations to identify key opportunitiesWhat Will You Be Doing?* Writing software and conducting experiments to extract business value from data* Collaborating with colleagues from multidisciplinary science, engineering, and business backgrounds to optimize pricing and overall profitability* Influencing leaders to make thoughtful data decisions to provide the most consistent and usable data for all teams across the company* Building metrics, reports and dashboard to analyze key inputs to internal systems* Use the scientific method to design and conduct experiments* Become a subject matter expert in home warranty data and business processes* Employ software development best practices* Build descriptive and predictive models* Present findings in a clear and compelling manner* Collaborate within the data science and analytics groups, and with other business unitsRequirements* An undergraduate student (junior or senior) or graduate student who is currently pursuing or has recently completed a degree in business administration, business intelligence, computer science, applied mathematics, data science or a related field* Available to work 40 hours per week* Understanding of probability and statistics* Aptitude for high-level programming that can be demonstrated* An understanding of relational databases and the ability to query them* Experience with a modern scripting language such as Python or PHP* Experience wrangling and analyzing data in R, SAS, or Python* Experience with at least one machine learning package/framework such as scikit-learn or TensorFlowPreferred Requirements* Ability to effectively articulate technical challenges and solutions* Adept at handling ambiguous or undefined challenges through strong problem-solving skills and effective communication* Currently working towards an Associate's or Bachelor's degree in a technical field such as Computer Science or Mathematics with an expected graduation date between September 15, 2021 and September 15, 2022* Previous internship experience is a plus* Self-starter who is comfortable operating somewhat independently* Excellent writing and editing skills* Proven ability to work well under pressure and adapt quickly to change whilemaintaining a positive attitude* Curiosity and ability to think creatively* A great sense of humor and the ability to multi-task with easeKnowledge and Skills* Excellent writing and editing skills* Proven ability to work well under pressure and adapt quickly to change whilemaintaining a positive attitude* A self-starter who creates personal and professional stretch goals and meets them* Works well with others in a highly collaborative environment and builds trust with the team* Curiosity and ability to think creatively",
         "index": 49,
         "skills": [
+            "data science",
             "machine learning",
             "information technology",
             "software engineering",
@@ -1132,9 +1134,9 @@
             "information technology",
             "software engineering",
             "python",
+            "c and c++",
             "machine learning",
-            "project management",
-            "C and C++"
+            "project management"
         ],
         "remote": false
     },
@@ -1154,9 +1156,9 @@
             "information technology",
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -1181,9 +1183,9 @@
             "information technology",
             "software engineering",
             "javascript",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -1227,7 +1229,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "compensation": "paid",
@@ -1251,7 +1253,6 @@
             "software engineering",
             "project management",
             "information technology",
-            "python",
             "java"
         ],
         "compensation": "paid",
@@ -1270,6 +1271,7 @@
         "description": "${Description}\n\nDescription -\n\nJoin us for a paid internship in the 2020. At HP, we exist to amaze. Through the\n\npeople we hire, the experiences we enable, the way we treat our customers and each other and ultimately\n\nthrough the technology we create. We aim for excellence through collaboration and believe that by\n\nmelding the best and the brightest talent, enriched by diverse backgrounds and perspectives of every\n\nstripe, we can succeed in understanding what matters the most to our customers and to every individual\n\nacross society.\n\nResponsibilities:\n\nFour-year university students who are working in a technical internship role at hp during their study or in\n\nbreaks between university semesters.\n\nEducation and Experience Required:\n\nAt least 2nd year and above University student majoring in Computer Science or Mechanical Engineering\n\nKnowledge in Data Science and its principles.\n\nStrong analytical skills\n\nExcellent communication skills\n\npca3lyuhf",
         "index": 59,
         "skills": [
+            "data science",
             "information technology",
             "software engineering"
         ],
@@ -1293,7 +1295,6 @@
             "software engineering",
             "project management",
             "information technology",
-            "python",
             "java"
         ],
         "compensation": "paid",
@@ -1334,8 +1335,8 @@
             "software engineering",
             "information technology",
             "javascript",
-            "python",
             "java",
+            "python",
             "bioinformatics"
         ],
         "qualifications": [
@@ -1359,7 +1360,7 @@
             "machine learning",
             "software engineering",
             "project management",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "compensation": "paid",
@@ -1380,9 +1381,9 @@
         "skills": [
             "javascript",
             "software engineering",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "information technology"
         ],
         "compensation": "paid",
@@ -1405,7 +1406,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree",
@@ -1428,9 +1429,9 @@
         "skills": [
             "javascript",
             "software engineering",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "information technology"
         ],
         "compensation": "paid",
@@ -1451,9 +1452,9 @@
         "skills": [
             "java",
             "software engineering",
-            "python",
-            "C and C++",
+            "c and c++",
             "project management",
+            "python",
             "web development"
         ],
         "remote": false
@@ -1473,7 +1474,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -1496,9 +1497,9 @@
         "index": 69,
         "skills": [
             "software engineering",
+            "robotics",
             "machine learning",
             "project management",
-            "robotics",
             "information technology"
         ],
         "remote": false
@@ -1518,9 +1519,9 @@
         "skills": [
             "java",
             "software engineering",
-            "python",
-            "C and C++",
+            "c and c++",
             "project management",
+            "python",
             "web development"
         ],
         "remote": false
@@ -1585,10 +1586,10 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "python",
             "java",
             "data visualization",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -1624,9 +1625,9 @@
         "index": 75,
         "skills": [
             "software engineering",
+            "robotics",
             "machine learning",
             "project management",
-            "robotics",
             "information technology"
         ],
         "remote": false
@@ -1664,11 +1665,11 @@
         "skills": [
             "information technology",
             "software engineering",
-            "devOps",
             "javascript",
+            "devops",
             "python",
-            "machine learning",
-            "project management"
+            "project management",
+            "machine learning"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1728,7 +1729,7 @@
         "index": 80,
         "skills": [
             "project management",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology",
             "software engineering"
@@ -1823,10 +1824,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "C and C++",
-            "project management"
+            "c and c++",
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -1880,7 +1881,7 @@
         "index": 88,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -1900,11 +1901,11 @@
         "index": 89,
         "skills": [
             "software engineering",
-            "python",
             "java",
-            "C and C++",
             "machine learning",
             "project management",
+            "python",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -1962,7 +1963,7 @@
             "machine learning",
             "python",
             "robotics",
-            "C and C++",
+            "c and c++",
             "information technology",
             "artificial intelligence"
         ],
@@ -1981,6 +1982,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Jackson, Mississippi\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 93,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -2025,12 +2027,13 @@
         "index": 95,
         "skills": [
             "software engineering",
-            "python",
             "java",
             "matlab",
+            "python",
             "machine learning",
             "project management",
-            "C and C++"
+            "c and c++",
+            "information technology"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2071,7 +2074,7 @@
             "machine learning",
             "python",
             "robotics",
-            "C and C++",
+            "c and c++",
             "information technology",
             "artificial intelligence"
         ],
@@ -2125,6 +2128,7 @@
         "description": "Empower your future at U.S. Electrical Services, Inc.!\n\nUSESI is the country’s largest independent electrical wholesale distributor comprised of 10 regional businesses, over 100 years of experience, $100M+ in inventory, and more than 1,500 employees.\n\nJOB SUMMARY\n\nU.S. Electrical Services (USESI) is searching for a Data Science Intern to join their team! This exciting position will work remotely within our Business Intelligence team to implement cutting-edge Data Science projects and analyze/manage data.\n\nRESPONSIBILITIES\n\nAs a Data Science Intern with USESI, you’ll spend your summer learning and helping implement Data Science projects.\n\nThe main responsibility for position will be extracting and moving data and then using Machine Learning programs to turn that data into predictions that will enable our business leaders to better manage our business.\n\nYou’ll be a member of our Business Intelligence team. You’ll learn to extract and move data using SQL. As you continuously run different models you’ll become very familiar with the data science workflow process. Eventually you’ll be able to automate some processes using Python or SQL or come up with your own ideas on models that USESI could be implementing.\n\nThe internship will also include other data related responsibilities that fall into the other various tasks and responsibilities of the Business Intelligence team that may be outside the realm of Data Science.\n\nMachine Learning is a new and cutting-edge technology across the country and it is also a new area that USESI has been branching into. This is a great way to gain experience in a cutting-edge field and learn some very valuable skills.\n\nQUALIFICATIONS\n\nIn Pursuit of -OR- Already Obtained a bachelor’s degree in Computer Science, Mathematics, Economics, or relevant field\n\nStrong Computer Skills\n\nBeginner-level experience Programming (Python or SQL preferred, but not required)\n\nHigh School or College Level Statistics or Calculus Course Completed\n\nBackground knowledge in Data Science preferred, but not required\n\nAnalytical Problem-Solving Skills\n\nA strong sense of teamwork, but also able to work alone/remotely\n\nA passion to learn and try new things\n\nJob Type: Summer Internship\n\nIt is the policy of USESI and its affiliates to consider applicants for all positions without regard to race, color, religion, creed, gender, gender identity, national origin, age, disability, marital or veteran status, or any other legally protected status.\n\nAt USESI, we believe that our benefits should make a difference—to you, your job, and the life you lead outside of work. We are dedicated to supporting our most valuable asset, our employees!\n\nFull-time employees are eligible for the following comprehensive benefit plan:\n\nMedical, Dental, Vision, Rx coveragePaid Parental LeaveTeleMedicineMatching 401(k)Company-paid Life Insurance + (AD&D)Supplemental Life InsuranceShort and Long Term DisabilityFlexible Spending AccountsPaid LeaveEmployee Assistance Program (EAP)Choice of Voluntary Benefits including identity theft\n",
         "index": 100,
         "skills": [
+            "data science",
             "machine learning",
             "project management",
             "python",
@@ -2188,7 +2192,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -2212,7 +2216,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -2275,7 +2279,7 @@
             "javascript",
             "java",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -2297,6 +2301,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Austin, Texas\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 108,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -2340,9 +2345,9 @@
         "index": 110,
         "skills": [
             "software engineering",
-            "python",
-            "C and C++",
+            "c and c++",
             "project management",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -2414,6 +2419,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Bismarck, North Dakota\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 114,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -2529,9 +2535,9 @@
         "index": 120,
         "skills": [
             "software engineering",
-            "python",
-            "C and C++",
+            "c and c++",
             "project management",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -2569,7 +2575,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "remote": true
     },
@@ -2641,7 +2647,7 @@
         "index": 126,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -2679,7 +2685,7 @@
         "index": 128,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology"
         ],
@@ -2698,9 +2704,10 @@
         "description": "IQVIA is the leading human data science company focused on helping healthcare clients find unparalleled insights and better solutions for patients. Formed through the merger of IMS Health and Quintiles, IQVIA offers a broad range of solutions that harness the power of healthcare data, domain expertise, transformative technology, and advanced analytics to drive healthcare forward.\n\nA Healthcare Data Science Intern will provide support to the data science team in processing, analyzing, and visualization of data from clinical settings and other external healthcare datasets.\n\nAreas of responsibility may include:\n\n·Assist with data analyses and data processing tasks under the direction of more senior team members\n\n·Conduct exploratory analyses and review of healthcare data databases\n\n·Create custom summaries, reports, and visualizations summarizing data quality and the contents of healthcare datasets\n\n·Write generalized python scripts for reuse in profiling an array of datasets\n\n·Explore and script pilots of opportunities for use of machine learning (ML) and natural language processing (NLP) models using pythons nltk and/or scikit-learn\n\n·Conduct literature reviews and market analyses of external ML products\n\n·Documenting learnings and findings in a clear, clean manner\n\nSkills required:\n\n·Enrolled in a bachelors or graduate program preferably focused in computer science, informatics, statistics, or similar technical field\n\n·Excellent communication skills\n\n·Excellent analytical reasoning skills\n\n·Ability to learn data science concepts and tools\n\n·Motivated self-starter\n\n·Experience writing SQL or python code\n\n·Experience with basic statistics and/or visualizations (bonus for Tableau)\n\n·Familiarity with data processing and machine learning concepts\n\n·Bonus\n\noExperience with scikit-learn package for python\n\noFormal training on database management and design\n\nJoin Us\n\nMaking a positive impact on human health takes insight, curiosity, and intellectual courage. It takes brave minds, pushing the boundaries to transform healthcare. Regardless of your role, you will have the opportunity to play an important part in helping our clients drive healthcare forward and ultimately improve outcomes for patients.\n\nForge a career with greater purpose, make an impact, and never stop learning.\n\nIQVIA is an EEO Employer - Minorities/Females/Protected Veterans/Disabled\n\nIQVIA, Inc. provides reasonable accommodations for applicants with disabilities. Applicants who require reasonable accommodation to submit an application for employment or otherwise participate in the application process should contact IQVIAs Talent Acquisition team at workday_recruiting@iqvia.com to arrange for such an accommodation.",
         "index": 129,
         "skills": [
+            "data science",
             "machine learning",
-            "python",
             "data visualization",
+            "python",
             "project management",
             "information technology"
         ],
@@ -2724,9 +2731,9 @@
         "index": 130,
         "skills": [
             "software engineering",
-            "C and C++",
-            "machine learning",
             "robotics",
+            "c and c++",
+            "machine learning",
             "information technology"
         ],
         "remote": false
@@ -2744,8 +2751,8 @@
         "description": "--- This is a 3-6 month full-time internship opening ---\n\nDo you love data?\n\nAre you passionate about driving business insights using visualizations?\n\nDo you excel at designing and implementing complex data pipelines and automations necessary to keep a high tech startup thriving?\n\nWe are looking for a driven, independent, data analyst intern to join the data science team and work on the following tasks:\n\nTableau dashboard design and maintenanceData pipeline implementation and maintenanceDataset creation, curation, and organizationDay to day user and customer analytics\n\nApplicants must have:\n\nProficiency in Tableau and Python is a MUSTA degree in computer science or related field1 year minimum track record in applying analytics and data engineering to real world problems\n",
         "index": 131,
         "skills": [
-            "python",
             "data visualization",
+            "python",
             "software engineering"
         ],
         "remote": false
@@ -2782,6 +2789,7 @@
         "description": "About Us:\nAt ShareThis, a data company we are focused on providing the best quality of Internet user audiences to our partners and the ad tech markets. To fulfil this objective, the company hires and grooms top notch data scientists and engineers, who capable of building and evaluating cutting edge models and production-level algorithms in Natural Language Processing (NLP) and machine learning (ML). This summer, ShareThis Data Science team is looking to hire several unpaid interns to help with these models, while learning about ad tech and real-world applications of NLP, Python, text embeddings, Neural Networks and other hot tools. An exceptional candidate with a stellar performance will be given an offer to join ShareThis after the internship, subject to hiring availability.\n\nNOTE: This is an UNPAID summer internship with the Data Science Group at ShareThis.\n\nResponsibilities:\nQualitatively and quantitatively analyze textual data and evaluate cutting edge models in machine learning and NLPApply and advance your data munging and coding skills to evaluate modelsWork with and learn from top scientists and engineers in high tech industryLearn and understand the advertisement technology industry and ecosystemLearn and understand the production level constraints, systems, and solutionsWork with engineers to productionalize the modelsDevelop methods to evaluate new machine learning models on domain specific corporaMake a presentation at the end of the summer about your progress and achievementsLearn and utilize big data tools, such as GCP, BigQuery, AWS and others\nRequirements:\nStudents in STEM with at least a bachelor’s degree or near graduation from top STEM programs.GPA of 3.5 or higherStrong coding experience in Python or R, including pandas, numpy, scklearn, nltk, caret, e1071, …Database querying skills, including SQL.Previous coursework in Statistics, Computer Science and Machine Learning.Commitment to work 40 hour/week onsite in Palo Alto office, when California’s Shelter in Place order ends, and over a video conferencing.Understanding of key NLP and statistical methodsUnderstanding ML ecosystem: clustering, supervised learning, training/testing, linear regression, logistic regression, etc.Prior experience with building and evaluating machine learning algorithms\nPreferred Qualifications\nGPA 4.0Student near completion of their MS or PhD in STEM from a top programStrong record of publications, conference talks, Kaggle competitions\n",
         "index": 133,
         "skills": [
+            "data science",
             "machine learning",
             "python",
             "information technology",
@@ -2844,10 +2852,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "python",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -2868,8 +2876,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "python",
             "java",
+            "python",
             "machine learning",
             "information technology"
         ],
@@ -2891,8 +2899,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "python",
             "java",
+            "python",
             "machine learning",
             "information technology"
         ],
@@ -2968,9 +2976,9 @@
             "software engineering",
             "artificial intelligence",
             "data visualization",
-            "project management",
             "robotics",
-            "C and C++"
+            "c and c++",
+            "project management"
         ],
         "remote": false
     },
@@ -2989,10 +2997,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "python",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -3013,10 +3021,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "python",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -3055,10 +3063,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "python",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -3128,6 +3136,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Lansing, Michigan\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 150,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3210,6 +3219,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Juneau, Alaska\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 154,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3234,6 +3244,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Jackson, Mississippi\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 155,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3258,6 +3269,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Cheyenne, Wyoming\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 156,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3300,6 +3312,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Montpelier, Vermont\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 158,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3324,6 +3337,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Denver, Colorado\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 159,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3366,6 +3380,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Salem, Oregon\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 161,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3390,6 +3405,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Topeka, Kansas\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 162,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3414,6 +3430,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Harrisburg, Pennsylvania\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 163,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3456,6 +3473,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Juneau, Alaska\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 165,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3480,6 +3498,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Honolulu, Hawaii\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 166,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3540,6 +3559,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Bismarck, North Dakota\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 169,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3564,6 +3584,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Topeka, Kansas\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 170,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3588,6 +3609,7 @@
         "description": "The Buttonwood Tree is seeking a Data Science Intern to join our new venture. We are looking for someone who has a strong interest in putting their analytical and technical skills to use to help provide data driven insights to help our company grow and improve. This internship is intended for college students seeking internship credit and experience.About: The Buttonwood Tree is a new digital business newspaper covering high finance. The Buttonwood Tree got its name from the Buttonwood Agreement of 1792. Under a buttonwood tree stockbrokers aimed to organize the trading of securities in New York. It was the creation of the New York Stock Exchange and it is the birthplace of Wall Street as we know it today.Responsibilities: Data collection, curation, and maintenance for various databases regarding multiple company divisionsIntelligibly convey insights, analysis, and ideas to company decision makersImplement new strategies or methods as needed for specific models or analysisOptimize joint development efforts through appropriate database use and project designRequirements: Pursuing a degree in a quantitative field (Statistics, Computer Science, Econometrics, Mathematics, Engineering, etc.)Strong analytical skillsGood team cooperability, communication, and multitasking skillsSelf motivated and requiring minimal supervisionDesire to be a part of a start up culturePreferred: Familiar with Python, R, SQL, etcJob Type: InternshipPay: $0.00 per hourInternship Compensation:College CreditThis Job Is Ideal for Someone Who Is:Dependable -- more reliable than spontaneousDetail-oriented -- would rather focus on the details of work than the bigger pictureAchievement-oriented -- enjoys taking on challenges, even if they might failThis Company Describes Its Culture as:Innovative -- innovative and risk-takingOutcome-oriented -- results-focused with strong performance cultureTeam-oriented -- cooperative and collaborativeCompany's website:buttonwoodtree.netWork Remotely:Yes",
         "index": 171,
         "skills": [
+            "data science",
             "python",
             "project management",
             "software engineering"
@@ -3691,7 +3713,7 @@
             "javascript",
             "machine learning",
             "project management",
-            "C and C++",
+            "c and c++",
             "web development"
         ],
         "qualifications": [
@@ -3712,10 +3734,11 @@
         "description": "Job Description:\n\nØptimus Consulting, a data science and software company, is seeking a data science intern in their Washington D.C. area office for the summer term. Interns with the Data Science & Predictive Analytics team will participate in all aspects of work at Øptimus. In an environment where a \"long-term\" project lasts one or two weeks, no two days are the same. You won't be getting coffee. You'll sit in on meetings and work on multiple projects: writing call scripts that are used in hundreds of thousands of calls, streamlining our current workflow, and creating statistical models to meet the needs of our clients, just to name a few. You'll be doing the work that a full-time employee does. We'll match what you're good at with what you enjoy and what we need.\n\nOur internships are mostly geared towards those still in school, whether undergraduate or graduate. This job posting is for the spring 2020 period, with flexible starting dates in January. We don't guarantee full-time employment after an internship, but we're a growing firm and are always looking for bright, hard-working talent. If you're looking for a full-time job, this is a good first step and puts you ahead of the competition!\n\nQualifications:\n\n\n\nMust be able to learn quickly and juggle multiple projects with moving deadlines.\nMust have strong analytical skills.\nMust have at least one course in statistics or equivalent real-world experience.\nHaving courses or experience in machine learning, data mining, regression, generalized linear models, experimental design, and/or GIS is especially desired!\nMust have killer Excel skills and be incredibly competent in Word, PowerPoint, etc.\nMust have experience in R or Python - both is a plus!\nA passion for politics is preferred but not necessary.\nExperience with computer programming is a plus.\nExperience with statistical modeling is a plus.\n\n\nCompensation:\n\nInternships with Øptimus are paid commensurate with professional and academic experience.\n\nCompany:\n\nØptimus Consulting is a family of statisticians, graphic designers, data scientists, programmers, social media marketing analysts, and recovering politicos. Since its founding in 2013, 0ptimus has been at the forefront of developing innovative data and analytics software platforms. 0ptimus has designed and delivered data-driven strategies for leading political campaigns, Fortune 500 companies, and non-profits around the globe.\n\nWe handle a wide variety of projects and use many different technologies and programs to meet our clients' needs, so our culture here is one of constant learning and curiosity, while doing things the right way. We boast a two-floor office near the yellow and blue Metro lines, no cubicles, a nacho cheese machine, and kegerator. If you live by the \"work hard, play hard\" philosophy, then you'll be a great fit with the Øptimus team.",
         "index": 177,
         "skills": [
+            "data science",
             "machine learning",
             "python",
+            "c and c++",
             "project management",
-            "C and C++",
             "information technology",
             "software engineering"
         ],
@@ -3740,7 +3763,7 @@
             "javascript",
             "machine learning",
             "project management",
-            "C and C++",
+            "c and c++",
             "web development"
         ],
         "qualifications": [
@@ -3779,6 +3802,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Oklahoma City, Oklahoma\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 180,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3803,6 +3827,7 @@
         "description": "The Buttonwood Tree is seeking a Data Science Intern to join our new venture. We are looking for someone who has a strong interest in putting their analytical and technical skills to use to help provide data driven insights to help our company grow and improve. This internship is intended for college students seeking internship credit and experience.About: The Buttonwood Tree is a new digital business newspaper covering high finance. The Buttonwood Tree got its name from the Buttonwood Agreement of 1792. Under a buttonwood tree stockbrokers aimed to organize the trading of securities in New York. It was the creation of the New York Stock Exchange and it is the birthplace of Wall Street as we know it today.Responsibilities: Data collection, curation, and maintenance for various databases regarding multiple company divisionsIntelligibly convey insights, analysis, and ideas to company decision makersImplement new strategies or methods as needed for specific models or analysisOptimize joint development efforts through appropriate database use and project designRequirements: Pursuing a degree in a quantitative field (Statistics, Computer Science, Econometrics, Mathematics, Engineering, etc.)Strong analytical skillsGood team cooperability, communication, and multitasking skillsSelf motivated and requiring minimal supervisionDesire to be a part of a start up culturePreferred: Familiar with Python, R, SQL, etcJob Type: InternshipPay: $0.00 per hourInternship Compensation:College CreditThis Job Is Ideal for Someone Who Is:Dependable -- more reliable than spontaneousDetail-oriented -- would rather focus on the details of work than the bigger pictureAchievement-oriented -- enjoys taking on challenges, even if they might failThis Company Describes Its Culture as:Innovative -- innovative and risk-takingOutcome-oriented -- results-focused with strong performance cultureTeam-oriented -- cooperative and collaborativeCompany's website:buttonwoodtree.netWork Remotely:Yes",
         "index": 181,
         "skills": [
+            "data science",
             "python",
             "project management",
             "software engineering"
@@ -3823,6 +3848,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Oklahoma City, Oklahoma\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 182,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3864,6 +3890,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Des Moines, Iowa\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 184,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -3888,6 +3915,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Santa Fe, New Mexico\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 185,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -4007,8 +4035,8 @@
         "index": 191,
         "skills": [
             "software engineering",
-            "python",
             "project management",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -4047,10 +4075,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "python",
             "java",
             "data visualization",
-            "C and C++",
+            "python",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -4071,7 +4099,7 @@
         "skills": [
             "project management",
             "information technology",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "software engineering"
         ],
@@ -4122,7 +4150,7 @@
             "javascript",
             "angular",
             "java",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -4140,11 +4168,11 @@
         "index": 197,
         "skills": [
             "software engineering",
-            "scala",
             "javascript",
+            "scala",
             "python",
-            "machine learning",
             "project management",
+            "machine learning",
             "information technology"
         ],
         "remote": true
@@ -4203,6 +4231,7 @@
         "description": "About Pivot Bio:\nFueled by an innovative drive and a deep understanding of the soil microbiome, Pivot Bio is pioneering game-changing advances in agriculture. Our first commercial product harnesses the power of naturally-occurring microbes to provide nutrients to crops. We are dedicated to providing new sustainable ways for farmers to improve yield as they work to help feed the world's growing population. Read more about Pivot Bio in Grist or Wired.\nData Science/Stats Intern JD (Location: Berkeley, CA; Remote OK)\n\nThe Pivot Bio field technology team quantifies the sustainability impact of its products through advanced measurement and analytics. Pivot Bio collects data from the greenhouse and the field that contain inherently hierarchical structures, and tools to analyze such data are needed for use by scientists and data scientists within the company. The successful candidate will help design, implement and deploy tools for hierarchical data analysis that can be used by non-experts within Pivot Bio.\n\nResponsibilities:\n\n\nHelp determine our data science strategy for hierarchical modeling.\nImplement common hierarchical models in Python.\nDevelop simple-to-use tools to verify that the models converge properly.\nWork with scientists within Pivot Bio to make sure the interface and outputs of your tools meet the needs of stakeholders.\n\nRequirements:\n\n\nPursuing a PhD. in a quantitative discipline, such as ecology, computer science, or statistics. \n\nExperience with Bayesian or hierarchical/mixed effect modeling. \n\nExperience with statistical model development in Python, GUI development is a plus.\nEnthusiasm for working with challenging, noisy data.\n",
         "index": 200,
         "skills": [
+            "data science",
             "python",
             "information technology"
         ],
@@ -4221,6 +4250,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Salt Lake City, Utah\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 201,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -4285,6 +4315,7 @@
         "description": "Job Information\n\nNBC Universal Data Science Internships  Fall 2020, Remote in Salt Lake City, Utah\n\nJob Number 56019BR\n\nJob Title Data Science Internships  Fall 2020, Remote\n\nBusiness Segment Staff\n\nSub-Business Campus Programs Interns\n\nPosting Category Internships\n\nAbout Us We're going remote for the Fall 2020 internship semester! We recognize that in this unique time, connecting students with opportunities to learn and grow is more important than ever. NBCUniversals commitment to developing early career talent has never been stronger.\n\nOur Interns are a diverse and curious community of innovators and trail blazers. They bring their passion for media, entertainment and technology along with their desire to learn each day. They contribute to the company in ways that matter. We engage them all semester long with program-wide opportunities for professional development, leadership exposure, networking and fun  all from the comfort of their own home.\n\nHere You Can connect to your future!\n\nCountry United States\n\nState Multiple Locations\n\nCity See List Below\n\nResponsibilities\n\nQualifications/Requirements\n\nCurrent Master's or PhD student at an Accredited Institution in Data Science, Computer Science, Operations Research, Statistics, Mathematics, Economics, or other relevant quantitative fields. Must be able to provide documentation to confirm your degree progress\n\nWorking knowledge of at least two of the following programming languages: R, Python, Julia, Java, Scala or similar\n\nPrior experience withMachine Learningand/or statistical modeling\n\nAdvanced working knowledge of statistics and its applications for inferential data analysis\n\nFamiliarity with Spark, Hive and/or Hadoop\n\nFamiliarity with relational databases and SQL\n\nExperience with data visualization techniques and concepts\n\nCumulative GPA of 3.0 or above\n\nMust be 18 years of age or older\n\nMust be authorized to work in the United States without visa sponsorship by NBCUniversal\n\nDesired Characteristics\n\nInterest in the media industry\n\nCommitment to building an inclusive work environment\n\nStrong interpersonal skills; must be able to work effectively as part of a project team and foster team cooperation\n\nExcellent verbal and written communication\n\nNotices\n\nNBCUniversals policy is to provide equal employment opportunities to all applicants and employees without regard to race, color, religion, creed, gender, gender identity or expression, age, national origin or ancestry, citizenship, disability, sexual orientation, marital status, pregnancy, veteran status, membership in the uniformed services, genetic information, or any other basis protected by applicable law. NBCUniversal will consider for employment qualified applicants with criminal histories in a manner consistent with relevant legal requirements, including the City of Los Angeles Fair Chance Initiative For Hiring Ordinance, where applicable.",
         "index": 204,
         "skills": [
+            "data science",
             "information technology",
             "java",
             "data visualization",
@@ -4437,7 +4468,7 @@
         "skills": [
             "data visualization",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -4473,10 +4504,11 @@
         "description": "Data Science Intern Job Description\n\nAre you equal parts clever and careful? Are you curious and creative? Do you love both uncovering and crafting a compelling story? If that describes you then you might be just the right kind of candidate to join the most exciting team at Intel, the Insights Animation Studio. As the HR Data Science team we work well beyond reporting or curiosity projects, we bring data to life. Our mission is to be a strategic advantage for Intel by accelerating every employee.\n\nSuccessful interns will gain experience in data munging, statistical learning, machine learning, and data visualization. Candidates must love storytelling and be able to demonstrate an ability to synthesize a narrative both visually and verbally. Algorithms don't drive decisions, stories do. Members of our team are excellent listeners. They should be able to distill what people need from what they say they want. Ultimately it's their job to translate business and functional needs into concrete deliverables and to do it quickly. High performers will get their greatest satisfaction when someone sees their work and says, \"Wow!\"\n\nQualifications\n\nMinimum qualifications:\n\ni Pursuing a Master's degree in data science, statistics, computer science, informatics, engineering, applied mathematics, economics, physics,or any other related field.\n\n6 months of experience or have taken at least two classes of the below skills:\n\ni A data science related language Python, R, SQL, etc.\n\ni Web development languages HTML, CSS, etc\n\nPreferred Qualifications. We are looking for somebody with:\n\ni Creative hobbies such as art, woodworking, writing, dancing, filmmaking, music, etc.\n\ni Background in delivering UX for dashboards and data visualization\n\ni Knowledge of resource managers e.g. OpenStack, Mesos, Kubernetes, Vmware, Git.\n\ni Ability to clearly communicate concepts including visuals and key insights\n\ni Knowledge in FLASK is a plus\n\nThis U.S. position is open to U.S. Workers Only. A U.S. Worker is someone who is either a U.S. Citizen, U.S. National, U.S. Lawful Permanent Resident, or a person granted Refugee or Asylum status by the U.S. Government. Intel will not sponsor a foreign national for this position\n\nInside this Business Group\n\nIntel's Human Resources group is responsible for hiring, developing and retaining the best and brightest employees while continuing to strengthen the company's culture and values. Intel Human Resources provides first-rate, cost-effective services and support to employees worldwide and is dedicated to advancing Intel's business goals.\n\nPosting Statement\n\nAll qualified applicants will receive consideration for employment without regard to race, color, religion, religious creed, sex, national origin, ancestry, age, physical or mental disability, medical condition, genetic information, military and veteran status, marital status, pregnancy, gender, gender expression, gender identity, sexual orientation, or any other characteristic protected by local law, regulation, or ordinance....\n\nUS Intern JR0137033 Hillsboro\n\nRequisition #: JR0137033\n\npca3lyuhf",
         "index": 213,
         "skills": [
+            "data science",
             "machine learning",
             "project management",
-            "python",
             "data visualization",
+            "python",
             "information technology",
             "web development"
         ],
@@ -4498,7 +4530,7 @@
             "software engineering",
             "java",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology",
             "mobile development"
@@ -4578,9 +4610,9 @@
         "skills": [
             "project management",
             "software engineering",
+            "angular",
             "java",
             "scala",
-            "angular",
             "machine learning"
         ],
         "remote": false
@@ -4599,8 +4631,8 @@
         "index": 219,
         "skills": [
             "software engineering",
-            "angular",
             "javascript",
+            "angular",
             "python",
             "machine learning",
             "information technology"
@@ -4622,8 +4654,8 @@
         "index": 220,
         "skills": [
             "software engineering",
-            "angular",
             "javascript",
+            "angular",
             "python",
             "machine learning",
             "information technology"
@@ -4690,8 +4722,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -4715,7 +4747,7 @@
         "skills": [
             "java",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "project management",
             "information technology",
             "web development"
@@ -4735,6 +4767,7 @@
         "description": "  Here at UFG, we have a shared vision built on the dynamic foundation of people, service, profit and growth. We believe this vision is the right approach for our employees, and the smart approach for our business. If you believe in the principles of “people and service” and feel excitement from “profit and growth,” then we encourage you to check out our internship program.  UFG can offer you an award-winning workplace and a trustworthy, financially-stable company. While we’ve always known our commitment to employees and financial stewardship, it is good to have others recognize our dedicated efforts. UFG was named to the “2017 Top Workplaces” list by The Des Moines Register, and was also included on the Forbes’ America’s Most Trustworthy Financial Companies” list for 2015, 2016 and 2017. Additionally, UFG is a super-regional property and casualty insurer rated “A” (Excellent) by A.M. Best Company. UFG is looking for an ambitious, career-minded individual with a strong data science aptitude and outstanding people skills for a professional Data Science Co-op/Internship. Get a head start with this internship as the hours during the semester are flexible/part-time while moving to full-time in the Summer. These positions can be located at our office in Pennington, NJ or Webster, TX.  Assist with the data science team with the following daily activities:Work with management to prioritize modeling needsSupport research and development efforts in a diverse set of challenges as we rapidly prototype and build new modelsExtensive experience analyzing data and a broad understanding of core statistical and ML techniquesDesign, build, and deploy Machine Learning (ML) systems aligning to business objectivesTranslate and champion ML capabilities for non-technical audiencesStay current with modeling techniques/technologiesMaintain positive, professional business acumen and relationships with cross-functional teams and external customersTrain end users on new modelsResearch opportunities for data acquisition and new uses for existing dataCollaborate with data architects, analysts and IT team members on project goals  Bachelor’s degree required – preferably in related field of study such as actuarial science, or statistics/applied statisticsCompetencies typically acquired through a Ph.D. (in Statistics, Computer Science, Mathematics, or other scientific field of study) preferred.Applicants should possess proven technical and analytical abilities, leadership potential, innovation, creativity and superb communication skills. Standard knowledge in the use of data sources and applications to conduct researchStrong working knowledge of data analysis Ability to analyze data and review analysis from others and identify and resolve basic data issuesComputer proficiency in Microsoft Office products including Excel, Word, Outlook, PowerPointStrong written and verbal communication skills including the ability to effectively collaborate with multi-disciplinary groups and all organizational levelsHigh level organizational and project management skills in order to handle multiple concurrent assignments in a timely manner and to monitor processes throughout a team or departmentStrong decision making skillsWorks effectively in a team environmentExperience working with SQL, SAS, R languages preferred ",
         "index": 225,
         "skills": [
+            "data science",
             "machine learning",
             "project management",
             "information technology"
@@ -4760,8 +4793,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -4804,8 +4837,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -4827,11 +4860,13 @@
         "description": "Description\n\nVibrent, a rapidly growing health-tech startup, is looking for Data Scientist Interns to support data quality efforts and coordinate analytics requests for projects, including the All of Us Research Program .\nInterns would be expected to work on entry-level analytics problems and would generally have another area of primary responsibility, such as QC of reports/datasets/visualizations, or helping document and manage incoming analytics requests.\nWe’re looking for candidates who thrive in professional, strategic, and innovative environments, and who are committed to delivering quality results. The candidate must be able to think independently, analyze, troubleshoot and resolve complex scientific and technical problems.\nYou will work with very large, complex, cloud-based scientific datasets and help identify and answer questions that will shape this scientific study. The work that you do will contribute to improving the health of people across the nation.\n\nPossible Role and Responsibilities:\nWork with stakeholders to identify and document requests for analytics services\nHelp manage the overall portfolio of requests, including those you own and those assigned to team members, helping track delivery dates and alerting team to upcoming deadlines\nUse Jupyter Notebooks (Python), SQL, and/or Tableau to complete analytics requests\nTest your own and others’ analytics results in a rigorous way\nValidate data pipelines and datasets\nActively champion data quality, and develop tools to assess, diagnose, and repair data quality issues\nCollaborate with analytics and engineering team members in multiple partner organizations to understand program needs and devise possible solutions\nImplement new statistical or other mathematical methodologies as needed for specific models or analysis\nCommunicate results and ideas to both internal and external stakeholders\nWork as a team member in a highly creative and collaborative environment\n\nRequired Skills and Education:\nSome undergraduate work, or bachelor’s degree in data science, statistics, computer science, applied math, or a related discipline\nFamiliarity with Python, R, or SAS programming languages (Some Python experience preferred)\nFamiliarity with SQL\nWillingness to learn new technology tools\nStrong analytical, verbal and written communications skills\nMust be a critical thinker and self-starter\nAbility to work in fast-paced nature of a high-growth project\n\nWe offer a competitive compensation package, growth opportunities, convenient northern Virginia location, stability and longevity as we are fully funded through a large grant for the next 5 years. We enjoy working with the latest tools and technologies including enterprise mobile apps, fitness sensors, medical devices, cloud computing, machine learning, big data and analytics. We partner with national leaders in healthcare, technology and research.\nVibrent is an exciting and innovative B2B2C SaaS-based mobile health technology company that stands at the epicenter of a global transformation in healthcare. We are seeking talented and experienced professionals who are highly motivated to be a part of something special. We are proud to be the chosen as the Participant Technology Systems Center of NIH’s high-profile Precision Medicine Initiative / All of Us Research Program.\nWe are an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, national origin, age, sexual orientation, gender identity, disability or veteran status.",
         "index": 229,
         "skills": [
+            "data science",
             "machine learning",
             "project management",
-            "python",
             "data visualization",
-            "information technology"
+            "python",
+            "information technology",
+            "software engineering"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4872,8 +4907,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -4898,8 +4933,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -4924,8 +4959,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -4969,8 +5004,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -4995,8 +5030,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5021,8 +5056,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5047,8 +5082,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5073,8 +5108,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5099,8 +5134,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5125,8 +5160,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5151,8 +5186,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5231,8 +5266,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5257,8 +5292,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5319,8 +5354,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5345,8 +5380,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5389,8 +5424,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5415,8 +5450,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5438,12 +5473,13 @@
         "description": "Defenders of Wildlife Careers\n\nGeoinformatics & Data Science Intern - Fall 2020\n\nInternships Washington, District Of Columbia\n\n\n\nApply\n\nDescription\n\nGeoinformatics & Data Science Intern  Fall 2020\n\nOverview:\n\nDefenders of Wildlife, a national, nonprofit environmental organization dedicated to the protection of all native animals and plants in their natural communities, seeks a Geoinformatics & Data Science Intern to work in its Center for Conservation Innovation (CCI) during the summer of 2020. Launched in 2017, CCI works at the intersection of science, technology, and policy to develop creative, practical solutions to improve wildlife conservation. The Geoinformatics & Data Science Intern will work on projects contributing to one or more of CCIs core objectives filling knowledge gaps to inform conservation decisions and policies, and developing tools that improve conservation implementation using data and technology.\n\nThe Geoinformatics & Data Science Internship is an opportunity for an advanced college, graduate, or post-graduate student to work with CCI and other Defenders staff at the interface of science, technology, and national conservation policy. In this position, the intern may help collect and analyze large spatial datasets, create published reports, scientific articles, web applications, and maps related to wildlife conservation, especially wildlife species listed under the Endangered Species Act (ESA). Skill development will vary with the specific project, but the intern will generally have the opportunity to develop programming and analytical skills, experience in remote sensing, programming, statistical analyses, scientific writing, and creating interactive data visualizations. Further, the intern will gain an understanding of how wildlife laws such as the ESA are implemented. This internship advances Goal 1, Strategy 4 of Defenders Strategic Plan, to Mobilize science and technology to advance wildlife conservation, and Goal 2, Strategy 1, to Mobilize members and supporters.\n\nBased on current projects, the Geoinformatics & Data Science Intern may work in one or both of the following domains:\n\n(1)    Data Science and Conservation Tool Development  Projects will focus on collecting, analyzing, and presenting data related to conservation law and policy. The intern will become familiar with the implementation of environmental laws such as the Endangered Species Act, and will conduct statistical analyses and create online tools for visualizing data. Projects aim to quantify policy effectiveness, present recommendations to improve species conservation, and generate tools to make data accessible to the public.\n\n(2)    Geoinformatics and Remote Sensing  Projects will focus on technical advances in the use, application, and presentation of remote sensing data for conservation. The intern will learn and refine their geospatial and programming skills by assisting with the development of algorithms and tools, such as automated change detection, image classification, and computer vision. Projects aim to advance conservationists abilities to assess the status of species habitats and monitor for on-the-ground compliance with environmental laws.\n\nThis internship position is for the fall of 2020, from August 31 through December (end date flexible). Applications are due by Sunday, July 5 at 11:59 PM EST. We generally accept new applications for the Geoinformatics & Data Science Intern position for the fall (deadline in early July; start in early September), spring (deadline in early December; start in early February) and summer (deadline in early March; start in early June) terms, with each term lasting 3-4 months.\n\nResponsibilities:\n\nAssist Defenders Center for Conservation Innovation staff in developing and implementing various projects evaluating and improving conservation policy and practice by:\n\n* Designing research questions;\n* Performing standardized data collection protocols;\n* Collecting and organizing relevant data/databases;\n* Conducting spatial and non-spatial statistical analyses;\n* Creating interactive web applications and/or online maps;\n* Developing tools;\n* Writing peer reviewed and non-peer reviewed manuscripts.\n\nQualifications:\n\nInterns must be self-starters driven by the opportunity to help transform wildlife conservation using science and technology while learning new skills. Interns should have a passion for wildlife conservation, strong research and analytical skills, a proven ability to work with people from a variety of backgrounds, and excellent written and verbal communication skills.\n\nRequired qualifications:\n\n* Demonstrated experience using R, Python, and/or JavaScript for data management, analysis, and visualization;\n\nPreferred qualifications:\n\n* Geospatial skills, including work in QGIS, ArcGIS, and/or Google Earth Engine;\n* Experience with and strong interest in remote sensing data;\n* Familiarity and interest in deep learning and artificial intelligence;\n* Background in environmental science, wildlife management, natural resources, or a related field.\n\nLocation:\n\nInternships are located at Defenders Headquarters in Washington, D.C. Remote work may be considered for exceptional candidates.\n\nCompensation:\n\nUnpaid. Local transportation costs up to $10 per day will be reimbursed. Students are encouraged to seek funding opportunities through their schools or outside sources.\n\napplication:\n\nPlease submit as a single PDF a cover letter (letter of interest), resume, and a list of contact information (email, phone) for up to 3 professional references. In the cover letter, be sure to address:\n\n-          your interest in working with Defenders of Wildlife and the Center for Conservation Innovation specifically;\n\n-          how your skills fit the goals and responsibilities of the internship position;\n\n-          how the internship will assist with your career goals;\n\n-          the date of your deadline if you require a decision by a deadline for school credit or funding; and\n\n-          whether you are available part-time or full-time (either may be possible depending on the specific internship project).\n\nIf you apply to more than one intern position at Defenders of Wildlife, please be sure to tailor your applications to each position. Inquiries about the Geoinformatics & Data Science Intern position may be emailed to the hiring manager, Dr. Mike Evans, at mevans (at) defenders (dot) org.\n\nIt is the policy of Defenders of Wildlife to provide equal employment opportunity to all qualified individuals without regard to their race, color, religion, national origin, sex, age, disability, or any other characteristic protected by law, in all personnel actions. Defenders of Wildlife is a national, non-profit membership organization dedicated to the protection of all native wild animals and plants in their natural communities. Our employees work in an environment that is inclusive and honors each of our unique perspectives and backgrounds. We believe that the conservation of biological diversity is best advanced by the contributions of people of diverse backgrounds, experiences, beliefs and cultures. We strive toward a collective goal of including all people in the conservation of our Nations wildlife and wild places.",
         "index": 255,
         "skills": [
+            "data science",
             "project management",
             "information technology",
             "javascript",
-            "python",
             "data visualization",
-            "C and C++",
+            "python",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "unpaid",
@@ -5463,11 +5499,13 @@
         "description": "Description\n\nVibrent, a rapidly growing health-tech startup, is looking for Data Scientist Interns to support data quality efforts and coordinate analytics requests for projects, including the All of Us Research Program .\nInterns would be expected to work on entry-level analytics problems and would generally have another area of primary responsibility, such as QC of reports/datasets/visualizations, or helping document and manage incoming analytics requests.\nWe’re looking for candidates who thrive in professional, strategic, and innovative environments, and who are committed to delivering quality results. The candidate must be able to think independently, analyze, troubleshoot and resolve complex scientific and technical problems.\nYou will work with very large, complex, cloud-based scientific datasets and help identify and answer questions that will shape this scientific study. The work that you do will contribute to improving the health of people across the nation.\n\nPossible Role and Responsibilities:\nWork with stakeholders to identify and document requests for analytics services\nHelp manage the overall portfolio of requests, including those you own and those assigned to team members, helping track delivery dates and alerting team to upcoming deadlines\nUse Jupyter Notebooks (Python), SQL, and/or Tableau to complete analytics requests\nTest your own and others’ analytics results in a rigorous way\nValidate data pipelines and datasets\nActively champion data quality, and develop tools to assess, diagnose, and repair data quality issues\nCollaborate with analytics and engineering team members in multiple partner organizations to understand program needs and devise possible solutions\nImplement new statistical or other mathematical methodologies as needed for specific models or analysis\nCommunicate results and ideas to both internal and external stakeholders\nWork as a team member in a highly creative and collaborative environment\n\nRequired Skills and Education:\nSome undergraduate work, or bachelor’s degree in data science, statistics, computer science, applied math, or a related discipline\nFamiliarity with Python, R, or SAS programming languages (Some Python experience preferred)\nFamiliarity with SQL\nWillingness to learn new technology tools\nStrong analytical, verbal and written communications skills\nMust be a critical thinker and self-starter\nAbility to work in fast-paced nature of a high-growth project\n\nWe offer a competitive compensation package, growth opportunities, convenient northern Virginia location, stability and longevity as we are fully funded through a large grant for the next 5 years. We enjoy working with the latest tools and technologies including enterprise mobile apps, fitness sensors, medical devices, cloud computing, machine learning, big data and analytics. We partner with national leaders in healthcare, technology and research.\nVibrent is an exciting and innovative B2B2C SaaS-based mobile health technology company that stands at the epicenter of a global transformation in healthcare. We are seeking talented and experienced professionals who are highly motivated to be a part of something special. We are proud to be the chosen as the Participant Technology Systems Center of NIH’s high-profile Precision Medicine Initiative / All of Us Research Program.\nWe are an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, national origin, age, sexual orientation, gender identity, disability or veteran status.",
         "index": 256,
         "skills": [
+            "data science",
             "machine learning",
             "project management",
-            "python",
             "data visualization",
-            "information technology"
+            "python",
+            "information technology",
+            "software engineering"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5507,11 +5545,11 @@
         "skills": [
             "machine learning",
             "information technology",
-            "python",
             "data visualization",
             "deep learning",
-            "project management",
-            "C and C++"
+            "python",
+            "c and c++",
+            "project management"
         ],
         "remote": false
     },
@@ -5528,11 +5566,13 @@
         "description": "Description\n\nVibrent, a rapidly growing health-tech startup, is looking for Data Scientist Interns to support data quality efforts and coordinate analytics requests for projects, including the All of Us Research Program .\nInterns would be expected to work on entry-level analytics problems and would generally have another area of primary responsibility, such as QC of reports/datasets/visualizations, or helping document and manage incoming analytics requests.\nWe’re looking for candidates who thrive in professional, strategic, and innovative environments, and who are committed to delivering quality results. The candidate must be able to think independently, analyze, troubleshoot and resolve complex scientific and technical problems.\nYou will work with very large, complex, cloud-based scientific datasets and help identify and answer questions that will shape this scientific study. The work that you do will contribute to improving the health of people across the nation.\n\nPossible Role and Responsibilities:\nWork with stakeholders to identify and document requests for analytics services\nHelp manage the overall portfolio of requests, including those you own and those assigned to team members, helping track delivery dates and alerting team to upcoming deadlines\nUse Jupyter Notebooks (Python), SQL, and/or Tableau to complete analytics requests\nTest your own and others’ analytics results in a rigorous way\nValidate data pipelines and datasets\nActively champion data quality, and develop tools to assess, diagnose, and repair data quality issues\nCollaborate with analytics and engineering team members in multiple partner organizations to understand program needs and devise possible solutions\nImplement new statistical or other mathematical methodologies as needed for specific models or analysis\nCommunicate results and ideas to both internal and external stakeholders\nWork as a team member in a highly creative and collaborative environment\n\nRequired Skills and Education:\nSome undergraduate work, or bachelor’s degree in data science, statistics, computer science, applied math, or a related discipline\nFamiliarity with Python, R, or SAS programming languages (Some Python experience preferred)\nFamiliarity with SQL\nWillingness to learn new technology tools\nStrong analytical, verbal and written communications skills\nMust be a critical thinker and self-starter\nAbility to work in fast-paced nature of a high-growth project\n\nWe offer a competitive compensation package, growth opportunities, convenient northern Virginia location, stability and longevity as we are fully funded through a large grant for the next 5 years. We enjoy working with the latest tools and technologies including enterprise mobile apps, fitness sensors, medical devices, cloud computing, machine learning, big data and analytics. We partner with national leaders in healthcare, technology and research.\nVibrent is an exciting and innovative B2B2C SaaS-based mobile health technology company that stands at the epicenter of a global transformation in healthcare. We are seeking talented and experienced professionals who are highly motivated to be a part of something special. We are proud to be the chosen as the Participant Technology Systems Center of NIH’s high-profile Precision Medicine Initiative / All of Us Research Program.\nWe are an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, national origin, age, sexual orientation, gender identity, disability or veteran status.",
         "index": 259,
         "skills": [
+            "data science",
             "machine learning",
             "project management",
-            "python",
             "data visualization",
-            "information technology"
+            "python",
+            "information technology",
+            "software engineering"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5552,6 +5592,7 @@
         "description": "Worker Sub-Type:Student (Fixed Term) Job Description:\n\nPOSITION SUMMARY\n\nBlackBerry Spark is seeking a student intern to work directly with its Data Science Engineering team. We build tools and systems for cloud processing, ETL, and machine leaning model training, evaluation, QA, and delivery to BlackBerry cloud and endpoint products. This intern role will help build new python software to enhance our internal tools, build new data pipelines, improve our existing analytics, or provide new features to other internal teams. We work hard to build an empathetic, people-focused team where questions and curiosity are encouraged, and collaboration is the norm.\n\nLocation: Portland, OR\n\nRESPONSIBILITIES\n\n\nDevelopment of Python software, guided by your mentor\nWriting and running unit tests for Python codeWorking with Git and our internal CI/CD tools to make your code available to other team members\n\nSKILLS AND QUALIFICATIONS\n\n\nAt least two years of relevant coursework (i.e. not just GE’s)\nExperience programming in PythonProjects, coursework, or experience using AWS cloud servicesPost-graduate StudentPrior internship or job experience programming in Python\n\nADDITIONAL ASSETS\n\nProjects, coursework, or experience related to machine learningCoursework or experience with linear algebra and/or multidimensional statisticsCoursework or experience with high-dimensional dataAble to converse comfortably and thoughtfully on technical topicsCareful listener\n\nJob Family Group Name:Business Practices & OperationsScheduled Weekly Hours:40",
         "index": 260,
         "skills": [
+            "data science",
             "software engineering",
             "python",
             "machine learning",
@@ -5572,6 +5613,7 @@
         "description": "Worker Sub-Type:Student (Fixed Term) Job Description:\n\nPOSITION SUMMARY\n\nBlackBerry Spark is seeking a student intern to work directly with its Data Science Engineering team. We build tools and systems for cloud processing, ETL, and machine leaning model training, evaluation, QA, and delivery to BlackBerry cloud and endpoint products. This intern role will help build new python software to enhance our internal tools, build new data pipelines, improve our existing analytics, or provide new features to other internal teams. We work hard to build an empathetic, people-focused team where questions and curiosity are encouraged, and collaboration is the norm.\n\nLocation: Portland, OR\n\nRESPONSIBILITIES\n\n\nDevelopment of Python software, guided by your mentor\nWriting and running unit tests for Python codeWorking with Git and our internal CI/CD tools to make your code available to other team members\n\nSKILLS AND QUALIFICATIONS\n\n\nAt least two years of relevant coursework (i.e. not just GE’s)\nExperience programming in PythonProjects, coursework, or experience using AWS cloud servicesPost-graduate StudentPrior internship or job experience programming in Python\n\nADDITIONAL ASSETS\n\nProjects, coursework, or experience related to machine learningCoursework or experience with linear algebra and/or multidimensional statisticsCoursework or experience with high-dimensional dataAble to converse comfortably and thoughtfully on technical topicsCareful listener\n\nJob Family Group Name:Business Practices & OperationsScheduled Weekly Hours:40",
         "index": 261,
         "skills": [
+            "data science",
             "software engineering",
             "python",
             "machine learning",
@@ -5595,8 +5637,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5639,8 +5681,8 @@
             "information technology",
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "web development",
             "react"
         ],
@@ -5662,11 +5704,12 @@
         "description": "Taylor Corporation is seeking aData Science Intern to play a key role on our Strategic Analytics team in North Mankato, MN. Our Data Science Interns will be exposed to all stages of our analytics implementation process, including client requirements gathering, upfront analysis, documentation, on-going mentoring, as well as data modeling and report development activities.\n\nAs a participant of an internship program, a junior or senior year intern performs various duties and responsibilities as assigned for a function that has relevance to the academic major and future occupational interest of the student. The internship is to provide the student with a hands-on, real-world experience in which they can integrate and apply their knowledge and skills from the classroom and gain additional knowledge and experience. The duties and responsibilities performed should involve the exposure to and application of professional knowledge and judgment.\n\nEssential functions:\n\n Assists in identifying business trends and problems through data analysis. Interprets results from multiple sources using a variety of techniques, ranging from simple data aggregation via statistical analysis to complex data mining. Prepares data, helps implements data models and develops database to support the business solutions. Serve as the key point of contactfor business stakeholders/client; translate technical information into easy to understand terms for the business and translate business requirements into technical information for development staff. Clearly and concisely document requirements and functional specifications, create mock-ups, prototypes, ad-hoc queries and other artifacts to support requirements.Define metrics to be used, which metrics to track, how to measure them and in what way to collect the data. Develop visualizations and reports grounded in statistical best practices that facilitate effective communication of results and key findings to internal customers. Educate users as to how to use and interpret the analytical dashboards\n\nQualificationsand experience:\n\n Familiarity with Microsoft Office product suite (Word,Outlook, PowerPoint, Visio); advanced Excel skills required (VLOOKUPs, SUMIFS/COUNTIFS, Pivot Tables, Conditional Formatting) Strong algebra and statistics experience/coursework required, some calculus and/or linear algebra preferred. Some SQL, R/Python, Basic Database/Warehouse development KnowledgeUnderstanding of relational database systems and querying and analyzing raw data for modeling and validation purposes Excellent writing, listening, and client-facing communication skills;ability to explain complicated or technical information in a simple way to non-technical audiences Effective time management skills, ensuring adherence to client timelines and business needs; prioritization of efforts across clients \n\n\nAdditional requirements:\n\n Exposure to data warehousing, data modeling, predictive analytics, machine learning, process simulation, or optimization techniques, particularly as it relates to sales and marketingpreferred Experience building reports and dashboards in self-service reporting platforms (e.g., Power BI, Tableau,QlikView, etc.) preferred  Curiosity and passion about data, visualization and solving problems Creativity to determine the best solution for a real-world problem with quantitative data Demonstrated ability to effectively facilitate meetingswith strong presentation skills\n\nHere is how we are going to keep you safe in the workplace:\n\nOur focus continues to be on our employees and their wellbeing, and we have taken steps to ensure your safety in all our facilities. The following are workplace safety guidelines in each of our Taylor locations:\n\nMasks are provided and will be required in all our facilitiesEmployees will maintain at least 6 feet of distance whenever possibleWe have hand sanitizer and soap & water readily availableIncreased cleaning and disinfection of high traffic areasCommunication & Action Plans if one of our employees shows symptoms or tests positive for COVID-19\n\n\nAbout Taylor Corporation\n\nOne of the top five graphics communications companies in North America, Taylor’s family of companies provide a diverse set of products, services and technologies addressing the toughest communication challenges. For 45 years, Taylor has been a premier provider of powerful and innovative products, services and expertise for individuals, businesses and distributors large and small. Our 10,000+ employees spanning more than 25 states and nine countries work diligently to create the interactive, printing and marketing solutions that have helped build some of the world’s more recognizable brands. Everything we do begins with identifying the unique priorities and needs of our customers and creating one-of-a-kind solutions. We offer a full range of benefits to power our employees’ potential including: health, dental, vision and life insurance; a 401(k) plan; paid time off (PTO) and holiday pay, and more.\n\nTaylor Corporation is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status. ",
         "index": 265,
         "skills": [
+            "data science",
             "machine learning",
             "information technology",
-            "python",
             "data visualization",
-            "project management"
+            "project management",
+            "python"
         ],
         "compensation": "paid",
         "remote": false
@@ -5704,10 +5747,10 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "angular",
             "machine learning",
             "project management",
+            "python",
             "web development"
         ],
         "compensation": "unpaid",
@@ -5762,11 +5805,12 @@
         "description": "Taylor Corporation is seeking aData Science Intern to play a key role on our Strategic Analytics team in North Mankato, MN. Our Data Science Interns will be exposed to all stages of our analytics implementation process, including client requirements gathering, upfront analysis, documentation, on-going mentoring, as well as data modeling and report development activities.\n\nAs a participant of an internship program, a junior or senior year intern performs various duties and responsibilities as assigned for a function that has relevance to the academic major and future occupational interest of the student. The internship is to provide the student with a hands-on, real-world experience in which they can integrate and apply their knowledge and skills from the classroom and gain additional knowledge and experience. The duties and responsibilities performed should involve the exposure to and application of professional knowledge and judgment.\n\nEssential functions:\n\n Assists in identifying business trends and problems through data analysis. Interprets results from multiple sources using a variety of techniques, ranging from simple data aggregation via statistical analysis to complex data mining. Prepares data, helps implements data models and develops database to support the business solutions. Serve as the key point of contactfor business stakeholders/client; translate technical information into easy to understand terms for the business and translate business requirements into technical information for development staff. Clearly and concisely document requirements and functional specifications, create mock-ups, prototypes, ad-hoc queries and other artifacts to support requirements.Define metrics to be used, which metrics to track, how to measure them and in what way to collect the data. Develop visualizations and reports grounded in statistical best practices that facilitate effective communication of results and key findings to internal customers. Educate users as to how to use and interpret the analytical dashboards\n\nQualificationsand experience:\n\n Familiarity with Microsoft Office product suite (Word,Outlook, PowerPoint, Visio); advanced Excel skills required (VLOOKUPs, SUMIFS/COUNTIFS, Pivot Tables, Conditional Formatting) Strong algebra and statistics experience/coursework required, some calculus and/or linear algebra preferred. Some SQL, R/Python, Basic Database/Warehouse development KnowledgeUnderstanding of relational database systems and querying and analyzing raw data for modeling and validation purposes Excellent writing, listening, and client-facing communication skills;ability to explain complicated or technical information in a simple way to non-technical audiences Effective time management skills, ensuring adherence to client timelines and business needs; prioritization of efforts across clients \n\n\nAdditional requirements:\n\n Exposure to data warehousing, data modeling, predictive analytics, machine learning, process simulation, or optimization techniques, particularly as it relates to sales and marketingpreferred Experience building reports and dashboards in self-service reporting platforms (e.g., Power BI, Tableau,QlikView, etc.) preferred  Curiosity and passion about data, visualization and solving problems Creativity to determine the best solution for a real-world problem with quantitative data Demonstrated ability to effectively facilitate meetingswith strong presentation skills\n\nHere is how we are going to keep you safe in the workplace:\n\nOur focus continues to be on our employees and their wellbeing, and we have taken steps to ensure your safety in all our facilities. The following are workplace safety guidelines in each of our Taylor locations:\n\nMasks are provided and will be required in all our facilitiesEmployees will maintain at least 6 feet of distance whenever possibleWe have hand sanitizer and soap & water readily availableIncreased cleaning and disinfection of high traffic areasCommunication & Action Plans if one of our employees shows symptoms or tests positive for COVID-19\n\n\nAbout Taylor Corporation\n\nOne of the top five graphics communications companies in North America, Taylor’s family of companies provide a diverse set of products, services and technologies addressing the toughest communication challenges. For 45 years, Taylor has been a premier provider of powerful and innovative products, services and expertise for individuals, businesses and distributors large and small. Our 10,000+ employees spanning more than 25 states and nine countries work diligently to create the interactive, printing and marketing solutions that have helped build some of the world’s more recognizable brands. Everything we do begins with identifying the unique priorities and needs of our customers and creating one-of-a-kind solutions. We offer a full range of benefits to power our employees’ potential including: health, dental, vision and life insurance; a 401(k) plan; paid time off (PTO) and holiday pay, and more.\n\nTaylor Corporation is an equal opportunity employer. All applicants will be considered for employment without attention to race, color, religion, sex, sexual orientation, gender identity, national origin, veteran or disability status. ",
         "index": 270,
         "skills": [
+            "data science",
             "machine learning",
             "information technology",
-            "python",
             "data visualization",
-            "project management"
+            "project management",
+            "python"
         ],
         "compensation": "paid",
         "remote": false
@@ -5805,9 +5849,9 @@
             "machine learning",
             "information technology",
             "javascript",
-            "python",
             "data visualization",
             "matlab",
+            "python",
             "project management"
         ],
         "compensation": "paid",
@@ -5868,8 +5912,8 @@
         "skills": [
             "software engineering",
             "javascript",
+            "devops",
             "python",
-            "devOps",
             "project management"
         ],
         "remote": true

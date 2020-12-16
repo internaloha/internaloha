@@ -98,7 +98,7 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
                     required
                     fluid multiple selection clearable
                     control={Dropdown}
-                    options={internships.dropdownSkills(passedData)}
+                    options={internships.dropdownSkills(data)}
                     label={{ children: 'Skills' }}
                     placeholder='Skills'
                     search
@@ -118,19 +118,20 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
                     search
                     onChange={getCareerInterest}
                 />
-            </Form>
+              </Form>
             </Grid.Column>
             <Grid.Column>
-              <Form.Field
-                  fluid selection
-                  control={Dropdown}
-                  defaultValue={location[0].value}
-                  options={internships.dropdownLocation(passedData)}
-                  label={{ children: 'Location' }}
-                  placeholder='Location'
-                  search
-                  onChange={getLocation}
-              />
+              <Form>
+                <Form.Field
+                    fluid selection multiple clearable
+                    control={Dropdown}
+                    options={internships.dropdownLocation(data)}
+                    label={{ children: 'Location' }}
+                    placeholder='Location'
+                    search
+                    onChange={getLocation}
+                />
+              </Form>
               <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                         onClick={getRemote}/>
             </Grid.Column>

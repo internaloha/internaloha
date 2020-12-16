@@ -132,12 +132,12 @@
         "skills": [
             "project management",
             "software engineering",
-            "python",
-            "information technology",
             "java",
-            "devOps",
-            "machine learning",
-            "C and C++"
+            "information technology",
+            "devops",
+            "python",
+            "c and c++",
+            "machine learning"
         ],
         "compensation": "paid",
         "remote": false
@@ -159,9 +159,9 @@
             "information technology",
             "java",
             "software engineering",
-            "devOps",
-            "machine learning",
-            "project management"
+            "devops",
+            "project management",
+            "machine learning"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -186,7 +186,7 @@
             "software engineering",
             "project management",
             "information technology",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -211,7 +211,7 @@
             "angular",
             "software engineering",
             "java",
-            "devOps",
+            "devops",
             "machine learning"
         ],
         "compensation": "paid",
@@ -236,7 +236,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -304,8 +304,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -350,8 +350,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -393,10 +393,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "devOps",
-            "C and C++"
+            "devops",
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -440,9 +440,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -462,9 +462,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -506,10 +506,9 @@
         "index": 22,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "javascript",
-            "python",
             "angular",
             "java"
         ],
@@ -535,7 +534,7 @@
             "software engineering",
             "angular",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -558,8 +557,8 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "project management",
+            "python",
             "information technology"
         ],
         "compensation": "paid",
@@ -583,11 +582,10 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "java",
-            "data visualization",
             "javascript",
-            "python",
-            "angular"
+            "angular",
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -609,11 +607,10 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "java",
-            "data visualization",
             "javascript",
-            "python",
-            "angular"
+            "angular",
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -657,7 +654,7 @@
             "software engineering",
             "java",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "contact": "job_posting@agilent.com, 1-262-754-5030",
@@ -703,7 +700,7 @@
             "software engineering",
             "matlab",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "compensation": "paid",
@@ -746,10 +743,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "devOps",
-            "C and C++"
+            "devops",
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -793,9 +790,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -815,9 +812,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "python",
             "java",
-            "C and C++"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -859,10 +856,9 @@
         "index": 37,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "javascript",
-            "python",
             "angular",
             "java"
         ],
@@ -888,7 +884,7 @@
             "software engineering",
             "angular",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -911,8 +907,8 @@
         "skills": [
             "software engineering",
             "javascript",
-            "python",
             "project management",
+            "python",
             "information technology"
         ],
         "compensation": "paid",
@@ -936,11 +932,10 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "java",
-            "data visualization",
             "javascript",
-            "python",
-            "angular"
+            "angular",
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -962,11 +957,10 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "java",
-            "data visualization",
             "javascript",
-            "python",
-            "angular"
+            "angular",
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1010,7 +1004,7 @@
             "software engineering",
             "java",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "contact": "job_posting@agilent.com, 1-262-754-5030",
@@ -1056,7 +1050,7 @@
             "software engineering",
             "matlab",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "compensation": "paid",
@@ -1081,9 +1075,9 @@
             "information technology",
             "software engineering",
             "cloud computing",
-            "devOps",
-            "python",
             "java",
+            "devops",
+            "python",
             "machine learning"
         ],
         "qualifications": [
@@ -1219,9 +1213,9 @@
             "angular",
             "software engineering",
             "java",
-            "devOps",
-            "machine learning",
+            "devops",
             "project management",
+            "machine learning",
             "information technology"
         ],
         "compensation": "paid",
@@ -1245,11 +1239,11 @@
         "skills": [
             "information technology",
             "software engineering",
-            "python",
             "java",
+            "python",
             "machine learning",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "start": "2020-05-01T10:00:00.000Z",
@@ -1318,7 +1312,7 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "python",
             "robotics",
             "information technology"
@@ -1341,7 +1335,7 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "python",
             "robotics",
             "information technology"
@@ -1366,7 +1360,6 @@
             "software engineering",
             "information technology",
             "javascript",
-            "python",
             "java"
         ],
         "qualifications": [
@@ -1389,10 +1382,9 @@
         "skills": [
             "project management",
             "information technology",
-            "python",
+            "javascript",
             "angular",
-            "java",
-            "javascript"
+            "java"
         ],
         "remote": false
     },
@@ -1482,7 +1474,6 @@
             "software engineering",
             "information technology",
             "javascript",
-            "python",
             "java"
         ],
         "qualifications": [
@@ -1505,10 +1496,9 @@
         "skills": [
             "project management",
             "information technology",
-            "python",
+            "javascript",
             "angular",
-            "java",
-            "javascript"
+            "java"
         ],
         "remote": false
     },
@@ -1526,7 +1516,7 @@
         "index": 65,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "software engineering",
             "javascript"
@@ -1548,10 +1538,9 @@
         "skills": [
             "project management",
             "information technology",
-            "python",
+            "javascript",
             "angular",
-            "java",
-            "javascript"
+            "java"
         ],
         "remote": false
     },
@@ -1570,10 +1559,9 @@
         "skills": [
             "project management",
             "information technology",
-            "python",
+            "javascript",
             "angular",
-            "java",
-            "javascript"
+            "java"
         ],
         "remote": false
     },
@@ -1594,7 +1582,6 @@
             "software engineering",
             "information technology",
             "javascript",
-            "python",
             "java"
         ],
         "qualifications": [
@@ -1642,7 +1629,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "devOps",
+            "devops",
             "machine learning"
         ],
         "remote": false
@@ -1687,8 +1674,8 @@
             "software engineering",
             "angular",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -1709,8 +1696,8 @@
             "software engineering",
             "angular",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -1753,11 +1740,10 @@
         "index": 75,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "software engineering",
-            "javascript",
-            "python"
+            "javascript"
         ],
         "remote": true
     },
@@ -1824,7 +1810,6 @@
             "software engineering",
             "information technology",
             "javascript",
-            "python",
             "java"
         ],
         "qualifications": [
@@ -1847,10 +1832,9 @@
         "skills": [
             "project management",
             "information technology",
-            "python",
+            "javascript",
             "angular",
-            "java",
-            "javascript"
+            "java"
         ],
         "remote": false
     },
@@ -1868,7 +1852,7 @@
         "index": 80,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "software engineering",
             "javascript"
@@ -1890,10 +1874,9 @@
         "skills": [
             "project management",
             "information technology",
-            "python",
+            "javascript",
             "angular",
-            "java",
-            "javascript"
+            "java"
         ],
         "remote": false
     },
@@ -1912,10 +1895,9 @@
         "skills": [
             "project management",
             "information technology",
-            "python",
+            "javascript",
             "angular",
-            "java",
-            "javascript"
+            "java"
         ],
         "remote": false
     },
@@ -1936,7 +1918,6 @@
             "software engineering",
             "information technology",
             "javascript",
-            "python",
             "java"
         ],
         "qualifications": [
@@ -1984,7 +1965,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "devOps",
+            "devops",
             "machine learning"
         ],
         "remote": false
@@ -2029,8 +2010,8 @@
             "software engineering",
             "angular",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -2051,8 +2032,8 @@
             "software engineering",
             "angular",
             "java",
-            "devOps",
-            "C and C++",
+            "devops",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -2095,11 +2076,10 @@
         "index": 90,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "software engineering",
-            "javascript",
-            "python"
+            "javascript"
         ],
         "remote": true
     },
@@ -2117,7 +2097,7 @@
         "index": 91,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "software engineering",
             "python",
@@ -2169,8 +2149,8 @@
             "software engineering",
             "javascript",
             "python",
-            "machine learning",
-            "project management"
+            "project management",
+            "machine learning"
         ],
         "remote": true
     },
@@ -2189,9 +2169,9 @@
         "skills": [
             "project management",
             "javascript",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -2217,9 +2197,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "python",
-            "data visualization",
-            "java"
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2243,9 +2222,8 @@
             "software engineering",
             "project management",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2291,7 +2269,7 @@
             "software engineering",
             "javascript",
             "angular",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "web development"
         ],
@@ -2316,7 +2294,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -2335,7 +2313,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2446,7 +2424,7 @@
         "skills": [
             "project management",
             "information technology",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -2465,7 +2443,7 @@
         "index": 106,
         "skills": [
             "project management",
-            "devOps",
+            "devops",
             "information technology",
             "software engineering",
             "python",
@@ -2517,8 +2495,8 @@
             "software engineering",
             "javascript",
             "python",
-            "machine learning",
-            "project management"
+            "project management",
+            "machine learning"
         ],
         "remote": true
     },
@@ -2537,9 +2515,9 @@
         "skills": [
             "project management",
             "javascript",
-            "python",
             "java",
-            "C and C++",
+            "python",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -2565,9 +2543,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "python",
-            "data visualization",
-            "java"
+            "java",
+            "data visualization"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2591,9 +2568,8 @@
             "software engineering",
             "project management",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2639,7 +2615,7 @@
             "software engineering",
             "javascript",
             "angular",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "web development"
         ],
@@ -2664,7 +2640,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -2683,7 +2659,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2794,7 +2770,7 @@
         "skills": [
             "project management",
             "information technology",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -2840,7 +2816,7 @@
             "machine learning",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -2900,7 +2876,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -2922,9 +2898,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "python",
             "java",
             "scala",
+            "python",
             "machine learning"
         ],
         "remote": false
@@ -2987,7 +2963,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "C and C++",
+            "c and c++",
             "mobile development"
         ],
         "compensation": "paid",
@@ -3052,7 +3028,7 @@
             "software engineering",
             "machine learning",
             "project management",
-            "C and C++",
+            "c and c++",
             "mobile development"
         ],
         "start": "2021-06-01T10:00:00.000Z",
@@ -3076,9 +3052,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3213,9 +3188,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3240,9 +3214,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3267,9 +3240,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3313,7 +3285,7 @@
         "index": 143,
         "skills": [
             "information technology",
-            "devOps",
+            "devops",
             "software engineering",
             "python",
             "machine learning",
@@ -3340,9 +3312,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3367,9 +3338,8 @@
             "project management",
             "cloud computing",
             "information technology",
-            "javascript",
-            "python",
-            "java"
+            "java",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3415,8 +3385,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "data visualization",
-            "javascript"
+            "javascript",
+            "data visualization"
         ],
         "remote": false
     },
@@ -3434,8 +3404,8 @@
         "index": 148,
         "skills": [
             "machine learning",
-            "python",
             "project management",
+            "python",
             "information technology",
             "software engineering"
         ],
