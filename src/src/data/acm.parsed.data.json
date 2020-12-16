@@ -2098,7 +2098,7 @@
         "company": "Accenture",
         "location": {
             "city": "Error",
-            "state": "N/A",
+            "state": "Not Available",
             "zip": "Error"
         },
         "lastScraped": "2020-12-13T07:25:14.525Z",

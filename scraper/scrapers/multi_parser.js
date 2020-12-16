@@ -362,8 +362,9 @@ function getContact(textInput) {
  */
 function convertRegion(input, to) {
 
-  if (input === 'Error') {
-    return 'N/A';
+  // if any of the states are listed as "Error"
+  if (input === 'Error' || input === 'error') {
+    return 'Not Available';
   }
 
   const states = [
