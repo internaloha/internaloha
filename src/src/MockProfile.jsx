@@ -118,19 +118,21 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
                     search
                     onChange={getCareerInterest}
                 />
-            </Form>
+              </Form>
             </Grid.Column>
             <Grid.Column>
-              <Form.Field
-                  fluid selection
-                  control={Dropdown}
-                  defaultValue={location[0].value}
-                  options={internships.dropdownLocation(passedData)}
-                  label={{ children: 'Location' }}
-                  placeholder='Location'
-                  search
-                  onChange={getLocation}
-              />
+              <Form>
+                <Form.Field
+                    fluid selection
+                    control={Dropdown}
+                    defaultValue={location[0].value}
+                    options={internships.dropdownLocation(passedData)}
+                    label={{ children: 'Location' }}
+                    placeholder='Location'
+                    search
+                    onChange={getLocation}
+                />
+              </Form>
               <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                         onClick={getRemote}/>
             </Grid.Column>

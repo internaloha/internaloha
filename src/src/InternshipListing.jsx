@@ -74,44 +74,21 @@ function InternshipListing() {
   // };
 
   return (
-      <Container style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
-        {/*<Header as='h1' textAlign={'center'}
-                style={{ fontSize: '250%', paddingTop: '3rem' }}>
-          <Header.Content>
-            <Icon name='graduation cap'/>
-            All Internships
-          </Header.Content>
-        </Header>*/}
+      <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row style={{ maxWidth: '100rem', margin: 'auto' }}>
+          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote}/>
-
             <div onScroll={handleScroll()} ref={ref}>
-              <Card.Group itemsPerRow={3} doubling stackable>
+              <Card.Group doubling centered stackable>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard
                     internship={internship} key={index}/>)}
               </Card.Group>
             </div>
-
-
-            {/*<div onScroll={handleScroll()} ref={ref} style={{ maxWidth: '800px', margin: 'auto' }}>*/}
-            {/*  <Item.Group divided relaxed style={{ backgroundColor: 'white' }}>*/}
-            {/*    {_.map(paginatedData, (internship, index) => <InternshipListingCard2*/}
-            {/*        internship={internship} key={index}/>)}*/}
-            {/*  </Item.Group>*/}
-            {/*</div>*/}
-
           </Grid.Row>
         </Grid>
-        <div align={'center'} style={{ paddingTop: '5rem', paddingBottom: '5rem' }}>
-          {/*<Pagination*/}
-          {/*    defaultActivePage={1}*/}
-          {/*    onPageChange={onChange}*/}
-          {/*    totalPages={Math.ceil(data.length / 40)}*/}
-          {/*/>*/}
-        </div>
+
       </Container>
   );
 }

@@ -23,9 +23,9 @@ class NavBar extends React.Component {
             <Menu.Item>
               <Link to='/internaloha' style={linkStyle}>Recommended Internships</Link>
             </Menu.Item>
-            <Menu.Item>
-              <Link to="/statistics" style={linkStyle}>Statistics</Link>
-            </Menu.Item>
+            {/*<Menu.Item>*/}
+            {/*  <Link to="/statistics" style={linkStyle}>Statistics</Link>*/}
+            {/*</Menu.Item>*/}
             {/*<Menu.Item position='right'>*/}
             {/*  <Dropdown text="John Foo" pointing="top right" icon={'user'}>*/}
             {/*    <Dropdown.Menu>*/}
