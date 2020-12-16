@@ -26,5 +26,13 @@
       "database",
       "api"
     ]
+  },
+  {
+    "career": "Data Scientist",
+    "skills": [
+      "python",
+      "numpy",
+      "database"
+    ]
   }
 ]
