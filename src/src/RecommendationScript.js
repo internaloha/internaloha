@@ -53,14 +53,15 @@ function recommendation(tags, careers, data, location) {
 
   if (tags.length === 0 && careers.length === 0) {
     if (location.length !== 0) {
-      if (location === 'any') {
-        return data;
-      } else {
-        return _.filter(data, ['location.state', location]);
-
+      let arrLocations = [];
+      for (let i = 0; i < location.length; i++) {
+        const newState = _.filter(data, ['location.state', location[i]]);
+        arrLocations = arrLocations.concat(newState);
       }
+      return arrLocations;
     }
     return data;
+
   }
 
   const skills = [];
@@ -125,14 +126,25 @@ function recommendation(tags, careers, data, location) {
 //   exists = false;
 // }
 // console.log(skills);
-  console.log(location)
-  if (location === 'any' || location.length === 0) {
+  console.log(location);
+
+  if (location.length === 0) {
     return sorted;
   }
 
-  console.log(sorted);
-  console.log(_.filter(sorted, ['location.state', location]));
-  return _.filter(sorted, ['location.state', location]);
+  // if (location.length === 1) {
+  //   return _.filter(sorted, ['location.state', location]);
+  // } else {
+  let arrLocations = [];
+  for (let i = 0; i < location.length; i++) {
+    arrLocations = arrLocations.concat(_.filter(sorted, ['location.state', location[i]]));
+  }
+  return arrLocations;
+  // }
+  //
+  // console.log(sorted);
+  // console.log(_.filter(sorted, ['location.state', location]));
+  // return _.filter(sorted, ['location.state', location]);
 
 }
 

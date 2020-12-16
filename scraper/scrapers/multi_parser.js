@@ -361,6 +361,12 @@ function getContact(textInput) {
  * @returns {string} The conversion
  */
 function convertRegion(input, to) {
+
+  // if any of the states are listed as "Error"
+  if (input === 'Error' || input === 'error') {
+    return 'Not Available';
+  }
+
   const states = [
     ['Alabama', 'AL'],
     ['Alaska', 'AK'],

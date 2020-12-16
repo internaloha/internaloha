@@ -47,7 +47,7 @@ import { fetchInfo, autoScroll } from './scraperFunctions.js';
         await page.goto(urls[i]);
 
         const city = 'N/A';
-        const state = 'N/A';
+        const state = 'Error';
         const company = 'American Express';
         const contact = 'https://careers.americanexpress.com/';
         const lastScraped = new Date();

@@ -98,7 +98,7 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
                     required
                     fluid multiple selection clearable
                     control={Dropdown}
-                    options={internships.dropdownSkills(passedData)}
+                    options={internships.dropdownSkills(data)}
                     label={{ children: 'Skills' }}
                     placeholder='Skills'
                     search
@@ -123,10 +123,9 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
             <Grid.Column>
               <Form>
                 <Form.Field
-                    fluid selection
+                    fluid selection multiple clearable
                     control={Dropdown}
-                    defaultValue={location[0].value}
-                    options={internships.dropdownLocation(passedData)}
+                    options={internships.dropdownLocation(data)}
                     label={{ children: 'Location' }}
                     placeholder='Location'
                     search
