@@ -158,7 +158,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                     search
                     fluid multiple selection clearable
                     control={Dropdown}
-                    options={internships.dropdownSkills(passedData)}
+                    options={internships.dropdownSkills(data)}
                     onChange={getSkills}
                     style={{ flexGrow: 0 }}
 
@@ -171,10 +171,8 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                 <Form.Field placeholder='Location'
                             label={{ children: 'Location' }}
                             onChange={getLocation}
-                            defaultValue={location[0].value}
-                            search
-                            fluid selection
-                            options={internships.dropdownLocation(passedData)}
+                            fluid multiple selection clearable
+                            options={internships.dropdownLocation(data)}
                             control={Dropdown}
                             style={{ flexGrow: 0 }}
                 />

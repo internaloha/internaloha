@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import linkedinData from './data/linkedin.parsed.data';
-import simplyData from './data/simplyhired.parsed.data';
+import simplyData from './data/simplyHired.parsed.data';
 import zipData from './data/ziprecruiter.parsed.data';
 import cheggData from './data/internships.parsed.data';
 import monsterData from './data/monster.parsed.data';
@@ -102,7 +102,7 @@ class InternshipsFilters {
     location = _.uniq(categories).sort();
     // console.log(location);
 
-    const number = _.groupBy(categories, 'location.state');
+    const number = _.groupBy(data, 'location.state');
     const info = [];
 
     for (let i = 0; i < location.length; i++) {
@@ -123,13 +123,6 @@ class InternshipsFilters {
         num: number[location[i]].length,
       });
     }
-
-    // Adding any parameter to front of array
-    info.unshift({
-      key: 'any',
-      text: 'Any',
-      value: 'any',
-    });
 
     return info;
   }
@@ -233,9 +226,15 @@ class InternshipsFilters {
 
   /* Returns a sorted list by location */
   filterByLocation(data, input) {
-    if (input === 'any') {
+    if (input.length === 0) {
       return data;
     }
+
+    let arrLocations = [];
+    for (let i = 0; i < input.length; i++) {
+      arrLocations = arrLocations.concat(_.filter(data, ['location.state', input[i]]));
+    }
+    return arrLocations;
 
     // // Add all the internships where remote == true and those who have remote in state
     // if (input === 'Remote') {
@@ -243,7 +242,6 @@ class InternshipsFilters {
     //   const remote = _.filter(data, ['remote', true]);
     //   return _.concat(byState, remote);
     // }
-    return _.filter(data, ['location.state', input]);
   }
 
   isRemote(data, value) {

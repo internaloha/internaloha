@@ -53,22 +53,16 @@ function recommendation(tags, careers, data, location) {
 
   if (tags.length === 0 && careers.length === 0) {
     if (location.length !== 0) {
-      if (location[0] === 'any') {
-        return data;
-      } else {
-        let arrLocations = [];
-        for (let i = 0; i < location.length; i++) {
-          const newState = _.filter(data, ['location.state', location[i]]);
-          arrLocations = arrLocations.concat(newState);
-          console.log(arrLocations)
-        }
-        return arrLocations;
+      let arrLocations = [];
+      for (let i = 0; i < location.length; i++) {
+        const newState = _.filter(data, ['location.state', location[i]]);
+        arrLocations = arrLocations.concat(newState);
       }
+      return arrLocations;
     }
     return data;
-  }
 
-  console.log(location);
+  }
 
   const skills = [];
 
@@ -141,11 +135,11 @@ function recommendation(tags, careers, data, location) {
   // if (location.length === 1) {
   //   return _.filter(sorted, ['location.state', location]);
   // } else {
-    let arrLocations = [];
-    for (let i = 0; i < location.length; i++) {
-      arrLocations = arrLocations.concat(_.filter(sorted, ['location.state', location[i]]));
-    }
-    return arrLocations;
+  let arrLocations = [];
+  for (let i = 0; i < location.length; i++) {
+    arrLocations = arrLocations.concat(_.filter(sorted, ['location.state', location[i]]));
+  }
+  return arrLocations;
   // }
   //
   // console.log(sorted);
