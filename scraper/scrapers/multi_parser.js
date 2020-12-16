@@ -191,7 +191,7 @@ function trainSkills(classifier) {
   const webDev = ['html', 'html5', 'css', 'css5', 'web design', 'web standards', 'website development', 'website development/'];
   const react = ['react', 'reactJS', 'react native'];
   const javascript = ['javascript'];
-  const python = ['python'];
+  const python = ['python', 'python3'];
   const mobile = ['android', 'iphone', 'mobile'];
   const softwareEngineering = ['software engineer', 'software engineering', 'Software Engineering'];
   const dataScience = ['data science', 'big data', 'data analyst', 'Data Science'];
@@ -262,6 +262,9 @@ function trainSkills(classifier) {
   classifier.addDocument('machine learning', 'machine learning');
   classifier.addDocument('devOps', 'devOps');
   classifier.addDocument('Scala', 'scala');
+  classifier.addDocument('Julia', 'julia');
+  classifier.addDocument('project management', 'project management');
+
 
   classifier.train();
 
