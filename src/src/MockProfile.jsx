@@ -123,7 +123,7 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
             <Grid.Column>
               <Form>
                 <Form.Field
-                    fluid selection
+                    fluid selection multiple clearable
                     control={Dropdown}
                     defaultValue={location[0].value}
                     options={internships.dropdownLocation(passedData)}

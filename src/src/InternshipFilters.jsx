@@ -102,12 +102,12 @@ class InternshipsFilters {
     location = _.uniq(categories).sort();
     // console.log(location);
 
-    const number = _.groupBy(data, 'location.state');
+    const number = _.groupBy(categories, 'location.state');
     const info = [];
 
     for (let i = 0; i < location.length; i++) {
 
-      let locationAmount = number[location[i]].length;
+      const locationAmount = number[location[i]].length;
       // if (location[i] === 'Remote') {
       //   locationAmount = _.filter(data, ['remote', true]).length
       //       + number[location[i]].length;
