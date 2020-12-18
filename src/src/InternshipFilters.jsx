@@ -209,7 +209,6 @@ class InternshipsFilters {
 
   /* Returns a list based on search query */
   filterBySearch(data, searchQuery) {
-    // console.log(searchQuery);
     if (searchQuery.length === 0) {
       return data;
     }
@@ -236,12 +235,6 @@ class InternshipsFilters {
     }
     return arrLocations;
 
-    // // Add all the internships where remote == true and those who have remote in state
-    // if (input === 'Remote') {
-    //   const byState = _.filter(data, ['location.state', input]);
-    //   const remote = _.filter(data, ['remote', true]);
-    //   return _.concat(byState, remote);
-    // }
   }
 
   isRemote(data, value) {

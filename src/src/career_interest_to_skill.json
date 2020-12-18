@@ -7,7 +7,8 @@
       "css",
       "html",
       "database",
-      "api"
+      "api",
+      "sql"
     ]
   },
   {
@@ -34,6 +35,44 @@
       "numpy",
       "database",
       "data science"
+    ]
+  },
+  {
+    "career": "Software Engineering",
+    "skills": [
+      "javascript",
+      "react",
+      "css",
+      "html",
+      "database",
+      "api",
+      "sql"
+    ]
+  },
+  {
+    "career": "Systems Analyst",
+    "skills": [
+      "javascript",
+      "c and c++",
+      "database",
+      "api",
+      "sql"
+    ]
+  },
+  {
+    "career": "Security Engineering",
+    "skills": [
+      "cybersecurity",
+      "c and c++",
+      "database"
+    ]
+  },
+  {
+    "career": "Computer Network Architect",
+    "skills": [
+      "networking",
+      "c and c++",
+      "database"
     ]
   }
 ]

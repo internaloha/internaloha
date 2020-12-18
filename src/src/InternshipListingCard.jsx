@@ -11,6 +11,7 @@ import {
   Radio, Item
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import moment from "moment";
 import React from 'react';
 
 function isRemote(remote) {
@@ -56,7 +57,8 @@ function hasSkill(skill) {
 }
 
 function formatDate(stringDate) {
-  const date = new Date(stringDate).toDateString();
+  const date = moment(stringDate).fromNow();
+  // const date = new Date(stringDate).toDateString();
   if (date !== 'Invalid Date') {
     return date;
   }
@@ -157,7 +159,7 @@ function InternshipListingCard(props) {
                 </Grid.Column>
                 <Grid.Column floated={'left'}>
                   <Icon className='calendar alternate'/>
-                  <span>Date Posted: {formatDate(props.internship.posted)}</span>
+                  <span>Last Updated: {formatDate(props.internship.posted)}</span>
                 </Grid.Column>
               </Grid.Row>
 
