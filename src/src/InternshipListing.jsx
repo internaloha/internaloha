@@ -21,14 +21,16 @@ function InternshipListing() {
   const [remote, setRemote] = useState(false);
   const [page, setPage] = useState(1);
   const [height, setHeight] = useState(0);
+  const [career, setCareer] = useState([]);
   const ref = useRef(null);
 
   /* Passes data up from SearchInternshipFeature. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
-  function handleChildClick(passedData, locationVal, companyVal, sortVal, searchQueryVal, skillsVal, isRemote) {
+  function handleChildClick(passedData, locationVal, companyVal, sortVal, searchQueryVal, skillsVal, isRemote, careerVal) {
     setData(passedData);
     setLocation(locationVal);
     setCompany(companyVal);
+    setCareer(careerVal);
     setSort(sortVal);
     setSearch(searchQueryVal);
     setSkills(skillsVal);
@@ -79,7 +81,7 @@ function InternshipListing() {
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
-                                     searchQuery={search} skillsVal={skills} isRemote={remote}/>
+                                     searchQuery={search} skillsVal={skills} isRemote={remote} careerVal={career}/>
             <div onScroll={handleScroll()} ref={ref}>
               <Card.Group doubling centered stackable>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard

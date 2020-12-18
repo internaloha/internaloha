@@ -1,332 +1,281 @@
 import React from 'react';
 import {
-  Segment,
-  Header,
-  Dropdown,
-  Label,
-  Input,
-  Form,
-  Checkbox,
-  Popup,
-  Search,
-  Menu,
-  Image, Container, Grid,
+    Segment,
+    Header,
+    Dropdown,
+    Label,
+    Input,
+    Form,
+    Checkbox,
+    Popup,
+    Grid,
+    Button
 } from 'semantic-ui-react';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
-import { Link } from 'react-router-dom';
+import {dropdownCareerInterest, recommendation} from "./RecommendationScript";
 
-function SearchInternshipFeature({ onChildClick, passedData, locationVal, companyVal, sortVal, searchQuery, skillsVal, isRemote }) {
+function SearchInternshipFeature({
+                                     onChildClick,
+                                     passedData,
+                                     locationVal,
+                                     companyVal,
+                                     sortVal,
+                                     searchQuery,
+                                     skillsVal,
+                                     isRemote,
+                                     careerVal,
+                                 }) {
 
-  const internships = new InternshipsFilters();
-  const data = internships.mergeData();
+    const internships = new InternshipsFilters();
+    const data = internships.mergeData();
 
-  let locationChange = locationVal;
-  let companyChange = companyVal;
-  let sortChange = sortVal;
-  let searchQueryChange = searchQuery;
-  let skillChange = skillsVal;
-  let remoteCheck = isRemote;
+    let locationChange = locationVal;
+    let companyChange = companyVal;
+    let sortChange = sortVal;
+    let searchQueryChange = searchQuery;
+    let skillChange = skillsVal;
+    let remoteCheck = isRemote;
+    let careerChange = careerVal;
 
-  const sortBy = [
-    { key: 'date', text: 'date', value: 'date' },
-    { key: 'internship', text: 'internship', value: 'internship' },
-    { key: 'company', text: 'company', value: 'company' },
-  ];
+    const sortBy = [
+        {key: 'date', text: 'date', value: 'date'},
+        {key: 'internship', text: 'internship', value: 'internship'},
+        {key: 'company', text: 'company', value: 'company'},
+    ];
 
-  const location = internships.dropdownLocation(data);
-  const company = internships.dropdownCompany(data);
 
-  const setFilters = () => {
-    const remoteFilter = internships.isRemote(data, remoteCheck);
-    const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
-    const skillsFiltered = internships.filterBySkills(searchFiltered, skillChange);
-    const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
-    const companyFiltered = internships.filterByCompany(locationFiltered, companyChange);
-    const sorted = internships.sortedBy(companyFiltered, sortChange);
-    onChildClick(sorted, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck);
-    window.scrollTo({
-      top: 30,
-      left: 100,
-      behavior: 'smooth',
-    });
-  };
+    const setFilters = () => {
 
-  const handleSearchChange = (event) => {
-    searchQueryChange = event.target.value;
-  };
+        let recommendedData = [];
 
-  const handleCompanyChange = (event) => {
-    companyChange = event.target.value;
-  };
+        const remoteFilter = internships.isRemote(data, remoteCheck);
+        const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
+        // const skillsFiltered = internships.filterBySkills(searchFiltered, skillChange);
+        // const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
+        const companyFiltered = internships.filterByCompany(searchFiltered, companyChange);
+        const sorted = internships.sortedBy(companyFiltered, sortChange);
 
-  const getRemote = () => {
-    if (remoteCheck) {
-      remoteCheck = false;
-    } else {
-      remoteCheck = true;
+        recommendedData = recommendation(skillChange, careerChange, sorted, locationChange);
+
+        onChildClick(recommendedData, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck, careerChange);
+        window.scrollTo({
+            top: 30,
+            left: 100,
+            behavior: 'smooth',
+        });
+    };
+
+    const handleSearchChange = (event) => {
+        searchQueryChange = event.target.value;
+    };
+
+    const handleCompanyChange = (event) => {
+        companyChange = event.target.value;
+    };
+
+    const getRemote = () => {
+        if (remoteCheck) {
+            remoteCheck = false;
+        } else {
+            remoteCheck = true;
+        }
+        setFilters();
+    };
+
+    const handleSubmit = () => {
+        setFilters();
+    };
+
+    const getLocation = (event, {value}) => {
+        locationChange = value;
+        setFilters();
+    };
+
+    const getSort = (event, {value}) => {
+        sortChange = value;
+        setFilters();
+    };
+
+    const getSkills = (event, {value}) => {
+        skillChange = value;
+        setFilters();
+    };
+
+    const getCareerInterest = (event, {value}) => {
+        careerChange = value;
+        setFilters();
+    };
+
+    const has = {
+        margin: '0.2rem',
+        backgroundColor: '#5680E9',
+        color: 'white',
+    };
+    const notHave = {
+        margin: '0.2rem',
+        backgroundColor: 'rgb(244, 244, 244)',
+        color: '#8f8f8f',
+    };
+
+    const careerSkills = (skill) => {
+        return (
+            <Label circular key={skill}>
+                {skill}
+            </Label>
+        );
     }
-    setFilters();
-  };
 
-  const handleSubmit = () => {
-    setFilters();
-  };
+    return (
+        <Segment style={{width: '100%', borderRadius: '10px', marginTop: '3rem'}}>
+            <Grid columns={'equal'}>
+                <Grid.Row>
+                    <Grid.Column>
+                        <p>
+                            <p>
+                                Sort by {' '}
+                                <Dropdown
+                                    inline
+                                    header='Sort by...'
+                                    options={sortBy}
+                                    defaultValue={sortBy[0].value}
+                                    onChange={getSort}
+                                />
+                            </p>
+                        </p>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Form onSubmit={handleSubmit}>
+                            <Popup
+                                trigger={
+                                    <Form>
+                                        <Form.Field icon='search'
+                                                    iconPosition='left'
+                                                    placeholder='Search ...'
+                                                    onChange={handleSearchChange}
+                                                    fluid
+                                                    control={Input}
+                                                    label={{children: 'Search'}}
+                                        />
+                                    </Form>
+                                }
+                                content='Press enter to search by internship titles!'
+                                on={'focus'}
+                            />
 
-  const getLocation = (event, { value }) => {
-    locationChange = value;
-    setFilters();
-  };
+                        </Form>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Dropdown
+                                fluid multiple selection clearable
+                                control={Dropdown}
+                                options={dropdownCareerInterest()}
+                                label={{ children: 'Career Interest' }}
+                                placeholder='Career Interest'
+                                search
+                                onChange={getCareerInterest}>
+                            </Form.Dropdown>
+                            {/*<Form.Field*/}
+                            {/*    fluid multiple selection clearable*/}
+                            {/*    control={Dropdown}*/}
+                            {/*    options={dropdownCareerInterest()}*/}
+                            {/*    label={{children: 'Career Interest'}}*/}
+                            {/*    placeholder='Career Interest'*/}
+                            {/*    search*/}
+                            {/*    onChange={getCareerInterest}*/}
+                            {/*/>*/}
+                        </Form>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Form>
+                            <Form.Field
+                                label={{children: 'Skills'}}
+                                placeholder='Skills'
+                                search
+                                fluid multiple selection clearable
+                                control={Dropdown}
+                                options={ internships.dropdownSkills(data)}
+                                onChange={getSkills}
+                                style={{ flexGrow: 0 }}
 
+                            />
+                        </Form>
 
-  const getSort = (event, { value }) => {
-    sortChange = value;
-    setFilters();
-  };
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Form>
+                            <Form.Field placeholder='Location'
+                                        label={{children: 'Location'}}
+                                        onChange={getLocation}
+                                        fluid multiple selection clearable
+                                        options={internships.dropdownLocation(data)}
+                                        control={Dropdown}
+                                        style={{flexGrow: 0}}
+                            />
+                        </Form>
+                        <Checkbox style={{paddingTop: '1rem'}} label='Remote'
+                                  onClick={getRemote}/>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Field icon='home'
+                                        label={{children: 'Company'}}
+                                        control={Input}
+                                        iconPosition='left'
+                                        placeholder='Company'
+                                        onChange={handleCompanyChange}
+                                        fluid
+                            />
+                        </Form>
+                    </Grid.Column>
 
-  const getSkills = (event, { value }) => {
-    skillChange = value;
-    setFilters();
-  };
+                </Grid.Row>
+                <Grid.Row>
+                    <Grid.Column>
+                        <Header style={{paddingBottom: '0', marginTop: '0rem'}}>
+                            Total results found: {internships.total(passedData)}
+                        </Header>
+                    </Grid.Column>
+                    <Grid.Column textAlign={'right'}>
+                        <Grid.Row>
+                            <div style={{paddingBottom: '0', paddingRight: '0.5rem'}}>
+                                <Header style={{
+                                    paddingBottom: '0', margin: '0 0 0 0', paddingRight: '0.5rem',
+                                    paddingTop: '0.3rem', lineHeight: '10px',
+                                    display: 'inline-block'
+                                }} as={'h4'}>
+                                    Key:
+                                </Header>
+                                <Label circular style={has}>
+                                    Has skill
+                                </Label>
+                                <Label circular style={notHave}>
+                                    Missing skill
+                                </Label>
+                            </div>
+                        </Grid.Row>
 
-  const sticky = {
-    position: '-webkit-sticky',
-    position: 'sticky',
-    top: '6.5rem',
-  };
+                    </Grid.Column>
+                </Grid.Row>
 
-  const has = {
-    margin: '0.2rem',
-    backgroundColor: '#5680E9',
-    color: 'white',
-  };
-  const notHave = {
-    margin: '0.2rem',
-    backgroundColor: 'rgb(244, 244, 244)',
-    color: '#8f8f8f',
-  };
+            </Grid>
 
-  return (
-      <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
-        <Grid columns={'equal'}>
-          <Grid.Row>
-            <Grid.Column>
-              <p>
-                <p>
-                  Sort by {' '}
-                  <Dropdown
-                      inline
-                      header='Sort by...'
-                      options={sortBy}
-                      defaultValue={sortBy[0].value}
-                      onChange={getSort}
-                  />
-                </p>
-              </p>
-            </Grid.Column>
-            <Grid.Column>
-              <Form onSubmit={handleSubmit}>
-                <Popup
-                    trigger={
-                      <Form>
-                        <Form.Field icon='search'
-                                    iconPosition='left'
-                                    placeholder='Search ...'
-                                    onChange={handleSearchChange}
-                                    fluid
-                                    control={Input}
-                                    label={{ children: 'Search' }}
-                        />
-                      </Form>
-                    }
-                    content='Press enter to search by internship titles!'
-                    on={'focus'}
-                />
+        </Segment>
 
-              </Form>
-            </Grid.Column>
-            <Grid.Column>
-              <Form>
-                <Form.Field
-                    label={{ children: 'Skills' }}
-                    placeholder='Skills'
-                    search
-                    fluid multiple selection clearable
-                    control={Dropdown}
-                    options={internships.dropdownSkills(data)}
-                    onChange={getSkills}
-                    style={{ flexGrow: 0 }}
-
-                />
-              </Form>
-
-            </Grid.Column>
-            <Grid.Column>
-              <Form>
-                <Form.Field placeholder='Location'
-                            label={{ children: 'Location' }}
-                            onChange={getLocation}
-                            fluid multiple selection clearable
-                            options={internships.dropdownLocation(data)}
-                            control={Dropdown}
-                            style={{ flexGrow: 0 }}
-                />
-              </Form>
-              <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
-                        onClick={getRemote}/>
-            </Grid.Column>
-            <Grid.Column>
-              <Form onSubmit={handleSubmit}>
-                <Form.Field icon='home'
-                            label={{ children: 'Company' }}
-                            control={Input}
-                            iconPosition='left'
-                            placeholder='Company'
-                            onChange={handleCompanyChange}
-                            fluid
-                />
-              </Form>
-            </Grid.Column>
-
-          </Grid.Row>
-          <Grid.Row>
-            <Grid.Column>
-              <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
-                Total results found: {internships.total(passedData)}
-              </Header>
-            </Grid.Column>
-            <Grid.Column textAlign={'right'}>
-              <Grid.Row>
-                <div style={{ paddingBottom: '0', paddingRight: '0.5rem' }}>
-                  <Header style={{
-                    paddingBottom: '0', margin: '0 0 0 0', paddingRight: '0.5rem',
-                    paddingTop: '0.3rem', lineHeight: '10px',
-                    display: 'inline-block'
-                  }} as={'h4'}>
-                    Key:
-                  </Header>
-                  <Label circular style={has}>
-                    Has skill
-                  </Label>
-                  <Label circular style={notHave}>
-                    Missing skill
-                  </Label>
-                </div>
-              </Grid.Row>
-
-            </Grid.Column>
-          </Grid.Row>
-
-        </Grid>
-
-      </Segment>
-
-      // <Segment style={sticky}>
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Header>
-      //       <Header.Content>
-      //         Total results found: {internships.total(passedData)}
-      //       </Header.Content>
-      //     </Header>
-      //   </div>
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Header>
-      //       <Header.Content>
-      //         Sort by {' '}
-      //         <Dropdown
-      //             inline
-      //             header='Sort by...'
-      //             options={sortBy}
-      //             defaultValue={sortBy[0].value}
-      //             onChange={getSort}
-      //         />
-      //       </Header.Content>
-      //     </Header>
-      //   </div>
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Form onSubmit={handleSubmit}>
-      //       <Popup
-      //           trigger={<Input icon='search'
-      //                           iconPosition='left'
-      //                           placeholder='Search ...'
-      //                           onChange={handleSearchChange}
-      //                           fluid
-      //           />}
-      //           content='Press enter to search!'
-      //           on={'focus'}
-      //       />
-      //
-      //     </Form>
-      //     <div style={{ paddingTop: '2rem' }}>
-      //       <Header>Skills</Header>
-      //       <Dropdown
-      //           placeholder='Skills'
-      //           fluid
-      //           multiple
-      //           search
-      //           selection
-      //           options={internships.dropdownSkills()}
-      //           onChange={getSkills}
-      //       />
-      //     </div>
-      //   </div>
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Header>Location</Header>
-      //     <Dropdown placeholder='Location'
-      //               onChange={getLocation}
-      //               defaultValue={location[0].value}
-      //               fluid selection options={internships.dropdownLocation(passedData)}
-      //               search
-      //     />
-      //     <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
-      //               onClick={getRemote}/>
-      //   </div>
-      //
-      //   {/*<div style={{ paddingTop: '2rem' }}>*/}
-      //   {/*  <Header>Company</Header>*/}
-      //   {/*  <Dropdown*/}
-      //   {/*      placeholder='Select a company'*/}
-      //   {/*      fluid selection options={internships.dropdownCompany(passedData)}*/}
-      //   {/*      defaultValue={company[0].value}*/}
-      //   {/*      onChange={getCompany}*/}
-      //   {/*      search*/}
-      //   {/*  />*/}
-      //   {/*</div>*/}
-      //   <div style={{ paddingTop: '2rem' }}>
-      //     <Header>Company</Header>
-      //
-      //     <Form onSubmit={handleSubmit}>
-      //       <Input icon='home'
-      //              iconPosition='left'
-      //              placeholder='Enter a company'
-      //              onChange={handleCompanyChange}
-      //              fluid
-      //       />
-      //     </Form>
-      //   </div>
-      //   <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }} align={'center'}>
-      //     <Header>Key</Header>
-      //     <Label circular style={has}>
-      //       Have skill
-      //     </Label>
-      //     <Label circular style={notHave}>
-      //       Missing skill
-      //     </Label>
-      //   </div>
-      // </Segment>
-  );
+    );
 }
 
 SearchInternshipFeature.propTypes = {
-  onChildClick: PropTypes.func.isRequired,
-  passedData: PropTypes.array.isRequired,
-  locationVal: PropTypes.string.isRequired,
-  companyVal: PropTypes.string.isRequired,
-  sortVal: PropTypes.string.isRequired,
-  searchQuery: PropTypes.string.isRequired,
-  skillsVal: PropTypes.array.isRequired,
-  isRemote: PropTypes.bool.isRequired,
+    onChildClick: PropTypes.func.isRequired,
+    passedData: PropTypes.array.isRequired,
+    locationVal: PropTypes.string.isRequired,
+    companyVal: PropTypes.string.isRequired,
+    sortVal: PropTypes.string.isRequired,
+    searchQuery: PropTypes.string.isRequired,
+    skillsVal: PropTypes.array.isRequired,
+    isRemote: PropTypes.bool.isRequired,
+    careerVal: PropTypes.array.isRequired,
 };
 
 export default SearchInternshipFeature;
