@@ -2044,11 +2044,7 @@
             "javascript",
             "java",
             "python",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "machine learning"
         ],
         "lastScraped": "2020-10-02T02:41:19.850Z",
@@ -2992,11 +2988,7 @@
         "skills": [
             "software engineering",
             "javascript",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "project management",
             "python",
             "information technology",
@@ -4104,11 +4096,7 @@
         "url": "https://angel.co/company/clinq-technologies/jobs/953225-software-engineer-intern-front-end",
         "skills": [
             "software engineering",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "project management",
             "python",
             "information technology",
@@ -4661,11 +4649,7 @@
             "machine learning",
             "java",
             "python",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "information technology",
             "mobile development"
         ],
@@ -4792,11 +4776,7 @@
         "skills": [
             "machine learning",
             "software engineering",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "project management",
             "information technology",
             "artificial intelligence"
@@ -5375,11 +5355,7 @@
             "matlab",
             "python",
             "robotics",
-<<<<<<< HEAD
-            "C and C++"
-=======
             "c and c++"
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
         ],
         "lastScraped": "2020-10-02T02:44:15.784Z",
         "description": "<p>As an intern at Zoox, you'll be working alongside with those that architect, design, and develop our state-of-the-art hardware and Signal Processing  Systems required for enabling autonomous mobility. At Zoox, you’ll collaborate with a team of world-class engineers with diverse backgrounds in areas such as AI, robotics, machine learning, localization, computer vision, and simulation. You’ll master new technologies while working on code, algorithms, and research in your area of expertise to create and refine key systems and move Zoox forward.</p>\n\n<p>As an intern on the DSP team you will be working on design and implementation of  signal processing algorithms related to radars, depth cameras, audio subsystems and Lidars. You may work on deploying those algorithms on FPGAs. We are looking for curious and highly mathematical minds to work with us. </p>\n\n<p>Qualifications</p>\n\n<ul>\n<li>Currently working towards a B.S., M.S., Ph.D. or advanced degree in a relevant engineering program and within 1 year of graduation. <strong>For undergraduates, we are accepting only juniors and seniors.</strong></li>\n<li>Minimum of a 3.5 gpa</li>\n<li>At least one previous industry internship or co-op</li>\n<li>Able to commit to a <u>minimum</u> of a 12-week internship</li>\n<li>Professional and positive communication skills</li>\n<li>Ability to relocate to the Bay Area, California</li>\n<li><strong><em>Interns at Zoox may not use any proprietary information they are working on as part of their thesis, any published work with their university, or to be distributed to anyone outside of Zoox.</em></strong></li>\n</ul>\n\n<p>Technical Qualifications</p>\n\n<ul>\n<li>Proficiency in C, C++, Python and/or Matlab</li>\n<li>Course work in Digital Signal Processing, Circuits and systems, Optimum filtering,  Probability and Statistics, Random Signals and Noise.</li>\n<li>Hands on experience related to digital signal processors and/or algorithm design in one or more areas related to radar, lidar, depth cameras, audio or other signal processing related fields. </li>\n<li>Hands on experience in Vivado, Xilinx IPs and Xilinx IP integrator and Xilinx </li>\n<li>SDK Digital bus experience - e.g. I2C, UART, SPI, CAN, LIN, USB, Ethernet, etc</li>\n</ul>\n\n<p>ABOUT ZOOX <br>\nZoox is developing the first ground-up, fully autonomous vehicle fleet and the supporting ecosystem required to bring this technology to market. Sitting at the intersection of artificial intelligence, robotics, and design, Zoox aims to provide the next generation of mobility-as-a-service in urban environments. We’re looking for top talent that shares our passion and wants to be part of a fast-moving and highly execution-oriented team.</p>\n\n<p>Follow us on LinkedIn</p>\n\n<p>A Final Note:<br>\nYou do not need to match every listed expectation to apply for this position. Here at Zoox, we know that diverse perspectives foster the innovation we need to be successful, and we are committed to building a team that encompasses a variety of backgrounds, experiences, and skills.</p>",
@@ -6587,17 +6563,10 @@
         "skills": [
             "software engineering",
             "java",
-<<<<<<< HEAD
-            "devOps",
-            "python",
-            "project management",
-            "C and C++",
-=======
             "devops",
             "python",
             "project management",
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "machine learning"
         ],
         "lastScraped": "2020-10-02T02:45:15.268Z",
@@ -6775,11 +6744,7 @@
             "software engineering",
             "angular",
             "project management",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "machine learning",
             "information technology",
             "mobile development"
@@ -6875,11 +6840,7 @@
             "machine learning",
             "deep learning",
             "python",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "information technology"
         ],
         "lastScraped": "2020-10-02T02:45:28.038Z",
@@ -7120,11 +7081,7 @@
             "machine learning",
             "java",
             "python",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "information technology",
             "software engineering"
         ],
@@ -7800,11 +7757,7 @@
         },
         "url": "https://angel.co/company/armadaaero/jobs/866929-firmware-software-intern-drone-pixhawk-for-a-flying-vehicle-startup",
         "skills": [
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "software engineering",
             "machine learning",
             "python"
@@ -8042,11 +7995,7 @@
             "machine learning",
             "software engineering",
             "python",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "project management"
         ],
         "lastScraped": "2020-10-02T02:46:27.261Z",
@@ -8155,11 +8104,7 @@
             "machine learning",
             "project management",
             "python",
-<<<<<<< HEAD
-            "C and C++"
-=======
             "c and c++"
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
         ],
         "lastScraped": "2020-10-02T02:46:33.032Z",
         "description": "<h3><strong>Embedded &amp; Linux Systems Engineer</strong> <strong>- Intern</strong></h3><h3><strong>(Fall, Spring, Summer, Gap Year)</strong></h3><h3><strong>About Us</strong></h3>\n<p>There are products that customers think are cool in the moment, and then there are products that customers cannot live without because they are so incredibly useful. At Matician, we are building the latter because these are the products worth spending our lives on.</p>\n\n<p>We believe that sensors and algorithms are finally good enough that we can apply level 5 autonomy and mobility in order to reimagine home devices. We want to save people time and energy by circumventing the mundane tasks inside the home. We are building great products to solve real problems and ship them to the people we love. We are a mission-driven and tight-knit group that values learning and curiosity in a high-risk, high reward culture.</p>\n<h3><strong>We’d love to hear from you if:</strong></h3>\n<ul>\n<li>You are genuinely motivated to help those around you, including users at various levels of experience.</li>\n<li>You are passionate about tackling large complex projects and are adaptable to learning outside your normal comfort zones.</li>\n<li>You love diagnosing complex technical issues and providing hands-on support for hardware and software solutions.</li>\n<li>Your curiosity to learn and grow is inversely proportional to your level of ego.</li>\n<li>You are excited to do great work.</li>\n</ul>\n<h3><strong>The Opportunity</strong></h3>\n<ul>\n<li>Develop core device functionality from the ground up.</li>\n<li>Work with both EE and software teams to ensure feature feasibility.</li>\n<li>Perform root cause analysis of system crashes and hardware failures.</li>\n<li>Identify bottlenecks to improve system performance.</li>\n</ul>\n<h3><strong>SKILLS</strong></h3>\n<ul>\n<li>Strong experience in multi-threaded C and C++ is a must</li>\n<li>Strong familiarity with userspace Linux programming and conventions</li>\n<li>Working knowledge of Linux kernel internals</li>\n<li>Knowledge of common communication protocols (e.g. USB, RS232, TCP/IP/HTTP)</li>\n<li>Experience with microcontrollers is a plus</li>\n<li>Familiarity with a systems scripting language, such as Shell or Python</li>\n</ul>",
@@ -9773,11 +9718,7 @@
             "software engineering",
             "information technology",
             "python",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "project management"
         ],
         "lastScraped": "2020-10-02T02:47:56.295Z",
@@ -10355,11 +10296,7 @@
         "skills": [
             "software engineering",
             "robotics",
-<<<<<<< HEAD
-            "C and C++",
-=======
             "c and c++",
->>>>>>> faeb84484ee5af8520f6901e8f096587eb1e1154
             "project management",
             "information technology"
         ],
