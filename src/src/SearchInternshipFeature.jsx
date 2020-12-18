@@ -79,10 +79,6 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
     setFilters();
   };
 
-  const getCompany = (event, { value }) => {
-    companyChange = value;
-    setFilters();
-  };
 
   const getSort = (event, { value }) => {
     sortChange = value;
@@ -180,17 +176,6 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
               <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                         onClick={getRemote}/>
             </Grid.Column>
-
-            {/*<div style={{ paddingTop: '2rem' }}>*/}
-            {/*  <Header>Company</Header>*/}
-            {/*  <Dropdown*/}
-            {/*      placeholder='Select a company'*/}
-            {/*      fluid selection options={internships.dropdownCompany(passedData)}*/}
-            {/*      defaultValue={company[0].value}*/}
-            {/*      onChange={getCompany}*/}
-            {/*      search*/}
-            {/*  />*/}
-            {/*</div>*/}
             <Grid.Column>
               <Form onSubmit={handleSubmit}>
                 <Form.Field icon='home'
@@ -203,17 +188,7 @@ function SearchInternshipFeature({ onChildClick, passedData, locationVal, compan
                 />
               </Form>
             </Grid.Column>
-            {/*<Grid.Row>*/}
-            {/*  <div style={{ paddingBottom: '2rem', paddingRight: '0.5rem' }} align={'center'}>*/}
-            {/*    <Header as={'h4'}>Key</Header>*/}
-            {/*    <Label circular style={has}>*/}
-            {/*      Has skill*/}
-            {/*    </Label>*/}
-            {/*    <Label circular style={notHave}>*/}
-            {/*      Missing skill*/}
-            {/*    </Label>*/}
-            {/*  </div>*/}
-            {/*</Grid.Row>*/}
+
           </Grid.Row>
           <Grid.Row>
             <Grid.Column>

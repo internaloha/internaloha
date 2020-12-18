@@ -13,7 +13,7 @@ function InternshipListing() {
 
   const [data, setData] = useState(getInternshipData);
   const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
-  const [location, setLocation] = useState('any');
+  const [location, setLocation] = useState([]);
   const [company, setCompany] = useState('any');
   const [sort, setSort] = useState('date');
   const [search, setSearch] = useState('');
