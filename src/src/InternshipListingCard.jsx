@@ -8,7 +8,7 @@ import {
   Header,
   Popup,
   Form,
-  Radio, Item
+  Radio, Item,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -57,8 +57,13 @@ function hasSkill(skill) {
 }
 
 function formatDate(stringDate) {
+
+  if (typeof stringDate === 'undefined') {
+    return 'N/A';
+  }
+
   const date = moment(stringDate).fromNow();
-  // const date = new Date(stringDate).toDateString();
+
   if (date !== 'Invalid Date') {
     return date;
   }
@@ -159,7 +164,11 @@ function InternshipListingCard(props) {
                 </Grid.Column>
                 <Grid.Column floated={'left'}>
                   <Icon className='calendar alternate'/>
-                  <span>Last Updated: {formatDate(props.internship.posted)}</span>
+                  <span>Posted: {formatDate(props.internship.posted)}</span>
+                </Grid.Column>
+                <Grid.Column floated={'left'}>
+                  <Icon className='calendar alternate'/>
+                  <span>Last Updated: {formatDate(props.internship.lastScraped)}</span>
                 </Grid.Column>
               </Grid.Row>
 
@@ -184,53 +193,56 @@ function InternshipListingCard(props) {
               From: {siteName(props.internship.url)} Listing #{props.internship.index}
             </Button>
           </a>
-          <Popup
-              content='Added to favorites!'
-              mouseLeaveDelay={200}
-              on='click'
-              trigger={
-                <button className="ui icon button" style={{ marginTop: '1em', size: '100%', maxHeight: '50px', backgroundColor: 'transparent' }}>
-                  <i className="heart icon" style={{ fontSize: '100%' }}/>
-                </button>
-              }
-          />
-          <Modal closeIcon trigger={
-            <button className="ui icon button" style={{ marginTop: '1em', size: '100%', maxHeight: '50px', backgroundColor: 'transparent' }}>
-              <i className="exclamation triangle icon" style={{ fontSize: '100%' }}/>
-            </button>
-          }>
-            <Modal.Header>Report a Problem</Modal.Header>
-            <Modal.Content>
-              <Modal.Description>
-                <Form>
-                  <Form.Field>
-                    <Radio
-                        label='Broken Link'
-                        name='radioGroup'
-                        value='this'
-                        checked={'this'}
-                        // onChange={}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                        label='Missing Data Fields'
-                        name='radioGroup'
-                        value='that'
-                        checked={'that'}
-                        // onChange={}
-                    />
-                  </Form.Field>
-                  <Form.TextArea label='Other' placeholder='Explain the error here. Feel free to provide screenshots or links.' />
-                </Form>
-              </Modal.Description>
-            </Modal.Content>
-            <Modal.Actions>
-              <Button style={{ backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
-                Report
-              </Button>
-            </Modal.Actions>
-          </Modal>
+          <div>
+            <Popup
+                content='Added to favorites!'
+                mouseLeaveDelay={200}
+                on='click'
+                trigger={
+                  <button className="ui icon button" style={{ marginTop: '1em', size: '100%', maxHeight: '50px', backgroundColor: 'transparent' }}>
+                    <i className="heart icon" style={{ fontSize: '100%' }}/>
+                  </button>
+                }
+            />
+            <Modal closeIcon trigger={
+              <button className="ui icon button" style={{ marginTop: '1em', size: '100%', maxHeight: '50px', backgroundColor: 'transparent' }}>
+                <i className="exclamation triangle icon" style={{ fontSize: '100%' }}/>
+              </button>
+            }>
+              <Modal.Header>Report a Problem</Modal.Header>
+              <Modal.Content>
+                <Modal.Description>
+                  <Form>
+                    <Form.Field>
+                      <Radio
+                          label='Broken Link'
+                          name='radioGroup'
+                          value='this'
+                          checked={'this'}
+                          // onChange={}
+                      />
+                    </Form.Field>
+                    <Form.Field>
+                      <Radio
+                          label='Missing Data Fields'
+                          name='radioGroup'
+                          value='that'
+                          checked={'that'}
+                          // onChange={}
+                      />
+                    </Form.Field>
+                    <Form.TextArea label='Other' placeholder='Explain the error here. Feel free to provide screenshots or links.' />
+                  </Form>
+                </Modal.Description>
+              </Modal.Content>
+              <Modal.Actions>
+                <Button style={{ backgroundColor: 'rgb(89, 119, 199)', color: 'white' }}>
+                  Report
+                </Button>
+              </Modal.Actions>
+            </Modal>
+          </div>
+
         </Card.Content>
       </Card>
   );

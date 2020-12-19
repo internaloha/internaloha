@@ -50,17 +50,19 @@ function test(data) {
 
 function dropdownCareerInterest() {
 
+  const sortedCollection = _.sortBy(career_interest_to_skill, [function (o) { return o.career; }]);
+
   const info = [];
-  for (let i = 0; i < career_interest_to_skill.length; i++) {
-    const skills = career_interest_to_skill[i].skills.join(', ');
+  for (let i = 0; i < sortedCollection.length; i++) {
+    const skills = sortedCollection[i].skills.join(', ');
     info.push({
-      key: career_interest_to_skill[i].career,
-      text: career_interest_to_skill[i].career,
-      value: career_interest_to_skill[i].career,
+      key: sortedCollection[i].career,
+      text: sortedCollection[i].career,
+      value: sortedCollection[i].career,
       content: (
           <Popup content={`Associated Skills: ${skills}`}
                  trigger={<Dropdown.Item>
-            {career_interest_to_skill[i].career}</Dropdown.Item>}
+            {sortedCollection[i].career}</Dropdown.Item>}
                  style={{ marginLeft: '12%' }}
                  position={'right center'}
                  basic inverted
