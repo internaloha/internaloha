@@ -89,7 +89,7 @@ import { fetchInfo, autoScroll } from './scraperFunctions.js';
         // Sometimes infinite scroll stops and switches to a "load more" button
         while (loadMore === true && loadCount <= 15) {
           try {
-            await page.waitFor(1000);
+            await page.waitForTimeout(1000);
             await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
             loadCount++;
           } catch (e2) {

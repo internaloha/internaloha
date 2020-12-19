@@ -67,14 +67,14 @@ async function scrapeInfo(page, posted, url, data) {
     await page.click('div[id="filter_jobType"]');
     await page.waitForSelector('div[id="filter_jobType"]');
     await page.click('li[value="internship"]');
-    await page.waitFor(3000);
+    await page.waitForTimeout(3000);
 
     console.log('Selecting last 30 days');
     await page.waitForSelector('div[id="filter_fromAge"]');
     await page.click('div[id="filter_fromAge"]');
     await page.waitForSelector('li[value="30"]');
     await page.click('li[value="30"]');
-    await page.waitFor(3000);
+    await page.waitForTimeout(3000);
 
     console.log('Sorting by most recent');
     await page.waitForSelector('div[data-test="sort-by-header"]');
@@ -82,7 +82,7 @@ async function scrapeInfo(page, posted, url, data) {
     await page.waitForSelector('li[data-test="date_desc"]');
     await page.click('li[data-test="date_desc"]');
 
-    await page.waitFor(3000);
+    await page.waitForTimeout(3000);
 
     let postedDates = [];
     let urlArray = [];

@@ -20,7 +20,7 @@ import { fetchInfo } from './scraperFunctions.js';
     await page.click('input[name="submit.commonLogin"]');
 
     // Go to search internship page
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     await page.goto('https://www.youtern.com/cm/candidate/search_jobs');
 
     await page.waitForSelector('div.flineQbox');

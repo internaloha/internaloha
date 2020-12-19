@@ -66,7 +66,7 @@ const myArgs = process.argv.slice(2);
       console.log('Setting Date Relevance: 7 days');
       await page.goto(lastPostedURL);
 
-      await page.waitFor(1000);
+      await page.waitForTimeout(1000);
       await page.click('a[class=SortToggle]');
       console.log('Filtering by: Most recent');
 
@@ -170,7 +170,7 @@ const myArgs = process.argv.slice(2);
 
             try {
 
-              await page.waitFor(1000);
+              await page.waitForTimeout(1000);
 
               const allJobLinks = await page.evaluate(
                   () => Array.from(

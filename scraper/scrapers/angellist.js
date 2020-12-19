@@ -23,7 +23,7 @@ async function playTest(url) {
   page.setViewport({ width: 1366, height: 768 });
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');
   await page.goto(url);
-  page.waitFor(30000);
+  page.waitForTimeout(30000);
   await page.waitForSelector(USERNAME_SELECTOR);
   await page.click(USERNAME_SELECTOR);
   await page.keyboard.type(credentials[0]);
@@ -31,7 +31,7 @@ async function playTest(url) {
   await page.keyboard.type(credentials[1]);
   await page.click(CTA_SELECTOR);
   await page.waitForNavigation();
-  await page.waitFor(5000);
+  await page.waitForTimeout(5000);
   await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
   await autoScroll(page);
   await autoScroll(page);

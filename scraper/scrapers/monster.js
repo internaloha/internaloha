@@ -61,7 +61,7 @@ import userAgent from 'user-agents';
 
     while (nextPage === true) {
       try {
-        await page.waitFor(2000);
+        await page.waitForTimeout(2000);
         await page.waitForSelector('div[class="mux-search-results"]');
         await page.click('a[id="loadMoreJobs"]');
         console.log('Nagivating to next page....');
@@ -108,7 +108,7 @@ import userAgent from 'user-agents';
       const element = elements[i];
       await element.click();
       await page.waitForSelector('div[id="JobPreview"]');
-      await page.waitFor(500);
+      await page.waitForTimeout(500);
       const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
       const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
       const url = await page.url();

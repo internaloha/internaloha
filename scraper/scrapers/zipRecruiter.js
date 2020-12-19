@@ -34,7 +34,7 @@ const myArgs = process.argv.slice(2);
 
     await page.mouse.click(1000, 800);
 
-    await page.waitFor(5000);
+    await page.waitForTimeout(5000);
 
     // Filters based on jobs posted within last 10 days
     await page.click('button[class="select-menu-header"]');

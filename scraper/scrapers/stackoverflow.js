@@ -27,7 +27,7 @@ import { fetchInfo, isRemote } from './scraperFunctions.js';
     // await page.waitForSelector('div[id="popover-background"] button');
     // await page.click('div[id="popover-background"] button');
 
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
     const number = text.match(/\d+/gm);
     console.log('Internships found:', number[0]);
