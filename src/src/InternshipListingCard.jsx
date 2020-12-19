@@ -8,7 +8,7 @@ import {
   Header,
   Popup,
   Form,
-  Radio, Item
+  Radio, Item,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
@@ -57,7 +57,14 @@ function hasSkill(skill) {
 }
 
 function formatDate(stringDate) {
+
+  if (typeof stringDate === 'undefined') {
+    return 'N/A';
+  }
+
   const date = moment(stringDate).fromNow();
+  console.log(stringDate);
+  console.log(date);
   // const date = new Date(stringDate).toDateString();
   if (date !== 'Invalid Date') {
     return date;
@@ -159,7 +166,11 @@ function InternshipListingCard(props) {
                 </Grid.Column>
                 <Grid.Column floated={'left'}>
                   <Icon className='calendar alternate'/>
-                  <span>Last Updated: {formatDate(props.internship.posted)}</span>
+                  <span>Posted: {formatDate(props.internship.posted)}</span>
+                </Grid.Column>
+                <Grid.Column floated={'left'}>
+                  <Icon className='calendar alternate'/>
+                  <span>Last Updated: {formatDate(props.internship.lastScraped)}</span>
                 </Grid.Column>
               </Grid.Row>
 
