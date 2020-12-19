@@ -264,7 +264,10 @@ function trainSkills(classifier) {
   classifier.addDocument('Scala', 'scala');
   classifier.addDocument('Julia', 'julia');
   classifier.addDocument('project management', 'project management');
-
+  classifier.addDocument('hardware', 'hardware');
+  classifier.addDocument('networks','networks');
+  classifier.addDocument('virtual reality', 'virtual reality');
+  classifier.addDocument(['game', 'game design'], 'game design');
 
   classifier.train();
 

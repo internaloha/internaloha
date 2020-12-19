@@ -11,7 +11,7 @@ import {
   Radio, Item
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import moment from "moment";
+import moment from 'moment';
 import React from 'react';
 
 function isRemote(remote) {

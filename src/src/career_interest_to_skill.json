@@ -12,7 +12,7 @@
     ]
   },
   {
-    "career": "Mobile Development",
+    "career": "Mobile App Developer",
     "skills": [
       "react native",
       "mobile development",
@@ -20,12 +20,15 @@
     ]
   },
   {
-    "career": "DevOps",
+    "career": "DevOps Engineer",
     "skills": [
       "javascript",
       "c and c++",
       "database",
-      "api"
+      "api",
+      "networks",
+      "software engineering",
+      "mobile development"
     ]
   },
   {
@@ -73,6 +76,96 @@
       "networking",
       "c and c++",
       "database"
+    ]
+  },
+  {
+    "career": "Network Engineer",
+    "skills": [
+      "software engineering",
+      "cybersecurity",
+      "hardware",
+      "networks"
+    ]
+  },
+  {
+    "career": "Information Security Analyst",
+    "skills": [
+      "database",
+      "networks",
+      "cybersecurity"
+    ]
+  },
+  {
+    "career": "Database Administrator",
+    "skills": [
+      "database",
+      "software engineering",
+      "web development"
+    ]
+  },
+  {
+    "career": "IoT Architect",
+    "skills": [
+      "database",
+      "hardware",
+      "networks",
+      "cybersecurity",
+      "data science"
+    ]
+  },
+  {
+    "career": "VR/AR Engineer",
+    "skills": [
+      "artificial intelligence",
+      "data visualization",
+      "software engineering",
+      "virtual reality",
+      "game design"
+    ]
+  },
+  {
+    "career": "Information System Manager",
+    "skills": [
+      "information technology",
+      "project management",
+      "data science",
+      "project management"
+    ]
+  },
+  {
+    "career": "UX Designer",
+    "skills": [
+      "data visualization",
+      "web development",
+      "machine learning"
+    ]
+  },
+  {
+    "career": "Robotics Engineer",
+    "skills": [
+      "hardware",
+      "software engineering",
+      "robotics",
+      "projects management",
+      "machine learning"
+    ]
+  },
+  {
+    "career": "Game Developer",
+    "skills": [
+      "database",
+      "data visualization",
+      "game design",
+      "virtual reality"
+    ]
+  },
+  {
+    "career": "AI/Machine Learning Engineer",
+    "skills": [
+      "database",
+      "artificial intelligence",
+      "data science",
+      "machine learning"
     ]
   }
 ]
