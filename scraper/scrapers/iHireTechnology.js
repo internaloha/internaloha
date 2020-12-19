@@ -36,19 +36,19 @@ async function getLinks(page) {
     // click search page
     await page.waitForSelector('li.text-center.nav-list-item-1 a');
     await page.click('ul.nav.navbar-nav li:nth-child(4)');
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     // // pop up button
     // if (page.waitForSelector('button[id=end-button]') === true) {
     //   await page.waitForSelector('button[id=end-button]');
     //   await page.click('button[id=end-button]');
     // }
 
-    await page.waitFor(5000);
+    await page.waitForTimeout(5000);
 
     // type technology
     await page.waitForSelector('input[class=form-control]');
     await page.type('input[class=form-control]', 'technology');
-    await page.waitFor(3000);
+    await page.waitForTimeout(3000);
 
     // focus on location field- type nothing
     await page.focus('#location');
@@ -60,7 +60,7 @@ async function getLinks(page) {
 
     // click find jobs button
     await page.click('button.btn.btn-primary.loading-indicator.radius-fix');
-    await page.waitFor(3000);
+    await page.waitForTimeout(3000);
 
     // await page.waitForSelector('button[id="end-button"]');
     // await page.click('button[id="end-button"]');
@@ -69,19 +69,19 @@ async function getLinks(page) {
     // past 30 days
     await page.waitForSelector('ul#AddedDate-aggregation-group.nav.nav-list > li:nth-child(5) > div.checkbox > label > input');
     await page.click('ul#AddedDate-aggregation-group.nav.nav-list > li:nth-child(5) > div.checkbox > label > input');
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     console.log('Set for last 30 days...');
 
     // entry level
     await page.click('div#search-aggregation-filter-section.well.well-sm.aggregation-container > div:nth-child(5) > label.aggregation-group > i');
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     await page.click('ul#ExperienceLevel-aggregation-group.nav.nav-list > li:nth-child(5) > div.checkbox > label > input');
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     console.log('Setting entry level filter..');
 
     // internship
     await page.click('div#search-aggregation-filter-section.well.well-sm.aggregation-container > div:nth-child(8) > label.aggregation-group > i');
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     await page.click('ul#EmploymentType-aggregation-group.nav.nav-list > li:nth-child(6) > div.checkbox > label > input');
     console.log('Setting as internship tag...');
 
@@ -94,12 +94,12 @@ async function getLinks(page) {
       // pagination, gathering links from each page
       const lastPageNum = 10;
       for (let index = 0; index < lastPageNum; index++) {
-        await page.waitFor(1000);
+        await page.waitForTimeout(1000);
         getLinks(page).then((pageLinks => {
           console.log(pageLinks);
           links.push(pageLinks);
         }));
-        await page.waitFor(3000);
+        await page.waitForTimeout(3000);
 
         if (index !== lastPageNum - 1) {
           await page.click('ul.list-inline.horizontal > li:nth-child(3) > a:nth-child(1)');

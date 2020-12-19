@@ -45,11 +45,11 @@ async function getElements(page) {
   while (hasNext == true) {
     try {
       // eslint-disable-next-line no-await-in-loop
-      await page.waitFor(1000);
+      await page.waitForTimeout(1000);
       getLinks(page).then(links => {
         elements.push(links);
       });
-      await page.waitFor(1000);
+      await page.waitForTimeout(1000);
       // eslint-disable-next-line max-len,no-await-in-loop
       const nextPage = await page.$('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
       // eslint-disable-next-line no-await-in-loop

@@ -68,7 +68,7 @@ async function autoScroll(page) {
 
     await page.waitForSelector('input[id="jobsSearchSidebar-keywords-input"]');
     await page.type('input[id="jobsSearchSidebar-keywords-input"]', searchQuery);
-    await page.waitFor(1000);
+    await page.waitForTimeout(1000);
 
     // sort by date
     await page.waitForSelector('p.Menu_title__3xALk');
@@ -81,13 +81,13 @@ async function autoScroll(page) {
     await page.waitForSelector('input[placeholder="City, State, or ZIP Code"]');
     await page.type('input[placeholder="City, State, or ZIP Code"]', 'Hawaii');
     await page.keyboard.press('ArrowDown');
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     await page.keyboard.press('Enter');
 
     // auto scroll to get all the listings
     const infiniteScroll = 'div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]';
     await page.waitForSelector(infiniteScroll);
-    await page.waitFor(2000);
+    await page.waitForTimeout(2000);
     await autoScroll(page);
 
     await page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
@@ -113,7 +113,7 @@ async function autoScroll(page) {
         while (reachedTotal === false) {
           const elements = await page.$$('div[class="GridItem_jobContent__ENwap"]');
           if (elements.length <= currentCounter) {
-            await page.waitFor(500);
+            await page.waitForTimeout(500);
             await page.hover('div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]:last-child');
             elementLoaded = await page.$$('div[class="GridItem_jobContent__ENwap"]');
           } else {

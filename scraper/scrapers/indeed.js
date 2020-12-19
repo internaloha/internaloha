@@ -35,7 +35,7 @@ import { fetchInfo } from './scraperFunctions.js';
     // closing module that pops up
     try {
       await page.waitForSelector('a[class="icl-CloseButton popover-x-button-close"]', { timeout: 5000 });
-      await page.waitFor(2000);
+      await page.waitForTimeout(2000);
       await page.click('a[class="icl-CloseButton popover-x-button-close"]');
     } catch (err2) {
       console.log('Our Error:', err2.message);
@@ -56,7 +56,7 @@ import { fetchInfo } from './scraperFunctions.js';
     // sometimes the button doesn't show for some odd reason
     try {
       await page.click('button[class="dropdown-button dd-target"]');
-      await page.waitFor(1000);
+      await page.waitForTimeout(1000);
       await page.click('li[onmousedown="rbptk(\'rb\', \'dateposted\', \'4\');"]');
       console.log('Sorting by last 14 days...');
     } catch (err3) {
@@ -107,7 +107,7 @@ import { fetchInfo } from './scraperFunctions.js';
 
       // keep clicking next until it reaches end
       try {
-        await page.waitFor(1000);
+        await page.waitForTimeout(1000);
         await page.click('li a[aria-label="Next"]');
       } catch (err4) {
         console.log('Reached the end of pages!');
