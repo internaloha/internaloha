@@ -1,7 +1,19 @@
 import natural from 'natural';
+import React from 'react';
 import _ from 'lodash';
 import career_interest_to_skill from './career_interest_to_skill';
-
+import {
+  Button,
+  Card,
+  Grid,
+  Icon,
+  Label,
+  Modal,
+  Header,
+  Popup,
+  Form,
+  Radio, Item, Dropdown
+} from 'semantic-ui-react';
 function test(data) {
   const TfIdf = natural.TfIdf;
   const tfidf = new TfIdf();
@@ -22,7 +34,7 @@ function test(data) {
   tfidf.tfidfs('javascript full-stack css hmtl ', function (i, measure) {
     //  console.log('document #' + i + ' is ' + measure);
     if (measure > 6) {
-      console.log('document #' + i + ' is ' + measure);
+      console.log(`document #${i} is ${measure}`);
       tfidfData.push(data[i]);
     }
   });
@@ -40,10 +52,20 @@ function dropdownCareerInterest() {
 
   const info = [];
   for (let i = 0; i < career_interest_to_skill.length; i++) {
+    const skills = career_interest_to_skill[i].skills.join(', ');
     info.push({
       key: career_interest_to_skill[i].career,
       text: career_interest_to_skill[i].career,
       value: career_interest_to_skill[i].career,
+      content: (
+          <Popup content={`Associated Skills: ${skills}`}
+                 trigger={<Dropdown.Item>
+            {career_interest_to_skill[i].career}</Dropdown.Item>}
+                 style={{ marginLeft: '12%' }}
+                 position={'right center'}
+                 basic inverted
+          />
+      ),
     });
   }
   return info;
@@ -111,7 +133,7 @@ function recommendation(tags, careers, data, location) {
 
   const sorted = _.orderBy(skills, ['recommendation'], ['desc']);
 
-  //console.log(sorted);
+  // console.log(sorted);
 
 // for (let i = 0; i < data.length; i++) {
 //   // if any of the tags exist in data set, push it to skills and go to next
@@ -152,7 +174,7 @@ function isRemoteFunc(data, value) {
   if (value === false) {
     return data;
   }
-  console.log(_.filter(data, ['remote', true]))
+  console.log(_.filter(data, ['remote', true]));
   return _.filter(data, ['remote', true]);
 }
 

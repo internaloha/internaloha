@@ -1,34 +1,35 @@
 [
     {
-        "url": "https://jobs.apple.com/en-us/details/200180397/product-design-internship?team=STDNT",
-        "position": "Product Design Internship",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:14:57.259Z",
+        "url": "https://jobs.apple.com/en-us/details/200208603/physical-design-internship?team=HRDWR",
+        "position": "Physical Design Internship",
+        "posted": "Nov 20, 2020",
+        "lastScraped": "2020-12-16T21:49:42.568Z",
         "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
+            "city": "Munich",
+            "state": "Bavaria"
         },
-        "description": "<span data-reactid=\"168\">As a member of a multi-functional design team at Apple, you will help to create the next generation of the world's finest hardware devices. You will conceive, design, and bring into production products that will re-define user experience. You will work closely with many different multi-functional teams including Industrial Design, Packaging, Safety, Hardware Engineering, EMC, and Marketing.</span>",
+        "description": "<span data-reactid=\"142\">In this student role, you will work within a segment of Apple's engineering team, working on SoC's for products. You will develop internal tools and scripts to increase the team's efficiency, support development processes, and learn how this work is integrated and affecting Apple's products. You will also learn how to work with Apple's internal development environment and work processes.\n\nWe are looking for a hardworking student that loves challenges, with an ability to learn and to be a part of our team.</span>",
         "index": 1,
         "skills": [
+            "machine learning",
             "software engineering"
         ],
         "company": "N/A",
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200193216/ux-design-internship?team=SFTWR",
-        "position": "UX Design Internship",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:14:58.235Z",
+        "url": "https://jobs.apple.com/en-us/details/200208087/dft-internship-m-f-d?team=HRDWR",
+        "position": "DfT Internship (m/f/d)",
+        "posted": "Nov 19, 2020",
+        "lastScraped": "2020-12-16T21:49:43.589Z",
         "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
+            "city": "Munich",
+            "state": "Bavaria"
         },
-        "description": "<span data-reactid=\"158\">Apple’s Instructional Products group is looking for a UX Design/Graphic Design intern to create new experiences that welcome, inform, and inspire our users to get the most out of our products. We possess strong conceptual, design, interactive, and prototyping skills.\n\nWe collaborate with Designers, Instructional Designers, and Developers to build out interaction designs, and define the look and feel of user interfaces\nWe rapidly prototype new interaction models and concepts. Develop personas, user flows, wireframes, scenarios, and user experience goals\nWe keep up with new technologies and directions for user experience</span>",
+        "description": "<span data-reactid=\"148\">As an intern you will be writing software to enhance the level of verification on the latest Apple hardware products. We want you to try out new ideas - so that we can improve and speed up our development using the automation you create. You will be building on existing frameworks and state of the art EDA tools combining them to new flows. An experienced team is there to help and guide you.</span>",
         "index": 2,
         "skills": [
-            "information technology"
+            "software engineering"
         ],
         "company": "N/A",
         "remote": false
@@ -37,7 +38,7 @@
         "url": "https://jobs.apple.com/en-us/details/200194580/dram-engineer-internship?team=HRDWR",
         "position": "DRAM Engineer Internship",
         "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:14:59.285Z",
+        "lastScraped": "2020-12-16T21:49:44.586Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
@@ -53,18 +54,17 @@
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200199941/controls-engineering-internship?team=STDNT",
-        "position": "Controls Engineering Internship",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:00.250Z",
+        "url": "https://jobs.apple.com/en-us/details/200200478/cad-engineering-internship?team=HRDWR",
+        "position": "CAD Engineering Internship",
+        "posted": "Oct 30, 2020",
+        "lastScraped": "2020-12-16T21:49:45.525Z",
         "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
+            "city": "Munich",
+            "state": "Bavaria"
         },
-        "description": "<span data-reactid=\"148\">We are seeking a highly motivated Controls Design Engineer to contribute to the development of new thermal control algorithms. The candidate will be responsible for developing system identification techniques to model different power/thermal aspects of our systems. This work involves implementation of the estimation algorithm as part of our thermal management architecture.</span>",
+        "description": "<span data-reactid=\"150\">As a CAD Engineering Intern, you will be developing automation tools to improve efficiency and ensure Apple delivers the best products to our millions of customers. Strong communication skills with a solid understanding of Advanced Computer Science concepts are a must as you will be working with engineers, third parties, and other cross-function teams within Apple to add new and innovative features.</span>",
         "index": 4,
         "skills": [
-            "project management",
             "software engineering"
         ],
         "company": "N/A",
@@ -74,7 +74,7 @@
         "url": "https://jobs.apple.com/en-us/details/200180404/hardware-technology-internship?team=STDNT",
         "position": "Hardware Technology Internship",
         "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:01.270Z",
+        "lastScraped": "2020-12-16T21:49:46.439Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
@@ -89,33 +89,32 @@
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200180413/software-engineering-internship?team=STDNT",
-        "position": "Software Engineering Internship",
+        "url": "https://jobs.apple.com/en-us/details/200193216/ux-design-internship?team=SFTWR",
+        "position": "UX Design Internship",
         "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:02.302Z",
+        "lastScraped": "2020-12-16T21:49:47.473Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
-        "description": "<span data-reactid=\"162\">Backend Development - You will be making the features that our users love (like Siri) work by communicating data to the user-facing applications. Backend development opportunities are available for students in the following areas: \n\nSiri, iCloud, Apple Maps, Core OS, OS X, Frameworks and Applications, Interactive Media Group, Audio/Video Software Integration and Localization, Advanced Computation, iLife, iWorks, Aperture, Pro Apps, iTunes, Security, Site Reliability Engineering (SRE) and Platform Infrastructure Engineering (PIE)\n\nCore OS - You want to be at the heart of Apple's Software organization. The Core OS team is responsible for the design and development of core technologies that are deployed across all Apple product areas including the iPhone, iPad, Watch, MacBook, iMac, Apple TV, and audio accessories. (Yes, that's pretty much everything.)\n\nSpecifically, the opportunity in CoreOS is in the sensor technology area. By integrating motion, optical, and other sophisticated sensing hardware to Apple's products, we are now able to build innovative features that are truly adaptive to the user and environment. \n\nWeb Development - You will help build web-based tools and applications to improve our products and do more for our customers. Our developers are responsible for crafting the direction of our products by considering the architecture, performance, testing, design, and implementation. And of course we look for engineers that use our products. \n\nEngineers here work on both UI level and lower-level implementation details. The successful intern candidate will be amenable to working in a dynamic, collaborative environment. The person filling this position must be a hands-on, enthusiastic, self-motivated developer with strong initiative and desire to succeed in a challenging environment. You will have a real passion for extraordinary user experiences and an eye for details. Those applying for the Web Development intern position should include a link to a web portfolio.</span>",
+        "description": "<span data-reactid=\"158\">Apple’s Instructional Products group is looking for a UX Design/Graphic Design intern to create new experiences that welcome, inform, and inspire our users to get the most out of our products. We possess strong conceptual, design, interactive, and prototyping skills.\n\nWe collaborate with Designers, Instructional Designers, and Developers to build out interaction designs, and define the look and feel of user interfaces\nWe rapidly prototype new interaction models and concepts. Develop personas, user flows, wireframes, scenarios, and user experience goals\nWe keep up with new technologies and directions for user experience</span>",
         "index": 6,
         "skills": [
-            "software engineering",
             "information technology"
         ],
         "company": "N/A",
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200180414/engineering-program-management-internship?team=STDNT",
-        "position": "Engineering Program Management Internship",
+        "url": "https://jobs.apple.com/en-us/details/200199941/controls-engineering-internship?team=STDNT",
+        "position": "Controls Engineering Internship",
         "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:03.344Z",
+        "lastScraped": "2020-12-16T21:49:48.566Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
-        "description": "<span data-reactid=\"146\">Define project plans and schedules. Drive project execution.\n\nLead internal and external multi-functional teams in engineering and validation activities\n\nEnsure tight inter-team coordination and communication\n\nStrong presentation and communication skills required\n\nUnderstand and communicate sophisticated, technical/Engineering issues\n\nIdentify and resolve conflicts, inter-dependencies and program issues quickly and efficiently\n\nLead development budgets and engineering builds</span>",
+        "description": "<span data-reactid=\"148\">We are seeking a highly motivated Controls Design Engineer to contribute to the development of new thermal control algorithms. The candidate will be responsible for developing system identification techniques to model different power/thermal aspects of our systems. This work involves implementation of the estimation algorithm as part of our thermal management architecture.</span>",
         "index": 7,
         "skills": [
             "project management",
@@ -125,16 +124,87 @@
         "remote": false
     },
     {
+        "url": "https://jobs.apple.com/en-us/details/200180397/product-design-internship?team=STDNT",
+        "position": "Product Design Internship",
+        "posted": "Nov 5, 2020",
+        "lastScraped": "2020-12-16T21:49:49.762Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "California"
+        },
+        "description": "<span data-reactid=\"168\">As a member of a multi-functional design team at Apple, you will help to create the next generation of the world's finest hardware devices. You will conceive, design, and bring into production products that will re-define user experience. You will work closely with many different multi-functional teams including Industrial Design, Packaging, Safety, Hardware Engineering, EMC, and Marketing.</span>",
+        "index": 8,
+        "skills": [
+            "software engineering"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200180413/software-engineering-internship?team=STDNT",
+        "position": "Software Engineering Internship",
+        "posted": "Nov 5, 2020",
+        "lastScraped": "2020-12-16T21:49:50.787Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "California"
+        },
+        "description": "<span data-reactid=\"162\">Backend Development - You will be making the features that our users love (like Siri) work by communicating data to the user-facing applications. Backend development opportunities are available for students in the following areas: \n\nSiri, iCloud, Apple Maps, Core OS, OS X, Frameworks and Applications, Interactive Media Group, Audio/Video Software Integration and Localization, Advanced Computation, iLife, iWorks, Aperture, Pro Apps, iTunes, Security, Site Reliability Engineering (SRE) and Platform Infrastructure Engineering (PIE)\n\nCore OS - You want to be at the heart of Apple's Software organization. The Core OS team is responsible for the design and development of core technologies that are deployed across all Apple product areas including the iPhone, iPad, Watch, MacBook, iMac, Apple TV, and audio accessories. (Yes, that's pretty much everything.)\n\nSpecifically, the opportunity in CoreOS is in the sensor technology area. By integrating motion, optical, and other sophisticated sensing hardware to Apple's products, we are now able to build innovative features that are truly adaptive to the user and environment. \n\nWeb Development - You will help build web-based tools and applications to improve our products and do more for our customers. Our developers are responsible for crafting the direction of our products by considering the architecture, performance, testing, design, and implementation. And of course we look for engineers that use our products. \n\nEngineers here work on both UI level and lower-level implementation details. The successful intern candidate will be amenable to working in a dynamic, collaborative environment. The person filling this position must be a hands-on, enthusiastic, self-motivated developer with strong initiative and desire to succeed in a challenging environment. You will have a real passion for extraordinary user experiences and an eye for details. Those applying for the Web Development intern position should include a link to a web portfolio.</span>",
+        "index": 9,
+        "skills": [
+            "software engineering",
+            "information technology"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200193655/site-technical-manager-internship?team=OPMFG",
+        "position": "Site Technical Manager internship",
+        "posted": "Dec 13, 2020",
+        "lastScraped": "2020-12-16T21:49:51.847Z",
+        "location": {
+            "city": "Weifang",
+            "state": "Shandong"
+        },
+        "description": "<span data-reactid=\"150\">-  Define project plans and schedules and drive project execution.\n-  Collaborate with CAPEX team on machine vendor OSS incl. LBU, ramp and sustaining.\n-  Collect machine downtime rate by site and drive vendors &amp; CMs on machines down FACA by machine type to reduce machine the rate.\n-  Drive vendor’s Machine maintenance SOP and fixing manual refining.\n-  Collaborate with vendors, CMs and CAPEX to setup equipment handover process btw vendor and CM to ensure a smooth transition from vendor to CM and achieve CM maintenance maximum.\n-  Work with internal teams of CAPEX, STM, AME, on CM’s equipment IDL training and certification.\n-  Work with multi-functional teams on equipment pre-tuning and delivery conditions definition to reduce OSS requirement during LBU.</span>",
+        "index": 10,
+        "skills": [
+            "machine learning",
+            "project management"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200203489/cad-digital-internship-m-f-d?team=HRDWR",
+        "position": "CAD digital Internship (m/f/d)",
+        "posted": "Oct 30, 2020",
+        "lastScraped": "2020-12-16T21:49:52.823Z",
+        "location": {
+            "city": "Munich",
+            "state": "Bavaria"
+        },
+        "description": "<span data-reactid=\"146\">As a member of our digital CAD team, you will develop, maintain, and enhance existing sophisticated software Systems for variety of domains for Apple’s pre-silicon designs, to improve designers ability to successfully tapes-out elite silicon on time. Your experience and innovative ideas will inform the design of the next generation of these regression systems. Your insight, your skill at diagnosing the root cause of complex problems, and your ability to guide engineers who come to you with problems will be important contributions to an extended CAD team that comprehensively supports Apple’s DV and chip design engineering efforts. You will work closely with EDA vendors to incorporate new capabilities of their commercial tools, and to resolve problems.</span>",
+        "index": 11,
+        "skills": [
+            "software engineering",
+            "information technology"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
         "url": "https://jobs.apple.com/en-us/details/200193815/controls-design-engineering-internship?team=HRDWR",
         "position": "Controls Design Engineering Internship",
         "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:04.545Z",
+        "lastScraped": "2020-12-16T21:49:53.784Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
         "description": "<span data-reactid=\"148\">We are seeking a highly motivated Controls Design Engineer to take part in the development of new thermal control algorithms. The candidate will be responsible for developing system identification techniques to predict hotspot temperatures. The intern will also work on developing and implementing self tuning controllers and linear/nonlinear state observers to be used in our closed-loop thermal management architecture. The role also involves working with the software team to ensure a robust controller implementation.\n</span>",
-        "index": 8,
+        "index": 12,
         "skills": [
             "software engineering",
             "project management"
@@ -146,156 +216,77 @@
         "url": "https://jobs.apple.com/en-us/details/200187781/vlsi-chip-design-internship?team=HRDWR",
         "position": "VLSI Chip Design Internship",
         "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:05.604Z",
+        "lastScraped": "2020-12-16T21:49:54.733Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
         "description": "<span data-reactid=\"148\">Provide innovative solutions to improve area, power, and performance of chip level VLSI designs\nProvide detailed documentation of work and communicate across teams</span>",
-        "index": 9,
+        "index": 13,
         "skills": [],
         "company": "N/A",
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200172751/finance-development-program-fdp-internship?team=STDNT",
-        "position": "Finance Development Program (FDP) Internship",
-        "posted": "Jul 2, 2020",
-        "lastScraped": "2020-12-07T03:15:06.566Z",
+        "url": "https://jobs.apple.com/en-us/details/200209129/platform-architecture-internship-m-f-d?team=HRDWR",
+        "position": "Platform Architecture Internship (m/f/d)",
+        "posted": "Nov 25, 2020",
+        "lastScraped": "2020-12-16T21:49:55.690Z",
         "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
+            "city": "Munich",
+            "state": "Bavaria"
         },
-        "description": "<span data-reactid=\"150\">As a Finance intern, you’ll support a specific area of Apple’s business, such as: \nAppleCare, Financial Services, Internet Software &amp; Services, Marketing, Operations, R&amp;D, Retail, Sales, Worldwide Financial Planning &amp; Analysis, and more. \n\nDuring the summer, you could: \nAnalyze financial performance by highlighting trends and anomalies\nStreamline reporting through the use of databases such as Tableau or with Excel macros\nPartner with cross functional groups and business partners to analyze the business\nProvide insights and recommendations for operational improvements and innovations\nAssist with close procedures\n\nAfter completing a summer internship in Cupertino, successful Finance interns will be eligible for an offer into Apple’s highly desirable Finance Development Program (FDP). The FDP is a two-year rotational program providing entry-level talent with an opportunity to gain breadth through typically six to eight diverse experiences in Apple Finance in Cupertino, CA. Upon completion, FDPs move into non-rotating Financial Analyst roles within Apple.</span>",
-        "index": 10,
-        "skills": [
-            "software engineering"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200191482/mba-internships-summer-2021?team=STDNT",
-        "position": "MBA Internships - Summer 2021",
-        "posted": "Oct 7, 2020",
-        "lastScraped": "2020-12-07T03:15:07.531Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"154\">APPLECARE\nContact Center Operations: Optimizes the latest technologies and strategies to support the business and operational needs with tactical support to provide Apple customers. Monitor service level and contact center volumes as well as direct strategic Apple care business goals.\n\nField Service Channel Manager: Ensures high customer satisfaction and lowers operational cost by reengineering processes and policies. Influence Apple Authorized Service Providers and mobile carriers to craft premium service programs that support business objectives and Apple’s customers worldwide. \n\nGlobal Repair Center: Lead the operations of the growing network of Apple repair centers around the world in the rapidly growing AppleCare reverse supply chain to handle complex repairs.\n\nOnline/Digital Support &amp; Service: Crafts compelling digital content solutions to improve the Apple customer experience, support the Advisor population to develop solutions to answer customer questions, inspire learning, and connect customers to the repair with assisted support. Brings innovative self-solve learning solutions to customers on the web, through an application on a device, on social platforms, search optimization, and machine learning. \n\nProcurement: Manages AppleCare’s OEM supplier’s relationship, sourcing optimization, early engagement for repair strategy development, post-production planning including costs, continuity of supply, and capacity planning activities. \n\nReporting &amp; Analytics: Harnesses the vast amount of data relating to AppleCare’s business to make strategic recommendations and share insights about ongoing operations. Translating business needs into analytical requirements using advanced quantitative analysis. \n\nSupply Chain Management: Build and run AppleCare’s Global Reverse Supply Chains, through optimization of forecasting. Analyze and calculate new buy planning, repair planning, inventory management, purchasing, warranty redemption, and project management. \n\n\nPRODUCT OPERATIONS/MANUFACTURING DESIGN\n\nOperations Program Manager: \nAs an OPM, you will work with our New Product Introduction (\"NPI\") or Sustaining Operations teams on component &amp; ramp readiness, product launch &amp; ramp, or sustaining operations through ‘end of life’ programs. Run the product manufacturability, testability, and supply chain responsiveness in pursuit of low cost and maximum flexibility while stewarding the highest standards of product quality expected of Apple's products.\n\nA successful OPM excels in program/project management; communicates with ease at all levels; is adept at facilitating actions and resolving conflicts; manages through relationships and influence; and brings calm and control to even the highest-intensity projects. \n\nManufacturing Design - Global Supply Manager:\nResponsible for the commercial relationship with our enclosure manufacturing partners and for cost negotiations, risk management, driving operational and cost efficiencies through process or design change, as well overall project execution. You sit at the intersection of Apple's business activities and engineering communities, and optimally and effectively balance the needs of both groups to ensure successful product launches.\n\nEnclosure components (such as the housing, cover glass, and buttons) define the look, feel, and expression of Apple’s globally-recognized industrial and product design. GSMs work in concert with operations supply quality and base engineers as well as Apple’s Product Design and Industrial Design teams. Together, these teams execute and scale both new and existing manufacturing processes, materials, technologies, finishes, and form factors.\n\n\nSTRATEGIC SOURCING\n\nGlobal Supply Manager: \nYou will interface between Apple and the industries that supply core component technologies. In this role, you are responsible for developing and executing sourcing strategies as well as recommending product innovations based on improving technology. This position requires an interest in market dynamics and competitive behavior, negotiation and pricing, manufacturing processes, and risk mitigation. \n\n\nSUPPLY CHAIN OPERATIONS\n\nSupply Demand Management (role: Supply Demand Planner): \nIn SDM, you will hold a critical role in Apple's multi-billion dollar supply chain decisions by forecasting product demand, analyzing production needs, allocating global supply across all channels of distribution and influencing quarterly sales projections used in guidance to Wall Street. Your job will require you to collaborate and influence across many key groups within Apple (Marketing, Sales, Finance, Procurement, Ops, Materials), all in an effort to both set the strategy and drive the execution of products across Apple’s global supply chain.\n\nBusiness Process Re-engineering (role: BPR Project Manager): \nIn BPR, you will lead complex, global initiatives to define, build, and roll out innovative technology and business process solutions that increase efficiencies, improve customer satisfaction, and challenge the status quo. You will define and build capabilities that provide deep business insight, enable rapid decision-making, and drive automation of evolving business processes.\n\n\nPRODUCT MARKETING\n\nAs a member of our Product Marketing group, you’ll shepherd a product’s positioning from concept through development and launch, to give it the best chance of success in the market. You’ll apply customer insights to help infuse ideas for groundbreaking features into our product-development process. Together with our team, you’ll work to craft groundbreaking ideas into tangible products that excite the world. \n\nAt Apple, we combine product development and product marketing responsibilities into a single, cross functional Product Management role that collaborates with design, engineering, finance, legal, marketing communications, public relations, market research, sales and support for maximum impact across the organization.\n\n\nCORPORATE RETAIL\n\nAre you passionate about the customer experience? The Apple Retail corporate team cares deeply about building and delivering the best customer experience in the world. We are one of the largest retailers with a global e-commerce footprint in 36 countries and more than 450 Apple Retail Store locations in 17 countries. We craft the strategies, drive the initiatives, execute the programs, and develop the technologies that bring Apple products to more than 4.5 million visitors every single day. A few extraordinary interns will get to help plan what's next.\n\nTarget Areas\n-  Central Operations\n-  E-Commerce\n-  Marketing\n-  Merchandising\n-  Planning &amp; Technology\n-  Sales &amp; Service\n-  User Experience</span>",
-        "index": 11,
-        "skills": [
-            "machine learning",
-            "project management",
-            "information technology",
-            "software engineering"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200180406/operations-manufacturing-design-engineer-internship?team=STDNT",
-        "position": "Operations, Manufacturing Design Engineer Internship",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:08.486Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"156\">Areas of expertise within Manufacturing Design include:\n\n\nMANUFACTURING DESIGN ENGINEER\nAs an MDE, you will handle selection, implementation &amp; optimization of manufacturing processes for mechanical enclosure subassemblies for our legendary products. \n\nUtilize Mechanical Engineering experience and work cross functionally with Product Design Engineering and Industrial Design \n\nAssess product features for manufacturability, and recommend capable processes and equipment.\n\nDeveloping new manufacturing processes to enable future product design and conducting DOEs to validate process capability. \n\nWork with Global Supplier Managers to identify capable suppliers, assess their secondary processes for capacity, quality and cost.\n\nWork with suppliers to define and refine mechanical tooling, fixtures and establish capability / readiness. \n\nAudit supplier processes and assembly processes and support product phase builds from EVT, DVT PVT and ramp. \n\nAssist post production quality / cost improvement activity related to fixtures and processes.\n\n\nMANUFACTURING QUALITY ENGINEER\nAs an MQE, you will utilize Engineering, Factory Management &amp; Supply Chain skills in developing and implementing high efficiency inspection equipment, groundbreaking quality systems and ultimately the best products available.\n\nHelp lead the creation of state of the art inspection &amp; measurement equipment for Apple product.\n\nApply your understanding of quality control and manufacturing concepts to lead the development of specific Product Quality Plans (PQP) appropriate to program and commodity.\n\nProvide technical direction and mentorship to other Quality Engineers supporting the implementation of the PQP.\n\nIdentify and direct studies to implement improvements in measuring method where appropriate.\n\nCoordinate Quality Engineering functions for multiple programs in the product category. \n\nCollaborate with internal and external groups to ensure accurate definition of quality expectations and appropriate assurance techniques are used for the product.\n\nSupplier Quality Management - Assist in supplier selection process for new products and sourcing activities. Assess supplier production control and quality programs, identify shortfalls to expectations, and directly secure agreement to correct. Supervise each supplier's performance through measurement of production line statistics, company inspections, and audits.\n\n\nSUBJECT MATTER AUTHORITY\nOur SME's investigate and develop solutions to overcome difficult technical challenges that require non-standard manufacturing approaches. Apply your engineering skills to develop an in depth understanding of the process drivers that will drive successful implementation of significant improvements to mechanical enclosures. \n\nThe following activities fall within the scope of responsibilities:\n\nAssess mechanical designs and relate design goals to process, equipment, and material requirements to evaluate a set of options to tackle difficult manufacturing problems.\n\nResearch manufacturing processes and evaluate them for potential to achieve technical goals. \n\nPlan and execute development trials to test feasibility, optimize process inputs, and validate capabilities of process options. \n\nPresent analysis to key decision makers used to make significant commercial and design commitments.</span>",
-        "index": 12,
-        "skills": [
-            "project management",
-            "software engineering"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200180420/business-marketing-and-g-a-internships?team=STDNT",
-        "position": "Business, Marketing, and G&A Internships",
-        "posted": "Jul 17, 2020",
-        "lastScraped": "2020-12-07T03:15:09.493Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"154\">Within Apple, these teams support various lines of business with a mixture of non-technical and technical roles. The people here are a unique mix of backgrounds, experiences, and skills. The teams here are full of dynamic and full of incredibly smart, hardworking, and fun people passionate about technology, digital media, arts and entertainment.\n\nIf you're excited to join one of the most successful companies in the world, then we'd love to hear from you. Let’s do our best work together.\n\nAs an intern, you will learn, grow, and contribute to Apple’s business while working on exciting projects alongside top professionals. \n\nWe truly believe that at Apple, you will do your life’s best work.\n\nInternships are based in SCV and Culver City. \n\nINTERNSHIP OPPORTUNITIES ARE AVAILABLE WITHIN THE FOLLOWING AREAS:\n-  Finance\n\n-  Legal\n\n-  Wellness\n\n-  Environment, Policy, &amp; Social Initiatives\n\n-  Marketing\n\n-  Business \n\n-  Creative</span>",
-        "index": 13,
-        "skills": [
-            "machine learning",
-            "project management",
-            "information technology"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200207912/machine-learning-engineer-internship-siri?team=MLAI",
-        "position": "Machine Learning Engineer Internship, Siri",
-        "posted": "Nov 17, 2020",
-        "lastScraped": "2020-12-07T03:15:10.444Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"148\">As an intern, you will work with a mentor and broader teams across Apple in order to advance Siri’s core machine learning capabilities in machine hearing, speech recognition, text-to-speech synthesis, and natural language understanding. You will have opportunities to broadly demonstrate your work, which may also lead to a conference publication.\n\nTo be successful in this position, you should have a strong technical foundation, be able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Interns are self-motivated, excellent problem solvers, quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>",
+        "description": "<span data-reactid=\"150\">As an intern in the System-on-Chip (SoC) Performance Modeling Team, you will work together with platform architects to create C++ simulations of Apple’s next iPhone/iPad/Mac chips. You will model and analyze new wireless (5G) solutions and related applications, such as augmented reality, to help us deliver the best products to our millions of customers. We are looking for a student who is passionate about developing in C++ and/or Python and brings a solid understanding of computer architecture or complex embedded systems.</span>",
         "index": 14,
         "skills": [
-            "machine learning",
-            "information technology",
+            "python",
+            "c and c++"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200205297/system-engineering-internship-m-f-d?team=HRDWR",
+        "position": "System Engineering Internship (m/f/d)",
+        "posted": "Nov 4, 2020",
+        "lastScraped": "2020-12-16T21:49:59.135Z",
+        "location": {
+            "city": "Munich",
+            "state": "Bavaria"
+        },
+        "description": "<span data-reactid=\"148\">As a System Engineering Intern, you will be supporting in the development of algorithms, evaluation of system performance, and creation of simulation environments for wireless communication systems to ensure Apple delivers the best products to our millions of customers. Strong communication skills with a solid understanding of wireless communication systems and signal processing are a must as you will be working with engineers and cross-function teams within Apple to add new and innovative features.</span>",
+        "index": 15,
+        "skills": [
             "software engineering"
         ],
         "company": "N/A",
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200207888/machine-learning-research-internship-siri?team=MLAI",
-        "position": "Machine Learning Research Internship, Siri",
-        "posted": "Nov 17, 2020",
-        "lastScraped": "2020-12-07T03:15:11.353Z",
+        "url": "https://jobs.apple.com/en-us/details/200208065/digital-design-internship-f-m-d?team=HRDWR",
+        "position": "Digital Design Internship (f/m/d)",
+        "posted": "Dec 15, 2020",
+        "lastScraped": "2020-12-16T21:50:00.102Z",
         "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
+            "city": "Munich",
+            "state": "Bavaria"
         },
-        "description": "<span data-reactid=\"152\">As an intern, you will work with a mentor and broader teams across Apple in order to advance Siri’s core machine learning capabilities in machine hearing, speech recognition, text-to-speech synthesis, and natural language understanding. You will have opportunities to broadly demonstrate your work, which may also lead to a conference publication.\n\nTo be successful in this position, you should have a strong technical foundation, be able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Interns are self-motivated, excellent problem solvers, quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>",
-        "index": 15,
-        "skills": [
-            "machine learning",
-            "information technology"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200180409/machine-learning-ai-internship?team=STDNT",
-        "position": "Machine Learning / AI Internship",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:12.310Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"158\">You will research and develop innovative ML strategies for challenging problems that will affect future Apple products. You will collaborate with broader teams across Apple to transfer AI/ML solutions. You will have opportunities to provide technical mentorship and guidance and prepare technical reports for publication and conference talks. You are self-motivated, excellent problem solver, a go-getter. You are quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>",
+        "description": "<span data-reactid=\"148\">Responsible for ensuring the quality of the work, you are expected to: \n\n-  Work with the team to define and design dedicated digital modules, which will be used in different products. \n\n-  Work closely with the team to explore different design architectures and optimize the circuit regarding area, performance and power consumption. \n\n-  Have collaborative approaches to verify the digital circuit in terms of functionality, quality and re-usability.</span>",
         "index": 16,
-        "skills": [
-            "artificial intelligence",
-            "machine learning"
-        ],
+        "skills": [],
         "company": "N/A",
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200193283/pixel-design-and-design-verification-internship?team=HRDWR",
-        "position": "Pixel Design and Design Verification Internship",
-        "posted": "Dec 1, 2020",
-        "lastScraped": "2020-12-07T03:15:13.483Z",
+        "url": "https://jobs.apple.com/en-us/details/200180414/engineering-program-management-internship?team=STDNT",
+        "position": "Engineering Program Management Internship",
+        "posted": "Nov 5, 2020",
+        "lastScraped": "2020-12-16T21:50:01.133Z",
         "location": {
-            "city": "Austin",
-            "state": "Texas"
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "California"
         },
-        "description": "<span data-reactid=\"154\">Ensuring the quality of the SOC \nWorking closely with the team to review specifications, develop attributes, tests &amp; coverage plans, and define methodology &amp; test benches \nTeaming up with the design and micro-architecture teams to understand the functional and performance goals of the design \nWork independently and manage deliverables to align with the project goals plus support cross- functional engineering efforts</span>",
+        "description": "<span data-reactid=\"146\">Define project plans and schedules. Drive project execution.\n\nLead internal and external multi-functional teams in engineering and validation activities\n\nEnsure tight inter-team coordination and communication\n\nStrong presentation and communication skills required\n\nUnderstand and communicate sophisticated, technical/Engineering issues\n\nIdentify and resolve conflicts, inter-dependencies and program issues quickly and efficiently\n\nLead development budgets and engineering builds</span>",
         "index": 17,
         "skills": [
             "project management",
@@ -305,89 +296,16 @@
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200180400/hardware-hardware-products-hardware-engineering-internship?team=STDNT",
-        "position": "Hardware, Hardware Products, Hardware Engineering Internship",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:14.601Z",
+        "url": "https://jobs.apple.com/en-us/details/200201119/cad-em-rf-simulation-internship-f-m-d?team=HRDWR",
+        "position": "CAD EM/RF simulation Internship (f/m/d)",
+        "posted": "Oct 30, 2020",
+        "lastScraped": "2020-12-16T21:50:02.972Z",
         "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
+            "city": "Munich",
+            "state": "Bavaria"
         },
-        "description": "<span data-reactid=\"158\">Some responsibilities in Hardware Engineering may include: \n\nEngineering Program Management: Identifying, evaluating and driving engineering/quality improvements/new supplier qualifications)\n\nTouch/Displays Engineering: Optics, Flat Panel/HW, Touch Mechanical Design. Design &amp; Execute experiments validating new materials (optical, mechanical); Optimize design for performance and reliability\n\nWireless Technologies: Antenna Design, RF System Level Validation, Automated Software/Tool Dev, Optimization of RF Automated Systems, RF Sys Analysis\n\nASIC / VLSI: RTL Design &amp; Implementation, Verification, Integration, Validation, Emulation, Power/Tech &amp; Circuits, CAD, STA, Physical Design, Low Power Design, Signal Integrity, Analog/Mixed Signal, LDV/HDV, DFT\n\nEmbedded/Systems Development: Electrical System Design and Integration, System-Level Testing Support, Schematic Capture, Bug Resolution\n\nAudio/Acoustics/Optical Production Testing and Mechanical Test Design\n\nHuman Interface Devices: Firmware Eng, Low-Level Microcontroller Code Dev, Prototyping concepts, design verification (FPGA), Streamline Electrical Design\n\nFirmware Development: Writing/Debugging Low level firmware, drivers, protocols and other firmware code, developing embedded firmware solutions</span>",
+        "description": "<span data-reactid=\"148\">In this role you will be closely collaborating with Analog/RF circuit designers and layout team, analyse and understand modelling results, compare modelling with silicon measurements and improve existing tooling and flow methodologies.</span>",
         "index": 18,
-        "skills": [
-            "software engineering",
-            "project management",
-            "information technology"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200198361/apple-watch-software-engineering-internship?team=STDNT",
-        "position": "Apple Watch - Software Engineering Internship",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:15.569Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"154\">As a software intern on the Apple Watch team, you will have many responsibilities relating to the design, development, and testing of the device software. These include: \n\nCollaborating closely with the design team to evaluate designs against the technical constraints of the software and the hardware of a small, low power device.\n\nImproving the applications and their underlying frameworks to innovate and push the boundaries of what's possible on exciting and easy to use interfaces.\n\nDeveloping features with well-designed solutions that can stand the test of time.\n\nCoordinating with the quality assurance team to both ensure full test coverage as well as to initiate focused testing on critical components.</span>",
-        "index": 19,
-        "skills": [
-            "software engineering"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200202295/strategic-data-solutions-data-scientist-internship?team=STDNT",
-        "position": "Strategic Data Solutions - Data Scientist Internship",
-        "posted": "Nov 10, 2020",
-        "lastScraped": "2020-12-07T03:15:16.791Z",
-        "location": {
-            "city": "Austin",
-            "state": "Texas"
-        },
-        "description": "<span data-reactid=\"144\">As an intern, you will get to experience what it’s like to work as an enterprise data scientist, collaborating with your mentor to develop a research project and presenting the results to senior leadership at the end of the program. You will have the opportunity to play in Apple’s enormous data infrastructure, evaluating your new tools and techniques on a giant scale.\n\nOur commitment to you:\nWe will provide you with a challenging opportunity that you will be proud to have accomplished at Apple. As we learn more about you, we’ll help connect you with mentors and teammates that can help guide you in becoming a professional data scientist. You’ll work with teams across Apple and gain valuable experience driving down fraud and waste in a high tech environment.</span>",
-        "index": 20,
-        "skills": [
-            "machine learning",
-            "project management"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200181454/machine-learning-ai-engineering-research-internship-neurips-2020?team=MLAI",
-        "position": "Machine Learning / AI - Engineering & Research Internship (NeurIPS 2020)",
-        "posted": "Nov 30, 2020",
-        "lastScraped": "2020-12-07T03:15:19.260Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"156\">You will research and develop innovative ML strategies for challenging problems that will affect future Apple products. You will collaborate with broader teams across Apple to transfer AI/ML solutions. You will have opportunities to provide technical mentorship and guidance and prepare technical reports for publication and conference talks. You are self-motivated, excellent problem solver, a go-getter. You are quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>",
-        "index": 21,
-        "skills": [
-            "artificial intelligence",
-            "machine learning",
-            "software engineering"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200200857/biomedical-r-d-studies-co-op-intern?team=STDNT",
-        "position": "Biomedical R&D Studies Co-Op Intern",
-        "posted": "Nov 3, 2020",
-        "lastScraped": "2020-12-07T03:15:20.295Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"148\">Key responsibilities include: \n\n- Design and execute human user studies for providing reliable and revealing data to evaluate the feasibility of health, wellness, and fitness sensors, systems, and applications.\n- Develop and refine processes that streamline user study data collection process and improve the user study experience for participants.</span>",
-        "index": 22,
         "skills": [],
         "company": "N/A",
         "remote": false
@@ -396,13 +314,13 @@
         "url": "https://jobs.apple.com/en-us/details/200209647/ai-ml-program-manager-research-in-academia?team=MLAI",
         "position": "AI/ML - Program Manager, Research in Academia",
         "posted": "Dec 3, 2020",
-        "lastScraped": "2020-12-07T03:15:21.305Z",
+        "lastScraped": "2020-12-16T21:50:07.377Z",
         "location": {
             "city": "Seattle",
             "state": "Washington"
         },
         "description": "<span data-reactid=\"148\">You’ll establish strong partnerships with cross functional teams in HR, Recruiting, and management to help build the machine learning research internship and visiting researcher programs for the AI/ML organization.\nYou’ll create best practices around publishing, recruiting, and headcount allocation across the organization and gain buy in from key stakeholders\nYou’ll collaborate with team members to identify areas for operational improvement, and be an authority on intern experience, postdoc best practices, and visiting faculty frameworks.\nYou’ll build and grow new programs aligned with strategic organizational goals\nYou’ll work cross functionally across multiple organizations and partners to deliver results that build bridges between Apple and academia.\nYou’ll work under tight deadlines with minimal supervision in a fast-paced, dynamic environment where quality, creativity, and accountability are tradition.</span>",
-        "index": 23,
+        "index": 19,
         "skills": [
             "machine learning",
             "project management",
@@ -415,57 +333,13 @@
         "url": "https://jobs.apple.com/en-us/details/200193049/hardware-engineer-entry-level-austin?team=HRDWR",
         "position": "Hardware Engineer - Entry Level (Austin)",
         "posted": "Sep 20, 2020",
-        "lastScraped": "2020-12-07T03:15:22.261Z",
+        "lastScraped": "2020-12-16T21:50:08.485Z",
         "location": {
             "city": "Austin",
             "state": "Texas"
         },
         "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
-        "index": 24,
-        "skills": [
-            "software engineering",
-            "python",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "information technology"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200193055/hardware-engineer-entry-level-boston?team=HRDWR",
-        "position": "Hardware Engineer - Entry Level (Boston)",
-        "posted": "Sep 20, 2020",
-        "lastScraped": "2020-12-07T03:15:23.206Z",
-        "location": {
-            "city": "Boston",
-            "state": "Massachusetts"
-        },
-        "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
-        "index": 25,
-        "skills": [
-            "software engineering",
-            "python",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "information technology"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200186228/hardware-engineer-entry-level-cupertino?team=HRDWR",
-        "position": "Hardware Engineer - Entry Level (Cupertino)",
-        "posted": "Sep 20, 2020",
-        "lastScraped": "2020-12-07T03:15:24.188Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
-        "index": 26,
+        "index": 20,
         "skills": [
             "software engineering",
             "python",
@@ -481,13 +355,13 @@
         "url": "https://jobs.apple.com/en-us/details/200193056/hardware-engineer-entry-level-florida-orlando-melbourne?team=HRDWR",
         "position": "Hardware Engineer - Entry Level (Florida - Orlando / Melbourne)",
         "posted": "Sep 20, 2020",
-        "lastScraped": "2020-12-07T03:15:25.134Z",
+        "lastScraped": "2020-12-16T21:50:09.480Z",
         "location": {
             "city": "Orlando",
             "state": "Florida"
         },
         "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
-        "index": 27,
+        "index": 21,
         "skills": [
             "software engineering",
             "python",
@@ -500,16 +374,38 @@
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200193053/hardware-engineer-entry-level-san-diego?team=HRDWR",
-        "position": "Hardware Engineer - Entry Level (San Diego)",
+        "url": "https://jobs.apple.com/en-us/details/200193055/hardware-engineer-entry-level-boston?team=HRDWR",
+        "position": "Hardware Engineer - Entry Level (Boston)",
         "posted": "Sep 20, 2020",
-        "lastScraped": "2020-12-07T03:15:26.163Z",
+        "lastScraped": "2020-12-16T21:50:10.643Z",
         "location": {
-            "city": "San Diego",
+            "city": "Boston",
+            "state": "Massachusetts"
+        },
+        "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
+        "index": 22,
+        "skills": [
+            "software engineering",
+            "python",
+            "c and c++",
+            "machine learning",
+            "project management",
+            "information technology"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200186228/hardware-engineer-entry-level-cupertino?team=HRDWR",
+        "position": "Hardware Engineer - Entry Level (Cupertino)",
+        "posted": "Sep 20, 2020",
+        "lastScraped": "2020-12-16T21:50:11.601Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
         "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
-        "index": 28,
+        "index": 23,
         "skills": [
             "software engineering",
             "python",
@@ -525,13 +421,13 @@
         "url": "https://jobs.apple.com/en-us/details/200193051/hardware-engineer-entry-level-portland?team=HRDWR",
         "position": "Hardware Engineer - Entry Level (Portland)",
         "posted": "Sep 20, 2020",
-        "lastScraped": "2020-12-07T03:15:27.047Z",
+        "lastScraped": "2020-12-16T21:50:12.669Z",
         "location": {
             "city": "Portland",
             "state": "Oregon"
         },
         "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
-        "index": 29,
+        "index": 24,
         "skills": [
             "software engineering",
             "python",
@@ -544,32 +440,38 @@
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200007574/apple-industrial-design-accepting-portfolios?team=DESGN",
-        "position": "Apple Industrial Design Accepting Portfolios",
-        "posted": "Feb 26, 2020",
-        "lastScraped": "2020-12-07T03:15:28.101Z",
+        "url": "https://jobs.apple.com/en-us/details/200193053/hardware-engineer-entry-level-san-diego?team=HRDWR",
+        "position": "Hardware Engineer - Entry Level (San Diego)",
+        "posted": "Sep 20, 2020",
+        "lastScraped": "2020-12-16T21:50:13.704Z",
         "location": {
-            "city": "Santa Clara Valley (Cupertino)",
+            "city": "San Diego",
             "state": "California"
         },
-        "description": "<span data-reactid=\"156\">To apply, please direct a CV and concise PDF portfolio to:  idportfolios@apple.com</span>",
-        "index": 30,
-        "skills": [],
+        "description": "<span data-reactid=\"146\">As a part of our team, you'll work on real challenges the team faces as well as upcoming products. To be successful, you need to have a strong technical foundation, ability to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Ideal candidates are motivated and prepared to work independently. \n\nBelow are the various areas you can explore: \n\n<b>RTL Design:</b>You will help in the verification and lab bring-up of advanced mixed-signal circuits. Deep knowledge of chip architecture/microarchitecture, front end pre-silicon design flow, RTL design/coding, logic design, Verilog/System Verilog, low power design, timing/power/performance analysis, C/C++ \n\n<b>Design Verification:</b> In Design Verification, you will enable us to produce fully functional first silicon. Knowledge of chip architecture, Pre-silicon RTL design verification, System Verilog or UVM/OVM/VMM, block/chip/core test bench exp, System Verilog Assertion (SVA), C/C++/assembly, Perl/Python \n\n<b>Physical Design:</b> In Physical Design, you will be at the center of design effort collaborating with architecture, CAD, timing and logic design teams, with a critical impact on delivering best in class designs Knowledge of basic chip architecture, back end chip design flow, physical synthesis, floor-planning, place and route (PnR), power grid, timing (STA), physical design verification (DRC/LVS), EMIR (Redhawk/Totem/Voltus) \n\n<b>Modeling/Performance Engineer: </b>You will be focused on writing code for modeling and performance modeling for GPUs, CPUs, SoCs and other model infrastructure. C++, SystemC scripting; Python modeling for H/W verification, workloads, correlation, and analysis. experience in chip development environment with RTL and verification define, architect, design and implement and deploy models. \n\n<b>CAD Engineer: </b>You will develop and support chip level design methodology and flow. You'll be plugged into all tech nodes for chip delivery and be able to contribute on multiple projects. Must have excellent CAD flow programming and algorithm development knowledge. You will be collaborating with VLSI design and CAD teams, and EDA vendors to seek some of the most significant design problems. Strong analytical skills, effective communication and leadership qualities. \n\n<b>Signal Integrity/RF Engineer:</b> In RF Integrity, you will engage with cross-disciplinary teams to develop SoCs that will be used in Apple’s mobile devices. Specifically, responsibilities include developing novel methodology to solve very complex coupling issues, mitigating multi-radio coexistence problems at IC, package/module, and systems, as well as executing RF design integration topologies. Prior RF circuit design and EM modeling experience is highly preferred. \n\n<b>Embedded Engineer:</b> In Embedded Software Engineering, you will make up a significant portion of the Silicon Validation and Productization teams. Our embedded engineers develop, port, release, maintain, and enhance software to enable large scale testing of Apple’s SoCs. These engineers will integrate existing test software between environments, enhance test software to exercise functional blocks, develop Linux device drivers and user-land tests, implement device libraries to aid in the portability of device drivers, bring up low-level code on new SoCs and develop our own SMP RTOS. We have several types of embedded software engineers that focus on various aspects of the chip including feature validation (video, audio, display, etc.), IP validation, performance testing, micro-controller code, and low-level software. These engineers work in bare-metal, RTOS, and/or Linux environments to write software that runs on every Apple SoC in the design validation phase and downstream during manufacturing in the factory to identify bugs. C/C++ is the primary coding language (with some ARM Assembly) and Python is the primary scripting language. \n\n<b>Power/Battery Engineer: </b>In this role, you will be on the forefront of development bringing innovations in the industry Electronic circuit design/development experience for microcontroller-based systems. Knowledge of inter-module communication protocols (I2C, SPI, UART, etc.) and familiarity of embedded systems. Prior experience in batteries, portable consumer electronics, Power Supplies, Medical Electronics, or automotive electronics. \n\n<b>Analog/Mixed Signal Engineer: </b>You will work closely with multi-functional teams with an understanding of design specs and requirements for analog mixed signal (AMS) circuits, including SerDes, PLLs &amp; Data Converters. Experience of designing AMS circuit blocks such as bandages, biasing circuits, LDO regulators, amplifiers, comparators, switched-cap circuits, ADCs, DACs, oscillators, filters. Device physics knowledge as it applies to analog IC design. \n\n<b>IC Packaging Engineer: </b>You will develop advanced packaging technologies for a multitude of projects including SoC’s Hands on experience with Cadence ADP/SIP. Familiarity with Signal and Power Integrity fundamentals. You'll be responsible for package/SIP layout, optimization, design verification and taping out. \n\n<b>Silicon Validation: </b>You will have the opportunity as either an embedded software engineer, high-speed board design engineer, or debug/triage engineer to work at the cross-section of hardware and software to perform silicon bring-up and system level validation of Apple’s SOCs. These teams build test software environments, debug tools, automated tests, and PCB boards that push functional blocks to their limits in order to root cause failures in the Silicon, identify fixes, and optimize performance and efficiency before we manufacture hundreds of millions of units. Knowledge of debug, silicon bring-up, chip architecture and design, embedded systems, C/C++/assembly, Python/Perl/Tcl. \n\n<b>Platform Engineer: </b>You will work as either an FPGA or Emulation engineer who build prototypes on FPGAs, build emulation models, and perform emulation on each yet-to-be-built chip with the primary goal of debugging. Knowledge of chip architecture and design, industry standard interfaces, FPGA tool flow, Verilog, C/C++/assembly, Python/Perl/Tcl, and debugging.</span>",
+        "index": 25,
+        "skills": [
+            "software engineering",
+            "python",
+            "c and c++",
+            "machine learning",
+            "project management",
+            "information technology"
+        ],
         "company": "N/A",
-        "contact": "idportfolios@apple.com",
         "remote": false
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200198933/hardware-engineering-program-manager-technology-development-group?team=HRDWR",
         "position": "Hardware Engineering Program Manager, Technology Development Group",
-        "posted": "Dec 3, 2020",
-        "lastScraped": "2020-12-07T03:15:29.024Z",
+        "posted": "Dec 16, 2020",
+        "lastScraped": "2020-12-16T21:50:14.821Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
-        "description": "<span data-reactid=\"152\">What will you do in this role?\n\nAs a Hardware EPM, you will own and track engineering development schedules, working closely alongside teams of electrical and mechanical engineers to coordinate the release the designs for hardware subsystems. You will be responsible for:\n\n- Planning and execution of build events, including material planning and factory readiness\n\n- Be the primary point of contact with vendors and CM partners to establish a daily build plan, provide clear direction and guidance to meet the program and build objectives\n\n- Travel internationally to support development builds\n\nIf this sound like you, we would love to hear from you and explore how we can have you be part of our team!</span>",
-        "index": 31,
+        "description": "<span data-reactid=\"152\">What will you do in this role?\n\nAs a Hardware EPM, you will own and track engineering development schedules, working closely alongside teams of electrical and mechanical engineers to coordinate the release the designs for hardware subsystems. You will be responsible for:\n\n- Planning and execution of build events, including material planning and factory readiness\n\n- Be the primary point of contact with vendors and CM partners to establish a daily build plan, provide clear direction and guidance to meet the program and build objectives\n\n- Travel internationally to support development builds\n\nIf this sound like you, we would love to hear from you and explore how we can have you be part of our team!!!</span>",
+        "index": 26,
         "skills": [
             "software engineering",
             "project management",
@@ -579,58 +481,20 @@
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200197695/subject-matter-expert-automation-co-op?team=OPMFG",
-        "position": "Subject Matter Expert - Automation Co-op",
-        "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:29.951Z",
+        "url": "https://jobs.apple.com/en-us/details/200193302/manufacturing-quality-engineer-acoustic-thermal-modules-co-op?team=OPMFG",
+        "position": "Manufacturing Quality Engineer - Acoustic/Thermal Modules Co-op",
+        "posted": "Dec 7, 2020",
+        "lastScraped": "2020-12-16T21:50:15.932Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
-        "description": "<span data-reactid=\"156\">Drive automation activities for stringent enclosure and module manufacturing processes as part of Manufacturing Design’s Automation SME team. Work with integrators, suppliers, contract manufacturers, and internal partners to develop advanced automation capabilities and implement them in the supply chain to exacting standards on aggressive project timelines.</span>",
-        "index": 32,
+        "description": "<span data-reactid=\"154\">Work on innovation projects which can take the quality of Apple products to the next level\n\nDevelop data dashboards for visualizing key manufacturing data using software programming skills\n\nUtilize Digital Signal Processing tools to analyze Noise and Vibration data to setup quality control screening \n\nReview 2-dimensional engineering drawings and collaborate with product design team to ensure dimensional callous are per GD&amp;T standards and are measurement feasible\n\nReview tolerance stack-up analysis with product design team\n\nDevelop metrology for dimensions/cosmetics/electrical test, design gauges, measurement fixtures and drive their qualifications through MSA\n\nDrive FAI/Cpk data collection with vendors and verify the data integrity \n\nConduct yield gap analysis and lead review with cross-functional teams on development of their corrective actions via process improvements, design or tolerance changes or screening parts with statistical analysis and data driven approach\n\n-  Develop reliability test method on part level and ensure the test/design objectives are met\n\n-  Develop IQC, IPQC, OQC plan and ensure parts ship per Quality/Product Design/Industrial Design requirement for both dimensional and cosmetic criteria for each NPI engineering build and in MP\n\n-  Lead IQC and OQC alignment and ensure measurement correlation between vendors \n\n-  Responsible for driving failure analysis and corrective actions on quality issues\n\n-  Drive vendor and work with cross functional team to meet yield targets in engineering builds and in ramp \n\n-  Provide technical direction and guidance to vendor quality engineer, develops supplier capability (including necessary training), establish proper reporting of in-process and final inspection, test results, yields and top issues results to Apple\n\n-  Present/update to operations and design team executives on top issues and progress on yield targets on regular basis\n\n-  International Travel may be required</span>",
+        "index": 27,
         "skills": [
+            "software engineering",
+            "data visualization",
             "project management"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200207676/software-engineer-intern?team=STDNT",
-        "position": "Software Engineer Intern",
-        "posted": "Nov 18, 2020",
-        "lastScraped": "2020-12-07T03:15:31.012Z",
-        "location": {
-            "city": "Sacramento",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"152\">Apple's Strategic Data Solutions (SDS) team is seeking a Software Engineer intern who is passionate about learning and enjoys coding. During your internship on the Strategic Data Solutions team, you will be participating in design, modeling, development and testing of SDS systems. You will also get the opportunity to contribute in high level design discussions regarding system architecture and features. In accordance with your area of study, we will assign you a project related to system development, optimizations or new technology development.\n\nOur commitment to you: We will guide you through a challenge with opportunity for growth, recognition and accomplishment. As we learn more about you, we’ll connect you with mentors and teammates to assist in your personal and professional development. You’ll work cross-functionally with teams across Apple and gain valuable experience driving security improvements in a high tech environment.\n\nWhat we expect: High energy, positive attitude. Bring the best version of yourself. Be prepared to be curious, creative and to make an impact.</span>",
-        "index": 33,
-        "skills": [
-            "software engineering",
-            "machine learning",
-            "project management",
-            "information technology"
-        ],
-        "company": "N/A",
-        "remote": false
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200207686/software-engineer-intern?team=STDNT",
-        "position": "Software Engineer Intern",
-        "posted": "Nov 18, 2020",
-        "lastScraped": "2020-12-07T03:15:32.048Z",
-        "location": {
-            "city": "Sacramento",
-            "state": "California"
-        },
-        "description": "<span data-reactid=\"152\">Apple's Strategic Data Solutions (SDS) team is seeking a Software Engineer intern who is passionate about learning and enjoys coding. During your internship on the Strategic Data Solutions team, you will be participating in design, modeling, development and testing of SDS systems. You will also get the opportunity to contribute in high level design discussions regarding system architecture and features. In accordance with your area of study, we will assign you a project related to system development, optimizations or new technology development.\n\nOur commitment to you: We will guide you through a challenge with opportunity for growth, recognition and accomplishment. As we learn more about you, we’ll connect you with mentors and teammates to assist in your personal and professional development. You’ll work cross-functionally with teams across Apple and gain valuable experience driving security improvements in a high tech environment.\n\nWhat we expect: High energy, positive attitude. Bring the best version of yourself. Be prepared to be curious, creative and to make an impact.</span>",
-        "index": 34,
-        "skills": [
-            "software engineering",
-            "machine learning",
-            "project management",
-            "information technology"
         ],
         "company": "N/A",
         "remote": false
@@ -639,13 +503,13 @@
         "url": "https://jobs.apple.com/en-us/details/200175569/ai-ml-residency-program?team=MLAI",
         "position": "AI/ML Residency Program",
         "posted": "Aug 27, 2020",
-        "lastScraped": "2020-12-07T03:15:32.955Z",
+        "lastScraped": "2020-12-16T21:50:17.013Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
         "description": "<span data-reactid=\"142\">Apple’s AI/ML residency is a year long program inviting experts in various fields to apply their own domain expertise to build revolutionary machine learning and AI empowered products and experiences. The residency will begin with several weeks of coursework focused on machine learning and deep learning, followed by a project with one of our global machine learning teams. Apple AI/ML residents will be matched with a machine learning research/engineering mentor, and will contribute to their team’s research, product design, and development. Some residents may also have the opportunity to publish and present their work at premiere academic conferences.</span>",
-        "index": 35,
+        "index": 28,
         "skills": [
             "machine learning",
             "artificial intelligence",
@@ -659,13 +523,13 @@
         "url": "https://jobs.apple.com/en-us/details/200187307/ai-ml-residency-program?team=MLAI",
         "position": "AI/ML Residency Program",
         "posted": "Aug 27, 2020",
-        "lastScraped": "2020-12-07T03:15:33.834Z",
+        "lastScraped": "2020-12-16T21:50:18.059Z",
         "location": {
             "city": "Seattle",
             "state": "Washington"
         },
         "description": "<span data-reactid=\"142\">Apple’s AI/ML residency is a year long program inviting experts in various fields to apply their own domain expertise to build revolutionary machine learning and AI empowered products and experiences. The residency will begin with several weeks of coursework focused on machine learning and deep learning, followed by a project with one of our global machine learning teams. Apple AI/ML residents will be matched with a machine learning research/engineering mentor, and will contribute to their team’s research, product design, and development. Some residents may also have the opportunity to publish and present their work at premiere academic conferences.</span>",
-        "index": 36,
+        "index": 29,
         "skills": [
             "machine learning",
             "artificial intelligence",
@@ -676,16 +540,36 @@
         "remote": false
     },
     {
+        "url": "https://jobs.apple.com/en-us/details/200207686/software-engineer-intern?team=STDNT",
+        "position": "Software Engineer Intern",
+        "posted": "Nov 18, 2020",
+        "lastScraped": "2020-12-16T21:50:19.183Z",
+        "location": {
+            "city": "Sacramento",
+            "state": "California"
+        },
+        "description": "<span data-reactid=\"152\">Apple's Strategic Data Solutions (SDS) team is seeking a Software Engineer intern who is passionate about learning and enjoys coding. During your internship on the Strategic Data Solutions team, you will be participating in design, modeling, development and testing of SDS systems. You will also get the opportunity to contribute in high level design discussions regarding system architecture and features. In accordance with your area of study, we will assign you a project related to system development, optimizations or new technology development.\n\nOur commitment to you: We will guide you through a challenge with opportunity for growth, recognition and accomplishment. As we learn more about you, we’ll connect you with mentors and teammates to assist in your personal and professional development. You’ll work cross-functionally with teams across Apple and gain valuable experience driving security improvements in a high tech environment.\n\nWhat we expect: High energy, positive attitude. Bring the best version of yourself. Be prepared to be curious, creative and to make an impact.</span>",
+        "index": 30,
+        "skills": [
+            "software engineering",
+            "machine learning",
+            "project management",
+            "information technology"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
         "url": "https://jobs.apple.com/en-us/details/200204188/strategic-data-solutions-frontend-developer-intern?team=STDNT",
         "position": "Strategic Data Solutions - Frontend Developer Intern",
         "posted": "Nov 17, 2020",
-        "lastScraped": "2020-12-07T03:15:34.964Z",
+        "lastScraped": "2020-12-16T21:50:20.263Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
         "description": "<span data-reactid=\"150\">Apple's Strategic Data Solutions (SDS) team is seeking a Frontend Developer intern who possesses a keen eye for detail, has a superb aesthetic sense, and a deep passion for creating the best user experience. We are a team that uses a Human-Centered Design approach, combined with Agile Methodologies to get things done quickly and effectively. The ideal candidate will have a deep passion for building software applications, using the latest technologies and best practices, and solving complex problems.\n\nYour Mission: To lead an important initiative of our choosing from start to finish, working collaboratively with multi-functional team members, and presenting the results and findings to your peers and SDS leadership. \n\nOur commitment to you: We will provide you with a challenging opportunity that you will be proud to have accomplished at Apple. We’ll help connect you with mentors and teammates that can help guide you throughout the internship. We will expose you to a character-building leadership program that will prepare you for future leadership opportunities.</span>",
-        "index": 37,
+        "index": 31,
         "skills": [
             "information technology",
             "software engineering"
@@ -694,16 +578,52 @@
         "remote": false
     },
     {
+        "url": "https://jobs.apple.com/en-us/details/200207676/software-engineer-intern?team=STDNT",
+        "position": "Software Engineer Intern",
+        "posted": "Nov 18, 2020",
+        "lastScraped": "2020-12-16T21:50:21.416Z",
+        "location": {
+            "city": "Sacramento",
+            "state": "California"
+        },
+        "description": "<span data-reactid=\"152\">Apple's Strategic Data Solutions (SDS) team is seeking a Software Engineer intern who is passionate about learning and enjoys coding. During your internship on the Strategic Data Solutions team, you will be participating in design, modeling, development and testing of SDS systems. You will also get the opportunity to contribute in high level design discussions regarding system architecture and features. In accordance with your area of study, we will assign you a project related to system development, optimizations or new technology development.\n\nOur commitment to you: We will guide you through a challenge with opportunity for growth, recognition and accomplishment. As we learn more about you, we’ll connect you with mentors and teammates to assist in your personal and professional development. You’ll work cross-functionally with teams across Apple and gain valuable experience driving security improvements in a high tech environment.\n\nWhat we expect: High energy, positive attitude. Bring the best version of yourself. Be prepared to be curious, creative and to make an impact.</span>",
+        "index": 32,
+        "skills": [
+            "software engineering",
+            "machine learning",
+            "project management",
+            "information technology"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200007574/apple-industrial-design-accepting-portfolios?team=DESGN",
+        "position": "Apple Industrial Design Accepting Portfolios",
+        "posted": "Feb 26, 2020",
+        "lastScraped": "2020-12-16T21:50:22.506Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "California"
+        },
+        "description": "<span data-reactid=\"156\">To apply, please direct a CV and concise PDF portfolio to:  idportfolios@apple.com</span>",
+        "index": 33,
+        "skills": [],
+        "company": "N/A",
+        "contact": "idportfolios@apple.com",
+        "remote": false
+    },
+    {
         "url": "https://jobs.apple.com/en-us/details/200201179/strategic-data-solutions-sds-project-management-intern?team=STDNT",
         "position": "Strategic Data Solutions (SDS) Project Management Intern",
         "posted": "Nov 17, 2020",
-        "lastScraped": "2020-12-07T03:15:36.106Z",
+        "lastScraped": "2020-12-16T21:50:23.587Z",
         "location": {
             "city": "Sacramento",
             "state": "California"
         },
         "description": "<span data-reactid=\"152\">As a member of our team, you will work in the SDS Program Management Organization in Apple’s manufacturing data and systems space. \n\nYour Mission: To lead an important initiative of our choosing from start to finish, working collaboratively with multi-functional team members, and presenting the results and findings to your peers and SDS leadership. \n\nOur commitment to you: We will provide you with a challenging opportunity that you will be proud to have accomplished at Apple. We’ll connect you with mentors and teammates that can help guide you throughout the internship (and potentially, throughout your career). We will expose you to a character-building leadership programs that will prepare you for future leadership opportunities. You will be part of a world class technology organization and have the opportunity to learn and solve real life business problems.\n\nWhat we expect of you: Curiosity, high energy, creativity, and a positive attitude. Strive to be the best version of yourself. Be ready to challenge and be challenged to go above and beyond where you believe is possible.</span>",
-        "index": 38,
+        "index": 34,
         "skills": [
             "machine learning",
             "project management",
@@ -713,34 +633,66 @@
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200210157/product-design-engineer-iphone?team=HRDWR",
-        "position": "Product Design Engineer - iPhone",
-        "posted": "Dec 4, 2020",
-        "lastScraped": "2020-12-07T03:15:37.018Z",
+        "url": "https://jobs.apple.com/en-us/details/200197695/subject-matter-expert-automation-co-op?team=OPMFG",
+        "position": "Subject Matter Expert - Automation Co-op",
+        "posted": "Nov 5, 2020",
+        "lastScraped": "2020-12-16T21:50:24.710Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
-        "description": "<span data-reactid=\"160\">You will be working with many internal teams and contract partners, leading iPhone integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience.</span>",
-        "index": 39,
+        "description": "<span data-reactid=\"156\">Drive automation activities for stringent enclosure and module manufacturing processes as part of Manufacturing Design’s Automation SME team. Work with integrators, suppliers, contract manufacturers, and internal partners to develop advanced automation capabilities and implement them in the supply chain to exacting standards on aggressive project timelines.</span>",
+        "index": 35,
         "skills": [
-            "information technology",
-            "software engineering"
+            "project management"
         ],
         "company": "N/A",
         "remote": false
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200204729/product-design-engineer?team=HRDWR",
-        "position": "Product Design Engineer",
+        "url": "https://jobs.apple.com/en-us/details/200201185/sds-secops-intern?team=STDNT",
+        "position": "SDS - SecOps Intern",
+        "posted": "Nov 17, 2020",
+        "lastScraped": "2020-12-16T21:50:25.908Z",
+        "location": {
+            "city": "Sacramento",
+            "state": "California"
+        },
+        "description": "<span data-reactid=\"154\">As a member of the Strategic Data Solutions team, you'll be working with our Security Operations team developing new opportunities to safeguard an information platform which enables one of the largest manufacturing operations in the world.\n\nOur commitment to you: We will guide you through a challenge with opportunity for growth, recognition and accomplishment. As we learn more about you, we’ll connect you with mentors and teammates to assist in your personal and professional development. You’ll work cross-functionally with teams across Apple and gain valuable experience driving security improvements in a high tech environment.\n\nWhat we expect: High energy, positive attitude. Bring the best version of yourself. Be prepared to be curious, creative and to make an impact.</span>",
+        "index": 36,
+        "skills": [
+            "machine learning",
+            "information technology"
+        ],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200197366/physical-chemical-vapor-deposition-pvd-co-op?team=OPMFG",
+        "position": "Physical/Chemical Vapor Deposition (PVD) Co-op",
         "posted": "Nov 5, 2020",
-        "lastScraped": "2020-12-07T03:15:37.936Z",
+        "lastScraped": "2020-12-16T21:50:27.374Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "California"
         },
-        "description": "<span data-reactid=\"160\">You will be working with many internal teams and contract partners, leading Design integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience. \n•\tDrive industry with advanced package solutions and specs</span>",
-        "index": 40,
+        "description": "<span data-reactid=\"154\">Work with Apple’s Industrial Design and Product Design teams to build working specifications related to coating processes\n\nCollaborate with premier equipment and process manufacturing partners to create next-generation processes and test limits of process capabilities\n\nDetermine feasibility to achieve aggressive goals evaluating manufacturing processes at early stages of product development\n\nPlan and execute studies to confirm process capability to achieve technical goals for high volume programs\n\nPresent analysis to key decision makers that will be used to make commercial and design commitments \n\nWork directly with overseas manufacturers implementing solutions meeting high-volume commercial goals</span>",
+        "index": 37,
+        "skills": [],
+        "company": "N/A",
+        "remote": false
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200210157/product-design-engineer-iphone?team=HRDWR",
+        "position": "Product Design Engineer - iPhone",
+        "posted": "Dec 4, 2020",
+        "lastScraped": "2020-12-16T21:50:28.448Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "California"
+        },
+        "description": "<span data-reactid=\"160\">You will be working with many internal teams and contract partners, leading iPhone integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience.</span>",
+        "index": 38,
         "skills": [
             "information technology",
             "software engineering"

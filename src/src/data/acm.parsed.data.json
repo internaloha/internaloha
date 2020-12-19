@@ -33,7 +33,7 @@
         "index": 2,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "due": "2021-08-01T10:00:00.000Z",
@@ -75,7 +75,7 @@
         "index": 4,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "cloud computing"
         ],
@@ -95,7 +95,7 @@
         "index": 5,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -143,7 +143,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -165,7 +165,7 @@
             "python",
             "machine learning",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "remote": false
@@ -188,7 +188,7 @@
             "angular",
             "java",
             "data visualization",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -226,7 +226,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -307,9 +307,9 @@
             "software engineering",
             "javascript",
             "angular",
-            "devOps",
+            "devops",
             "project management",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "start": "2021-06-01T10:00:00.000Z",
@@ -351,7 +351,7 @@
             "software engineering",
             "data visualization",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "due": "2021-08-01T10:00:00.000Z",
@@ -412,7 +412,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -451,7 +451,7 @@
             "project management",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -494,7 +494,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -516,7 +516,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -539,7 +539,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "python"
         ],
         "qualifications": [
@@ -660,7 +660,7 @@
             "software engineering",
             "java",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -681,7 +681,7 @@
             "software engineering",
             "java",
             "data visualization",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -702,7 +702,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -728,7 +728,7 @@
             "software engineering",
             "data visualization",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -754,7 +754,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -779,7 +779,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -805,7 +805,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "qualifications": [
@@ -828,7 +828,7 @@
         "skills": [
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -856,7 +856,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -882,7 +882,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -923,7 +923,7 @@
         "index": 43,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "cloud computing"
         ],
@@ -944,7 +944,7 @@
         "skills": [
             "software engineering",
             "java",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "project management"
         ],
@@ -965,7 +965,7 @@
         "skills": [
             "software engineering",
             "information technology",
-            "SQL",
+            "sql",
             "cloud computing"
         ],
         "remote": false
@@ -1007,7 +1007,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1052,7 +1052,7 @@
             "software engineering",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -1080,7 +1080,7 @@
             "data visualization",
             "python",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1145,7 +1145,7 @@
             "angular",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "remote": false
@@ -1297,7 +1297,7 @@
             "software engineering",
             "information technology",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "due": "2021-01-01T10:00:00.000Z",
@@ -1364,7 +1364,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "qualifications": [
@@ -1387,7 +1387,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "project management",
             "information technology"
@@ -1411,7 +1411,7 @@
         "index": 65,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -1457,7 +1457,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1500,7 +1500,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1520,7 +1520,7 @@
             "project management",
             "software engineering",
             "information technology",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1543,7 +1543,7 @@
             "java",
             "data visualization",
             "matlab",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1561,7 +1561,7 @@
         "index": 72,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "due": "2021-08-01T10:00:00.000Z",
@@ -1585,7 +1585,7 @@
             "python",
             "machine learning",
             "project management",
-            "C and C++"
+            "c and c++"
         ],
         "compensation": "paid",
         "remote": false
@@ -1623,7 +1623,7 @@
         "index": 75,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "due": "2021-08-01T10:00:00.000Z",
@@ -1662,7 +1662,7 @@
         "index": 77,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -1686,7 +1686,7 @@
             "machine learning",
             "project management",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1732,9 +1732,9 @@
             "information technology",
             "software engineering",
             "java",
-            "devOps",
+            "devops",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1744,7 +1744,7 @@
         "company": "Accenture",
         "location": {
             "city": "Error",
-            "state": "Error",
+            "state": "Not Available",
             "zip": "Error"
         },
         "lastScraped": "2020-12-16T20:43:21.468Z",
@@ -1772,7 +1772,7 @@
         "index": 82,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "cloud computing"
         ],
@@ -1859,7 +1859,7 @@
             "java",
             "data visualization",
             "matlab",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1902,7 +1902,7 @@
             "software engineering",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "project management",
             "information technology"
@@ -1923,7 +1923,7 @@
         "index": 89,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "cloud computing"
         ],
         "remote": false
@@ -1944,7 +1944,7 @@
             "information technology",
             "software engineering",
             "java",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -1962,7 +1962,7 @@
         "index": 91,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -2041,7 +2041,7 @@
             "software engineering",
             "data visualization",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "due": "2021-08-01T10:00:00.000Z",
@@ -2062,7 +2062,7 @@
         "skills": [
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -2098,7 +2098,7 @@
         "index": 98,
         "skills": [
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning",
             "information technology"
         ],
@@ -2122,7 +2122,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -2185,7 +2185,7 @@
             "java",
             "data visualization",
             "matlab",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -2207,7 +2207,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -2270,7 +2270,7 @@
             "information technology",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -2293,7 +2293,7 @@
             "angular",
             "java",
             "data visualization",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -2355,7 +2355,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2379,7 +2379,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2403,7 +2403,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2427,7 +2427,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2451,7 +2451,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2475,7 +2475,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2566,7 +2566,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2590,7 +2590,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2660,7 +2660,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2684,7 +2684,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2708,7 +2708,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2732,7 +2732,7 @@
             "information technology",
             "software engineering",
             "python",
-            "C and C++",
+            "c and c++",
             "project management"
         ],
         "qualifications": [
@@ -2777,7 +2777,7 @@
             "software engineering",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "qualifications": [
@@ -2802,7 +2802,7 @@
             "machine learning",
             "project management",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology",
             "software engineering"
         ],
@@ -2824,7 +2824,7 @@
             "software engineering",
             "java",
             "python",
-            "C and C++",
+            "c and c++",
             "information technology"
         ],
         "qualifications": [
@@ -2893,7 +2893,7 @@
             "software engineering",
             "information technology",
             "javascript",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "compensation": "paid",
@@ -2916,7 +2916,7 @@
             "software engineering",
             "project management",
             "information technology",
-            "SQL"
+            "sql"
         ],
         "remote": false
     },
@@ -2977,8 +2977,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++",
-            "SQL"
+            "c and c++",
+            "sql"
         ],
         "remote": false
     },
@@ -3000,7 +3000,7 @@
             "project management",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3065,7 +3065,7 @@
             "project management",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3089,7 +3089,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3112,7 +3112,7 @@
             "information technology",
             "software engineering",
             "javascript",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -3131,7 +3131,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++",
+            "c and c++",
             "machine learning"
         ],
         "remote": true
@@ -3196,7 +3196,7 @@
             "project management",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3220,7 +3220,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3244,7 +3244,7 @@
             "software engineering",
             "information technology",
             "python",
-            "C and C++"
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3303,7 +3303,7 @@
         "skills": [
             "information technology",
             "software engineering",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
@@ -3365,7 +3365,7 @@
             "information technology",
             "java",
             "data visualization",
-            "C and C++"
+            "c and c++"
         ],
         "remote": false
     },
