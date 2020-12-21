@@ -102,6 +102,9 @@ import { fetchInfo } from './scraperFunctions.js';
               a => a.getAttribute('href'),
           ),
       );
+
+
+
       totalJobs += url.length;
       urls.push(url);
 
@@ -118,13 +121,21 @@ import { fetchInfo } from './scraperFunctions.js';
     console.log('Total pages:', urls.length);
     console.log('Total jobs: ', totalJobs);
 
+    console.log(urls);
+
     // go through urls array to fetch info
+
+    let error = 0;
+
     for (let i = 0; i < urls.length; i++) {
       for (let j = 0; j < urls[i].length; j++) {
 
         await page.goto(`https://www.indeed.com${urls[i][j]}`);
 
         try {
+
+          // If we cannot fetch indeed logo, it means page has not loaded
+
           let position = '';
           // position alternates between two different css class
           try {
@@ -198,9 +209,11 @@ import { fetchInfo } from './scraperFunctions.js';
           console.log(position);
 
         } catch (err6) {
+
           console.log('--- Error with scraping... Skipping ---');
           // console.log(err6.message);
           skippedLinks.push(`https://www.indeed.com${urls[i][j]}`);
+
         }
       }
 

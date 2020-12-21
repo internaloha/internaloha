@@ -35,7 +35,7 @@ class InternshipsFilters {
     data = _.concat(data, youternData);
     data = _.concat(data, glassData);
     data = _.concat(data, indeedData);
-    data = _.concat(data, angelData);
+    // data = _.concat(data, angelData);
     data = _.concat(data, idealist);
     data = _.concat(data, ACM);
     data = _.concat(data, coolworks);
