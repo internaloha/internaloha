@@ -13,7 +13,9 @@ const credentials = commandLine.slice(0, 2);
 console.log(credentials);
 
 async function startBrowser() {
-  const browser = await puppeteer.launch({ headless: false, devtools: true });
+  const browser = await puppeteer.launch({ headless: false, devtools: true,
+      slowMo: 2000 // slow down by 250ms
+  });
   const page = await browser.newPage();
   return { browser, page };
 }

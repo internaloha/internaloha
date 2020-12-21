@@ -66,11 +66,11 @@
             "software engineering",
             "javascript",
             "information technology",
-            "java",
             "devops",
+            "java",
+            "python",
             "c and c++",
             "machine learning",
-            "python",
             "virtual reality"
         ],
         "compensation": "paid",
@@ -93,8 +93,8 @@
             "information technology",
             "software engineering",
             "networks",
-            "python",
             "machine learning",
+            "python",
             "virtual reality"
         ],
         "qualifications": [
@@ -119,8 +119,8 @@
             "information technology",
             "software engineering",
             "networks",
-            "python",
             "machine learning",
+            "python",
             "virtual reality"
         ],
         "qualifications": [
@@ -329,9 +329,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -352,9 +352,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -375,9 +375,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -398,9 +398,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -421,9 +421,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -444,9 +444,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -467,9 +467,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -490,9 +490,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -513,9 +513,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -536,9 +536,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -579,10 +579,10 @@
         "skills": [
             "project management",
             "information technology",
-            "devops",
-            "software engineering",
             "angular",
+            "software engineering",
             "java",
+            "devops",
             "machine learning"
         ],
         "compensation": "paid",
@@ -627,8 +627,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -670,8 +670,8 @@
             "information technology",
             "software engineering",
             "networks",
-            "python",
             "machine learning",
+            "python",
             "virtual reality"
         ],
         "qualifications": [
@@ -715,9 +715,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -738,9 +738,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -761,9 +761,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -784,9 +784,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -807,9 +807,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -830,9 +830,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -853,9 +853,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -876,9 +876,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -919,10 +919,10 @@
         "skills": [
             "project management",
             "information technology",
-            "devops",
-            "software engineering",
             "angular",
+            "software engineering",
             "java",
+            "devops",
             "machine learning"
         ],
         "compensation": "paid",
@@ -967,8 +967,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -1010,8 +1010,8 @@
             "information technology",
             "software engineering",
             "networks",
-            "python",
             "machine learning",
+            "python",
             "virtual reality"
         ],
         "qualifications": [
@@ -1079,9 +1079,9 @@
             "software engineering",
             "project management",
             "information technology",
-            "devops",
             "java",
             "data visualization",
+            "devops",
             "c and c++",
             "python"
         ],
@@ -1123,10 +1123,10 @@
             "java",
             "networks",
             "robotics",
-            "python",
             "c and c++",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "start": "2021-08-01T10:00:00.000Z",
         "remote": false
@@ -1149,10 +1149,10 @@
             "java",
             "networks",
             "robotics",
-            "python",
             "c and c++",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -1300,10 +1300,10 @@
             "java",
             "networks",
             "robotics",
-            "python",
             "c and c++",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "contact": "email@domain.com",
         "remote": false
@@ -1376,8 +1376,7 @@
             "networks",
             "c and c++",
             "machine learning",
-            "python",
-            "information technology"
+            "python"
         ],
         "remote": false
     },
@@ -1445,9 +1444,9 @@
             "software engineering",
             "project management",
             "information technology",
-            "devops",
             "java",
             "data visualization",
+            "devops",
             "c and c++",
             "python"
         ],
@@ -1489,10 +1488,10 @@
             "java",
             "networks",
             "robotics",
-            "python",
             "c and c++",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "start": "2021-08-01T10:00:00.000Z",
         "remote": false
@@ -1515,10 +1514,10 @@
             "java",
             "networks",
             "robotics",
-            "python",
             "c and c++",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -1666,10 +1665,10 @@
             "java",
             "networks",
             "robotics",
-            "python",
             "c and c++",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "contact": "email@domain.com",
         "remote": false
@@ -1742,8 +1741,7 @@
             "networks",
             "c and c++",
             "machine learning",
-            "python",
-            "information technology"
+            "python"
         ],
         "remote": false
     },
@@ -1789,10 +1787,10 @@
             "software engineering",
             "project management",
             "information technology",
-            "scala",
-            "networks",
             "javascript",
-            "java"
+            "scala",
+            "java",
+            "networks"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1814,8 +1812,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "python",
             "c and c++",
             "project management",
@@ -1909,8 +1907,8 @@
             "cloud computing",
             "information technology",
             "networks",
-            "python",
             "machine learning",
+            "python",
             "virtual reality",
             "software engineering"
         ],
@@ -1935,9 +1933,9 @@
         "skills": [
             "software engineering",
             "javascript",
-            "java",
             "devops",
             "scala",
+            "java",
             "python",
             "machine learning",
             "information technology"
@@ -2032,13 +2030,9 @@
         "skills": [
             "project management",
             "information technology",
-            "hardware",
-            "networks",
             "java",
-            "python",
-            "c and c++",
-            "machine learning",
-            "virtual reality"
+            "hardware",
+            "networks"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -2062,9 +2056,9 @@
             "project management",
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
-            "data visualization"
+            "data visualization",
+            "networks"
         ],
         "remote": true
     },
@@ -2134,9 +2128,9 @@
             "java",
             "devops",
             "networks",
+            "game design",
             "c and c++",
-            "machine learning",
-            "game design"
+            "machine learning"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2181,8 +2175,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devops",
             "java",
+            "devops",
             "machine learning"
         ],
         "compensation": "paid",
@@ -2205,10 +2199,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
-            "networks",
             "javascript",
-            "angular"
+            "angular",
+            "java",
+            "networks"
         ],
         "remote": true
     },
@@ -2271,12 +2265,12 @@
         "skills": [
             "information technology",
             "software engineering",
-            "hardware",
             "java",
-            "python",
+            "hardware",
             "machine learning",
             "project management",
-            "virtual reality"
+            "virtual reality",
+            "python"
         ],
         "compensation": "paid",
         "remote": false
@@ -2345,12 +2339,12 @@
         "skills": [
             "project management",
             "software engineering",
+            "javascript",
             "hardware",
             "networks",
-            "javascript",
-            "python",
             "machine learning",
             "game design",
+            "python",
             "information technology"
         ],
         "start": "2020-05-01T10:00:00.000Z",
@@ -2397,13 +2391,13 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
             "angular",
             "java",
+            "networks",
+            "game design",
             "c and c++",
-            "machine learning",
-            "game design"
+            "machine learning"
         ],
         "compensation": "paid",
         "contact": "viacomaccommodations@viacom.com",
@@ -2426,9 +2420,9 @@
             "information technology",
             "software engineering",
             "javascript",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2473,10 +2467,10 @@
         "skills": [
             "information technology",
             "software engineering",
+            "devops",
             "scala",
-            "networks",
             "java",
-            "devops"
+            "networks"
         ],
         "remote": false
     },
@@ -2562,10 +2556,10 @@
         "skills": [
             "information technology",
             "software engineering",
+            "devops",
             "scala",
-            "networks",
             "java",
-            "devops"
+            "networks"
         ],
         "remote": false
     },
@@ -2584,12 +2578,12 @@
         "skills": [
             "information technology",
             "software engineering",
+            "javascript",
             "angular",
             "networks",
-            "javascript",
-            "python",
             "project management",
-            "game design"
+            "game design",
+            "python"
         ],
         "compensation": "paid",
         "contact": "viacomaccommodations@viacom.com",
@@ -2637,8 +2631,8 @@
             "devops",
             "information technology",
             "software engineering",
-            "networks",
-            "javascript"
+            "javascript",
+            "networks"
         ],
         "remote": true
     },
@@ -2681,13 +2675,13 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
             "angular",
             "java",
+            "networks",
+            "game design",
             "c and c++",
-            "machine learning",
-            "game design"
+            "machine learning"
         ],
         "compensation": "paid",
         "contact": "viacomaccommodations@viacom.com",
@@ -2710,9 +2704,9 @@
             "information technology",
             "software engineering",
             "javascript",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2776,10 +2770,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "networks",
             "java",
             "matlab",
-            "devops"
+            "devops",
+            "networks"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2822,10 +2816,10 @@
         "skills": [
             "information technology",
             "software engineering",
+            "devops",
             "scala",
-            "networks",
             "java",
-            "devops"
+            "networks"
         ],
         "contact": "CareersNA2@cognizant.com",
         "remote": false
@@ -2933,10 +2927,10 @@
         "skills": [
             "information technology",
             "software engineering",
+            "devops",
             "scala",
-            "networks",
             "java",
-            "devops"
+            "networks"
         ],
         "contact": "CareersNA2@cognizant.com",
         "remote": false
@@ -3004,9 +2998,9 @@
             "project management",
             "software engineering",
             "information technology",
+            "javascript",
             "devops",
             "networks",
-            "javascript",
             "robotics",
             "python",
             "machine learning"
@@ -3177,8 +3171,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "javascript",
+            "java",
             "machine learning"
         ],
         "remote": false
@@ -3200,8 +3194,8 @@
             "software engineering",
             "information technology",
             "networks",
-            "python",
             "robotics",
+            "python",
             "virtual reality"
         ],
         "remote": true
@@ -3221,9 +3215,9 @@
         "skills": [
             "software engineering",
             "hardware",
-            "python",
             "robotics",
             "c and c++",
+            "python",
             "machine learning",
             "project management",
             "game design",
@@ -3295,8 +3289,8 @@
             "project management",
             "information technology",
             "networks",
-            "c and c++",
             "python",
+            "c and c++",
             "virtual reality"
         ],
         "contact": "corporatetalentacquisition@oshkoshcorp.com, 920-502-3009",
@@ -3362,10 +3356,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "networks",
             "javascript",
-            "python",
+            "networks",
             "robotics",
+            "python",
             "machine learning"
         ],
         "remote": true
@@ -3385,8 +3379,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "javascript",
+            "java",
             "machine learning"
         ],
         "remote": false
@@ -3406,8 +3400,8 @@
         "skills": [
             "information technology",
             "javascript",
-            "c and c++",
             "project management",
+            "c and c++",
             "software engineering",
             "react"
         ],
@@ -3462,8 +3456,8 @@
             "java",
             "python",
             "c and c++",
-            "machine learning",
-            "project management"
+            "project management",
+            "machine learning"
         ],
         "compensation": "paid",
         "contact": "paypalglobaltalentacquisition@paypal.com",
@@ -3554,8 +3548,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "angular",
             "javascript",
+            "angular",
             "java",
             "c and c++",
             "machine learning",

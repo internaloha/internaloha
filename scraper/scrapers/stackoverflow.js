@@ -55,7 +55,7 @@ import { fetchInfo, isRemote } from './scraperFunctions.js';
         } catch (noCompany) {
           company = 'Unknown';
         }
-        const posted = await fetchInfo(page, 'div[class="grid fs-body1 fc-black-500 gs8 ai-baseline mb24"]', 'innerText');
+        const posted = await fetchInfo(page, 'ul[class="horizontal-list horizontal-list__lg fs-body1 fc-black-500 ai-baseline mb24"]', 'innerText');
         const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
 
         const skills = await page.evaluate(

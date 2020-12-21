@@ -517,8 +517,8 @@
             "virtual reality",
             "information technology",
             "software engineering",
-            "hardware",
             "data visualization",
+            "hardware",
             "networks"
         ],
         "start": "2020-09-01T10:00:00.000Z",
@@ -583,14 +583,7 @@
         "skills": [
             "project management",
             "software engineering",
-            "information technology",
-            "javascript",
-            "hardware",
-            "networks",
-            "java",
-            "data visualization",
-            "matlab",
-            "devops"
+            "information technology"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1157,14 +1150,7 @@
         "skills": [
             "project management",
             "software engineering",
-            "information technology",
-            "javascript",
-            "hardware",
-            "networks",
-            "java",
-            "data visualization",
-            "matlab",
-            "devops"
+            "information technology"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1441,10 +1427,10 @@
         "description": "Job DescriptionWe need hackers who are versatile, breathe technology and capable of taking on challenging problems across the stack.\n\nAre you passionate about scalable distributed systems? Want to solve challenges in security and networking? How about delivering an amazing user experience through a modern Web UI? Or just hack up great tools and frameworks under the mentorship of some the industry’s greatest talent? Then Platform9 has interesting internship opportunities for you. As a key member of our engineering team, you have the opportunity to experience and contribute to a real world private cloud product.\n\nRequirements\n\n\nCurrently pursuing BS, MS or PhD in computer science, engineering, math or related field. Prefer 8-12 months to graduation. PhD candidates can be in any year. Preferred Qualifications:Coursework in one or more areas: operating systems, distributed systems, networks, security or user interface designKnowledge of Linux/Unix SystemsProgramming proficiency in any one language: python, javascript, C/C++, java, golangGPA 3.5 and above\n\n\n\nBenefits\n\n\n\nStartup culture with the freedom to innovate and take initiativeRapidly growing companyPeriodic company paid lunches, massages and happy hours\n",
         "index": 64,
         "skills": [
-            "java",
-            "software engineering",
-            "networks",
             "javascript",
+            "software engineering",
+            "java",
+            "networks",
             "python",
             "c and c++",
             "information technology"
@@ -1492,10 +1478,10 @@
         "description": "Job DescriptionWe need hackers who are versatile, breathe technology and capable of taking on challenging problems across the stack.\n\nAre you passionate about scalable distributed systems? Want to solve challenges in security and networking? How about delivering an amazing user experience through a modern Web UI? Or just hack up great tools and frameworks under the mentorship of some the industry’s greatest talent? Then Platform9 has interesting internship opportunities for you. As a key member of our engineering team, you have the opportunity to experience and contribute to a real world private cloud product.\n\nRequirements\n\n\nCurrently pursuing BS, MS or PhD in computer science, engineering, math or related field. Prefer 8-12 months to graduation. PhD candidates can be in any year. Preferred Qualifications:Coursework in one or more areas: operating systems, distributed systems, networks, security or user interface designKnowledge of Linux/Unix SystemsProgramming proficiency in any one language: python, javascript, C/C++, java, golangGPA 3.5 and above\n\n\n\nBenefits\n\n\n\nStartup culture with the freedom to innovate and take initiativeRapidly growing companyPeriodic company paid lunches, massages and happy hours\n",
         "index": 66,
         "skills": [
-            "java",
-            "software engineering",
-            "networks",
             "javascript",
+            "software engineering",
+            "java",
+            "networks",
             "python",
             "c and c++",
             "information technology"
@@ -1656,8 +1642,8 @@
             "information technology",
             "java",
             "data visualization",
-            "python",
-            "c and c++"
+            "c and c++",
+            "python"
         ],
         "remote": false
     },
@@ -1733,8 +1719,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "devops",
             "javascript",
+            "devops",
             "python",
             "machine learning",
             "project management",
@@ -1973,8 +1959,8 @@
         "index": 89,
         "skills": [
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "python",
             "c and c++",
             "machine learning",
@@ -2059,13 +2045,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -2387,13 +2373,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -2506,13 +2492,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -2943,11 +2929,11 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "devops",
             "networks",
-            "java",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning",
             "project management",
             "virtual reality"
@@ -3096,11 +3082,11 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "devops",
             "networks",
-            "java",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning",
             "project management",
             "virtual reality"
@@ -3122,11 +3108,11 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "devops",
             "networks",
-            "java",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning",
             "project management",
             "virtual reality"
@@ -3166,11 +3152,11 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "devops",
             "networks",
-            "java",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning",
             "project management",
             "virtual reality"
@@ -3244,13 +3230,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3290,8 +3276,8 @@
             "virtual reality",
             "information technology",
             "software engineering",
-            "hardware",
             "data visualization",
+            "hardware",
             "networks"
         ],
         "start": "2020-09-01T10:00:00.000Z",
@@ -3331,13 +3317,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3357,13 +3343,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3383,13 +3369,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3427,13 +3413,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3453,13 +3439,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3497,13 +3483,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3523,13 +3509,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3549,13 +3535,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3593,13 +3579,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3619,13 +3605,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3681,13 +3667,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3707,13 +3693,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3837,9 +3823,9 @@
             "information technology",
             "software engineering",
             "javascript",
+            "project management",
             "c and c++",
             "machine learning",
-            "project management",
             "web development"
         ],
         "qualifications": [
@@ -3887,9 +3873,9 @@
             "information technology",
             "software engineering",
             "javascript",
+            "project management",
             "c and c++",
             "machine learning",
-            "project management",
             "web development"
         ],
         "qualifications": [
@@ -3931,13 +3917,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -3979,13 +3965,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -4023,13 +4009,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -4049,13 +4035,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -4095,8 +4081,8 @@
             "virtual reality",
             "information technology",
             "software engineering",
-            "hardware",
             "data visualization",
+            "hardware",
             "networks"
         ],
         "start": "2020-09-01T10:00:00.000Z",
@@ -4210,10 +4196,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "hardware",
-            "networks",
             "java",
-            "data visualization"
+            "data visualization",
+            "hardware",
+            "networks"
         ],
         "compensation": "paid",
         "remote": false
@@ -4306,8 +4292,8 @@
         "index": 197,
         "skills": [
             "software engineering",
-            "scala",
             "javascript",
+            "scala",
             "python",
             "machine learning",
             "project management",
@@ -4395,13 +4381,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -4441,8 +4427,8 @@
             "virtual reality",
             "information technology",
             "software engineering",
-            "hardware",
             "data visualization",
+            "hardware",
             "networks"
         ],
         "start": "2020-09-01T10:00:00.000Z",
@@ -4464,13 +4450,13 @@
             "data science",
             "information technology",
             "scala",
-            "julia",
-            "networks",
             "java",
             "data visualization",
+            "julia",
+            "networks",
+            "project management",
             "python",
-            "machine learning",
-            "project management"
+            "machine learning"
         ],
         "remote": true
     },
@@ -4914,8 +4900,8 @@
         "skills": [
             "java",
             "software engineering",
-            "c and c++",
             "project management",
+            "c and c++",
             "information technology",
             "web development"
         ],
@@ -6048,9 +6034,9 @@
             "javascript",
             "data visualization",
             "matlab",
-            "python",
             "project management",
-            "virtual reality"
+            "virtual reality",
+            "python"
         ],
         "compensation": "paid",
         "contact": "staffingaadar@merck.com",
@@ -6114,9 +6100,8 @@
             "javascript",
             "devops",
             "networks",
-            "python",
             "project management",
-            "artificial intelligence"
+            "python"
         ],
         "remote": true
     }

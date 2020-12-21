@@ -91,65 +91,70 @@ const myArgs = process.argv.slice(2);
     console.log(elements.length);
 
     for (let i = 0; i < elements.length; i++) {
-      const element = elements[i];
 
-      // waits until page has loaded
-      await page.goto(element, { waitUntil: 'domcontentloaded' });
+      try {
+        const element = elements[i];
 
-      const currentPage = page.url();
+        // waits until page has loaded
+        await page.goto(element, { waitUntil: 'domcontentloaded' });
 
-      /* Checks to see if redirect is still within ZipRecruiter domain.
-       * If it is within domain, we can continue scraping. If not, we don't scape the information
-       * and add it to an array of pages skipped.
-       */
-      if (currentPage.startsWith('https://www.ziprecruiter.com')) {
-        // console.log('Stay on same page:\n', currentPage);
+        const currentPage = page.url();
 
-        await page.waitForSelector('.pc_message');
-        await page.click('.pc_message');
+        /* Checks to see if redirect is still within ZipRecruiter domain.
+         * If it is within domain, we can continue scraping. If not, we don't scape the information
+         * and add it to an array of pages skipped.
+         */
+        if (currentPage.startsWith('https://www.ziprecruiter.com')) {
+          // console.log('Stay on same page:\n', currentPage);
 
-        const position = await fetchInfo(page, '.job_title', 'innerText');
-        const company = await fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText');
-        const location = await fetchInfo(page, 'span[data-name="address"]', 'innerText');
-        const description = await fetchInfo(page, '.jobDescriptionSection', 'innerHTML');
-        const posted = await fetchInfo(page, '.job_more span[class="data"]', 'innerText');
+          await page.waitForSelector('.pc_message');
+          await page.click('.pc_message');
 
-        const date = new Date();
-        let daysBack = 0;
-        const lastScraped = new Date();
+          const position = await fetchInfo(page, '.job_title', 'innerText');
+          const company = await fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText');
+          const location = await fetchInfo(page, 'span[data-name="address"]', 'innerText');
+          const description = await fetchInfo(page, '.jobDescriptionSection', 'innerHTML');
+          const posted = await fetchInfo(page, '.job_more span[class="data"]', 'innerText');
 
-        if (posted.includes('day') || posted.includes('days')) {
-          daysBack = 0;
-        } else if (posted.includes('yesterday')) {
-          daysBack = 1;
+          const date = new Date();
+          let daysBack = 0;
+          const lastScraped = new Date();
+
+          if (posted.includes('yesterday')) {
+            daysBack = 1;
+          } else {
+            daysBack = posted.match(/\d+/g);
+          }
+
+          date.setDate(date.getDate() - daysBack);
+
+          // console.log(location.match(/([^,]*)/g));
+
+          data.push({
+            position: position.trim(),
+            company: company.trim(),
+            location: {
+              city: location.match(/([^,]*)/g)[0].trim(),
+              state: location.match(/([^,]*)/g)[2].trim(),
+              country: location.match(/([^,]*)/g)[4].trim(),
+            },
+            url: currentPage,
+            posted: date,
+            lastScraped: lastScraped,
+            description: description.trim(),
+          });
+
+          jobs++;
+
         } else {
-          daysBack = posted.match(/\d+/g);
+          console.log('--- Went off of ZipRecruiter, skipping ---');
+          skippedPages.push(currentPage);
         }
 
-        date.setDate(date.getDate() - daysBack);
-
-        // console.log(location.match(/([^,]*)/g));
-
-        data.push({
-          position: position.trim(),
-          company: company.trim(),
-          location: {
-            city: location.match(/([^,]*)/g)[0].trim(),
-            state: location.match(/([^,]*)/g)[2].trim(),
-            country: location.match(/([^,]*)/g)[4].trim(),
-          },
-          url: currentPage,
-          posted: date,
-          lastScraped: lastScraped,
-          description: description.trim(),
-        });
-
-        jobs++;
-
-      } else {
-        console.log('--- Went off of ZipRecruiter, skipping ---');
-        skippedPages.push(currentPage);
+      } catch (err4) {
+        console.log('Error fetching link, skipping');
       }
+
     }
 
     // write results to JSON file
