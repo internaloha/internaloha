@@ -65,8 +65,8 @@
             "project management",
             "game design",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "c and c++",
             "machine learning",
             "information technology"
@@ -89,11 +89,11 @@
             "project management",
             "software engineering",
             "information technology",
-            "angular",
             "javascript",
+            "angular",
             "data visualization",
-            "python",
-            "c and c++"
+            "c and c++",
+            "python"
         ],
         "remote": false
     },
@@ -273,9 +273,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -296,11 +296,11 @@
         "skills": [
             "project management",
             "software engineering",
-            "data visualization",
             "java",
+            "data visualization",
             "matlab",
-            "python",
             "c and c++",
+            "python",
             "web development"
         ],
         "compensation": "paid",
@@ -324,8 +324,8 @@
             "javascript",
             "java",
             "python",
-            "machine learning",
             "project management",
+            "machine learning",
             "information technology",
             "react"
         ],
@@ -372,10 +372,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
             "angular",
-            "java"
+            "java",
+            "networks"
         ],
         "qualifications": [
             "Bachelor's degree",
@@ -700,12 +700,12 @@
         "description": "RawVoice/Blubrry, a longstanding provider in the podcasting industry, is looking for a Software Developer Intern. Students currently enrolled in college are encouraged to apply.\n<br><br>\nInterns will be developing web applications using PHP, Python and MySQL for services that benefit podcast creators and listeners. Development will involve creating new services, improving and adding features and squashing a bug or two in past projects. Examples of projects include:\n<ul>\n<li>Podcast analytics system</li><li>Progressive Web App for private podcasts</li><li>Media hosting and publishing platform</li><li>Podcast directory</li><li>Hosted WordPress websites</li><li>Ad insertion system for podcasts</li>\n</ul>\n<strong>Internships are available for Summer 2021.</strong> Interns usually work on-site 40 hours a week with the development team in Columbus, Ohio. However, due to the situation with COVID-19, all teams are currently working remotely (subject to change). Internships are co-op compatible and we accept multiple rotations. Please indicate co-op program if applicable.\n<br><br>\n<strong>Requirements:</strong>\n<ul>\n<li>Currently enrolled in a Bachelor's degree program in Computer Science or related major</li><li>Understanding of a C-style language (e.g. C, C++, Java, PHP or Swift)</li><li>Excellent communication and documentation skills</li>\n</ul>\n<strong>Beneficial Skills</strong>\n<ul>\n<li>Web Development with Python or PHP</li><li>SQL/MySQL</li><li>CSS, HTML5, Bootstrap, and/or JavaScript</li><li>WordPress theme/plugin development</li><li>Amazon Web Services</li><li>Linux</li>\n</ul>",
         "index": 30,
         "skills": [
-            "java",
-            "software engineering",
             "javascript",
+            "software engineering",
+            "java",
             "python",
-            "c and c++",
             "project management",
+            "c and c++",
             "web development"
         ],
         "qualifications": [
@@ -862,9 +862,9 @@
         "index": 37,
         "skills": [
             "software engineering",
+            "javascript",
             "hardware",
             "networks",
-            "javascript",
             "python",
             "c and c++",
             "machine learning",
@@ -1045,9 +1045,9 @@
             "project management",
             "software engineering",
             "information technology",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "compensation": "paid",
         "remote": false
@@ -1158,10 +1158,10 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
             "java",
-            "data visualization"
+            "data visualization",
+            "networks"
         ],
         "compensation": "paid",
         "start": "2020-02-26T10:00:00.000Z",
@@ -1310,11 +1310,9 @@
             "software engineering",
             "project management",
             "javascript",
-            "angular",
-            "java",
             "devops",
-            "c and c++",
-            "virtual reality"
+            "angular",
+            "java"
         ],
         "contact": "acquisition@kla.com",
         "remote": false
@@ -1377,8 +1375,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "javascript",
+            "java",
             "machine learning",
             "project management",
             "web development"

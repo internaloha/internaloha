@@ -41,9 +41,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -156,11 +156,11 @@
         "skills": [
             "virtual reality",
             "software engineering",
-            "hardware",
             "matlab",
+            "hardware",
             "machine learning",
-            "python",
             "project management",
+            "python",
             "information technology"
         ],
         "contact": "ext@fb.com",
@@ -273,10 +273,10 @@
             "data visualization",
             "hardware",
             "networks",
-            "python",
             "machine learning",
             "project management",
-            "game design"
+            "game design",
+            "python"
         ],
         "remote": false
     },
@@ -577,8 +577,8 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "java",
             "javascript",
+            "java",
             "data visualization"
         ],
         "compensation": "paid",
@@ -734,10 +734,10 @@
             "software engineering",
             "project management",
             "information technology",
-            "java",
+            "devops",
             "scala",
-            "hardware",
-            "devops"
+            "java",
+            "hardware"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1375,9 +1375,9 @@
         "skills": [
             "software engineering",
             "javascript",
-            "java",
             "devops",
             "scala",
+            "java",
             "python",
             "machine learning",
             "information technology"
@@ -1472,9 +1472,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "javascript",
             "java",
             "networks",
-            "javascript",
             "python",
             "project management"
         ],
@@ -1910,11 +1910,11 @@
         "index": 84,
         "skills": [
             "machine learning",
-            "networks",
             "matlab",
+            "networks",
             "deep learning",
-            "python",
             "project management",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -2138,8 +2138,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "python",
             "robotics",
             "c and c++",
@@ -2234,8 +2234,8 @@
         "skills": [
             "machine learning",
             "information technology",
-            "networks",
             "java",
+            "networks",
             "python",
             "c and c++",
             "project management"
@@ -2386,9 +2386,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "java",
             "matlab",
             "hardware",
-            "java",
             "c and c++",
             "project management"
         ],
@@ -2546,8 +2546,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devops",
             "java",
+            "devops",
             "machine learning"
         ],
         "compensation": "paid",
@@ -2734,8 +2734,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "python",
             "machine learning"
         ],
@@ -2890,8 +2890,8 @@
         "skills": [
             "software engineering",
             "javascript",
-            "machine learning",
             "project management",
+            "machine learning",
             "information technology",
             "web development",
             "react"
@@ -2914,8 +2914,8 @@
         "skills": [
             "information technology",
             "javascript",
-            "c and c++",
             "project management",
+            "c and c++",
             "software engineering",
             "react"
         ],
@@ -3019,8 +3019,8 @@
             "software engineering",
             "virtual reality",
             "information technology",
-            "networks",
             "java",
+            "networks",
             "c and c++",
             "python"
         ],
@@ -3204,9 +3204,9 @@
             "machine learning",
             "project management",
             "software engineering",
-            "devops",
             "java",
             "data visualization",
+            "devops",
             "deep learning"
         ],
         "compensation": "paid",

@@ -135,9 +135,9 @@
             "project management",
             "virtual reality",
             "information technology",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "remote": false
     },
@@ -159,9 +159,9 @@
             "project management",
             "virtual reality",
             "information technology",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -350,9 +350,9 @@
             "software engineering",
             "project management",
             "information technology",
+            "java",
             "hardware",
             "networks",
-            "java",
             "c and c++",
             "python"
         ],
@@ -440,9 +440,9 @@
             "software engineering",
             "project management",
             "information technology",
+            "java",
             "hardware",
             "networks",
-            "java",
             "c and c++",
             "python"
         ],
@@ -575,8 +575,7 @@
             "c and c++",
             "machine learning",
             "virtual reality",
-            "information technology",
-            "react"
+            "information technology"
         ],
         "qualifications": [
             "Bachelor's degree",
@@ -602,8 +601,8 @@
             "information technology",
             "machine learning",
             "deep learning",
-            "c and c++",
-            "python"
+            "python",
+            "c and c++"
         ],
         "remote": false
     },
@@ -729,8 +728,8 @@
             "virtual reality",
             "software engineering",
             "information technology",
-            "python",
             "c and c++",
+            "python",
             "machine learning",
             "game design"
         ],
@@ -926,9 +925,9 @@
             "virtual reality",
             "information technology",
             "java",
+            "python",
             "c and c++",
-            "machine learning",
-            "python"
+            "machine learning"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1003,9 +1002,9 @@
             "software engineering",
             "project management",
             "information technology",
+            "java",
             "hardware",
             "networks",
-            "java",
             "c and c++",
             "python"
         ],
@@ -1031,9 +1030,9 @@
             "software engineering",
             "project management",
             "information technology",
+            "java",
             "hardware",
             "networks",
-            "java",
             "c and c++",
             "python"
         ],
@@ -1160,11 +1159,11 @@
             "project management",
             "software engineering",
             "information technology",
+            "java",
             "hardware",
             "networks",
-            "java",
-            "python",
-            "c and c++"
+            "c and c++",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1188,9 +1187,9 @@
             "software engineering",
             "project management",
             "information technology",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "remote": false
     },
@@ -1213,9 +1212,9 @@
             "javascript",
             "data visualization",
             "hardware",
-            "python",
             "c and c++",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -1280,8 +1279,8 @@
             "software engineering",
             "angular",
             "java",
-            "python",
             "c and c++",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -1325,9 +1324,9 @@
             "project management",
             "virtual reality",
             "information technology",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1352,9 +1351,9 @@
             "project management",
             "virtual reality",
             "information technology",
+            "java",
             "hardware",
-            "networks",
-            "java"
+            "networks"
         ],
         "remote": false
     },
@@ -1581,9 +1580,9 @@
             "software engineering",
             "project management",
             "information technology",
+            "java",
             "hardware",
             "networks",
-            "java",
             "c and c++",
             "python"
         ],
@@ -1627,9 +1626,9 @@
             "software engineering",
             "project management",
             "information technology",
+            "java",
             "hardware",
             "networks",
-            "java",
             "c and c++",
             "python"
         ],
@@ -1672,10 +1671,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "hardware",
             "java",
             "data visualization",
             "matlab",
+            "hardware",
             "c and c++"
         ],
         "remote": false
@@ -1716,8 +1715,8 @@
             "information technology",
             "software engineering",
             "networks",
-            "python",
             "c and c++",
+            "python",
             "machine learning",
             "project management",
             "virtual reality"
@@ -1979,10 +1978,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "hardware",
             "javascript",
             "angular",
-            "java"
+            "java",
+            "hardware"
         ],
         "due": "2021-08-01T10:00:00.000Z",
         "remote": false
@@ -2029,8 +2028,8 @@
             "java",
             "hardware",
             "networks",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning",
             "project management",
             "game design",
@@ -2302,10 +2301,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "hardware",
             "java",
             "data visualization",
             "matlab",
+            "hardware",
             "c and c++"
         ],
         "remote": false
@@ -3149,8 +3148,8 @@
             "project management",
             "information technology",
             "hardware",
-            "c and c++",
-            "python"
+            "python",
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3216,8 +3215,8 @@
             "project management",
             "information technology",
             "hardware",
-            "c and c++",
-            "python"
+            "python",
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3353,8 +3352,8 @@
             "project management",
             "information technology",
             "hardware",
-            "c and c++",
-            "python"
+            "python",
+            "c and c++"
         ],
         "qualifications": [
             "Bachelor's degree"
