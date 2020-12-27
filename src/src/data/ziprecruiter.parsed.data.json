@@ -40,6 +40,7 @@
             "data science",
             "machine learning",
             "information technology",
+            "sql",
             "python",
             "software engineering",
             "deep learning"
@@ -65,6 +66,7 @@
             "virtual reality",
             "information technology",
             "networks",
+            "sql",
             "project management",
             "software engineering"
         ],
@@ -110,11 +112,12 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
-            "java",
             "networks",
-            "python",
-            "c and c++"
+            "java",
+            "javascript",
+            "sql",
+            "c and c++",
+            "python"
         ],
         "remote": false
     },
@@ -156,6 +159,7 @@
         "index": 7,
         "skills": [
             "project management",
+            "sql",
             "data visualization",
             "python",
             "machine learning",
@@ -181,6 +185,7 @@
         "index": 8,
         "skills": [
             "software engineering",
+            "sql",
             "hardware",
             "project management",
             "information technology"
@@ -204,10 +209,10 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "matlab",
             "networks",
-            "c and c++",
-            "python"
+            "matlab",
+            "python",
+            "c and c++"
         ],
         "contact": "careers@sonyusa.com",
         "remote": false
@@ -229,6 +234,7 @@
             "project management",
             "information technology",
             "networks",
+            "sql",
             "machine learning",
             "software engineering"
         ],
@@ -255,9 +261,10 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "networks",
             "javascript",
             "java",
-            "networks"
+            "sql"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -404,9 +411,10 @@
         "index": 17,
         "skills": [
             "software engineering",
-            "javascript",
             "angular",
-            "java"
+            "java",
+            "javascript",
+            "sql"
         ],
         "remote": false
     },
@@ -496,14 +504,11 @@
         "index": 21,
         "skills": [
             "software engineering",
-            "javascript",
-            "angular",
-            "java",
             "networks",
-            "c and c++",
-            "project management",
-            "virtual reality",
-            "machine learning"
+            "java",
+            "javascript",
+            "sql",
+            "angular"
         ],
         "compensation": "paid",
         "contact": "NorthAmerica@sap.com",
@@ -549,10 +554,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
-            "java",
             "hardware",
             "networks",
+            "javascript",
+            "java",
             "project management",
             "game design"
         ],
@@ -656,8 +661,8 @@
         "index": 28,
         "skills": [
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++",
             "machine learning",
@@ -683,8 +688,8 @@
         "index": 29,
         "skills": [
             "software engineering",
-            "javascript",
             "networks",
+            "javascript",
             "python",
             "c and c++",
             "machine learning",
@@ -730,12 +735,13 @@
         "skills": [
             "machine learning",
             "artificial intelligence",
-            "c and c++",
             "python",
             "robotics",
+            "c and c++",
             "project management",
             "game design",
-            "information technology"
+            "information technology",
+            "software engineering"
         ],
         "remote": false
     },
@@ -776,8 +782,9 @@
         "index": 33,
         "skills": [
             "software engineering",
-            "javascript",
             "matlab",
+            "javascript",
+            "sql",
             "python",
             "c and c++",
             "web development"
@@ -824,6 +831,7 @@
         "description": "<div><div><strong>Build the analytics to help Flexport grow</strong><strong>The opportunity:</strong><p>As a Data Analytics Intern, you will work alongside self-starters interested in solving real-world problems and streamlining the inefficiencies in the complex global trade industry. You'll have the opportunity to improve an industry by analyzing the new operating system for global trade. You will own and work through an entire data analytics project end-to-end over 12 weeks.&nbsp;</p><p>It will ultimately culminate in delivering a production ready feature and presenting it and your process to our team of makers. The Data Analytics team at Flexport has an enormous variety in the types of projects they work on and covers all Flexport departments, including Growth Marketing, Operations Excellence, Ocean Procurement, and everything in between.</p><strong>You will:</strong><ul><li>Lead and complete at least one data analytics project that will be used in production.</li><li>Work with a supportive mentor who has a stake in your success and will help you grow.</li><li>Work cross-functionally with the entirety of Flexport - analytics, engineering, product, and business teams.</li><li>Apply analytical and statistical concepts from your education and work experience to real world challenges.</li><li>Learn and use our modern analytics tech stack, including dbt, Airflow, Snowflake, and Looker.</li></ul><strong>You should have:</strong><ul><li>Rising senior actively pursuing a Bachelor's degree in a STEM field, or have previous internship experience in an analyst role.</li><li>Completed coursework in statistics, mathematics, computer science, or related fields.</li><li>SQL fluency, with experience using a scripting language like Python or R. Strong Excel fundamentals a plus.</li><li>Experience with data visualization tools (Looker preferred).</li></ul><strong>Bonus:</strong><ul><li>Bring experience and/or knowledge of something we can learn from you! Internships are at their best when they're bi-directional.</li><li>We value culture <em>adds</em>, not culture fits, so bring your full, authentic self!</li></ul><strong>About Flexport:</strong><p>We believe global trade can move the human race forward. That's why it's our mission to make global trade easier for everyone. We aim to do this by building the Operating System for Global trade - a strategic model combining advanced technology and data analytics, logistics infrastructure, and supply chain expertise. Flexport today connects almost 10,000 clients and suppliers across 109 countries, including established global brands like Georgia-Pacific as well as emerging innovators like Sonos. Started in 2013, we've raised over $1.3B in funding from SoftBank Vision Fund, Founders Fund, GV, First Round Capital and Y Combinator. We're excited about the three big ways we're moving forward after our recent $1B investment from SoftBank Vision Fund in February 2019.</p><strong>Worried about not having any freight forwarding experience?</strong><ul><li>Don't be! We're building the first Operating System for Global Trade. That's why it's incredibly important for us to bring people from diverse backgrounds and experiences together with our industry veterans to help move the freight forwarding industry forward.</li><li>What's freight forwarding and why does it matter? Freight forwarding is the coordination and shipment of goods from one place to another and it's what makes global trade possible. Flexport is on a mission to make global trade easier for everyone because we believe it can help connect the world and break down economic barriers.</li><li>We know this industry is complex. That's why we invest in education starting day one with Flexport Academy, a one week intensive onboarding program designed specifically to set every new Flexport employee up for success.</li></ul><p>At Flexport, our ability to fulfill our mission of making global trade easy for everyone relies on having a diverse, dedicated and engaged workforce. That is why Flexport is committed to creating and nurturing an environment where anyone can be their authentic self. All qualified applicants will receive consideration for employment regardless of race, color, religion, sex, national origin, age, physical and mental disability, health status, marital and family status, sexual orientation, gender identity and expression, military and veteran status, and any other characteristic protected by applicable law.</p></div></div>",
         "index": 35,
         "skills": [
+            "sql",
             "data visualization",
             "python",
             "machine learning",
@@ -852,6 +860,7 @@
         "skills": [
             "machine learning",
             "project management",
+            "sql",
             "python",
             "virtual reality",
             "software engineering"
@@ -873,6 +882,7 @@
         "index": 37,
         "skills": [
             "information technology",
+            "sql",
             "project management",
             "virtual reality"
         ],
@@ -919,8 +929,8 @@
             "software engineering",
             "virtual reality",
             "information technology",
-            "java",
             "networks",
+            "java",
             "c and c++",
             "python"
         ],
@@ -945,6 +955,7 @@
         "index": 40,
         "skills": [
             "information technology",
+            "sql",
             "python",
             "project management",
             "virtual reality",
@@ -995,8 +1006,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python"
         ],
         "compensation": "paid",
@@ -1215,10 +1226,10 @@
             "hardware",
             "robotics",
             "c and c++",
-            "python",
             "machine learning",
             "project management",
             "game design",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -1287,8 +1298,8 @@
             "javascript",
             "angular",
             "java",
-            "project management",
             "c and c++",
+            "project management",
             "web development"
         ],
         "remote": false
@@ -1352,10 +1363,10 @@
         "index": 57,
         "skills": [
             "software engineering",
-            "javascript",
-            "java",
             "devops",
             "networks",
+            "javascript",
+            "java",
             "project management",
             "information technology"
         ],
@@ -1427,8 +1438,9 @@
         "index": 60,
         "skills": [
             "software engineering",
-            "java",
             "networks",
+            "sql",
+            "java",
             "python",
             "robotics",
             "machine learning",
@@ -1452,13 +1464,14 @@
         "index": 61,
         "skills": [
             "javascript",
+            "sql",
             "java",
             "python",
             "machine learning",
             "project management",
             "software engineering",
-            "react",
-            "mobile development"
+            "mobile development",
+            "react"
         ],
         "remote": false
     },
@@ -1551,6 +1564,7 @@
             "information technology",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
             "web development"
         ],
@@ -1605,6 +1619,7 @@
             "software engineering",
             "project management",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "information technology"
@@ -1630,6 +1645,7 @@
         "skills": [
             "project management",
             "software engineering",
+            "sql",
             "c and c++",
             "web development"
         ],
@@ -1650,6 +1666,7 @@
         "index": 69,
         "skills": [
             "software engineering",
+            "sql",
             "c and c++",
             "machine learning",
             "information technology"
@@ -1675,6 +1692,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
             "project management"
         ],
@@ -1695,6 +1713,7 @@
         "index": 71,
         "skills": [
             "software engineering",
+            "sql",
             "c and c++",
             "machine learning",
             "information technology"
@@ -1766,9 +1785,9 @@
             "software engineering",
             "information technology",
             "cloud computing",
-            "javascript",
+            "hardware",
             "data visualization",
-            "hardware"
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1892,8 +1911,8 @@
             "software engineering",
             "java",
             "data visualization",
-            "c and c++",
             "python",
+            "c and c++",
             "machine learning",
             "project management",
             "information technology"

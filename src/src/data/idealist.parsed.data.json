@@ -13,9 +13,9 @@
         "index": 1,
         "skills": [
             "project management",
+            "sql",
             "machine learning",
-            "information technology",
-            "cloud computing"
+            "information technology"
         ],
         "start": "2020-12-01T10:00:00.000Z",
         "remote": false

@@ -58,6 +58,7 @@
             "machine learning",
             "project management",
             "information technology",
+            "sql",
             "data visualization",
             "python",
             "software engineering"
@@ -80,6 +81,7 @@
         "skills": [
             "project management",
             "information technology",
+            "sql",
             "machine learning",
             "software engineering"
         ],
@@ -145,8 +147,8 @@
             "software engineering",
             "project management",
             "information technology",
-            "java",
             "networks",
+            "java",
             "virtual reality"
         ],
         "qualifications": [
@@ -215,6 +217,7 @@
         "index": 10,
         "skills": [
             "project management",
+            "sql",
             "networks",
             "python",
             "machine learning"

@@ -112,9 +112,9 @@
             "software engineering",
             "project management",
             "information technology",
-            "java",
             "hardware",
-            "networks"
+            "networks",
+            "java"
         ],
         "remote": false
     },
@@ -135,6 +135,7 @@
             "machine learning",
             "project management",
             "information technology",
+            "sql",
             "java",
             "data visualization",
             "python"
@@ -157,8 +158,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "data visualization",
             "networks",
+            "data visualization",
             "robotics"
         ],
         "qualifications": [
@@ -200,8 +201,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
             "networks",
+            "javascript",
             "machine learning",
             "web development",
             "react"
@@ -226,10 +227,10 @@
             "software engineering",
             "project management",
             "information technology",
-            "javascript",
-            "java",
             "hardware",
-            "networks"
+            "networks",
+            "javascript",
+            "java"
         ],
         "contact": "mbrdna@daimler.com",
         "qualifications": [
@@ -368,6 +369,7 @@
         "skills": [
             "data science",
             "machine learning",
+            "sql",
             "networks",
             "python",
             "project management",
@@ -394,6 +396,7 @@
         "skills": [
             "data science",
             "machine learning",
+            "sql",
             "networks",
             "python",
             "project management",

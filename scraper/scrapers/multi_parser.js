@@ -232,6 +232,7 @@ function trainSkills(classifier) {
     'sql server',
     'interfacing with database',
     'db',
+    'SQL',
   ];
 
   classifier.addDocument(mobile, 'mobile development');
@@ -246,7 +247,7 @@ function trainSkills(classifier) {
   classifier.addDocument(IT, 'information technology');
   classifier.addDocument('information technology', 'information technology');
   classifier.addDocument(cloud, 'cloud computing');
-  classifier.addDocument(SQL, 'SQL');
+  classifier.addDocument('SQL', 'sql');
   classifier.addDocument(deepLearning, 'deep learning');
   classifier.addDocument(AI, 'artificial intelligence');
   classifier.addDocument(bioinformatics, 'bioinformatics');

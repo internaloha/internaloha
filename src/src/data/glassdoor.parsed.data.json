@@ -73,8 +73,9 @@
         "index": 4,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -97,8 +98,9 @@
         "index": 5,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -124,8 +126,9 @@
         "index": 6,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -151,8 +154,9 @@
         "index": 7,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -177,6 +181,7 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "sql",
             "c and c++",
             "project management"
         ],
@@ -199,8 +204,9 @@
             "java",
             "information technology",
             "software engineering",
-            "javascript",
             "devops",
+            "javascript",
+            "sql",
             "project management"
         ],
         "remote": true
@@ -245,9 +251,10 @@
         "skills": [
             "project management",
             "information technology",
-            "javascript",
-            "java",
             "networks",
+            "javascript",
+            "sql",
+            "java",
             "machine learning",
             "web development"
         ],
@@ -326,8 +333,8 @@
             "project management",
             "game design",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "c and c++",
             "machine learning",
             "information technology"
@@ -347,6 +354,7 @@
         "description": "IMT Insurance is now accepting applications for our Summer 2021 session Programming Internship position within the IMT Computer Services department. IMT Computer Services is a division of IMT Insurance and offers programs a complete suite of software for today's Mutual Insurance companies. As a Programming Intern, you will work within a team on various projects where you can put your web development skills to use and grow as an emerging developer. Ideal candidates will be passionate, self-motivated, detail-oriented and have an interest in developing skills through hands-on experience. If this opportunity is something that interests you, apply online today to learn more!\n<br><br>\n<strong>Required Experience:</strong>\n\n<ul>\n\n <li>Must be working towards a college degree.</li>\n\n<li>General Web Development/Knowledge is a must.</li>\n\n<li>C#, REACT, SQL Server and MS Visual Studio is a plus</li>\n\n<li>Agile experience is a plus.</li>\n\n<li>Ability to analyze and proven problem-solving skills.</li>\n\n<li>Ability to listen and communicate internally/externally to the customer, both verbally and in writing.</li>\n\n<li>High propensity to learn new technologies.</li>\n</ul>",
         "index": 15,
         "skills": [
+            "sql",
             "data visualization",
             "c and c++",
             "machine learning",
@@ -442,8 +450,8 @@
             "javascript",
             "java",
             "python",
-            "project management",
             "machine learning",
+            "project management",
             "information technology",
             "react"
         ],
@@ -465,6 +473,7 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "sql",
             "c and c++",
             "project management"
         ],
@@ -506,8 +515,9 @@
         "index": 22,
         "skills": [
             "software engineering",
-            "java",
             "networks",
+            "sql",
+            "java",
             "c and c++",
             "machine learning",
             "project management",
@@ -553,8 +563,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "c and c++",
             "machine learning",
             "project management"
@@ -649,10 +659,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
+            "networks",
             "java",
             "data visualization",
-            "networks"
+            "javascript"
         ],
         "remote": true
     },
@@ -711,8 +721,9 @@
         "index": 31,
         "skills": [
             "software engineering",
-            "java",
             "networks",
+            "sql",
+            "java",
             "c and c++",
             "machine learning",
             "project management",
@@ -758,8 +769,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "c and c++",
             "machine learning",
             "project management"
@@ -809,10 +820,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
+            "networks",
             "java",
             "data visualization",
-            "networks"
+            "javascript"
         ],
         "remote": true
     },
@@ -871,12 +882,13 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "java",
             "data visualization",
             "devops",
+            "c and c++",
             "project management",
-            "game design",
-            "c and c++"
+            "game design"
         ],
         "remote": false
     },
@@ -918,6 +930,7 @@
             "information technology",
             "java",
             "software engineering",
+            "sql",
             "devops",
             "machine learning"
         ],
@@ -937,8 +950,9 @@
         "index": 41,
         "skills": [
             "data science",
-            "scala",
+            "sql",
             "software engineering",
+            "scala",
             "python",
             "machine learning",
             "project management",
@@ -1006,9 +1020,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "devops",
             "hardware",
             "networks",
+            "devops",
             "virtual reality",
             "information technology"
         ],
@@ -1075,12 +1089,13 @@
             "data science",
             "project management",
             "information technology",
+            "networks",
+            "sql",
             "java",
             "scala",
-            "networks",
-            "python",
             "c and c++",
-            "machine learning"
+            "machine learning",
+            "python"
         ],
         "start": "2020-05-01T10:00:00.000Z",
         "contact": "dallas@ericsson.com",
@@ -1121,6 +1136,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "java",
             "c and c++",
             "machine learning"
@@ -1262,10 +1278,10 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "javascript",
+            "networks",
             "java",
             "data visualization",
-            "networks"
+            "javascript"
         ],
         "compensation": "paid",
         "start": "2020-02-26T10:00:00.000Z",
@@ -1314,12 +1330,12 @@
             "project management",
             "software engineering",
             "devops",
+            "networks",
             "javascript",
             "java",
-            "networks",
-            "python",
             "c and c++",
-            "machine learning"
+            "machine learning",
+            "python"
         ],
         "remote": false
     },
@@ -1384,12 +1400,12 @@
             "project management",
             "software engineering",
             "devops",
+            "networks",
             "javascript",
             "java",
-            "networks",
-            "python",
             "c and c++",
-            "machine learning"
+            "machine learning",
+            "python"
         ],
         "remote": false
     },
@@ -1431,6 +1447,7 @@
             "information technology",
             "java",
             "software engineering",
+            "sql",
             "devops",
             "machine learning"
         ],
@@ -1450,8 +1467,9 @@
         "index": 63,
         "skills": [
             "data science",
-            "scala",
+            "sql",
             "software engineering",
+            "scala",
             "python",
             "machine learning",
             "project management",
@@ -1519,9 +1537,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "devops",
             "hardware",
             "networks",
+            "devops",
             "virtual reality",
             "information technology"
         ],
@@ -1588,6 +1606,7 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "sql",
             "c and c++",
             "project management"
         ],
@@ -1609,12 +1628,13 @@
             "data science",
             "project management",
             "information technology",
+            "networks",
+            "sql",
             "java",
             "scala",
-            "networks",
-            "python",
             "c and c++",
-            "machine learning"
+            "machine learning",
+            "python"
         ],
         "start": "2020-05-01T10:00:00.000Z",
         "contact": "dallas@ericsson.com",
@@ -1655,6 +1675,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "java",
             "c and c++",
             "machine learning"
@@ -1680,11 +1701,11 @@
             "information technology",
             "software engineering",
             "cloud computing",
-            "devops",
             "networks",
-            "python",
+            "devops",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -1793,10 +1814,10 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "javascript",
+            "networks",
             "java",
             "data visualization",
-            "networks"
+            "javascript"
         ],
         "compensation": "paid",
         "start": "2020-02-26T10:00:00.000Z",
@@ -1967,10 +1988,12 @@
             "machine learning",
             "software engineering",
             "project management",
-            "javascript",
             "devops",
             "angular",
-            "java"
+            "java",
+            "javascript",
+            "c and c++",
+            "virtual reality"
         ],
         "contact": "acquisition@kla.com",
         "remote": false
@@ -2061,10 +2084,10 @@
             "information technology",
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "machine learning",
-            "project management",
-            "web development"
+            "project management"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2084,6 +2107,7 @@
         "description": "Cadent powers the evolution of TV brand advertising. We provide marketers, agencies, operators, and media owners with data-driven solutions for buying and selling TV advertising. By connecting brands with opportunities across national inventory sourcescable, broadcast, and digital mediaour technology improves efficiencies and boosts the results of linear, addressable, and cross-screen campaigns.\n<br><br>\nAs we continue to grow, we are looking for <strong>Data Analyst Intern</strong> to join our team for Spring 2021. This Intern will have an opportunity to gain hands-on experience virtually by working directly with our teams, not for them.\n<br><br>\nThis Intern will also spend the Spring on an individual project customized to their specific skill-set which they'll present to our Tech Leadership team at the end of the program. Details of the projects and timeline will be laid out by supervisors at the beginning of the program.\n<br><br>\nThe Data Analyst Intern will be responsible for fulfilling tasks set out by supervisors from the specific department they're working in, including but not limited to:\n\n<ul>\n<li>Attending team meetings,</li>\n<li>Performing research,</li>\n<li>Using department-specific software to complete day-to-day assignments.</li>\n</ul>\nPerks:\n\n<ul>\n<li>Competitive pay</li>\n<li>College credit (if applicable)</li> \n</ul>\nRequirements:\n\n<ul>\n<li>A rising senior pursuing a bachelor's degree in Computer Science at a college or university</li>\n<li>Able to commit to a part-time (20 hours per week) work schedule between February 16th 2021 April 27th, 2021</li>\n<li>Excellent verbal and written communicators</li>\n<li>Self-motivated with a desire to learn from a rapidly growing company</li>\n<li>Confident to take initiative and collaborate with teammates</li>\n<li>Excellent problem-solving skills</li>\n</ul>\nOur hiring teams are looking for candidates with one and/or more of the following technical skills:\n\n<ul>\n\n<li>\n<strong>Programming language:</strong> working knowledge using Python or R, we're currently using Python</li>\n<li>\n<strong>SQL</strong> need to write queries to retrieve data from different data stores, a good understanding of SQL is a must</li>\n<li>\n<strong>Communication/Presentation skills</strong> you will have to translate the data by documenting and presenting in a format that would be easier for folks to understand</li>\n</ul>\nSo, if the leading edge of media technology is the place you want to be, apply today and let's start the conversation!\n<br><br>\n/CADENT/ is an EOE M/F/D/V. We do not work with 3rd Party Staffing Agencies<br><br>]]&gt;",
         "index": 90,
         "skills": [
+            "sql",
             "python",
             "machine learning",
             "project management",
@@ -2109,6 +2133,7 @@
         "description": "Cadent powers the evolution of TV brand advertising. We provide marketers, agencies, operators, and media owners with data-driven solutions for buying and selling TV advertising. By connecting brands with opportunities across national inventory sourcescable, broadcast, and digital mediaour technology improves efficiencies and boosts the results of linear, addressable, and cross-screen campaigns.\n<br><br>\nAs we continue to grow, we are looking for <strong>Data Analyst Intern</strong> to join our team for Spring 2021. This Intern will have an opportunity to gain hands-on experience virtually by working directly with our teams, not for them.\n<br><br>\nThis Intern will also spend the Spring on an individual project customized to their specific skill-set which they'll present to our Tech Leadership team at the end of the program. Details of the projects and timeline will be laid out by supervisors at the beginning of the program.\n<br><br>\nThe Data Analyst Intern will be responsible for fulfilling tasks set out by supervisors from the specific department they're working in, including but not limited to:\n\n<ul>\n<li>Attending team meetings,</li>\n<li>Performing research,</li>\n<li>Using department-specific software to complete day-to-day assignments.</li>\n</ul>\nPerks:\n\n<ul>\n<li>Competitive pay</li>\n<li>College credit (if applicable)</li> \n</ul>\nRequirements:\n\n<ul>\n<li>A rising senior pursuing a bachelor's degree in Computer Science at a college or university</li>\n<li>Able to commit to a part-time (20 hours per week) work schedule between February 16th 2021 April 27th, 2021</li>\n<li>Excellent verbal and written communicators</li>\n<li>Self-motivated with a desire to learn from a rapidly growing company</li>\n<li>Confident to take initiative and collaborate with teammates</li>\n<li>Excellent problem-solving skills</li>\n</ul>\nOur hiring teams are looking for candidates with one and/or more of the following technical skills:\n\n<ul>\n\n<li>\n<strong>Programming language:</strong> working knowledge using Python or R, we're currently using Python</li>\n<li>\n<strong>SQL</strong> need to write queries to retrieve data from different data stores, a good understanding of SQL is a must</li>\n<li>\n<strong>Communication/Presentation skills</strong> you will have to translate the data by documenting and presenting in a format that would be easier for folks to understand</li>\n</ul>\nSo, if the leading edge of media technology is the place you want to be, apply today and let's start the conversation!\n<br><br>\n/CADENT/ is an EOE M/F/D/V. We do not work with 3rd Party Staffing Agencies<br><br>]]&gt;",
         "index": 91,
         "skills": [
+            "sql",
             "python",
             "machine learning",
             "project management",
@@ -2177,9 +2202,9 @@
             "information technology",
             "hardware",
             "networks",
+            "python",
             "c and c++",
-            "game design",
-            "python"
+            "game design"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -2245,6 +2270,7 @@
         "index": 97,
         "skills": [
             "javascript",
+            "sql",
             "c and c++",
             "information technology",
             "web development"
@@ -2266,8 +2292,9 @@
         "index": 98,
         "skills": [
             "software engineering",
-            "javascript",
             "networks",
+            "javascript",
+            "sql",
             "machine learning",
             "project management",
             "game design",
@@ -2316,8 +2343,8 @@
             "software engineering",
             "project management",
             "information technology",
-            "java",
             "data visualization",
+            "java",
             "virtual reality"
         ],
         "qualifications": [
@@ -2340,8 +2367,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "scala",
             "java",
+            "scala",
             "c and c++",
             "machine learning",
             "information technology"
@@ -2389,12 +2416,12 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
+            "python",
             "c and c++",
             "project management",
-            "virtual reality",
-            "python"
+            "virtual reality"
         ],
         "contact": "accommodation@mastercard.com",
         "qualifications": [
@@ -2417,10 +2444,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "javascript",
+            "hardware",
             "java",
             "data visualization",
-            "hardware"
+            "javascript"
         ],
         "contact": "accommodations@climate.com",
         "remote": false
@@ -2514,9 +2541,9 @@
             "project management",
             "information technology",
             "software engineering",
+            "networks",
             "java",
-            "matlab",
-            "networks"
+            "matlab"
         ],
         "compensation": "paid",
         "start": "2021-12-01T10:00:00.000Z",
@@ -2540,9 +2567,9 @@
             "project management",
             "information technology",
             "software engineering",
+            "networks",
             "java",
-            "matlab",
-            "networks"
+            "matlab"
         ],
         "compensation": "paid",
         "start": "2021-12-01T10:00:00.000Z",
@@ -2569,9 +2596,9 @@
             "software engineering",
             "project management",
             "information technology",
-            "javascript",
+            "networks",
             "java",
-            "networks"
+            "javascript"
         ],
         "compensation": "paid",
         "start": "2020-02-26T10:00:00.000Z",
@@ -2594,9 +2621,9 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "hardware",
-            "networks"
+            "networks",
+            "java"
         ],
         "compensation": "paid",
         "remote": true
@@ -2617,8 +2644,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -2799,9 +2826,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
             "networks",
+            "java",
             "c and c++",
             "machine learning",
             "project management",
@@ -2869,6 +2896,7 @@
         "index": 123,
         "skills": [
             "software engineering",
+            "sql",
             "networks",
             "c and c++",
             "machine learning",
@@ -2913,10 +2941,10 @@
         "description": "Homesite Insurance was founded in 1997 and was one of the first companies to enable customers to purchase home insurance directly online, during a single visit. Since then, we've continued to innovate rapidly to meet the needs of our customers and their changing expectations.\n<br><br>\nOne thing that's stayed the same since our founding: our commitment to our customers, partners and employees.\n<br><br>\nJoin us on our journey as we continue to grow into a powerful contender in the field of insurance.<br><br>Come join Homesite, part of the American Family Enterprise, for our Summer 2021 Intern Program! The Program runs from mid-May through the end of August!\n<br><br>\nThe job candidate will have a passion for data and the passion for latest technologies – Python, AWS, JIRA. It is key to have a very strong ability to manage multiple tasks.\n<br><br>\nThe ideal candidate will have some experience with database skills, querying the data, writing the queries in Microsoft SQL Server along with Python development.\n<br><br>\nThe primary job responsibility of the Intern is to re-write the VBScript into Python.\n<br>\n<div><strong>Qualifications:</strong></div><div><div><div><div>\n\n<ul>\n<li>Python development experience</li><li>Good database skills, querying skills, SQL</li><li>Excellent verbal/written communication skills</li><li>Detail Oriented</li><li>Works closely in a team environment</li></ul></div>\n</div></div></div>\n<br>Stay Connected! Join our Talent Community!",
         "index": 125,
         "skills": [
+            "sql",
             "python",
             "project management",
-            "information technology",
-            "sql"
+            "information technology"
         ],
         "remote": false
     },
@@ -2933,9 +2961,9 @@
         "description": "Homesite Insurance was founded in 1997 and was one of the first companies to enable customers to purchase home insurance directly online, during a single visit. Since then, we've continued to innovate rapidly to meet the needs of our customers and their changing expectations.\n<br><br>\nOne thing that's stayed the same since our founding: our commitment to our customers, partners and employees.\n<br><br>\nJoin us on our journey as we continue to grow into a powerful contender in the field of insurance.<br><br>Come join Homesite, part of the American Family Enterprise, for our Summer 2021 Intern Program! The Program runs from mid-May through the end of August!\n<br><br>\nThe ideal candidate will have a passion for learning how to produce dynamically driven emails, and will work closely with cross-functional team members.<br><br>RESPONSIBILITES &amp; QUALIFICATIONS\n<ul>\n<li>Assist with email marketing activities including email campaign set-up, scheduling, testing, tagging and deployment of one-time, recurring, triggered and dynamic content-driven campaigns</li><li>Write HTML, CSS and AMPScript code for emails</li><li>Writing or editing SQL queries to manipulate data that will be utilized for email programs</li><li>Assist in QA testing to ensure flawless email execution &amp; deployment</li><li>High attention to detail and organization</li>\n</ul>\nStay Connected! Join our Talent Community!",
         "index": 126,
         "skills": [
+            "sql",
             "machine learning",
-            "web development",
-            "sql"
+            "web development"
         ],
         "remote": false
     },
@@ -2979,10 +3007,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "java",
             "networks",
-            "c and c++",
+            "java",
             "python",
+            "c and c++",
             "game design",
             "information technology"
         ],
@@ -3024,10 +3052,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "java",
             "networks",
-            "c and c++",
+            "java",
             "python",
+            "c and c++",
             "game design",
             "information technology"
         ],
@@ -3051,10 +3079,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "java",
             "networks",
-            "c and c++",
+            "java",
             "python",
+            "c and c++",
             "game design",
             "information technology"
         ],
@@ -3078,10 +3106,10 @@
         "skills": [
             "project management",
             "software engineering",
-            "java",
             "networks",
-            "c and c++",
+            "java",
             "python",
+            "c and c++",
             "game design",
             "information technology"
         ],
@@ -3127,6 +3155,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "machine learning",
             "project management",
             "virtual reality"
@@ -3213,6 +3242,7 @@
             "data science",
             "machine learning",
             "project management",
+            "sql",
             "python",
             "software engineering"
         ],
@@ -3238,9 +3268,9 @@
             "software engineering",
             "project management",
             "information technology",
-            "java",
             "hardware",
             "networks",
+            "java",
             "c and c++",
             "python"
         ],
@@ -3264,10 +3294,10 @@
             "javascript",
             "angular",
             "java",
+            "python",
             "c and c++",
             "machine learning",
-            "project management",
-            "python"
+            "project management"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3290,8 +3320,9 @@
             "machine learning",
             "information technology",
             "networks",
-            "python",
+            "sql",
             "project management",
+            "python",
             "software engineering"
         ],
         "compensation": "paid",
@@ -3316,6 +3347,7 @@
         "skills": [
             "project management",
             "software engineering",
+            "sql",
             "java",
             "python",
             "machine learning",
@@ -3339,9 +3371,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "networks",
-            "c and c++",
-            "sql"
+            "c and c++"
         ],
         "remote": false
     },
@@ -3439,8 +3471,9 @@
             "java",
             "information technology",
             "software engineering",
-            "javascript",
             "devops",
+            "javascript",
+            "sql",
             "project management"
         ],
         "remote": true
@@ -3464,6 +3497,7 @@
             "software engineering",
             "hardware",
             "networks",
+            "sql",
             "c and c++"
         ],
         "qualifications": [
@@ -3486,8 +3520,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
+            "java",
             "c and c++",
             "machine learning"
         ],
@@ -3536,12 +3570,12 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
-            "python",
+            "java",
             "c and c++",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -3560,12 +3594,13 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "angular",
             "java",
             "c and c++",
+            "machine learning",
             "project management",
-            "python",
-            "machine learning"
+            "python"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -3590,8 +3625,8 @@
             "software engineering",
             "python",
             "c and c++",
-            "virtual reality",
             "machine learning",
+            "virtual reality",
             "information technology",
             "web development"
         ],
@@ -3616,6 +3651,7 @@
             "machine learning",
             "software engineering",
             "data visualization",
+            "sql",
             "deep learning",
             "information technology",
             "artificial intelligence"
@@ -3737,10 +3773,12 @@
             "machine learning",
             "software engineering",
             "project management",
-            "javascript",
+            "networks",
             "java",
             "devops",
-            "networks"
+            "javascript",
+            "c and c++",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -3764,6 +3802,7 @@
             "java",
             "data visualization",
             "devops",
+            "sql",
             "c and c++",
             "machine learning",
             "project management"
@@ -3836,6 +3875,7 @@
             "project management",
             "software engineering",
             "information technology",
+            "sql",
             "java"
         ],
         "remote": false
@@ -3941,10 +3981,11 @@
             "project management",
             "information technology",
             "software engineering",
+            "hardware",
+            "networks",
             "javascript",
             "java",
-            "hardware",
-            "networks"
+            "sql"
         ],
         "contact": "recruitmentsupport@fedex.com",
         "qualifications": [
@@ -3966,10 +4007,11 @@
         "index": 170,
         "skills": [
             "software engineering",
-            "javascript",
-            "java",
+            "hardware",
             "devops",
-            "hardware"
+            "javascript",
+            "sql",
+            "java"
         ],
         "compensation": "paid",
         "remote": false
@@ -4010,8 +4052,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devops",
             "networks",
+            "devops",
             "python",
             "artificial intelligence"
         ],
@@ -4126,11 +4168,12 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
-            "python",
+            "java",
+            "sql",
             "machine learning",
-            "game design"
+            "game design",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4176,11 +4219,12 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
-            "python",
+            "java",
+            "sql",
             "machine learning",
-            "game design"
+            "game design",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4203,8 +4247,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -4225,8 +4269,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -4247,8 +4291,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -4314,6 +4358,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "c and c++",
             "machine learning",
@@ -4358,8 +4403,8 @@
         "index": 187,
         "skills": [
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++",
             "machine learning",
@@ -4385,6 +4430,7 @@
             "machine learning",
             "information technology",
             "software engineering",
+            "sql",
             "python",
             "project management"
         ],
@@ -4481,6 +4527,7 @@
             "project management",
             "software engineering",
             "information technology",
+            "sql",
             "java",
             "c and c++"
         ],
@@ -4547,9 +4594,10 @@
             "machine learning",
             "project management",
             "information technology",
-            "scala",
+            "networks",
             "java",
-            "networks"
+            "scala",
+            "sql"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -4699,8 +4747,9 @@
         "index": 202,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -4728,6 +4777,7 @@
             "machine learning",
             "information technology",
             "project management",
+            "sql",
             "java",
             "data visualization",
             "python"
@@ -4888,6 +4938,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "data visualization",
             "python",
             "machine learning",
@@ -5042,6 +5093,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "c and c++",
             "machine learning",
             "project management"
@@ -5088,6 +5140,7 @@
         "index": 219,
         "skills": [
             "software engineering",
+            "sql",
             "data visualization",
             "c and c++",
             "information technology"
@@ -5110,12 +5163,13 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
+            "sql",
             "java",
+            "javascript",
             "python",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "compensation": "paid",
         "contact": "paypalglobaltalentacquisition@paypal.com",
@@ -5182,10 +5236,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
-            "java",
             "networks",
+            "javascript",
+            "java",
+            "scala",
             "machine learning",
             "python"
         ],
@@ -5259,6 +5313,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -5306,7 +5361,10 @@
             "devops",
             "information technology",
             "software engineering",
-            "networks"
+            "networks",
+            "machine learning",
+            "virtual reality",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5329,6 +5387,7 @@
             "project management",
             "information technology",
             "software engineering",
+            "sql",
             "angular"
         ],
         "compensation": "unpaid",
@@ -5353,9 +5412,10 @@
             "information technology",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "remote": true
     },
@@ -5373,6 +5433,7 @@
         "index": 231,
         "skills": [
             "software engineering",
+            "sql",
             "c and c++",
             "information technology"
         ],
@@ -5397,13 +5458,13 @@
             "information technology",
             "software engineering",
             "networks",
+            "hardware",
             "java",
             "data visualization",
-            "hardware",
-            "python",
+            "c and c++",
             "project management",
             "virtual reality",
-            "c and c++"
+            "python"
         ],
         "start": "2020-04-15T10:00:00.000Z",
         "due": "2020-04-15T10:00:00.000Z",
@@ -5448,6 +5509,7 @@
         "index": 234,
         "skills": [
             "information technology",
+            "sql",
             "networks",
             "machine learning"
         ],
@@ -5565,6 +5627,7 @@
             "project management",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
             "web development"
         ],
@@ -5588,11 +5651,11 @@
         "skills": [
             "machine learning",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
-            "python",
             "robotics",
+            "python",
             "c and c++",
             "project management"
         ],
@@ -5686,12 +5749,12 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "angular",
             "c and c++",
             "machine learning",
             "project management",
-            "information technology",
-            "web development"
+            "information technology"
         ],
         "compensation": "paid",
         "remote": false
@@ -5736,8 +5799,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++"
         ],
@@ -5873,10 +5936,12 @@
             "machine learning",
             "software engineering",
             "project management",
-            "javascript",
+            "networks",
             "java",
             "devops",
-            "networks"
+            "javascript",
+            "c and c++",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -5963,10 +6028,11 @@
             "cloud computing",
             "information technology",
             "software engineering",
+            "sql",
             "java",
-            "python",
             "c and c++",
-            "machine learning"
+            "machine learning",
+            "python"
         ],
         "remote": false
     },
@@ -6060,8 +6126,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "javascript",
             "java",
+            "javascript",
+            "sql",
             "python",
             "c and c++",
             "machine learning",
@@ -6135,8 +6202,8 @@
             "software engineering",
             "javascript",
             "web development",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "compensation": "paid",
         "due": "2021-08-13T10:00:00.000Z",
@@ -6161,10 +6228,12 @@
             "machine learning",
             "software engineering",
             "project management",
+            "hardware",
+            "networks",
             "java",
             "matlab",
-            "hardware",
-            "networks"
+            "c and c++",
+            "python"
         ],
         "remote": false
     },
@@ -6181,10 +6250,10 @@
         "description": "<div></div><div><div><div><div><div><div>We are looking for a member to add to our team of entrepreneurs. This could be a HUGE opportunity for someone passionate about education technology – working in a high potential growth industry, flexible hours and schedule, and working alongside myself and my other Co-Founder to learn the in’s and out’s of getting a startup company built, funded, launched, and growing!\n<p></p><p>We are extremely passionate about what we’re doing and want someone that is going to share in that belief and attitude. Requirements for this position would include: improving the backend of existing features, working with Founders to conceive new concepts for a better user experience, and support development of product as requested. Since we’re just getting things off the ground, other requirements could come up, but that’s the best part of being involved with a startup…lots of opportunity to learn and plenty of challenging work. The person we are looking for should be fluent in English, hard-working, have a strong willingness to learn about business and entrepreneurship, be proficient with PHP, SQL, and have the ability to communicate within a team environment. Experience with Laravel is a plus. We work pretty closely together, but it’s a blast.</p>\n<p>\nWe value our interns as team members. Our interns have the same expectations of employees and the opportunity to dive into real projects. Hours are flexible with 15-20 hrs/week. We are very open to discuss compensation.</p></div><br>\n</div>\n<div>\n<div><b>Instructions:</b></div> <div>If interested, shoot over your resume and cover letter to careers@teachergraph.com with subject line “Back End Developer – Intern” and we can schedule a first interview via Skype.</div>\n</div><br>\n</div></div></div><p></p><div><h4><b>Leave a Reply</b></h4>\n <p></p><div><div><div>Name\n </div><p></p><div>Mail (will not be published)\n </div><p></p><div>Website</div>\n</div><p></p><p>Comment moderation is enabled, no need to resubmit any comments posted.</p></div></div></div><p></p>",
         "index": 265,
         "skills": [
+            "sql",
             "machine learning",
             "project management",
-            "information technology",
-            "sql"
+            "information technology"
         ],
         "contact": "careers@teachergraph.com",
         "remote": false
@@ -6225,8 +6294,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
+            "java",
             "python",
             "c and c++",
             "machine learning",
@@ -6250,11 +6319,11 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
+            "networks",
             "angular",
             "java",
-            "networks"
+            "scala",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree",
@@ -6277,9 +6346,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "hardware",
             "java",
             "data visualization",
-            "hardware",
             "machine learning"
         ],
         "remote": false
@@ -6364,8 +6433,9 @@
             "machine learning",
             "information technology",
             "networks",
-            "python",
+            "sql",
             "project management",
+            "python",
             "software engineering"
         ],
         "compensation": "paid",
@@ -6390,6 +6460,7 @@
         "skills": [
             "project management",
             "software engineering",
+            "sql",
             "java",
             "python",
             "machine learning",
@@ -6412,6 +6483,7 @@
         "index": 275,
         "skills": [
             "javascript",
+            "sql",
             "machine learning",
             "project management",
             "information technology",
@@ -6434,9 +6506,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "networks",
-            "c and c++",
-            "sql"
+            "c and c++"
         ],
         "remote": false
     },
@@ -6495,8 +6567,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "matlab",
             "networks",
+            "matlab",
             "c and c++",
             "machine learning"
         ],
@@ -6554,6 +6626,7 @@
         "skills": [
             "project management",
             "software engineering",
+            "sql",
             "c and c++",
             "information technology"
         ],
@@ -6594,8 +6667,9 @@
             "java",
             "information technology",
             "software engineering",
-            "javascript",
             "devops",
+            "javascript",
+            "sql",
             "project management"
         ],
         "remote": true
@@ -6619,6 +6693,7 @@
             "software engineering",
             "hardware",
             "networks",
+            "sql",
             "c and c++"
         ],
         "qualifications": [
@@ -6641,8 +6716,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
+            "java",
             "c and c++",
             "machine learning"
         ],
@@ -6709,11 +6784,11 @@
         "description": "<div>Parsippany\n<p><b>Data Engineering Intern\n</b></p><p>Location: Remote, USA\n</p><p></p><p><b>Internship Summary:\n</b></p><p></p><p>The Data Engineering Intern will work with us in the following areas:\n</p><ul><li>Develop and design ETL systems and manage large datasets in our Data Warehouse and Cloud practice to build data pipelines to provide various data categories in support of our digital data platform roadmap\n</li></ul><p></p><p>At Zoetis we are passionate about our customers and the animals in their care. We discover, develop and manufacture the world’s most innovative and effective products for animal health—medicines, vaccines, diagnostics, genetic tests, biodevices—and we are creating the next generation of integrated solutions and services to support this evolving industry. We know our people drive our success. Our colleagues are proud of our company culture and the meaningful role we play in caring for animals. The Zoetis Core Beliefs define the commitments we make to our colleagues, our customers and our stakeholders every day. They have guided the creation of our award-winning workplace and our proud position as a leading partner of choice in animal health.\n</p><p></p><p><b>www.zoetis.com\n</b></p><p></p><p><b>Key Responsibilities:\n</b></p><p></p><p>Work closely with the DDA data engineering team to:\n</p><ul><li>Leverage ETL tools to ingest data\n</li><li>Work closely with data scientists to define and manage metadata\n</li><li>Balance independent and collaborative work as a part of a multi-functional agile team\n</li></ul><p></p><p><b>Internship Qualifications:\n</b></p><p></p><p><b>Education:\n</b></p><p>Currently studying Computer Science, Industrial Engineering, Statistics, Mathematics or related field\n</p><p></p><p><b>Knowledge, Skills, Ability Requirements:\n</b></p><ul><li>Exposure to Python or any other programming languages\n</li><li>Good understanding of RDBMS database and SQL language\n</li><li>Knowledge of ETL processes\n</li><li>Knowledge with AWS or any other cloud technology\n</li><li>Strong verbal and written communication skills\n</li><li>Good team player\n</li></ul><p></p><p>Students who are pursuing an undergraduate or graduate degree at an accredited institution with a current class standing of sophomore or above and a cumulative GPA of at least 3.0 are eligible for internships at Zoetis. Students must also be 18 years of age or older prior to their scheduled start date, and be able to provide verification that they are enrolled in school and authorized to participate in an internship in the U.S. without immigration sponsorship. Students who are offered internships will need to successfully pass a drug screen and background check within 5 days of offer.\n</p><p></p>Zoetis is an EEO/Affirmative Action Employer and does not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, disability or any other legally protected status.</div>",
         "index": 289,
         "skills": [
-            "python",
+            "sql",
             "software engineering",
+            "python",
             "project management",
-            "information technology",
-            "cloud computing"
+            "information technology"
         ],
         "remote": true
     },
@@ -6755,14 +6830,14 @@
         "index": 291,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
             "networks",
-            "python",
+            "java",
             "c and c++",
             "machine learning",
             "project management",
             "game design",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -6806,9 +6881,10 @@
             "information technology",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
-            "project management",
             "machine learning",
+            "project management",
             "web development"
         ],
         "qualifications": [
@@ -6941,8 +7017,8 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "javascript",
             "devops",
+            "javascript",
             "python",
             "c and c++",
             "virtual reality"
@@ -6988,10 +7064,10 @@
             "machine learning",
             "software engineering",
             "project management",
-            "java",
             "networks",
-            "c and c++",
+            "java",
             "python",
+            "c and c++",
             "information technology"
         ],
         "qualifications": [
@@ -7040,6 +7116,7 @@
             "java",
             "data visualization",
             "devops",
+            "sql",
             "c and c++",
             "machine learning",
             "project management"
@@ -7086,12 +7163,13 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
+            "sql",
             "java",
+            "javascript",
             "python",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -7227,6 +7305,7 @@
             "project management",
             "software engineering",
             "information technology",
+            "sql",
             "java"
         ],
         "remote": false
@@ -7266,6 +7345,7 @@
         "index": 313,
         "skills": [
             "software engineering",
+            "sql",
             "project management",
             "information technology"
         ],
@@ -7339,11 +7419,12 @@
             "machine learning",
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "data visualization",
+            "python",
             "c and c++",
-            "project management",
-            "python"
+            "project management"
         ],
         "compensation": "paid",
         "remote": false
@@ -7364,9 +7445,10 @@
             "information technology",
             "software engineering",
             "networks",
-            "python",
+            "sql",
             "machine learning",
-            "project management"
+            "project management",
+            "python"
         ],
         "contact": "join@vertivco.com",
         "qualifications": [
@@ -7456,6 +7538,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "java",
             "c and c++"
         ],
@@ -7505,10 +7588,10 @@
             "machine learning",
             "software engineering",
             "project management",
-            "javascript",
+            "networks",
             "java",
             "devops",
-            "networks"
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -7644,10 +7727,11 @@
             "project management",
             "information technology",
             "software engineering",
+            "hardware",
+            "networks",
             "javascript",
             "java",
-            "hardware",
-            "networks"
+            "sql"
         ],
         "contact": "recruitmentsupport@fedex.com",
         "qualifications": [
@@ -7694,11 +7778,12 @@
             "project management",
             "information technology",
             "software engineering",
-            "javascript",
+            "hardware",
+            "networks",
+            "sql",
             "java",
             "matlab",
-            "hardware",
-            "networks"
+            "javascript"
         ],
         "contact": "recruitmentsupport@fedex.com",
         "qualifications": [
@@ -7722,10 +7807,11 @@
             "project management",
             "information technology",
             "software engineering",
+            "hardware",
+            "networks",
             "javascript",
             "java",
-            "hardware",
-            "networks"
+            "sql"
         ],
         "contact": "recruitmentsupport@fedex.com",
         "qualifications": [
@@ -7798,10 +7884,11 @@
             "project management",
             "information technology",
             "software engineering",
+            "hardware",
+            "networks",
             "javascript",
             "java",
-            "hardware",
-            "networks"
+            "sql"
         ],
         "contact": "recruitmentsupport@fedex.com",
         "qualifications": [
@@ -7823,10 +7910,11 @@
         "index": 336,
         "skills": [
             "software engineering",
-            "javascript",
-            "java",
+            "hardware",
             "devops",
-            "hardware"
+            "javascript",
+            "sql",
+            "java"
         ],
         "compensation": "paid",
         "remote": false
@@ -7891,8 +7979,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "devops",
             "networks",
+            "devops",
             "python",
             "artificial intelligence"
         ],
@@ -8029,10 +8117,11 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "networks",
             "javascript",
             "java",
             "data visualization",
-            "networks"
+            "sql"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -8055,11 +8144,12 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
-            "python",
+            "java",
+            "sql",
             "machine learning",
-            "game design"
+            "game design",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -8126,11 +8216,12 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
-            "python",
+            "java",
+            "sql",
             "machine learning",
-            "game design"
+            "game design",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -8153,8 +8244,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -8175,8 +8266,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -8308,6 +8399,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "c and c++",
             "machine learning",
@@ -8404,11 +8496,12 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
-            "python",
+            "java",
+            "sql",
             "machine learning",
-            "game design"
+            "game design",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -8475,11 +8568,12 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
-            "python",
+            "java",
+            "sql",
             "machine learning",
-            "game design"
+            "game design",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -8502,8 +8596,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -8524,8 +8618,8 @@
             "project management",
             "information technology",
             "software engineering",
-            "data visualization",
             "networks",
+            "data visualization",
             "machine learning"
         ],
         "remote": false
@@ -8661,11 +8755,11 @@
             "project management",
             "information technology",
             "software engineering",
-            "java",
             "hardware",
+            "java",
             "machine learning",
-            "python",
-            "virtual reality"
+            "virtual reality",
+            "python"
         ],
         "remote": false
     },
@@ -8684,6 +8778,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "c and c++",
             "machine learning",
@@ -8730,11 +8825,11 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "java",
             "networks",
+            "java",
             "c and c++",
-            "python",
-            "project management"
+            "project management",
+            "python"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -8781,8 +8876,8 @@
         "index": 377,
         "skills": [
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++",
             "machine learning",
@@ -8806,8 +8901,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "deep learning",
             "networks",
+            "deep learning",
             "c and c++",
             "project management"
         ],
@@ -8880,6 +8975,7 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "sql",
             "c and c++",
             "project management"
         ],
@@ -8901,6 +8997,7 @@
             "information technology",
             "software engineering",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning",
@@ -8927,6 +9024,7 @@
             "machine learning",
             "information technology",
             "software engineering",
+            "sql",
             "python",
             "project management"
         ],
@@ -9059,6 +9157,7 @@
             "project management",
             "software engineering",
             "information technology",
+            "sql",
             "java",
             "c and c++"
         ],
@@ -9102,12 +9201,12 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "data visualization",
             "hardware",
+            "data visualization",
             "robotics",
             "c and c++",
-            "python",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -9126,6 +9225,7 @@
         "skills": [
             "project management",
             "information technology",
+            "sql",
             "data visualization",
             "c and c++",
             "machine learning",
@@ -9171,13 +9271,13 @@
         "index": 394,
         "skills": [
             "software engineering",
-            "matlab",
             "networks",
-            "python",
+            "matlab",
             "robotics",
             "c and c++",
             "machine learning",
             "game design",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -9280,10 +9380,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
-            "java",
             "networks",
+            "javascript",
+            "java",
+            "scala",
             "machine learning",
             "python"
         ],
@@ -9332,6 +9432,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -9381,6 +9482,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -9405,6 +9507,7 @@
             "software engineering",
             "information technology",
             "javascript",
+            "sql",
             "machine learning",
             "web development",
             "react"
@@ -9472,6 +9575,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "c and c++",
             "machine learning",
             "project management"
@@ -9518,6 +9622,7 @@
         "index": 409,
         "skills": [
             "software engineering",
+            "sql",
             "data visualization",
             "c and c++",
             "information technology"
@@ -9540,9 +9645,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -9566,12 +9671,13 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
+            "sql",
             "java",
+            "javascript",
             "python",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "compensation": "paid",
         "contact": "paypalglobaltalentacquisition@paypal.com",
@@ -9596,9 +9702,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "java",
             "hardware",
             "networks",
+            "java",
             "project management",
             "python"
         ],
@@ -9687,10 +9793,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
-            "java",
             "networks",
+            "javascript",
+            "java",
+            "scala",
             "machine learning",
             "python"
         ],
@@ -9739,6 +9845,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -9760,10 +9867,10 @@
         "index": 419,
         "skills": [
             "software engineering",
-            "java",
-            "robotics",
             "hardware",
+            "robotics",
             "networks",
+            "java",
             "c and c++",
             "machine learning",
             "project management",
@@ -9814,6 +9921,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -9838,6 +9946,7 @@
             "software engineering",
             "information technology",
             "javascript",
+            "sql",
             "machine learning",
             "web development",
             "react"
@@ -9887,7 +9996,10 @@
             "devops",
             "information technology",
             "software engineering",
-            "networks"
+            "networks",
+            "machine learning",
+            "virtual reality",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -9910,6 +10022,7 @@
             "project management",
             "information technology",
             "software engineering",
+            "sql",
             "angular"
         ],
         "compensation": "unpaid",
@@ -9934,9 +10047,10 @@
             "information technology",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "remote": true
     },
@@ -9954,6 +10068,7 @@
         "index": 427,
         "skills": [
             "software engineering",
+            "sql",
             "c and c++",
             "information technology"
         ],
@@ -9978,13 +10093,13 @@
             "information technology",
             "software engineering",
             "networks",
+            "hardware",
             "java",
             "data visualization",
-            "hardware",
-            "python",
+            "c and c++",
             "project management",
             "virtual reality",
-            "c and c++"
+            "python"
         ],
         "start": "2020-04-15T10:00:00.000Z",
         "due": "2020-04-15T10:00:00.000Z",
@@ -10032,6 +10147,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -10053,6 +10169,7 @@
         "index": 431,
         "skills": [
             "information technology",
+            "sql",
             "networks",
             "machine learning"
         ],
@@ -10176,6 +10293,7 @@
             "project management",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
             "web development"
         ],
@@ -10199,11 +10317,11 @@
         "skills": [
             "machine learning",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
-            "python",
             "robotics",
+            "python",
             "c and c++",
             "project management"
         ],
@@ -10227,11 +10345,12 @@
         "skills": [
             "machine learning",
             "project management",
-            "data visualization",
             "networks",
+            "sql",
+            "data visualization",
+            "python",
             "c and c++",
             "virtual reality",
-            "python",
             "information technology"
         ],
         "qualifications": [
@@ -10254,7 +10373,8 @@
         "skills": [
             "project management",
             "information technology",
-            "software engineering"
+            "software engineering",
+            "sql"
         ],
         "remote": false
     },
@@ -10366,6 +10486,7 @@
             "project management",
             "information technology",
             "networks",
+            "sql",
             "machine learning",
             "software engineering"
         ],
@@ -10438,12 +10559,12 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "angular",
             "c and c++",
             "machine learning",
             "project management",
-            "information technology",
-            "web development"
+            "information technology"
         ],
         "compensation": "paid",
         "remote": false
@@ -10463,8 +10584,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++",
             "project management"
@@ -10656,10 +10777,12 @@
             "machine learning",
             "software engineering",
             "project management",
-            "javascript",
+            "networks",
             "java",
             "devops",
-            "networks"
+            "javascript",
+            "c and c++",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -10989,8 +11112,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "javascript",
             "java",
+            "javascript",
+            "sql",
             "python",
             "c and c++",
             "machine learning",
@@ -11061,6 +11185,7 @@
         "index": 473,
         "skills": [
             "information technology",
+            "sql",
             "java",
             "data visualization",
             "machine learning",
@@ -11114,8 +11239,8 @@
             "software engineering",
             "javascript",
             "web development",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "compensation": "paid",
         "due": "2021-08-13T10:00:00.000Z",
@@ -11137,10 +11262,10 @@
         "description": "<div></div><div><div><div><div><div><div>We are looking for a member to add to our team of entrepreneurs. This could be a HUGE opportunity for someone passionate about education technology – working in a high potential growth industry, flexible hours and schedule, and working alongside myself and my other Co-Founder to learn the in’s and out’s of getting a startup company built, funded, launched, and growing!\n<p></p><p>We are extremely passionate about what we’re doing and want someone that is going to share in that belief and attitude. Requirements for this position would include: improving the backend of existing features, working with Founders to conceive new concepts for a better user experience, and support development of product as requested. Since we’re just getting things off the ground, other requirements could come up, but that’s the best part of being involved with a startup…lots of opportunity to learn and plenty of challenging work. The person we are looking for should be fluent in English, hard-working, have a strong willingness to learn about business and entrepreneurship, be proficient with PHP, SQL, and have the ability to communicate within a team environment. Experience with Laravel is a plus. We work pretty closely together, but it’s a blast.</p>\n<p>\nWe value our interns as team members. Our interns have the same expectations of employees and the opportunity to dive into real projects. Hours are flexible with 15-20 hrs/week. We are very open to discuss compensation.</p></div><br>\n</div>\n<div>\n<div><b>Instructions:</b></div> <div>If interested, shoot over your resume and cover letter to careers@teachergraph.com with subject line “Back End Developer – Intern” and we can schedule a first interview via Skype.</div>\n</div><br>\n</div></div></div><p></p><div><h4><b>Leave a Reply</b></h4>\n <p></p><div><div><div>Name\n </div><p></p><div>Mail (will not be published)\n </div><p></p><div>Website</div>\n</div><p></p><p>Comment moderation is enabled, no need to resubmit any comments posted.</p></div></div></div><p></p>",
         "index": 476,
         "skills": [
+            "sql",
             "machine learning",
             "project management",
-            "information technology",
-            "sql"
+            "information technology"
         ],
         "contact": "careers@teachergraph.com",
         "remote": false
@@ -11205,8 +11330,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
+            "java",
             "python",
             "c and c++",
             "machine learning",
@@ -11229,12 +11354,12 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
+            "python",
             "c and c++",
             "project management",
-            "virtual reality",
-            "python"
+            "virtual reality"
         ],
         "contact": "accommodation@mastercard.com",
         "qualifications": [
@@ -11280,11 +11405,11 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
+            "networks",
             "angular",
             "java",
-            "networks"
+            "scala",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree",
@@ -11307,9 +11432,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "hardware",
             "java",
             "data visualization",
-            "hardware",
             "machine learning"
         ],
         "remote": false
@@ -11347,8 +11472,8 @@
         "index": 485,
         "skills": [
             "information technology",
-            "devops",
             "networks",
+            "devops",
             "robotics",
             "machine learning",
             "project management",
@@ -11372,12 +11497,12 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "data visualization",
             "hardware",
+            "data visualization",
             "robotics",
             "c and c++",
-            "python",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": true
     },
@@ -11439,6 +11564,7 @@
             "devops",
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "data visualization",
             "machine learning",
@@ -11462,8 +11588,9 @@
         "index": 490,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -11594,12 +11721,13 @@
         "index": 496,
         "skills": [
             "software engineering",
-            "angular",
             "java",
             "data visualization",
+            "angular",
+            "sql",
+            "python",
             "robotics",
             "c and c++",
-            "python",
             "information technology"
         ],
         "due": "2020-05-01T10:00:00.000Z",
@@ -11623,9 +11751,10 @@
         "index": 497,
         "skills": [
             "software engineering",
-            "javascript",
-            "angular",
             "hardware",
+            "javascript",
+            "sql",
+            "angular",
             "python",
             "c and c++",
             "project management",
@@ -11649,6 +11778,7 @@
             "project management",
             "software engineering",
             "information technology",
+            "sql",
             "c and c++",
             "artificial intelligence"
         ],
@@ -11688,13 +11818,13 @@
         "index": 500,
         "skills": [
             "software engineering",
-            "java",
-            "cloud computing",
-            "devops",
             "networks",
+            "cloud computing",
+            "java",
+            "devops",
+            "python",
             "c and c++",
             "machine learning",
-            "python",
             "information technology"
         ],
         "qualifications": [
@@ -11760,10 +11890,10 @@
             "software engineering",
             "javascript",
             "java",
-            "python",
             "c and c++",
-            "project management",
             "machine learning",
+            "project management",
+            "python",
             "information technology"
         ],
         "qualifications": [
@@ -11785,6 +11915,7 @@
         "index": 504,
         "skills": [
             "software engineering",
+            "sql",
             "java",
             "devops",
             "python",
@@ -11874,9 +12005,9 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "javascript",
             "java",
-            "devops"
+            "devops",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -11969,9 +12100,9 @@
             "project management",
             "information technology",
             "software engineering",
+            "networks",
             "angular",
             "java",
-            "networks",
             "python",
             "c and c++",
             "machine learning"
@@ -12039,8 +12170,9 @@
         "description": "<div><h3><b>Your Challenge</b></h3><p></p><ul><li>\nDevelop, troubleshoot, support, maintain and enhance new and current applications based on our products and solutions</li>\n<li>Analyze and understand business requirements and translate them into application features based on our products and solutions</li>\n<li>Monitor and troubleshoot systems to correct technical issues that impede development or day-to-day operations</li>\n<li>Flexibility to accommodate for client engagements based on project needs and lifecycle</li>\n<li>Keep abreast of new technologies and frameworks, and provide recommendations for Improvements within the team</li>\n<li>Create and document application requirements, changes by working with internal project teams and clients.</li></ul><p></p>\n<h3><b>\nYour Skills</b></h3><p></p><ul><li>\nOngoing Bachelor or Master studies in CS or equivalent field</li>\n<li>Software development skills required, very good Java programming skills preferred<ul><li>\nExperience with Spring Framework, Maven and Oracle</li><li>\nExperience with application servers, databases/SQL, log4j, Eclipse, and source control</li><li>\nUnderstanding of web development technologies: JavaScript, jQuery, CSS</li></ul></li>\n<li>Experience in debugging and troubleshooting software applications</li>\n<li>Excellent communication skills including but not limited to documentation, presentation.</li>\n<li>Strong interpersonal skills; ability to work closely and effectively with internal teams and clients</li><li>\nAbility to work in a dynamic fast paced startup environment and display flexibility as priorities change to reflect our fast growing business</li></ul></div><p></p>",
         "index": 515,
         "skills": [
-            "javascript",
             "java",
+            "javascript",
+            "sql",
             "project management",
             "information technology",
             "software engineering"
@@ -12066,9 +12198,9 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
             "hardware",
             "networks",
+            "javascript",
             "c and c++"
         ],
         "remote": false
@@ -12288,6 +12420,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "c and c++",
             "machine learning",
@@ -12313,10 +12446,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
-            "c and c++",
+            "java",
             "python",
+            "c and c++",
             "machine learning"
         ],
         "remote": false
@@ -12336,8 +12469,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "deep learning",
             "networks",
+            "deep learning",
             "c and c++",
             "project management"
         ],
@@ -12453,11 +12586,11 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "java",
             "networks",
+            "java",
             "c and c++",
-            "python",
-            "project management"
+            "project management",
+            "python"
         ],
         "compensation": "paid",
         "qualifications": [
@@ -12525,8 +12658,8 @@
         "index": 536,
         "skills": [
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++",
             "machine learning",
@@ -12550,8 +12683,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "deep learning",
             "networks",
+            "deep learning",
             "c and c++",
             "project management"
         ],
@@ -12645,6 +12778,7 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "sql",
             "c and c++",
             "project management"
         ],
@@ -12666,6 +12800,7 @@
             "information technology",
             "software engineering",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning",
@@ -12692,6 +12827,7 @@
             "machine learning",
             "information technology",
             "software engineering",
+            "sql",
             "python",
             "project management"
         ],
@@ -12785,6 +12921,7 @@
         "index": 547,
         "skills": [
             "software engineering",
+            "sql",
             "java",
             "machine learning",
             "information technology"
@@ -12872,6 +13009,7 @@
             "project management",
             "software engineering",
             "information technology",
+            "sql",
             "java",
             "c and c++"
         ],
@@ -12937,11 +13075,11 @@
         "skills": [
             "data science",
             "machine learning",
+            "sql",
             "python",
             "project management",
             "information technology",
-            "software engineering",
-            "sql"
+            "software engineering"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -13033,9 +13171,10 @@
             "machine learning",
             "project management",
             "information technology",
-            "scala",
+            "networks",
             "java",
-            "networks"
+            "scala",
+            "sql"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -13131,10 +13270,10 @@
             "project management",
             "information technology",
             "software engineering",
-            "javascript",
-            "java",
             "hardware",
-            "networks"
+            "networks",
+            "javascript",
+            "java"
         ],
         "remote": false
     },
@@ -13331,6 +13470,7 @@
         "index": 571,
         "skills": [
             "software engineering",
+            "sql",
             "python",
             "machine learning",
             "project management",
@@ -13372,7 +13512,12 @@
             "machine learning",
             "project management",
             "information technology",
-            "software engineering"
+            "software engineering",
+            "networks",
+            "data visualization",
+            "javascript",
+            "angular",
+            "java"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -13416,11 +13561,11 @@
         "index": 575,
         "skills": [
             "machine learning",
-            "java",
-            "robotics",
             "data visualization",
-            "information technology",
+            "robotics",
             "matlab",
+            "information technology",
+            "java",
             "c and c++",
             "project management",
             "python"
@@ -13462,12 +13607,12 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "data visualization",
             "hardware",
+            "data visualization",
             "robotics",
             "c and c++",
-            "python",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": false
     },
@@ -13512,6 +13657,7 @@
         "skills": [
             "project management",
             "information technology",
+            "sql",
             "data visualization",
             "c and c++",
             "machine learning",
@@ -13557,13 +13703,13 @@
         "index": 581,
         "skills": [
             "software engineering",
-            "matlab",
             "networks",
-            "python",
+            "matlab",
             "robotics",
             "c and c++",
             "machine learning",
             "game design",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -13603,8 +13749,9 @@
         "description": "<div><h2><b>At Cadence, we hire and develop leaders and innovators who want to make an impact on the world of technology.\n</b></h2><p>We are looking for exceptional individuals interested in working at intersection of big data analytics and EDA in an internship position. Primary responsibilities include researching and developing data platform components and applications in EDA and adjacent markets. You will work with a worldwide cross-functional team and collaborate to find innovative and practical solutions.\n</p><p></p><p>Qualifications\n</p><ul><li>Pursuing MS or PhD in Computer Science or Electrical Engineering\n</li></ul><ul><li>Experience working with big data, such as Hadoop ecosystem, Spark, Kafka, etc.\n</li></ul><ul><li>In-depth understanding of data structures, algorithms, and distributed systems\n</li></ul><ul><li>Development experience in Python, Java, or Scala\n</li></ul><ul><li>Understanding of database fundamentals and familiarity with SQL\n</li></ul><ul><li>Familiar with working in Linux-based environments\n</li></ul><ul><li>Excellent verbal and written communication skills\n</li></ul><h2><b>We’re doing work that matters. Help us solve what others can’t.</b></h2></div>",
         "index": 583,
         "skills": [
-            "java",
+            "sql",
             "software engineering",
+            "java",
             "scala",
             "python",
             "information technology"
@@ -13627,10 +13774,10 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "matlab",
             "networks",
-            "c and c++",
-            "python"
+            "matlab",
+            "python",
+            "c and c++"
         ],
         "contact": "careers@sonyusa.com",
         "remote": false
@@ -13699,13 +13846,13 @@
         "index": 587,
         "skills": [
             "software engineering",
-            "matlab",
             "networks",
-            "python",
+            "matlab",
             "robotics",
             "c and c++",
             "machine learning",
             "game design",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -13725,6 +13872,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "python",
             "c and c++",
@@ -13749,6 +13897,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "data visualization",
             "python",
             "machine learning",
@@ -13815,6 +13964,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "c and c++",
             "machine learning",
             "project management"
@@ -13861,6 +14011,7 @@
         "index": 594,
         "skills": [
             "software engineering",
+            "sql",
             "data visualization",
             "c and c++",
             "information technology"
@@ -13932,9 +14083,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -13958,12 +14109,13 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
+            "sql",
             "java",
+            "javascript",
             "python",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "compensation": "paid",
         "contact": "paypalglobaltalentacquisition@paypal.com",
@@ -13988,9 +14140,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "java",
             "hardware",
             "networks",
+            "java",
             "project management",
             "python"
         ],
@@ -14036,9 +14188,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -14062,9 +14214,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -14088,9 +14240,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -14128,8 +14280,9 @@
         "index": 605,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -14199,10 +14352,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
-            "java",
             "networks",
+            "javascript",
+            "java",
+            "scala",
             "machine learning",
             "python"
         ],
@@ -14251,6 +14404,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -14299,8 +14453,8 @@
             "information technology",
             "networks",
             "hardware",
-            "machine learning",
             "project management",
+            "machine learning",
             "software engineering"
         ],
         "remote": true
@@ -14322,6 +14476,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -14345,8 +14500,9 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "java",
             "networks",
+            "java",
+            "sql",
             "project management"
         ],
         "qualifications": [
@@ -14369,9 +14525,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -14395,9 +14551,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -14421,9 +14577,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -14446,8 +14602,9 @@
         "index": 618,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -14517,10 +14674,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
-            "java",
             "networks",
+            "javascript",
+            "java",
+            "scala",
             "machine learning",
             "python"
         ],
@@ -14569,6 +14726,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -14590,10 +14748,10 @@
         "index": 624,
         "skills": [
             "software engineering",
-            "java",
-            "robotics",
             "hardware",
+            "robotics",
             "networks",
+            "java",
             "c and c++",
             "machine learning",
             "project management",
@@ -14643,8 +14801,8 @@
             "information technology",
             "networks",
             "hardware",
-            "machine learning",
             "project management",
+            "machine learning",
             "software engineering"
         ],
         "remote": true
@@ -14666,6 +14824,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -14690,6 +14849,7 @@
             "software engineering",
             "information technology",
             "javascript",
+            "sql",
             "machine learning",
             "web development",
             "react"
@@ -14739,7 +14899,10 @@
             "devops",
             "information technology",
             "software engineering",
-            "networks"
+            "networks",
+            "machine learning",
+            "virtual reality",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -14762,6 +14925,7 @@
             "project management",
             "information technology",
             "software engineering",
+            "sql",
             "angular"
         ],
         "compensation": "unpaid",
@@ -14785,6 +14949,7 @@
         "skills": [
             "project management",
             "information technology",
+            "sql",
             "data visualization",
             "python",
             "c and c++",
@@ -14808,9 +14973,10 @@
             "information technology",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "remote": true
     },
@@ -14869,6 +15035,7 @@
         "index": 636,
         "skills": [
             "software engineering",
+            "sql",
             "c and c++",
             "information technology"
         ],
@@ -14893,13 +15060,13 @@
             "information technology",
             "software engineering",
             "networks",
+            "hardware",
             "java",
             "data visualization",
-            "hardware",
-            "python",
+            "c and c++",
             "project management",
             "virtual reality",
-            "c and c++"
+            "python"
         ],
         "start": "2020-04-15T10:00:00.000Z",
         "due": "2020-04-15T10:00:00.000Z",
@@ -14947,6 +15114,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -14996,6 +15164,7 @@
         "index": 641,
         "skills": [
             "information technology",
+            "sql",
             "networks",
             "machine learning"
         ],
@@ -15184,11 +15353,11 @@
         "index": 649,
         "skills": [
             "machine learning",
+            "networks",
             "java",
             "matlab",
-            "networks",
-            "python",
             "c and c++",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -15379,6 +15548,7 @@
             "project management",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
             "web development"
         ],
@@ -15402,11 +15572,11 @@
         "skills": [
             "machine learning",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
-            "python",
             "robotics",
+            "python",
             "c and c++",
             "project management"
         ],
@@ -15430,11 +15600,12 @@
         "skills": [
             "machine learning",
             "project management",
-            "data visualization",
             "networks",
+            "sql",
+            "data visualization",
+            "python",
             "c and c++",
             "virtual reality",
-            "python",
             "information technology"
         ],
         "qualifications": [
@@ -15457,7 +15628,8 @@
         "skills": [
             "project management",
             "information technology",
-            "software engineering"
+            "software engineering",
+            "sql"
         ],
         "remote": false
     },
@@ -15614,6 +15786,7 @@
             "project management",
             "information technology",
             "networks",
+            "sql",
             "machine learning",
             "software engineering"
         ],
@@ -15686,12 +15859,12 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "angular",
             "c and c++",
             "machine learning",
             "project management",
-            "information technology",
-            "web development"
+            "information technology"
         ],
         "compensation": "paid",
         "remote": false
@@ -15711,8 +15884,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++",
             "project management"
@@ -15763,8 +15936,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "data visualization",
             "networks",
+            "sql",
+            "data visualization",
             "information technology"
         ],
         "start": "2021-12-01T10:00:00.000Z",
@@ -15788,8 +15962,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "java",
             "networks",
+            "java",
             "python",
             "c and c++"
         ],
@@ -15881,8 +16055,9 @@
         "index": 678,
         "skills": [
             "project management",
-            "data visualization",
             "networks",
+            "sql",
+            "data visualization",
             "c and c++",
             "information technology"
         ],
@@ -15975,10 +16150,12 @@
             "machine learning",
             "software engineering",
             "project management",
-            "javascript",
+            "networks",
             "java",
             "devops",
-            "networks"
+            "javascript",
+            "c and c++",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -16186,11 +16363,11 @@
             "machine learning",
             "robotics",
             "software engineering",
-            "matlab",
             "hardware",
+            "matlab",
+            "python",
             "c and c++",
             "project management",
-            "python",
             "information technology"
         ],
         "remote": false
@@ -16332,11 +16509,11 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
             "networks",
-            "c and c++",
-            "machine learning"
+            "java",
+            "machine learning",
+            "c and c++"
         ],
         "start": "2020-05-01T10:00:00.000Z",
         "qualifications": [
@@ -16383,8 +16560,9 @@
         "skills": [
             "project management",
             "software engineering",
-            "javascript",
             "java",
+            "javascript",
+            "sql",
             "python",
             "c and c++",
             "machine learning",
@@ -16475,6 +16653,7 @@
         "index": 703,
         "skills": [
             "information technology",
+            "sql",
             "java",
             "data visualization",
             "machine learning",
@@ -16526,6 +16705,7 @@
         "skills": [
             "machine learning",
             "project management",
+            "sql",
             "matlab",
             "python",
             "c and c++",
@@ -16595,8 +16775,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
+            "java",
             "python",
             "c and c++",
             "machine learning",
@@ -16619,12 +16799,12 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "java",
+            "python",
             "c and c++",
             "project management",
-            "virtual reality",
-            "python"
+            "virtual reality"
         ],
         "contact": "accommodation@mastercard.com",
         "qualifications": [
@@ -16670,11 +16850,11 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
+            "networks",
             "angular",
             "java",
-            "networks"
+            "scala",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree",
@@ -16719,9 +16899,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "hardware",
             "java",
             "data visualization",
-            "hardware",
             "machine learning"
         ],
         "remote": false
@@ -16781,8 +16961,8 @@
         "index": 716,
         "skills": [
             "information technology",
-            "devops",
             "networks",
+            "devops",
             "robotics",
             "machine learning",
             "project management",
@@ -16806,12 +16986,12 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "data visualization",
             "hardware",
+            "data visualization",
             "robotics",
             "c and c++",
-            "python",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": true
     },
@@ -17018,9 +17198,9 @@
         "index": 726,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
             "networks",
+            "java",
             "c and c++",
             "virtual reality",
             "information technology",
@@ -17048,6 +17228,7 @@
             "devops",
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "data visualization",
             "machine learning",
@@ -17071,8 +17252,9 @@
         "index": 728,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -17191,9 +17373,9 @@
         "index": 733,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
             "networks",
+            "java",
             "c and c++",
             "virtual reality",
             "information technology",
@@ -17301,12 +17483,13 @@
         "index": 738,
         "skills": [
             "software engineering",
-            "angular",
             "java",
             "data visualization",
+            "angular",
+            "sql",
+            "python",
             "robotics",
             "c and c++",
-            "python",
             "information technology"
         ],
         "due": "2020-05-01T10:00:00.000Z",
@@ -17330,9 +17513,10 @@
         "index": 739,
         "skills": [
             "software engineering",
-            "javascript",
-            "angular",
             "hardware",
+            "javascript",
+            "sql",
+            "angular",
             "python",
             "c and c++",
             "project management",
@@ -17356,6 +17540,7 @@
             "project management",
             "software engineering",
             "information technology",
+            "sql",
             "c and c++",
             "artificial intelligence"
         ],
@@ -17412,6 +17597,7 @@
         "index": 743,
         "skills": [
             "project management",
+            "sql",
             "networks",
             "python",
             "machine learning",
@@ -17437,13 +17623,13 @@
         "index": 744,
         "skills": [
             "software engineering",
-            "java",
-            "cloud computing",
-            "devops",
             "networks",
+            "cloud computing",
+            "java",
+            "devops",
+            "python",
             "c and c++",
             "machine learning",
-            "python",
             "information technology"
         ],
         "qualifications": [
@@ -17466,6 +17652,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "project management",
             "react"
         ],
@@ -17530,10 +17717,10 @@
             "software engineering",
             "javascript",
             "java",
-            "python",
             "c and c++",
-            "project management",
             "machine learning",
+            "project management",
+            "python",
             "information technology"
         ],
         "qualifications": [
@@ -17555,6 +17742,7 @@
         "index": 749,
         "skills": [
             "software engineering",
+            "sql",
             "java",
             "devops",
             "python",
@@ -17602,6 +17790,7 @@
             "software engineering",
             "data visualization",
             "devops",
+            "sql",
             "machine learning"
         ],
         "remote": false
@@ -17639,8 +17828,8 @@
         "description": "<div><p>We are in need of an hourly paid intern who will work on our online database &amp; email systems. MS SQL Server &amp; ASP knowledge and exp. required. C++ programming experience desired. Please provide the hours that you can work. Full time is ideal for the summer.</p></div>",
         "index": 753,
         "skills": [
-            "c and c++",
-            "sql"
+            "sql",
+            "c and c++"
         ],
         "compensation": "paid",
         "remote": false
@@ -17726,12 +17915,12 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "java",
             "hardware",
             "networks",
-            "python",
+            "java",
             "c and c++",
-            "project management"
+            "project management",
+            "python"
         ],
         "remote": true
     },
@@ -17769,9 +17958,9 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "javascript",
             "java",
-            "devops"
+            "devops",
+            "javascript"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -17818,9 +18007,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "hardware",
             "networks",
+            "sql",
+            "java",
             "c and c++",
             "machine learning",
             "project management"
@@ -17889,9 +18079,9 @@
             "project management",
             "information technology",
             "software engineering",
+            "networks",
             "angular",
             "java",
-            "networks",
             "python",
             "c and c++",
             "machine learning"
@@ -17959,9 +18149,9 @@
             "project management",
             "information technology",
             "software engineering",
+            "networks",
             "angular",
             "java",
-            "networks",
             "python",
             "c and c++",
             "machine learning"
@@ -17985,10 +18175,10 @@
             "software engineering",
             "project management",
             "information technology",
-            "javascript",
-            "java",
             "hardware",
-            "networks"
+            "networks",
+            "javascript",
+            "java"
         ],
         "remote": false
     },
@@ -18126,6 +18316,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "c and c++",
             "machine learning",
             "project management"
@@ -18148,8 +18339,9 @@
         "description": "<div><h3><b>Your Challenge</b></h3><p></p><ul><li>\nDevelop, troubleshoot, support, maintain and enhance new and current applications based on our products and solutions</li>\n<li>Analyze and understand business requirements and translate them into application features based on our products and solutions</li>\n<li>Monitor and troubleshoot systems to correct technical issues that impede development or day-to-day operations</li>\n<li>Flexibility to accommodate for client engagements based on project needs and lifecycle</li>\n<li>Keep abreast of new technologies and frameworks, and provide recommendations for Improvements within the team</li>\n<li>Create and document application requirements, changes by working with internal project teams and clients.</li></ul><p></p>\n<h3><b>\nYour Skills</b></h3><p></p><ul><li>\nOngoing Bachelor or Master studies in CS or equivalent field</li>\n<li>Software development skills required, very good Java programming skills preferred<ul><li>\nExperience with Spring Framework, Maven and Oracle</li><li>\nExperience with application servers, databases/SQL, log4j, Eclipse, and source control</li><li>\nUnderstanding of web development technologies: JavaScript, jQuery, CSS</li></ul></li>\n<li>Experience in debugging and troubleshooting software applications</li>\n<li>Excellent communication skills including but not limited to documentation, presentation.</li>\n<li>Strong interpersonal skills; ability to work closely and effectively with internal teams and clients</li><li>\nAbility to work in a dynamic fast paced startup environment and display flexibility as priorities change to reflect our fast growing business</li></ul></div><p></p>",
         "index": 775,
         "skills": [
-            "javascript",
             "java",
+            "javascript",
+            "sql",
             "project management",
             "information technology",
             "software engineering"
@@ -18197,9 +18389,9 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
             "hardware",
             "networks",
+            "javascript",
             "c and c++"
         ],
         "remote": false
@@ -18396,8 +18588,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "java",
             "networks",
+            "sql",
+            "java",
             "c and c++",
             "project management",
             "game design",
@@ -18422,8 +18615,8 @@
             "software engineering",
             "project management",
             "deep learning",
-            "java",
             "networks",
+            "java",
             "c and c++",
             "information technology"
         ],
@@ -18446,10 +18639,11 @@
             "project management",
             "information technology",
             "software engineering",
-            "javascript",
+            "networks",
             "java",
             "data visualization",
-            "networks",
+            "javascript",
+            "sql",
             "web development"
         ],
         "remote": false
@@ -18598,13 +18792,13 @@
         "index": 795,
         "skills": [
             "software engineering",
-            "matlab",
             "networks",
-            "python",
+            "matlab",
             "robotics",
             "c and c++",
             "machine learning",
             "game design",
+            "python",
             "information technology"
         ],
         "remote": false
@@ -18624,6 +18818,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "java",
             "python",
             "c and c++",
@@ -18648,6 +18843,7 @@
         "skills": [
             "software engineering",
             "javascript",
+            "sql",
             "data visualization",
             "python",
             "machine learning",
@@ -18714,6 +18910,7 @@
         "skills": [
             "information technology",
             "software engineering",
+            "sql",
             "c and c++",
             "machine learning",
             "project management"
@@ -18810,6 +19007,7 @@
         "index": 804,
         "skills": [
             "software engineering",
+            "sql",
             "data visualization",
             "c and c++",
             "information technology"
@@ -18881,9 +19079,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -18907,12 +19105,13 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
+            "sql",
             "java",
+            "javascript",
             "python",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "compensation": "paid",
         "contact": "paypalglobaltalentacquisition@paypal.com",
@@ -18937,9 +19136,9 @@
             "machine learning",
             "information technology",
             "software engineering",
-            "java",
             "hardware",
             "networks",
+            "java",
             "project management",
             "python"
         ],
@@ -18964,9 +19163,9 @@
             "machine learning",
             "project management",
             "information technology",
+            "networks",
             "javascript",
-            "java",
-            "networks"
+            "java"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -19030,9 +19229,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -19056,9 +19255,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -19082,9 +19281,9 @@
         "skills": [
             "information technology",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -19109,8 +19308,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "java",
             "networks",
+            "java",
             "machine learning"
         ],
         "compensation": "paid",
@@ -19146,8 +19345,9 @@
         "index": 818,
         "skills": [
             "software engineering",
-            "java",
             "hardware",
+            "sql",
+            "java",
             "python",
             "robotics",
             "c and c++",
@@ -19217,10 +19417,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
-            "scala",
-            "java",
             "networks",
+            "javascript",
+            "java",
+            "scala",
             "machine learning",
             "python"
         ],
@@ -19269,6 +19469,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -19290,10 +19491,10 @@
         "index": 824,
         "skills": [
             "software engineering",
-            "java",
-            "robotics",
             "hardware",
+            "robotics",
             "networks",
+            "java",
             "c and c++",
             "machine learning",
             "project management",
@@ -19318,8 +19519,9 @@
             "machine learning",
             "software engineering",
             "information technology",
-            "java",
             "networks",
+            "java",
+            "sql",
             "project management"
         ],
         "qualifications": [
@@ -19344,6 +19546,7 @@
             "software engineering",
             "information technology",
             "javascript",
+            "sql",
             "machine learning",
             "web development",
             "react"
@@ -19393,7 +19596,10 @@
             "devops",
             "information technology",
             "software engineering",
-            "networks"
+            "networks",
+            "machine learning",
+            "virtual reality",
+            "python"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -19416,6 +19622,7 @@
             "project management",
             "information technology",
             "software engineering",
+            "sql",
             "angular"
         ],
         "compensation": "unpaid",
@@ -19439,6 +19646,7 @@
         "skills": [
             "project management",
             "information technology",
+            "sql",
             "data visualization",
             "python",
             "c and c++",
@@ -19462,9 +19670,10 @@
             "information technology",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
-            "project management",
-            "machine learning"
+            "machine learning",
+            "project management"
         ],
         "remote": true
     },
@@ -19542,6 +19751,7 @@
         "index": 835,
         "skills": [
             "software engineering",
+            "sql",
             "c and c++",
             "information technology"
         ],
@@ -19566,13 +19776,13 @@
             "information technology",
             "software engineering",
             "networks",
+            "hardware",
             "java",
             "data visualization",
-            "hardware",
-            "python",
+            "c and c++",
             "project management",
             "virtual reality",
-            "c and c++"
+            "python"
         ],
         "start": "2020-04-15T10:00:00.000Z",
         "due": "2020-04-15T10:00:00.000Z",
@@ -19620,6 +19830,7 @@
             "software engineering",
             "information technology",
             "networks",
+            "sql",
             "python",
             "c and c++",
             "machine learning"
@@ -19669,6 +19880,7 @@
         "index": 840,
         "skills": [
             "information technology",
+            "sql",
             "networks",
             "machine learning"
         ],
@@ -19895,8 +20107,9 @@
         "index": 850,
         "skills": [
             "project management",
-            "javascript",
             "networks",
+            "javascript",
+            "sql",
             "python",
             "c and c++",
             "information technology"
@@ -19921,11 +20134,11 @@
         "index": 851,
         "skills": [
             "machine learning",
+            "networks",
             "java",
             "matlab",
-            "networks",
-            "python",
             "c and c++",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -19971,6 +20184,7 @@
         "skills": [
             "information technology",
             "project management",
+            "sql",
             "python",
             "machine learning",
             "software engineering"
@@ -20088,11 +20302,11 @@
         "index": 858,
         "skills": [
             "machine learning",
+            "networks",
             "java",
             "matlab",
-            "networks",
-            "python",
             "c and c++",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -20138,6 +20352,7 @@
         "skills": [
             "information technology",
             "project management",
+            "sql",
             "python",
             "machine learning",
             "software engineering"
@@ -20323,6 +20538,7 @@
             "project management",
             "software engineering",
             "javascript",
+            "sql",
             "c and c++",
             "web development"
         ],
@@ -20368,11 +20584,11 @@
         "skills": [
             "machine learning",
             "software engineering",
+            "networks",
             "javascript",
             "java",
-            "networks",
-            "python",
             "robotics",
+            "python",
             "c and c++",
             "project management"
         ],
@@ -20395,6 +20611,7 @@
         "index": 871,
         "skills": [
             "software engineering",
+            "sql",
             "angular",
             "machine learning",
             "information technology"

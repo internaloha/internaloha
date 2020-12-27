@@ -9,11 +9,11 @@ import {
     Checkbox,
     Popup,
     Grid,
-    Button
+    Button,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
-import {dropdownCareerInterest, recommendation} from "./RecommendationScript";
+import { dropdownCareerInterest, recommendation } from './RecommendationScript';
 
 function SearchInternshipFeature({
                                      onChildClick,
@@ -39,11 +39,10 @@ function SearchInternshipFeature({
     let careerChange = careerVal;
 
     const sortBy = [
-        {key: 'date', text: 'date', value: 'date'},
-        {key: 'internship', text: 'internship', value: 'internship'},
-        {key: 'company', text: 'company', value: 'company'},
+        { key: 'date', text: 'date', value: 'date' },
+        { key: 'internship', text: 'internship', value: 'internship' },
+        { key: 'company', text: 'company', value: 'company' },
     ];
-
 
     const setFilters = () => {
 
@@ -87,22 +86,22 @@ function SearchInternshipFeature({
         setFilters();
     };
 
-    const getLocation = (event, {value}) => {
+    const getLocation = (event, { value }) => {
         locationChange = value;
         setFilters();
     };
 
-    const getSort = (event, {value}) => {
+    const getSort = (event, { value }) => {
         sortChange = value;
         setFilters();
     };
 
-    const getSkills = (event, {value}) => {
+    const getSkills = (event, { value }) => {
         skillChange = value;
         setFilters();
     };
 
-    const getCareerInterest = (event, {value}) => {
+    const getCareerInterest = (event, { value }) => {
         careerChange = value;
         setFilters();
     };
@@ -118,16 +117,14 @@ function SearchInternshipFeature({
         color: '#8f8f8f',
     };
 
-    const careerSkills = (skill) => {
-        return (
+    const careerSkills = (skill) => (
             <Label circular key={skill}>
                 {skill}
             </Label>
         );
-    }
 
     return (
-        <Segment style={{width: '100%', borderRadius: '10px', marginTop: '3rem'}}>
+        <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
             <Grid columns={'equal'}>
                 <Grid.Row>
                     <Grid.Column>
@@ -155,7 +152,7 @@ function SearchInternshipFeature({
                                                     onChange={handleSearchChange}
                                                     fluid
                                                     control={Input}
-                                                    label={{children: 'Search'}}
+                                                    label={{ children: 'Search' }}
                                         />
                                     </Form>
                                 }
@@ -176,21 +173,21 @@ function SearchInternshipFeature({
                                 search
                                 onChange={getCareerInterest}>
                             </Form.Dropdown>
-                            {/*<Form.Field*/}
-                            {/*    fluid multiple selection clearable*/}
-                            {/*    control={Dropdown}*/}
-                            {/*    options={dropdownCareerInterest()}*/}
-                            {/*    label={{children: 'Career Interest'}}*/}
-                            {/*    placeholder='Career Interest'*/}
-                            {/*    search*/}
-                            {/*    onChange={getCareerInterest}*/}
-                            {/*/>*/}
+                            {/* <Form.Field */}
+                            {/*    fluid multiple selection clearable */}
+                            {/*    control={Dropdown} */}
+                            {/*    options={dropdownCareerInterest()} */}
+                            {/*    label={{children: 'Career Interest'}} */}
+                            {/*    placeholder='Career Interest' */}
+                            {/*    search */}
+                            {/*    onChange={getCareerInterest} */}
+                            {/* /> */}
                         </Form>
                     </Grid.Column>
                     <Grid.Column>
                         <Form>
                             <Form.Field
-                                label={{children: 'Skills'}}
+                                label={{ children: 'Skills' }}
                                 placeholder='Skills'
                                 search
                                 fluid multiple selection clearable
@@ -206,21 +203,21 @@ function SearchInternshipFeature({
                     <Grid.Column>
                         <Form>
                             <Form.Field placeholder='Location'
-                                        label={{children: 'Location'}}
+                                        label={{ children: 'Location' }}
                                         onChange={getLocation}
                                         fluid multiple selection clearable
                                         options={internships.dropdownLocation(data)}
                                         control={Dropdown}
-                                        style={{flexGrow: 0}}
+                                        style={{ flexGrow: 0 }}
                             />
                         </Form>
-                        <Checkbox style={{paddingTop: '1rem'}} label='Remote'
+                        <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                                   onClick={getRemote}/>
                     </Grid.Column>
                     <Grid.Column>
                         <Form onSubmit={handleSubmit}>
                             <Form.Field icon='home'
-                                        label={{children: 'Company'}}
+                                        label={{ children: 'Company' }}
                                         control={Input}
                                         iconPosition='left'
                                         placeholder='Company'
@@ -233,17 +230,17 @@ function SearchInternshipFeature({
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column>
-                        <Header style={{paddingBottom: '0', marginTop: '0rem'}}>
+                        <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
                             Total results found: {internships.total(passedData)}
                         </Header>
                     </Grid.Column>
                     <Grid.Column textAlign={'right'}>
                         <Grid.Row>
-                            <div style={{paddingBottom: '0', paddingRight: '0.5rem'}}>
+                            <div style={{ paddingBottom: '0', paddingRight: '0.5rem' }}>
                                 <Header style={{
                                     paddingBottom: '0', margin: '0 0 0 0', paddingRight: '0.5rem',
                                     paddingTop: '0.3rem', lineHeight: '10px',
-                                    display: 'inline-block'
+                                    display: 'inline-block',
                                 }} as={'h4'}>
                                     Key:
                                 </Header>
