@@ -33,7 +33,7 @@
   "scripts": {
     "test": "node test.js",
     "eject": "react-scripts eject",
-    "lint": "eslint --quiet --ext .jsx --ext .js ./src",
+    "lint": "eslint --quiet --ext .jsx --ext .js ./scrapers",
     "statistics": "node scrapers/statistics.js",
     "internships": "node scrapers/internships.js",
     "simply": "node scrapers/simplyHired.js",
