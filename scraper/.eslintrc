@@ -34,6 +34,7 @@
     "import/no-extraneous-dependencies": "off",
     "linebreak-style": "off",
     "max-len": "off",
+    "no-await-in-loop": "off",
     "no-confusing-arrow": ["error", {"allowParens": true}],
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
