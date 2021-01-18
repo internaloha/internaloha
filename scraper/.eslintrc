@@ -49,6 +49,6 @@
     "prefer-promise-reject-errors": "off"
   },
   "globals": {
-    "Assets": true // Meteor disallows importing of Assets, see https://docs.meteor.com/api/assets.html
+    "document": true
   }
 }
