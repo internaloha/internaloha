@@ -44,7 +44,7 @@ async function main() {
     });
     const page = await browser.newPage();
     await page.setViewport({
-        width: 1100, height: 900,
+        width: 1200, height: 1000,
     });
 
     // eslint-disable-next-line max-len
@@ -85,12 +85,12 @@ async function main() {
         const skippedDates = [];
 
         let pageLimit = await fetchInfo(page, 'div[class="cell middle hideMob padVertSm"]', 'innerHTML');
-        pageLimit = pageLimit.match(/(\d)+$/gm);
+        pageLimit = pageLimit.match(/(\d+)/gm);
         let currentPage = 1;
-        log.trace('Pages: ', pageLimit[0]);
+        log.trace('Pages: ', pageLimit[1]);
 
         try {
-            while (pageLimit[0] !== currentPage) {
+            while (pageLimit[1] !== currentPage) {
                 currentPage++;
                 // grab all post dates
                 const dates = await page.evaluate(
