@@ -92,7 +92,6 @@ async function getData(page, elements) {
           let daysBack = 0;
 
           // time = scraped posting- "30 days.. 2 hours ago.. etc"
-          // eslint-disable-next-line max-len
           if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute')) || (time.includes('minutes'))) {
             // set to 0 because it was posted today
             daysBack = 0;
