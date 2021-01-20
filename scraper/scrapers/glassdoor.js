@@ -1,49 +1,43 @@
 /* eslint-disable no-await-in-loop */
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
 import log from 'loglevel';
-
-async function scrapeInfo(page, posted, url, data) {
-    const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
-    await page.waitForSelector('div[class="css-16nw49e e11nt52q1"]');
-    let company = '';
-    try {
-        company = await page.evaluate(() => document.querySelector('div[class="css-16nw49e e11nt52q1"]').childNodes[0].nodeValue);
-    } catch (err5) {
-        company = await fetchInfo(page, 'div[class="css-16nw49e e11nt52q1"]', 'innerText');
-    }
-    const location = await fetchInfo(page, 'div[class="css-1v5elnn e11nt52q2"]', 'innerText');
-    const description = await fetchInfo(page, 'div[class="desc css-58vpdc ecgq1xb4"]', 'innerHTML');
-
-    const date = new Date();
-    let daysBack = 0;
-    const lastScraped = new Date();
-
-    if (posted.includes('h') || posted.includes('hours')) {
-        daysBack = 0;
-    } else {
-        daysBack = posted.match(/\d+/g);
-    }
-
-    date.setDate(date.getDate() - daysBack);
-
-    data.push({
-        position: position,
-        company: company,
-        location: {
-            city: location.match(/^([^,]*)/)[0],
-            state: location.match(/([^ ,]*)$/)[0],
-        },
-        posted: date,
-        url: url,
-        lastScraped: lastScraped,
-        description: description,
-    });
-    console.log(`${position} | ${company}`);
-}
+import { fetchInfo } from './scraperFunctions.js';
 
 async function main() {
+
+    async function scrapeInfo(page, posted, url, data) {
+        const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
+        await page.waitForSelector('div[class="css-16nw49e e11nt52q1"]');
+        let company;
+        try {
+            company = await page.evaluate(() => document.querySelector('div[class="css-16nw49e e11nt52q1"]').childNodes[0].nodeValue);
+        } catch (err5) {
+            company = await fetchInfo(page, 'div[class="css-16nw49e e11nt52q1"]', 'innerText');
+        }
+        const location = await fetchInfo(page, 'div[class="css-1v5elnn e11nt52q2"]', 'innerText');
+        const description = await fetchInfo(page, 'div[class="desc css-58vpdc ecgq1xb4"]', 'innerHTML');
+
+        const date = new Date();
+        const lastScraped = new Date();
+        const daysBack = (posted.includes('h') || posted.includes('hours')) ? 0 : posted.match(/\d+/g);
+
+        date.setDate(date.getDate() - daysBack);
+
+        data.push({
+            position: position,
+            company: company,
+            location: {
+                city: location.match(/^([^,]*)/)[0],
+                state: location.match(/([^ ,]*)$/)[0],
+            },
+            posted: date,
+            url: url,
+            lastScraped: lastScraped,
+            description: description,
+        });
+        log.info(`${position} | ${company}`);
+    }
 
     const browser = await puppeteer.launch({
         headless: false,
@@ -63,21 +57,21 @@ async function main() {
         // filter by internship tag
         await page.goto('https://www.glassdoor.com/Job/computer-science-intern-jobs-SRCH_KO0,23.htm');
 
-        console.log('Filtering by internships...');
+        log.trace('Filtering by internships...');
         await page.waitForSelector('div[id="filter_jobType"]');
         await page.click('div[id="filter_jobType"]');
         await page.waitForSelector('div[id="filter_jobType"]');
         await page.click('li[value="internship"]');
         await page.waitForTimeout(3000);
 
-        console.log('Selecting last 30 days');
+        log.trace('Selecting last 30 days');
         await page.waitForSelector('div[id="filter_fromAge"]');
         await page.click('div[id="filter_fromAge"]');
         await page.waitForSelector('li[value="30"]');
         await page.click('li[value="30"]');
         await page.waitForTimeout(3000);
 
-        console.log('Sorting by most recent');
+        log.trace('Sorting by most recent');
         await page.waitForSelector('div[data-test="sort-by-header"]');
         await page.click('div[data-test="sort-by-header"]');
         await page.waitForSelector('li[data-test="date_desc"]');
@@ -93,7 +87,7 @@ async function main() {
         let pageLimit = await fetchInfo(page, 'div[class="cell middle hideMob padVertSm"]', 'innerHTML');
         pageLimit = pageLimit.match(/(\d)+$/gm);
         let currentPage = 1;
-        console.log('Pages: ', pageLimit[0]);
+        log.trace('Pages: ', pageLimit[0]);
 
         try {
             while (pageLimit[0] !== currentPage) {
@@ -122,10 +116,10 @@ async function main() {
 
                 await page.click('a[data-test="pagination-next"]');
                 await page.waitForNavigation({ waitUntil: 'networkidle0' });
-                console.log('Navigating to next page...');
+                log.trace('Navigating to next page...');
             }
         } catch (err1) {
-            console.log('Reached end. Scrapping pages now...');
+            log.trace('Reached end. Scrapping pages now...');
 
         }
         let countError = 0;
@@ -148,8 +142,8 @@ async function main() {
                 }
 
                 countError++;
-                console.log(err5.message);
-                console.log('Loading error, skipping');
+                log.warn(err5.message);
+                log.trace('Loading error, skipping');
                 skippedJobs.push(urlArray[i]);
                 skippedDates.push(postedDates[i]);
 
@@ -174,21 +168,21 @@ async function main() {
             }
         }
 
-        console.log('Total Jobs scraped: ', urlArray.length);
+        log.info('Total Jobs scraped: ', urlArray.length);
 
         await fs.writeFile('./data/canonical/glassdoor.canonical.data.json',
             JSON.stringify(data, null, 4), 'utf-8',
-            err => (err ? console.log('\nData not written!', err) :
-                console.log('\nData successfully written!')));
+            err => (err ? log.warn('\nData not written!', err) :
+                log.trace('\nData successfully written!')));
 
         await browser.close();
     } catch
         (err4) {
         await fs.writeFile('./data/canonical/glassdoor.canonical.data.json',
             JSON.stringify(data, null, 4), 'utf-8',
-            err => (err ? console.log('\nData not written!', err) :
-                console.log('\nData successfully written!')));
-        console.log('Our Error:', err4.message);
+            err => (err ? log.warn('\nData not written!', err) :
+                log.warn('\nData successfully written!')));
+        log.warn('Our Error:', err4.message);
         await browser.close();
     }
 }
