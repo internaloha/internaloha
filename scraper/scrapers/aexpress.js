@@ -4,8 +4,11 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 async function getData(page) {
     const results = [];
     for (let i = 0; i < 3; i++) {
+        // position
         results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
+        // location
         results.push(fetchInfo(page, 'li[itemprop="jobLocation"]', 'innerText'));
+        // description
         results.push(fetchInfo(page, 'article[itemprop="description"]', 'innerHTML'));
     }
     return Promise.all(results);
@@ -31,7 +34,7 @@ async function main() {
 
     try {
         Logger.info('Executing script...');
-        [browser, page] = await startBrowser(false);
+        [browser, page] = await startBrowser();
 
         await page.goto('https://jobs.americanexpress.com/jobs');
 
@@ -82,5 +85,4 @@ async function main() {
         await browser.close();
     }
 }
-
 main();
