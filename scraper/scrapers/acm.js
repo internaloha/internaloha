@@ -4,11 +4,17 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 async function getData(page) {
     const results = [];
     for (let i = 0; i < 6; i++) {
+        // title
         results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
+        // company
         results.push(fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText'));
+        // description
         results.push(fetchInfo(page, 'div[itemprop="description"]', 'innerHTML'));
+        // city
         results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
+        // state
         results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
+        // zip
         results.push(fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText'));
     }
     return Promise.all(results);
