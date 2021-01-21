@@ -1,3 +1,4 @@
+import Logger from 'loglevel';
 import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 async function getData(page) {
@@ -18,9 +19,12 @@ async function main() {
     let page;
     const data = [];
 
+    // Enable console logs
+    Logger.enableAll();
+
     try {
+        Logger.info('Executing script...');
         [browser, page] = await startBrowser();
-        console.log('Executing script...');
 
         await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
 
@@ -63,7 +67,7 @@ async function main() {
                     });
                 }
             } catch (err1) {
-                console.log(err1.message);
+                Logger.error(err1.message);
             }
 
             // Returns to original search url, but next page
@@ -74,7 +78,7 @@ async function main() {
         await browser.close();
 
     } catch (err) {
-        console.log(err.message);
+        Logger.error(err.message);
         await browser.close();
     }
 }
