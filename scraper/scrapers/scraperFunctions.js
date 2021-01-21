@@ -88,4 +88,28 @@ async function writeToJSON(data, name) {
           console.log('\nData successfully written!')));
 }
 
-export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON };
+/**
+ * Converts posted strings to ISO format. This is ONLY if it follows the format of:
+ * Posted: 4 days ago... 3 weeks ago... a month ago
+ * @param posted The string
+ * @returns {number}
+ */
+function convertPostedToDate(posted) {
+  const date = new Date();
+  let daysBack = 0;
+
+  if (posted.includes('hours') || (posted.includes('hour')) || (posted.includes('minute'))
+      || (posted.includes('minutes')) || (posted.includes('moment')) || (posted.includes('second'))
+      || (posted.includes('seconds'))) {
+    daysBack = 0;
+  } else if ((posted.includes('week')) || (posted.includes('weeks'))) {
+    daysBack = posted.match(/\d+/g) * 7;
+  } else if ((posted.includes('month')) || (posted.includes('months'))) {
+    daysBack = posted.match(/\d+/g) * 30;
+  } else {
+    daysBack = posted.match(/\d+/g);
+  }
+  return date.setDate(date.getDate() - daysBack);
+}
+
+export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate };
