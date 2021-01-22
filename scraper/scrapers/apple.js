@@ -39,7 +39,6 @@ async function setSearchFilter(page) {
     await page.waitForSelector('li[id="locations-filter-input-option-0"]');
     await page.click('li[id="locations-filter-input-option-0"]');
     await delay(5000);
-
   } catch (err2) {
     Logger.debug(err2.message);
   }
