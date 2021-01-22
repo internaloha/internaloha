@@ -1,11 +1,9 @@
-/* eslint-disable no-await-in-loop */
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
 import userAgent from 'user-agents';
+import { fetchInfo } from './scraperFunctions.js';
 
 // const myArgs = process.argv.slice(2);
-
 
 (async () => {
 
@@ -64,6 +62,7 @@ import userAgent from 'user-agents';
         await page.waitForTimeout(2000);
         await page.waitForSelector('div[class="mux-search-results"]');
         await page.click('a[id="loadMoreJobs"]');
+        // eslint-disable-next-line no-console
         console.log('Nagivating to next page....');
       } catch (e2) {
         console.log('Finished loading all pages.');
