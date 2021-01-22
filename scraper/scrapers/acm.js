@@ -2,90 +2,78 @@ import Logger from 'loglevel';
 import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 async function getData(page) {
-    const results = [];
-    for (let i = 0; i < 6; i++) {
-        // title
-        results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
-        // company
-        results.push(fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText'));
-        // description
-        results.push(fetchInfo(page, 'div[itemprop="description"]', 'innerHTML'));
-        // city
-        results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
-        // state
-        results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
-        // zip
-        results.push(fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText'));
-    }
-    return Promise.all(results);
+  const results = [];
+  for (let i = 0; i < 6; i++) {
+    // title
+    results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
+    // company
+    results.push(fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText'));
+    // description
+    results.push(fetchInfo(page, 'div[itemprop="description"]', 'innerHTML'));
+    // city
+    results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
+    // state
+    results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
+    // zip
+    results.push(fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText'));
+  }
+  return Promise.all(results);
 }
 
 async function main() {
-    let browser;
-    let page;
-    const data = [];
+  let browser;
+  let page;
+  const data = [];
 
-    // Enable console logs
-    Logger.enableAll();
+  // Enable console logs
+  Logger.enableAll();
 
-    try {
-        Logger.info('Executing script...');
-        [browser, page] = await startBrowser();
-
-        await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
-
-        await page.waitForNavigation;
-
-        const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
-
-        // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
-        for (let i = 2; i <= totalPage; i++) {
-
-            // Fetching all urls in page into a list
-            const urls = await page.evaluate(() => {
-
-                const urlFromWeb = document.querySelectorAll('h3 a');
-                const urlList = [...urlFromWeb];
-                return urlList.map(url => url.href);
-            });
-
-            // Iterating through all internship positions
-            try {
-                for (let j = 0; j < urls.length; j++) {
-
-                    await page.goto(urls[j]);
-
-                    const lastScraped = new Date();
-
-                    const [position, company, description, city, state, zip] = await getData(page);
-
-                    data.push({
-                        url: urls[j],
-                        position: position,
-                        company: company.trim(),
-                        location: {
-                            city: city,
-                            state: state,
-                            zip: zip,
-                        },
-                        lastScraped: lastScraped,
-                        description: description,
-                    });
-                }
-            } catch (err1) {
-                Logger.error(err1.message);
-            }
-
-            // Returns to original search url, but next page
-            await page.goto(`https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=PostDate%20desc&page=${i}`);
+  try {
+    Logger.info('Executing script...');
+    // Starts the browser in headless mode
+    [browser, page] = await startBrowser();
+    await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
+    // Wait until page finishes loading
+    await page.waitForNavigation;
+    const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
+    // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
+    for (let i = 2; i <= totalPage; i++) {
+      // Fetching all urls in page into a list
+      const urls = await page.evaluate(() => {
+        const urlFromWeb = document.querySelectorAll('h3 a');
+        const urlList = [...urlFromWeb];
+        return urlList.map(url => url.href);
+      });
+      // Iterating through all internship positions
+      try {
+        for (let j = 0; j < urls.length; j++) {
+          await page.goto(urls[j]);
+          const lastScraped = new Date();
+          const [position, company, description, city, state, zip] = await getData(page);
+          data.push({
+            url: urls[j],
+            position: position,
+            company: company.trim(),
+            location: {
+              city: city,
+              state: state,
+              zip: zip,
+            },
+            lastScraped: lastScraped,
+            description: description,
+          });
         }
-
-        await writeToJSON(data, 'acm');
-        await browser.close();
-
-    } catch (err) {
-        Logger.error(err.message);
-        await browser.close();
+      } catch (err1) {
+        Logger.error(err1.message);
+      }
+      // Returns to original search url, but next page
+      await page.goto(`https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=PostDate%20desc&page=${i}`);
     }
+    await writeToJSON(data, 'acm');
+    await browser.close();
+  } catch (err) {
+    Logger.error(err.message);
+    await browser.close();
+  }
 }
 main();
