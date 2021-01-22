@@ -4,38 +4,37 @@ import fs from 'fs';
 import log from 'loglevel';
 import { fetchInfo } from './scraperFunctions.js';
 
-async function main() {
-
-  async function scrapeInfo(page, posted, url, data) {
-    const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
-    await page.waitForSelector('div[class="css-16nw49e e11nt52q1"]');
-    let company;
-    try {
-      company = await page.evaluate(() => document.querySelector('div[class="css-16nw49e e11nt52q1"]').childNodes[0].nodeValue);
-    } catch (err5) {
-      company = await fetchInfo(page, 'div[class="css-16nw49e e11nt52q1"]', 'innerText');
-    }
-    const location = await fetchInfo(page, 'div[class="css-1v5elnn e11nt52q2"]', 'innerText');
-    const description = await fetchInfo(page, 'div[class="desc css-58vpdc ecgq1xb4"]', 'innerHTML');
-    const date = new Date();
-    const lastScraped = new Date();
-    const daysBack = (posted.includes('h') || posted.includes('hours')) ? 0 : posted.match(/\d+/g);
-    date.setDate(date.getDate() - daysBack);
-    data.push({
-      position: position,
-      company: company,
-      location: {
-        city: location.match(/^([^,]*)/)[0],
-        state: location.match(/([^ ,]*)$/)[0],
-      },
-      posted: date,
-      url: url,
-      lastScraped: lastScraped,
-      description: description,
-    });
-    log.info(`${position} | ${company}`);
+async function scrapeInfo(page, posted, url, data) {
+  const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
+  await page.waitForSelector('div[class="css-16nw49e e11nt52q1"]');
+  let company;
+  try {
+    company = await page.evaluate(() => document.querySelector('div[class="css-16nw49e e11nt52q1"]').childNodes[0].nodeValue);
+  } catch (err5) {
+    company = await fetchInfo(page, 'div[class="css-16nw49e e11nt52q1"]', 'innerText');
   }
+  const location = await fetchInfo(page, 'div[class="css-1v5elnn e11nt52q2"]', 'innerText');
+  const description = await fetchInfo(page, 'div[class="desc css-58vpdc ecgq1xb4"]', 'innerHTML');
+  const date = new Date();
+  const lastScraped = new Date();
+  const daysBack = (posted.includes('h') || posted.includes('hours')) ? 0 : posted.match(/\d+/g);
+  date.setDate(date.getDate() - daysBack);
+  data.push({
+    position: position,
+    company: company,
+    location: {
+      city: location.match(/^([^,]*)/)[0],
+      state: location.match(/([^ ,]*)$/)[0],
+    },
+    posted: date,
+    url: url,
+    lastScraped: lastScraped,
+    description: description,
+  });
+  log.info(`${position} | ${company}`);
+}
 
+async function main() {
   const browser = await puppeteer.launch({
     headless: false,
   });
@@ -43,7 +42,6 @@ async function main() {
   await page.setViewport({
     width: 1200, height: 1000,
   });
-  // eslint-disable-next-line max-len
   await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
   const data = [];
   try {
@@ -82,7 +80,6 @@ async function main() {
         // grab all post dates
         const dates = await page.evaluate(
           () => Array.from(
-            // eslint-disable-next-line no-undef
             document.querySelectorAll('div[data-test="job-age"]'),
             a => a.innerHTML,
           ),
@@ -91,7 +88,6 @@ async function main() {
         // grab all links
         const URLs = await page.evaluate(
           () => Array.from(
-            // eslint-disable-next-line no-undef
             document.querySelectorAll('div[class="jobHeader d-flex justify-content-between align-items-start"] a'),
             a => `https://glassdoor.com${a.getAttribute('href')}`,
           ),

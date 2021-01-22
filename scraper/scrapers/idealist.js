@@ -143,9 +143,7 @@ async function getData(page, elements) {
         const lastScraped = new Date();
         // clicking read more description
         await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
-
         const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 ctyuXi"]', 'innerHTML');
-
         if (due !== '') {
           data.push({
             position: position,
@@ -188,7 +186,7 @@ async function getData(page, elements) {
   }
 }
 
-(async () => {
+async function main() {
   try {
     const browser = await puppeteer.launch({
       headless: false,
@@ -215,11 +213,10 @@ async function getData(page, elements) {
         writeData(data);
       }));
     });
-
     await browser.close();
-
   } catch (e) {
     log.warn(e);
   }
+}
 
-})();
+main();

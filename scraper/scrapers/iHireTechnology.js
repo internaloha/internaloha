@@ -3,18 +3,17 @@ import fs from 'fs';
 import log from 'loglevel';
 import { fetchInfo } from './scraperFunctions.js';
 
-// main function
-(async () => {
-  async function getLinks(page) {
-    return page.evaluate(
-      () => Array.from(
-        // eslint-disable-next-line no-undef
-        document.querySelectorAll('p.title a'),
-        a => `https://www.ihiretechnology.com${a.getAttribute('href')}`,
-      ),
-    );
-  }
+async function getLinks(page) {
+  return page.evaluate(
+    () => Array.from(
+      // eslint-disable-next-line no-undef
+      document.querySelectorAll('p.title a'),
+      a => `https://www.ihiretechnology.com${a.getAttribute('href')}`,
+    ),
+  );
+}
 
+async function main() {
   const browser = await puppeteer.launch({ devtools: true }); // Slow down by 250 ms
   const page = await browser.newPage();
   try {
@@ -165,4 +164,6 @@ import { fetchInfo } from './scraperFunctions.js';
     log.warn('Something went wrong', err.message);
     await browser.close();
   }
-})();
+}
+
+main();
