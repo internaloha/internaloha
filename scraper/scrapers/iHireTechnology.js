@@ -7,11 +7,11 @@ import { fetchInfo } from './scraperFunctions.js';
 (async () => {
   async function getLinks(page) {
     return page.evaluate(
-        () => Array.from(
-            // eslint-disable-next-line no-undef
-            document.querySelectorAll('p.title a'),
-            a => `https://www.ihiretechnology.com${a.getAttribute('href')}`,
-        ),
+      () => Array.from(
+        // eslint-disable-next-line no-undef
+        document.querySelectorAll('p.title a'),
+        a => `https://www.ihiretechnology.com${a.getAttribute('href')}`,
+      ),
     );
   }
 
@@ -62,7 +62,7 @@ import { fetchInfo } from './scraperFunctions.js';
     await page.waitForTimeout(2000);
     await page.click('ul#ExperienceLevel-aggregation-group.nav.nav-list > li:nth-child(5) > div.checkbox > label > input');
     await page.waitForTimeout(2000);
-   log.trace('Setting entry level filter..');
+    log.trace('Setting entry level filter..');
 
     // internship
     await page.click('div#search-aggregation-filter-section.well.well-sm.aggregation-container > div:nth-child(8) > label.aggregation-group > i');
@@ -146,14 +146,11 @@ import { fetchInfo } from './scraperFunctions.js';
           } catch (skip) {
             log.trace(skip.message);
           }
-
         }
       }
-
     } catch (er2) {
       log.warn('Error scraping links:', er2.message);
     }
-
     log.info(jobArray);
     log.info(jobNumber);
     // write json file

@@ -19,17 +19,17 @@ async function createDate(date, sub) {
 
 async function writeData(data) {
   await fs.writeFile('./data/canonical/idealist.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-      err => (err ? log.warn('\nData not written!', err) :
-          log.warn('\nData successfully written!')));
+    JSON.stringify(data, null, 4), 'utf-8',
+    err => (err ? log.warn('\nData not written!', err) :
+      log.warn('\nData successfully written!')));
 }
 
 async function getLinks(page) {
   return page.evaluate(
-      () => Array.from(
-          document.querySelectorAll('[data-qa-id=search-result-link]'),
-          a => a.getAttribute('href'),
-      ),
+    () => Array.from(
+      document.querySelectorAll('[data-qa-id=search-result-link]'),
+      a => a.getAttribute('href'),
+    ),
   );
 }
 
@@ -90,7 +90,6 @@ async function getData(page, elements) {
           time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 cWSRKM"]', 'innerText');
           const date = new Date();
           let daysBack = 0;
-
           // time = scraped posting- "30 days.. 2 hours ago.. etc"
           if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute')) || (time.includes('minutes'))) {
             // set to 0 because it was posted today
