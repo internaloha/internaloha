@@ -1,114 +1,91 @@
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
+import Logger from 'loglevel';
+import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
-(async () => {
-  try {
-    const data = [];
-    const browser = await puppeteer.launch({
-      headless: false,
-    });
-    const page = await browser.newPage();
-    // eslint-disable-next-line max-len
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
-
-    await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
-    await page.setViewport({
-      width: 1200,
-      height: 800,
-    });
-
-    await page.waitForNavigation;
-
-    // for loop allows for multiple iterations of search tab
-    for (let i = 2; i < 10; i++) {
-      // Fetching all urls in page into a list
-      // eslint-disable-next-line no-await-in-loop,no-loop-func
-      const urls = await page.evaluate(() => {
-        // eslint-disable-next-line no-undef
-        const urlFromWeb = document.querySelectorAll('h3 a');
-        const urlList = [...urlFromWeb];
-        return urlList.map(url => url.href);
-      });
-      // eslint-disable-next-line no-console
-      console.log(urls);
-
-      // Iterating through all internship positions
-      const urlsListLength = urls.length;
-      try {
-        for (let j = 0; j < urlsListLength; j++) {
-          // eslint-disable-next-line no-await-in-loop
-          await page.goto(urls[j]);
-
-          const lastScraped = new Date();
-
-          // eslint-disable-next-line no-await-in-loop
-          const position = await fetchInfo(page, 'h1[itemprop="title"]', 'innerText');
-          // eslint-disable-next-line no-console
-          console.log(position);
-
-          // eslint-disable-next-line no-await-in-loop
-          const company = await fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText');
-          // eslint-disable-next-line no-console
-          console.log(company);
-
-          // eslint-disable-next-line no-await-in-loop
-          const description = await fetchInfo(page, 'div[itemprop="description"]', 'innerHTML');
-          // eslint-disable-next-line no-console
-          console.log(description);
-
-          // eslint-disable-next-line no-await-in-loop
-          const city = await fetchInfo(page, 'span[itemprop="addressLocality"]','innerText');
-          // eslint-disable-next-line no-console
-          console.log(city);
-
-          // eslint-disable-next-line no-await-in-loop
-          const state = await fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText');
-          // eslint-disable-next-line no-console
-          console.log(state);
-
-          // eslint-disable-next-line no-await-in-loop
-          const zip = await fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText');
-          // eslint-disable-next-line no-console
-          console.log(zip);
-
-          data.push({
-            url: urls[j],
-            position: position,
-            company: company.trim(),
-            location: {
-              city: city,
-              state: state,
-              zip: zip,
-            },
-            lastScraped: lastScraped,
-            description: description,
-          });
-        }
-      } catch (err1) {
-        // eslint-disable-next-line no-console
-        console.log('Something went wrong with the scraping');
-        // eslint-disable-next-line no-console
-        console.log(err1.message);
-      }
-      // Returns to original search url, but next tab
-      // eslint-disable-next-line no-await-in-loop
-      await page.goto(`https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=PostDate%20desc&page=${i}`);
+async function getData(page) {
+    const results = [];
+    for (let i = 0; i < 6; i++) {
+        // title
+        results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
+        // company
+        results.push(fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText'));
+        // description
+        results.push(fetchInfo(page, 'div[itemprop="description"]', 'innerHTML'));
+        // city
+        results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
+        // state
+        results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
+        // zip
+        results.push(fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText'));
     }
+    return Promise.all(results);
+}
 
-    // eslint-disable-next-line no-console
-    console.log(data);
+async function main() {
+    let browser;
+    let page;
+    const data = [];
 
-    // write results to JSON file
-    await fs.writeFile('./data/canonical/acm.canonical.data.json',
-        JSON.stringify(data, null, 4), 'utf-8',
-        // eslint-disable-next-line no-console
-        err => (err ? console.log('\nData not written!', err) :
-            // eslint-disable-next-line no-console
-            console.log('\nData successfully written!')));
+    // Enable console logs
+    Logger.enableAll();
 
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.log(e.message);
-  }
-})();
+    try {
+        Logger.info('Executing script...');
+        [browser, page] = await startBrowser();
+
+        await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
+
+        await page.waitForNavigation;
+
+        const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
+
+        // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
+        for (let i = 2; i <= totalPage; i++) {
+
+            // Fetching all urls in page into a list
+            const urls = await page.evaluate(() => {
+
+                const urlFromWeb = document.querySelectorAll('h3 a');
+                const urlList = [...urlFromWeb];
+                return urlList.map(url => url.href);
+            });
+
+            // Iterating through all internship positions
+            try {
+                for (let j = 0; j < urls.length; j++) {
+
+                    await page.goto(urls[j]);
+
+                    const lastScraped = new Date();
+
+                    const [position, company, description, city, state, zip] = await getData(page);
+
+                    data.push({
+                        url: urls[j],
+                        position: position,
+                        company: company.trim(),
+                        location: {
+                            city: city,
+                            state: state,
+                            zip: zip,
+                        },
+                        lastScraped: lastScraped,
+                        description: description,
+                    });
+                }
+            } catch (err1) {
+                Logger.error(err1.message);
+            }
+
+            // Returns to original search url, but next page
+            await page.goto(`https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=PostDate%20desc&page=${i}`);
+        }
+
+        await writeToJSON(data, 'acm');
+        await browser.close();
+
+    } catch (err) {
+        Logger.error(err.message);
+        await browser.close();
+    }
+}
+main();
