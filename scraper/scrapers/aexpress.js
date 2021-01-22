@@ -4,21 +4,18 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 async function getData(page) {
   const results = [];
   for (let i = 0; i < 3; i++) {
-    // position
+    // Get position, location, and description
     results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
-    // location
     results.push(fetchInfo(page, 'li[itemprop="jobLocation"]', 'innerText'));
-    // description
     results.push(fetchInfo(page, 'article[itemprop="description"]', 'innerHTML'));
   }
   return Promise.all(results);
 }
 
 async function setSearchFilters(page) {
-  // Navigated to internship page
+  // Navigate to internship page
   await page.waitForSelector('input[id="keyword-search"]');
   await page.type('input[id="keyword-search"]', 'internship');
-  // Set filter to United Stats
   await page.waitForSelector('input[id="location-search"]');
   await page.type('input[id="location-search"]', 'United States');
   await page.click('button[id="search-btn"]');
@@ -28,19 +25,18 @@ async function main() {
   let browser;
   let page;
   const data = [];
-  // Enable console logs
-  Logger.enableAll();
+  Logger.enableAll(); // Enable console logs, will replace with CLI control later.
   try {
     Logger.info('Executing script...');
-    // Starts the browser in headless mode
     [browser, page] = await startBrowser();
     await page.goto('https://jobs.americanexpress.com/jobs');
     await setSearchFilters(page);
     await page.waitForSelector('mat-panel-title > p > a');
     const urls = await page.evaluate(() => Array.from(
-      document.querySelectorAll('mat-panel-title > p > a'),
-      a => a.href,
+        document.querySelectorAll('mat-panel-title > p > a'),
+        a => a.href,
     ));
+
     for (let i = 0; i < urls.length; i++) {
       try {
         await page.goto(urls[i]);
@@ -56,11 +52,7 @@ async function main() {
           contact: contact,
           url: urls[i],
           lastScraped: lastScraped,
-          location: {
-            city: city,
-            state: state,
-            country: location.trim(),
-          },
+          location: { city: city, state: state, country: location.trim() },
           description: description,
         });
       } catch (err2) {

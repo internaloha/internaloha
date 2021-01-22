@@ -4,17 +4,12 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 async function getData(page) {
   const results = [];
   for (let i = 0; i < 6; i++) {
-    // title
+    // get title, company, description, city, state, and zip
     results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
-    // company
     results.push(fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText'));
-    // description
     results.push(fetchInfo(page, 'div[itemprop="description"]', 'innerHTML'));
-    // city
     results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
-    // state
     results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
-    // zip
     results.push(fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText'));
   }
   return Promise.all(results);
@@ -24,16 +19,11 @@ async function main() {
   let browser;
   let page;
   const data = [];
-
-  // Enable console logs
-  Logger.enableAll();
-
+  Logger.enableAll(); // this enables console logging. Will replace with CLI args later.
   try {
     Logger.info('Executing script...');
-    // Starts the browser in headless mode
     [browser, page] = await startBrowser();
     await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
-    // Wait until page finishes loading
     await page.waitForNavigation;
     const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
     // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
@@ -44,7 +34,7 @@ async function main() {
         const urlList = [...urlFromWeb];
         return urlList.map(url => url.href);
       });
-      // Iterating through all internship positions
+      // Iterate through all internship positions
       try {
         for (let j = 0; j < urls.length; j++) {
           await page.goto(urls[j]);
@@ -54,11 +44,7 @@ async function main() {
             url: urls[j],
             position: position,
             company: company.trim(),
-            location: {
-              city: city,
-              state: state,
-              zip: zip,
-            },
+            location: { city: city, state: state, zip: zip },
             lastScraped: lastScraped,
             description: description,
           });
@@ -66,7 +52,7 @@ async function main() {
       } catch (err1) {
         Logger.error(err1.message);
       }
-      // Returns to original search url, but next page
+      // Return to original search url, but next page
       await page.goto(`https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=PostDate%20desc&page=${i}`);
     }
     await writeToJSON(data, 'acm');
@@ -76,4 +62,5 @@ async function main() {
     await browser.close();
   }
 }
+
 main();
