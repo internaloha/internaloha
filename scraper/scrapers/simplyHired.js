@@ -3,8 +3,7 @@ import fs from 'fs';
 import { fetchInfo } from './scraperFunctions.js';
 
 const myArgs = process.argv.slice(2);
-
-(async () => {
+async function main() {
   try {
 
     const browser = await puppeteer.launch({
@@ -260,5 +259,6 @@ const myArgs = process.argv.slice(2);
   } catch (e) {
     console.log('Our Error: ', e.message);
   }
+}
 
-})();
+main();
