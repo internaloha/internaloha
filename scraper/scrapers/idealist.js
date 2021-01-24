@@ -43,11 +43,11 @@ async function getElements(page) {
         elements.push(links);
       });
       await page.waitForTimeout(1000);
-      await page.$('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child').click();
+      await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
       log.warn(e.message);
       hasNext = false;
-      log.trace('\nReached the end of pages!');
+      log.trace('Reached the end of pages!');
     }
   }
   return elements;
@@ -113,7 +113,6 @@ async function getData(page, elements) {
           // try to click the element. If it doesn't exist, we know there's no start date
           await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
           start = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
-
           const newDate = start.match(/\b(\w*Start Date\w*)\b ([0-9]){1,2}, ([0-9]){4}/g);
           if (newDate != null) {
             start = await createDate(newDate.toString(), 13);
@@ -192,21 +191,18 @@ async function main() {
       headless: false,
     });
     const page = await browser.newPage();
+    log.enableAll(); // this enables console logging
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
-
     await page.goto('https://www.idealist.org/en/');
     await page.waitForSelector('#layout-root > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.lnKqQM > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.dCQmbn.BaseLayout__PageContent-sc-10xtgtb-2.heQjSt > div.Box__BaseBox-sc-1wooqli-0.bsSECh > div > div.Box__BaseBox-sc-1wooqli-0.hpEILX > div.Box__BaseBox-sc-1wooqli-0.datyjK > div > div > div.idlst-flx.idlst-lgncntr.Box__BaseBox-sc-1wooqli-0.cDmdoN > div > form > div.Box__BaseBox-sc-1wooqli-0.ejycyy > div > input');
-
     // Selecting internships
     await page.click('div[class="css-bg1rzq-control react-select__control"]');
     await page.click('div[id="react-select-2-option-2"]');
-
     // inputting search query
     await page.type('input[data-qa-id="search-input"]', searchQuery);
     await page.waitForSelector('button[data-qa-id="search-button"]');
     await page.click('button[data-qa-id="search-button"]');
     await page.waitForSelector('#results > div > div > div.Box__BaseBox-sc-1wooqli-0.iuHlOF > div:nth-child(2) > div > a');
-
     await getElements(page).then((elements) => {
       getData(page, elements).then((data => {
         log.info(data);

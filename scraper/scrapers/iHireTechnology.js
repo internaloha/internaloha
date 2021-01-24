@@ -16,6 +16,7 @@ async function getLinks(page) {
 async function main() {
   const browser = await puppeteer.launch({ devtools: true }); // Slow down by 250 ms
   const page = await browser.newPage();
+  log.enableAll(); // this enables console logging
   try {
     // sign in process
     await page.goto('https://www.ihiretechnology.com/jobseeker/account/password');
@@ -24,19 +25,15 @@ async function main() {
     await page.waitForSelector('input[id=Password]');
     await page.type('input[id=Password]', 'Bball2424~');
     await page.click('button.btn.btn-success.btn-lg');
-
     // click search page
     await page.waitForSelector('li.text-center.nav-list-item-1 a');
     await page.click('ul.nav.navbar-nav li:nth-child(4)');
     await page.waitForTimeout(2000);
-
     await page.waitForTimeout(5000);
-
     // type technology
     await page.waitForSelector('input[class=form-control]');
     await page.type('input[class=form-control]', 'technology');
     await page.waitForTimeout(3000);
-
     // focus on location field- type nothing
     await page.focus('#location');
     await page.keyboard.down('Control');
@@ -44,31 +41,26 @@ async function main() {
     await page.keyboard.up('Control');
     await page.keyboard.press('Backspace');
     await page.type('#location', ' ');
-
     // click find jobs button
     await page.click('button.btn.btn-primary.loading-indicator.radius-fix');
     await page.waitForTimeout(3000);
-
     // click checkboxes filters
     // past 30 days
     await page.waitForSelector('ul#AddedDate-aggregation-group.nav.nav-list > li:nth-child(5) > div.checkbox > label > input');
     await page.click('ul#AddedDate-aggregation-group.nav.nav-list > li:nth-child(5) > div.checkbox > label > input');
     await page.waitForTimeout(2000);
     log.trace('Set for last 30 days...');
-
     // entry level
     await page.click('div#search-aggregation-filter-section.well.well-sm.aggregation-container > div:nth-child(5) > label.aggregation-group > i');
     await page.waitForTimeout(2000);
     await page.click('ul#ExperienceLevel-aggregation-group.nav.nav-list > li:nth-child(5) > div.checkbox > label > input');
     await page.waitForTimeout(2000);
     log.trace('Setting entry level filter..');
-
     // internship
     await page.click('div#search-aggregation-filter-section.well.well-sm.aggregation-container > div:nth-child(8) > label.aggregation-group > i');
     await page.waitForTimeout(2000);
     await page.click('ul#EmploymentType-aggregation-group.nav.nav-list > li:nth-child(6) > div.checkbox > label > input');
     log.trace('Setting as internship tag...');
-
     // variables
     const jobArray = [];
     const links = [];
@@ -83,7 +75,6 @@ async function main() {
           links.push(pageLinks);
         }));
         await page.waitForTimeout(3000);
-
         if (index !== lastPageNum - 1) {
           await page.click('ul.list-inline.horizontal > li:nth-child(3) > a:nth-child(1)');
         } else {
@@ -94,17 +85,14 @@ async function main() {
     } catch (e) {
       log.warn('Error with getting links: ', e.message);
     }
-
     try {
       // go through each link and fetch info
       for (let i = 0; i < links.length; i++) {
         for (let j = 0; j < links[i].length; j++) {
-
           try {
             await page.goto(links[i][j]);
             jobNumber++;
             await page.waitForSelector('div.jobdescription');
-
             // scrape info off each website
             // use natural parser to scrape qualifications and other info
             const position = await fetchInfo(page, 'h3[class=text-blue]', 'innerText');
@@ -157,7 +145,6 @@ async function main() {
       if (err) throw err;
       log.trace('Your info has been written into JSON file');
     });
-
     await browser.close();
     log.trace('Process Completed');
   } catch (err) {

@@ -7,14 +7,13 @@ async function main() {
   const browser = await puppeteer.launch({
     headless: false,
   });
+  log.enableAll(); // Enables all console logging tags
   const data = [];
   try {
     const page = await browser.newPage();
     // time out after 10 seconds
     await page.setDefaultNavigationTimeout(10000);
-    await page.setViewport({
-      width: 1100, height: 900,
-    });
+    await page.setViewport({ width: 1200, height: 1000 });
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.indeed.com/');
     await page.waitForSelector('input[id="text-input-what"]');
@@ -52,7 +51,6 @@ async function main() {
     } catch (err3) {
       log.warn('Our Error: No sorting by date posted.');
     }
-
     let internshipDropdown = [];
     try {
       await page.waitForSelector('ul[id="filter-job-type-menu"] li a[href*="internship"]');
@@ -67,20 +65,16 @@ async function main() {
     } catch (err4) {
       log.warn('No filter link');
     }
-
     if (internshipDropdown.length === 1) {
       await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
       log.trace('Filtering by internship tag...');
     } else {
       log.warn('No internship tag.');
     }
-
     const skippedLinks = [];
     let totalJobs = 0;
     const urls = [];
-
     let hasNext = true;
-
     // while there a next page, keep clicking
     while (hasNext === true) {
       // getting all job link for that page
@@ -92,10 +86,8 @@ async function main() {
           a => a.getAttribute('href'),
         ),
       );
-
       totalJobs += url.length;
       urls.push(url);
-
       // keep clicking next until it reaches end
       try {
         await page.waitForTimeout(1000);
@@ -105,12 +97,9 @@ async function main() {
         hasNext = false;
       }
     }
-
     log.info('Total pages:', urls.length);
     log.info('Total jobs: ', totalJobs);
-
     log.info(urls);
-
     // go through urls array to fetch info
     for (let i = 0; i < urls.length; i++) {
       for (let j = 0; j < urls[i].length; j++) {
@@ -136,14 +125,11 @@ async function main() {
             location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child', 'innerText');
           }
           let posted = await fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText');
-
           const description = await fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML');
           const lastScraped = new Date();
           const skills = 'N/A';
-
           const todayDate = new Date();
           let daysBack = 0;
-
           if (posted.includes('hours') || (posted.includes('hour')) || (posted.includes('minute'))
             || (posted.includes('minutes'))) {
             daysBack = 0;
@@ -187,7 +173,6 @@ async function main() {
         }
       }
     }
-
     // write results to JSON file
     await fs.writeFile('./data/canonical/indeed.canonical.data.json',
       JSON.stringify(data, null, 4), 'utf-8',
