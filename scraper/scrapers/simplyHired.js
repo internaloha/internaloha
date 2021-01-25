@@ -1,3 +1,4 @@
+import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import { fetchInfo } from './scraperFunctions.js';
@@ -5,32 +6,22 @@ import { fetchInfo } from './scraperFunctions.js';
 const myArgs = process.argv.slice(2);
 async function main() {
   try {
-
     const browser = await puppeteer.launch({
       headless: false,
     });
-
     const page = await browser.newPage();
-
-    // eslint-disable-next-line max-len
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
-
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
-
     const searchQuery = myArgs.join(' ');
-
     await page.$eval('input[name=l]', (el) => {
       // eslint-disable-next-line no-param-reassign
       el.value = '';
     }, {});
     await page.type('input[name=q]', searchQuery);
     await page.click('button[type="submit"]');
-
-    console.log(`Inputted search query: ${searchQuery}`);
-
+    Logger.info(`Inputted search query: ${searchQuery}`);
     await page.waitForSelector('div[data-id=JobType]');
-
     // Getting href link for internship filter
     const internshipDropdown = await page.evaluate(
         () => Array.from(
@@ -46,13 +37,10 @@ async function main() {
 
     // check to see if internship tag exists
     if (internshipDropdown.length > 0) {
-
       const url = `https://www.simplyhired.com/${internshipDropdown[0]}`;
-      console.log(`Directing to: ${url}`);
+      Logger.info(`Directing to: ${url}`);
       await page.goto(url);
-
       await page.waitForSelector('div[data-id=JobType]');
-
       // Setting filter as last '7 days'
       const lastPosted = await page.evaluate(
           () => Array.from(
@@ -60,36 +48,25 @@ async function main() {
               a => a.getAttribute('href'),
           ),
       );
-
       const lastPostedURL = `https://www.simplyhired.com/${lastPosted[0]}`;
-      console.log('Setting Date Relevance: 7 days');
+      Logger.info('Setting Date Relevance: 7 days');
       await page.goto(lastPostedURL);
-
       await page.waitForTimeout(1000);
       await page.click('a[class=SortToggle]');
-      console.log('Filtering by: Most recent');
-
+      Logger.info('Filtering by: Most recent');
       let hasNext = true;
-
       while (hasNext === true) {
-
         try {
-
           await page.waitForSelector('.SerpJob-jobCard.card');
           const elements = await page.$$('.SerpJob-jobCard.card');
-
-          console.log('\n\nTotal results: ', elements.length);
-
+          Logger.info('\n\nTotal results: ', elements.length);
           try {
             // Test to see which UI loads
             await page.evaluate(() => document.querySelector('.rpContent.ViewJob.ViewJob-redesign.ViewJob-v3').innerHTML);
-
-            console.log('Loaded up with new UI... \n');
-
+            Logger.info('Loaded up with new UI... \n');
             await page.waitForSelector('.RightPane');
             await page.waitForSelector('h2.viewjob-jobTitle');
             await page.waitForSelector('.viewjob-labelWithIcon');
-
             for (let i = 1; i <= elements.length; i++) {
               const date = new Date();
               let daysBack = 0;
@@ -101,23 +78,20 @@ async function main() {
               const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
               const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
               const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
-
               let qualifications = '';
               try {
                 qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
               } catch (err6) {
-                console.log('Does not have qualifications section. Assigning it as N/A');
+                Logger.trace('Does not have qualifications section. Assigning it as N/A');
                 qualifications = 'N/A';
               }
-
               const description = await fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
               let posted = '';
-
               try {
                 posted = await fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
               } catch (err2) {
                 posted = 'N/A';
-                console.log('No date found. Setting posted as: N/A');
+                Logger.trace('No date found. Setting posted as: N/A');
               }
 
               if (posted.includes('hours') || posted.includes('hour')) {
@@ -133,10 +107,9 @@ async function main() {
                 const pageURL = await elementLink.$('.card-link');
                 savedURL = await page.evaluate(span => span.getAttribute('href'), pageURL);
               } catch (err6) {
-                console.log('Error in fetching link for:', position);
+                Logger.trace('Error in fetching link for:', position);
               }
-
-              console.log(position);
+              Logger.info(position);
               data.push({
                 position: position,
                 company: company,
@@ -156,14 +129,10 @@ async function main() {
                 await element.click();
               }
             }
-
           } catch (e) {
-            console.log('--- Loaded up old UI. Trying to scrape with old UI layout ---');
-
+            Logger.debug('--- Loaded up old UI. Trying to scrape with old UI layout ---');
             try {
-
               await page.waitForTimeout(1000);
-
               const allJobLinks = await page.evaluate(
                   () => Array.from(
                       // eslint-disable-next-line no-undef
@@ -184,27 +153,21 @@ async function main() {
                 const company = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
                 const location = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
                 const description = await fetchInfo(page, 'div[class="viewjob-jobDescription"]', 'innerHTML');
-
                 let posted = '';
                 try {
                   // posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').innerHTML);
                   posted = await fetchInfo(page, 'span[class="viewjob-labelWithIcon viewjob-age"]', 'innerText');
-
                 } catch (err4) {
                   posted = 'N/A';
-                  console.log('No date found. Setting posted as: N/A');
+                  Logger.trace('No date found. Setting posted as: N/A');
                 }
-
                 if (posted.includes('hours') || posted.includes('hour')) {
                   daysBack = 0;
                 } else {
                   daysBack = posted.match(/\d+/g);
                 }
-
                 date.setDate(date.getDate() - daysBack);
-
-                console.log(position);
-
+                Logger.info(position);
                 data.push({
                   position: position,
                   company: company,
@@ -218,46 +181,41 @@ async function main() {
                   description: description,
                 });
                 totalJobs++;
-
                 if (i < elements.length) {
                   await element.click();
                 }
               }
-
             } catch (err) {
-              console.log('InternBit Error: ', err.message);
+              Logger.trace('InternBit Error: ', err.message);
             }
           }
-
           const nextPage = await page.$('a[class="Pagination-link next-pagination"]');
           await nextPage.click();
           totalPages++;
-
         } catch (err5) {
-          console.log(err5.message);
+          Logger.trace(err5.message);
           hasNext = false;
-          console.log('\nReached the end of pages!');
+          Logger.debug('\nReached the end of pages!');
         }
-
       }
 
       // write results to JSON file
       fs.writeFile('./data/canonical/simplyHired.canonical.data.json',
           JSON.stringify(data, null, 4), 'utf-8',
-          err => (err ? console.log('\nData not written!', err) :
-              console.log('\nData successfully written!')));
+          err => (err ? Logger.trace('\nData not written!', err) :
+              Logger.debug('\nData successfully written!')));
 
     } else {
-      console.log(`There are no internships with the search query: ${searchQuery}`);
+      Logger.debug(`There are no internships with the search query: ${searchQuery}`);
     }
 
     await browser.close();
-    console.log('\nTotal Jobs Scraped:', totalJobs);
-    console.log('Total Pages:', totalPages);
-    console.log('\nClosing browser...');
+    Logger.debug('\nTotal Jobs Scraped:', totalJobs);
+    Logger.debug('Total Pages:', totalPages);
+    Logger.debug('\nClosing browser...');
 
   } catch (e) {
-    console.log('Our Error: ', e.message);
+    Logger.trace('Our Error: ', e.message);
   }
 }
 

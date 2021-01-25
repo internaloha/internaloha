@@ -1,3 +1,4 @@
+import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import { fetchInfo, autoScroll } from './scraperFunctions.js';
@@ -12,7 +13,7 @@ async function main() {
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
     await page.waitForSelector('section.results__list');
-    console.log('Fetching jobs...');
+    Logger.info('Fetching jobs...');
     await autoScroll(page);
     let loadMore = true;
     let loadCount = 0;
@@ -25,7 +26,7 @@ async function main() {
           loadCount++;
       } catch (e2) {
           loadMore = false;
-          console.log('Finished loading...');
+          Logger.debug('Finished loading...');
       }
     }
     const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
@@ -45,7 +46,7 @@ async function main() {
       ),
     );
 
-    console.log('Total Listings:', elements.length);
+    Logger.info('Total Listings:', elements.length);
     const skippedURLs = [];
     for (let i = 0; i < elements.length; i++) {
       const element = elements[i];
@@ -88,17 +89,17 @@ async function main() {
           lastScraped: lastScraped,
           description: description,
         });
-        console.log(position);
+        Logger.info(position);
         totalInternships++;
       } catch (err5) {
-        console.log(err5.message);
-        console.log('Skipping! Did not load...');
+        Logger.trace(err5.message);
+        Logger.trace('Skipping! Did not load...');
         skippedURLs.push(urls[i]);
       }
       await element.click();
     }
 
-    console.log('--- Going back to scrape the ones previously skipped ---');
+    Logger.info('--- Going back to scrape the ones previously skipped ---');
     // scraping the ones we skipped
     for (let i = 0; i < skippedURLs.length; i++) {
       await page.goto(skippedURLs[i]);
@@ -141,21 +142,21 @@ async function main() {
         lastScraped: lastScraped,
         description: description,
       });
-      console.log(position);
+      Logger.info(position);
       totalInternships++;
     }
-    console.log('Total internships scraped:', totalInternships);
-    console.log('Closing browser!');
+    Logger.info('Total internships scraped:', totalInternships);
+    Logger.info('Closing browser!');
     await browser.close();
   } catch (e) {
-    console.log('Our Error:', e.message);
+    Logger.debug('Our Error:', e.message);
     await browser.close();
   }
 
   // write results to JSON file
   await fs.writeFile('./data/canonical/linkedin.canonical.data.json',
-    JSON.stringify(data, null, 4), 'utf-8', err => (err ? console.log('\nData not written!', err) :
-      console.log('\nData successfully written!')));
+    JSON.stringify(data, null, 4), 'utf-8', err => (err ? Logger.trace('\nData not written!', err) :
+      Logger.debug('\nData successfully written!')));
 }
 
 main();

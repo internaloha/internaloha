@@ -1,3 +1,4 @@
+import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import userAgent from 'user-agents';
@@ -23,9 +24,9 @@ async function main() {
         await page.waitForTimeout(2000);
         await page.waitForSelector('div[class="mux-search-results"]');
         await page.click('a[id="loadMoreJobs"]');
-        console.log('Nagivating to next page....');
+        Logger.info('Nagivating to next page....');
       } catch (e2) {
-        console.log('Finished loading all pages.');
+        Logger.debug('Finished loading all pages.');
         nextPage = false;
       }
     }
@@ -95,23 +96,23 @@ async function main() {
         await page.waitForSelector('div[id="JobPreview"]');
         totalJobs++;
       } catch (err) {
-        console.log('Error fetching link, skipping');
+        Logger.debug('Error fetching link, skipping');
       }
     }
 
     // write results to JSON file
     await fs.writeFile('./data/canonical/monster.canonical.data.json',
       JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? console.log('\nData not written!', err) :
-          console.log('\nData successfully written!')));
-    await console.log('Total internships scraped:', totalJobs);
+        err => (err ? Logger.trace('\nData not written!', err) :
+          Logger.debug('\nData successfully written!')));
+    await Logger.debug('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
-    console.log('Our Error:', e.message);
+    Logger.debug('Our Error:', e.message);
     await fs.writeFile('./data/canonical/monster.canonical.data.json',
       JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? console.log('\nData not written!', err) :
-          console.log('\nData successfully written!')));
+        err => (err ? Logger.trace('\nData not written!', err) :
+          Logger.debug('\nData successfully written!')));
     await browser.close();
   }
 }
