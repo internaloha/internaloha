@@ -2,71 +2,54 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import moment from 'moment';
+import log from 'loglevel';
 import { fetchInfo } from './scraperFunctions.js';
 
 const searchQuery = process.argv.slice(2).join(' ');
 
 async function createDate(date, sub) {
-  let newestDate = new Date();
   let newDate = date.substring(sub);
-  console.log(`newDate 2 ${newDate}`);
+  log.info(`newDate 2 ${newDate}`);
   newDate = newDate.replace(/,/g, '');
-  console.log(`newDate 3 ${newDate}`);
-  console.log(moment(newDate, 'LL'));
+  log.info(`newDate 3 ${newDate}`);
+  log.info(moment(newDate, 'LL'));
   const momentDate = moment(newDate, 'LL');
-  newestDate = momentDate.toDate();
-  return newestDate;
+  return momentDate.toDate();
 }
 
 async function writeData(data) {
   await fs.writeFile('./data/canonical/idealist.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-      // eslint-disable-next-line no-console
-      err => (err ? console.log('\nData not written!', err) :
-          // eslint-disable-next-line no-console
-          console.log('\nData successfully written!')));
+    JSON.stringify(data, null, 4), 'utf-8',
+    err => (err ? log.warn('\nData not written!', err) :
+      log.warn('\nData successfully written!')));
 }
 
 async function getLinks(page) {
-  const links = await page.evaluate(
-      () => Array.from(
-          // eslint-disable-next-line no-undef
-          document.querySelectorAll('[data-qa-id=search-result-link]'),
-          a => a.getAttribute('href'),
-      ),
+  return page.evaluate(
+    () => Array.from(
+      document.querySelectorAll('[data-qa-id=search-result-link]'),
+      a => a.getAttribute('href'),
+    ),
   );
-  return links;
 }
 
 async function getElements(page) {
   let hasNext = true;
   const elements = [];
-  // eslint-disable-next-line eqeqeq
-  while (hasNext == true) {
+  while (hasNext === true) {
     try {
-      // eslint-disable-next-line no-await-in-loop
       await page.waitForTimeout(1000);
       getLinks(page).then(links => {
         elements.push(links);
       });
       await page.waitForTimeout(1000);
-      // eslint-disable-next-line max-len,no-await-in-loop
-      const nextPage = await page.$('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
-      // eslint-disable-next-line no-await-in-loop
-      await nextPage.click();
-      // console.log(elements);
+      await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
-      // eslint-disable-next-line no-console
-      console.log(e.message);
-      // eslint-disable-next-line no-console
-      // console.log(elements);
+      log.warn(e.message);
       hasNext = false;
-      // eslint-disable-next-line no-console
-      console.log('\nReached the end of pages!');
+      log.trace('Reached the end of pages!');
     }
   }
-  // eslint-disable-next-line no-console
-  // console.log(elements);
   return elements;
 }
 
@@ -77,50 +60,37 @@ async function getData(page, elements) {
     for (let i = 0; i < elements.length; i++) {
       for (let j = 0; j < elements[i].length; j++) {
         const element = `https://www.idealist.org${elements[i][j]}`;
-        // eslint-disable-next-line no-console
-        console.log(element);
-        // eslint-disable-next-line no-await-in-loop
+        log.info(element);
         await page.goto(element, { waitUntil: 'domcontentloaded' });
-        // eslint-disable-next-line no-await-in-loop
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
         let company = '';
         try {
-          // eslint-disable-next-line no-await-in-loop
           company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
         } catch (e) {
-          // eslint-disable-next-line no-console
-          console.log('No company found. Setting to N/A');
+          log.info('No company found. Setting to N/A');
           company = 'N/A';
         }
         let location = '';
         let locationArray = {};
         try {
-          // eslint-disable-next-line no-await-in-loop
           location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"]', 'innerText');
           location = location.match(/\|\D+[^Share]/gm);
           let loc = location[0].split('| ');
           loc = loc[1].split(', ');
-          // console.log(loc)
           const city = loc[0].trim();
           const state = loc[1].trim();
-          // console.log(`city, state: ${city}, ${state}`);
           locationArray = { city: city, state: state };
-          // console.log(city);
         } catch (e) {
-          console.log(e.message);
-          console.log('No location found');
+          log.warn(e.message);
+          log.warn('No location found');
           location = 'N/A';
         }
         let time = '';
         try {
-          // eslint-disable-next-line max-len,no-await-in-loop
           time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 cWSRKM"]', 'innerText');
-          // create a new Date (shows current time)
           const date = new Date();
           let daysBack = 0;
-          // ty Jenny for the conversion code
           // time = scraped posting- "30 days.. 2 hours ago.. etc"
-          // eslint-disable-next-line max-len
           if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute')) || (time.includes('minutes'))) {
             // set to 0 because it was posted today
             daysBack = 0;
@@ -135,8 +105,7 @@ async function getData(page, elements) {
           date.setDate(date.getDate() - daysBack);
           time = date;
         } catch (e) {
-          // eslint-disable-next-line no-console
-          console.log('No startDate found. Setting to N/A');
+          log.warn('No startDate found. Setting to N/A');
           time = 'N/A';
         }
         let start = '';
@@ -144,17 +113,14 @@ async function getData(page, elements) {
           // try to click the element. If it doesn't exist, we know there's no start date
           await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
           start = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
-          // eslint-disable-next-line no-useless-escape
-          const newDate = start.match(/\b(\w*Start Date\w*)\b ([0-9]){1,2}\, ([0-9]){4}/g);
+          const newDate = start.match(/\b(\w*Start Date\w*)\b ([0-9]){1,2}, ([0-9]){4}/g);
           if (newDate != null) {
-            // eslint-disable-next-line no-await-in-loop
-            const newStart = await createDate(newDate.toString(), 13);
-            start = newStart;
+            start = await createDate(newDate.toString(), 13);
           } else {
             start = '';
           }
         } catch (e) {
-          console.log('No startDate found. Setting to N/A');
+          log.info('No startDate found. Setting to N/A');
           start = '';
         }
         let due = '';
@@ -162,27 +128,21 @@ async function getData(page, elements) {
           // try to click the element. If it doesn't exist, we know there's no due date
           await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
           due = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
-          // eslint-disable-next-line no-useless-escape
-          const newDate = due.match(/\b(\w*Deadline\w*)\b ([0-9]){1,2}\, ([0-9]){4}/g);
-          console.log(newDate);
+          const newDate = due.match(/\b(\w*Deadline\w*)\b ([0-9]){1,2}, ([0-9]){4}/g);
+          log.info(newDate);
           if (newDate != null) {
-            // eslint-disable-next-line no-await-in-loop
-            const newDue = await createDate(newDate.toString(), 8);
-            due = newDue;
+            due = await createDate(newDate.toString(), 8);
           } else {
             due = '';
           }
         } catch (e) {
-          console.log('No dueDate found. Setting to N/A');
+          log.info('No dueDate found. Setting to N/A');
           due = '';
         }
-        // eslint-disable-next-line no-await-in-loop,max-len
         const lastScraped = new Date();
         // clicking read more description
         await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
-
         const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 ctyuXi"]', 'innerHTML');
-        // eslint-disable-next-line no-console
         if (due !== '') {
           data.push({
             position: position,
@@ -221,48 +181,38 @@ async function getData(page, elements) {
     }
     return data;
   } catch (e) {
-    // eslint-disable-next-line no-console
-    console.log(e.message);
+    log.warn(e.message);
   }
 }
 
-(async () => {
+async function main() {
   try {
     const browser = await puppeteer.launch({
       headless: false,
     });
     const page = await browser.newPage();
-    // eslint-disable-next-line max-len
+    log.enableAll(); // this enables console logging
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
-
     await page.goto('https://www.idealist.org/en/');
-    // eslint-disable-next-line max-len
     await page.waitForSelector('#layout-root > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.lnKqQM > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.dCQmbn.BaseLayout__PageContent-sc-10xtgtb-2.heQjSt > div.Box__BaseBox-sc-1wooqli-0.bsSECh > div > div.Box__BaseBox-sc-1wooqli-0.hpEILX > div.Box__BaseBox-sc-1wooqli-0.datyjK > div > div > div.idlst-flx.idlst-lgncntr.Box__BaseBox-sc-1wooqli-0.cDmdoN > div > form > div.Box__BaseBox-sc-1wooqli-0.ejycyy > div > input');
-
     // Selecting internships
     await page.click('div[class="css-bg1rzq-control react-select__control"]');
     await page.click('div[id="react-select-2-option-2"]');
-
     // inputting search query
     await page.type('input[data-qa-id="search-input"]', searchQuery);
     await page.waitForSelector('button[data-qa-id="search-button"]');
     await page.click('button[data-qa-id="search-button"]');
-    // eslint-disable-next-line max-len
     await page.waitForSelector('#results > div > div > div.Box__BaseBox-sc-1wooqli-0.iuHlOF > div:nth-child(2) > div > a');
-
     await getElements(page).then((elements) => {
       getData(page, elements).then((data => {
-        // eslint-disable-next-line no-console
-        console.log(data);
+        log.info(data);
         writeData(data);
       }));
     });
-
     await browser.close();
-
   } catch (e) {
-    // eslint-disable-next-line no-console
-    console.log(e);
+    log.warn(e);
   }
+}
 
-})();
+main();
