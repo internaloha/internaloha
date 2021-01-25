@@ -1,4 +1,3 @@
-/* eslint-disable max-len,no-await-in-loop,no-console */
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import { fetchInfo, autoScroll } from './scraperFunctions.js';
