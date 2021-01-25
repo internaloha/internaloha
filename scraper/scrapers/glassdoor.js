@@ -1,8 +1,5 @@
-/* eslint-disable no-await-in-loop */
-import puppeteer from 'puppeteer';
-import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 async function scrapeInfo(page, posted, url, data) {
   const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
@@ -35,15 +32,12 @@ async function scrapeInfo(page, posted, url, data) {
 }
 
 async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1200, height: 1000 });
-  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+  let browser;
+  let page;
   const data = [];
   log.enableAll(); // this enables console logging
   try {
+    [browser, page] = await startBrowser();
     // filter by internship tag
     await page.goto('https://www.glassdoor.com/Job/computer-science-intern-jobs-SRCH_KO0,23.htm');
     log.trace('Filtering by internships...');
@@ -138,17 +132,10 @@ async function main() {
       }
     }
     log.info('Total Jobs scraped: ', urlArray.length);
-    await fs.writeFile('./data/canonical/glassdoor.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-      err => (err ? log.warn('\nData not written!', err) :
-        log.trace('\nData successfully written!')));
+    await writeToJSON(data, 'glassdoor');
     await browser.close();
   } catch
     (err4) {
-    await fs.writeFile('./data/canonical/glassdoor.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-      err => (err ? log.warn('\nData not written!', err) :
-        log.warn('\nData successfully written!')));
     log.warn('Our Error:', err4.message);
     await browser.close();
   }

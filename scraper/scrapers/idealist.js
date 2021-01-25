@@ -1,9 +1,6 @@
-/* eslint-disable no-await-in-loop */
-import puppeteer from 'puppeteer';
-import fs from 'fs';
 import moment from 'moment';
 import log from 'loglevel';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 const searchQuery = process.argv.slice(2).join(' ');
 
@@ -15,13 +12,6 @@ async function createDate(date, sub) {
   log.info(moment(newDate, 'LL'));
   const momentDate = moment(newDate, 'LL');
   return momentDate.toDate();
-}
-
-async function writeData(data) {
-  await fs.writeFile('./data/canonical/idealist.canonical.data.json',
-    JSON.stringify(data, null, 4), 'utf-8',
-    err => (err ? log.warn('\nData not written!', err) :
-      log.warn('\nData successfully written!')));
 }
 
 async function getLinks(page) {
@@ -186,12 +176,11 @@ async function getData(page, elements) {
 }
 
 async function main() {
+  let browser;
+  let page;
+  log.enableAll(); // this enables console logging
   try {
-    const browser = await puppeteer.launch({
-      headless: false,
-    });
-    const page = await browser.newPage();
-    log.enableAll(); // this enables console logging
+    [browser, page] = await startBrowser();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.idealist.org/en/');
     await page.waitForSelector('#layout-root > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.lnKqQM > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.dCQmbn.BaseLayout__PageContent-sc-10xtgtb-2.heQjSt > div.Box__BaseBox-sc-1wooqli-0.bsSECh > div > div.Box__BaseBox-sc-1wooqli-0.hpEILX > div.Box__BaseBox-sc-1wooqli-0.datyjK > div > div > div.idlst-flx.idlst-lgncntr.Box__BaseBox-sc-1wooqli-0.cDmdoN > div > form > div.Box__BaseBox-sc-1wooqli-0.ejycyy > div > input');
@@ -206,7 +195,7 @@ async function main() {
     await getElements(page).then((elements) => {
       getData(page, elements).then((data => {
         log.info(data);
-        writeData(data);
+        writeToJSON(data, 'idealist');
       }));
     });
     await browser.close();
