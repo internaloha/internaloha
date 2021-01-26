@@ -11,9 +11,7 @@ const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
  * @return {Array}     Returns an array with no duplicates
  */
 function removeDuplicates(skills) {
-  let newArray = skills.map((skill) => {
-    return skill.toLowerCase();
-  });
+  const newArray = skills.map((skill) => skill.toLowerCase());
   return [...new Set(newArray)];
 }
 
@@ -74,7 +72,7 @@ function getDueDates(input, textInput) {
       }
 
       const dueDate = new Date(date);
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.due = dueDate;
         // console.log(dueDate);
       }
@@ -99,7 +97,7 @@ function getDueDates(input, textInput) {
         }
         const dueDate = new Date(date);
         // Only update Due date if the Date generated is valid
-        if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+        if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
           textInput.due = dueDate;
           // console.log(dueDate);
         }
@@ -134,7 +132,7 @@ function getStartDates(input, textInput) {
 
       // console.log(date);
       const dueDate = new Date(date);
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.start = dueDate;
         // console.log(dueDate);
       }
@@ -158,7 +156,7 @@ function getStartDates(input, textInput) {
       // console.log(date);
       const dueDate = new Date(date);
       // Only update Due date if the Date generated is valid
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.start = dueDate;
         // console.log(dueDate);
       }
@@ -248,6 +246,7 @@ function trainSkills(classifier) {
   classifier.addDocument('information technology', 'information technology');
   classifier.addDocument(cloud, 'cloud computing');
   classifier.addDocument('SQL', 'sql');
+  classifier.addDocument(SQL, 'sql');
   classifier.addDocument(deepLearning, 'deep learning');
   classifier.addDocument(AI, 'artificial intelligence');
   classifier.addDocument(bioinformatics, 'bioinformatics');
@@ -266,7 +265,7 @@ function trainSkills(classifier) {
   classifier.addDocument('Julia', 'julia');
   classifier.addDocument('project management', 'project management');
   classifier.addDocument('hardware', 'hardware');
-  classifier.addDocument('networks','networks');
+  classifier.addDocument('networks', 'networks');
   classifier.addDocument('virtual reality', 'virtual reality');
   classifier.addDocument(['game', 'game design'], 'game design');
 
@@ -481,6 +480,7 @@ function convertRegion(input, to) {
       // if the format doesn't match any of the valid fields or is already full name
       return alreadyFull;
     }
+  return input;
 }
 
 /** Gets qualification using string.includes() method
@@ -513,7 +513,7 @@ function multi_parser(file) {
   // Goes thorugh every internship listing
   for (let i = 0; i < text.length; i++) {
 
-    text[i].index = i+1;
+    text[i].index = i + 1;
 
     const position = text[i].position;
 
@@ -570,7 +570,6 @@ function multi_parser(file) {
       }
 
     }
-
 
     // count the amount of internships where there we no apparent matches
     if (data.length === 0) {
@@ -697,7 +696,7 @@ function fromDir(startPath, filter) {
 
   if (!fs.existsSync(startPath)) {
     console.log('no dir ', startPath);
-    return;
+    return [];
   }
 
   const files = fs.readdirSync(startPath);
