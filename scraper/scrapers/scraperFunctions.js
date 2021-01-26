@@ -1,5 +1,8 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
+import Logger from 'loglevel';
+
+/* global window */
 
 /**
  * Fetches the information from the page.
@@ -9,7 +12,7 @@ import fs from 'fs';
  * @returns {Promise<*>} The information as a String.
  */
 async function fetchInfo(page, selector, DOM_Element) {
-  let result = '';
+  let result;
 
   try {
 
@@ -18,7 +21,7 @@ async function fetchInfo(page, selector, DOM_Element) {
     result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
 
   } catch (error) {
-    console.log('Our Error: fetchInfo() failed.\n', error.message);
+    Logger.error('Our Error: fetchInfo() failed.\n', error.message);
     result = 'Error';
   }
   return result;
@@ -84,8 +87,8 @@ async function startBrowser(headless = true, devtools = false, slowMo = 0) {
 async function writeToJSON(data, name) {
   await fs.writeFile(`./data/canonical/${name}.canonical.data.json`,
       JSON.stringify(data, null, 4), 'utf-8',
-      err => (err ? console.log('\nData not written!', err) :
-          console.log('\nData successfully written!')));
+      err => (err ? Logger.error('\nData not written!', err) :
+          Logger.info('\nData successfully written!')));
 }
 
 /**
@@ -96,7 +99,7 @@ async function writeToJSON(data, name) {
  */
 function convertPostedToDate(posted) {
   const date = new Date();
-  let daysBack = 0;
+  let daysBack;
 
   if (posted.includes('hours') || (posted.includes('hour')) || (posted.includes('minute'))
       || (posted.includes('minutes')) || (posted.includes('moment')) || (posted.includes('second'))
