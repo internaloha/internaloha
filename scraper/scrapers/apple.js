@@ -48,9 +48,9 @@ async function main() {
   let browser;
   let page;
   const data = [];
-  Logger.enableAll(); // Enable console logs until CLI in place
+  // Logger.enableAll(); // Enable console logs until CLI in place
   try {
-    Logger.info('Executing script...');
+    Logger.info('Executing script for apple...');
     [browser, page] = await startBrowser();
     await page.goto('https://jobs.apple.com/en-us/search?sort=relevance');
     await setSearchFilter(page);
@@ -89,4 +89,6 @@ async function main() {
   }
 }
 
-main();
+// main();
+
+export default main;

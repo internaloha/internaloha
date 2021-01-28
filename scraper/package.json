@@ -55,7 +55,8 @@
     "aexpress": "node scrapers/aexpress.js",
     "hn": "node scrapers/hn.js",
     "apple": "node scrapers/apple.js",
-    "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js"
+    "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js",
+    "scrapers": "node scrapers/main.js"
   },
   "browserslist": {
     "production": [

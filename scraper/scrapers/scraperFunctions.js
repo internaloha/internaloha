@@ -88,7 +88,7 @@ async function writeToJSON(data, name) {
   await fs.writeFile(`./data/canonical/${name}.canonical.data.json`,
       JSON.stringify(data, null, 4), 'utf-8',
       err => (err ? Logger.error('\nData not written!', err) :
-          Logger.info('\nData successfully written!')));
+          Logger.info(`\nData successfully written for ${name}!`)));
 }
 
 /**

@@ -15,13 +15,13 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-async function main() {
+export async function main() {
   let browser;
   let page;
   const data = [];
-  Logger.enableAll(); // this enables console logging. Will replace with CLI args later.
+  // Logger.enableAll(); // this enables console logging. Will replace with CLI args later.
   try {
-    Logger.info('Executing script...');
+    Logger.info('Executing script for ACM...');
     [browser, page] = await startBrowser();
     await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
     await page.waitForNavigation;
@@ -63,4 +63,6 @@ async function main() {
   }
 }
 
-main();
+// main();
+
+export default main;
