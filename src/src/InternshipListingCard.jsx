@@ -5,15 +5,15 @@ import {
   Icon,
   Label,
   Modal,
-  Header,
   Popup,
   Form,
-  Radio, Item,
+  Radio,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import React from 'react';
 
+// eslint-disable-next-line consistent-return
 function isRemote(remote) {
   if (remote) {
     return (
@@ -78,7 +78,6 @@ function description(internshipDescription) {
         // internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
     );
   } catch (e) {
-    console.log('No description field.');
     return '';
   }
 }

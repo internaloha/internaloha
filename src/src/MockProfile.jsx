@@ -3,9 +3,8 @@ import {
   Segment,
   Header,
   Dropdown,
-  Form, Modal, Button, Grid, Popup, Input, Checkbox, Label,
+  Form, Grid, Checkbox,
 } from 'semantic-ui-react';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
 import { recommendation, dropdownCareerInterest, isRemoteFunc } from './RecommendationScript';
@@ -14,7 +13,6 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
 
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
-  const location = internships.dropdownLocation(data);
 
   // let locationChange = locationVal;
   // let companyChange = companyVal;
@@ -61,11 +59,7 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
   };
 
   const getRemote = () => {
-    if (remoteCheck) {
-      remoteCheck = false;
-    } else {
-      remoteCheck = true;
-    }
+    remoteCheck = !remoteCheck;
     recommendedData = recommendation(skillChange, careerChange, data, locationChange);
     setFilters();
   };

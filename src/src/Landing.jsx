@@ -1,8 +1,7 @@
 import React from 'react';
 import { Container, Statistic, Image, Button } from 'semantic-ui-react';
+import { withRouter, NavLink } from 'react-router-dom';
 import InternshipsFilters from './InternshipFilters';
-import { Link, withRouter, NavLink } from 'react-router-dom';
-
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {

@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
-import { Card, Container, Header, Icon, Grid, Pagination, Item } from 'semantic-ui-react';
+import { Card, Container, Grid } from 'semantic-ui-react';
 import InternshipListingCard from './InternshipListingCard';
-import InternshipListingCard2 from './InternshipListingCard2';
 import SearchInternshipFeature from './SearchInternshipFeature';
 import InternshipsFilters from './InternshipFilters';
 
 function InternshipListing() {
-
   const internships = new InternshipsFilters();
   const getInternshipData = internships.mergeData();
 

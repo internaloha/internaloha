@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
-import { Container, Header, Icon, Grid, Card } from 'semantic-ui-react';
+import { Container, Grid, Card } from 'semantic-ui-react';
 import InternshipListingCard from './InternshipListingCard';
 import MockProfile from './MockProfile';
 import InternshipsFilters from './InternshipFilters';
