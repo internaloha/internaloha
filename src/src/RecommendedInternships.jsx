@@ -6,26 +6,21 @@ import MockProfile from './MockProfile';
 import InternshipsFilters from './InternshipFilters';
 
 function RecommendedInternships() {
-
   const internships = new InternshipsFilters();
   const getInternshipData = internships.mergeData();
-
   const [data, setData] = useState(getInternshipData);
   const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
-
   const [skills, setSkills] = useState([]);
   const [career, setCareer] = useState([]);
   const [location, setLocation] = useState([]);
   const [page, setPage] = useState(1);
   const [height, setHeight] = useState(0);
   const [remote, setRemote] = useState(false);
-
   const ref = useRef(null);
 
   /* Passes data up from MockProfile. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
   function handleChildClick(passedData, skillsVal, careerVal, locationVal, remoteVal) {
-    // console.log(passedData);
     setData(passedData);
     setSkills(skillsVal);
     setCareer(careerVal);
@@ -34,12 +29,10 @@ function RecommendedInternships() {
     setPage(1);
     setPaginatedData(passedData.slice(0, 40));
   }
-
   /* Grabs the height */
   useEffect(() => {
     setHeight(ref.current.clientHeight);
   });
-
   /* Infinite scrolling */
   function handleScroll() {
     window.onscroll = function () {
@@ -55,7 +48,6 @@ function RecommendedInternships() {
       }
     };
   }
-
   return (
       <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid doubling stackable>

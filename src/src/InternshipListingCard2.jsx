@@ -235,7 +235,6 @@ function InternshipListingCard2(props) {
                       name='radioGroup'
                       value='this'
                       checked={'this'}
-                      // onChange={}
                   />
                 </Form.Field>
                 <Form.Field>
@@ -244,7 +243,6 @@ function InternshipListingCard2(props) {
                       name='radioGroup'
                       value='that'
                       checked={'that'}
-                      // onChange={}
                   />
                 </Form.Field>
               </Form>

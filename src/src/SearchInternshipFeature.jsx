@@ -25,10 +25,8 @@ function SearchInternshipFeature({
                                    isRemote,
                                    careerVal,
                                  }) {
-
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
-
   let locationChange = locationVal;
   let companyChange = companyVal;
   let sortChange = sortVal;
@@ -36,26 +34,18 @@ function SearchInternshipFeature({
   let skillChange = skillsVal;
   let remoteCheck = isRemote;
   let careerChange = careerVal;
-
   const sortBy = [
     { key: 'date', text: 'date', value: 'date' },
     { key: 'internship', text: 'internship', value: 'internship' },
     { key: 'company', text: 'company', value: 'company' },
   ];
-
   const setFilters = () => {
-
     let recommendedData = [];
-
     const remoteFilter = internships.isRemote(data, remoteCheck);
     const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
-    // const skillsFiltered = internships.filterBySkills(searchFiltered, skillChange);
-    // const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
     const companyFiltered = internships.filterByCompany(searchFiltered, companyChange);
     const sorted = internships.sortedBy(companyFiltered, sortChange);
-
     recommendedData = recommendation(skillChange, careerChange, sorted, locationChange);
-
     onChildClick(recommendedData, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck, careerChange);
     window.scrollTo({
       top: 30,
@@ -63,48 +53,35 @@ function SearchInternshipFeature({
       behavior: 'smooth',
     });
   };
-
   const handleSearchChange = (event) => {
     searchQueryChange = event.target.value;
   };
-
   const handleCompanyChange = (event) => {
     companyChange = event.target.value;
   };
-
   const getRemote = () => {
-    if (remoteCheck) {
-      remoteCheck = false;
-    } else {
-      remoteCheck = true;
-    }
+    remoteCheck = !remoteCheck;
     setFilters();
   };
-
   const handleSubmit = () => {
     setFilters();
   };
-
   const getLocation = (event, { value }) => {
     locationChange = value;
     setFilters();
   };
-
   const getSort = (event, { value }) => {
     sortChange = value;
     setFilters();
   };
-
   const getSkills = (event, { value }) => {
     skillChange = value;
     setFilters();
   };
-
   const getCareerInterest = (event, { value }) => {
     careerChange = value;
     setFilters();
   };
-
   const has = {
     margin: '0.2rem',
     backgroundColor: '#5680E9',
@@ -115,14 +92,6 @@ function SearchInternshipFeature({
     backgroundColor: 'rgb(244, 244, 244)',
     color: '#8f8f8f',
   };
-
-  // eslint-disable-next-line no-unused-vars
-  const careerSkills = (skill) => (
-    <Label circular key={skill}>
-      {skill}
-    </Label>
-  );
-
   return (
     <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
       <Grid columns={'equal'}>
@@ -159,7 +128,6 @@ function SearchInternshipFeature({
                 content='Press enter to search by internship titles!'
                 on={'focus'}
               />
-
             </Form>
           </Grid.Column>
           <Grid.Column>
@@ -173,15 +141,6 @@ function SearchInternshipFeature({
                 search
                 onChange={getCareerInterest}>
               </Form.Dropdown>
-              {/* <Form.Field */}
-              {/*    fluid multiple selection clearable */}
-              {/*    control={Dropdown} */}
-              {/*    options={dropdownCareerInterest()} */}
-              {/*    label={{children: 'Career Interest'}} */}
-              {/*    placeholder='Career Interest' */}
-              {/*    search */}
-              {/*    onChange={getCareerInterest} */}
-              {/* /> */}
             </Form>
           </Grid.Column>
           <Grid.Column>
@@ -195,10 +154,8 @@ function SearchInternshipFeature({
                 options={internships.dropdownSkills(data)}
                 onChange={getSkills}
                 style={{ flexGrow: 0 }}
-
               />
             </Form>
-
           </Grid.Column>
           <Grid.Column>
             <Form>
@@ -226,7 +183,6 @@ function SearchInternshipFeature({
               />
             </Form>
           </Grid.Column>
-
         </Grid.Row>
         <Grid.Row>
           <Grid.Column>
@@ -252,14 +208,10 @@ function SearchInternshipFeature({
                 </Label>
               </div>
             </Grid.Row>
-
           </Grid.Column>
         </Grid.Row>
-
       </Grid>
-
     </Segment>
-
   );
 }
 

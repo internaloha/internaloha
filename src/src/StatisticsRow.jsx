@@ -108,7 +108,6 @@ class StatisticsRow extends React.Component {
                 </Header>
               </Table.Cell>
             </Table.Row>
-
         );
       } return (
             <Table.Row>

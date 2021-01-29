@@ -14,24 +14,6 @@ class NavBar extends React.Component {
                 <Image src={'images/logo.png'} size={'small'}/>
               </a>
             </Menu.Item>
-            {/* <Menu.Item> */}
-            {/*  <Link to='/all-internships' style={linkStyle}>All Internships</Link> */}
-            {/* </Menu.Item> */}
-            {/* <Menu.Item> */}
-            {/*  <Link to='/internaloha' style={linkStyle}>Recommended Internships</Link> */}
-            {/* </Menu.Item> */}
-
-            {/* <Menu.Item> */}
-            {/*  <Link to="/statistics" style={linkStyle}>Statistics</Link> */}
-            {/* </Menu.Item> */}
-            {/* <Menu.Item position='right'> */}
-            {/*  <Dropdown text="John Foo" pointing="top right" icon={'user'}> */}
-            {/*    <Dropdown.Menu> */}
-            {/*      <Dropdown.Item icon="user" text="Profile" as={NavLink} exact to={'/internbit/profile'} /> */}
-            {/*      <Dropdown.Item icon="file text" text="Applications" as={NavLink} exact to={'/internbit/applications'} /> */}
-            {/*    </Dropdown.Menu> */}
-            {/*  </Dropdown> */}
-            {/* </Menu.Item> */}
           </Menu>
         </Container>
     );
