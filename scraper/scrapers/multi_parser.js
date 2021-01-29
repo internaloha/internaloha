@@ -1,7 +1,9 @@
-/* eslint-disable max-len,no-param-reassign */
+/* eslint-disable no-param-reassign */
+
 import fs from 'fs';
 import natural from 'natural';
 import path from 'path';
+import Logger from 'loglevel';
 import { isRemote } from './scraperFunctions.js';
 
 const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
@@ -11,9 +13,7 @@ const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
  * @return {Array}     Returns an array with no duplicates
  */
 function removeDuplicates(skills) {
-  let newArray = skills.map((skill) => {
-    return skill.toLowerCase();
-  });
+  const newArray = skills.map((skill) => skill.toLowerCase());
   return [...new Set(newArray)];
 }
 
@@ -74,7 +74,7 @@ function getDueDates(input, textInput) {
       }
 
       const dueDate = new Date(date);
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.due = dueDate;
         // console.log(dueDate);
       }
@@ -99,7 +99,7 @@ function getDueDates(input, textInput) {
         }
         const dueDate = new Date(date);
         // Only update Due date if the Date generated is valid
-        if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+        if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
           textInput.due = dueDate;
           // console.log(dueDate);
         }
@@ -134,7 +134,7 @@ function getStartDates(input, textInput) {
 
       // console.log(date);
       const dueDate = new Date(date);
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.start = dueDate;
         // console.log(dueDate);
       }
@@ -158,7 +158,7 @@ function getStartDates(input, textInput) {
       // console.log(date);
       const dueDate = new Date(date);
       // Only update Due date if the Date generated is valid
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.start = dueDate;
         // console.log(dueDate);
       }
@@ -248,6 +248,7 @@ function trainSkills(classifier) {
   classifier.addDocument('information technology', 'information technology');
   classifier.addDocument(cloud, 'cloud computing');
   classifier.addDocument('SQL', 'sql');
+  classifier.addDocument(SQL, 'sql');
   classifier.addDocument(deepLearning, 'deep learning');
   classifier.addDocument(AI, 'artificial intelligence');
   classifier.addDocument(bioinformatics, 'bioinformatics');
@@ -266,7 +267,7 @@ function trainSkills(classifier) {
   classifier.addDocument('Julia', 'julia');
   classifier.addDocument('project management', 'project management');
   classifier.addDocument('hardware', 'hardware');
-  classifier.addDocument('networks','networks');
+  classifier.addDocument('networks', 'networks');
   classifier.addDocument('virtual reality', 'virtual reality');
   classifier.addDocument(['game', 'game design'], 'game design');
 
@@ -297,12 +298,12 @@ function getCompensation(input, textInput) {
         textInput.compensation = 'paid';
       }
     } else
-        // if it has $0.00, it is marked as unpaid
-      if (input[0].match(/([$][0])+/ig)) {
-        if (!textInput.compensation || textInput.length === 0) {
-          textInput.compensation = 'unpaid';
-        }
+      // if it has $0.00, it is marked as unpaid
+    if (input[0].match(/([$][0])+/ig)) {
+      if (!textInput.compensation || textInput.length === 0) {
+        textInput.compensation = 'unpaid';
       }
+    }
   }
 }
 
@@ -346,15 +347,13 @@ function getContact(textInput) {
   if (email !== null && phone !== null) {
     // console.log(`${email[0]}, ${phone[0]}`);
     textInput.contact = `${email[0]}, ${phone[0]}`;
-  } else
-    if (email !== null) {
-      // console.log(email[0]);
-      textInput.contact = email[0];
-    } else
-      if (phone !== null) {
-        textInput.contact = phone[0];
-        // console.log(phone[0]);
-      }
+  } else if (email !== null) {
+    // console.log(email[0]);
+    textInput.contact = email[0];
+  } else if (phone !== null) {
+    textInput.contact = phone[0];
+    // console.log(phone[0]);
+  }
 
 }
 
@@ -469,18 +468,18 @@ function convertRegion(input, to) {
       }
     }
     // if it doesn't match any
-  } else
-    if (to === 'name') {
-      const alreadyFull = input;
-      input = input.toUpperCase();
-      for (i = 0; i < regions.length; i++) {
-        if (regions[i][1] === input) {
-          return (regions[i][0]);
-        }
+  } else if (to === 'name') {
+    const alreadyFull = input;
+    input = input.toUpperCase();
+    for (i = 0; i < regions.length; i++) {
+      if (regions[i][1] === input) {
+        return (regions[i][0]);
       }
-      // if the format doesn't match any of the valid fields or is already full name
-      return alreadyFull;
     }
+    // if the format doesn't match any of the valid fields or is already full name
+    return alreadyFull;
+  }
+  return input;
 }
 
 /** Gets qualification using string.includes() method
@@ -489,7 +488,7 @@ function convertRegion(input, to) {
  */
 function multi_parser(file) {
 
-  console.log('Parsing:', file);
+  Logger.info('Parsing:', file);
 
   const text = JSON.parse(fs.readFileSync(file, 'utf8'));
 
@@ -513,7 +512,7 @@ function multi_parser(file) {
   // Goes thorugh every internship listing
   for (let i = 0; i < text.length; i++) {
 
-    text[i].index = i+1;
+    text[i].index = i + 1;
 
     const position = text[i].position;
 
@@ -533,7 +532,7 @@ function multi_parser(file) {
       compensation = classifierComp.getClassifications(text[i].description);
 
     } catch (e) {
-      console.log('No description:', e.message);
+      Logger.error('No description:', e.message);
     }
 
     const data = [];
@@ -570,7 +569,6 @@ function multi_parser(file) {
       }
 
     }
-
 
     // count the amount of internships where there we no apparent matches
     if (data.length === 0) {
@@ -637,7 +635,7 @@ function multi_parser(file) {
       if (!text[i].remote) {
         let remote = false;
         if (isRemote(text[i].position) || isRemote(text[i].description)
-            || isRemote(text[i].location.city) || isRemote(text[i].location.state)) {
+          || isRemote(text[i].location.city) || isRemote(text[i].location.state)) {
           remote = true;
         }
         text[i].remote = remote;
@@ -658,20 +656,18 @@ function multi_parser(file) {
         }
       }
 
-    } else
-      if (text[i].location.state === 'states' || text[i].location.state === 'States') {
-        text[i].location.state = 'United States';
-      } else {
-        const convertedState = convertRegion(text[i].location.state, 'name');
-        text[i].location.state = convertedState;
-      }
+    } else if (text[i].location.state === 'states' || text[i].location.state === 'States') {
+      text[i].location.state = 'United States';
+    } else {
+      text[i].location.state = convertRegion(text[i].location.state, 'name');
+    }
 
   }
 
-  console.log('Total entries:', text.length);
-  console.log('Total descriptions with empty skills field:', count);
-  console.log('Total entries with empty compensation field:', compCount);
-  console.log('');
+  Logger.info('Total entries:', text.length);
+  Logger.info('Total descriptions with empty skills field:', count);
+  Logger.info('Total entries with empty compensation field:', compCount);
+  Logger.info('');
 
   let fileName = file.match(/([[a-zA-Z-])+/g);
   fileName = fileName[2];
@@ -696,8 +692,8 @@ function fromDir(startPath, filter) {
   let results = [];
 
   if (!fs.existsSync(startPath)) {
-    console.log('no dir ', startPath);
-    return;
+    Logger.error('no dir ', startPath);
+    return [];
   }
 
   const files = fs.readdirSync(startPath);
@@ -706,11 +702,10 @@ function fromDir(startPath, filter) {
     const stat = fs.lstatSync(filename);
     if (stat.isDirectory()) {
       results = results.concat(fromDir(filename, filter)); // recurse
-    } else
-      if (filename.indexOf(filter) >= 0) {
-        // console.log('-- found: ', filename);
-        results.push(filename);
-      }
+    } else if (filename.indexOf(filter) >= 0) {
+      // console.log('-- found: ', filename);
+      results.push(filename);
+    }
   }
   return results;
 }

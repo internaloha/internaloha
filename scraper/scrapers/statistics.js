@@ -25,7 +25,13 @@ function getStatistics(name, data) {
   let description = 0;
   let skills = 0;
   let remote = 0;
-  const lastScraped = data[0].lastScraped;
+  console.log(name);
+  let lastScraped = 0;
+  try {
+    lastScraped = data[0].lastScraped;
+  } catch (err2) {
+    lastScraped = 'Error';
+  }
 
   for (let i = 0; i < data.length; i++) {
     if ((data[i].position) && data[i].position !== 'Error') {
@@ -93,11 +99,9 @@ function getStatistics(name, data) {
 
 const zipData = readFile('../src/src/data/ziprecruiter.parsed.data.json');
 const simplyData = readFile('../src/src/data/simplyhired.parsed.data.json');
-const cheggData = readFile('../src/src/data/internships.parsed.data.json');
 const monsterData = readFile('../src/src/data/monster.parsed.data.json');
 const linkedInData = readFile('../src/src/data/linkedin.parsed.data.json');
 const youternData = readFile('../src/src/data/youtern.parsed.data.json');
-const nsfData = readFile('../src/src/data/nsf-reu.parsed.data.json');
 const iHire = readFile('../src/src/data/iHireTech.parsed.data.json');
 const glassData = readFile('../src/src/data/glassdoor.parsed.data.json');
 const indeedData = readFile('../src/src/data/indeed.parsed.data.json');
@@ -112,11 +116,9 @@ const aexpress = readFile('../src/src/data/aexpress.parsed.data.json');
 
 let data = [];
 data = _.concat(zipData, simplyData);
-// data = _.concat(data, cheggData);
 data = _.concat(data, monsterData);
 data = _.concat(data, linkedInData);
 data = _.concat(data, youternData);
-// data = _.concat(data, nsfData);
 data = _.concat(data, iHire);
 data = _.concat(data, glassData);
 data = _.concat(data, indeedData);

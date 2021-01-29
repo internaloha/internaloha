@@ -185,8 +185,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "c and c++",
             "project management"
         ],
@@ -230,13 +230,13 @@
         "index": 11,
         "skills": [
             "information technology",
-            "networks",
             "sql",
             "java",
+            "networks",
+            "python",
             "c and c++",
             "machine learning",
-            "project management",
-            "python"
+            "project management"
         ],
         "remote": false
     },
@@ -255,8 +255,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "c and c++",
             "project management"
         ],
@@ -318,8 +318,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "c and c++",
             "project management"
         ],
@@ -450,13 +450,13 @@
         "index": 21,
         "skills": [
             "information technology",
-            "networks",
             "sql",
             "java",
+            "networks",
+            "python",
             "c and c++",
             "machine learning",
-            "project management",
-            "python"
+            "project management"
         ],
         "remote": false
     },
@@ -521,11 +521,11 @@
             "virtual reality",
             "information technology",
             "software engineering",
+            "data visualization",
             "hardware",
-            "networks",
-            "data visualization"
+            "networks"
         ],
-        "start": "2020-09-01T10:00:00.000Z",
+        "start": "2021-09-01T10:00:00.000Z",
         "remote": true
     },
     {
@@ -587,7 +587,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "information technology"
+            "information technology",
+            "sql"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -608,13 +609,13 @@
         "index": 28,
         "skills": [
             "information technology",
-            "networks",
             "sql",
             "java",
+            "networks",
+            "python",
             "c and c++",
             "machine learning",
-            "project management",
-            "python"
+            "project management"
         ],
         "remote": false
     },
@@ -722,8 +723,8 @@
         "index": 33,
         "skills": [
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "python",
             "robotics",
             "c and c++",
@@ -766,8 +767,8 @@
             "software engineering",
             "information technology",
             "networks",
-            "python",
             "c and c++",
+            "python",
             "virtual reality"
         ],
         "qualifications": [
@@ -791,8 +792,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "hardware",
             "java",
+            "hardware",
             "c and c++",
             "machine learning"
         ],
@@ -879,8 +880,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "c and c++",
             "project management"
         ],
@@ -901,9 +902,9 @@
         "description": "Programmer Intern (Paid part-time)\n\nOrganization Advanced Technology International\n\nLocation Summerville, SC\n\nOrganization Advanced Technology International\n\nLocation Summerville, SC\n\nPosition Description\n\nATI is looking for an Intern to work part-time (20 hours a week) to support our\n\nsome of our programs in Summerville, SC.\n\nJob_Description\n\nProvides departmental assistance with daily operational activities.\n\nEssential_Functions\n\nWork with Applications Development Manager and senior staff as needed.\n\nAssist with writing code.\n\nSome experience / knowledge of coding web-based production software using Java,\n\nJavaScript, SQL, PHP, HTML, XML and CSS.\n\nUtilization of IDEs such as Netbeans or Eclipse is preferred.\n\nWrite utilities and reports as needed and directed by senior staff.\n\nHelp with quality assurance and testing of web applications currently in\n\ndevelopment.\n\nHelp create automated test scripts.\n\nHelp create, build, and deploy scripts.\n\nMust be flexible and adaptable.\n\nAdditional_Responsibilities\n\nWorks with management and staff as needed.\n\nQualifications\n\nCurrent college student with a major in Computer Science (minimally rising\n\njunior or higher) or graduate student with a major in Computer Science (any\n\nlevel if the undergraduate degree was computer science or a 2nd year graduate\n\nstudent if the undergraduate degree was something other than Computer Science).\n\nStrong computer skills; proficient with Microsoft Office.\n\nDemonstrated teamwork skills, including communication and adherence to\n\ndeadlines.\n\nAbility to prepare reports and documents using word processing, spreadsheet,\n\naccess database and presentation software tools.\n\nIndividual must be organized and punctual.\n\nAble to function effectively under pressure\n\nTrustworthy; trusted by clients and partners\n\nMust meet the definition of a United States Person upon hire. Must be either a\n\nUnited States Citizen by birth or naturalization, or a green card lawful United\n\nStates Permanent Resident, or a Political Asylum in the United States.\n\nPhysical_Requirements\n\nThe physical demands described here are representative of those that must be\n\nmet by an employee to successfully perform the essential functions of this job.\n\nReasonable accommodations may be made to enable individuals with disabilities\n\nto perform the essential functions.\n\nRegular physical activity to include walking, bending, stooping, reaching,\n\nstanding and prolonged sitting.\n\nAbility to speak, read, hear, and write, with or without reasonable\n\naccommodation.\n\nAbility to use phone and computer systems, copier, fax, and other office\n\nequipment.\n\nMust be able to occasionally move/lift up to 25 pounds with or without\n\nreasonable accommodation.\n\nWork Environment\n\nThis position is located in an air-conditioned, environmentally controlled\n\natmosphere.\n\nNoise level in the work environment is usually moderate.\n\nDistraction level in the work environment is often heavy.\n\nATI is an Equal Opportunity Employer of Minorities, Females, Protected\n\nVeterans, and Individual with Disabilities.\n\nat we only accept applications submitted through our applicant\n\ntracking system.\n\nIf you require accommodations to complete this application, please contact\n\nHuman Resources at or email .\n\nATI-20-025\n\nShow moreShow less",
         "index": 41,
         "skills": [
-            "java",
-            "javascript",
             "sql",
+            "javascript",
+            "java",
             "project management",
             "information technology",
             "software engineering",
@@ -1015,8 +1016,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "networks",
             "java",
+            "networks",
             "c and c++"
         ],
         "remote": false
@@ -1156,7 +1157,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "information technology"
+            "information technology",
+            "sql"
         ],
         "qualifications": [
             "Bachelor's degree"
@@ -1203,8 +1205,8 @@
             "software engineering",
             "javascript",
             "java",
-            "python",
             "c and c++",
+            "python",
             "machine learning",
             "project management"
         ],
@@ -1230,8 +1232,8 @@
             "software engineering",
             "javascript",
             "java",
-            "python",
             "c and c++",
+            "python",
             "machine learning",
             "project management"
         ],
@@ -1274,8 +1276,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "c and c++",
             "project management"
         ],
@@ -1300,8 +1302,8 @@
             "software engineering",
             "project management",
             "information technology",
-            "java",
             "sql",
+            "java",
             "c and c++",
             "python"
         ],
@@ -1345,8 +1347,8 @@
             "software engineering",
             "project management",
             "information technology",
-            "java",
             "sql",
+            "java",
             "c and c++",
             "python"
         ],
@@ -1463,8 +1465,8 @@
             "software engineering",
             "information technology",
             "networks",
-            "python",
             "c and c++",
+            "python",
             "virtual reality"
         ],
         "qualifications": [
@@ -1652,8 +1654,8 @@
             "information technology",
             "java",
             "data visualization",
-            "python",
-            "c and c++"
+            "c and c++",
+            "python"
         ],
         "remote": false
     },
@@ -1891,8 +1893,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "python",
             "c and c++",
             "project management"
@@ -1969,8 +1971,8 @@
         "index": 89,
         "skills": [
             "software engineering",
-            "networks",
             "java",
+            "networks",
             "python",
             "c and c++",
             "machine learning",
@@ -2054,12 +2056,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -2100,13 +2102,13 @@
         "index": 95,
         "skills": [
             "software engineering",
-            "networks",
             "java",
             "matlab",
+            "networks",
+            "python",
             "c and c++",
             "machine learning",
             "project management",
-            "python",
             "information technology",
             "web development"
         ],
@@ -2356,10 +2358,10 @@
         "skills": [
             "information technology",
             "software engineering",
-            "hardware",
             "javascript",
             "java",
             "data visualization",
+            "hardware",
             "c and c++",
             "machine learning"
         ],
@@ -2384,12 +2386,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -2504,12 +2506,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -2945,9 +2947,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
             "devops",
+            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -3078,8 +3080,8 @@
             "artificial intelligence",
             "software engineering",
             "data visualization",
-            "c and c++",
             "robotics",
+            "c and c++",
             "project management",
             "game design"
         ],
@@ -3100,9 +3102,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
             "devops",
+            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -3126,9 +3128,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
             "devops",
+            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -3170,9 +3172,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "java",
             "devops",
+            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -3247,12 +3249,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3295,11 +3297,11 @@
             "virtual reality",
             "information technology",
             "software engineering",
+            "data visualization",
             "hardware",
-            "networks",
-            "data visualization"
+            "networks"
         ],
-        "start": "2020-09-01T10:00:00.000Z",
+        "start": "2021-09-01T10:00:00.000Z",
         "remote": true
     },
     {
@@ -3335,12 +3337,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3362,12 +3364,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3389,12 +3391,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3434,12 +3436,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3461,12 +3463,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3506,12 +3508,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3533,12 +3535,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3560,12 +3562,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3605,12 +3607,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3632,12 +3634,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3695,12 +3697,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3722,12 +3724,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3809,9 +3811,9 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
-            "java",
             "sql",
+            "java",
+            "javascript",
             "c and c++",
             "machine learning",
             "project management"
@@ -3949,12 +3951,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -3999,12 +4001,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -4044,12 +4046,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -4071,12 +4073,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -4119,11 +4121,11 @@
             "virtual reality",
             "information technology",
             "software engineering",
+            "data visualization",
             "hardware",
-            "networks",
-            "data visualization"
+            "networks"
         ],
-        "start": "2020-09-01T10:00:00.000Z",
+        "start": "2021-09-01T10:00:00.000Z",
         "remote": true
     },
     {
@@ -4234,10 +4236,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "hardware",
-            "networks",
             "java",
-            "data visualization"
+            "data visualization",
+            "hardware",
+            "networks"
         ],
         "compensation": "paid",
         "remote": false
@@ -4308,12 +4310,11 @@
             "project management",
             "software engineering",
             "information technology",
-            "javascript",
             "sql",
+            "javascript",
             "angular",
             "java",
-            "c and c++",
-            "web development"
+            "c and c++"
         ],
         "remote": false
     },
@@ -4419,12 +4420,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -4467,11 +4468,11 @@
             "virtual reality",
             "information technology",
             "software engineering",
+            "data visualization",
             "hardware",
-            "networks",
-            "data visualization"
+            "networks"
         ],
-        "start": "2020-09-01T10:00:00.000Z",
+        "start": "2021-09-01T10:00:00.000Z",
         "remote": true
     },
     {
@@ -4489,12 +4490,12 @@
         "skills": [
             "data science",
             "information technology",
-            "networks",
+            "sql",
+            "java",
             "data visualization",
             "scala",
             "julia",
-            "sql",
-            "java",
+            "networks",
             "machine learning",
             "project management",
             "python"
@@ -4537,8 +4538,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "java",
             "machine learning",
             "project management",
@@ -4564,8 +4565,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "java",
             "machine learning",
             "project management",
@@ -4693,8 +4694,7 @@
             "data visualization",
             "python",
             "information technology",
-            "web development",
-            "software engineering"
+            "web development"
         ],
         "remote": false
     },
@@ -4712,12 +4712,12 @@
         "index": 214,
         "skills": [
             "software engineering",
-            "hardware",
-            "networks",
             "java",
             "data visualization",
-            "machine learning",
+            "hardware",
+            "networks",
             "c and c++",
+            "machine learning",
             "information technology",
             "mobile development"
         ],
@@ -4803,8 +4803,7 @@
             "java",
             "scala",
             "machine learning",
-            "information technology",
-            "react"
+            "information technology"
         ],
         "remote": false
     },
@@ -4822,14 +4821,13 @@
         "index": 219,
         "skills": [
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "angular",
             "python",
             "machine learning",
             "information technology",
-            "web development",
-            "react"
+            "web development"
         ],
         "compensation": "paid",
         "remote": false
@@ -4848,14 +4846,13 @@
         "index": 220,
         "skills": [
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "angular",
             "python",
             "machine learning",
             "information technology",
-            "web development",
-            "react"
+            "web development"
         ],
         "compensation": "paid",
         "remote": false
@@ -4902,7 +4899,7 @@
             "web development"
         ],
         "compensation": "unpaid",
-        "due": "2020-06-30T10:00:00.000Z",
+        "due": "2021-06-30T10:00:00.000Z",
         "remote": true
     },
     {
@@ -4920,8 +4917,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -4994,8 +4991,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5039,8 +5036,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5112,8 +5109,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5139,8 +5136,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5166,8 +5163,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5213,8 +5210,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5240,8 +5237,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5267,8 +5264,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5294,8 +5291,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5321,8 +5318,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5348,8 +5345,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5375,8 +5372,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5402,8 +5399,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5485,8 +5482,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5512,8 +5509,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5577,8 +5574,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5604,8 +5601,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5650,8 +5647,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5677,8 +5674,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5707,12 +5704,12 @@
             "information technology",
             "javascript",
             "data visualization",
-            "python",
             "c and c++",
-            "machine learning"
+            "machine learning",
+            "python"
         ],
         "compensation": "unpaid",
-        "due": "2020-07-05T10:00:00.000Z",
+        "due": "2021-07-05T10:00:00.000Z",
         "remote": true
     },
     {
@@ -5778,8 +5775,8 @@
             "information technology",
             "data visualization",
             "deep learning",
-            "python",
             "c and c++",
+            "python",
             "project management"
         ],
         "remote": false
@@ -5868,8 +5865,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -5914,8 +5911,8 @@
         "skills": [
             "information technology",
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "web development",
@@ -6152,9 +6149,9 @@
         "index": 275,
         "skills": [
             "software engineering",
-            "networks",
             "javascript",
             "devops",
+            "networks",
             "project management",
             "python",
             "artificial intelligence"

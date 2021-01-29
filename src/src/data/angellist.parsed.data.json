@@ -10,10 +10,10 @@
         "skills": [
             "machine learning",
             "project management",
-            "hardware",
-            "networks",
             "javascript",
-            "data visualization"
+            "data visualization",
+            "hardware",
+            "networks"
         ],
         "lastScraped": "2020-10-02T02:39:38.626Z",
         "description": "<p>Greetings everyone, hope you're all greetings everyone, hope you're all staying safe and well through the pandemic.</p>\n\n<p>We are looking for a couple of internship roles to fill. The position would start fairly quickly and you would be working with a team of five currently.</p>\n\n<p>You know what they say, talent is important but chemistry is more crucial for us. Feel free to click apply if youre interested in early stage gig. Cheers! </p>\n\n<p>Keywords: software development, Python, C, C++, Visual Studio, Linux, CUDA, Computer Vision, TensorFlow, Keras, embedded software, debugging, multithreading, multiprocessing, CPU, GPU, Arduino, Raspberry Pi, NVIDIA, OpenCV, augmented reality, machine learning</p>\n\n<ul>\n<li>  Has worked on multiple computer vision projects that utilize some type of learning model with object detection</li>\n<li>  Ideally has worked on CV projects involving vehicle detection</li>\n<li>  Has 2-3 years of experience using various object detection algorithms such as Haar Cascade, SSD, Yolo, Yolo-Lite</li>\n<li>  Knows working principle of CNN and math behind</li>\n<li>  Experience with deep learning model optimization</li>\n<li>  Relevant experience with camera calibration and/or camera evaluation</li>\n<li>  Has a foundational knowledge of neural networks</li>\n<li>  Knows how to work with neural network libraries like Keras and machine learning libraries like TensorFlow </li>\n<li>  Has 1-2 years of augmented reality experience with </li>\n<li>  Has worked with CV and machine learning on both mobile (such as ARM), and dedicated CPU and GPU such as NVIDIA GTX 1080 ti</li>\n<li>  Has strong experience scripting bash in Linux environments</li>\n<li>  Has project experience scripting with Arduino, Raspberry Pi, and NVIDIA processing hardware (such as Jetson Nano, TX-2, Xavier, GTX 1080, 1081, RTX 2080, 3080, etc.) </li>\n<li>  Has project experience managing position tracking of multiple objects at one time</li>\n<li>  Ideally has past experience with management of wireless and remote access points through UDP or TCP protocols is a plus</li>\n<li>  iOS and Android app development experience is a plus</li>\n<li>  Comfortable coding in C-based languages, Python, (Javascript and XML are plusses)</li>\n</ul>",
@@ -199,7 +199,8 @@
         "url": "https://angel.co/company/humanitas-technologies/jobs/990402-software-engineer-intern",
         "skills": [
             "react",
-            "software engineering"
+            "software engineering",
+            "sql"
         ],
         "lastScraped": "2020-10-02T02:39:49.119Z",
         "description": "<p>Humanitas offers funding-to-outcome solutions for donors to collaboratively achieve specific social outcomes. We are backed by entrepreneurs and philanthropists from the Stanford community.</p>\n\n<p>Current use case is to help contain COVID-19 by increasing mask adoption across all BIPOC-majority zip codes.</p>\n\n<p>Relevant Qualifications:</p>\n\n<ul>\n<li>You have strong knowledge of React &amp; ES6.</li>\n<li>You have strong knowledge of Ruby on Rails and/or Golang.</li>\n<li>You have experience working with and scaling PostgreSQL &amp; Redis.</li>\n<li>You have experience deploying and scaling applications using Kubernetes.</li>\n<li>You have some experience building or maintaining consumer facing, high scalabality applications.</li>\n<li>You have some experience building or maintaining modular enterprise dashboards &amp; consumer facing, high scalability applications.</li>\n<li>You are obsessed with user feedback and relentless in creating the best possible experience for them.</li>\n<li>You enjoy working with a multidisciplinary remote team spread across the world.</li>\n<li>You can take requirements from design through to implementation both independently and with larger teams.</li>\n<li>You enjoy solving tough problems under pressure.</li>\n</ul>",
@@ -238,8 +239,8 @@
         "url": "https://angel.co/company/vertigrow-1/jobs/983858-frontend-developer",
         "skills": [
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "python",
             "machine learning",
             "project management"
@@ -427,7 +428,7 @@
         "lastScraped": "2020-10-02T02:39:59.456Z",
         "description": "<p>At Reflective AI, we are developing artificial intelligence software to digitize site operations and change the way multi billion dollar construction projects are managed across the globe. This is a unique opportunity to be part of a fast growing startup and help revolutionize the industry. </p>\n\n<p>Based on performance, this may lead to a full time role with the company. </p>\n\n<p>What you bring to the team:<br>\nYou have worked with modern web development frameworks like Angular/React or Vue.<br>\nYou have designed and developed multiple frontends on your own or for others<br>\nPrevious experience with frontend development of a Software as a Service (SaaS) cloud-based web application is a big plus. <br>\nYou learn fast, you thrive in a fast-paced environment</p>",
         "index": 23,
-        "start": "2020-05-01T10:00:00.000Z",
+        "start": "2021-05-01T10:00:00.000Z",
         "remote": true
     },
     {
@@ -442,8 +443,8 @@
             "machine learning",
             "software engineering",
             "project management",
-            "data visualization",
             "javascript",
+            "data visualization",
             "python",
             "information technology"
         ],
@@ -499,7 +500,8 @@
         },
         "url": "https://angel.co/company/stitchil-1/jobs/611531-backend-developer",
         "skills": [
-            "cloud computing"
+            "cloud computing",
+            "sql"
         ],
         "lastScraped": "2020-10-02T02:40:03.512Z",
         "description": "Responsibilities: <br>Hands on experience with PHP/ Laravel framework is Must.<br>Knowledge in database design, solution architecture, MySQL, cloud hosting with AWS. <br>Should have worked with REST APIs. <br>Should have good logical and analytical skills. <br>Should have good/positive attitude for work.<br><br><br>Key Competencies: <br>Experience with PHP HMVC frameworks - Laravel (minimum 2 years).<br>Experience of web deployment, maintenance, operation. <br><br><br>This is an unpaid part-time position with the possibility of coming on afterwards as a full time salaried employee with stock options.",
@@ -532,10 +534,10 @@
         },
         "url": "https://angel.co/company/sense-sustainability/jobs/498154-sustainability-technology-fellow",
         "skills": [
-            "java",
-            "information technology",
-            "networks",
             "javascript",
+            "information technology",
+            "java",
+            "networks",
             "python",
             "project management",
             "software engineering"
@@ -646,6 +648,7 @@
             "machine learning",
             "software engineering",
             "information technology",
+            "sql",
             "cloud computing"
         ],
         "lastScraped": "2020-10-02T02:40:10.232Z",
@@ -666,8 +669,8 @@
         "skills": [
             "project management",
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "java",
             "machine learning",
             "virtual reality",
@@ -808,12 +811,11 @@
         "url": "https://angel.co/company/_blocklightio_/jobs/487867-frontend-developer",
         "skills": [
             "machine learning",
-            "javascript",
             "sql",
+            "javascript",
             "data visualization",
-            "python",
             "project management",
-            "information technology"
+            "python"
         ],
         "lastScraped": "2020-10-02T02:40:18.177Z",
         "description": "Are you a front-end developer with a strong technical skillset and a passion for building user-friendly, data-driven applications? Are you interested in creating advanced analytics tools using machine learning and blockchain technologies? Does the prospect of joining a growing startup based in Chicago’s leading tech incubator get you excited? If the answer is yes to any of the above questions, we want to hear from you. We’re looking for an experienced front-end development intern to join us and contribute immediately to the design and implementation of the Blocklight Analytics Platform. <br><br>Responsibilities and duties<br>• Contribute to the design, development, and scaling of Django-based web application<br>• Build and maintain front-end dashboards, metrics, widgets, navigation elements, and all other front-end components of our software.<br>• Assist building and maintaining data transmission and communication pipelines between our front-end analytics dashboards and back-end databases.<br>• Assist development team in all aspects of product development as relates to front-end components/elements.<br>• Use a variety of programming languages in order to create user-friendly web pages.<br>• Work in multidisciplinary team with other professionals such as back-end developers and web designers.<br>• Maintain and improve company website<br>• Build high-quality mockups and design different prototypes<br>• Provide high-quality graphics and visual elements<br>• Optimize our web applications for maximum speed<br>• Design mobile-based features<br><br>Required Skills<br>• Python<br>• JavaScript<br>• React<br>• JSON<br>• Bootstrap<br>• MySQL<br>• JQuery<br>• Web Design<br>• Ajax<br>• HTML<br>• SQL<br>• CSS<br>• Git<br>• Existing experience as a Front-end Developer<br>• Excellent knowledge of browser troubleshooting and debugging practices and techniques<br>• Excellent experience with JavaScript, CSS, React, and jQuery<br>• Sense of ownership and pride in your performance and its impact on company’s success<br>• Critical thinker and problem-solving skills<br>• Team player<br>• Good time-management skills<br>• Great interpersonal and communication skills<br>• Meticulous attention to detail",
@@ -853,9 +855,9 @@
         "skills": [
             "project management",
             "software engineering",
+            "javascript",
             "hardware",
-            "networks",
-            "javascript"
+            "networks"
         ],
         "lastScraped": "2020-10-02T02:40:20.089Z",
         "description": "<p>Role and Responsibilities of the Position:</p>\n\n<p>The Summer Intern assists with development of our current project, a Streaming Ebooks Micropayments platform and mobile web application using a SDK based on the Hedera distributed ledger network and Consensus Algorithm. The Inara core hypothesis will be tested with the Minimum Viable Product developed by the Inara dev team. The duties primarily revolve around building software by writing code, as well as modifying software to fix errors, adapt it to new hardware, improve its performance, or upgrade interfaces. The Summer Intern will be involved in conducting system testing and validation procedures, and also working with customers and Management Team on technical issues including software system design and maintenance.</p>\n\n<p>• Designing and developing software systems using scientific analysis and mathematical models to predict and measure outcomes and design consequences.<br>\n• Modifying software to fix errors, adapt it to new hardware, improve its performance, or upgrade interfaces.<br>\n• Conducting system testing and validation procedures.<br>\n• Conducting software programming and documentation development.<br>\n• Consulting with Management Team, Hedera Team, and Customer Advisory Board on project status and proposals.<br>\n• Working Management Team and Customer Advisory Board on technical issues including software system design and maintenance.<br>\n• Analyzing information to recommend and plan the installation of new systems and modifications of an existing system.<br>\n• Consulting with Product Manager to evaluate software-hardware interfaces and develop specifications and performance requirements.<br>\n• Preparing reports on programming project specifications, activities, or status.<br>\n• Conferring with Product Manager to obtain information on limitations or capabilities.</p>\n\n<p>We are interested in interns with the following experience and skills: </p>\n\n<p>Front-End React development and/or development with other front-end frameworks. Mobile Web development. UX/UI design. Prototyping/Wireframing. RESTful APIs design. Use of databases: relational and non-relational. Use of Cloud services.</p>\n\n<p>React.js, ReactNative, HTML, CSS, Bootstrap, Node.js, Python, Ruby on Rails, C++, JavaScript, Figma, Adobe XD, Invision.</p>\n\n<p>Experience with back-end frameworks such as Flask and Django preferred. </p>\n\n<p>Familiarity with Hedera Hashgraph (hedera.com) and/or blockchain and cryptocurrency, a plus. </p>\n\n<p>Work from your remote location. </p>\n\n<p>Nature of the Internship:</p>\n\n<p>This is an unpaid internship position. </p>\n\n<p>(1) The training in the field of Computer Science is similar to and enhances instruction given in studies at institutions of higher learning.<br>\n(2) The internship is for your benefit to receive training and mentoring, and to provide valuable experience for future job selection, application, and performance in the field of Computer Science.<br>\n(3) You will work under the close observation of mentors at the Company.<br>\n(4) Unless advised otherwise, interns are not entitled to a job at the conclusion of the internship period.<br>\n(5) You are not entitled to wages or other compensation other than your experience and learning for the time spent as an intern for the Company.<br>\n(6) The internship does not create an \"employment\" relationship under the Fair Labor Standards Act (\"FLSA\") or any other definition, and the FLSA's minimum wage and overtime provisions do not apply.</p>\n\n<p>Start Date:  Immediately<br>\nEnd Date: August 31, 2020<br>\nNumber of hours per week: 20</p>\n\n<p>If this all sounds like you, contact us today and let’s talk about creating a new future for publishing and Web 3.0.</p>\n\n<p>About Inara<br>\nInara is a tokenized ebooks economy that enables authors to get paid directly for every page stream of their ebooks and for readers to participate in ebooks curation with an incentivized design. When the page turns, the author earns.</p>\n\n<p>Today, Inara is a proud cohort member of the Hedera Boost startup program — hedera.com/boost. We are building on the success of our existing ebooks ecommerce platform and designing a new category, Streaming Ebooks Micropayments that is transforming the publishing industry. </p>\n\n<p>Inara CEO Glenn McCreedy founded Breakaway Media LLC—among the first publishing companies in 2009 to publish and sell on Amazon’s Kindle Direct Publishing platform. We sold nearly a million ebooks over the years and our title, THE SHOP, bumped The Hunger Games off Amazon’s number one spot.</p>\n\n<p>We realized that we and other authors in our network were increasingly challenged to earn a living with Amazon’s tightening algorithms, thousands of authors joining the platform every month, and the downward pricing pressure on ebooks all the way to “free.” Now, authors are forced to buy ads from Amazon to get visibility and sell on KDP. We founded Inara and built an ebook ecommerce platform to help authors break free and get paid directly so they can earn a living and write the great books that readers want to read. </p>\n\n<p>At Inara, you will always have your best opportunity to contribute and develop yourself. We have fun and strive to lift each other up. We prize initiative and creativity and believe that each member of the team is a leader serving others.</p>",
@@ -887,9 +889,9 @@
         },
         "url": "https://angel.co/company/experimnt/jobs/925201-full-stack-software-developer-software-engineer-intern",
         "skills": [
+            "sql",
             "software engineering",
             "javascript",
-            "sql",
             "python",
             "machine learning",
             "project management",
@@ -1071,8 +1073,8 @@
         },
         "url": "https://angel.co/company/atomic-5/jobs/744619-remote-react-javascript-developer-volunteer-or-intern-unpaid-needed",
         "skills": [
-            "javascript",
             "sql",
+            "javascript",
             "react",
             "project management",
             "web development"
@@ -1183,7 +1185,8 @@
         },
         "url": "https://angel.co/company/giving-forward/jobs/823603-wordpress-lamp-and-mean-volunteer-nonprofit",
         "skills": [
-            "web development"
+            "web development",
+            "sql"
         ],
         "lastScraped": "2020-10-02T02:40:34.205Z",
         "description": "<p>Giving Forward is building some tech that integrates into WordPress but also stands alone. <br>\nWe seek volunteer coders that are great at:</p>\n\n<ol>\n<li>WordPress admin (including understanding the DB Schema)</li>\n<li>WordPress Plugin Dev</li>\n<li>LAMP and CSS</li>\n<li>Modifying existing themes</li>\n</ol>\n\n<p>We look forward to having you joint the team. Doing some fun social impact work.<br>\n<a href=\"https://www.givingforward.org/about-giving-forward/history-of-giving-forward/\" target=\"_blank\" rel=\"nofollow\">https://www.givingforward.org/about-giving-forward/history-of-giving-forward/</a></p>",
@@ -1467,9 +1470,9 @@
         },
         "url": "https://angel.co/company/calypso-financials/jobs/960768-back-end-software-engineering-intern",
         "skills": [
-            "javascript",
-            "software engineering",
             "sql",
+            "software engineering",
+            "javascript",
             "java",
             "information technology"
         ],
@@ -1591,10 +1594,10 @@
             "machine learning",
             "software engineering",
             "hardware",
+            "java",
             "information technology",
-            "networks",
             "artificial intelligence",
-            "java"
+            "networks"
         ],
         "lastScraped": "2020-10-02T02:40:54.378Z",
         "description": "<p>Intern - Product Development/Technology, marketing/sales/operation, Hardware/software engineering, Data science, Industrial/product design,   (IoT, AI) </p>\n\n<p>Looking for people with single-minded focus in building the products and business. Dedicated, determined, entrepreneurial, street smart, pragmatic and have the drive and committed to the cause of smart and sustainable world. Develop or customize products with efficiency and economics and affordable products/solutions for all.<br>\nAnd willing to work as part of this initiative as partner/cofounder, take ownership of the product and solutions on sweat equity (related to role and contribution) or intern, (work remotely also) based on your skills and experience.</p>\n\n<p>AI (Artificial Intelligence), IoT (Internet of Things), Hardware engineering, Software engineering, Neuroscience, machine learning, deep learning, Mobile, connected devices, sensors, monitors, intranet, internet and cloud, open source, etc</p>\n\n<p>Hardware engineering - experienced in electronic engineering,circuit design, PCP design, embedded software engineering.  familiar with CAD sofwtare: KiCAD or Altium Designer. Also experience with C programming language is desirable.</p>\n\n<p>Software engineering - programing at least one of the high level languages, such as Python, Java, Ruby, Go etc. Also be familiar with one of the web frameworks for appropriate language. There are Django for Python, Ruby on Rails, Spring for Java or Revel for Go etc</p>\n\n<p>Data science - person who design smart algorithms for data<br>\nprocessing. statistical programming, Bayesian computation, big-data analysis, neural networks, deep learning. And  toolboxes be familiar with: Tensorflow, NumPy or Theano.</p>\n\n<p>Mobile Development (iOS, Android)</p>\n\n<ul>\n<li>Native iOS Development (Objective-C or Kotlin or Swift)</li>\n<li>Native Android Development (Java or Kotlin)\nOR * Development Mobile Apps with Flutter or React Native</li>\n</ul>\n\n<p>Sales and Marketing, Business development, Operations, Branding, Customer relationship management, Product marketing communication skills, corporate finance, HR, customer service, Marketing<br>\nOperations - operations management, HR, Finance/accounting, recruitment, customer service, office management etc <br>\nMarketing (offline, online) campaign, Branding, graphics, posters, design, content creation, communication, blogs, customer base development, product marketing, social media marketing, campaign management, communication skills, sales, business development, growth hack etc</p>\n\n<p>Industrial/Product Design, development and manufacturing of hardware products. <br>\nThe skills, Industrial design, Industrial design process, Design, products design, product design and architecture, Hardware design, AI (Artificial Intelligence), IoT (Internet of Things), Hardware engineering, Software engineering, Neuroscience, connected devices, sensors, monitors, intranet, internet and cloud etc</p>\n\n<p><a href=\"https://geodarm.com/opportunities.php\" target=\"_blank\" rel=\"nofollow\">https://geodarm.com/opportunities.php</a><br>\n<a href=\"https://angel.co/s-design-living/recruiting/listings\" target=\"_blank\" rel=\"nofollow\">https://angel.co/s-design-living/recruiting/listings</a></p>\n\n<p>Also explain, how your skills &amp; experience matches with our requirements</p>",
@@ -1952,13 +1955,12 @@
         "url": "https://angel.co/company/lunchclub/jobs/900357-software-engineering-intern",
         "skills": [
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "python",
             "machine learning",
             "information technology",
-            "react",
-            "artificial intelligence"
+            "react"
         ],
         "lastScraped": "2020-10-02T02:41:13.901Z",
         "description": "<p>About Lunchclub</p>\n\n<p>At Lunchclub we're helping people relevantly grow their professional network. We use AI to scale data-driven matches to thousands of people weekly, small groups of like-minded individuals, and panels with some of the world's best. We've introduced people who have started companies together, received/given mentorship, received funding, made their next hire, or friend. We're a small, tight-knit, but distributed team, powering connections in and in-between 57 cities across 6 continents.</p>\n\n<p>About engineering at Lunchclub</p>\n\n<p>We're a small team of generalist software engineers driving big outcomes with a lot of shared responsibility. We often work outside the traditional Fullstack/Backend/Frontend mould to create, fix, and improve Lunchclub for our users and fellow engineers. Our engineers also actively take part in discussions on product, design, user interviews, and more. The fastest way to learn technology is to build things at an early stage startup — we expect you to grow a lot as an engineer during your time here.</p>\n\n<p>About the role</p>\n\n<p>As a software engineer intern at Lunchclub you'll...</p>\n\n<p>Build features from start to finish. Start with research or an idea, work with design to draft up a spec, build, launch, and polish.<br>\nImprove and iterate on existing features through A/B testing, user, or team feedback.<br>\nBuild and improve existing internal tools, helping us maintain our team's high impact on our growing community.<br>\nPlay an active role in the shaping of the future of the product and business.</p>\n\n<p>This role could be for you if...</p>\n\n<p>You love problem solving — especially with code.<br>\nYou're looking to grow quickly as an engineer and do not fear ownership, even at an early stage of your career.<br>\nYou know how to balance building quickly with building well.</p>\n\n<p>Bonus: You're adept with Javascript/React, Python/Flask, MySQL, Docker.</p>\n\n<p>Benefits</p>\n\n<p>Flexible vacation time.<br>\nHybrid remote/office work culture.</p>\n\n<p>Lunchclub is proud to be an equal opportunity employer. We are committed to equal employment opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity or Veteran status. We also consider qualified applicants regardless of criminal histories, consistent with legal requirements. If you have a disability or special need that requires accommodation, please let us know.</p>\n\n<p>Learn more about us here: <a href=\"https://techcrunch.com/2019/09/18/lunchclub-raises-4m-from-a16z-for-its-ai-warm-intro-service\" target=\"_blank\" rel=\"nofollow\">https://techcrunch.com/2019/09/18/lunchclub-raises-4m-from-a16z-for-its-ai-warm-intro-service</a>.</p>",
@@ -2071,12 +2073,12 @@
         "skills": [
             "project management",
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "java",
-            "python",
             "c and c++",
             "machine learning",
+            "python",
             "information technology"
         ],
         "lastScraped": "2020-10-02T02:41:19.850Z",
@@ -2190,8 +2192,8 @@
             "project management",
             "software engineering",
             "information technology",
-            "networks",
             "javascript",
+            "networks",
             "python",
             "c and c++",
             "machine learning"
@@ -2254,10 +2256,10 @@
         },
         "url": "https://angel.co/company/ecocart/jobs/774595-software-engineering-intern-remote",
         "skills": [
-            "networks",
+            "sql",
             "software engineering",
             "javascript",
-            "sql",
+            "networks",
             "python",
             "machine learning",
             "project management",
@@ -2278,8 +2280,8 @@
         "url": "https://angel.co/company/photoncommerce/jobs/985713-software-engineering-internship-at-silicon-valley-startup-full-stack-python-javascript",
         "skills": [
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "python",
             "project management",
             "react",
@@ -2441,8 +2443,8 @@
         "url": "https://angel.co/company/opptin-1/jobs/972142-application-developer-w-focus-on-ar-vr",
         "skills": [
             "project management",
-            "networks",
             "javascript",
+            "networks",
             "python",
             "c and c++",
             "information technology",
@@ -2464,9 +2466,9 @@
         "skills": [
             "project management",
             "game design",
-            "networks",
             "javascript",
             "java",
+            "networks",
             "c and c++",
             "information technology",
             "software engineering"
@@ -2560,8 +2562,8 @@
         "url": "https://angel.co/company/objective-she-3/jobs/932753-front-end-developer",
         "skills": [
             "software engineering",
-            "networks",
             "javascript",
+            "networks",
             "web development",
             "machine learning",
             "information technology"
@@ -2906,8 +2908,7 @@
             "data visualization",
             "python",
             "information technology",
-            "web development",
-            "react"
+            "web development"
         ],
         "lastScraped": "2020-10-02T02:41:59.661Z",
         "description": "<p>Livshows is seeking a dynamic individual to add to our team's success as a Full Stack Web Development Intern. The successful proponent will be practical, naturally driven to improve, and able to figure things out for themselves. This person will also be able to manage multiple priorities and consistently deliver solid work, complemented by strong technical and communication skills. Service-oriented people take pride in their work and make sure that they take things to the finish line.</p>\n\n<p>Responsibilities<br>\n1) Develop visually appealing front end website architecture, including translating designer mock-ups and wireframes into front-end code.<br>\n2) Design user-based interactions through effective front-end architecture.<br>\n3) Develop functional databases, applications and servers to support our websites on the back end.<br>\n4) Experience in API design and development. (RESTful services and APIs).<br>\n5) Managing database administration and hosting duties.Troubleshoot issues and problem solving as necessary.<br>\n6) Keeping current with industry trends and developments that can be applied to company needs.</p>\n\n<p>Requirments:<br>\n1) Strong organizational and project management skills.<br>\n2) Proficiency with fundamental front end languages such as HTML, CSS and JavaScript.<br>\n3) Familiarity with JavaScript frameworks such as Angular JS, React or Amber.<br>\n4) Proficiency with server side languages such as Python, Ruby, Java, PHP and .Net.<br>\n5) Familiarity with database technology such as MySQL, Oracle and MongoDB.<br>\n6) Excellent verbal communication skills.<br>\n7)Good problem solving skills.<br>\n8) Attention to detail.</p>",
@@ -3042,8 +3043,8 @@
         "url": "https://angel.co/company/memsql/jobs/972406-software-engineer-intern-summer-2021",
         "skills": [
             "software engineering",
-            "hardware",
             "javascript",
+            "hardware",
             "python",
             "c and c++",
             "project management",
@@ -3222,8 +3223,7 @@
             "javascript",
             "data visualization",
             "python",
-            "project management",
-            "information technology"
+            "project management"
         ],
         "lastScraped": "2020-10-02T02:42:13.233Z",
         "description": "Ensemble Energy is an exciting startup in industrial IoT space focused on energy. Our mission is to accelerate the clean energy revolution by making it more competitive using the power of data. Ensemble’s AI enabled SaaS platform provides prescriptive analytics to power plant operators by combining the power of machine learning, big data, and deep domain expertise.  As a data engineering intern, you will be participating in developing and deploying fault-tolerant ETL pipelines, perform data visualization and enable the development of ML algorithms.<br><br>Required Skills &amp; Experience:<br><br>- React/Redux, HTML5, CSS3, JavaScript, Python, Django and REST API’s<br>- Current BS or MS student or recent graduate. CS major is a plus<br>- Strong foundation in Computer Science, with deep knowledge of data structures, algorithms, and software design<br>- Experience with GIT, CI/CD tools, Atlassian software, AWS CodeDeploy, Lambda, Serverless a plus<br>- Experience with Elasticsearch/ELK stack a plus<br>- Contribute with ideas to overall product strategy and roadmap<br>- Self-starter to take ownership of the platform engineering and application development<br>- Work on multiple projects simultaneously and get things done. Take products from prototype to production<br>- Collaborate with other team members for continuous development<br><br>Preferred:<br><br>- Ability to stay-on for part-time or full-time as a co-op until May 2020<br>- Ability to demonstrate a portfolio of projects (GitHub, papers, etc.)<br><br>Bonus - If you have worked on one or more below then highlight those projects when applying:<br><br>- Experience with Time Series DB - M3DB, Prometheus, InfluxDB, OpenTSDB, ELK Stack<br>- Experience with visualization tools like Tableau, KeplerGL etc.<br>- Experience with AWS IoT Core, Greengrass, MQTT or other IoT communication protocols a plus",
@@ -3245,9 +3245,8 @@
             "java",
             "data visualization",
             "scala",
-            "python",
             "project management",
-            "information technology"
+            "python"
         ],
         "lastScraped": "2020-10-02T02:42:14.219Z",
         "description": "Ensemble Energy is an exciting startup in industrial IoT space focused on energy. Our mission is to accelerate the clean energy revolution by making it more competitive using the power of data. Ensemble’s AI enabled SaaS platform provides prescriptive analytics to power plant operators by combining the power of machine learning, big data, and deep domain expertise.  As a data engineering intern, you will be participating in developing and deploying fault-tolerant ETL pipelines, perform data visualization and enable the development of ML algorithms. <br><br>Required Skills &amp; Experience:<br>•\tCurrently enrolled or recently graduated with MS or PhD in Computer Science, Electrical Engineering, Statistics, or equivalent fields. Specialization in data engineering preferred. <br>•\tStrong understanding of data engineering principles using big data technologies<br>•\tExpertise in relational databases (MSSQL/MySQL/Postgres) and expertise in SQL. Exposure to NoSQL such as Cassandra. MongoDB will be a plus. <br>•\tExperience with distributed computing using Hadoop and Spark <br>•\tExposure to deploying ETL pipelines such as AirFlow, AWS Data Pipeline, AWS Glue <br>•\tExcellent programming skills in Java, Scala or Python. Python is preferred<br>•\tExperience using Tableau for data visualization will be a plus<br><br>Preferred:<br>•\tAbility to stay-on for part-time or full-time as a co-op until December 2019<br>•\tAbility to demonstrate a portfolio of projects (GitHub, papers, etc.)<br><br>The most important requirement is a can-do attitude and desire to make a change. Come join an exciting startup that is working on immense technical challenges and a mission to do our part to fight climate change.",
@@ -3334,10 +3333,10 @@
             "machine learning",
             "software engineering",
             "hardware",
+            "java",
             "information technology",
-            "networks",
             "artificial intelligence",
-            "java"
+            "networks"
         ],
         "lastScraped": "2020-10-02T02:42:19.473Z",
         "description": "<p>Intern - Product Development/Technology, marketing/sales/operation, Hardware/software engineering, Data science, Industrial/product design, Neuroscience,  (IoT, AI) </p>\n\n<p>Looking for people with single-minded focus in building the products and business. Dedicated, determined, entrepreneurial, street smart, pragmatic and have the drive and committed to the cause of smart and sustainable world. Develop or customize products with efficiency and economics and affordable products/solutions for all.<br>\nAnd willing to work as part of this initiative as partner/cofounder, take ownership of the product and solutions on sweat equity (related to role and contribution) or intern, (work remotely also) based on your skills and experience.</p>\n\n<p>AI (Artificial Intelligence), IoT (Internet of Things), Hardware engineering, Software engineering, Neuroscience, machine learning, deep learning, Mobile, connected devices, sensors, monitors, intranet, internet and cloud, open source, etc</p>\n\n<p>Hardware engineering - experienced in electronic engineering,circuit design, PCP design, embedded software engineering.  familiar with CAD sofwtare: KiCAD or Altium Designer. Also experience with C programming language is desirable.</p>\n\n<p>Software engineering - programing at least one of the high level languages, such as Python, Java, Ruby, Go etc. Also be familiar with one of the web frameworks for appropriate language. There are Django for Python, Ruby on Rails, Spring for Java or Revel for Go etc</p>\n\n<p>Data science - person who design smart algorithms for data<br>\nprocessing. statistical programming, Bayesian computation, big-data analysis, neural networks, deep learning. And  toolboxes be familiar with: Tensorflow, NumPy or Theano.</p>\n\n<p>Mobile Development (iOS, Android)</p>\n\n<ul>\n<li>Native iOS Development (Objective-C or Kotlin or Swift)</li>\n<li>Native Android Development (Java or Kotlin)\nOR * Development Mobile Apps with Flutter or React Native</li>\n</ul>\n\n<p>Neuroscience<br>\nObservation and analysis of human nervous system and brain, Structure or function of the nervous system and brain, state of mind of human beings and how they deal with issues and react, brain waves, and monitoring technology development</p>\n\n<p>Sales and Marketing, Business development, Operations, Branding, Customer relationship management, Product marketing communication skills, corporate finance, HR, customer service, Marketing<br>\nOperations - operations management, HR, Finance/accounting, recruitment, customer service, office management etc <br>\nMarketing (offline, online) campaign, Branding, graphics, posters, design, content creation, communication, blogs, customer base development, product marketing, social media marketing, campaign management, communication skills, sales, business development, growth hack etc</p>\n\n<p>Industrial/Product Design, development and manufacturing of hardware products. <br>\nThe skills, Industrial design, Industrial design process, Design, products design, product design and architecture, Hardware design, AI (Artificial Intelligence), IoT (Internet of Things), Hardware engineering, Software engineering, Neuroscience, connected devices, sensors, monitors, intranet, internet and cloud etc</p>\n\n<p><a href=\"http://cipherness.com/about/\" target=\"_blank\" rel=\"nofollow\">http://cipherness.com/about/</a><br>\n<a href=\"https://angel.co/geosustain/recruiting/listings\" target=\"_blank\" rel=\"nofollow\">https://angel.co/geosustain/recruiting/listings</a> </p>\n\n<p>Also explain, how your skills and experience matches with our requirements</p>",
@@ -3355,10 +3354,10 @@
         "skills": [
             "virtual reality",
             "game design",
-            "hardware",
             "data visualization",
-            "machine learning",
+            "hardware",
             "project management",
+            "machine learning",
             "information technology"
         ],
         "lastScraped": "2020-10-02T02:42:20.218Z",
@@ -4362,10 +4361,10 @@
             "project management",
             "software engineering",
             "information technology",
-            "networks",
-            "javascript",
             "java",
-            "data visualization"
+            "data visualization",
+            "javascript",
+            "networks"
         ],
         "lastScraped": "2020-10-02T02:43:12.897Z",
         "description": "<p>Pocket Gems seeks to build the greatest games and most compelling interactive entertainment in the world. That’s the mission our founders began with in an apartment above a pizza shop back in 2009 and it continues to inspire us today. Since then, we’ve grown to over 200 people in San Francisco, and with $155 million in backing from Sequoia Capital and Tencent, we’re constantly breaking new ground in mobile entertainment.</p>\n\n<p>Our products have been downloaded over 450 million times by players around the world. In recent years, we’ve launched Episode, a mobile storytelling network and platform, and War Dragons, a visually stunning 3D real-time strategy game. </p>\n\n<p>As our community of players continues to grow, we’re committed to building diverse and inclusive environments across our teams, and in our games.</p>\n\n<p>As a summer <strong>Software</strong> <strong>Engineer Intern</strong>, you will be a part of a small intern cohort, paired with an experienced software engineering mentor, collaborating cross-functionally with teams including other software engineers, product managers, artists, and designers to define our next generation of mobile games. During our <strong>10</strong><strong>-week program</strong>, our interns are meaningful contributors to our live products, leaving the summer having made a tangible impact on their team while gaining technical and professional skills to set them up for future success!</p>\n\n<p><em>**Please note that we intend to host the internship in person (San Francisco, CA), but we are prepared to host virtually if the conditions are unsafe to return to the office.</em>*</p>\n\n<p><strong>What You’ll Do:</strong></p>\n\n<ul>\n<li>Develop and code innovative features using groundbreaking technologies</li>\n<li>Enjoy the freedom of writing native applications while exploring the latest cross-platform technologies</li>\n<li>Participate in all aspects of the project life-cycle, from ideation to specification to release</li>\n<li>Design and implement scalable, reliable and maintainable technologies for our iOS and Android gaming platforms</li>\n<li>Work with innovative, great, fun people!</li>\n</ul>\n\n<p><strong>What You Bring to the Engineering Team:</strong></p>\n\n<ul>\n<li>Working toward a BA, BS, or MS in Computer Science or related technical discipline</li>\n<li>Solid foundation in computer science, with strong competencies in data structures, algorithms, software design and OOP</li>\n<li>Passion and excitement for solving interesting problems and building great products!</li>\n</ul>\n\n<p><strong>Extra Gems For:</strong></p>\n\n<ul>\n<li>Programming experience in one or more of the following: C/C++, C#, Objective-C, Java, Python, JavaScript, Mobile Software Development (iOS, Android)</li>\n</ul>\n\n<p><strong>Other Internship Perks:</strong></p>\n\n<ul>\n<li>An amazing summer packed with mentorship, networking opportunities, learning &amp; development roundtables, fun intern events (escape room, intern olympics, jackbox), and of course projects with real business impact.</li>\n<li><strong>Read more about what we’ve been up to</strong> <a href=\"https://medium.com/pocket-gems/interning-on-a-game-team-a-look-at-a-summer-at-pocket-gems-2d463c72e7f4\" target=\"_blank\" rel=\"nofollow\"><strong>here</strong></a><strong>!</strong> </li>\n</ul>\n\n<p><strong>Please Note</strong>:</p>\n\n<ul>\n<li>We are looking for students going to U.S. universities, <strong>graduating in Winter 2021 or Spring 2022</strong></li>\n<li>Prior mobile/gaming experience is <strong>NOT</strong> required</li>\n</ul>\n\n<p>*Pocket Gems is an equal opportunity employer. We do not discriminate based on race, color, ethnicity, ancestry, national origin, religion, sex, gender, gender identity, gender expression, sexual orientation, age, disability, veteran status, genetic information, marital status or any legally protected status. *</p>\n\n<p><em>Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.</em></p>",
@@ -4638,8 +4637,8 @@
         "url": "https://angel.co/company/sourcechannel/jobs/728888-data-science-intern-work-on-new-challenges-while-learning-new-skills",
         "skills": [
             "data science",
-            "machine learning",
             "project management",
+            "machine learning",
             "software engineering",
             "networks",
             "python"
@@ -5296,11 +5295,11 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "networks",
-            "java",
             "javascript",
-            "python",
-            "project management"
+            "java",
+            "networks",
+            "project management",
+            "python"
         ],
         "lastScraped": "2020-10-02T02:44:05.827Z",
         "description": "The Company<br><br><a href=\"http://Kwant.ai\" target=\"_blank\" rel=\"nofollow ugc\">Kwant.ai</a> is creating the technology to transform the construction industry in the world through a whole new level of digitization, automated data collection, and artificial.intelligent-based risk analysis. We are giving construction companies, developers, and construction managers better tools to improve how we build. Our clients are among the largest builders in the world. We are seeking an experienced Full Stack Engineer to join the team. The person in this position will work closely with our customers, design team, and software team.<br><br>THIS INTERNSHIP WOULD LEAD TO A FULL-TIME POSITION. <br><br>Skills<br>Python (Programming Language)<br>PostgreSQL<br>JavaScript<br>React.js<br>Java<br><br>What You'll Do: <br>You will help Chief Product Officer and develop a cloud-based platform that ingests data from IoT sensors, develops large-scale data processing tasks and machine learning based applications over them, and builds proof-of-concept prototypes for demo and evaluations. You will have the opportunity to work on a wide range of technologies found in our stack such as Postgres databases, Java, Python and JavaScript, and Python. We have a tight-knit multi-disciplinary team, giving you the opportunity to learn in-depth about application development, cybersecurity, medical devices, and networking in a fast-paced and highly collaborative environment.<br> <br>Your Skills &amp; Experience:<br>You have a fundamental understanding of software engineering principles<br>You have experience using Python and/or JavaScript<br>You know how to use version control, preferably Git<br> <br>Nice-To-Haves:<br>Understanding of amazon and/or computer networking<br>Understanding of basic machine learning principles<br> <br>Benefits &amp; Location:<br>Competitive intern salary<br>Growth opportunities for career development<br>Work-life flexibility – we value your contributions<br>Unique perks and office space at mid-town NYC<br>Any gear you need to improve your productivity",
@@ -5359,10 +5358,10 @@
         "url": "https://angel.co/company/thorostat/jobs/872223-full-stack-development-intern",
         "skills": [
             "machine learning",
-            "java",
-            "data visualization",
             "javascript",
-            "angular"
+            "angular",
+            "java",
+            "data visualization"
         ],
         "lastScraped": "2020-10-02T02:44:08.432Z",
         "description": "<p>What is ThoroStat?</p>\n\n<p>ThoroStat is a horse racing wagering and recommendation platform that uses real-time data to provide users selections per race or to help build multi-race wagers. Our industry is still way behind when it comes to using technology but we want to grow into the #1 platform for all types of horseplayers from experienced daily players to casual fans who attend the largest racing days of the year.</p>\n\n<p>What are we looking for?</p>\n\n<p>We are looking for a Full Stack Developer(s) Interns to produce scalable software solutions and contoniue to build out our platform. You’ll be at the ground floor and open to this role being full-time or part-time as a side gig for your internship, and also staying on after credit is receive as long as you can dedicate time daily to the company. you should have a passion for FulL Stack Developmentor persuing a degree in the field to get real-time work experience or College credit.</p>\n\n<p>As a Full Stack Developer intern, you should be comfortable around both front-end and back-end coding languages, development frameworks and third-party libraries. You should also be a team player with a knack for visual design and utility. We are a young start-up that is looking to revolutionize the Harse racing wagering/betting space by being best in class platofrm to provide users Real-time wagering selections/recommendations.</p>\n\n<p>If you’re also familiar with Agile methodologies and Machine Learning, we’d like to meet you.</p>\n\n<p>Responsibilities</p>\n\n<ul>\n<li>Work with development teams and product managers to ideate software solutions</li>\n<li>Design client-side and server-side architecture</li>\n<li>Build the front-end of applications through appealing visual design</li>\n<li>Develop and manage well-functioning databases and applications</li>\n<li>Write effective APIs</li>\n<li>Test software to ensure responsiveness and efficiency</li>\n<li>Troubleshoot, debug and upgrade software</li>\n<li>Create security and data protection settings</li>\n<li>Build features and applications with a mobile responsive design</li>\n<li>Write technical documentation</li>\n<li>Work  to improve platform daily and meet /exceed roadmap expectations</li>\n</ul>\n\n<p>Requirements</p>\n\n<ul>\n<li>Proven experience as a Full Stack Developer or similar role</li>\n<li>Experience developing desktop and mobile applications</li>\n<li>Familiarity with common stacks</li>\n<li>Knowledge of multiple front-end languages and libraries (e.g. HTML/ CSS, JavaScript, XML, jQuery)</li>\n<li>Knowledge of multiple back-end languages (e.g. C#, Java, Python) and JavaScript frameworks (e.g. Angular, React, Node.js)</li>\n<li>Familiarity with databases (e.g. MySQL, MongoDB), web servers (e.g. Apache) and UI/UX design</li>\n<li>Excellent communication and teamwork skills</li>\n<li>Great attention to detail</li>\n<li>Organizational skills</li>\n<li>An analytical mind</li>\n<li>Working toward Degree in Computer Science  or relevant field or work experience while in school/post graduation</li>\n</ul>",
@@ -5461,8 +5460,8 @@
         "skills": [
             "machine learning",
             "information technology",
-            "hardware",
             "matlab",
+            "hardware",
             "robotics",
             "c and c++",
             "python"
@@ -5704,7 +5703,7 @@
         "lastScraped": "2020-10-02T02:44:28.201Z",
         "description": "<p>Polici is looking for a motivated and collaborative individual to join its team as a Data Science Intern in Ithaca, New York. In this role, interns will work with large data sets, apply machine learning techniques, conduct ongoing experiments, and optimize pre-existing software in a fast-paced, startup environment.</p>\n\n<p>What is required of a Data Science Intern:</p>\n\n<ul>\n<li>To be a current undergraduate student</li>\n<li>Proficient in Python and HTML</li>\n<li>Familiarity with machine learning fundamentals</li>\n<li>To be located in Ithaca, New York from June 1st - August 1st, 2020</li>\n<li>Flexibility to address ad hoc needs of startup culture</li>\n<li>Responsive and committed team member</li>\n</ul>\n\n<p>What Polici has to offer you:</p>\n\n<ul>\n<li>Mentorship in top university entrepreneurial community</li>\n<li>Leadership skills and project management experience</li>\n<li>Exposure to a rapidly growing startup in the media/education space</li>\n<li>Free housing in Collegetown, Ithaca during the course of the program</li>\n<li>Monetary Stipend</li>\n</ul>",
         "index": 297,
-        "start": "2020-06-01T10:00:00.000Z",
+        "start": "2021-06-01T10:00:00.000Z",
         "remote": true
     },
     {
@@ -5751,9 +5750,9 @@
         },
         "url": "https://angel.co/company/planetrate/jobs/346616-fullstack-php-developer-internship",
         "skills": [
+            "sql",
             "information technology",
             "javascript",
-            "sql",
             "machine learning",
             "project management",
             "web development"
@@ -5825,8 +5824,8 @@
         "url": "https://angel.co/company/archanics/jobs/618353-intern-role-mobile-application-developer-ios-swift",
         "skills": [
             "sql",
-            "java",
             "javascript",
+            "java",
             "web development",
             "python",
             "software engineering",
@@ -5846,8 +5845,8 @@
         },
         "url": "https://angel.co/company/archanics/jobs/647199-intern-role-javascript-mern-web-saas-application-developer",
         "skills": [
-            "javascript",
             "sql",
+            "javascript",
             "project management",
             "software engineering",
             "web development",
@@ -5888,11 +5887,11 @@
         "url": "https://angel.co/company/percolata_com/jobs/999489-machine-learning-internship",
         "skills": [
             "machine learning",
-            "networks",
             "sql",
+            "networks",
             "deep learning",
-            "python",
             "project management",
+            "python",
             "information technology",
             "software engineering"
         ],
@@ -6220,9 +6219,9 @@
         "skills": [
             "machine learning",
             "artificial intelligence",
-            "python",
-            "cybersecurity",
             "c and c++",
+            "cybersecurity",
+            "python",
             "software engineering"
         ],
         "lastScraped": "2020-10-02T02:44:52.819Z",
@@ -6352,9 +6351,9 @@
             "software engineering",
             "sql",
             "c and c++",
+            "python",
             "machine learning",
-            "project management",
-            "python"
+            "project management"
         ],
         "lastScraped": "2020-10-02T02:44:59.429Z",
         "description": "<p>Coffee Meets Bagel (CMB) is a dating app that’s getting to the heart of meaningful connections. And, like in any good relationship, we want to cultivate empathy, teamwork, and a celebration of different perspectives. We’re seeking candidates from diverse backgrounds that are just as excited about dating and relationships as we are. Sound like you? Keep reading!</p>\n\n<p>Passion is principal, but it’s equally important that you’re excited to learn about backend or client technologies and what it means to be a team player. And if solving challenging engineering problems at scale makes your heart flutter, we want you for CMB’s Summer Internship Program!</p>\n\n<p>About the Internship</p>\n\n<p>As an intern at CMB, you’ll work on impactful projects with supportive mentors and contribute updates to our code that reach millions of users daily. It’s all part of working toward our company mission: to create real connections that inspire personal growth. That’s because we champion love, but we think that dating and relationships can be used by everyone as a lens for self-reflection, too. </p>\n\n<p>CMB is currently seeking interns to work as backend or iOS engineers. You’ll have opportunities to work on exciting projects, ship code to our 10M+ user base and work in a fast-paced start-up environment. You will be supported through continuous mentorship with a full-time engineer, with regular 1-on-1s to provide regular feedback to ensure a positive internship experience.</p>\n\n<p>Our job can be deeply challenging, but it’s also immensely rewarding and tons of fun! Even if you don't check off all the boxes, we encourage you to apply. CMB recognizes that talent comes from a variety of backgrounds and we would love to hear how you can make an impact here. </p>\n\n<p>This paid internship will take place over 8-10 weeks and is located onsite in our SF (backend/iOS) or Seattle (backend) offices. We do not provide visa or relocation support at this time.</p>\n\n<p>What You'll Bring!</p>\n\n<ul>\n<li>For a backend internship, experience in Python. Experience in Django and SQL would be a plus but is not required</li>\n<li>For an iOS internship, experience in technologies such as Swift, Objective-C, or other object-oriented languages</li>\n<li>Experience working in a team-based environment</li>\n<li>Currently pursuing a degree or bootcamp instruction in software engineering or a related technical field</li>\n</ul>\n\n<p>Here are some examples of past intern projects:- Automatic content moderation. This helped improve our event-drives system for automated recognition of faces in photos, suggestive imagery, and abusive language in profiles. It also influenced business decisions and reduced manual workload by making automated moderation decisions in millions of photos! You can read more about this here: <a href=\"https://www.fastcompany.com/90403658/amazons-ai-is-helping-companies-battle-sleazy-user-generated-contentAutomatic\" target=\"_blank\" rel=\"nofollow\">https://www.fastcompany.com/90403658/amazons-ai-is-helping-companies-battle-sleazy-user-generated-contentAutomatic</a> </p>\n\n<ul>\n<li>Scammer detection. This helped us find bad actors on our dating site. This project required analytics and a good dose of creativity to find new ways to tackle the problem. In collaboration with our data scientists, new scammer detection models were implemented to greatly reduce the amount of time it took to ban bad actors from our site. </li>\n<li>UI/UX and feature experiments. We’re constantly developing new features and designs, and our past interns have planned, implemented and tested both.</li>\n</ul>\n\n<p>Please indicate in your application if you are interested in backend or iOS. For more information contact us at <a href=\"mailto:internship@coffeemeetsbagel.com\" target=\"_blank\" rel=\"nofollow\">internship@coffeemeetsbagel.com</a></p>",
@@ -6625,8 +6624,8 @@
         "url": "https://angel.co/company/parkaze/jobs/644684-software-engineering-intern",
         "skills": [
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "project management",
             "information technology"
         ],
@@ -6686,9 +6685,9 @@
         "url": "https://angel.co/company/roblox/jobs/962062-software-engineering-intern-summer-2021",
         "skills": [
             "software engineering",
-            "networks",
             "java",
             "devops",
+            "networks",
             "c and c++",
             "machine learning",
             "project management",
@@ -6871,8 +6870,8 @@
         "skills": [
             "virtual reality",
             "software engineering",
-            "hardware",
             "angular",
+            "hardware",
             "c and c++",
             "machine learning",
             "project management",
@@ -6969,8 +6968,8 @@
         "skills": [
             "machine learning",
             "deep learning",
-            "python",
             "c and c++",
+            "python",
             "information technology"
         ],
         "lastScraped": "2020-10-02T02:45:28.038Z",
@@ -7007,8 +7006,8 @@
         "url": "https://angel.co/company/graspie/jobs/962309-software-engineering-intern",
         "skills": [
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "machine learning",
             "information technology"
         ],
@@ -7210,8 +7209,8 @@
         "url": "https://angel.co/company/ageye-technologies/jobs/684365-computer-vision-machine-learning-intern",
         "skills": [
             "machine learning",
-            "networks",
             "java",
+            "networks",
             "python",
             "c and c++",
             "information technology",
@@ -7362,8 +7361,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "web development",
             "react"
         ],
@@ -7383,8 +7382,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "web development",
             "react"
         ],
@@ -7473,8 +7472,8 @@
         "url": "https://angel.co/company/w3ll/jobs/811406-w3ll-community-development-engagement-internship",
         "skills": [
             "machine learning",
-            "networks",
             "data visualization",
+            "networks",
             "project management",
             "virtual reality",
             "game design",
@@ -7834,9 +7833,9 @@
         },
         "url": "https://angel.co/company/dmooji-tech/jobs/451242-software-engineer",
         "skills": [
+            "sql",
             "software engineering",
             "javascript",
-            "sql",
             "machine learning",
             "project management",
             "information technology",
@@ -8178,9 +8177,9 @@
         "url": "https://angel.co/company/zglue/jobs/353844-software-intern",
         "skills": [
             "software engineering",
-            "hardware",
-            "javascript",
             "sql",
+            "javascript",
+            "hardware",
             "python",
             "machine learning",
             "information technology",
@@ -8205,13 +8204,13 @@
         "url": "https://angel.co/company/shippify/jobs/530402-mobile-developer-intern-remote",
         "skills": [
             "information technology",
-            "networks",
             "javascript",
+            "networks",
             "machine learning",
             "project management",
             "software engineering",
-            "mobile development",
-            "react"
+            "react",
+            "mobile development"
         ],
         "lastScraped": "2020-10-02T02:46:29.814Z",
         "description": "About the internship<br><br>We are looking for a developer Intern to join the mobile team. This team is responsible for providing engaging and delightful experiences for our Hybrid, iOs and Android applications. We do that while striving to build modern, extensible and robust applications. The Intern will join the team in the design, development, maintenance and monitoring of these and new applications.<br><br>The goal of the mobile team is to constantly improve the software tools used by our community of drivers/couriers leading to higher performance on their daily deliveries. The mobile team designs and builds new components while improving existing features. <br><br><br>Requirements:<br><br>- Good communication skills.<br>- Proactive and passionate attitude.<br>- Technical skills in applicable technologies such as React Native and Javascript<br>- Familiarity with iOS or Android native technologies and proven knowledge of - UI/UX development is required.<br>- Proficiency in object-oriented analysis, design, programming and component-based development. Strong competencies in data structures and algorithms.<br>- Good understanding of server-side logic.<br>- Experience with modern development tools and workflows such as git, GitHub or equivalents.<br>- Understanding of fundamental design principles behind a scalable application<br>- Write human readable and clean code using  good practices .<br>- Use of design patterns such as Observer is a plus.<br><br>Responsibilities:<br>- Gathering functional requirements and developing technical specifications<br>- Build hybrid or native mobile applications depending on the current need<br>- Familiar working with REST APIs for deep integrations with both platforms<br>- Experience with JavaScript and its nuances including ES6 + syntax<br>- Develop high performing client-side applications<br>- Work in new features retrieving new information<br>- Manage and control data concurrency.<br>- Synchronize and store real time information and transactions<br>- Enhance, maintain and optimize current components<br>- Weekly report of the progress made.<br><br><br>Benefits:<br><br>- Flexible working hours schedule<br>- Gain valuable work experience and teamwork skills<br>- Multicultural Workplace ( You will learn from all the countries we are established in the region)<br>- Knowledge driven and global mindset culture<br>- You are welcome to any of our offices in the countries we operate.<br>- Build a network with professionals in the field<br>- Achieve a sense of accomplishment by contributing to a growing organization",
@@ -8367,9 +8366,9 @@
         "url": "https://angel.co/company/partrunner-1/jobs/874866-front-end-developer-intern",
         "skills": [
             "project management",
-            "networks",
             "javascript",
             "angular",
+            "networks",
             "information technology",
             "software engineering",
             "react"
@@ -8437,9 +8436,9 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "networks",
-            "javascript",
             "sql",
+            "javascript",
+            "networks",
             "project management"
         ],
         "lastScraped": "2020-10-02T02:46:40.210Z",
@@ -9001,8 +9000,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "javascript",
             "sql",
+            "javascript",
             "python",
             "project management",
             "information technology"
@@ -9025,8 +9024,8 @@
             "software engineering",
             "networks",
             "deep learning",
-            "python",
             "project management",
+            "python",
             "information technology"
         ],
         "lastScraped": "2020-10-02T02:47:10.841Z",
@@ -9293,7 +9292,8 @@
         "url": "https://angel.co/company/schedulebliss/jobs/320530-software-engineer",
         "skills": [
             "game design",
-            "software engineering"
+            "software engineering",
+            "sql"
         ],
         "lastScraped": "2020-10-02T02:47:23.445Z",
         "description": "We're looking for interns who are leveling up their coding skills to the maximum level cap. End-game coders with at least a KD ratio of 1 in PHP, MySQL and jQuery. Coders of any class or guild are welcome. If you're the best, we're looking for you!",
@@ -9328,10 +9328,10 @@
             "project management",
             "c and c++",
             "software engineering",
-            "networks",
+            "javascript",
             "cybersecurity",
             "java",
-            "javascript",
+            "networks",
             "robotics"
         ],
         "lastScraped": "2020-10-02T02:47:25.044Z",
@@ -9871,10 +9871,9 @@
             "machine learning",
             "project management",
             "software engineering",
-            "angular",
-            "data visualization",
             "javascript",
-            "python"
+            "angular",
+            "data visualization"
         ],
         "lastScraped": "2020-10-02T02:47:54.577Z",
         "description": "About the Job<br>Tired of thin-tech SaaS companies masquerading as technology startups? <br>Looking for real disruption, real technology, real value, with real impact?<br><br>PassiveLogic is a pioneering autonomous building systems startup company. We are building a groundbreaking autonomous control platform for high-performance buildings and the future of smart cities. We have a position for a javascript application developer intern that offers the opportunity to be a meaningful part of a team, develop a serious client-side application, and solve real-world engineering problems.<br><br>This is an internship position (or entry-level), with the potential of a full-time position for the right candidate. Opportunity for involvement is limited only by your enthusiasm (i.e. you do real work, not toy intern problems).<br><br>What you will be doing:<br>Working with our team developing a large client-side application.<br>Native quality software using javascript application to setup and control autonomous buildings.<br>Drive the machine learning back-end.<br>Develop data visualization interfaces and graphical interfaces.<br><br>You must have:<br>Experience with OO-based design.<br>Strong programming skills (e.g. Javascript, Typescript, Python, Swift, etc).<br>Interest in human centered design, autonomous systems, sustainability, or intelligent agents.<br>Must be able to both work in a team and have the ability to self manage on your own.<br><br>You should have:<br>Experience with OO-based design using javascript frameworks (e.g. React/Angular/Ember, etc).<br>Experience with HTML and CSS.<br>Experience with MVC design patterns.<br><br>It’s helpful to have:<br>Fundamentals of human-computer interaction design.<br>Experience with application development.<br>Experience with relational databases, PostgreSQL.<br><br>Compensation:<br>Hourly Wage.<br>We can support academic credits for students.<br><br>To apply for this position:<br>You must be near completing a B.S. or better. Unless you have years of experience, a coding camp isn't sufficient computer science background for this position. <br><br>With your introduction and resume, include a description of a project (of any type) you personally created, devised, built, managed, organized, or designed that was of your own self-initiative. Also include any portfolio work, links to your code repo, personal website, etc.",
@@ -9892,8 +9891,8 @@
         "skills": [
             "project management",
             "information technology",
-            "javascript",
             "sql",
+            "javascript",
             "web development",
             "react"
         ],
@@ -10058,8 +10057,8 @@
         "skills": [
             "machine learning",
             "software engineering",
-            "data visualization",
             "sql",
+            "data visualization",
             "deep learning",
             "information technology",
             "artificial intelligence"
