@@ -3,7 +3,7 @@ import fs from 'fs';
 import { fetchInfo, isRemote } from './scraperFunctions.js';
 
 (async () => {
-
+  //test scrapers working
   const browser = await puppeteer.launch({
     headless: false,
   });
