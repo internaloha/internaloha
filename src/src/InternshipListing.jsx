@@ -1,16 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
-import { Card, Container, Header, Icon, Grid, Pagination, Item } from 'semantic-ui-react';
+import { Card, Container, Grid } from 'semantic-ui-react';
 import InternshipListingCard from './InternshipListingCard';
-import InternshipListingCard2 from './InternshipListingCard2';
 import SearchInternshipFeature from './SearchInternshipFeature';
 import InternshipsFilters from './InternshipFilters';
 
 function InternshipListing() {
-
   const internships = new InternshipsFilters();
   const getInternshipData = internships.mergeData();
-
   const [data, setData] = useState(getInternshipData);
   const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
   const [location, setLocation] = useState([]);
@@ -64,17 +61,6 @@ function InternshipListing() {
     };
   }
 
-  /* Every single time we click a new page, it renders the new data set */
-  // const onChange = (e, pageInfo) => {
-  //   const page = pageInfo.activePage * 40;
-  //   setPaginatedData(data.slice(page - 40, page));
-  //   window.scrollTo({
-  //     top: 80,
-  //     left: 100,
-  //     behavior: 'smooth',
-  //   });
-  // };
-
   return (
       <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid columns={'equal'} doubling stackable>
@@ -90,7 +76,6 @@ function InternshipListing() {
             </div>
           </Grid.Row>
         </Grid>
-
       </Container>
   );
 }

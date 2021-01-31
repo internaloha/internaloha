@@ -1,17 +1,14 @@
 import React from 'react';
 import { Container, Statistic, Image, Button } from 'semantic-ui-react';
+import { withRouter, NavLink } from 'react-router-dom';
 import InternshipsFilters from './InternshipFilters';
-import { Link, withRouter, NavLink } from 'react-router-dom';
-
 
 /** A simple static component to render some text for the landing page. */
 class Landing extends React.Component {
   render() {
-
     const internships = new InternshipsFilters();
     const data = internships.mergeData();
     const companies = internships.dropdownCompany(data).length;
-
     const background = {
       backgroundImage: 'url("images/landingBG.png")',
       height: '100%',
@@ -19,10 +16,8 @@ class Landing extends React.Component {
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
     };
-
     const height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-
     return (
         <div style={background}>
           <div style={{ height: `${height}px` }}>

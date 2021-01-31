@@ -5,15 +5,15 @@ import {
   Icon,
   Label,
   Modal,
-  Header,
   Popup,
   Form,
-  Radio, Item,
+  Radio,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import React from 'react';
 
+// eslint-disable-next-line consistent-return
 function isRemote(remote) {
   if (remote) {
     return (
@@ -30,7 +30,6 @@ function isRemote(remote) {
 
 function hasSkill(skill) {
   const studentSkills = ['machine learning', 'software engineering'];
-
   const has = {
     margin: '0.2rem',
     backgroundColor: '#5680E9',
@@ -41,7 +40,6 @@ function hasSkill(skill) {
     backgroundColor: 'rgb(244, 244, 244)',
     color: '#8f8f8f',
   };
-
   if (studentSkills.includes(skill)) {
     return (
         <Label circular key={skill} style={has}>
@@ -57,13 +55,10 @@ function hasSkill(skill) {
 }
 
 function formatDate(stringDate) {
-
   if (typeof stringDate === 'undefined') {
     return 'N/A';
   }
-
   const date = moment(stringDate).fromNow();
-
   if (date !== 'Invalid Date') {
     return date;
   }
@@ -78,7 +73,6 @@ function description(internshipDescription) {
         // internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
     );
   } catch (e) {
-    console.log('No description field.');
     return '';
   }
 }
@@ -133,12 +127,10 @@ function siteName(url) {
     return 'NSF-REU';
   } catch (e) {
     return 'Unknown';
-
   }
 }
 
 function InternshipListingCard(props) {
-
   return (
       <Card className={'listings'}>
         <Card.Content>
@@ -219,7 +211,6 @@ function InternshipListingCard(props) {
                           name='radioGroup'
                           value='this'
                           checked={'this'}
-                          // onChange={}
                       />
                     </Form.Field>
                     <Form.Field>
@@ -228,7 +219,6 @@ function InternshipListingCard(props) {
                           name='radioGroup'
                           value='that'
                           checked={'that'}
-                          // onChange={}
                       />
                     </Form.Field>
                     <Form.TextArea label='Other' placeholder='Explain the error here. Feel free to provide screenshots or links.' />
@@ -242,7 +232,6 @@ function InternshipListingCard(props) {
               </Modal.Actions>
             </Modal>
           </div>
-
         </Card.Content>
       </Card>
   );

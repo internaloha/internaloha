@@ -2,32 +2,23 @@ import _ from 'lodash';
 import linkedinData from './data/linkedin.parsed.data';
 import simplyData from './data/simplyHired.parsed.data';
 import zipData from './data/ziprecruiter.parsed.data';
-import cheggData from './data/internships.parsed.data';
 import monsterData from './data/monster.parsed.data';
 import youternData from './data/youtern.parsed.data';
 import iHire from './data/iHireTech.parsed.data';
 import glassData from './data/glassdoor.parsed.data';
 import indeedData from './data/indeed.parsed.data';
-import angelData from './data/angellist.parsed.data';
-// import manualData from './data/manualInput.parsed.data';
 import apple from './data/apple.parsed.data';
 import aexpress from './data/aexpress.parsed.data';
 import ACM from './data/acm.parsed.data';
-import stackoverflow from './data/stackoverflow.parsed.data';
 import idealist from './data/idealist.parsed.data';
 import coolworks from './data/coolworks.parsed.data';
 
 class InternshipsFilters {
-
   /* Returns total number of internship listing */
   total = (data) => data.length;
 
   mergeData() {
     let data = [];
-    // data = _.concat(data, cheggData);
-    // data = _.concat(data, nsfData);
-    // data = _.concat(data, manualData);
-    // data = _.concat(data, stackoverflow);
     data = _.concat(data, iHire);
     data = _.concat(zipData, simplyData);
     data = _.concat(data, monsterData);
@@ -35,25 +26,11 @@ class InternshipsFilters {
     data = _.concat(data, youternData);
     data = _.concat(data, glassData);
     data = _.concat(data, indeedData);
-    // data = _.concat(data, angelData);
     data = _.concat(data, idealist);
     data = _.concat(data, ACM);
     data = _.concat(data, coolworks);
     data = _.concat(data, aexpress);
     data = _.concat(data, apple);
-
-    // console.log('zip:', zipData.length);
-    // console.log('simply:', simplyData.length);
-    // console.log('chegg:', cheggData.length);
-    // console.log('monster:', monsterData.length);
-    // console.log('linkedIn:', linkedinData.length);
-    // console.log('total:', data.length);
-    // let test = _.map(linkedinData, 'company');
-    // console.log(test.sort());
-    //
-    // let test2 = _.map(angelData, 'location.state');
-    //console.log(_.groupBy(test2));
-    //console.log(_.filter(angelData, ['location.state', '']));
     return data;
   }
 
@@ -66,12 +43,9 @@ class InternshipsFilters {
     let companies = _.map(data, 'company');
     const categories = _.flattenDeep(companies);
     companies = _.uniq(categories).sort();
-
     const number = _.groupBy(data, 'company');
     const info = [];
-
     for (let i = 0; i < companies.length; i++) {
-
       info.push({
         key: companies[i],
         text: `${companies[i]} (${number[companies[i]].length})`,
@@ -79,14 +53,12 @@ class InternshipsFilters {
         num: number[companies[i]].length,
       });
     }
-
     // Adding any parameter to front of array
     info.unshift({
       key: 'any',
       text: 'Any',
       value: 'any',
     });
-
     return info;
   }
 
@@ -97,25 +69,12 @@ class InternshipsFilters {
  * num: the number of internships with said company */
   dropdownLocation(data) {
     let location = _.map(data, 'location.state');
-    // console.log(location);
     const categories = _.flattenDeep(location);
     location = _.uniq(categories).sort();
-    // console.log(location);
-
     const number = _.groupBy(data, 'location.state');
     const info = [];
-
     for (let i = 0; i < location.length; i++) {
-
       const locationAmount = number[location[i]].length;
-      // if (location[i] === 'Remote') {
-      //   locationAmount = _.filter(data, ['remote', true]).length
-      //       + number[location[i]].length;
-      //
-      // } else {
-      //   locationAmount = number[location[i]].length;
-      // }
-
       info.push({
         key: location[i],
         text: `${location[i]} (${locationAmount})`,
@@ -123,7 +82,6 @@ class InternshipsFilters {
         num: number[location[i]].length,
       });
     }
-
     return info;
   }
 
@@ -134,17 +92,10 @@ class InternshipsFilters {
 * num: the number of internships with the associated skills */
   dropdownSkills(data) {
     const skills = _.map(data, 'skills');
-    // console.log(skills);
     const flattenSkills = _.flattenDeep(skills);
-    // console.log(flattenSkills);
     const uniqueSkills = _.uniq(flattenSkills).sort();
-    // console.log(uniqueSkills);
-
     const number = _.groupBy(flattenSkills);
-    // console.log(number);
-
     const info = [];
-
     for (let i = 0; i < uniqueSkills.length; i++) {
       info.push({
         key: uniqueSkills[i],
@@ -172,7 +123,6 @@ class InternshipsFilters {
     if (tags.length === 0) {
       return data;
     }
-
     const skills = [];
     let exists = false;
     let counter = 0;
@@ -228,13 +178,11 @@ class InternshipsFilters {
     if (input.length === 0) {
       return data;
     }
-
     let arrLocations = [];
     for (let i = 0; i < input.length; i++) {
       arrLocations = arrLocations.concat(_.filter(data, ['location.state', input[i]]));
     }
     return arrLocations;
-
   }
 
   isRemote(data, value) {
