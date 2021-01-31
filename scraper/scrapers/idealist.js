@@ -1,9 +1,7 @@
-/* eslint-disable no-await-in-loop */
 import puppeteer from 'puppeteer';
-import fs from 'fs';
 import moment from 'moment';
 import log from 'loglevel';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, writeToJSON } from './scraperFunctions.js';
 
 const searchQuery = process.argv.slice(2).join(' ');
 
@@ -15,13 +13,6 @@ async function createDate(date, sub) {
   log.info(moment(newDate, 'LL'));
   const momentDate = moment(newDate, 'LL');
   return momentDate.toDate();
-}
-
-async function writeData(data) {
-  await fs.writeFile('./data/canonical/idealist.canonical.data.json',
-    JSON.stringify(data, null, 4), 'utf-8',
-    err => (err ? log.warn('\nData not written!', err) :
-      log.warn('\nData successfully written!')));
 }
 
 async function getLinks(page) {
@@ -206,7 +197,7 @@ async function main() {
     await getElements(page).then((elements) => {
       getData(page, elements).then((data => {
         log.info(data);
-        writeData(data);
+        writeToJSON(data, 'idealist');
       }));
     });
     await browser.close();
