@@ -3,17 +3,13 @@ import { Form, Input, Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 function SearchBox({ onSearch }) {
-
   const [search, setSearch] = useState('');
-
   const handleSearchChange = (event) => {
     setSearch(event.target.value);
   };
-
   const handleFormSubmit = () => {
     onSearch(search);
   };
-
   return (
       <Form onSubmit={handleFormSubmit}>
         <Input icon='search'

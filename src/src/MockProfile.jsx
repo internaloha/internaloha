@@ -3,91 +3,52 @@ import {
   Segment,
   Header,
   Dropdown,
-  Form, Modal, Button, Grid, Popup, Input, Checkbox, Label,
+  Form, Grid, Checkbox,
 } from 'semantic-ui-react';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
 import { recommendation, dropdownCareerInterest, isRemoteFunc } from './RecommendationScript';
 
 function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationVal, isRemote }) {
-
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
-  const location = internships.dropdownLocation(data);
-
-  // let locationChange = locationVal;
-  // let companyChange = companyVal;
-  // let sortChange = sortVal;
-  // let searchQueryChange = searchQuery;
-  // let remoteCheck = isRemote;
-
   let skillChange = skillsVal;
   let careerChange = careerVal;
   let recommendedData = [];
   let locationChange = locationVal;
   let remoteCheck = isRemote;
-
   const setFilters = () => {
-
     const newData = isRemoteFunc(recommendedData, remoteCheck);
-    // const locationFiltered = internships.filterByLocation(skillsFiltered, locationChange);
     onChildClick(newData, skillChange, careerChange, locationChange, remoteCheck);
-
     window.scrollTo({
       top: 70,
       left: 100,
       behavior: 'smooth',
     });
   };
-
-  // console.log(test(data))
-
-  // const handleSearchChange = (event) => {
-  //   searchQueryChange = event.target.value;
-  // };
-  //
-  // const getRemote = () => {
-  //   if (remoteCheck) {
-  //     remoteCheck = false;
-  //   } else {
-  //     remoteCheck = true;
-  //   }
-  //   setFilters();
-  // };
-
   const handleSubmit = () => {
     setFilters();
   };
-
   const getRemote = () => {
-    if (remoteCheck) {
-      remoteCheck = false;
-    } else {
-      remoteCheck = true;
-    }
+    remoteCheck = !remoteCheck;
     recommendedData = recommendation(skillChange, careerChange, data, locationChange);
     setFilters();
   };
-
   const getLocation = (event, { value }) => {
     locationChange = value;
     recommendedData = recommendation(skillChange, careerChange, data, locationChange);
     setFilters();
   };
-
   const getSkills = (event, { value }) => {
     skillChange = value;
     recommendedData = recommendation(skillChange, careerChange, data, locationChange);
     setFilters();
   };
-
   const getCareerInterest = (event, { value }) => {
     careerChange = value;
     recommendedData = recommendation(skillChange, careerChange, data, locationChange);
     setFilters();
   };
-
   return (
       <Segment style={{ width: '100%', borderRadius: '10px', marginTop: '3rem' }}>
         <Grid columns={'equal'}>
@@ -143,10 +104,8 @@ function MockProfile({ onChildClick, skillsVal, careerVal, passedData, locationV
               </Header>
             </Grid.Column>
           </Grid.Row>
-
         </Grid>
       </Segment>
-
   );
 }
 

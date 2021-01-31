@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, Header } from 'semantic-ui-react';
+import { Table, Header } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 class StatisticsRow extends React.Component {
@@ -108,10 +108,8 @@ class StatisticsRow extends React.Component {
                 </Header>
               </Table.Cell>
             </Table.Row>
-
         );
-      } else {
-        return (
+      } return (
             <Table.Row>
               <Table.Cell>{site}</Table.Cell>
               <Table.Cell>{formatDate(lastScraped)}</Table.Cell>
@@ -130,9 +128,7 @@ class StatisticsRow extends React.Component {
               <Table.Cell>{description}%</Table.Cell>
             </Table.Row>
         );
-      }
     }
-
     return (
         <>
           {lastRow(this.props.statistics.site)}

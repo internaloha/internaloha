@@ -66,7 +66,7 @@ function getDueDates(input, textInput) {
       }
 
       const dueDate = new Date(date);
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.NaN(dueDate.valueOf())) {
         textInput.due = dueDate;
         console.log(dueDate);
       }
@@ -91,7 +91,7 @@ function getDueDates(input, textInput) {
         }
         const dueDate = new Date(date);
         // Only update Due date if the Date generated is valid
-        if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+        if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
           textInput.due = dueDate;
           console.log(dueDate);
         }
@@ -126,7 +126,7 @@ function getStartDates(input, textInput) {
 
       console.log(date);
       const dueDate = new Date(date);
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.start = dueDate;
         console.log(dueDate);
       }
@@ -150,7 +150,7 @@ function getStartDates(input, textInput) {
       console.log(date);
       const dueDate = new Date(date);
       // Only update Due date if the Date generated is valid
-      if (dueDate instanceof Date && !isNaN(dueDate.valueOf())) {
+      if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.start = dueDate;
         console.log(dueDate);
       }
