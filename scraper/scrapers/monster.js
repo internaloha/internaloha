@@ -1,23 +1,47 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import userAgent from 'user-agents';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
-// const myArgs = process.argv.slice(2);
+async function getData(page) {
+  const results = [];
+  for (let i = 0; i < 6; i++) {
+    // get title, company, description, city, state, and zip
+    results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[itemprop="description"]', 'innerHTML'));
+    results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
+    results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
+    results.push(fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText'));
+  }
+  return Promise.all(results);
+}
+
+async function setSearchFilter(page) {
+  try {
+    await page.waitForSelector('input[id="searchview"]');
+    await page.type('input[id="searchview"]', 'internship');
+    await page.keyboard.press('Enter');
+    await page.waitForSelector('button[id="locations-filter-acc"]');
+    await page.click('button[id="locations-filter-acc"]');
+    await page.waitForSelector('input[id="locations-filter-input"]');
+    await page.click('input[id="locations-filter-input"]');
+    // Separated 'United' and 'States' so that dropdown list comes out
+    await page.type('input[id="locations-filter-input"]', 'United');
+    await page.type('input[id="locations-filter-input"]', ' States');
+  } catch (err2) {
+    Logger.debug(err2.message);
+  }
+}
 
 async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
+  let browser;
+  let page;
   const data = [];
+  Logger.enableAll(); // this enables console logging. Will replace with CLI args later.
   try {
-    const page = await browser.newPage();
-    await page.setUserAgent(userAgent.toString());
-    await page.setViewport({
-      width: 1100, height: 700,
-    });
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser();
     await page.goto('https://www.monster.com/jobs/search/?q=computer-science-intern&intcid=skr_navigation_nhpso_searchMain&tm=30');
+    await setSearchFilter(page);
     let nextPage = true;
     while (nextPage === true) {
       try {
@@ -30,57 +54,56 @@ async function main() {
         nextPage = false;
       }
     }
-    const elements = await page.$$('div[id="SearchResults"] section:not(.is-fenced-hide):not(.apas-ad)');
-    // grabs all the posted dates
-    const posted = await page.evaluate(
-      () => Array.from(
-        document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
-        a => a.textContent,
-      ),
-    );
-    // grabs all position
-    const position = await page.evaluate(
-      () => Array.from(
-       document.querySelectorAll('div[id="SearchResults"] div.summary h2'),
-       a => a.textContent,
-      ),
-    );
-    // grabs all the company
-    const company = await page.evaluate(
-      () => Array.from(
-       document.querySelectorAll('div[id="SearchResults"] div.company span.name'),
-       a => a.textContent,
-      ),
-    );
 
-    let totalJobs = 0;
-    for (let i = 0; i < elements.length; i++) {
+    await page.waitForNavigation;
+    const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
+    // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
+    for (let i = 2; i <= totalPage; i++) {
+      // Fetching all urls in page into a list
+      const urls = await page.evaluate(() => {
+        const urlFromWeb = document.querySelectorAll('h3 a');
+        const urlList = [...urlFromWeb];
+        return urlList.map(url => url.href);
+      });
+      // Iterate through all internship positions
       try {
-        const date = new Date();
-        const lastScraped = new Date();
-        const element = elements[i];
-        await element.click();
-        await page.waitForSelector('div[id="JobPreview"]');
-        await page.waitForTimeout(500);
-        const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
-        const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
-        const url = await page.url();
-        let daysToGoBack = 0;
-        if (posted[i].includes('today')) {
+        for (let j = 0; j < urls.length; j++) {
+          await page.goto(urls[j]);
+          const lastScraped = new Date();
+          const [position, company, description, city, state, zip] = await getData(page);
+          data.push({
+            url: urls[j],
+            position: position,
+            company: company.trim(),
+            location: { city: city, state: state, zip: zip },
+            lastScraped: lastScraped,
+            description: description,
+          });
+        }
+      } catch (err1) {
+        Logger.error(err1.message);
+      }
+      // await page.waitForSelector('div[id="JobPreview"]');
+      // await page.waitForTimeout(500);
+      // const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
+      // const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
+      // const url = await page.url();
+      /** let daysToGoBack = 0;
+       if (posted[i].includes('today')) {
           daysToGoBack = 0;
         } else {
           // getting just the number (eg. 1, 3, 20...)
           daysToGoBack = posted[i].match(/\d+/g);
         }
-        // going backwards
-        date.setDate(date.getDate() - daysToGoBack);
-        let zip = location.match(/([^\D,])+/g);
-        if (zip != null) {
+       // going backwards
+       date.setDate(date.getDate() - daysToGoBack);
+       let zip = location.match(/([^\D,])+/g);
+       if (zip != null) {
           zip = zip[0];
         } else {
           zip = 'N/A';
         }
-        data.push({
+       data.push({
           position: position[i].trim(),
           company: company[i].trim(),
           location: {
@@ -93,26 +116,19 @@ async function main() {
           lastScraped: lastScraped,
           description: description.trim(),
         });
-        await page.waitForSelector('div[id="JobPreview"]');
-        totalJobs++;
-      } catch (err) {
+       await page.waitForSelector('div[id="JobPreview"]');
+       totalJobs++;
+       } catch (err) {
         Logger.debug('Error fetching link, skipping');
       }
+       }* */
     }
-
     // write results to JSON file
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-          Logger.debug('\nData successfully written!')));
-    await Logger.debug('Total internships scraped:', totalJobs);
+    await writeToJSON(data, 'monster');
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-          Logger.debug('\nData successfully written!')));
+    Logger.debug('\nData successfully written!');
     await browser.close();
   }
 }

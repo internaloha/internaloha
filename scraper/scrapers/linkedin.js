@@ -14,15 +14,6 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-/**
- * Adds delay time, since waitFor is deprecated.
- */
-function delay(time) {
-  return new Promise(function (resolve) {
-    setTimeout(resolve, time);
-  });
-}
-
 async function setSearchFilter(page) {
   try {
     await page.waitForSelector('input[id="searchview"]');
@@ -36,10 +27,10 @@ async function setSearchFilter(page) {
     await page.type('input[id="locations-filter-input"]', 'United');
     await page.type('input[id="locations-filter-input"]', ' States');
     // Delay prevents code from bypassing page changes
-    await delay(5000);
+    /** await delay(5000);
     await page.waitForSelector('li[id="locations-filter-input-option-0"]');
     await page.click('li[id="locations-filter-input-option-0"]');
-    await delay(5000);
+    await delay(5000);* */
   } catch (err2) {
     Logger.debug(err2.message);
   }
@@ -57,10 +48,10 @@ async function main() {
     await autoScroll(page);
     await setSearchFilter(page);
     /** let loadMore = true;
-    let loadCount = 0;
-    let totalInternships = 0;
-    // Sometimes infinite scroll stops and switches to a "load more" button
-    while (loadMore === true && loadCount <= 15) {
+     let loadCount = 0;
+     let totalInternships = 0;
+     // Sometimes infinite scroll stops and switches to a "load more" button
+     while (loadMore === true && loadCount <= 15) {
       try {
         await page.waitForTimeout(1000);
         await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
@@ -71,50 +62,61 @@ async function main() {
       }
     }* */
     /** const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
-    const times = await page.evaluate(
-      () => Array.from(
-      // eslint-disable-next-line no-undef
-        document.querySelectorAll('div.result-card__meta.job-result-card__meta time:last-child'),
-          a => a.textContent,
-      ),
-    ); * */
-
-    const urls = await page.evaluate(
-      () => Array.from(
-       // eslint-disable-next-line no-undef
-        document.querySelectorAll('a.result-card__full-card-link'),
-          a => a.href,
-      ),
-    );
-
-    // Logger.info('Total Listings:', elements.length);
-    // const skippedURLs = [];
-    for (let i = 0; i < urls.length; i++) {
-      // sometimes clicking it doesn't show the panel, try/catch to allow it to keep going
+     const times = await page.evaluate(
+     () => Array.from(
+     // eslint-disable-next-line no-undef
+     document.querySelectorAll('div.result-card__meta.job-result-card__meta time:last-child'),
+     a => a.textContent,
+     ),
+     ); * */
+    let nextPage = true;
+    while (nextPage === true) {
       try {
-        await page.waitForSelector('div[class="details-pane__content details-pane__content--show"]');
-        await page.goto(urls[i]);
-        const lastScraped = new Date();
-        const [position, company, description, city, state] = await getData(page);
-        // const date = new Date(posted).toISOString();
-        data.push({
-          url: urls[i],
-          position: position,
-          company: company.trim(),
-          location: { city: city, state: state },
-          lastScraped: lastScraped,
-          description: description,
-        });
-      } catch (err1) {
-        Logger.error(err1.message);
+        await page.waitForTimeout(2000);
+        await page.waitForSelector('div[class="mux-search-results"]');
+        await page.click('a[id="loadMoreJobs"]');
+        Logger.info('Nagivating to next page....');
+      } catch (e2) {
+        Logger.debug('Finished loading all pages.');
+        nextPage = false;
       }
+      await page.waitForNavigation;
+      const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
+      // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
+      for (let i = 2; i <= totalPage; i++) {
+        // Fetching all urls in page into a list
+        const urls = await page.evaluate(() => {
+          const urlFromWeb = document.querySelectorAll('h3 a');
+          const urlList = [...urlFromWeb];
+          return urlList.map(url => url.href);
+        });
+        // Iterate through all internship positions
+        try {
+          for (let j = 0; j < urls.length; j++) {
+            await page.goto(urls[j]);
+            const lastScraped = new Date();
+            const [position, company, description, city, state] = await getData(page);
+            // const date = new Date(posted).toISOString();
+            data.push({
+              url: urls[i],
+              position: position,
+              company: company.trim(),
+              location: { city: city, state: state },
+              lastScraped: lastScraped,
+              description: description,
+            });
+          }
+        } catch (err1) {
+          Logger.error(err1.message);
+        }
+      }
+      // write results to JSON file
+      await writeToJSON(data, 'linkedin');
     }
-    await writeToJSON(data, 'linkedin');
-    await browser.close();
-  } catch (err) {
-    Logger.error(err.message);
+  } catch (err1) {
+    Logger.debug('Our Error:', err1.message);
+    Logger.debug('\nData successfully written!');
     await browser.close();
   }
 }
-
 main();
