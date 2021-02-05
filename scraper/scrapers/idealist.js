@@ -43,7 +43,6 @@ async function getData(page, elements) {
         log.info(element);
         await page.goto(`https://www.idealist.org${elements[i][j]}`);
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
-        log.info(position);
         let company = '';
         try {
           company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
@@ -51,17 +50,13 @@ async function getData(page, elements) {
           log.info('No company found. Setting to N/A');
           company = 'N/A';
         }
-        log.trace(position);
         let location = '';
         let locationArray = {};
         try {
           location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 jczOfB"]', 'innerText');
-          log.info(location);
           const loc = location.split(', ');
           const city = loc[0].trim();
-          log.info(city);
           const state = loc[1].trim();
-          log.info(state);
           locationArray = { city: city, state: state };
         } catch (e) {
           log.warn(e.message);
