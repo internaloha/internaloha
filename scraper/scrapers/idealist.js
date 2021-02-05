@@ -56,11 +56,12 @@ async function getData(page, elements) {
         let locationArray = {};
         try {
           location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 jczOfB"]', 'innerText');
-          location = location.match(/\|\D+[^Share]/gm);
-          let loc = location[0].split('| ');
-          loc = loc[1].split(', ');
+          log.info(location);
+          const loc = location.split(', ');
           const city = loc[0].trim();
+          log.info(city);
           const state = loc[1].trim();
+          log.info(state);
           locationArray = { city: city, state: state };
         } catch (e) {
           log.warn(e.message);
