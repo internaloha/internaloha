@@ -13,10 +13,12 @@ async function getData() {
 
 async function main() {
 
+  console.log(myArgs);
+
   if (myArgs === 'dev' || myArgs.length === 0) {
     Logger.enableAll();
   } else if (myArgs === 'production') {
-    Logger.setLevel('WARN');
+    Logger.setLevel('warn');
   } else {
     console.log('Invalid argument supplied, please use "dev" or "production".');
 

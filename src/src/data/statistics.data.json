@@ -199,21 +199,21 @@
     },
     {
         "site": "ACM",
-        "lastScraped": "2021-01-28T09:12:30.388Z",
+        "lastScraped": "2021-02-01T23:20:18.329Z",
         "entries": 180,
         "position": 180,
         "company": 180,
-        "contact": 5,
+        "contact": 6,
         "location": 180,
         "posted": 0,
-        "due": 4,
-        "start": 4,
+        "due": 10,
+        "start": 3,
         "end": 0,
-        "compensation": 25,
-        "qualifications": 85,
+        "compensation": 28,
+        "qualifications": 78,
         "skills": 180,
         "description": 180,
-        "remote": 5
+        "remote": 7
     },
     {
         "site": "Coolworks",
@@ -253,7 +253,7 @@
     },
     {
         "site": "Apple",
-        "lastScraped": "2021-01-28T09:12:41.131Z",
+        "lastScraped": "2021-02-01T23:20:26.672Z",
         "entries": 20,
         "position": 20,
         "company": 20,
@@ -293,16 +293,16 @@
         "entries": 1249,
         "position": 1246,
         "company": 1246,
-        "contact": 101,
+        "contact": 102,
         "location": 1249,
         "posted": 509,
-        "due": 22,
-        "start": 39,
+        "due": 28,
+        "start": 38,
         "end": 0,
-        "compensation": 296,
-        "qualifications": 345,
+        "compensation": 299,
+        "qualifications": 338,
         "skills": 1213,
         "description": 1246,
-        "remote": 502
+        "remote": 504
     }
 ]
