@@ -2,7 +2,7 @@
 // eslint-disable-next-line global-require
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo } from './scraper-functions.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -99,11 +99,9 @@ const myArgs = process.argv.slice(2);
               const element = elements[i];
               const elementLink = elements[i - 1];
 
-
               const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
               const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
               const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
-
 
                   // page.evaluate(() => document.querySelector('.RightPane > aside h2 ').innerHTML);
               // const company = await page.evaluate(() => document.querySelector('.RightPane .viewjob-labelWithIcon').innerHTML);
@@ -201,7 +199,7 @@ const myArgs = process.argv.slice(2);
 
                 const position = await fetchInfo(page, 'div[class="viewjob-jobTitle h2"]', 'innerText');
                 const company = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
-                let location = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+                const location = await fetchInfo(page, 'div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
                 const description = await fetchInfo(page, 'div[class="viewjob-jobDescription"]', 'innerHTML');
 
                 let posted = '';
@@ -240,7 +238,7 @@ const myArgs = process.argv.slice(2);
                     state: location.match(/([^ ,]*)$/)[0],
                   },
                   posted: date,
-                  url: allJobLinks[i-1],
+                  url: allJobLinks[i - 1],
                   lastScraped: lastScraped,
                   description: description,
                 });
@@ -256,7 +254,7 @@ const myArgs = process.argv.slice(2);
             }
           }
 
-          let nextPage = await page.$('a[class="Pagination-link next-pagination"]');
+          const nextPage = await page.$('a[class="Pagination-link next-pagination"]');
           await nextPage.click();
           totalPages++;
 

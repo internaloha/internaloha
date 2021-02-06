@@ -1,11 +1,10 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo, autoScroll } from './scraperFunctions.js';
+import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#user_email';
 const PASSWORD_SELECTOR = '#user_password';
 const CTA_SELECTOR = '#new_user > div:nth-child(6) > input';
-
 
 // angellist2
 const commandLine = process.argv.slice(2);
@@ -14,7 +13,7 @@ console.log(credentials);
 
 async function startBrowser() {
   const browser = await puppeteer.launch({ headless: false, devtools: true,
-      slowMo: 2000 // slow down by 250ms
+      slowMo: 2000, // slow down by 250ms
   });
   const page = await browser.newPage();
   return { browser, page };
@@ -59,7 +58,7 @@ async function playTest(url) {
 
   const data = [];
   for (let i = 0; i < elements.length; i++) {
-    //elements[i] = 'http://angel.co' + elements[i];
+    // elements[i] = 'http://angel.co' + elements[i];
     const element = `http://angel.co${elements[i]}`;
     await page.goto(element, { waitUntil: 'domcontentloaded' });
     const currentURL = page.url();
@@ -101,5 +100,5 @@ async function playTest(url) {
   } catch (err) {
     console.log('Our Error: ', err.message);
   }
-  //process.exit(1);
+  // process.exit(1);
 })();

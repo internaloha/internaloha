@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo, isRemote } from './scraperFunctions.js';
+import { fetchInfo, isRemote } from './scraper-functions.js';
 
 (async () => {
 

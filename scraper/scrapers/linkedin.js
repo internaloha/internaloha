@@ -1,7 +1,7 @@
 /* eslint-disable max-len,no-await-in-loop,no-console */
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo, autoScroll } from './scraperFunctions.js';
+import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 (async () => {
 

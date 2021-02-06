@@ -1,6 +1,6 @@
 import moment from 'moment';
 import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 const searchQuery = process.argv.slice(2).join(' ');
 

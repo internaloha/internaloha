@@ -1,11 +1,10 @@
 /* eslint-disable no-await-in-loop */
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
 import userAgent from 'user-agents';
+import { fetchInfo } from './scraper-functions.js';
 
 // const myArgs = process.argv.slice(2);
-
 
 (async () => {
 
