@@ -11,90 +11,42 @@ function readFile(file) {
 }
 
 function getStatistics(name, data) {
-  let list = [];
-  let position = 0;
-  let company = 0;
-  let contact = 0;
-  let location = 0;
-  let posted = 0;
-  let due = 0;
-  let start = 0;
-  let end = 0;
-  let compensation = 0;
-  let qualifications = 0;
-  let description = 0;
-  let skills = 0;
-  let remote = 0;
-  console.log(name);
-  let lastScraped = 0;
-  try {
-    lastScraped = data[0].lastScraped;
-  } catch (err2) {
-    lastScraped = 'Error';
-  }
-
-  for (let i = 0; i < data.length; i++) {
-    if ((data[i].position) && data[i].position !== 'Error') {
-      position++;
-    }
-    if (data[i].company && data[i].position !== 'Error') {
-      company++;
-    }
-    if (data[i].contact) {
-      contact++;
-    }
-    if (data[i].location) {
-      location++;
-    }
-    if (data[i].posted) {
-      posted++;
-    }
-    if (data[i].due) {
-      due++;
-    }
-    if (data[i].start) {
-      start++;
-    }
-    if (data[i].end) {
-      end++;
-    }
-    if (data[i].compensation && data[i].compensation.length > 0) {
-      compensation++;
-    }
-    if (data[i].qualifications) {
-      qualifications++;
-    }
-    if (data[i].remote) {
-      remote++;
-    }
-    if (data[i].description && data[i].position !== 'Error') {
-      description++;
-    }
-    if ((data[i].skills) && (data[i].skills.length > 0)) {
-      skills++;
-    }
-  }
-
-  list = {
+  const counts = {
     site: name,
-    lastScraped: lastScraped,
-    entries: data.length,
-    position: position,
-    company: company,
-    contact: contact,
-    location: location,
-    posted: posted,
-    due: due,
-    start: start,
-    end: end,
-    compensation: compensation,
-    qualifications: qualifications,
-    skills: skills,
-    description: description,
-    remote: remote,
+    position: 0,
+    company: 0,
+    contact: 0,
+    location: 0,
+    posted: 0,
+    due: 0,
+    start: 0,
+    end: 0,
+    compensation: 0,
+    qualifications: 0,
+    skills: 0,
+    remote: 0,
+    lastScraped: 'N/A',
+    index: 0,
+    url: 0,
+    description: 0,
   };
-
-  return list;
+  if (data.length !== 0) {
+    for (let i = 0; i < data.length; i++) {
+      Object.keys(data[i]).forEach(function (key) {
+        if (key === 'skills' || key === 'compensation') {
+          if (data[i][key] && data[i][key].length > 0) {
+            counts[key]++;
+          }
+        } else if (data[i][key] && data[i][key] !== 'Error') {
+          counts[key]++;
+        }
+      });
+    }
+    if ('lastScraped' in data[0]) {
+      counts.lastScraped = data[0].lastScraped;
+    }
+  }
+  return counts;
 }
 
 const zipData = readFile('../src/src/data/ziprecruiter.parsed.data.json');
@@ -132,30 +84,28 @@ data = _.concat(data, aexpress);
 data = _.concat(data, apple);
 
 statistics.push(
-    getStatistics('simplyHired', simplyData),
-    getStatistics('LinkedIn', linkedInData),
-    getStatistics('ZipRecruiter', zipData),
-    // getStatistics('Chegg Internships', cheggData),
-    getStatistics('Monster', monsterData),
-    // getStatistics('NSF-REU', nsfData),
-    getStatistics('YouTern', youternData),
-    getStatistics('iHireTech', iHire),
-    getStatistics('Glassdoor', glassData),
-    getStatistics('Indeed', indeedData),
-    getStatistics('Idealist', idealist),
-    getStatistics('AngelList', angelData),
-    getStatistics('Stackoverflow', stackoverflow),
-    getStatistics('ACM', ACM),
-    getStatistics('Coolworks', coolworks),
-    getStatistics('Aexpress', aexpress),
-    getStatistics('Apple', apple),
-    getStatistics('Manual', manualData),
-    getStatistics('Total', data),
+  getStatistics('simplyHired', simplyData),
+  getStatistics('LinkedIn', linkedInData),
+  getStatistics('ZipRecruiter', zipData),
+  getStatistics('Monster', monsterData),
+  getStatistics('YouTern', youternData),
+  getStatistics('iHireTech', iHire),
+  getStatistics('Glassdoor', glassData),
+  getStatistics('Indeed', indeedData),
+  getStatistics('Idealist', idealist),
+  getStatistics('AngelList', angelData),
+  getStatistics('Stackoverflow', stackoverflow),
+  getStatistics('ACM', ACM),
+  getStatistics('Coolworks', coolworks),
+  getStatistics('Aexpress', aexpress),
+  getStatistics('Apple', apple),
+  getStatistics('Manual', manualData),
+  getStatistics('Total', data),
 );
 
 console.log(statistics);
 
 fs.writeFile('../src/src/data/statistics.data.json',
-    JSON.stringify(statistics, null, 4), 'utf-8',
-    err => (err ? console.log('\nData not written!', err) :
-        console.log('\nData successfully written!')));
+  JSON.stringify(statistics, null, 4), 'utf-8',
+  err => (err ? console.log('\nData not written!', err) :
+    console.log('\nData successfully written!')));
