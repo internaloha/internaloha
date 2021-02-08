@@ -1,8 +1,8 @@
 import { Button, Grid, Icon, Label, Item, Header, Popup, Modal, Form, Radio } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import React from 'react';
-import swal from 'sweetalert';
 
+// eslint-disable-next-line consistent-return
 function isRemote(remote) {
   if (remote) {
     return (
@@ -74,9 +74,9 @@ function siteName(url) {
 function hasSkill(skill, hasSkills) {
 
   if (typeof (hasSkills) === 'undefined') {
+    // eslint-disable-next-line no-param-reassign
     hasSkills = ['react', 'software engineering'];
   }
-  const studentSkills = ['react', 'software engineering'];
 
   const has = {
     margin: '0.2rem',
@@ -128,7 +128,6 @@ function description(internshipDescription) {
         // internshipDescription.split('\n').map((item, key) => <span key={key}>{item}<br/></span>)
     );
   } catch (e) {
-    console.log('No description field.');
     return '';
   }
 }
@@ -236,7 +235,6 @@ function InternshipListingCard2(props) {
                       name='radioGroup'
                       value='this'
                       checked={'this'}
-                      // onChange={}
                   />
                 </Form.Field>
                 <Form.Field>
@@ -245,7 +243,6 @@ function InternshipListingCard2(props) {
                       name='radioGroup'
                       value='that'
                       checked={'that'}
-                      // onChange={}
                   />
                 </Form.Field>
               </Form>
