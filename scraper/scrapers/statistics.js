@@ -113,6 +113,7 @@ const ACM = readFile('../src/src/data/acm.parsed.data.json');
 const apple = readFile('../src/src/data/apple.parsed.data.json');
 const coolworks = readFile('../src/src/data/coolworks.parsed.data.json');
 const aexpress = readFile('../src/src/data/aexpress.parsed.data.json');
+const hawaiiSlackData = readFile('../src/src/data/hawaiislack.parsed.data.json');
 
 let data = [];
 data = _.concat(zipData, simplyData);
@@ -130,6 +131,7 @@ data = _.concat(data, ACM);
 data = _.concat(data, coolworks);
 data = _.concat(data, aexpress);
 data = _.concat(data, apple);
+data = _.concat(data, hawaiiSlackData);
 
 statistics.push(
     getStatistics('simplyHired', simplyData),
@@ -149,6 +151,7 @@ statistics.push(
     getStatistics('Coolworks', coolworks),
     getStatistics('Aexpress', aexpress),
     getStatistics('Apple', apple),
+    getStatistics('HawaiiSlack', hawaiiSlackData),
     getStatistics('Manual', manualData),
     getStatistics('Total', data),
 );

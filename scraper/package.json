@@ -55,6 +55,7 @@
     "aexpress": "node scrapers/aexpress.js",
     "hn": "node scrapers/hn.js",
     "apple": "node scrapers/apple.js",
+    "hawaiislack": "node scrapers/hawaiislack.js",
     "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js"
   },
   "browserslist": {
