@@ -2,8 +2,6 @@ import puppeteer from 'puppeteer';
 import log from 'loglevel';
 import { fetchInfo, writeToJSON } from './scraperFunctions.js';
 
-const searchQuery = process.argv.slice(2).join(' ');
-
 async function getLinks(page) {
   return page.evaluate(
     () => Array.from(
@@ -108,12 +106,11 @@ async function getData(page, elements) {
 }
 
 async function main() {
+  let browser;
+  let page;
+  log.enableAll(); // this enables console logging
   try {
-    const browser = await puppeteer.launch({
-      headless: false,
-    });
-    const page = await browser.newPage();
-    log.enableAll(); // this enables console logging
+    [browser, page] = await startBrowser();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.idealist.org/en/');
     await page.waitForSelector('#layout-root > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.lnKqQM > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.dCQmbn.BaseLayout__PageContent-sc-10xtgtb-2.heQjSt > div.Box__BaseBox-sc-1wooqli-0.bsSECh > div > div.Box__BaseBox-sc-1wooqli-0.hpEILX > div.Box__BaseBox-sc-1wooqli-0.datyjK > div > div > div.idlst-flx.idlst-lgncntr.Box__BaseBox-sc-1wooqli-0.cDmdoN > div > form > div.Box__BaseBox-sc-1wooqli-0.ejycyy > div > input');

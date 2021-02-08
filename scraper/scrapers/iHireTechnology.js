@@ -1,7 +1,5 @@
-import puppeteer from 'puppeteer';
-import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getLinks(page) {
   return page.evaluate(
@@ -14,10 +12,12 @@ async function getLinks(page) {
 }
 
 async function main() {
-  const browser = await puppeteer.launch({ devtools: true }); // Slow down by 250 ms
-  const page = await browser.newPage();
+  let browser;
+  let page;
+  const data = [];
   log.enableAll(); // this enables console logging
   try {
+    [browser, page] = await startBrowser();
     // sign in process
     await page.goto('https://www.ihiretechnology.com/jobseeker/account/password');
     await page.type('input[id=EmailAddress]', 'ausui@hawaii.edu');
@@ -62,7 +62,6 @@ async function main() {
     await page.click('ul#EmploymentType-aggregation-group.nav.nav-list > li:nth-child(6) > div.checkbox > label > input');
     log.trace('Setting as internship tag...');
     // variables
-    const jobArray = [];
     const links = [];
     let jobNumber = 0;
     try {
@@ -117,7 +116,7 @@ async function main() {
               }
             }
             date.setDate(date.getDate() - daysBack);
-            jobArray.push({
+            data.push({
               position: position.trim(),
               location: {
                 city: location.match(/([^,]*)/g)[0],
@@ -138,13 +137,13 @@ async function main() {
     } catch (er2) {
       log.warn('Error scraping links:', er2.message);
     }
-    log.info(jobArray);
+    log.info(data);
     log.info(jobNumber);
-    // write json file
-    fs.writeFile('./data/canonical/iHireTech.canonical.data.json', JSON.stringify(jobArray, null, 4), 'utf-8', function (err) {
-      if (err) throw err;
-      log.trace('Your info has been written into JSON file');
-    });
+    try {
+      await writeToJSON(data, 'iHireTech');
+    } catch (err) {
+      log.warn('Something went wrong', err.message);
+    }
     await browser.close();
     log.trace('Process Completed');
   } catch (err) {

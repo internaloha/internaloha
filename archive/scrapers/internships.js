@@ -3,7 +3,7 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import performance from 'perf_hooks';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo } from './scraper-functions.js';
 import userAgent from 'user-agents';
 
 const myArgs = process.argv.slice(2);

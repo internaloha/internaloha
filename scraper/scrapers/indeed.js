@@ -1,16 +1,14 @@
-import puppeteer from 'puppeteer';
 import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, startBrowser } from './scraper-functions.js';
 
 async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
-  log.enableAll(); // Enables all console logging tags
+  let browser;
+  let page;
   const data = [];
+  log.enableAll(); // Enables all console logging tags
   try {
-    const page = await browser.newPage();
+    [browser, page] = await startBrowser();
     // time out after 10 seconds
     await page.setDefaultNavigationTimeout(10000);
     await page.setViewport({ width: 1200, height: 1000 });

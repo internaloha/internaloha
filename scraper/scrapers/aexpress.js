@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];

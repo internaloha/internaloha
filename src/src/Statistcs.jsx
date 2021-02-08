@@ -25,7 +25,6 @@ class Statistics extends React.Component {
   };
 
   render() {
-
     return (
         <div>
           <Container style={{ marginTop: '10rem', marginBottom: '4rem' }}>
