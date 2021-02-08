@@ -78,6 +78,7 @@ async function main() {
               const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
               const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
               const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
+
               let qualifications = '';
               try {
                 qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
@@ -189,6 +190,7 @@ async function main() {
               Logger.trace('InternBit Error: ', err.message);
             }
           }
+
           const nextPage = await page.$('a[class="Pagination-link next-pagination"]');
           await nextPage.click();
           totalPages++;

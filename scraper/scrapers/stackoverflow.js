@@ -1,5 +1,6 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
+
 import log from 'loglevel';
 import { fetchInfo, isRemote } from './scraper-functions.js';
 
