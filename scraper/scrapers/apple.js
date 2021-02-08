@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 /**
  * Adds delay time, since waitFor is deprecated.

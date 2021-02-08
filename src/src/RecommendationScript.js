@@ -1,19 +1,12 @@
 import natural from 'natural';
 import React from 'react';
 import _ from 'lodash';
-import career_interest_to_skill from './career_interest_to_skill';
 import {
-  Button,
-  Card,
-  Grid,
-  Icon,
-  Label,
-  Modal,
-  Header,
   Popup,
-  Form,
-  Radio, Item, Dropdown
+  Dropdown,
 } from 'semantic-ui-react';
+import career_interest_to_skill from './career_interest_to_skill';
+
 function test(data) {
   const TfIdf = natural.TfIdf;
   const tfidf = new TfIdf();
@@ -128,6 +121,7 @@ function recommendation(tags, careers, data, location) {
     }
     if (foundTag === true) {
 
+      // eslint-disable-next-line no-param-reassign
       data[i].recommendation = num / total;
       skills.push(data[i]);
     }

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, startBrowser } from './scraperFunctions.js';
+import { fetchInfo, startBrowser } from './scraper-functions.js';
 
 async function main() {
   let browser;
