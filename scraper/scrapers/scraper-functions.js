@@ -64,7 +64,7 @@ function isRemote(data) {
  * @returns {Promise<(Browser|Page)[]>}
  */
 async function startBrowser(headless = true, devtools = false, slowMo = 0) {
-  const browser = await puppeteer.launch({ headless: headless, devtools: devtools, slowMo: slowMo});
+  const browser = await puppeteer.launch({ headless: headless, devtools: devtools, slowMo: slowMo });
   const page = await browser.newPage();
   await page.setViewport({ width: 1366, height: 768 });
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');

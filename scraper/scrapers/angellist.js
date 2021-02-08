@@ -100,4 +100,5 @@ async function playTest() {
   }
   // process.exit(1);
 
-playTest().then();
+  playTest().then();
+}
