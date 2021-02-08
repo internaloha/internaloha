@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, autoScroll } from './scraperFunctions.js';
+import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#user_email';
 const PASSWORD_SELECTOR = '#user_password';

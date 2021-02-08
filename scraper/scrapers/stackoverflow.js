@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, isRemote } from './scraperFunctions.js';
+import { fetchInfo, isRemote } from './scraper-functions.js';
 
 async function main() {
   const browser = await puppeteer.launch({

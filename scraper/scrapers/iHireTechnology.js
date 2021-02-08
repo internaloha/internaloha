@@ -1,5 +1,5 @@
 import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getLinks(page) {
   return page.evaluate(
