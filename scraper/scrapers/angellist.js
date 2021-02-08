@@ -99,6 +99,5 @@ async function playTest() {
     log.warn('Our Error: ', err.message);
   }
   // process.exit(1);
-
-  playTest().then();
 }
+playTest().then();
