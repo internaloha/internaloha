@@ -1,18 +1,6 @@
-import moment from 'moment';
+import puppeteer from 'puppeteer';
 import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
-
-const searchQuery = process.argv.slice(2).join(' ');
-
-async function createDate(date, sub) {
-  let newDate = date.substring(sub);
-  log.info(`newDate 2 ${newDate}`);
-  newDate = newDate.replace(/,/g, '');
-  log.info(`newDate 3 ${newDate}`);
-  log.info(moment(newDate, 'LL'));
-  const momentDate = moment(newDate, 'LL');
-  return momentDate.toDate();
-}
+import { fetchInfo, writeToJSON } from './scraperFunctions.js';
 
 async function getLinks(page) {
   return page.evaluate(
@@ -51,7 +39,7 @@ async function getData(page, elements) {
       for (let j = 0; j < elements[i].length; j++) {
         const element = `https://www.idealist.org${elements[i][j]}`;
         log.info(element);
-        await page.goto(element, { waitUntil: 'domcontentloaded' });
+        await page.goto(`https://www.idealist.org${elements[i][j]}`);
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
         let company = '';
         try {
@@ -63,10 +51,8 @@ async function getData(page, elements) {
         let location = '';
         let locationArray = {};
         try {
-          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"]', 'innerText');
-          location = location.match(/\|\D+[^Share]/gm);
-          let loc = location[0].split('| ');
-          loc = loc[1].split(', ');
+          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 jczOfB"]', 'innerText');
+          const loc = location.split(', ');
           const city = loc[0].trim();
           const state = loc[1].trim();
           locationArray = { city: city, state: state };
@@ -98,75 +84,19 @@ async function getData(page, elements) {
           log.warn('No startDate found. Setting to N/A');
           time = 'N/A';
         }
-        let start = '';
-        try {
-          // try to click the element. If it doesn't exist, we know there's no start date
-          await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
-          start = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
-          const newDate = start.match(/\b(\w*Start Date\w*)\b ([0-9]){1,2}, ([0-9]){4}/g);
-          if (newDate != null) {
-            start = await createDate(newDate.toString(), 13);
-          } else {
-            start = '';
-          }
-        } catch (e) {
-          log.info('No startDate found. Setting to N/A');
-          start = '';
-        }
-        let due = '';
-        try {
-          // try to click the element. If it doesn't exist, we know there's no due date
-          await page.click('div[class="Text-sc-1wv914u-0 TPzlz"]');
-          due = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 TPzlz"]', 'innerText');
-          const newDate = due.match(/\b(\w*Deadline\w*)\b ([0-9]){1,2}, ([0-9]){4}/g);
-          log.info(newDate);
-          if (newDate != null) {
-            due = await createDate(newDate.toString(), 8);
-          } else {
-            due = '';
-          }
-        } catch (e) {
-          log.info('No dueDate found. Setting to N/A');
-          due = '';
-        }
         const lastScraped = new Date();
         // clicking read more description
         await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
         const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 ctyuXi"]', 'innerHTML');
-        if (due !== '') {
-          data.push({
-            position: position,
-            company: company,
-            location: locationArray,
-            posted: time,
-            due: due,
-            url: element,
-            lastScraped: lastScraped,
-            description: description,
-          });
-        } else if (start !== '') {
-          data.push({
-            position: position,
-            company: company,
-            location: locationArray,
-            posted: time,
-            due: due,
-            start: start,
-            url: element,
-            lastScraped: lastScraped,
-            description: description,
-          });
-        } else {
-          data.push({
-            position: position,
-            company: company,
-            location: locationArray,
-            posted: time,
-            url: element,
-            lastScraped: lastScraped,
-            description: description,
-          });
-        }
+        data.push({
+          position: position,
+          company: company,
+          location: locationArray,
+          posted: time,
+          url: element,
+          lastScraped: lastScraped,
+          description: description,
+        });
       }
     }
     return data;
@@ -198,7 +128,6 @@ async function main() {
         writeToJSON(data, 'idealist');
       }));
     });
-    await browser.close();
   } catch (e) {
     log.warn(e);
   }
