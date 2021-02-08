@@ -1,7 +1,7 @@
 import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo } from './scraper-functions.js';
 
 const myArgs = process.argv.slice(2);
 async function main() {

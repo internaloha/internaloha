@@ -4,7 +4,7 @@ import fs from 'fs';
 import natural from 'natural';
 import path from 'path';
 import Logger from 'loglevel';
-import { isRemote } from './scraperFunctions.js';
+import { isRemote } from './scraper-functions.js';
 
 const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
 
@@ -486,7 +486,7 @@ function convertRegion(input, to) {
  * @param  {String} file  Relative path for the file we want to parse
  * @return N/A       Doesn't return anything
  */
-function multi_parser(file) {
+function multiParser(file) {
 
   Logger.info('Parsing:', file);
 
@@ -713,5 +713,5 @@ function fromDir(startPath, filter) {
 const files = fromDir('./data/canonical', '.json');
 
 for (let i = 0; i < files.length; i++) {
-  multi_parser(files[i]);
+  multiParser(files[i]);
 }
