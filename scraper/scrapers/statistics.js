@@ -90,7 +90,7 @@ function main() {
   fs.writeFile('../src/src/data/statistics.data.json',
     JSON.stringify(statistics, null, 4), 'utf-8',
     err => (err ? console.log('\nData not written!', err) :
-      Logger.info('\nData successfully written!')));
+      Logger.info('Data successfully written!')));
 }
 
 main();

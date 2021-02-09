@@ -27,7 +27,7 @@ async function main() {
   const data = [];
   Logger.enableAll(); // Enable console logs, will replace with CLI control later.
   try {
-    Logger.info('Executing script...');
+    Logger.info('Executing script for aexpress');
     [browser, page] = await startBrowser();
     await page.goto('https://jobs.americanexpress.com/jobs');
     await setSearchFilters(page);
@@ -67,4 +67,6 @@ async function main() {
   }
 }
 
-main();
+// main();
+
+export default main;
