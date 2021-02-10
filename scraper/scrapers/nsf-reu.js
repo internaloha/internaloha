@@ -1,15 +1,13 @@
 import log from 'loglevel';
-import puppeteer from 'puppeteer';
 import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 async function main() {
+  let browser;
+  let page;
   const data = [];
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
   log.enableAll();
   try {
-    const page = await browser.newPage();
+    [browser, page] = await startBrowser();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5049');
     await page.waitForSelector('button[id="itemsperpage_top"]');
@@ -74,15 +72,18 @@ async function main() {
             company: company[i],
             location: { city: city[i], state: state[i] },
             lastScraped: lastScraped,
-            description: description,
+            description: description[i],
           });
         }
       } catch (err1) {
         log.error(err1.message);
       }
+      console.log(data);
     } catch (err2) {
       log.error(err2.message);
     }
+    await writeToJSON(data, 'nsf-reu');
+    await browser.close();
   } catch (err3) {
     log.error(err3.message);
   }
