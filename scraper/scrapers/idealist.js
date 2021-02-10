@@ -1,6 +1,7 @@
-import puppeteer from 'puppeteer';
 import log from 'loglevel';
-import { fetchInfo, writeToJSON } from './scraperFunctions.js';
+import { startBrowser, fetchInfo, writeToJSON } from './scraper-functions.js';
+
+const searchQuery = process.argv.slice(2).join(' ');
 
 async function getLinks(page) {
   return page.evaluate(
@@ -106,6 +107,7 @@ async function getData(page, elements) {
 }
 
 async function main() {
+  // eslint-disable-next-line no-unused-vars
   let browser;
   let page;
   log.enableAll(); // this enables console logging
