@@ -1,7 +1,6 @@
 import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
-import fs from 'fs';
-import { fetchInfo, autoScroll } from './scraperFunctions.js';
+import { fetchInfo, autoScroll, writeToJSON } from './scraperFunctions.js';
 
 async function main() {
   const data = [];
@@ -64,11 +63,12 @@ async function main() {
         if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute'))
             || (time.includes('minutes'))) {
           daysBack = 0;
-        } else if ((time.includes('week')) || (time.includes('weeks'))) {
-          daysBack = time.match(/\d+/g) * 7;
-        } else {
-          daysBack = time.match(/\d+/g);
-        }
+        } else
+          if ((time.includes('week')) || (time.includes('weeks'))) {
+            daysBack = time.match(/\d+/g) * 7;
+          } else {
+            daysBack = time.match(/\d+/g);
+          }
         date.setDate(date.getDate() - daysBack);
         const posted = date;
         let state = '';
@@ -116,11 +116,12 @@ async function main() {
       if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute'))
           || (time.includes('minutes'))) {
         daysBack = 0;
-      } else if ((time.includes('week')) || (time.includes('weeks'))) {
-        daysBack = time.match(/\d+/g) * 7;
-      } else {
-        daysBack = time.match(/\d+/g) * 30;
-      }
+      } else
+        if ((time.includes('week')) || (time.includes('weeks'))) {
+          daysBack = time.match(/\d+/g) * 7;
+        } else {
+          daysBack = time.match(/\d+/g) * 30;
+        }
       date.setDate(date.getDate() - daysBack);
       const posted = date;
       let state = '';
@@ -147,16 +148,12 @@ async function main() {
     }
     Logger.info('Total internships scraped:', totalInternships);
     Logger.info('Closing browser!');
+    await writeToJSON(data, 'linkedin');
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
     await browser.close();
   }
-
-  // write results to JSON file
-  await fs.writeFile('./data/canonical/linkedin.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8', err => (err ? Logger.trace('\nData not written!', err) :
-          Logger.debug('\nData successfully written!')));
 }
 
 main();
