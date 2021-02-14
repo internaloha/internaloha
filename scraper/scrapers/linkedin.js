@@ -1,15 +1,17 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
-import { fetchInfo, autoScroll, writeToJSON } from './scraperFunctions.js';
+import { fetchInfo, autoScroll, writeToJSON, startBrowser } from './scraperFunctions.js';
 
 async function main() {
+  let browser;
+  let page;
   const data = [];
-  const browser = await puppeteer.launch({
+  Logger.enableAll();
+ /** const browser = await puppeteer.launch({
     headless: false,
-  });
+  });* */
   try {
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser(false);
     await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
     await page.waitForSelector('section.results__list');
     Logger.info('Fetching jobs...');
