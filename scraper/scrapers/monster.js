@@ -2,7 +2,7 @@ import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import userAgent from 'user-agents';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo, writeToJSON } from './scraperFunctions.js';
 
 // const myArgs = process.argv.slice(2);
 
@@ -101,18 +101,14 @@ async function main() {
     }
 
     // write results to JSON file
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-        JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-            Logger.debug('\nData successfully written!')));
+    await writeToJSON(data, 'monster');
+    Logger.debug('\nData successfully written!');
     await Logger.debug('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-        JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-            Logger.debug('\nData successfully written!')));
+    await writeToJSON(data, 'monster');
+    Logger.debug('\nData successfully written!');
     await browser.close();
   }
 }
