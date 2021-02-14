@@ -1,5 +1,5 @@
 import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import { startBrowser, writeToJSON } from './scraperFunctions.js';
 
 async function main() {
   let browser;
@@ -16,6 +16,13 @@ async function main() {
     await page.click('a[onclick="showItemsPerPageForm(event, \'All\', \'?unitid=5049\')"]');
     try {
       await page.waitForSelector('td[data-label="Site Information: "] > div > a');
+       const urls = await page.evaluate(() => {
+         const urlFromWeb = document.querySelectorAll('td[data-label="Site Information: "] > div > a');
+         const urlList = [...urlFromWeb];
+         return urlList.map(url => url.href);
+      });
+      log.info(urls);
+      log.info(urls.length);
       const position = await page.evaluate(() => {
         const positions = document.querySelectorAll('td[data-label="Site Information: "] > div > a');
         const posList = [...positions];
@@ -23,13 +30,6 @@ async function main() {
       });
       log.info(position);
       log.info(position.length);
-      const urls = await page.evaluate(() => {
-        const urlFromWeb = document.querySelectorAll('td[data-label="Site Information: "] > div > a');
-        const urlList = [...urlFromWeb];
-        return urlList.map(url => url.href);
-      });
-      log.info(urls);
-      log.info(urls.length);
       const company = await page.evaluate(() => {
         const companies = document.querySelectorAll('td[data-label="Site Information: "] > div > strong');
         const compList = [...companies];
@@ -37,14 +37,21 @@ async function main() {
       });
       log.info(company);
       log.info(company.length);
-      await page.waitForSelector('td[data-label="Site Location: "] > div');
+      const description = await page.evaluate(() => {
+        const skills = document.querySelectorAll('td[data-label="Additional Information: "] > div ');
+        const skillList = [...skills];
+        return skillList.map(list => list.innerText);
+      });
+      log.info(description);
+      log.info(description.length);
+       await page.waitForSelector('td[data-label="Site Location: "] > div');
       const location = await page.evaluate(() => {
         const locations = document.querySelectorAll('td[data-label="Site Location: "] > div');
         const locList = [...locations];
         return locList.map(loc => loc.innerText);
       });
-      log.info(location);
-      log.info(location.length);
+      log.info(description);
+      log.info(description.length);
       const city = [];
       const state = [];
       for (let i = 0; i < location.length; i++) {
@@ -56,13 +63,6 @@ async function main() {
       log.info(city.length);
       log.info(state);
       log.info(state.length);
-      const description = await page.evaluate(() => {
-        const skills = document.querySelectorAll('td[data-label="Additional Information: "] > div ');
-        const skillList = [...skills];
-        return skillList.map(list => list.innerText);
-      });
-      log.info(description);
-      log.info(description.length);
       try {
         const lastScraped = new Date();
         for (let i = 0; i < urls.length; i++) {
@@ -78,7 +78,7 @@ async function main() {
       } catch (err1) {
         log.error(err1.message);
       }
-      console.log(data);
+      log.info(data);
     } catch (err2) {
       log.error(err2.message);
     }
