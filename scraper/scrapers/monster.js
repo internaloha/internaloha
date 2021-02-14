@@ -1,19 +1,16 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import userAgent from 'user-agents';
-import { fetchInfo, writeToJSON } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 // const myArgs = process.argv.slice(2);
 
 async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
+  let browser;
+  let page;
   const data = [];
+  Logger.enableAll();
   try {
-    const page = await browser.newPage();
-    await page.setUserAgent(userAgent.toString());
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser(false);
     await page.setViewport({
       width: 1100, height: 700,
     });
