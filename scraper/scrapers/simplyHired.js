@@ -1,7 +1,7 @@
 import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
+import { fetchInfo } from './scraper-functions.js';
 
 const myArgs = process.argv.slice(2);
 async function main() {
@@ -78,6 +78,7 @@ async function main() {
               const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
               const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
               const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
+
               let qualifications = '';
               try {
                 qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
@@ -189,6 +190,7 @@ async function main() {
               Logger.trace('InternBit Error: ', err.message);
             }
           }
+
           const nextPage = await page.$('a[class="Pagination-link next-pagination"]');
           await nextPage.click();
           totalPages++;

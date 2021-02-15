@@ -2,7 +2,7 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, autoScroll } from './scraperFunctions.js';
+import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 const myArgs = process.argv.slice(2);
 

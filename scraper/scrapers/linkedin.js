@@ -1,7 +1,7 @@
 import Logger from 'loglevel';
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo, autoScroll } from './scraperFunctions.js';
+import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 async function main() {
   const data = [];

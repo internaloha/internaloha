@@ -1,11 +1,12 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, autoScroll } from './scraperFunctions.js';
+import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#user_email';
 const PASSWORD_SELECTOR = '#user_password';
 const CTA_SELECTOR = '#new_user > div:nth-child(6) > input';
+
 // angellist2
 const commandLine = process.argv.slice(2);
 const credentials = commandLine.slice(0, 2);
