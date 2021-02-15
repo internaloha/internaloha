@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -21,14 +21,13 @@ async function setSearchFilters(page) {
   await page.click('button[id="search-btn"]');
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
-  Logger.enableAll(); // Enable console logs, will replace with CLI control later.
   try {
-    Logger.info('Executing script...');
-    [browser, page] = await startBrowser();
+    Logger.info('Executing script for aexpress');
+    [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.americanexpress.com/jobs');
     await setSearchFilters(page);
     await page.waitForSelector('mat-panel-title > p > a');
@@ -67,4 +66,13 @@ async function main() {
   }
 }
 
-main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;

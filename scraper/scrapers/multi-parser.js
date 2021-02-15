@@ -622,7 +622,12 @@ function fromDir(startPath, filter) {
   return results;
 }
 
-const files = fromDir('./data/canonical', '.json');
-for (let i = 0; i < files.length; i++) {
-  multiParser(files[i]);
+function main() {
+  const files = fromDir('./data/canonical', '.json');
+  for (let i = 0; i < files.length; i++) {
+    multiParser(files[i]);
+  }
+
 }
+
+export default main;

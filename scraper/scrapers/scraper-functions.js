@@ -81,7 +81,7 @@ async function writeToJSON(data, name) {
   await fs.writeFile(`./data/canonical/${name}.canonical.data.json`,
     JSON.stringify(data, null, 4), 'utf-8',
     err => (err ? Logger.error('\nData not written!', err) :
-      Logger.info('\nData successfully written!')));
+      Logger.info(`\nData successfully written for ${name}!`)));
 }
 
 /**
@@ -107,4 +107,15 @@ function convertPostedToDate(posted) {
   return date.setDate(date.getDate() - daysBack);
 }
 
-export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate };
+function checkHeadlessOrNot(args) {
+  const myArgs = args.slice(2);
+  if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
+    return false;
+  }
+  if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
+    return true;
+  }
+    return -1;
+}
+
+export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate, checkHeadlessOrNot };
