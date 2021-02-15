@@ -1,12 +1,12 @@
 import log from 'loglevel';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
-import puppeteer from "puppeteer";
 
 async function getData(page) {
   const results = [];
-  // Scrapes position, company, posted, and description
-  for (let i = 0; i < 4; i++) {
-    results.push(fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container jobsearch-JobInfoHeader-title-containerEji"]', 'innerText'));
+  // Scrapes position, location, company, posted, and description
+  for (let i = 0; i < 5; i++) {
+    results.push(fetchInfo(page, 'h1[class="icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-CompanyInfoWithoutHeaderImage jobsearch-CompanyInfoWithReview"] > div > div > div:nth-child(2)', 'innerText'));
     results.push(fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML'));
@@ -20,17 +20,8 @@ async function main() {
   const data = [];
   log.enableAll(); // Enables all console logging tags
   try {
-    const browser = await puppeteer.launch({
-      headless: false,
-    });
-
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
-    // [browser, page] = await startBrowser();
+    [browser, page] = await startBrowser();
     // time out after 10 seconds
-    await page.setDefaultNavigationTimeout(10000);
-    await page.setViewport({ width: 1200, height: 1000 });
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.indeed.com/');
     await page.waitForSelector('input[id="text-input-what"]');
     await page.waitForSelector('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
@@ -52,7 +43,6 @@ async function main() {
     await page.waitForSelector('div[class="serp-filters-sort-by-container"]');
     const date = await page.evaluate(
       () => Array.from(
-        // eslint-disable-next-line no-undef
         document.querySelectorAll('a[href*="sort=date"]'),
         a => a.getAttribute('href'),
       ),
@@ -73,7 +63,6 @@ async function main() {
       // Getting href link for internship filter
       internshipDropdown = await page.evaluate(
         () => Array.from(
-          // eslint-disable-next-line no-undef
           document.querySelectorAll('ul[id="filter-job-type-menu"] li a[href*="internship"]'),
           a => a.getAttribute('href'),
         ),
@@ -90,13 +79,10 @@ async function main() {
     let totalJobs = 0;
     const urls = [];
     let hasNext = true;
-    // while there a next page, keep clicking
     while (hasNext === true) {
-      // getting all job link for that page
       await page.waitForSelector('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a');
       const url = await page.evaluate(
         () => Array.from(
-          // eslint-disable-next-line no-undef
           document.querySelectorAll('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a'),
           a => a.getAttribute('href'),
         ),
@@ -120,16 +106,9 @@ async function main() {
       for (let j = 0; j < urls[i].length; j++) {
         await page.goto(`https://www.indeed.com${urls[i][j]}`);
         try {
+          await page.waitForSelector('h1[class="icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title"]');
           // eslint-disable-next-line prefer-const
-          let [position, company, posted, description] = await getData(page);
-          let location = '';
-          try {
-            await page.click('div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
-            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)', 'innerText');
-          } catch (noLocation) {
-            log.trace('--- Trying with other class name ---');
-            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child', 'innerText');
-          }
+          let [position, location, company, posted, description] = await getData(page);
           const lastScraped = new Date();
           const skills = 'N/A';
           const todayDate = new Date();
@@ -178,7 +157,7 @@ async function main() {
       }
     }
     // write results to JSON file
-    await writeToJSON(data, 'acm');
+    await writeToJSON(data, 'indeed');
     log.info('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
