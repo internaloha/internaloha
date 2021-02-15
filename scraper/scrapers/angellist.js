@@ -25,7 +25,7 @@ async function main(url) {
   await page.setViewport({ width: 1366, height: 768 });
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');
   await page.goto(url);
-  await page.waitForTimeout(30000);
+  //await page.waitForTimeout(30000);
   await page.waitForSelector(USERNAME_SELECTOR);
   await page.click(USERNAME_SELECTOR);
   await page.keyboard.type(credentials[0]);
@@ -33,28 +33,33 @@ async function main(url) {
   await page.keyboard.type(credentials[1]);
   await page.click(CTA_SELECTOR);
   await page.waitForNavigation();
-  await page.waitForTimeout(5000);
+  //await page.waitForTimeout(5000);
   await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
   await autoScroll(page);
   await autoScroll(page);
   await autoScroll(page);
   await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
-  const elements = await page.evaluate(
-      () => Array.from(
-          document.querySelectorAll('a.component_21e4d.defaultLink_7325e.information_7136e'),
-          a => a.getAttribute('href'),
-      ),
-  );
+  const elements = await page.$x('a.component_21e4d.defaultLink_7325e.information_7136e');
+  const src = await elements.getProperty('src');
+  const srcTxt = await src.jsonValue();
+  console.log({ srcTxt });
+  //test
+  // const elements = await page.JSON.parse(
+  //     () => Array.from(
+  //         document.querySelectorAll('a.component_21e4d.defaultLink_7325e.information_7136e'),
+  //         a => a.getAttribute('href'),
+  //     ),
+  // );
   log.info(elements.length);
   elements.forEach(element => {
     log.info(element);
   });
-  // fs.writeFileSync('angellist-urls.json', JSON.stringify(elements, null, 4),
-  //     (err) => {
-  //       if (err) {
-  //         console.log(err);
-  //       }
-  //     });
+  fs.writeFileSync('angellist-urls.json', JSON.stringify(elements, null, 4),
+      (err) => {
+        if (err) {
+          console.log(err);
+        }
+      });
   const data = [];
   for (let i = 0; i < elements.length; i++) {
     // elements[i] = 'http://angel.co' + elements[i];
@@ -100,4 +105,4 @@ async function playTest() {
   }
   // process.exit(1);
 }
-playTest().then();
+playTest();

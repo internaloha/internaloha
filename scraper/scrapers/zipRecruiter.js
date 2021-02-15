@@ -1,19 +1,16 @@
-/* eslint-disable max-len,no-console,no-await-in-loop */
-import puppeteer from 'puppeteer';
-import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, autoScroll } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON, autoScroll } from './scraper-functions.js';
 
 const myArgs = process.argv.slice(2);
 
 async function main() {
-  const browser = await puppeteer.launch({ headless: false });
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1100, height: 900 });
-  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+  let browser;
+  let page;
+  const data = [];
   log.enableAll();
   try {
-    await page.goto('https://www.ziprecruiter.com/');
+    [browser, page] = await startBrowser();
+    await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');    await page.waitForSelector('input[id="search1"]');
     await page.waitForSelector('input[id="search1"]');
     await page.waitForSelector('input[id="location1"]');
     const searchQuery = myArgs.join(' ');
@@ -36,7 +33,7 @@ async function main() {
     try {
       await page.evaluate(() => {
         [...document.querySelectorAll('menu[id="select-menu-search_filters_tags"] .select-menu-item')]
-            .find(element => element.textContent.includes('internship')).click();
+            .find(element => element.textContent.includes('Software Engineering Intern')).click();
       });
       log.trace('Filtering based on internship tag...');
     } catch (err5) {
@@ -49,7 +46,6 @@ async function main() {
     try {
       // Click the "Load More" button
       await page.click('.load_more_jobs');
-      // Jobs listed using infinite scroll, scrolls until it reaches ending
       await autoScroll(page);
     } catch (err) {
       log.warn('--- All jobs are Listed, no "Load More" button --- ');
@@ -62,7 +58,6 @@ async function main() {
             a => a.getAttribute('href'),
         ),
     );
-    const data = [];
     const skippedPages = [];
     let jobs = 0;
     log.info(elements.length);
@@ -118,11 +113,7 @@ async function main() {
       }
     }
     // write results to JSON file
-    await fs.writeFile('./data/canonical/ziprecruiter.canonical.data.json',
-        JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? log.warn('\nData not written!', err) :
-            log.info('\nData successfully written!')));
-
+    await writeToJSON(data, 'ziprecruiter');
     log.info('Total jobs scraped:', jobs);
     log.info('Total links skipped:', skippedPages.length);
     log.info('Links skipped:', skippedPages);
@@ -133,4 +124,4 @@ async function main() {
     await browser.close();
   }
 }
-main().then();
+main();

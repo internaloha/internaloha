@@ -1,28 +1,16 @@
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-
 import log from 'loglevel';
-import { fetchInfo, isRemote } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON, isRemote } from './scraper-functions.js';
 
 async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1100, height: 900 });
-  // eslint-disable-next-line max-len
-  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+  let browser;
+  let page;
+  const data = [];
   log.enableAll();
+  // eslint-disable-next-line max-len
   try {
+    [browser, page] = await startBrowser();
     await page.goto('https://stackoverflow.com/jobs?q=internship');
-    // filter by internship tag
-    // await page.waitForSelector('button[data-tab="Background"]');
-    // await page.click('button[data-tab="Background"]');
-    // await page.waitForSelector('input[id="jInternship"]');
-    // await page.click('input[id="jInternship"]');
-    // await page.waitForSelector('div[id="popover-background"] button');
-    // await page.click('div[id="popover-background"] button');
-    await page.waitForTimeout(2000);
+    await page.waitForNavigation;
     const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
     const number = text.match(/\d+/gm);
     log.trace('Internships found:', number[0]);
@@ -34,7 +22,6 @@ async function main() {
             a => `https://stackoverflow.com${a.getAttribute('href')}`,
         ),
     );
-    const data = [];
     // goes to each page
     for (let i = 0; i < number[0]; i++) {
       await page.goto(elements[i]);
@@ -47,7 +34,7 @@ async function main() {
           company = 'Unknown';
         }
         const posted = await fetchInfo(page, 'ul[class="horizontal-list horizontal-list__lg fs-body1 fc-black-500 ai-baseline mb24"]', 'innerText');
-        const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium pr48"]', 'innerHTML');
+        const description = await fetchInfo(page, 'section[class="mb32 fs-body2 fc-medium"]', 'innerHTML');
         const skills = await page.evaluate(
             () => Array.from(
                 // eslint-disable-next-line no-undef
@@ -85,10 +72,7 @@ async function main() {
         data.push({
           position: position.trim(),
           company: company.trim(),
-          location: {
-            city: city,
-            state: state,
-          },
+          location: { city: city, state: state },
           posted: date,
           url: elements[i],
           skills: skills,
@@ -100,14 +84,11 @@ async function main() {
         log.warn('Our Error: ', err.message);
       }
     }
-    await fs.writeFile('./data/canonical/stackoverflow.canonical.data.json',
-        JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? log.warn('\nData not written!', err) :
-            log.info('\nData successfully written!')));
+    await writeToJSON(data, 'stackoverflow');
     await browser.close();
   } catch (err) {
     log.warn('Our Error:', err.message);
     await browser.close();
   }
 }
-main().then();
+main();
