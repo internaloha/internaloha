@@ -5,27 +5,40 @@ import aexpress from './aexpress.js';
 import multi_parse from './multi-parser.js';
 import statistics from './statistics.js';
 
-const myArgs = process.argv.slice(2).join(' ');
+const myArgs = process.argv.slice(2);
 
-async function getData() {
+/**
+ *
+ * @param browser: Default: true (do not open up browser)
+ * @returns {Promise<unknown[]>}
+ */
+async function getData(headless = true) {
   const results = [];
-  results.push(apple());
-  results.push(acm());
-  results.push(aexpress());
+  results.push(apple(headless));
+  results.push(acm(headless));
+  results.push(aexpress(headless));
   return Promise.all(results);
 }
 
 async function main() {
-
-  if (myArgs === 'dev' || myArgs.length === 0) {
+  if (myArgs[0] === 'dev') {
     Logger.enableAll();
-  } else if (myArgs === 'production') {
+    if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
+      await getData(false);
+    } else if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
+      await getData(true);
+    } else {
+      console.log('Invalid argument supplied, please use "dev open", "dev close", or "production');
+      process.exit(0);
+    }
+  } else if (myArgs[0] === 'production') {
     Logger.setLevel('warn');
+    await getData(true);
   } else {
-    console.log('Invalid argument supplied, please use "dev" or "production".');
+    console.log('Invalid argument supplied, please use "dev open", "dev close", or "production".');
+    process.exit(0);
   }
 
-  await getData();
   Logger.info('Finished scraping!\nNow parsing');
   multi_parse();
   Logger.info('Finished parsing!\nNow getting statistics');

@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 /**
  * Adds delay time, since waitFor is deprecated.
@@ -44,14 +44,14 @@ async function setSearchFilter(page) {
   }
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
   // Logger.enableAll(); // Enable console logs until CLI in place
   try {
     Logger.info('Executing script for apple...');
-    [browser, page] = await startBrowser();
+    [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.apple.com/en-us/search?sort=relevance');
     await setSearchFilter(page);
     let totalPage = await page.evaluate(() => document.querySelector('form[id="frmPagination"] span:last-child').innerHTML);
@@ -89,6 +89,13 @@ async function main() {
   }
 }
 
-// main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
 
 export default main;

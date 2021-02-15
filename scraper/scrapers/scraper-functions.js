@@ -107,4 +107,15 @@ function convertPostedToDate(posted) {
   return date.setDate(date.getDate() - daysBack);
 }
 
-export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate };
+function checkHeadlessOrNot(args) {
+  const myArgs = args.slice(2);
+  if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
+    return false;
+  }
+  if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
+    return true;
+  }
+    return -1;
+}
+
+export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate, checkHeadlessOrNot };
