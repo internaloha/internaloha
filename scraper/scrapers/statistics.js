@@ -93,4 +93,5 @@ function main() {
       Logger.info('Data successfully written!')));
 }
 
-main();
+export default main;
+// main();
