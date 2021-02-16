@@ -43,19 +43,21 @@
     "indeed": "node scrapers/indeed.js",
     "monster": "node scrapers/monster.js",
     "linkedin": "node scrapers/linkedin.js",
-    "single-parse": "node scrapers/single_parser.js",
+    "single-parse": "node scrapers/single-parser.js",
     "youtern": "node scrapers/Youtern.js",
     "cool": "node scrapers/Cooworks.js",
     "stackoverflow": "node scrapers/stackoverflow.js",
     "glassdoor": "node scrapers/Glassdoor.js",
     "ihire": "node scrapers/iHireTechnology.js",
     "angellist": "node scrapers/angellist.js",
-    "acm": "node scrapers/acm.js",
+    "acm": "node scrapers/acm.js main",
     "coolworks": "node scrapers/Coolworks.js",
-    "aexpress": "node scrapers/aexpress.js",
+    "aexpress": "node scrapers/aexpress.js main",
     "hn": "node scrapers/hn.js",
-    "apple": "node scrapers/apple.js",
-    "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js"
+    "apple": "node scrapers/apple.js main",
+    "nsf": "node scrapers/nsf-reu.js",
+    "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js",
+    "scrapers": "node scrapers/main.js"
   },
   "browserslist": {
     "production": [

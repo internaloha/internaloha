@@ -3,7 +3,7 @@
         "url": "https://jobs.apple.com/en-us/details/200193216/animation-internship?team=SFTWR",
         "position": "Animation Internship",
         "posted": "2021-01-12T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:14.493Z",
+        "lastScraped": "2021-02-15T21:31:19.592Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Animation Internship"
@@ -13,41 +13,41 @@
     {
         "url": "https://jobs.apple.com/en-us/details/200180404/hardware-technology-internship?team=STDNT",
         "position": "Hardware Technology Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:15.877Z",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:20.938Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Hardware Technology Internship"
         },
-        "description": "<span data-reactid=\"148\">As an intern, you will work on real challenges the team faces as well as upcoming products. To be successful in this position, you have a strong technical foundation, are able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. You are motivated and prepared to work independently.</span>"
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200180397/product-design-internship?team=STDNT",
-        "position": "Product Design Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:17.379Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "Product Design Internship"
-        },
-        "description": "<span data-reactid=\"168\">As a member of a multi-functional design team at Apple, you will help to create the next generation of the world's finest hardware devices. You will conceive, design, and bring into production products that will re-define user experience. You will work closely with many different multi-functional teams including Industrial Design, Packaging, Safety, Hardware Engineering, EMC, and Marketing.</span>"
+        "description": "<span data-reactid=\"152\">Some responsibilities in Hardware or Silicon Engineering may include: \n\nYou will work on real challenges the team faces as well as upcoming products. \n\nYou have a strong technical foundation, are able to show initiative.\n\nLearn new technologies quickly, and possess excellent interpersonal and communication skills. \n\nYou are motivated and prepared to work independently.</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200180413/software-engineering-internship?team=STDNT",
         "position": "Software Engineering Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:19.056Z",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:22.302Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Software Engineering Internship"
         },
-        "description": "<span data-reactid=\"162\">Backend Development - You will be making the features that our users love (like Siri) work by communicating data to the user-facing applications. Backend development opportunities are available for students in the following areas: \n\nSiri, iCloud, Apple Maps, Core OS, OS X, Frameworks and Applications, Interactive Media Group, Audio/Video Software Integration and Localization, Advanced Computation, iLife, iWorks, Aperture, Pro Apps, iTunes, Security, Site Reliability Engineering (SRE) and Platform Infrastructure Engineering (PIE)\n\nCore OS - You want to be at the heart of Apple's Software organization. The Core OS team is responsible for the design and development of core technologies that are deployed across all Apple product areas including the iPhone, iPad, Watch, MacBook, iMac, Apple TV, and audio accessories. (Yes, that's pretty much everything.)\n\nSpecifically, the opportunity in CoreOS is in the sensor technology area. By integrating motion, optical, and other sophisticated sensing hardware to Apple's products, we are now able to build innovative features that are truly adaptive to the user and environment. \n\nWeb Development - You will help build web-based tools and applications to improve our products and do more for our customers. Our developers are responsible for crafting the direction of our products by considering the architecture, performance, testing, design, and implementation. And of course we look for engineers that use our products. \n\nEngineers here work on both UI level and lower-level implementation details. The successful intern candidate will be amenable to working in a dynamic, collaborative environment. The person filling this position must be a hands-on, enthusiastic, self-motivated developer with strong initiative and desire to succeed in a challenging environment. You will have a real passion for extraordinary user experiences and an eye for details. Those applying for the Web Development intern position should include a link to a web portfolio.</span>"
+        "description": "<span data-reactid=\"162\">Some responsibilities in Hardware or Silicon Engineering may include: \n\nBackend Development - Making the features that Apple users love (like Siri) work by presenting data to the user-facing applications. Backend development opportunities are available for students in the following areas: \n\nSiri, iCloud, Apple Maps, Core OS, OS X, Frameworks and Applications, Interactive Media Group, Audio/Video Software Integration and Localization, Advanced Computation, iLife, iWorks, Aperture, Pro Apps, iTunes, Security, Site Reliability Engineering (SRE) and Platform Infrastructure Engineering (PIE)\n\nCore OS - The Core OS team is responsible for the design and development of core technologies that are deployed across all Apple product areas including the iPhone, iPad, Watch, MacBook, iMac, Apple TV, and audio accessories. (Yes, that's pretty much everything.)\n\nWeb Development - Help build web-based tools and applications to improve our products and do more for our customers. Our developers are responsible for crafting the direction of our products by considering the architecture, performance, testing, design, and implementation. And of course we look for engineers that use our products. \n\nEngineers at Apple work on both UI level and lower-level implementation details. The successful intern candidate will be amenable to working in a dynamic, collaborative environment. The person filling this position must be a hands-on, enthusiastic, self-motivated developer with strong initiative and desire to succeed in a challenging environment. You will have a real passion for extraordinary user experiences and an eye for details. Those applying for the Web Development intern position should include a link to a web portfolio.</span>"
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200180397/product-design-internship?team=STDNT",
+        "position": "Product Design Internship",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:23.428Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "Product Design Internship"
+        },
+        "description": "<span data-reactid=\"170\">Some responsibilities in Product Design may include:\n\nAs a member of a multi-functional design team at Apple, you will help to create the next generation of the world's finest hardware devices. You will conceive, design, and bring into production products that will re-define user experience. You will work closely with many different multi-functional teams including Industrial Design, Packaging, Safety, Hardware Engineering, EMC, and Marketing.</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200193815/controls-design-engineering-internship?team=HRDWR",
         "position": "Controls Design Engineering Internship",
         "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:20.343Z",
+        "lastScraped": "2021-02-15T21:31:25.056Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Controls Design Engineering Internship"
@@ -55,76 +55,54 @@
         "description": "<span data-reactid=\"148\">We are seeking a highly motivated Controls Design Engineer to take part in the development of new thermal control algorithms. The candidate will be responsible for developing system identification techniques to predict hotspot temperatures. The intern will also work on developing and implementing self tuning controllers and linear/nonlinear state observers to be used in our closed-loop thermal management architecture. The role also involves working with the software team to ensure a robust controller implementation.\n</span>"
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200199653/technology-investigation-al-internship?team=STDNT",
-        "position": "Technology Investigation AL Internship",
-        "posted": "2021-01-20T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:21.499Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "Technology Investigation AL Internship"
-        },
-        "description": "<span data-reactid=\"154\">During your internship, you’ll be working in a team of computer vision and deep learning researchers and engineers to implement world class algorithms that pushes the state of the art. You’ll learn, and work on:  - Inventing and implementing state of the art computer vision algorithms.  - Collaborating with other teams in software and hardware to ensure the full pipeline runs efficiently and utilizes Apple hardware effectively.  - Cooperating with team members to prepare presentations, papers, and talks to explain your inventions.</span>"
-    },
-    {
         "url": "https://jobs.apple.com/en-us/details/200187781/vlsi-chip-design-internship?team=HRDWR",
         "position": "VLSI Chip Design Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:22.710Z",
+        "posted": "2021-01-22T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:26.588Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "VLSI Chip Design Internship"
         },
-        "description": "<span data-reactid=\"148\">Provide innovative solutions to improve area, power, and performance of chip level VLSI designs\nProvide detailed documentation of work and communicate across teams</span>"
+        "description": "<span data-reactid=\"150\">Some responsibilities in Hardware or Silicon Engineering may include: \nProviding innovative solutions to improve area, power, and performance of chip level VLSI designs\nProviding detailed documentation of work and communicate across teams</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200180414/engineering-program-management-internship?team=STDNT",
         "position": "Engineering Program Management Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:23.905Z",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:27.684Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Engineering Program Management Internship"
         },
-        "description": "<span data-reactid=\"146\">Define project plans and schedules. Drive project execution.\n\nLead internal and external multi-functional teams in engineering and validation activities\n\nEnsure tight inter-team coordination and communication\n\nStrong presentation and communication skills required\n\nUnderstand and communicate sophisticated, technical/Engineering issues\n\nIdentify and resolve conflicts, inter-dependencies and program issues quickly and efficiently\n\nLead development budgets and engineering builds</span>"
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200207912/machine-learning-engineer-internship-siri?team=MLAI",
-        "position": "Machine Learning Engineer Internship, Siri",
-        "posted": "2020-11-17T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:25.292Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "Machine Learning Engineer Internship, Siri"
-        },
-        "description": "<span data-reactid=\"148\">As an intern, you will work with a mentor and broader teams across Apple in order to advance Siri’s core machine learning capabilities in machine hearing, speech recognition, text-to-speech synthesis, and natural language understanding. You will have opportunities to broadly demonstrate your work, which may also lead to a conference publication.\n\nTo be successful in this position, you should have a strong technical foundation, be able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Interns are self-motivated, excellent problem solvers, quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>"
+        "description": "<span data-reactid=\"150\">Some responsibilities may include:\n\nDefining project plans and schedules and driving project execution\n\nLeading internal and external multi-functional teams in engineering and validation activities\n\nEnsuring tight team coordination and communication\n\nStrong presentation and communication skills \n\nUnderstand and communicate sophisticated, technical issues \n\nIdentify and resolve conflicts, inter-dependencies and program issues quickly and efficiently\n\nLead development budgets and engineering builds</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200180406/operations-manufacturing-design-engineer-internship?team=STDNT",
         "position": "Operations, Manufacturing Design Engineer Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:26.738Z",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:28.863Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Operations, Manufacturing Design Engineer Internship"
         },
-        "description": "<span data-reactid=\"156\">Areas of expertise within Manufacturing Design include:\n\n\nMANUFACTURING DESIGN ENGINEER\nAs an MDE, you will handle selection, implementation &amp; optimization of manufacturing processes for mechanical enclosure subassemblies for our legendary products. \n\nUtilize Mechanical Engineering experience and work cross functionally with Product Design Engineering and Industrial Design \n\nAssess product features for manufacturability, and recommend capable processes and equipment.\n\nDeveloping new manufacturing processes to enable future product design and conducting DOEs to validate process capability. \n\nWork with Global Supplier Managers to identify capable suppliers, assess their secondary processes for capacity, quality and cost.\n\nWork with suppliers to define and refine mechanical tooling, fixtures and establish capability / readiness. \n\nAudit supplier processes and assembly processes and support product phase builds from EVT, DVT PVT and ramp. \n\nAssist post production quality / cost improvement activity related to fixtures and processes.\n\n\nMANUFACTURING QUALITY ENGINEER\nAs an MQE, you will utilize Engineering, Factory Management &amp; Supply Chain skills in developing and implementing high efficiency inspection equipment, groundbreaking quality systems and ultimately the best products available.\n\nHelp lead the creation of state of the art inspection &amp; measurement equipment for Apple product.\n\nApply your understanding of quality control and manufacturing concepts to lead the development of specific Product Quality Plans (PQP) appropriate to program and commodity.\n\nProvide technical direction and mentorship to other Quality Engineers supporting the implementation of the PQP.\n\nIdentify and direct studies to implement improvements in measuring method where appropriate.\n\nCoordinate Quality Engineering functions for multiple programs in the product category. \n\nCollaborate with internal and external groups to ensure accurate definition of quality expectations and appropriate assurance techniques are used for the product.\n\nSupplier Quality Management - Assist in supplier selection process for new products and sourcing activities. Assess supplier production control and quality programs, identify shortfalls to expectations, and directly secure agreement to correct. Supervise each supplier's performance through measurement of production line statistics, company inspections, and audits.\n\n\nSUBJECT MATTER AUTHORITY\nOur SME's investigate and develop solutions to overcome difficult technical challenges that require non-standard manufacturing approaches. Apply your engineering skills to develop an in depth understanding of the process drivers that will drive successful implementation of significant improvements to mechanical enclosures. \n\nThe following activities fall within the scope of responsibilities:\n\nAssess mechanical designs and relate design goals to process, equipment, and material requirements to evaluate a set of options to tackle difficult manufacturing problems.\n\nResearch manufacturing processes and evaluate them for potential to achieve technical goals. \n\nPlan and execute development trials to test feasibility, optimize process inputs, and validate capabilities of process options. \n\nPresent analysis to key decision makers used to make significant commercial and design commitments.</span>"
+        "description": "<span data-reactid=\"160\">Some of the responsibilities in Manufacturing Engineering may include:\n\nMANUFACTURING DESIGN ENGINEER\nAs an MDE, you will handle selection, implementation &amp; optimization of manufacturing processes for mechanical enclosure subassemblies for our legendary products. \n\nUtilize Mechanical Engineering experience and work cross functionally with Product Design Engineering and Industrial Design \n\nAssess product features for manufacturability, and recommend capable processes and equipment.\n\nDeveloping new manufacturing processes to enable future product design and conducting DOEs to validate process capability. \n\nWork with Global Supplier Managers to identify capable suppliers, assess their secondary processes for capacity, quality and cost.\n\nWork with suppliers to define and refine mechanical tooling, fixtures and establish capability / readiness. \n\nAudit supplier processes and assembly processes and support product phase builds from EVT, DVT PVT and ramp. \n\nAssist post production quality / cost improvement activity related to fixtures and processes.\n\nMANUFACTURING QUALITY ENGINEER\nAs an MQE, you will utilize Engineering, Factory Management &amp; Supply Chain skills in developing and implementing high efficiency inspection equipment, groundbreaking quality systems and ultimately the best products available.\n\nHelp lead the creation of state of the art inspection &amp; measurement equipment for Apple product.\n\nApply your understanding of quality control and manufacturing concepts to lead the development of specific Product Quality Plans (PQP) appropriate to program and commodity.\n\nProvide technical direction and mentorship to other Quality Engineers supporting the implementation of the PQP.\n\nIdentify and direct studies to implement improvements in measuring method where appropriate.\n\nCoordinate Quality Engineering functions for multiple programs in the product category. \n\nCollaborate with internal and external groups to ensure accurate definition of quality expectations and appropriate assurance techniques are used for the product.\n\nSupplier Quality Management - Assist in supplier selection process for new products and sourcing activities. Assess supplier production control and quality programs, identify shortfalls to expectations, and directly secure agreement to correct. Supervise each supplier's performance through measurement of production line statistics, company inspections, and audits.\nSUBJECT MATTER AUTHORITY\nOur SME's investigate and develop solutions to overcome difficult technical challenges that require non-standard manufacturing approaches. Apply your engineering skills to develop an in depth understanding of the process drivers that will drive successful implementation of significant improvements to mechanical enclosures. \n\nThe following activities fall within the scope of responsibilities:\n\nAssess mechanical designs and relate design goals to process, equipment, and material requirements to evaluate a set of options to tackle difficult manufacturing problems.\n\nResearch manufacturing processes and evaluate them for potential to achieve technical goals. \n\nPlan and execute development trials to test feasibility, optimize process inputs, and validate capabilities of process options. \n\nPresent analysis to key decision makers used to make significant commercial and design commitments.</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200180409/machine-learning-ai-internship?team=STDNT",
         "position": "Machine Learning / AI Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:27.857Z",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:30.366Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Machine Learning / AI Internship"
         },
-        "description": "<span data-reactid=\"158\">You will research and develop innovative ML strategies for challenging problems that will affect future Apple products. You will collaborate with broader teams across Apple to transfer AI/ML solutions. You will have opportunities to provide technical mentorship and guidance and prepare technical reports for publication and conference talks. You are self-motivated, excellent problem solver, a go-getter. You are quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>"
+        "description": "<span data-reactid=\"160\">Some responsibilities in AI/ML may include:\n\nYou will research and develop innovative ML strategies for challenging problems that will affect future Apple products. You will collaborate with broader teams across Apple to transfer AI/ML solutions. You will have opportunities to provide technical mentorship and guidance and prepare technical reports for publication and conference talks. You are self-motivated, excellent problem solver, a go-getter. You are quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200207888/machine-learning-research-internship-siri?team=MLAI",
         "position": "Machine Learning Research Internship, Siri",
         "posted": "2020-11-17T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:29.334Z",
+        "lastScraped": "2021-02-15T21:31:31.640Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Machine Learning Research Internship, Siri"
@@ -132,43 +110,32 @@
         "description": "<span data-reactid=\"152\">As an intern, you will work with a mentor and broader teams across Apple in order to advance Siri’s core machine learning capabilities in machine hearing, speech recognition, text-to-speech synthesis, and natural language understanding. You will have opportunities to broadly demonstrate your work, which may also lead to a conference publication.\n\nTo be successful in this position, you should have a strong technical foundation, be able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Interns are self-motivated, excellent problem solvers, quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>"
     },
     {
+        "url": "https://jobs.apple.com/en-us/details/200207912/machine-learning-engineer-internship-siri?team=MLAI",
+        "position": "Machine Learning Engineer Internship, Siri",
+        "posted": "2020-11-17T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:32.731Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "Machine Learning Engineer Internship, Siri"
+        },
+        "description": "<span data-reactid=\"148\">As an intern, you will work with a mentor and broader teams across Apple in order to advance Siri’s core machine learning capabilities in machine hearing, speech recognition, text-to-speech synthesis, and natural language understanding. You will have opportunities to broadly demonstrate your work, which may also lead to a conference publication.\n\nTo be successful in this position, you should have a strong technical foundation, be able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Interns are self-motivated, excellent problem solvers, quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>"
+    },
+    {
         "url": "https://jobs.apple.com/en-us/details/200180420/business-marketing-and-g-a-internships?team=STDNT",
         "position": "Business, Marketing, and G&A Internships",
-        "posted": "2020-07-17T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:30.500Z",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:33.824Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Business, Marketing, and G&A Internships"
         },
-        "description": "<span data-reactid=\"154\">Within Apple, these teams support various lines of business with a mixture of non-technical and technical roles. The people here are a unique mix of backgrounds, experiences, and skills. The teams here are full of dynamic and full of incredibly smart, hardworking, and fun people passionate about technology, digital media, arts and entertainment.\n\nIf you're excited to join one of the most successful companies in the world, then we'd love to hear from you. Let’s do our best work together.\n\nAs an intern, you will learn, grow, and contribute to Apple’s business while working on exciting projects alongside top professionals. \n\nWe truly believe that at Apple, you will do your life’s best work.\n\nInternships are based in SCV and Culver City. \n\nINTERNSHIP OPPORTUNITIES ARE AVAILABLE WITHIN THE FOLLOWING AREAS:\n-  Finance\n\n-  Legal\n\n-  Wellness\n\n-  Environment, Policy, &amp; Social Initiatives\n\n-  Marketing\n\n-  Business \n\n-  Creative</span>"
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200191482/mba-internships-summer-2021?team=STDNT",
-        "position": "MBA Internships - Summer 2021",
-        "posted": "2020-10-07T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:31.590Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "MBA Internships - Summer 2021"
-        },
-        "description": "<span data-reactid=\"154\">APPLECARE\nContact Center Operations: Optimizes the latest technologies and strategies to support the business and operational needs with tactical support to provide Apple customers. Monitor service level and contact center volumes as well as direct strategic Apple care business goals.\n\nField Service Channel Manager: Ensures high customer satisfaction and lowers operational cost by reengineering processes and policies. Influence Apple Authorized Service Providers and mobile carriers to craft premium service programs that support business objectives and Apple’s customers worldwide. \n\nGlobal Repair Center: Lead the operations of the growing network of Apple repair centers around the world in the rapidly growing AppleCare reverse supply chain to handle complex repairs.\n\nOnline/Digital Support &amp; Service: Crafts compelling digital content solutions to improve the Apple customer experience, support the Advisor population to develop solutions to answer customer questions, inspire learning, and connect customers to the repair with assisted support. Brings innovative self-solve learning solutions to customers on the web, through an application on a device, on social platforms, search optimization, and machine learning. \n\nProcurement: Manages AppleCare’s OEM supplier’s relationship, sourcing optimization, early engagement for repair strategy development, post-production planning including costs, continuity of supply, and capacity planning activities. \n\nReporting &amp; Analytics: Harnesses the vast amount of data relating to AppleCare’s business to make strategic recommendations and share insights about ongoing operations. Translating business needs into analytical requirements using advanced quantitative analysis. \n\nSupply Chain Management: Build and run AppleCare’s Global Reverse Supply Chains, through optimization of forecasting. Analyze and calculate new buy planning, repair planning, inventory management, purchasing, warranty redemption, and project management. \n\n\nPRODUCT OPERATIONS/MANUFACTURING DESIGN\n\nOperations Program Manager: \nAs an OPM, you will work with our New Product Introduction (\"NPI\") or Sustaining Operations teams on component &amp; ramp readiness, product launch &amp; ramp, or sustaining operations through ‘end of life’ programs. Run the product manufacturability, testability, and supply chain responsiveness in pursuit of low cost and maximum flexibility while stewarding the highest standards of product quality expected of Apple's products.\n\nA successful OPM excels in program/project management; communicates with ease at all levels; is adept at facilitating actions and resolving conflicts; manages through relationships and influence; and brings calm and control to even the highest-intensity projects. \n\nManufacturing Design - Global Supply Manager:\nResponsible for the commercial relationship with our enclosure manufacturing partners and for cost negotiations, risk management, driving operational and cost efficiencies through process or design change, as well overall project execution. You sit at the intersection of Apple's business activities and engineering communities, and optimally and effectively balance the needs of both groups to ensure successful product launches.\n\nEnclosure components (such as the housing, cover glass, and buttons) define the look, feel, and expression of Apple’s globally-recognized industrial and product design. GSMs work in concert with operations supply quality and base engineers as well as Apple’s Product Design and Industrial Design teams. Together, these teams execute and scale both new and existing manufacturing processes, materials, technologies, finishes, and form factors.\n\n\nSTRATEGIC SOURCING\n\nGlobal Supply Manager: \nYou will interface between Apple and the industries that supply core component technologies. In this role, you are responsible for developing and executing sourcing strategies as well as recommending product innovations based on improving technology. This position requires an interest in market dynamics and competitive behavior, negotiation and pricing, manufacturing processes, and risk mitigation. \n\n\nSUPPLY CHAIN OPERATIONS\n\nSupply Demand Management (role: Supply Demand Planner): \nIn SDM, you will hold a critical role in Apple's multi-billion dollar supply chain decisions by forecasting product demand, analyzing production needs, allocating global supply across all channels of distribution and influencing quarterly sales projections used in guidance to Wall Street. Your job will require you to collaborate and influence across many key groups within Apple (Marketing, Sales, Finance, Procurement, Ops, Materials), all in an effort to both set the strategy and drive the execution of products across Apple’s global supply chain.\n\nBusiness Process Re-engineering (role: BPR Project Manager): \nIn BPR, you will lead complex, global initiatives to define, build, and roll out innovative technology and business process solutions that increase efficiencies, improve customer satisfaction, and challenge the status quo. You will define and build capabilities that provide deep business insight, enable rapid decision-making, and drive automation of evolving business processes.\n\n\nPRODUCT MARKETING\n\nAs a member of our Product Marketing group, you’ll shepherd a product’s positioning from concept through development and launch, to give it the best chance of success in the market. You’ll apply customer insights to help infuse ideas for groundbreaking features into our product-development process. Together with our team, you’ll work to craft groundbreaking ideas into tangible products that excite the world. \n\nAt Apple, we combine product development and product marketing responsibilities into a single, cross functional Product Management role that collaborates with design, engineering, finance, legal, marketing communications, public relations, market research, sales and support for maximum impact across the organization.\n\n\nCORPORATE RETAIL\n\nAre you passionate about the customer experience? The Apple Retail corporate team cares deeply about building and delivering the best customer experience in the world. We are one of the largest retailers with a global e-commerce footprint in 36 countries and more than 450 Apple Retail Store locations in 17 countries. We craft the strategies, drive the initiatives, execute the programs, and develop the technologies that bring Apple products to more than 4.5 million visitors every single day. A few extraordinary interns will get to help plan what's next.\n\nTarget Areas\n-  Central Operations\n-  E-Commerce\n-  Marketing\n-  Merchandising\n-  Planning &amp; Technology\n-  Sales &amp; Service\n-  User Experience</span>"
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200180400/hardware-hardware-products-hardware-engineering-internship?team=STDNT",
-        "position": "Hardware, Hardware Products, Hardware Engineering Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:32.722Z",
-        "location": {
-            "city": "Santa Clara Valley (Cupertino)",
-            "state": "Hardware, Hardware Products, Hardware Engineering Internship"
-        },
-        "description": "<span data-reactid=\"158\">Some responsibilities in Hardware Engineering may include: \n\nEngineering Program Management: Identifying, evaluating and driving engineering/quality improvements/new supplier qualifications)\n\nTouch/Displays Engineering: Optics, Flat Panel/HW, Touch Mechanical Design. Design &amp; Execute experiments validating new materials (optical, mechanical); Optimize design for performance and reliability\n\nWireless Technologies: Antenna Design, RF System Level Validation, Automated Software/Tool Dev, Optimization of RF Automated Systems, RF Sys Analysis\n\nASIC / VLSI: RTL Design &amp; Implementation, Verification, Integration, Validation, Emulation, Power/Tech &amp; Circuits, CAD, STA, Physical Design, Low Power Design, Signal Integrity, Analog/Mixed Signal, LDV/HDV, DFT\n\nEmbedded/Systems Development: Electrical System Design and Integration, System-Level Testing Support, Schematic Capture, Bug Resolution\n\nAudio/Acoustics/Optical Production Testing and Mechanical Test Design\n\nHuman Interface Devices: Firmware Eng, Low-Level Microcontroller Code Dev, Prototyping concepts, design verification (FPGA), Streamline Electrical Design\n\nFirmware Development: Writing/Debugging Low level firmware, drivers, protocols and other firmware code, developing embedded firmware solutions</span>"
+        "description": "<span data-reactid=\"158\">Within Apple, these teams support various lines of business with a mixture of non-technical and technical roles. The people here are a unique mix of backgrounds, experiences, and skills. The teams here are full of dynamic and full of incredibly smart, hardworking, and fun people passionate about technology, digital media, arts and entertainment.\n\nIf you're excited to join one of the most successful companies in the world, then we'd love to hear from you. Let’s do our best work together.\n\nAs an intern, you will learn, grow, and contribute to Apple’s business while working on exciting projects alongside top professionals. \n\nWe truly believe that at Apple, you will do your life’s best work.\n\nInternships are based in SCV and Culver City.\n\nINTERNSHIP OPPORTUNITIES ARE AVAILABLE WITHIN THE FOLLOWING AREAS:\nFinance\n\nLegal\n\nUniversity Relations\n\nWellness\n\nEnvironment, Policy, &amp; Social Initiatives\n\nMarketing\n\nBusiness \n\nCreative\n\nInclusion &amp; Diversity</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200193283/pixel-design-and-design-verification-internship?team=HRDWR",
         "position": "Pixel Design and Design Verification Internship",
         "posted": "2020-12-01T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:33.909Z",
+        "lastScraped": "2021-02-15T21:31:35.017Z",
         "location": {
             "city": "Austin",
             "state": "Pixel Design and Design Verification Internship"
@@ -176,32 +143,21 @@
         "description": "<span data-reactid=\"154\">Ensuring the quality of the SOC \nWorking closely with the team to review specifications, develop attributes, tests &amp; coverage plans, and define methodology &amp; test benches \nTeaming up with the design and micro-architecture teams to understand the functional and performance goals of the design \nWork independently and manage deliverables to align with the project goals plus support cross- functional engineering efforts</span>"
     },
     {
-        "url": "https://jobs.apple.com/en-us/details/200198361/apple-watch-software-engineering-internship?team=STDNT",
-        "position": "Apple Watch - Software Engineering Internship",
-        "posted": "2020-11-05T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:35.100Z",
+        "url": "https://jobs.apple.com/en-us/details/200180400/hardware-hardware-products-hardware-engineering-internship?team=STDNT",
+        "position": "Hardware, Hardware Products, Hardware Engineering Internship",
+        "posted": "2021-01-21T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:36.464Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
-            "state": "Apple Watch - Software Engineering Internship"
+            "state": "Hardware, Hardware Products, Hardware Engineering Internship"
         },
-        "description": "<span data-reactid=\"154\">As a software intern on the Apple Watch team, you will have many responsibilities relating to the design, development, and testing of the device software. These include: \n\nCollaborating closely with the design team to evaluate designs against the technical constraints of the software and the hardware of a small, low power device.\n\nImproving the applications and their underlying frameworks to innovate and push the boundaries of what's possible on exciting and easy to use interfaces.\n\nDeveloping features with well-designed solutions that can stand the test of time.\n\nCoordinating with the quality assurance team to both ensure full test coverage as well as to initiate focused testing on critical components.</span>"
-    },
-    {
-        "url": "https://jobs.apple.com/en-us/details/200202295/strategic-data-solutions-data-scientist-internship?team=STDNT",
-        "position": "Strategic Data Solutions - Data Scientist Internship",
-        "posted": "2020-12-22T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:36.303Z",
-        "location": {
-            "city": "Austin",
-            "state": "Strategic Data Solutions - Data Scientist Internship"
-        },
-        "description": "<span data-reactid=\"144\">As an intern, you will get to experience what it’s like to work as an enterprise data scientist, collaborating with your mentor to develop a research project and presenting the results to senior leadership at the end of the program. You will have the opportunity to play in Apple’s enormous data infrastructure, evaluating your new tools and techniques on a giant scale.\n\nOur commitment to you:\nWe will provide you with a challenging opportunity that you will be proud to have accomplished at Apple. As we learn more about you, we’ll help connect you with mentors and teammates that can help guide you in becoming a professional data scientist. You’ll work with teams across Apple and gain valuable experience driving down fraud and waste in a high tech environment.</span>"
+        "description": "<span data-reactid=\"160\">Some responsibilities in Hardware Engineering may include: \n\nEngineering Program Management: Identifying, evaluating and driving engineering/quality improvements/new supplier qualifications)\n\nCamera/Touch/Display Engineering: Optics, Flat Panel/HW, Touch Mechanical Design. Design &amp; Execute experiments validating new materials (optical, mechanical); Optimize design for performance and reliability\n\nWireless Technologies: Antenna Design, RF System Level Validation, Automated Software/Tool Dev, Optimization of RF Automated Systems, RF Sys Analysis\n\nASIC / VLSI: RTL Design &amp; Implementation, Verification, Integration, Validation, Emulation, Power/Tech &amp; Circuits, CAD, STA, Physical Design, Low Power Design, Signal Integrity, Analog/Mixed Signal, LDV/HDV, DFT\n\nEmbedded/Systems Development: Electrical System Design and Integration, System-Level Testing Support, Schematic Capture, Bug Resolution\n\nAudio/Acoustics/Optical Production Testing and Mechanical Test Design\n\nHuman Interface Devices: Firmware Eng, Low-Level Microcontroller Code Dev, Prototyping concepts, design verification (FPGA), Streamline Electrical Design\n\nFirmware Development: Writing/Debugging Low level firmware, drivers, protocols and other firmware code, developing embedded firmware solutions</span>"
     },
     {
         "url": "https://jobs.apple.com/en-us/details/200200857/biomedical-r-d-studies-co-op-intern?team=STDNT",
         "position": "Biomedical R&D Studies Co-Op Intern",
         "posted": "2020-11-03T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:37.500Z",
+        "lastScraped": "2021-02-15T21:31:38.149Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Biomedical R&D Studies Co-Op Intern"
@@ -212,11 +168,55 @@
         "url": "https://jobs.apple.com/en-us/details/200215247/evolve-rotational-program-engineer?team=STDNT",
         "position": "Evolve Rotational Program Engineer",
         "posted": "2021-01-08T10:00:00.000Z",
-        "lastScraped": "2021-01-21T10:34:38.662Z",
+        "lastScraped": "2021-02-15T21:31:39.478Z",
         "location": {
             "city": "Santa Clara Valley (Cupertino)",
             "state": "Evolve Rotational Program Engineer"
         },
         "description": "<span data-reactid=\"150\">ROTATIONS\nAre you someone who wants to challenge themselves and apply their skills across multiple functions? We are looking to identify, train, and develop the next generation of technical leaders. The Evolve rotation program offers you the opportunity to grow, both personally and expertly, through a variety of curated projects, assignments and teams. Participants benefit from a combination of training and on-the-job work experience. \n\nEvolve participants will rotate through teams during a 2-year period on a project basis. Upon successful completion of the program, participants will use their training in sophisticated, non-rotating roles within an identified organization.\n\nParticipants are placed on teams that align with their interests and allow them to work on high-impact and meaningful projects within our Apple Cloud Services and Wallet, Payments, and Commerce organizations. \n\nEXAMPLES INCLUDE:\n-  Developing a “Test Environment in a Box” enabling developers to rapidly and reliably test their code as if they were the entire E2E testing team\n\n-  Take a collection of user-reported issues in a narrow area of functionality and reconceive the user experience to address the underlying customer challenges\n\nRotations may be available in the following locations: Cupertino, Austin, New York and London.</span>"
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200197695/subject-matter-expert-automation-co-op?team=OPMFG",
+        "position": "Subject Matter Expert - Automation Co-op",
+        "posted": "2020-11-05T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:40.975Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "Subject Matter Expert - Automation Co-op"
+        },
+        "description": "<span data-reactid=\"156\">Drive automation activities for stringent enclosure and module manufacturing processes as part of Manufacturing Design’s Automation SME team. Work with integrators, suppliers, contract manufacturers, and internal partners to develop advanced automation capabilities and implement them in the supply chain to exacting standards on aggressive project timelines.</span>"
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200215240/project-manager-employee-development-programs-wallet-payments-engineering?team=SFTWR",
+        "position": "Project Manager, Employee Development Programs, Wallet & Payments Engineering",
+        "posted": "2021-01-08T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:42.170Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "Project Manager, Employee Development Programs, Wallet & Payments Engineering"
+        },
+        "description": "<span data-reactid=\"156\">Primary duties include but not limited to: \n\n-  Working closely with the team to support any and all needs of the program to provide an excellent experience to its participants and all partners.\n\n-  Tracking participants through the program as they move from rotation to rotation. \n\n-  End-to-end, high touch coordination of domestic and international rotations. \n\n-  Coaching program participants to deliver a high employee experience.\n\n-  Managing the intern and rotation conversion process for participants who complete the program successfully.\n\n-  Planning and coordinating all events for the rotation and internship programs.\n\n-  Participating in the recruiting process for summer intern candidates in order to hire exceptional participants for the programs.</span>"
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200007574/apple-industrial-design-accepting-portfolios?team=DESGN",
+        "position": "Apple Industrial Design Accepting Portfolios",
+        "posted": "2021-02-12T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:43.701Z",
+        "location": {
+            "city": "Santa Clara Valley (Cupertino)",
+            "state": "Apple Industrial Design Accepting Portfolios"
+        },
+        "description": "<span data-reactid=\"156\">To apply, please direct a CV and concise PDF portfolio to:  idportfolios@apple.com</span>"
+    },
+    {
+        "url": "https://jobs.apple.com/en-us/details/200187307/ai-ml-residency-program?team=MLAI",
+        "position": "AI/ML Residency Program",
+        "posted": "2020-08-27T10:00:00.000Z",
+        "lastScraped": "2021-02-15T21:31:44.939Z",
+        "location": {
+            "city": "Seattle",
+            "state": "AI/ML Residency Program"
+        },
+        "description": "<span data-reactid=\"142\">Apple’s AI/ML residency is a year long program inviting experts in various fields to apply their own domain expertise to build revolutionary machine learning and AI empowered products and experiences. The residency will begin with several weeks of coursework focused on machine learning and deep learning, followed by a project with one of our global machine learning teams. Apple AI/ML residents will be matched with a machine learning research/engineering mentor, and will contribute to their team’s research, product design, and development. Some residents may also have the opportunity to publish and present their work at premiere academic conferences.</span>"
     }
 ]

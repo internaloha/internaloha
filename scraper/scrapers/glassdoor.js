@@ -1,5 +1,5 @@
 import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function scrapeInfo(page, posted, url, data) {
   const position = await fetchInfo(page, 'div[class="css-17x2pwl e11nt52q6"]', 'innerText');
