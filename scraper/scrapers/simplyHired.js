@@ -1,5 +1,4 @@
 import Logger from 'loglevel';
-import fs from 'fs';
 import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 const myArgs = process.argv.slice(2);
