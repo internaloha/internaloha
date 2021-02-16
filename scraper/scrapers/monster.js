@@ -1,19 +1,15 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import userAgent from 'user-agents';
-import { fetchInfo } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 // const myArgs = process.argv.slice(2);
-
 async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
+  let browser;
+  let page;
   const data = [];
+  Logger.enableAll();
   try {
-    const page = await browser.newPage();
-    await page.setUserAgent(userAgent.toString());
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser(false);
     await page.setViewport({
       width: 1100, height: 700,
     });
@@ -33,24 +29,24 @@ async function main() {
     const elements = await page.$$('div[id="SearchResults"] section:not(.is-fenced-hide):not(.apas-ad)');
     // grabs all the posted dates
     const posted = await page.evaluate(
-      () => Array.from(
-        document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
-        a => a.textContent,
-      ),
+        () => Array.from(
+            document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
+            a => a.textContent,
+        ),
     );
     // grabs all position
     const position = await page.evaluate(
-      () => Array.from(
-       document.querySelectorAll('div[id="SearchResults"] div.summary h2'),
-       a => a.textContent,
-      ),
+        () => Array.from(
+            document.querySelectorAll('div[id="SearchResults"] div.summary h2'),
+            a => a.textContent,
+        ),
     );
     // grabs all the company
     const company = await page.evaluate(
-      () => Array.from(
-       document.querySelectorAll('div[id="SearchResults"] div.company span.name'),
-       a => a.textContent,
-      ),
+        () => Array.from(
+            document.querySelectorAll('div[id="SearchResults"] div.company span.name'),
+            a => a.textContent,
+        ),
     );
 
     let totalJobs = 0;
@@ -101,18 +97,14 @@ async function main() {
     }
 
     // write results to JSON file
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-          Logger.debug('\nData successfully written!')));
+    await writeToJSON(data, 'monster');
+    Logger.debug('\nData successfully written!');
     await Logger.debug('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-          Logger.debug('\nData successfully written!')));
+    await writeToJSON(data, 'monster');
+    Logger.debug('\nData successfully written!');
     await browser.close();
   }
 }

@@ -1,16 +1,17 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import { fetchInfo, autoScroll } from './scraper-functions.js';
+import { fetchInfo, autoScroll, writeToJSON, startBrowser } from './scraperFunctions.js';
 
 async function main() {
+  let browser;
+  let page;
   const data = [];
-  const browser = await puppeteer.launch({
+  Logger.enableAll();
+ /** const browser = await puppeteer.launch({
     headless: false,
-  });
+  });* */
   try {
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser(false);
     await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
     await page.waitForSelector('section.results__list');
     Logger.info('Fetching jobs...');
@@ -23,27 +24,27 @@ async function main() {
       try {
         await page.waitForTimeout(1000);
         await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
-          loadCount++;
+        loadCount++;
       } catch (e2) {
-          loadMore = false;
-          Logger.debug('Finished loading...');
+        loadMore = false;
+        Logger.debug('Finished loading...');
       }
     }
     const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
     const times = await page.evaluate(
-      () => Array.from(
-      // eslint-disable-next-line no-undef
-        document.querySelectorAll('div.result-card__meta.job-result-card__meta time:last-child'),
-          a => a.textContent,
-      ),
+        () => Array.from(
+            // eslint-disable-next-line no-undef
+            document.querySelectorAll('div.result-card__meta.job-result-card__meta time:last-child'),
+            a => a.textContent,
+        ),
     );
 
     const urls = await page.evaluate(
-      () => Array.from(
-       // eslint-disable-next-line no-undef
-        document.querySelectorAll('a.result-card__full-card-link'),
-          a => a.href,
-      ),
+        () => Array.from(
+            // eslint-disable-next-line no-undef
+            document.querySelectorAll('a.result-card__full-card-link'),
+            a => a.href,
+        ),
     );
 
     Logger.info('Total Listings:', elements.length);
@@ -64,11 +65,12 @@ async function main() {
         if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute'))
             || (time.includes('minutes'))) {
           daysBack = 0;
-        } else if ((time.includes('week')) || (time.includes('weeks'))) {
-          daysBack = time.match(/\d+/g) * 7;
-        } else {
-          daysBack = time.match(/\d+/g);
-        }
+        } else
+          if ((time.includes('week')) || (time.includes('weeks'))) {
+            daysBack = time.match(/\d+/g) * 7;
+          } else {
+            daysBack = time.match(/\d+/g);
+          }
         date.setDate(date.getDate() - daysBack);
         const posted = date;
         let state = '';
@@ -116,11 +118,12 @@ async function main() {
       if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute'))
           || (time.includes('minutes'))) {
         daysBack = 0;
-      } else if ((time.includes('week')) || (time.includes('weeks'))) {
-        daysBack = time.match(/\d+/g) * 7;
-      } else {
-        daysBack = time.match(/\d+/g) * 30;
-      }
+      } else
+        if ((time.includes('week')) || (time.includes('weeks'))) {
+          daysBack = time.match(/\d+/g) * 7;
+        } else {
+          daysBack = time.match(/\d+/g) * 30;
+        }
       date.setDate(date.getDate() - daysBack);
       const posted = date;
       let state = '';
@@ -147,16 +150,12 @@ async function main() {
     }
     Logger.info('Total internships scraped:', totalInternships);
     Logger.info('Closing browser!');
+    await writeToJSON(data, 'linkedin');
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
     await browser.close();
   }
-
-  // write results to JSON file
-  await fs.writeFile('./data/canonical/linkedin.canonical.data.json',
-    JSON.stringify(data, null, 4), 'utf-8', err => (err ? Logger.trace('\nData not written!', err) :
-      Logger.debug('\nData successfully written!')));
 }
 
 main();

@@ -1,16 +1,16 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
 import fs from 'fs';
-import { fetchInfo } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
 
 const myArgs = process.argv.slice(2);
 async function main() {
+  let browser;
+  let page;
+  // const data = [];
+  Logger.enableAll();
   try {
-    const browser = await puppeteer.launch({
-      headless: false,
-    });
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser(false);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
     const searchQuery = myArgs.join(' ');
@@ -202,10 +202,8 @@ async function main() {
       }
 
       // write results to JSON file
-      fs.writeFile('./data/canonical/simplyHired.canonical.data.json',
-          JSON.stringify(data, null, 4), 'utf-8',
-          err => (err ? Logger.trace('\nData not written!', err) :
-              Logger.debug('\nData successfully written!')));
+      await writeToJSON(data, 'simplyHired');
+      Logger.debug('\nData successfully written!');
 
     } else {
       Logger.debug(`There are no internships with the search query: ${searchQuery}`);
