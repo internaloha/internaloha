@@ -75,7 +75,7 @@ async function main() {
   Logger.enableAll();
   try {
     Logger.info('Executing script...');
-    [browser, page] = await startBrowser(false);
+    [browser, page] = await startBrowser(false, false, 100);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
     const searchQuery = myArgs.join(' ');
