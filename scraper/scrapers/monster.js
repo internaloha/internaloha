@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { convertPostedToDate, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -36,7 +36,6 @@ async function main() {
     }
     const elements = await page.$$('div[id="SearchResults"] section:not(.is-fenced-hide):not(.apas-ad)');
     // grabs all the posted dates
-    // eslint-disable-next-line no-unused-vars
     const posted = await page.evaluate(
         () => Array.from(
             document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
@@ -63,13 +62,23 @@ async function main() {
       try {
         const date = new Date();
         const lastScraped = new Date();
-        const [location, description] = await getData(page);
-        await convertPostedToDate(posted);
         const element = elements[i];
         await element.click();
         await page.waitForSelector('div[id="JobPreview"]');
         await page.waitForTimeout(500);
+        const [location, description] = await getData(page);
+        // const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
+        // const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
         const url = await page.url();
+        let daysToGoBack = 0;
+        if (posted[i].includes('today')) {
+          daysToGoBack = 0;
+        } else {
+          // getting just the number (eg. 1, 3, 20...)
+          daysToGoBack = posted[i].match(/\d+/g);
+        }
+        // going backwards
+        date.setDate(date.getDate() - daysToGoBack);
         let zip = location.match(/([^\D,])+/g);
         if (zip != null) {
           zip = zip[0];
@@ -103,7 +112,6 @@ async function main() {
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
-    Logger.debug('\nData successfully written!');
     await browser.close();
   }
 }
