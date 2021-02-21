@@ -100,7 +100,6 @@ async function main() {
     for (let i = 0; i < skippedURLs.length; i++) {
       await page.goto(skippedURLs[i]);
       await page.waitForSelector('section.core-rail');
-      // const time = await fetchInfo(page, 'span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
       const skills = 'N/A';
       const lastScraped = new Date();
       const [position, company, location, posted, description] = await getData(page);

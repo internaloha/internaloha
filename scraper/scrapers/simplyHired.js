@@ -55,7 +55,6 @@ async function getData(page, elements) {
         lastScraped: lastScraped,
         description: description,
       });
-      // totalJobs++;
 
       if (i < elements.length) {
         await element.click();
@@ -71,7 +70,6 @@ const myArgs = process.argv.slice(2);
 async function main() {
   let browser;
   let page;
-  // const data = [];
   Logger.enableAll();
   try {
     Logger.info('Executing script...');
@@ -131,62 +129,6 @@ async function main() {
             await page.waitForSelector('.RightPane');
             await page.waitForSelector('h2.viewjob-jobTitle');
             await page.waitForSelector('.viewjob-labelWithIcon');
-            /** for (let i = 1; i <= elements.length; i++) {
-              const date = new Date();
-              // let daysBack = 0;
-              const lastScraped = new Date();
-
-              const element = elements[i];
-              const elementLink = elements[i - 1];
-
-              const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
-              const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
-              const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
-
-              let qualifications = '';
-              try {
-                qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
-              } catch (err6) {
-                Logger.trace('Does not have qualifications section. Assigning it as N/A');
-                qualifications = 'N/A';
-              }
-              const description = await fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
-              let posted = '';
-              try {
-                posted = await fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
-              } catch (err2) {
-                posted = 'N/A';
-                Logger.trace('No date found. Setting posted as: N/A');
-              }
-              await convertPostedToDate(posted);
-
-              let savedURL = '';
-              try {
-                const pageURL = await elementLink.$('.card-link');
-                savedURL = await page.evaluate(span => span.getAttribute('href'), pageURL);
-              } catch (err6) {
-                Logger.trace('Error in fetching link for:', position);
-              }
-              Logger.info(position);
-              data.push({
-                position: position,
-                company: company,
-                location: {
-                  city: location.match(/^([^,]*)/)[0],
-                  state: location.match(/([^ ,]*)$/)[0],
-                },
-                qualifications: qualifications,
-                posted: date,
-                url: `https://www.simplyhired.com${savedURL}`,
-                lastScraped: lastScraped,
-                description: description,
-              });
-              totalJobs++;
-
-              if (i < elements.length) {
-                await element.click();
-              }
-            }* */
             // eslint-disable-next-line no-shadow
             await getData(page, elements).then((data => {
               Logger.info(data);
