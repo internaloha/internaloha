@@ -57,7 +57,8 @@
     "apple": "node scrapers/apple.js main",
     "nsf": "node scrapers/nsf-reu.js",
     "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js",
-    "scrapers": "node scrapers/main.js"
+    "scrapers": "node scrapers/main.js",
+    "cisco": "node scrapers/cisco.js main"
   },
   "browserslist": {
     "production": [
