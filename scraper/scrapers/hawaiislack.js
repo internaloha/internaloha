@@ -1,73 +1,114 @@
-import Log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import puppeteer from 'puppeteer';
+import fs from 'fs';
+import log from 'loglevel';
+import { fetchInfo, isRemote } from './scraper-functions.js';
 
-async function getData(page) {
-  const results = [];
-  for (let i = 0; i < 6; i++) {
-    // get title, company, description, city, state, and zip
-    results.push(fetchInfo(page, 'h1[itemprop="title"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="arDetailCompany"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[itemprop="description"]', 'innerHTML'));
-    results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
-    results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
-    results.push(fetchInfo(page, 'span[itemprop="postalCode"]', 'innerText'));
-  }
-  return Promise.all(results);
+async function setSearchFilters(page) {
+  // Navigate to internship page
+  await page.waitForSelector('input[id="search_keywords"]');
+  // change to internship when not testing
+  await page.type('input[id="search_keywords"]', 'intern');
+  // await page.waitForSelector('input[id="search_location"]');
+  // await page.type('input[id="search_location"]', 'United States');
+  await page.click('[class="search_submit"]');
 }
 
 async function main() {
-  let browser;
-  let page;
-  const data = [];
-  Log.enableAll(); // this enables console logging. Will replace with CLI args later.
+  const browser = await puppeteer.launch({
+    headless: false,
+  });
+  const page = await browser.newPage();
+  await page.setViewport({ width: 1100, height: 900 });
+  // eslint-disable-next-line max-len
+  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+  log.enableAll();
   try {
-    Log.info('Executing script...');
-    [browser, page] = await startBrowser();
     await page.goto('https://jobs.hawaiitech.com/');
-    // filter by internship tag
-    await page.waitForSelector('button[data-tab="Background"]');
-    await page.click('button[data-tab="Background"]');
-    await page.waitForSelector('input[id="jInternship"]');
-    await page.click('input[id="jInternship"]');
-    await page.waitForSelector('div[id="popover-background"] button');
-    await page.click('div[id="popover-background"] button');
-    await page.waitForNavigation;
-    const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
-    // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
-    for (let i = 2; i <= totalPage; i++) {
-      // Fetching all urls in page into a list
-      const urls = await page.evaluate(() => {
-        const urlFromWeb = document.querySelectorAll('h3 a');
-        const urlList = [...urlFromWeb];
-        return urlList.map(url => url.href);
-      });
-      // Iterate through all internship positions
+    await setSearchFilters(page);
+    await page.waitForTimeout(2000);
+    // const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
+    // const number = text.match(/\d+/gm);
+    // log.trace('Internships found:', number[0]);
+    // grab all links
+    const elements = await page.evaluate(
+        () => Array.from(
+            // eslint-disable-next-line no-undef
+            document.querySelectorAll('[class="post-269 job_listing type-job_listing status-publish has post-thumbnail hentry job-type-full-time"]'),
+            a => `https://jobs.hawaiitech.com/${a.getAttribute('href')}`,
+        ),
+    );
+            // document.querySelectorAll('ul[class="job_listings"]').length
+    const data = [];
+    // goes to each page
+    for (let i = 0; i < elements.length; i++) {
+      await page.goto(elements[i]);
       try {
-        for (let j = 0; j < urls.length; j++) {
-          await page.goto(urls[j]);
-          const lastScraped = new Date();
-          const [position, company, description, city] = await getData(page);
-          data.push({
-            url: urls[j],
-            position: position,
-            company: company.trim(),
-            location: { city: city },
-            lastScraped: lastScraped,
-            description: description,
-          });
+        const position = await fetchInfo(page, 'div[class="job_description"] Title', 'innerText');
+        let company = '';
+        try {
+          company = await fetchInfo(page, 'div[class="job_description"] Hiring Unit', 'innerText');
+        } catch (noCompany) {
+          company = 'Unknown';
         }
-      } catch (err1) {
-        Log.error(err1.message);
+        const posted = await fetchInfo(page, 'ul[class="job_description"] Date Posted', 'innerText');
+        const description = await fetchInfo(page, 'class="job_description" Duties and Responsbilities', 'innerHTML');
+        const skills = await page.evaluate(
+            () => Array.from(
+                // eslint-disable-next-line no-undef
+                document.querySelectorAll('section[class="mb32"]:nth-child(3) a'),
+                a => a.textContent,
+            ),
+        );
+        const date = new Date();
+        let daysBack = 0;
+        const lastScraped = new Date();
+        if (posted.includes('yesterday')) {
+          daysBack = 1;
+        } else {
+          daysBack = posted.match(/\d+/g);
+        }
+        date.setDate(date.getDate() - daysBack);
+        let location = '';
+        // let city = '';
+        // let state = '';
+        try {
+          location = await fetchInfo(page, 'class="job_description" Location', 'innerText');
+          // city = location.match(/([^ –\n][^,]*)/g)[0].trim();
+          // state = location.match(/([^,]*)/g)[2].trim();
+        } catch (noLocation) {
+          location = '';
+          // city = 'Unknown';
+          // state = 'Unknown';
+        }
+        // eslint-disable-next-line no-unused-vars
+        // let remote = false;
+        // if (isRemote(position) || isRemote(city) || isRemote(description)
+        //     || isRemote(city) || isRemote(state)) {
+        //   remote = true;
+        // }
+        data.push({
+          position: position.trim(),
+          company: company.trim(),
+          location: location.trim(),
+          posted: date,
+          url: elements[i],
+          skills: skills,
+          lastScraped: lastScraped,
+          description: description.trim(),
+        });
+        log.info(position.trim());
+      } catch (err) {
+        log.warn('Our Error: ', err.message);
       }
-      // Return to original search url, but next page
-      await page.goto(`https://jobs.hawaiitech.com/${i}`);
     }
-    await writeToJSON(data, 'HawaiiSlack');
+    await fs.writeFile('./data/canonical/HawaiiSlack.canonical.data.json',
+        JSON.stringify(data, null, 4), 'utf-8',
+        err => (err ? log.warn('\nData not written!', err) :
+            log.info('\nData successfully written!')));
     await browser.close();
   } catch (err) {
-    Log.error(err.message);
+    log.warn('Our Error:', err.message);
     await browser.close();
   }
 }
-
 main();
