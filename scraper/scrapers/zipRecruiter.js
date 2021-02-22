@@ -63,13 +63,13 @@ async function main() {
       log.warn('--- All jobs are Listed, no "Load More" button --- ');
     }
     // grab all links
-    // const elements = await page.evaluate(
-    //     () => Array.from(
-    //         // eslint-disable-next-line no-undef
-    //         document.querySelectorAll('.job_link.t_job_link'),
-    //         a => a.getAttribute('href'),
-    //     ),
-    // );
+    const elements = await page.evaluate(
+        () => Array.from(
+            // eslint-disable-next-line no-undef
+            document.querySelectorAll('.job_link.t_job_link'),
+            a => a.getAttribute('href'),
+        ),
+    );
     const skippedPages = [];
     let jobs = 0;
     log.info(elements.length);
