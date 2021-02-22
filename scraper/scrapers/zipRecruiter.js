@@ -3,6 +3,18 @@ import { fetchInfo, startBrowser, writeToJSON, autoScroll } from './scraper-func
 
 const myArgs = process.argv.slice(2);
 
+async function getData(page) {
+  const results = [];
+  for (let i = 0; i < 5; i++) {
+    results.push(fetchInfo(page, '.job_title', 'innerText'));
+    results.push(fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText'));
+    results.push(fetchInfo(page, 'span[data-name="address"]', 'innerText'));
+    results.push(fetchInfo(page, '.jobDescriptionSection', 'innerHTML'));
+    results.push(fetchInfo(page, '.job_more span[class="data"]', 'innerText'));
+  }
+  return Promise.all(results);
+}
+
 async function main() {
   let browser;
   let page;
@@ -10,7 +22,7 @@ async function main() {
   log.enableAll();
   try {
     [browser, page] = await startBrowser();
-    await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');    await page.waitForSelector('input[id="search1"]');
+    await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');
     await page.waitForSelector('input[id="search1"]');
     await page.waitForSelector('input[id="location1"]');
     const searchQuery = myArgs.join(' ');
@@ -51,13 +63,13 @@ async function main() {
       log.warn('--- All jobs are Listed, no "Load More" button --- ');
     }
     // grab all links
-    const elements = await page.evaluate(
-        () => Array.from(
-            // eslint-disable-next-line no-undef
-            document.querySelectorAll('.job_link.t_job_link'),
-            a => a.getAttribute('href'),
-        ),
-    );
+    // const elements = await page.evaluate(
+    //     () => Array.from(
+    //         // eslint-disable-next-line no-undef
+    //         document.querySelectorAll('.job_link.t_job_link'),
+    //         a => a.getAttribute('href'),
+    //     ),
+    // );
     const skippedPages = [];
     let jobs = 0;
     log.info(elements.length);
@@ -75,21 +87,16 @@ async function main() {
           // console.log('Stay on same page:\n', currentPage);
           await page.waitForSelector('.pc_message');
           await page.click('.pc_message');
-          const position = await fetchInfo(page, '.job_title', 'innerText');
-          const company = await fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText');
-          const location = await fetchInfo(page, 'span[data-name="address"]', 'innerText');
-          const description = await fetchInfo(page, '.jobDescriptionSection', 'innerHTML');
-          const posted = await fetchInfo(page, '.job_more span[class="data"]', 'innerText');
           const date = new Date();
           let daysBack = 0;
           const lastScraped = new Date();
+          const [position, company, location, description, posted] = await getData(page);
           if (posted.includes('yesterday')) {
             daysBack = 1;
           } else {
             daysBack = posted.match(/\d+/g);
           }
           date.setDate(date.getDate() - daysBack);
-          // console.log(location.match(/([^,]*)/g));
           data.push({
             position: position.trim(),
             company: company.trim(),
