@@ -4,7 +4,7 @@ import fs from 'fs';
 import natural from 'natural';
 import path from 'path';
 import Logger from 'loglevel';
-import { isRemote } from './scraperFunctions.js';
+import { isRemote } from './scraper-functions.js';
 
 const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
 
@@ -28,12 +28,10 @@ function getSentencesWithWord(word, textInput, date) {
 
   // replace all \n with spaces
   const noNewLine = textInput.replace(/([\n])\s*/ig, ' ');
-
   // Search for sentences, insert a pipe, then split on the pipe
   const sent = noNewLine.replace(/([.?!-])\s*(?=[A-Z])/ig, '$1|').split('|');
-
+  // Filters for sentences based on that word
   const sentence = sent.filter(sentences => sentences.includes(word));
-
   // Checks to see if sentence array has something
   if (sentence.length !== 0) {
     // Checks to see if sentence has a number
@@ -59,35 +57,28 @@ function getDueDates(input, textInput) {
   if (input !== null) {
     // matches dates like 07/26/2020
     const dateType = /\d{0,2}(\D)\d{2}\1\d{4}/g;
-
     // matches dates like July 12, 2020
     const dateTypeWord = /\b((?:(?:Jan(?:uary)?)|(?:Feb(?:ruary)?)|(?:March?)|(?:April?)|(?:May)|(?:June?)|(?:July?)|(?:Aug(?:ust)?)|(?:Sept(?:ember)?)|(?:Oct(?:ober)?)|(?:Nov(?:ember)?)|(?:Dec(?:ember)?))(|,)\s+\d{0,2}\s*,?\s*\d{0,4})+/ig;
-
     if (input[0].match(dateType)) {
       // matches then removes any with comma
       let date = input[0].match(dateType);
       date = date[0].replace(/(,)+/g, '');
-
       // if the date is M/DD/YYYY, change to MM/DD/YYYY by adding padding 0
       if (!date.match(/^(\d{2})/g)) {
         date = `0${date}`;
       }
-
       const dueDate = new Date(date);
       if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.due = dueDate;
         // console.log(dueDate);
       }
-
     }
-
     // Checks to see if it matches dates like July 12, 2020
     if (input[0].match(dateTypeWord)) {
       // console.log(input[0].match(dateTypeWord));
       let words = input[0].match(dateTypeWord);
       // remove all commas
       words = words[0].toString().replace(/(,)+/g, '');
-
       // Does the date have numbers in them?
       if (words.match(/(\d)/g)) {
         let date = words;
@@ -104,7 +95,6 @@ function getDueDates(input, textInput) {
           // console.log(dueDate);
         }
       }
-
     }
   }
 }
@@ -118,36 +108,28 @@ function getStartDates(input, textInput) {
   if (input !== null) {
     // matches dates like 07/26/2020
     const dateType = /\d{0,2}(\D)\d{2}\1\d{4}/g;
-
     // matches dates like July 12, 2020
     const dateTypeWord = /\b((?:(?:Jan(?:uary)?)|(?:Feb(?:ruary)?)|(?:March?)|(?:April?)|(?:May)|(?:June?)|(?:July?)|(?:Aug(?:ust)?)|(?:Sept(?:ember)?)|(?:Oct(?:ober)?)|(?:Nov(?:ember)?)|(?:Dec(?:ember)?))(|,)\s+\d{0,2}\s*,?\s*\d{0,4})+/ig;
-
     if (input[0].match(dateType)) {
       // matches then removes any with comma
       let date = input[0].match(dateType);
       date = date[0].replace(/(,)+/g, '');
-
       // if the date is M/DD/YYYY, change to MM/DD/YYYY by adding padding 0
       if (!date.match(/^(\d{2})/g)) {
         date = `0${date}`;
       }
-
       // console.log(date);
       const dueDate = new Date(date);
       if (dueDate instanceof Date && !Number.isNaN(dueDate.valueOf())) {
         textInput.start = dueDate;
         // console.log(dueDate);
       }
-
     }
-
     // Checks to see if it matches dates like July 12, 2020
     if (input[0].match(dateTypeWord)) {
       let words = input[0].match(dateTypeWord);
-
       // remove all commas
       words = words[0].replace(/(,)+/g, '');
-
       let date = words;
       // Does the date include a year? (If not, it messes up new Date generation so we add it)
       if (!words.match(/\d{4}/g)) {
@@ -162,7 +144,6 @@ function getStartDates(input, textInput) {
         textInput.start = dueDate;
         // console.log(dueDate);
       }
-
     }
   }
 }
@@ -176,7 +157,6 @@ function trainSkills(classifier) {
   classifier.setOptions({
     keepStops: true,
   });
-
   const IT = ['it management',
     'it systems',
     'it support',
@@ -187,7 +167,6 @@ function trainSkills(classifier) {
     'customer service',
     'it environment',
     'it development'];
-
   const webDev = ['html', 'html5', 'css', 'css5', 'web design', 'web standards', 'website development', 'website development/'];
   const react = ['react', 'reactJS', 'react native'];
   const javascript = ['javascript'];
@@ -200,7 +179,6 @@ function trainSkills(classifier) {
   const deepLearning = ['pytorch', 'tensorflow', 'mxnet', 'darknet', 'caffe'];
   const bioinformatics = ['bioinformatics', 'biology', 'biological', 'biostatistic'];
   const robotics = ['robotics', 'robot'];
-
   const cyberSecurity = [
     'cybersecurity',
     'cyber security',
@@ -214,7 +192,6 @@ function trainSkills(classifier) {
     'blockchain',
     'Cybersecurity',
   ];
-
   const SQL = [
     'microsoft sql',
     'database',
@@ -234,7 +211,6 @@ function trainSkills(classifier) {
     'db',
     'SQL',
   ];
-
   classifier.addDocument(mobile, 'mobile development');
   classifier.addDocument(dataScience, 'data science');
   classifier.addDocument(webDev, 'web development');
@@ -254,12 +230,10 @@ function trainSkills(classifier) {
   classifier.addDocument(bioinformatics, 'bioinformatics');
   classifier.addDocument('bioinformatics', 'bioinformatics');
   classifier.addDocument(robotics, 'robotics');
-
   classifier.addDocument('angular', 'angular');
   classifier.addDocument('java', 'java');
   classifier.addDocument('visualization', 'data visualization');
   classifier.addDocument('MATLAB', 'matlab');
-
   classifier.addDocument(['c++', 'c'], 'C and C++');
   classifier.addDocument('machine learning', 'machine learning');
   classifier.addDocument('devOps', 'devOps');
@@ -270,9 +244,7 @@ function trainSkills(classifier) {
   classifier.addDocument('networks', 'networks');
   classifier.addDocument('virtual reality', 'virtual reality');
   classifier.addDocument(['game', 'game design'], 'game design');
-
   classifier.train();
-
 }
 
 /** Uses NLP to get skills
@@ -314,19 +286,15 @@ function getCompensation(input, textInput) {
 function getQualifications(textInput) {
   const qualifications = [];
   const textLower = textInput.description.toString().toLowerCase();
-
   if (textLower.includes('bachelor')) {
     qualifications.push('Bachelor\'s degree');
   }
-
   if (textLower.includes('eligible to work in the')) {
     qualifications.push('Eligible to work in the U.S');
   }
-
   if (textLower.includes('us citizen')) {
     qualifications.push('U.S Citizen');
   }
-
   if (qualifications.length !== 0) {
     textInput.qualifications = qualifications;
   }
@@ -340,7 +308,6 @@ function getContact(textInput) {
 
   // Regex for phone numbers: ([(\d{0,3})]+-\d{0,4}-\d{0,4})|(\d{10})+
   const description = textInput.description.toString();
-
   const phone = description.match(/((\d{1}-)+[(\d{3})]+-\d{3}-\d{4})+|([(\d{3})]+-\d{3}-\d{4})+/ig);
   const email = description.match(/(\w+@\w+\.com+)/ig);
 
@@ -354,7 +321,6 @@ function getContact(textInput) {
     textInput.contact = phone[0];
     // console.log(phone[0]);
   }
-
 }
 
 /**
@@ -369,7 +335,6 @@ function convertRegion(input, to) {
   if (input === 'Error' || input === 'error') {
     return 'Not Available';
   }
-
   const states = [
     ['Alabama', 'AL'],
     ['Alaska', 'AK'],
@@ -432,7 +397,6 @@ function convertRegion(input, to) {
     ['Wisconsin', 'WI'],
     ['Wyoming', 'WY'],
   ];
-
   // So happy that Canada and the US have distinct abbreviations
   const provinces = [
     ['Alberta', 'AB'],
@@ -449,14 +413,11 @@ function convertRegion(input, to) {
     ['Saskatchewan', 'SK'],
     ['Yukon', 'YT'],
   ];
-
   const regions = states.concat(provinces);
-
   // If state follows California (CA), we split it as [New York, (NY)]
   input = input.match(/([\w ]+)/g);
   // Input is now New York
   input = input[0].trim();
-
   let i; // Reusable loop variable
   if (to === 'abbr') {
     input = input.replace(/\w\S*/g, function (txt) {
@@ -486,111 +447,84 @@ function convertRegion(input, to) {
  * @param  {String} file  Relative path for the file we want to parse
  * @return N/A       Doesn't return anything
  */
-function multi_parser(file) {
+function multiParser(file) {
 
   Logger.info('Parsing:', file);
-
   const text = JSON.parse(fs.readFileSync(file, 'utf8'));
-
   const classifier = new natural.LogisticRegressionClassifier();
   const classifierComp = new natural.LogisticRegressionClassifier();
-
   trainSkills(classifier);
   trainCompensation(classifierComp);
-
 // sees the training process
 // classifier.events.on('trainedWithDocument', function (obj) {
 //   console.log(obj);
 // });
-
   let count = 0;
   let compCount = 0;
   let results = '';
   let positionResults = '';
   let compensation = '';
-
-  // Goes thorugh every internship listing
+  // Goes through every internship listing
   for (let i = 0; i < text.length; i++) {
-
     text[i].index = i + 1;
-
     const position = text[i].position;
-
     try {
       // replace all the new lines with a space
       const description = text[i].description.replace(/(\r\n|\n|\r)/gm, ' ');
-
       // replace comma as they an affect the matching process (Eg. "cybersecurity" vs. "cybersecurity,")
       const descriptionClean = description.replace(/,/g, '');
-
       // IT is not matching replacing all of them with "Information Technology for better matching
       const descriptionIT = descriptionClean.replace(/IT/gm, 'Information Technology');
-
       results = classifier.getClassifications(descriptionIT);
       positionResults = classifier.getClassifications(position);
-
       compensation = classifierComp.getClassifications(text[i].description);
-
     } catch (e) {
       Logger.error('No description:', e.message);
     }
-
     const data = [];
     const comp = [];
-
     // Adding data science. Classifier unable to pick up because 'data science' gets broken up into 'data' and 'science'
     // which matches everything with 'computer science'
     if (position.toString().toLowerCase().includes('data science')) {
       data.push('data science');
     }
-
     // adding compensation
     for (let j = 0; j < compensation.length; j++) {
       if (compensation[j].value > 0.5) {
         comp.push(compensation[j].label);
       }
     }
-
     // count the amount of internships where there we no apparent matches
     if (comp.length === 0) {
       compCount++;
     }
-
     // adding the skills
     for (let j = 0; j < results.length; j++) {
-
       // when it's exactly 0.5, it means no matches found so we need to check on it
       if (results[j].value > 0.5) {
         data.push(results[j].label);
       }
-
       if (positionResults[j] && positionResults[j].value > 0.5) {
         data.push(positionResults[j].label);
       }
-
     }
-
     // count the amount of internships where there we no apparent matches
     if (data.length === 0) {
       count++;
     }
-
     // Only run when skills exist
     if (text[i].skills || text[i].skills !== 'N/A' || text[i].skills.length !== 0) {
       text[i].skills = removeDuplicates(data);
     }
-
     // if no company
     if (!text[i].company || text[i].company === '') {
       text[i].company = 'N/A';
     }
-
     // if no description (eg. NSF-REU)
     if (!text[i].description || text[i].description === '') {
       text[i].description = `Contact: ${text[i].contact}`;
     }
     const descriptionLowercase = text[i].description.toString().toLowerCase();
-
     // if compensation key doesn't exist
     if (!text[i].compensation || text[i].compensation === '') {
       if (comp.length === 1) {
@@ -602,16 +536,13 @@ function multi_parser(file) {
         getCompensation(salary, text[i]);
       }
     }
-
     // if it doesn't have start key
     if (!text[i].start || text[i].start === '') {
       const start = getSentencesWithWord('start', descriptionLowercase, false);
       getStartDates(start, text[i]);
     }
-
     // if text has no due date
     if (!text[i].due || text[i].due === '') {
-
       const deadline = getSentencesWithWord('deadline', descriptionLowercase, true);
       const due = getSentencesWithWord('due', descriptionLowercase, true);
       const application = getSentencesWithWord('application', descriptionLowercase, true);
@@ -619,17 +550,14 @@ function multi_parser(file) {
       getDueDates(due, text[i]);
       getDueDates(application, text[i]);
     }
-
     // if text has no contact information
     if (!text[i].contact || text[i].contact === '') {
       getContact(text[i]);
     }
-
     // if text has no qualification key
     if (!text[i].qualifications || text[i].qualifications === '') {
       getQualifications(text[i]);
     }
-
     // if there is no remote section
     try {
       if (!text[i].remote) {
@@ -643,41 +571,28 @@ function multi_parser(file) {
     } catch (e) {
       text[i].remote = false;
     }
-
     // if text has no location.state or it is empty
     if (!text[i].location.state || text[i].location.state === '') {
-
       text[i].location.state = 'Out of Country';
-
       // Check to see if it's USA
       for (let k = 0; k < cities.length; k++) {
         if (text[i].location.city.includes(cities[k].City) || text[i].location.city.includes(cities[k].State)) {
           text[i].location.state = 'United States';
         }
       }
-
     } else if (text[i].location.state === 'states' || text[i].location.state === 'States') {
       text[i].location.state = 'United States';
     } else {
       text[i].location.state = convertRegion(text[i].location.state, 'name');
     }
-
   }
-
   Logger.info('Total entries:', text.length);
   Logger.info('Total descriptions with empty skills field:', count);
   Logger.info('Total entries with empty compensation field:', compCount);
   Logger.info('');
-
   let fileName = file.match(/([[a-zA-Z-])+/g);
   fileName = fileName[2];
   fs.writeFileSync(`../src/src/data/${fileName}.parsed.data.json`, JSON.stringify(text, null, 4), 'utf-8');
-
-  // fs.writeFile(`data/parsed/${fileName}.parsed.data.json`,
-  //     JSON.stringify(text, null, 4), 'utf-8',
-  //     err => (err ? console.log('\nData not written!', err) :
-  //         console.log('\nData successfully written!')));
-
 }
 
 /**
@@ -690,12 +605,10 @@ function multi_parser(file) {
 function fromDir(startPath, filter) {
 
   let results = [];
-
   if (!fs.existsSync(startPath)) {
     Logger.error('no dir ', startPath);
     return [];
   }
-
   const files = fs.readdirSync(startPath);
   for (let i = 0; i < files.length; i++) {
     const filename = path.join(startPath, files[i]);
@@ -703,15 +616,18 @@ function fromDir(startPath, filter) {
     if (stat.isDirectory()) {
       results = results.concat(fromDir(filename, filter)); // recurse
     } else if (filename.indexOf(filter) >= 0) {
-      // console.log('-- found: ', filename);
       results.push(filename);
     }
   }
   return results;
 }
 
-const files = fromDir('./data/canonical', '.json');
+function main() {
+  const files = fromDir('./data/canonical', '.json');
+  for (let i = 0; i < files.length; i++) {
+    multiParser(files[i]);
+  }
 
-for (let i = 0; i < files.length; i++) {
-  multi_parser(files[i]);
 }
+
+export default main;

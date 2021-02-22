@@ -1,16 +1,80 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import { fetchInfo } from './scraperFunctions.js';
+import { checkHeadlessOrNot, convertPostedToDate, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+
+// eslint-disable-next-line consistent-return
+async function getData(page, elements) {
+  try {
+    const data = [];
+    for (let i = 1; i <= elements.length; i++) {
+      const date = new Date();
+      // let daysBack = 0;
+      const lastScraped = new Date();
+
+      const element = elements[i];
+      const elementLink = elements[i - 1];
+
+      const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
+      const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
+      const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
+
+      let qualifications = '';
+      try {
+        qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
+      } catch (err6) {
+        Logger.trace('Does not have qualifications section. Assigning it as N/A');
+        qualifications = 'N/A';
+      }
+      const description = await fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
+      let posted = '';
+      try {
+        posted = await fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
+      } catch (err2) {
+        posted = 'N/A';
+        Logger.trace('No date found. Setting posted as: N/A');
+      }
+      await convertPostedToDate(posted);
+
+      let savedURL = '';
+      try {
+        const pageURL = await elementLink.$('.card-link');
+        savedURL = await page.evaluate(span => span.getAttribute('href'), pageURL);
+      } catch (err6) {
+        Logger.trace('Error in fetching link for:', position);
+      }
+      Logger.info(position);
+      data.push({
+        position: position,
+        company: company,
+        location: {
+          city: location.match(/^([^,]*)/)[0],
+          state: location.match(/([^ ,]*)$/)[0],
+        },
+        qualifications: qualifications,
+        posted: date,
+        url: `https://www.simplyhired.com${savedURL}`,
+        lastScraped: lastScraped,
+        description: description,
+      });
+
+      if (i < elements.length) {
+        await element.click();
+      }
+    }
+    return data;
+  } catch (e) {
+    Logger.warn(e.message);
+  }
+}
 
 const myArgs = process.argv.slice(2);
-async function main() {
+
+export async function main(headless) {
+  let browser;
+  let page;
+  Logger.enableAll();
   try {
-    const browser = await puppeteer.launch({
-      headless: false,
-    });
-    const page = await browser.newPage();
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser(headless, false, 100);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
     const searchQuery = myArgs.join(' ');
@@ -25,7 +89,6 @@ async function main() {
     // Getting href link for internship filter
     const internshipDropdown = await page.evaluate(
         () => Array.from(
-            // eslint-disable-next-line no-undef
             document.querySelectorAll('a[href*="internship"]'),
             a => a.getAttribute('href'),
         ),
@@ -67,68 +130,10 @@ async function main() {
             await page.waitForSelector('.RightPane');
             await page.waitForSelector('h2.viewjob-jobTitle');
             await page.waitForSelector('.viewjob-labelWithIcon');
-            for (let i = 1; i <= elements.length; i++) {
-              const date = new Date();
-              let daysBack = 0;
-              const lastScraped = new Date();
-
-              const element = elements[i];
-              const elementLink = elements[i - 1];
-
-              const position = await fetchInfo(page, '.RightPane > aside h2 ', 'innerText');
-              const company = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon', 'innerText');
-              const location = await fetchInfo(page, '.RightPane .viewjob-labelWithIcon:last-child', 'innerText');
-              let qualifications = '';
-              try {
-                qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
-              } catch (err6) {
-                Logger.trace('Does not have qualifications section. Assigning it as N/A');
-                qualifications = 'N/A';
-              }
-              const description = await fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
-              let posted = '';
-              try {
-                posted = await fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
-              } catch (err2) {
-                posted = 'N/A';
-                Logger.trace('No date found. Setting posted as: N/A');
-              }
-
-              if (posted.includes('hours') || posted.includes('hour')) {
-                daysBack = 0;
-              } else {
-                daysBack = posted.match(/\d+/g);
-              }
-
-              date.setDate(date.getDate() - daysBack);
-
-              let savedURL = '';
-              try {
-                const pageURL = await elementLink.$('.card-link');
-                savedURL = await page.evaluate(span => span.getAttribute('href'), pageURL);
-              } catch (err6) {
-                Logger.trace('Error in fetching link for:', position);
-              }
-              Logger.info(position);
-              data.push({
-                position: position,
-                company: company,
-                location: {
-                  city: location.match(/^([^,]*)/)[0],
-                  state: location.match(/([^ ,]*)$/)[0],
-                },
-                qualifications: qualifications,
-                posted: date,
-                url: `https://www.simplyhired.com${savedURL}`,
-                lastScraped: lastScraped,
-                description: description,
-              });
-              totalJobs++;
-
-              if (i < elements.length) {
-                await element.click();
-              }
-            }
+            // eslint-disable-next-line no-shadow
+            await getData(page, elements).then((data => {
+              Logger.info(data);
+}));
           } catch (e) {
             Logger.debug('--- Loaded up old UI. Trying to scrape with old UI layout ---');
             try {
@@ -143,7 +148,6 @@ async function main() {
 
               for (let i = 1; i <= elements.length; i++) {
                 const date = new Date();
-                let daysBack = 0;
                 const lastScraped = new Date();
 
                 const element = elements[i];
@@ -161,12 +165,7 @@ async function main() {
                   posted = 'N/A';
                   Logger.trace('No date found. Setting posted as: N/A');
                 }
-                if (posted.includes('hours') || posted.includes('hour')) {
-                  daysBack = 0;
-                } else {
-                  daysBack = posted.match(/\d+/g);
-                }
-                date.setDate(date.getDate() - daysBack);
+                await convertPostedToDate(posted);
                 Logger.info(position);
                 data.push({
                   position: position,
@@ -186,9 +185,10 @@ async function main() {
                 }
               }
             } catch (err) {
-              Logger.trace('InternBit Error: ', err.message);
+              Logger.trace('InternAloha Error: ', err.message);
             }
           }
+
           const nextPage = await page.$('a[class="Pagination-link next-pagination"]');
           await nextPage.click();
           totalPages++;
@@ -200,10 +200,8 @@ async function main() {
       }
 
       // write results to JSON file
-      fs.writeFile('./data/canonical/simplyHired.canonical.data.json',
-          JSON.stringify(data, null, 4), 'utf-8',
-          err => (err ? Logger.trace('\nData not written!', err) :
-              Logger.debug('\nData successfully written!')));
+      await writeToJSON(data, 'simplyHired');
+      Logger.debug('\nData successfully written!');
 
     } else {
       Logger.debug(`There are no internships with the search query: ${searchQuery}`);
@@ -219,4 +217,13 @@ async function main() {
   }
 }
 
-main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;

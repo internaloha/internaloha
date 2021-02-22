@@ -1,6 +1,18 @@
-import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, startBrowser } from './scraperFunctions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+
+async function getData(page) {
+  const results = [];
+  // Scrapes position, location, company, posted, and description
+  for (let i = 0; i < 5; i++) {
+    results.push(fetchInfo(page, 'h1[class="icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-CompanyInfoWithoutHeaderImage jobsearch-CompanyInfoWithReview"] > div > div > div:nth-child(2)', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML'));
+  }
+  return Promise.all(results);
+}
 
 async function main() {
   let browser;
@@ -10,9 +22,6 @@ async function main() {
   try {
     [browser, page] = await startBrowser();
     // time out after 10 seconds
-    await page.setDefaultNavigationTimeout(10000);
-    await page.setViewport({ width: 1200, height: 1000 });
-    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.indeed.com/');
     await page.waitForSelector('input[id="text-input-what"]');
     await page.waitForSelector('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
@@ -34,7 +43,6 @@ async function main() {
     await page.waitForSelector('div[class="serp-filters-sort-by-container"]');
     const date = await page.evaluate(
       () => Array.from(
-        // eslint-disable-next-line no-undef
         document.querySelectorAll('a[href*="sort=date"]'),
         a => a.getAttribute('href'),
       ),
@@ -55,7 +63,6 @@ async function main() {
       // Getting href link for internship filter
       internshipDropdown = await page.evaluate(
         () => Array.from(
-          // eslint-disable-next-line no-undef
           document.querySelectorAll('ul[id="filter-job-type-menu"] li a[href*="internship"]'),
           a => a.getAttribute('href'),
         ),
@@ -69,17 +76,13 @@ async function main() {
     } else {
       log.warn('No internship tag.');
     }
-    const skippedLinks = [];
     let totalJobs = 0;
     const urls = [];
     let hasNext = true;
-    // while there a next page, keep clicking
     while (hasNext === true) {
-      // getting all job link for that page
       await page.waitForSelector('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a');
       const url = await page.evaluate(
         () => Array.from(
-          // eslint-disable-next-line no-undef
           document.querySelectorAll('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a'),
           a => a.getAttribute('href'),
         ),
@@ -103,27 +106,9 @@ async function main() {
       for (let j = 0; j < urls[i].length; j++) {
         await page.goto(`https://www.indeed.com${urls[i][j]}`);
         try {
-          // If we cannot fetch indeed logo, it means page has not loaded
-          let position = '';
-          // position alternates between two different css class
-          try {
-            await page.click('div[class="jobsearch-JobInfoHeader-title-container "]');
-            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container "]', 'innerText');
-          } catch (noClassError) {
-            log.trace('--- Trying with other class name ---');
-            position = await fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container jobsearch-JobInfoHeader-title-containerEji"]', 'innerText');
-          }
-          const company = await fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText');
-          let location = '';
-          try {
-            await page.click('div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)');
-            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] div:nth-child(4)', 'innerText');
-          } catch (noLocation) {
-            log.trace('--- Trying with other class name ---');
-            location = await fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs  jobsearch-DesktopStickyContainer-companyrating"] div:last-child', 'innerText');
-          }
-          let posted = await fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText');
-          const description = await fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML');
+          await page.waitForSelector('h1[class="icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title"]');
+          // eslint-disable-next-line prefer-const
+          let [position, location, company, posted, description] = await getData(page);
           const lastScraped = new Date();
           const skills = 'N/A';
           const todayDate = new Date();
@@ -137,6 +122,7 @@ async function main() {
             daysBack = posted.match(/\d+/g);
           }
           todayDate.setDate(todayDate.getDate() - daysBack);
+          // eslint-disable-next-line no-const-assign
           posted = todayDate;
           let state = '';
           if (!location.match(/([^,]*)/g)[2]) {
@@ -167,24 +153,14 @@ async function main() {
           log.info(position);
         } catch (err6) {
           log.trace('--- Error with scraping... Skipping ---');
-          skippedLinks.push(`https://www.indeed.com${urls[i][j]}`);
         }
       }
     }
     // write results to JSON file
-    await fs.writeFile('./data/canonical/indeed.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-      err => (err ? log.warn('\nData not written!', err) :
-        log.trace('\nData successfully written!')));
-    log.info('Total links skipped:', skippedLinks.length);
+    await writeToJSON(data, 'indeed');
     log.info('Total internships scraped:', totalJobs);
-    log.info(skippedLinks);
     await browser.close();
   } catch (e) {
-    await fs.writeFile('./data/canonical/indeed.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-      err => (err ? log.warn('\nData not written!', err) :
-        log.trace('\nData successfully written!')));
     log.warn('Our Error:', e.message);
     await browser.close();
   }
