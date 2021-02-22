@@ -10,7 +10,7 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-async function main(headless) {
+export async function main(headless) {
   let browser;
   let page;
   const data = [];
@@ -125,4 +125,4 @@ if (process.argv.includes('main')) {
   main(headless);
 }
 
-main();
+export default main();

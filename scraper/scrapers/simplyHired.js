@@ -67,7 +67,8 @@ async function getData(page, elements) {
 }
 
 const myArgs = process.argv.slice(2);
-async function main(headless) {
+
+export async function main(headless) {
   let browser;
   let page;
   Logger.enableAll();
@@ -225,4 +226,4 @@ if (process.argv.includes('main')) {
   main(headless);
 }
 
-main();
+export default main();
