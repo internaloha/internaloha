@@ -71,9 +71,8 @@ const myArgs = process.argv.slice(2);
 export async function main(headless) {
   let browser;
   let page;
-  Logger.enableAll();
   try {
-    Logger.info('Executing script...');
+    Logger.info('Executing script for simplyHired');
     [browser, page] = await startBrowser(headless, false, 100);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');

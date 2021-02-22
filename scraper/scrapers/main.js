@@ -7,6 +7,7 @@ import statistics from './statistics.js';
 import linkedin from './linkedin.js';
 import monster from './monster.js';
 import simplyHired from './simplyHired.js';
+import cisco from './cisco.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -23,6 +24,7 @@ async function getData(headless = true) {
   results.push(linkedin(headless));
   results.push(monster(headless));
   results.push(simplyHired(headless));
+  results.push(cisco(headless));
   return Promise.all(results);
 }
 
