@@ -1,19 +1,23 @@
 import Logger from 'loglevel';
-import puppeteer from 'puppeteer';
-import fs from 'fs';
-import userAgent from 'user-agents';
-import { fetchInfo } from './scraper-functions.js';
+import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
-// const myArgs = process.argv.slice(2);
+async function getData(page) {
+  const results = [];
+  for (let i = 0; i < 2; i++) {
+    results.push(fetchInfo(page, 'div.heading h2.subtitle', 'innerText'));
+    results.push(fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML'));
+  }
+  return Promise.all(results);
+}
 
-async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
+export async function main(headless) {
+  let browser;
+  let page;
   const data = [];
+  Logger.enableAll();
   try {
-    const page = await browser.newPage();
-    await page.setUserAgent(userAgent.toString());
+    Logger.info('Executing script...');
+    [browser, page] = await startBrowser(headless);
     await page.setViewport({
       width: 1100, height: 700,
     });
@@ -33,24 +37,24 @@ async function main() {
     const elements = await page.$$('div[id="SearchResults"] section:not(.is-fenced-hide):not(.apas-ad)');
     // grabs all the posted dates
     const posted = await page.evaluate(
-      () => Array.from(
-        document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
-        a => a.textContent,
-      ),
+        () => Array.from(
+            document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
+            a => a.textContent,
+        ),
     );
     // grabs all position
     const position = await page.evaluate(
-      () => Array.from(
-       document.querySelectorAll('div[id="SearchResults"] div.summary h2'),
-       a => a.textContent,
-      ),
+        () => Array.from(
+            document.querySelectorAll('div[id="SearchResults"] div.summary h2'),
+            a => a.textContent,
+        ),
     );
     // grabs all the company
     const company = await page.evaluate(
-      () => Array.from(
-       document.querySelectorAll('div[id="SearchResults"] div.company span.name'),
-       a => a.textContent,
-      ),
+        () => Array.from(
+            document.querySelectorAll('div[id="SearchResults"] div.company span.name'),
+            a => a.textContent,
+        ),
     );
 
     let totalJobs = 0;
@@ -62,8 +66,9 @@ async function main() {
         await element.click();
         await page.waitForSelector('div[id="JobPreview"]');
         await page.waitForTimeout(500);
-        const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
-        const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
+        const [location, description] = await getData(page);
+        // const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
+        // const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
         const url = await page.url();
         let daysToGoBack = 0;
         if (posted[i].includes('today')) {
@@ -101,20 +106,23 @@ async function main() {
     }
 
     // write results to JSON file
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-          Logger.debug('\nData successfully written!')));
+    await writeToJSON(data, 'monster');
+    Logger.debug('\nData successfully written!');
     await Logger.debug('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
-    await fs.writeFile('./data/canonical/monster.canonical.data.json',
-      JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? Logger.trace('\nData not written!', err) :
-          Logger.debug('\nData successfully written!')));
     await browser.close();
   }
 }
 
-main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;

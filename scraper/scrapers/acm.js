@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON, checkHeadlessOrNot } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -15,14 +15,14 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-async function main() {
+export async function main(headless) {
   let browser;
   let page;
   const data = [];
-  Logger.enableAll(); // this enables console logging. Will replace with CLI args later.
+  // Logger.enableAll(); // this enables console logging. Will replace with CLI args later.
   try {
-    Logger.info('Executing script...');
-    [browser, page] = await startBrowser();
+    Logger.info('Executing script for ACM...');
+    [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
     await page.waitForNavigation;
     const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
@@ -63,4 +63,13 @@ async function main() {
   }
 }
 
-main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;
