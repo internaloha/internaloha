@@ -4,6 +4,9 @@ import apple from './apple.js';
 import aexpress from './aexpress.js';
 import multi_parse from './multi-parser.js';
 import statistics from './statistics.js';
+import linkedin from './linkedin.js';
+import monster from './monster.js';
+import simplyHired from './simplyHired.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -17,6 +20,9 @@ async function getData(headless = true) {
   results.push(apple(headless));
   results.push(acm(headless));
   results.push(aexpress(headless));
+  results.push(linkedin(headless));
+  results.push(monster(headless));
+  results.push(simplyHired(headless));
   return Promise.all(results);
 }
 
