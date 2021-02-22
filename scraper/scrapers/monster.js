@@ -1,15 +1,23 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraperFunctions.js';
+import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
-// const myArgs = process.argv.slice(2);
-async function main() {
+async function getData(page) {
+  const results = [];
+  for (let i = 0; i < 2; i++) {
+    results.push(fetchInfo(page, 'div.heading h2.subtitle', 'innerText'));
+    results.push(fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML'));
+  }
+  return Promise.all(results);
+}
+
+export async function main(headless) {
   let browser;
   let page;
   const data = [];
   Logger.enableAll();
   try {
     Logger.info('Executing script...');
-    [browser, page] = await startBrowser(false);
+    [browser, page] = await startBrowser(headless);
     await page.setViewport({
       width: 1100, height: 700,
     });
@@ -58,8 +66,9 @@ async function main() {
         await element.click();
         await page.waitForSelector('div[id="JobPreview"]');
         await page.waitForTimeout(500);
-        const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
-        const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
+        const [location, description] = await getData(page);
+        // const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
+        // const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
         const url = await page.url();
         let daysToGoBack = 0;
         if (posted[i].includes('today')) {
@@ -103,10 +112,17 @@ async function main() {
     await browser.close();
   } catch (e) {
     Logger.debug('Our Error:', e.message);
-    await writeToJSON(data, 'monster');
-    Logger.debug('\nData successfully written!');
     await browser.close();
   }
 }
 
-main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;
