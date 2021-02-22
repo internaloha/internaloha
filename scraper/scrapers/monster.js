@@ -125,4 +125,4 @@ if (process.argv.includes('main')) {
   main(headless);
 }
 
-export default main();
+export default main;
