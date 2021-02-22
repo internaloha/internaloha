@@ -13,14 +13,14 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
   Logger.enableAll();
   try {
     Logger.info('Executing script...');
-    [browser, page] = await startBrowser(false);
+    [browser, page] = await startBrowser(headless);
     await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
     await page.waitForSelector('section.results__list');
     Logger.info('Fetching jobs...');

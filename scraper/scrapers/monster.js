@@ -10,14 +10,14 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
   Logger.enableAll();
   try {
     Logger.info('Executing script...');
-    [browser, page] = await startBrowser(false);
+    [browser, page] = await startBrowser(headless);
     await page.setViewport({
       width: 1100, height: 700,
     });

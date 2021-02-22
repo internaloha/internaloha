@@ -67,13 +67,13 @@ async function getData(page, elements) {
 }
 
 const myArgs = process.argv.slice(2);
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   Logger.enableAll();
   try {
     Logger.info('Executing script...');
-    [browser, page] = await startBrowser(false, false, 100);
+    [browser, page] = await startBrowser(headless, false, 100);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
     const searchQuery = myArgs.join(' ');
