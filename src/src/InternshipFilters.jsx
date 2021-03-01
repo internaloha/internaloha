@@ -17,6 +17,8 @@ class InternshipsFilters {
   /* Returns total number of internship listing */
   total = (data) => data.length;
 
+  lastScraped = (data) => data[0].lastScraped;
+
   mergeData() {
     let data = [];
     data = _.concat(data, iHire);

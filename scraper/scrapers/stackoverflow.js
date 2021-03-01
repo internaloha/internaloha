@@ -1,12 +1,11 @@
-import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON, isRemote } from './scraper-functions.js';
+import Logger from 'loglevel';
+import { fetchInfo, startBrowser, writeToJSON, isRemote, checkHeadlessOrNot } from './scraper-functions.js';
 
 async function getData(page) {
   const data = [];
   const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
   const number = text.match(/\d+/gm);
-  log.enableAll();
-  log.trace('Internships found:', number[0]);
+  Logger.trace('Internships found:', number[0]);
   // goes to each page
   const elements = await page.evaluate(
       () => Array.from(
@@ -71,32 +70,41 @@ async function getData(page) {
         lastScraped: lastScraped,
         description: description.trim(),
       });
-      log.info(position.trim());
+      Logger.info(position.trim());
     } catch (err) {
-      log.warn('Our Error: ', err.message);
+      Logger.warn('Our Error: ', err.message);
     }
   }
   return data;
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
-  log.enableAll();
-  // eslint-disable-next-line max-len
   try {
-    [browser, page] = await startBrowser();
+    Logger.debug('Executing script for stackoverflow...');
+    [browser, page] = await startBrowser(headless);
     await page.goto('https://stackoverflow.com/jobs?q=internship');
     await page.waitForNavigation;
     // grab all links
     await getData(page).then((data => {
-      log.info(data);
+      Logger.info(data);
       writeToJSON(data, 'stackoverflow');
     }));
     await browser.close();
   } catch (err) {
-    log.warn('Our Error:', err.message);
+    Logger.warn('Our Error:', err.message);
     await browser.close();
   }
 }
-main();
+
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;
