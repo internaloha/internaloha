@@ -52,10 +52,6 @@ function InternshipListing() {
           const newPage = page + 1;
           setPage(newPage);
           setPaginatedData(data.slice(0, newPage * 40));
-          // console.log('Current Page:', page);
-          // console.log('Total Pages:', Math.ceil(data.length / 40));
-          // console.log(paginatedData);
-          // console.log("you're at the bottom of the page");
         }
       }
     };
