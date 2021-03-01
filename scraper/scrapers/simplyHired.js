@@ -7,7 +7,6 @@ async function getData(page, elements) {
     const data = [];
     for (let i = 1; i <= elements.length; i++) {
       const date = new Date();
-      // let daysBack = 0;
       const lastScraped = new Date();
 
       const element = elements[i];
