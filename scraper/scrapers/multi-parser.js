@@ -4,6 +4,7 @@ import fs from 'fs';
 import natural from 'natural';
 import path from 'path';
 import Logger from 'loglevel';
+import { isRemote } from './scraper-functions.js';
 
 const cities = JSON.parse(fs.readFileSync('./data/usa-cities.json', 'utf8'));
 
