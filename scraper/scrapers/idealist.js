@@ -1,7 +1,5 @@
-import log from 'loglevel';
-import { startBrowser, fetchInfo, writeToJSON } from './scraper-functions.js';
-
-const searchQuery = process.argv.slice(2).join(' ');
+import Logger from 'loglevel';
+import { startBrowser, fetchInfo, writeToJSON, checkHeadlessOrNot } from './scraper-functions.js';
 
 async function getLinks(page) {
   return page.evaluate(
@@ -24,9 +22,9 @@ async function getElements(page) {
       await page.waitForTimeout(1000);
       await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
-      log.warn(e.message);
+      Logger.warn(e.message);
       hasNext = false;
-      log.trace('Reached the end of pages!');
+      Logger.trace('Reached the end of pages!');
     }
   }
   return elements;
@@ -39,14 +37,14 @@ async function getData(page, elements) {
     for (let i = 0; i < elements.length; i++) {
       for (let j = 0; j < elements[i].length; j++) {
         const element = `https://www.idealist.org${elements[i][j]}`;
-        log.info(element);
+        Logger.info(element);
         await page.goto(`https://www.idealist.org${elements[i][j]}`);
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
         let company = '';
         try {
           company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
         } catch (e) {
-          log.info('No company found. Setting to N/A');
+          Logger.info('No company found. Setting to N/A');
           company = 'N/A';
         }
         let location = '';
@@ -58,8 +56,8 @@ async function getData(page, elements) {
           const state = loc[1].trim();
           locationArray = { city: city, state: state };
         } catch (e) {
-          log.warn(e.message);
-          log.warn('No location found');
+          Logger.warn(e.message);
+          Logger.warn('No location found');
           location = 'N/A';
         }
         let time = '';
@@ -82,7 +80,7 @@ async function getData(page, elements) {
           date.setDate(date.getDate() - daysBack);
           time = date;
         } catch (e) {
-          log.warn('No startDate found. Setting to N/A');
+          Logger.warn('No startDate found. Setting to N/A');
           time = 'N/A';
         }
         const lastScraped = new Date();
@@ -102,17 +100,17 @@ async function getData(page, elements) {
     }
     return data;
   } catch (e) {
-    log.warn(e.message);
+    Logger.warn(e.message);
   }
 }
 
-async function main() {
+async function main(headless) {
   // eslint-disable-next-line no-unused-vars
   let browser;
   let page;
-  log.enableAll(); // this enables console logging
   try {
-    [browser, page] = await startBrowser();
+    Logger.debug('Executing script for idealist...');
+    [browser, page] = await startBrowser(headless);
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.idealist.org/en/');
     await page.waitForSelector('#layout-root > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.lnKqQM > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.dCQmbn.BaseLayout__PageContent-sc-10xtgtb-2.heQjSt > div.Box__BaseBox-sc-1wooqli-0.bsSECh > div > div.Box__BaseBox-sc-1wooqli-0.hpEILX > div.Box__BaseBox-sc-1wooqli-0.datyjK > div > div > div.idlst-flx.idlst-lgncntr.Box__BaseBox-sc-1wooqli-0.cDmdoN > div > form > div.Box__BaseBox-sc-1wooqli-0.ejycyy > div > input');
@@ -120,19 +118,29 @@ async function main() {
     await page.click('div[class="css-bg1rzq-control react-select__control"]');
     await page.click('div[id="react-select-2-option-2"]');
     // inputting search query
-    await page.type('input[data-qa-id="search-input"]', searchQuery);
+    await page.type('input[data-qa-id="search-input"]', 'computer science intern');
     await page.waitForSelector('button[data-qa-id="search-button"]');
     await page.click('button[data-qa-id="search-button"]');
     await page.waitForSelector('#results > div > div > div.Box__BaseBox-sc-1wooqli-0.iuHlOF > div:nth-child(2) > div > a');
     await getElements(page).then((elements) => {
       getData(page, elements).then((data => {
-        log.info(data);
+        Logger.info(data);
         writeToJSON(data, 'idealist');
       }));
     });
+    await browser.close();
   } catch (e) {
-    log.warn(e);
+    Logger.warn(e);
   }
 }
 
-main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;
