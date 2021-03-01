@@ -9,6 +9,7 @@ import monster from './monster.js';
 import simplyHired from './simplyHired.js';
 import cisco from './cisco.js';
 import zipRecruiter from './zipRecruiter.js';
+import stackoverflow from './stackoverflow.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -27,6 +28,7 @@ async function getData(headless = true) {
   results.push(simplyHired(headless));
   results.push(cisco(headless));
   results.push(zipRecruiter(headless));
+  results.push(stackoverflow(headless));
   return Promise.all(results);
 }
 

@@ -46,7 +46,7 @@
     "single-parse": "node scrapers/single-parser.js",
     "youtern": "node scrapers/Youtern.js",
     "cool": "node scrapers/Cooworks.js",
-    "stackoverflow": "node scrapers/stackoverflow.js",
+    "stackoverflow": "node scrapers/stackoverflow.js main",
     "glassdoor": "node scrapers/Glassdoor.js",
     "ihire": "node scrapers/iHireTechnology.js",
     "angellist": "node scrapers/angellist.js",
