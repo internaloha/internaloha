@@ -14,9 +14,8 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
-  Logger.enableAll();
   try {
-    Logger.info('Executing script...');
+    Logger.info('Executing script for Monster...');
     [browser, page] = await startBrowser(headless);
     await page.setViewport({
       width: 1100, height: 700,
