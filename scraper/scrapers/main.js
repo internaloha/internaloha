@@ -10,6 +10,7 @@ import simplyHired from './simplyHired.js';
 import cisco from './cisco.js';
 import zipRecruiter from './zipRecruiter.js';
 import stackoverflow from './stackoverflow.js';
+import indeed from './indeed.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -29,6 +30,7 @@ async function getData(headless = true) {
   results.push(cisco(headless));
   results.push(zipRecruiter(headless));
   results.push(stackoverflow(headless));
+  results.push(indeed(headless));
   return Promise.all(results);
 }
 

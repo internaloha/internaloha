@@ -40,7 +40,7 @@
     "simply": "node scrapers/simplyHired.js main",
     "zip": "node scrapers/zipRecruiter.js main",
     "idealist": "node scrapers/idealist.js",
-    "indeed": "node scrapers/indeed.js",
+    "indeed": "node scrapers/indeed.js main",
     "monster": "node scrapers/monster.js main",
     "linkedin": "node scrapers/linkedin.js main",
     "single-parse": "node scrapers/single-parser.js",
