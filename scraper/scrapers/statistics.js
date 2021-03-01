@@ -93,5 +93,8 @@ function main() {
       Logger.info('Data successfully written!')));
 }
 
+if (process.argv.includes('main')) {
+  main();
+}
+
 export default main;
-// main();

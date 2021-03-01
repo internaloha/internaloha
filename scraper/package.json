@@ -35,7 +35,7 @@
     "test": "node test.js",
     "eject": "react-scripts eject",
     "lint": "eslint --quiet --ext .jsx --ext .js ./scrapers",
-    "statistics": "node scrapers/statistics.js",
+    "statistics": "node scrapers/statistics.js main",
     "internships": "node scrapers/internships.js",
     "simply": "node scrapers/simplyHired.js main",
     "zip": "node scrapers/zipRecruiter.js main",
@@ -56,7 +56,8 @@
     "hn": "node scrapers/hn.js",
     "apple": "node scrapers/apple.js main",
     "nsf": "node scrapers/nsf-reu.js",
-    "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js",
+    "multi-parse": "node scrapers/multi-parser.js && node scrapers/statistics.js main",
+    "multi-parse-only": "node scrapers/multi-parser.js main",
     "scrapers": "node scrapers/main.js",
     "cisco": "node scrapers/cisco.js main"
   },
