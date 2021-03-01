@@ -38,7 +38,7 @@
     "statistics": "node scrapers/statistics.js",
     "internships": "node scrapers/internships.js",
     "simply": "node scrapers/simplyHired.js main",
-    "zip": "node scrapers/zipRecruiter.js",
+    "zip": "node scrapers/zipRecruiter.js main",
     "idealist": "node scrapers/idealist.js",
     "indeed": "node scrapers/indeed.js",
     "monster": "node scrapers/monster.js main",
