@@ -104,14 +104,12 @@ async function main() {
       try {
         const element = elementLoaded[currentCounter];
         await element.click();
-
         const position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
         let company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
         const location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
         const posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
         const url = page.url();
         const description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
-
         if (company === undefined) {
           company = 'N/A';
         }
