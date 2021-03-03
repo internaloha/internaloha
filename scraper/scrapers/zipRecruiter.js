@@ -1,7 +1,5 @@
-import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON, autoScroll } from './scraper-functions.js';
-
-const myArgs = process.argv.slice(2);
+import Logger from 'loglevel';
+import { fetchInfo, startBrowser, writeToJSON, autoScroll, checkHeadlessOrNot } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -15,18 +13,18 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
-  log.enableAll();
   try {
-    [browser, page] = await startBrowser();
+    Logger.debug('Executing script for zip...');
+    [browser, page] = await startBrowser(headless);
     await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');
     await page.waitForSelector('input[id="search1"]');
     await page.waitForSelector('input[id="location1"]');
-    const searchQuery = myArgs.join(' ');
-    log.info('Inputting search query:', searchQuery);
+    const searchQuery = 'computer science intern';
+    Logger.info('Inputting search query:', searchQuery);
     await page.type('input[id="search1"', searchQuery);
     // eslint-disable-next-line no-param-reassign,no-return-assign
     await page.$eval('input[id="location1"]', (el) => el.value = '');
@@ -39,7 +37,7 @@ async function main() {
     await page.click('.select-menu-item:nth-child(3)');
     await page.waitForSelector('.breadcrumb_list.breadcrumb li:nth-child(2)');
     await page.click('.breadcrumb_list.breadcrumb li:nth-child(2)');
-    log.info('Setting filter by 10 days...');
+    Logger.info('Setting filter by 10 days...');
     // Filters based on internship tag
     await page.waitForSelector('menu[id="select-menu-search_filters_tags"] .select-menu-item');
     try {
@@ -47,9 +45,9 @@ async function main() {
         [...document.querySelectorAll('menu[id="select-menu-search_filters_tags"] .select-menu-item')]
             .find(element => element.textContent.includes('Software Engineering Intern')).click();
       });
-      log.trace('Filtering based on internship tag...');
+      Logger.trace('Filtering based on internship tag...');
     } catch (err5) {
-      log.info('No internship tags found');
+      Logger.info('No internship tags found');
     }
     // any distance
     await page.waitForSelector('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
@@ -60,7 +58,7 @@ async function main() {
       await page.click('.load_more_jobs');
       await autoScroll(page);
     } catch (err) {
-      log.warn('--- All jobs are Listed, no "Load More" button --- ');
+      Logger.warn('--- All jobs are Listed, no "Load More" button --- ');
     }
     // grab all links
     const elements = await page.evaluate(
@@ -72,7 +70,7 @@ async function main() {
     );
     const skippedPages = [];
     let jobs = 0;
-    log.info(elements.length);
+    Logger.info(elements.length);
     for (let i = 0; i < elements.length; i++) {
       try {
         const element = elements[i];
@@ -112,23 +110,33 @@ async function main() {
           });
           jobs++;
         } else {
-          log.trace('--- Went off of ZipRecruiter, skipping ---');
+          Logger.trace('--- Went off of ZipRecruiter, skipping ---');
           skippedPages.push(currentPage);
         }
       } catch (err4) {
-        log.warn('Error fetching link, skipping');
+        Logger.warn('Error fetching link, skipping');
       }
     }
     // write results to JSON file
     await writeToJSON(data, 'ziprecruiter');
-    log.info('Total jobs scraped:', jobs);
-    log.info('Total links skipped:', skippedPages.length);
-    log.info('Links skipped:', skippedPages);
-    log.info('Closing browser...');
+    Logger.info('Total jobs scraped:', jobs);
+    Logger.info('Total links skipped:', skippedPages.length);
+    Logger.info('Links skipped:', skippedPages);
+    Logger.info('Closing browser...');
     await browser.close();
   } catch (e) {
-    log.warn('Our Error:', e.message);
+    Logger.warn('Our Error:', e.message);
     await browser.close();
   }
 }
-main();
+
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;

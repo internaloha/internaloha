@@ -11,6 +11,7 @@ import {
   Grid,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import InternshipsFilters from './InternshipFilters';
 import { dropdownCareerInterest, recommendation } from './RecommendationScript';
 
@@ -188,6 +189,9 @@ function SearchInternshipFeature({
           <Grid.Column>
             <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
               Total results found: {internships.total(passedData)}
+            </Header>
+            <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
+              Scrapers last ran: {moment(internships.lastScraped(passedData)).fromNow()}
             </Header>
           </Grid.Column>
           <Grid.Column textAlign={'right'}>

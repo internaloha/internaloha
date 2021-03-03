@@ -1,16 +1,7 @@
-/* eslint-disable max-len,no-console,no-await-in-loop */
-
 import puppeteer from 'puppeteer';
-import fs from 'fs';
-import performance from 'perf_hooks';
-import { fetchInfo } from './scraper-functions.js';
+import log from 'loglevel';
 import userAgent from 'user-agents';
-
-const myArgs = process.argv.slice(2);
-
-function removeDuplicates(skills) {
-  return [...new Set(skills)];
-}
+import { fetchInfo, writeToJSON } from './scraper-functions.js';
 
 async function autoScroll(page) {
   await page.waitForSelector('span[class="JobsPage_jobFilterListHeaderCount__2z-Nc"]');
@@ -21,51 +12,48 @@ async function autoScroll(page) {
   const number = parseInt(parsedNumber, 10);
   let prevNum = 0;
   let stuck = 0;
-  console.log('Total Results:', number);
+  log.info('Total Results:', number);
   try {
     while ((results < number) && (stuck <= 5)) {
-      await page.waitFor(2000);
       await page.hover('div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]:last-child');
       const elem = await page.$$('div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]');
       prevNum = results;
       results = elem.length;
-      // console.log(`Prev num: ${prevNum} | Current: ${results}`);
       // sometimes it gets stuck on the same number. If it gets stuck more than 5 times, we exit
       if (prevNum === results) {
         stuck++;
-        console.log('Got stuck on autoscrolling...');
+        log.error('Got stuck on autoscrolling...');
       }
     }
-    console.log('Finished Loading:', results);
+    log.info('Finished Loading:', results);
   } catch (e) {
-    console.log('Error autoscrolling:', e.message);
+    log.error('Error autoscrolling:', e.message);
   }
 }
 
-(async () => {
-  const timeStart = performance.now();
+async function main() {
   const browser = await puppeteer.launch({
     headless: false,
     slowMo: 100,
   });
   try {
     const page = await browser.newPage();
-    const cookies = await page.cookies();
     await page.setViewport({
       width: 1100, height: 900,
     });
+    await page.setDefaultTimeout(60000);
+    await log.enableAll();
     await page.setUserAgent(userAgent.toString());
     await page.goto('https://www.internships.com/app/search');
-    const searchQuery = myArgs.join(' ');
-    await page.waitForSelector('input[id="jobsSearchSidebar-keywords-input"]', { timeout: 100000 });
-    await page.type('input[id="jobsSearchSidebar-keywords-input"]', searchQuery);
+    await page.waitForSelector('input[id="jobsSearchSidebar-keywords-input"]', { timeout: 0 });
+    await page.type('input[id="jobsSearchSidebar-keywords-input"]', 'computer science');
     await page.waitForTimeout(1000);
     // sort by date
     await page.waitForSelector('p.Menu_title__3xALk');
     await page.click('p.Menu_title__3xALk');
     await page.waitForSelector('ul[class="Menu_list__2x6Qo SortMenu_filterMenuList__26wPX"]:last-child');
     await page.click('ul[class="Menu_list__2x6Qo SortMenu_filterMenuList__26wPX"]:last-child');
-    console.log('Sorting by date...');
+    log.info('Sorting by date...');
     // sorting by Hawaii, can comment out
     await page.waitForSelector('input[placeholder="City, State, or ZIP Code"]');
     await page.type('input[placeholder="City, State, or ZIP Code"]', 'Hawaii');
@@ -73,8 +61,8 @@ async function autoScroll(page) {
     await page.waitForTimeout(2000);
     await page.keyboard.press('Enter');
     // remove unpaid listings
-    await page.waitForSelector('label[class="Checkbox_label__23uIu"]');
-    await page.click('label[class="Checkbox_label__23uIu"]');
+    await page.waitForSelector('div[data-test-id="jobsSearchSidebar-unpaid-checkbox-click"]');
+    await page.click('div[data-test-id="jobsSearchSidebar-unpaid-checkbox-click"]');
     // auto scroll to get all the listings
     const infiniteScroll = 'div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]';
     await page.waitForSelector(infiniteScroll);
@@ -86,13 +74,13 @@ async function autoScroll(page) {
     const data = [];
     let finishedJobs = 0;
     let skipped = 0;
-    console.log('Starting scraping:');
+    log.info('Starting scraping:');
     // Grabs all the jobs
     for (let currentCounter = 0; currentCounter < totalJobs; currentCounter++) {
       await page.goto('https://www.internships.com/app/search?keywords=computer+science&position-types=internship&location=Hawaii&context=seo&seo-mcid=33279397626109020301048056291448164886');
-      //unclick unpaid listing
-      await page.waitForSelector('label[class="Checkbox_label__23uIu"]');
-      await page.click('label[class="Checkbox_label__23uIu"]');
+      // uncheck unpaid listing
+      await page.waitForSelector('div[data-test-id="jobsSearchSidebar-unpaid-checkbox-click"]');
+      await page.click('div[data-test-id="jobsSearchSidebar-unpaid-checkbox-click"]');
       await page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
       let elementLoaded = await page.$$('div[class="GridItem_jobContent__ENwap"]');
       // if job we want to click is not loaded
@@ -109,21 +97,19 @@ async function autoScroll(page) {
             reachedTotal = true;
           }
         }
-        console.log('Loading more data...');
+        log.info('Loading more data...');
       }
-      console.log('Total elementLoaded:', elementLoaded.length);
+      log.info('Total elementLoaded:', elementLoaded.length);
       // sometimes a job doesn't load properly so put it in try/catch to allow rest of script to run
       try {
         const element = elementLoaded[currentCounter];
         await element.click();
-
         const position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
         let company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
         const location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
         const posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
         const url = page.url();
         const description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
-
         if (company === undefined) {
           company = 'N/A';
         }
@@ -133,15 +119,15 @@ async function autoScroll(page) {
         if (posted.includes('day') || posted.includes('days')) {
           daysBack = 0;
         } else if (posted.includes('month') || (posted.includes('months'))) {
-            // 'a month ago...'
-            if (posted.includes('a')) {
-              daysBack = 30;
-            } else {
-              daysBack = posted.match(/\d+/g) * 30;
-            }
+          // 'a month ago...'
+          if (posted.includes('a')) {
+            daysBack = 30;
           } else {
-            daysBack = posted.match(/\d+/g);
+            daysBack = posted.match(/\d+/g) * 30;
           }
+        } else {
+          daysBack = posted.match(/\d+/g);
+        }
         date.setDate(date.getDate() - daysBack);
         const time = date;
         let state = '';
@@ -164,26 +150,22 @@ async function autoScroll(page) {
           description: description,
         });
         finishedJobs++;
-        console.log(`${position} - ${currentCounter}`);
+        log.info(`${position} - ${currentCounter}`);
       } catch (err5) {
         skipped++;
-        console.log('Error, skipping page:', err5.message);
+        log.error('Error, skipping page:', err5.message);
       }
     }
-    console.log('Total jobs:', finishedJobs);
-    console.log('Total jobs skipped:', skipped);
+    log.info('Total jobs:', finishedJobs);
+    log.info('Total jobs skipped:', skipped);
     // write results to JSON file
-    await fs.writeFile('./data/canonical/internships.canonical.data.json',
-        JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? console.log('\nData not written!', err) :
-            console.log('\nData successfully written!')));
-    const timeEnd = performance.now();
-    console.log(`Total execution time: ${timeEnd - timeStart} ms.`);
-    console.log('Closing browser!');
+    await writeToJSON(data, 'internships');
     await browser.close();
   } catch
-      (e) {
-    console.log('Our Error:', e.message);
+    (e) {
+    log.error('Our Error:', e.message);
     await browser.close();
   }
-})();
+}
+
+main();
