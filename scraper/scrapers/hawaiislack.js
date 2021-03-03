@@ -1,15 +1,23 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo, isRemote } from './scraper-functions.js';
+import { fetchInfo } from './scraper-functions.js';
+
+// async function getData(page) {
+//   const position = await fetchInfo(page, 'div[class="job_description"] > ', 'innerText');
+//   // const text = await fetchInfo(page, 'span[class="description fc-light fs-body1"]', 'textContent');
+//   const company = await fetchInfo(page, 'div[class="job_description"] > p > strong', 'innerText');
+//   const posted = await fetchInfo(page, 'ul[class="job_description"] > p > strong', 'innerText');
+//   const description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
+//   const location = await fetchInfo(page, 'class="job_description" > p > strong', 'innerText');
+//
+// }
 
 async function setSearchFilters(page) {
   // Navigate to internship page
   await page.waitForSelector('input[id="search_keywords"]');
   // change to internship when not testing
-  await page.type('input[id="search_keywords"]', 'intern');
-  // await page.waitForSelector('input[id="search_location"]');
-  // await page.type('input[id="search_location"]', 'United States');
+  await page.type('input[id="search_keywords"]', 'Nginx');
   await page.click('[class="search_submit"]');
 }
 
@@ -30,49 +38,45 @@ async function main() {
     // const number = text.match(/\d+/gm);
     // log.trace('Internships found:', number[0]);
     // grab all links
-    const elements = await page.evaluate(
-        () => Array.from(
-            // eslint-disable-next-line no-undef
-            document.querySelectorAll('[class="post-269 job_listing type-job_listing status-publish has post-thumbnail hentry job-type-full-time"]'),
-            a => `https://jobs.hawaiitech.com/${a.getAttribute('href')}`,
-        ),
-    );
-            // document.querySelectorAll('ul[class="job_listings"]').length
+    const elements = await page.evaluate(() => Array.from(
+            document.querySelectorAll('ul[class="job_listings"] > li > a'),
+            a => `${a.getAttribute('href')}`,
+        ));
     const data = [];
     // goes to each page
     for (let i = 0; i < elements.length; i++) {
       await page.goto(elements[i]);
       try {
-        const position = await fetchInfo(page, 'div[class="job_description"] Title', 'innerText');
+        const position = await fetchInfo(page, 'h1[class="entry-title"]', 'innerText');
         let company = '';
         try {
-          company = await fetchInfo(page, 'div[class="job_description"] Hiring Unit', 'innerText');
+          company = await fetchInfo(page, 'p[class="name"] > strong', 'innerText');
         } catch (noCompany) {
           company = 'Unknown';
         }
-        const posted = await fetchInfo(page, 'ul[class="job_description"] Date Posted', 'innerText');
-        const description = await fetchInfo(page, 'class="job_description" Duties and Responsbilities', 'innerHTML');
-        const skills = await page.evaluate(
-            () => Array.from(
-                // eslint-disable-next-line no-undef
-                document.querySelectorAll('section[class="mb32"]:nth-child(3) a'),
-                a => a.textContent,
-            ),
-        );
-        const date = new Date();
-        let daysBack = 0;
+        const posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerHTML');
+        const description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
+        // const skills = await page.evaluate(
+        //     () => Array.from(
+        //         // eslint-disable-next-line no-undef
+        //         document.querySelectorAll('section[class="mb32"]:nth-child(3) a'),
+        //         a => a.textContent,
+        //     ),
+        // );
+        // const date = new Date();
+        // let daysBack = 0;
         const lastScraped = new Date();
-        if (posted.includes('yesterday')) {
-          daysBack = 1;
-        } else {
-          daysBack = posted.match(/\d+/g);
-        }
-        date.setDate(date.getDate() - daysBack);
+        // if (posted.includes('yesterday')) {
+        //   daysBack = 1;
+        // } else {
+        //   daysBack = posted.match(/\d+/g);
+        // }
+        // date.setDate(date.getDate() - daysBack);
         let location = '';
         // let city = '';
         // let state = '';
         try {
-          location = await fetchInfo(page, 'class="job_description" Location', 'innerText');
+          location = await fetchInfo(page, 'li[class="location"] > a', 'innerText');
           // city = location.match(/([^ –\n][^,]*)/g)[0].trim();
           // state = location.match(/([^,]*)/g)[2].trim();
         } catch (noLocation) {
@@ -90,9 +94,9 @@ async function main() {
           position: position.trim(),
           company: company.trim(),
           location: location.trim(),
-          posted: date,
+          posted: posted.trim(),
           url: elements[i],
-          skills: skills,
+          // skills: skills,
           lastScraped: lastScraped,
           description: description.trim(),
         });
