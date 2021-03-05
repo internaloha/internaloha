@@ -362,21 +362,21 @@
     },
     {
         "site": "Total",
-        "position": 1561,
-        "company": 1560,
-        "contact": 103,
-        "location": 1561,
-        "posted": 717,
-        "due": 33,
-        "start": 48,
+        "position": 1579,
+        "company": 1578,
+        "contact": 114,
+        "location": 1579,
+        "posted": 729,
+        "due": 45,
+        "start": 60,
         "end": 0,
         "compensation": 378,
-        "qualifications": 365,
+        "qualifications": 379,
         "skills": 1505,
         "remote": 664,
         "lastScraped": "2021-03-05T04:11:21.601Z",
-        "index": 1561,
-        "url": 1561,
-        "description": 1556
+        "index": 1579,
+        "url": 1579,
+        "description": 1574
     }
 ]
