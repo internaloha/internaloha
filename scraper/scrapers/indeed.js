@@ -5,7 +5,7 @@ async function getData(page) {
   const results = [];
   // Scrapes position, location, company, posted, and description
   for (let i = 0; i < 5; i++) {
-    results.push(fetchInfo(page, 'h1[class="icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container "]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-CompanyInfoWithoutHeaderImage jobsearch-CompanyInfoWithReview"] > div > div > div:nth-child(2)', 'innerText'));
     results.push(fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText'));
@@ -38,7 +38,7 @@ async function main(headless) {
       await page.waitForTimeout(2000);
       await page.click('a[class="icl-CloseButton popover-x-button-close"]');
     } catch (err2) {
-      Logger.error('Our Error:', err2.message);
+      Logger.info('No popup');
     }
     await page.waitForSelector('div[class="serp-filters-sort-by-container"]');
     const date = await page.evaluate(
@@ -53,9 +53,9 @@ async function main(headless) {
       await page.click('button[class="dropdown-button dd-target"]');
       await page.waitForTimeout(1000);
       await page.click('li[onmousedown="rbptk(\'rb\', \'dateposted\', \'4\');"]');
-      Logger.trace('Sorting by last 14 days...');
+      Logger.info('Sorting by last 14 days...');
     } catch (err3) {
-      Logger.error('Our Error: No sorting by date posted.');
+      Logger.info('No sorting by date posted.');
     }
     let internshipDropdown = [];
     try {
@@ -68,13 +68,13 @@ async function main(headless) {
         ),
       );
     } catch (err4) {
-      Logger.warn('No filter link');
+      Logger.info('No filter link');
     }
     if (internshipDropdown.length === 1) {
       await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
       Logger.trace('Filtering by internship tag...');
     } else {
-      Logger.warn('No internship tag.');
+      Logger.info('No internship tag.');
     }
     let totalJobs = 0;
     const urls = [];
