@@ -72,7 +72,7 @@ function fromDir(startPath, filter) {
 
 function main() {
   // gets all file from the directory
-  const files = fromDir('../src/src/data/', '.json');
+  const files = fromDir('../ui/src/data/', '.json');
   let data = [];
   const statistics = [];
   for (let i = 0; i < files.length; i++) {
