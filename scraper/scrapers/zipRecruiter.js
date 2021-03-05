@@ -58,7 +58,7 @@ async function main(headless) {
       await page.click('.load_more_jobs');
       await autoScroll(page);
     } catch (err) {
-      Logger.warn('--- All jobs are Listed, no "Load More" button --- ');
+      Logger.info('--- All jobs are Listed, no "Load More" button --- ');
     }
     // grab all links
     const elements = await page.evaluate(

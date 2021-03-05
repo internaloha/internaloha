@@ -22,7 +22,6 @@ async function getElements(page) {
       await page.waitForTimeout(1000);
       await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
-      Logger.warn(e.message);
       hasNext = false;
       Logger.trace('Reached the end of pages!');
     }
@@ -32,13 +31,12 @@ async function getElements(page) {
 
 // eslint-disable-next-line consistent-return
 async function getData(page, elements) {
+  const data = [];
   try {
-    const data = [];
     for (let i = 0; i < elements.length; i++) {
       for (let j = 0; j < elements[i].length; j++) {
         const element = `https://www.idealist.org${elements[i][j]}`;
-        Logger.info(element);
-        await page.goto(`https://www.idealist.org${elements[i][j]}`);
+        await page.goto(element);
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
         let company = '';
         try {
@@ -56,8 +54,8 @@ async function getData(page, elements) {
           const state = loc[1].trim();
           locationArray = { city: city, state: state };
         } catch (e) {
-          Logger.warn(e.message);
-          Logger.warn('No location found');
+          Logger.debug(e.message);
+          Logger.debug('No location found');
           location = 'N/A';
         }
         let time = '';
@@ -100,7 +98,7 @@ async function getData(page, elements) {
     }
     return data;
   } catch (e) {
-    Logger.warn(e.message);
+    Logger.warn('Idealist Error:', e.message);
   }
 }
 
@@ -126,11 +124,12 @@ async function main(headless) {
       getData(page, elements).then((data => {
         Logger.info(data);
         writeToJSON(data, 'idealist');
+        browser.close();
       }));
     });
-    await browser.close();
   } catch (e) {
-    Logger.warn(e);
+    await browser.close();
+    Logger.warn('Idealist Error:', e);
   }
 }
 

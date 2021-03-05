@@ -17,10 +17,10 @@ async function getData(page) {
   for (let i = 0; i < number[0]; i++) {
     await page.goto(elements[i]);
     try {
-      const position = await fetchInfo(page, 'div[class="grid--cell fl1"] h1', 'innerText');
+      const position = await fetchInfo(page, 'h1[class="fs-headline1 sticky:fs-body3 sticky:sm:fs-subheading t mb4 sticky:mb2"]', 'innerText');
       let company = '';
       try {
-        company = await fetchInfo(page, 'div[class="fc-black-700 mb4"] a', 'innerText');
+        company = await fetchInfo(page, 'div[class="fc-black-700 mb4 sticky:mb0 sticky:mr8 fs-body2 sticky:fs-body1 sticky:sm:fs-caption"] a', 'innerText');
       } catch (noCompany) {
         company = 'Unknown';
       }
@@ -46,7 +46,7 @@ async function getData(page) {
       let city = '';
       let state = '';
       try {
-        location = await fetchInfo(page, 'div[class="fc-black-700 mb4"] span', 'innerText');
+        location = await fetchInfo(page, 'div[class="fc-black-700 mb4 sticky:mb0 sticky:mr8 fs-body2 sticky:fs-body1 sticky:sm:fs-caption"] span', 'innerText');
         city = location.match(/([^ –\n][^,]*)/g)[0].trim();
         state = location.match(/([^,]*)/g)[2].trim();
       } catch (noLocation) {

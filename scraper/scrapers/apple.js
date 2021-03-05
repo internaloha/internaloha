@@ -48,7 +48,6 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
-  // Logger.enableAll(); // Enable console logs until CLI in place
   try {
     Logger.info('Executing script for apple...');
     [browser, page] = await startBrowser(headless);
@@ -56,27 +55,31 @@ async function main(headless) {
     await setSearchFilter(page);
     let totalPage = await page.evaluate(() => document.querySelector('form[id="frmPagination"] span:last-child').innerHTML);
     // if there is just 1 page, set totalPage to 3 because for loop below starts at 2
-    if (totalPage === undefined) {
+    if (totalPage === undefined || totalPage === 1) {
       totalPage = 3;
     }
     // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
-    for (let i = 2; i < totalPage; i++) {
+    for (let i = 2; i <= totalPage; i++) {
       await page.waitForSelector('a[class="table--advanced-search__title"]');
       const urls = await page.evaluate(() => Array.from(document.querySelectorAll('a[class="table--advanced-search__title"]'),
           a => a.href));
       for (let j = 0; j < urls.length; j++) {
-        await page.goto(urls[j]);
-        const lastScraped = new Date();
-        const [position, posted, description, city, state] = await getData(page);
-        const date = new Date(posted).toISOString();
-        data.push({
-          url: urls[j],
-          position: position,
-          posted: date,
-          lastScraped: lastScraped,
-          location: { city: city, state: state },
-          description: description,
-        });
+        try {
+          await page.goto(urls[j]);
+          const lastScraped = new Date();
+          const [position, posted, description, city, state] = await getData(page);
+          const date = new Date(posted).toISOString();
+          data.push({
+            url: urls[j],
+            position: position,
+            posted: date,
+            lastScraped: lastScraped,
+            location: { city: city, state: state },
+            description: description,
+          });
+        } catch (err4) {
+          Logger.error(err4.message);
+        }
       }
       // Uses i value in for loop to navigate search pages
       await page.goto(`https://jobs.apple.com/en-us/search?search=internship&sort=relevance&location=united-states-USA&page=${i}`);
@@ -85,7 +88,7 @@ async function main(headless) {
     await browser.close();
   } catch (err) {
     await browser.close();
-    Logger.debug(err.message);
+    Logger.error(err.message);
   }
 }
 
