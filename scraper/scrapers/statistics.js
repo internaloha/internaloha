@@ -72,7 +72,7 @@ function fromDir(startPath, filter) {
 
 function main() {
   // gets all file from the directory
-  const files = fromDir('../src/src/data/', '.json');
+  const files = fromDir('../ui/src/data/', '.json');
   let data = [];
   const statistics = [];
   for (let i = 0; i < files.length; i++) {
@@ -87,10 +87,10 @@ function main() {
   }
   statistics.push(getStatistics('Total', data));
 
-  fs.writeFile('../src/src/data/statistics.data.json',
-      JSON.stringify(statistics, null, 4), 'utf-8',
-      err => (err ? console.log('\nData not written!', err) :
-          Logger.info('Data successfully written!')));
+  fs.writeFile('../ui/src/data/statistics.data.json',
+    JSON.stringify(statistics, null, 4), 'utf-8',
+    err => (err ? console.log('\nData not written!', err) :
+      Logger.info('Data successfully written!')));
 }
 
 if (process.argv.includes('main')) {
