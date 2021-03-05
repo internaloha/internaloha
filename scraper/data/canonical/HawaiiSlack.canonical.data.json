@@ -1,20 +1,11 @@
 [
     {
-        "position": "Senior Software Engineer",
-        "company": "Paubox",
-        "location": "Remote",
-        "posted": "December 16, 2020",
-        "url": "https://jobs.hawaiitech.com/job/senior-software-engineer/",
-        "lastScraped": "2021-03-03T12:17:14.903Z",
-        "description": "<div class=\"section page-centered\">\n<div>Paubox provides secure communication for modern healthcare. Right out of the box.</div>\n<div></div>\n<div>We are a fast growing B2B startup based in San Francisco, ranking #320 on the Inc. 5000 list of fastest growing privately owned companies. Our core solutions are HIPAA compliant, HITRUST CSF certified, and rated best in class by&nbsp;<a class=\"postings-link\" href=\"http://g2.com/\">G2.com</a>. Our mission is to provide market leadership in the HIPAA compliant email space.</div>\n<div></div>\n<div>We are currently looking for a Senior Software Engineer to help us build our customer-facing products, primarily with Ruby on Rails, React,&nbsp;<a class=\"postings-link\" href=\"http://node.js/\">Node.js</a>, and AWS Lambda.</div>\n<div></div>\n<div>This position is 100% remote but will need some time overlap with EST/PST. Must be located and authorized to work in the US.</div>\n</div>\n<div class=\"section page-centered\">\n<div>\n<h3>Requirements</h3>\n<ul class=\"posting-requirements plain-list\">\n<li style=\"list-style-type: none\">\n<ul>\n<li>5+ years of software engineering experience</li>\n<li>Expertise with our tech stack (see below)</li>\n<li>Experience with React, CSS/SCSS, TDD (Rspec)</li>\n<li>Security Awareness – proper credential handling, safe SQL queries, and general ability to self-direct identification and remediation of security issues.</li>\n<li>Ability to balance the trade-offs of perfection versus development, commensurate with the company size as it grows.</li>\n</ul>\n</li>\n</ul>\n</div>\n</div>\n<div class=\"section page-centered\">\n<div>\n<h3>Our Current Stack</h3>\n<ul class=\"posting-requirements plain-list\">\n<li style=\"list-style-type: none\">\n<ul>\n<li>Ruby on Rails</li>\n<li>React</li>\n<li>MySQL</li>\n<li>PostgreSQL</li>\n<li>Git/Github</li>\n<li>Ubuntu</li>\n<li>Nginx</li>\n</ul>\n</li>\n</ul>\n</div>\n</div>\n<div class=\"section page-centered\">\n<div>\n<h3>Why Work at Paubox?</h3>\n<ul class=\"posting-requirements plain-list\">\n<li style=\"list-style-type: none\">\n<ul>\n<li>We have a strong identity and culture that is Hardworking, Honest, Focused, and Fun.</li>\n<li>Health care benefits, including dental and vision.</li>\n<li>401(k) savings plan.</li>\n<li>Combined 28 days of paid time-off, in addition to holidays.</li>\n<li>Stock options as an early employee.</li>\n<li>Apple work laptop provided.</li>\n<li>$500/quarter stipend for professional development.</li>\n<li>Opportunity to grow within the company as Paubox continues to grow.</li>\n</ul>\n</li>\n</ul>\n</div>\n</div>"
-    },
-    {
-        "position": "Software Engineer (Remote)",
+        "position": "UI / UX Designer",
         "company": "Error",
         "location": "Error",
-        "posted": "September 23, 2020",
-        "url": "https://jobs.hawaiitech.com/job/software-engineer-remote/",
-        "lastScraped": "2021-03-03T12:17:25.897Z",
+        "posted": "2020-09-16T10:00:00.000Z",
+        "url": "https://jobs.hawaiitech.com/job/ui-ux-designer/",
+        "lastScraped": "2021-03-05T12:24:06.730Z",
         "description": "Error"
     }
 ]
