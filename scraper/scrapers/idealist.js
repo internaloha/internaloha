@@ -22,7 +22,6 @@ async function getElements(page) {
       await page.waitForTimeout(1000);
       await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
-      Logger.warn(e.message);
       hasNext = false;
       Logger.trace('Reached the end of pages!');
     }
