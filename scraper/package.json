@@ -59,7 +59,8 @@
     "multi-parse": "node scrapers/multi-parser.js && node scrapers/statistics.js main",
     "multi-parse-only": "node scrapers/multi-parser.js main",
     "scrapers": "node scrapers/main.js",
-    "cisco": "node scrapers/cisco.js main"
+    "cisco": "node scrapers/cisco.js main",
+    "student": "node scrapers/studentOpportunityCenter.js main"
   },
   "browserslist": {
     "production": [
