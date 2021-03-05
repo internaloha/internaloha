@@ -7,10 +7,7 @@ const USERNAME_SELECTOR = '#user_email';
 const PASSWORD_SELECTOR = '#user_password';
 const CTA_SELECTOR = '#new_user > div:nth-child(6) > input';
 
-// angellist2
-const commandLine = process.argv.slice(2);
-const credentials = commandLine.slice(0, 2);
-log.info(credentials);
+const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
 async function getData(page) {
   const results = [];
@@ -40,9 +37,9 @@ async function main(url) {
   // await page.waitForTimeout(30000);
   await page.waitForSelector(USERNAME_SELECTOR);
   await page.click(USERNAME_SELECTOR);
-  await page.keyboard.type(credentials[0]);
+  await page.keyboard.type(credentials.angellist.user);
   await page.click(PASSWORD_SELECTOR);
-  await page.keyboard.type(credentials[1]);
+  await page.keyboard.type(credentials.angellist.password);
   await page.click(CTA_SELECTOR);
   await page.waitForNavigation();
   // await page.waitForTimeout(5000);
