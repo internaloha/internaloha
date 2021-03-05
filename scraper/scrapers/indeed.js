@@ -5,8 +5,8 @@ async function getData(page) {
   const results = [];
   // Scrapes position, location, company, posted, and description
   for (let i = 0; i < 5; i++) {
-    results.push(fetchInfo(page, 'div[class="jobsearch-JobInfoHeader-title-container "]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="jobsearch-CompanyInfoWithoutHeaderImage jobsearch-CompanyInfoWithReview"] > div > div > div:nth-child(2)', 'innerText'));
+    results.push(fetchInfo(page, 'div.jobsearch-JobInfoHeader-title-container ', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] + div', 'innerText'));
     results.push(fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML'));
