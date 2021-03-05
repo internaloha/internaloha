@@ -1,0 +1,288 @@
+[
+    {
+        "position": "Software Engineering Intern",
+        "company": "KBR",
+        "location": {
+            "city": "Menlo Park",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/e73d1b72db1833c640824510ea3fc648?lvk=Jy4v8RJwLPKLWcc6SYQFIw.--LuvFAXKlJ",
+        "posted": "2021-02-08T04:11:24.822Z",
+        "lastScraped": "2021-03-05T04:11:24.822Z",
+        "description": "<div><p>**Title:** Software Engineering Intern Around here, we define the future. We are a company of innovators, thinkers, creators, explorers, volunteers, and dreamers. But we all share one goal: to improve the world responsibly and safely. </p><p> KBR is seeking several interns to work with scientific and engineering staff supporting projects using Artificial Intelligence, Machine Learning, Cybersecurity, Cloud, DevSecOps, and Autonomous Systems techniques. **Must be a U.S. Citizen Internship dates: June 1st - August 20th, 2021** For each of the projects, interns will leverage the AWS machine learning tools, continue to advance KBR's knowledge and application of data analytics. </p><p>Interns will collaborate with scientific and engineering staff supporting projects such as the development of a Cloud Security Strategy to leverage the built-in capabilities provided by Amazon Web Services (AWS). AWS tools used will include CloudWatch, Inspector, Systems Manager, GuardDuty, Kibana, and QuickSight, with opportunities for the addition of custom tools for configuration management, training, and other elements to complete a robust Cloud-based security framework for KBR. The framework will include an end-to-end DevSecOps platform designed to automate security requirements by embedding security controls and processes early in the DevOps workflow, and will help our customers continue to develop and apply new technology capabilities while retaining systems security. </p><p> Additional projects will include investigating the value of Digital Twin (DT) in autonomous systems use cases; investigate setting up for the use cases and how the operational AI systems would interact with DT requirements. Explore methodology to address operational decision making utilizing machine learning in Air Traffic Management and other domains. Analyze textual information in transportation datasets to identify commonalities; demonstrate Natural Language Processing (NLP) capability. </p><p>Managing telematics data, implement ability to overlay multiple vehicle routes on a map to assess road utilization. Other projects will be similar to last year's summer internship program which consisted of: Reinforcement learning technique to enable autonomous systems and robotics. Research Explainable AI and leveraging this technology to detect bias in machine learning models. </p><p>Use distributed ledger/block-chain technology to enable governance and management of flight identifiers. Edge computing utilizing neuromorphic processing. Research and development of Augmented Reality and Virtual Reality (AR/VR) software and hardware tools; develop an AR/VR solution to simulate real-world environments and facilitate activities such as remote maintenance of complex systems and virtual training environments. </p><p> Interns will spend the majority of their time researching, installing, and configuring new tools, programming using the selected tools, and learning more efficient methods to solve a given problem. Interns are not required to be programming experts, but they should have a passion for learning new things and not be afraid to jump in and try out new tools and/or solutions. Interns will leverage an Agile Development process with daily scrum meetings facilitated using Jira to capture user stories and track the status of all issues. </p><p>Fridays are reserved for documenting the work each week in the form of a Wiki site, as well as numerous forms of documentation (PowerPoint, Word, Visio, etc.). Once a month, interns will present the work they have completed to other staff members at KBR, with a final presentation at the end of the summer to both KBR and customer personnel. **Required Education:** + Must be enrolled in undergraduate coursework in a related degree program at an accredited university + Must be a Rising Junior or Senior **Preferred:** + Basic familiarity with virtual environments and cloud-based technologies, as well as programming languages such as Java, Python, Perl etc. </p><p> Work Schedule: Estimated at 32-40 hours/week with flexibility to accommodate intern's education Work Location: Telework **Scheduled Weekly Hours:** 40 KBR is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, disability, sex, sexual orientation, gender identity or expression, age, national origin, veteran status, genetic information, union status and/or beliefs, or any other characteristic protected by federal, state, or local law. KBR is a global provider of differentiated professional services and solutions across the asset and program life cycle within the government services and technology sectors. </p><p>KBR employs approximately 28,000 people worldwide with customers in more than 80 countries and operations in 40 countries. KBR is proud to work with customers across the globe to provide technology, value-added services, and long- term operations and maintenance services to ensure consistent delivery with predictable results. **At KBR, We Deliver.**</p></div>",
+        "index": 1,
+        "skills": [
+            "virtual reality",
+            "software engineering",
+            "machine learning",
+            "project management",
+            "information technology",
+            "java",
+            "devops",
+            "hardware"
+        ],
+        "due": "2021-08-20T10:00:00.000Z",
+        "remote": true
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "KBR",
+        "location": {
+            "city": "Mountain View",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/8e085ac19b07a58b397885f5abf265ca?lvk=mmrIIdNzmcHGQACkpOrXSw.--LuvF90i3o",
+        "posted": "2021-02-08T04:11:25.986Z",
+        "lastScraped": "2021-03-05T04:11:25.986Z",
+        "description": "<div><p>**Title:** Software Engineering Intern Around here, we define the future. We are a company of innovators, thinkers, creators, explorers, volunteers, and dreamers. But we all share one goal: to improve the world responsibly and safely. </p><p> KBR is seeking several interns to work with scientific and engineering staff supporting projects using Artificial Intelligence, Machine Learning, Cybersecurity, Cloud, DevSecOps, and Autonomous Systems techniques. **Must be a U.S. Citizen Internship dates: June 1st - August 20th, 2021** For each of the projects, interns will leverage the AWS machine learning tools, continue to advance KBR's knowledge and application of data analytics. </p><p>Interns will collaborate with scientific and engineering staff supporting projects such as the development of a Cloud Security Strategy to leverage the built-in capabilities provided by Amazon Web Services (AWS). AWS tools used will include CloudWatch, Inspector, Systems Manager, GuardDuty, Kibana, and QuickSight, with opportunities for the addition of custom tools for configuration management, training, and other elements to complete a robust Cloud-based security framework for KBR. The framework will include an end-to-end DevSecOps platform designed to automate security requirements by embedding security controls and processes early in the DevOps workflow, and will help our customers continue to develop and apply new technology capabilities while retaining systems security. </p><p> Additional projects will include investigating the value of Digital Twin (DT) in autonomous systems use cases; investigate setting up for the use cases and how the operational AI systems would interact with DT requirements. Explore methodology to address operational decision making utilizing machine learning in Air Traffic Management and other domains. Analyze textual information in transportation datasets to identify commonalities; demonstrate Natural Language Processing (NLP) capability. </p><p>Managing telematics data, implement ability to overlay multiple vehicle routes on a map to assess road utilization. Other projects will be similar to last year's summer internship program which consisted of: Reinforcement learning technique to enable autonomous systems and robotics. Research Explainable AI and leveraging this technology to detect bias in machine learning models. </p><p>Use distributed ledger/block-chain technology to enable governance and management of flight identifiers. Edge computing utilizing neuromorphic processing. Research and development of Augmented Reality and Virtual Reality (AR/VR) software and hardware tools; develop an AR/VR solution to simulate real-world environments and facilitate activities such as remote maintenance of complex systems and virtual training environments. </p><p> Interns will spend the majority of their time researching, installing, and configuring new tools, programming using the selected tools, and learning more efficient methods to solve a given problem. Interns are not required to be programming experts, but they should have a passion for learning new things and not be afraid to jump in and try out new tools and/or solutions. Interns will leverage an Agile Development process with daily scrum meetings facilitated using Jira to capture user stories and track the status of all issues. </p><p>Fridays are reserved for documenting the work each week in the form of a Wiki site, as well as numerous forms of documentation (PowerPoint, Word, Visio, etc.). Once a month, interns will present the work they have completed to other staff members at KBR, with a final presentation at the end of the summer to both KBR and customer personnel. **Required Education:** + Must be enrolled in undergraduate coursework in a related degree program at an accredited university + Must be a Rising Junior or Senior **Preferred:** + Basic familiarity with virtual environments and cloud-based technologies, as well as programming languages such as Java, Python, Perl etc. </p><p> Work Schedule: Estimated at 32-40 hours/week with flexibility to accommodate intern's education Work Location: Telework **Scheduled Weekly Hours:** 40 KBR is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, disability, sex, sexual orientation, gender identity or expression, age, national origin, veteran status, genetic information, union status and/or beliefs, or any other characteristic protected by federal, state, or local law. KBR is a global provider of differentiated professional services and solutions across the asset and program life cycle within the government services and technology sectors. </p><p>KBR employs approximately 28,000 people worldwide with customers in more than 80 countries and operations in 40 countries. KBR is proud to work with customers across the globe to provide technology, value-added services, and long- term operations and maintenance services to ensure consistent delivery with predictable results. **At KBR, We Deliver.**</p></div>",
+        "index": 2,
+        "skills": [
+            "virtual reality",
+            "software engineering",
+            "machine learning",
+            "project management",
+            "information technology",
+            "java",
+            "devops",
+            "hardware"
+        ],
+        "due": "2021-08-20T10:00:00.000Z",
+        "remote": true
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "KRB Government Solutions",
+        "location": {
+            "city": "Menlo Park",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/6c8f9c9bad2255ffcb852e75b11879a4?lvk=XDOOobVIwBa56i5a9e9dGg.--Lv9y4EZF7",
+        "posted": "2021-02-05T04:11:27.577Z",
+        "lastScraped": "2021-03-05T04:11:27.577Z",
+        "description": "<div><div><p><b>Title:</b></p>Software Engineering Intern<p>Around here, we define the future.</p><p></p><p>We are a company of innovators, thinkers, creators, explorers, volunteers, and dreamers. But we all share one goal: to improve the world responsibly and safely.</p><p></p><p>KBR is seeking several interns to work with scientific and engineering staff supporting projects using Artificial Intelligence, Machine Learning, Cybersecurity, Cloud, DevSecOps, and Autonomous Systems techniques.</p><p></p><p><b>Must be a U.S. Citizen Internship dates: June 1st - August 20th,2021</b></p><p></p><p>For each of the projects, interns will leverage the AWS machine learning tools, continue to advance KBR's knowledge and application of data analytics. Interns will collaborate with scientific and engineering staff supporting projects such as the development of a Cloud Security Strategy to leverage the built-in capabilities provided by Amazon Web Services (AWS). AWS tools used will include <span class=\"long-word\">CloudWatch,Inspector,</span> Systems Manager, GuardDuty, Kibana, and QuickSight, with opportunities for the addition of custom tools for configuration management, training, and other elements to complete a robust Cloud-based security framework forKBR.The frameworkwill include an end-to-end DevSecOps platform designed to automate security requirements by embedding security controls and processes early in the DevOps workflow, and will help our customers continue to develop and apply new technology capabilities while retaining systems security.</p><p></p><p>Additional projects will include investigating the value of Digital Twin (DT) in autonomous systems use cases; investigate setting up for the use cases and how the operational AI systems would interact with DT requirements. Explore methodology to address operational decision making utilizing machine learning in Air Traffic Management and other domains. Analyze textual information in transportation datasets to identify commonalities; demonstrate Natural Language Processing (NLP) capability. Managing telematics data, implement ability to overlay multiple vehicle routes on a map to assess road utilization.</p><p></p><p>Other projects will be similar to last year's summer internship program which consisted of: Reinforcement learning technique to enableautonomous systemsand robotics. Research Explainable AI and leveraging this technology to detect bias in machine learning models. Use distributed ledger/block-chain technology to enable governance and management of flight identifiers. Edge computing utilizing neuromorphic processing. Research and development of Augmented Reality and Virtual Reality (AR/VR) software and hardware tools; develop an AR/VR solution to simulate real-world environments and facilitate activities such as remote maintenance of complex systems and virtual training environments.</p><p></p><p>Interns will spend the majority of their time researching, installing, and configuring new tools, programming using the selected tools, and learning more efficient methods to solve a given problem. Interns are not required to be programming experts, but they should have a passion for learning new things and not be afraid to jump in and try out new tools and/or solutions.</p><p></p><p>Interns will leverage an Agile Development process with daily scrum meetings facilitated using Jira to capture user stories and track the status of all issues. Fridays are reserved for documenting the work each week in the form of a Wiki site, as well as numerous forms of documentation (PowerPoint, Word, Visio, etc.). Once a month, interns will present the work they have completed to other staff members atKBR, with a final presentation at the end of the summer to both KBR and customer personnel.</p><p></p><p></p><p><b>Required Education:</b></p><ul><li><p>Must be enrolled in undergraduate coursework in a related degree program at an accredited university</p></li><li><p>Must be a Rising Junior or Senior</p></li></ul><p></p><p><b>Preferred:</b></p><ul><li><p>Basic familiarity with virtual environments and cloud-based technologies, as well as programming languages such as Java, Python, Perl etc.</p></li></ul><p></p><p>Work Schedule: Estimated at 32-40 hours/week with flexibility to accommodate intern's education</p><p></p><p>Work Location: Telework</p><p></p><p><b>Scheduled Weekly Hours:</b></p>40<p></p><p>KBR is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, disability, sex, sexual orientation, gender identity or expression, age, national origin, veteran status, genetic information, union status and/or beliefs, or any other characteristic protected by federal, state, or local law.</p><p></p><p></p><p></p></div></div>",
+        "index": 3,
+        "skills": [
+            "virtual reality",
+            "software engineering",
+            "machine learning",
+            "project management",
+            "information technology",
+            "java",
+            "devops",
+            "hardware"
+        ],
+        "due": "2021-08-20T10:00:00.000Z",
+        "remote": true
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "Envestnet",
+        "location": {
+            "city": "Seattle",
+            "state": "Washington",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/5047bf26b0667aaacb2c4dbe0aed900e?lvk=4wG56K2_ghgBQS-rmznZBg.--Lw3-EPdas",
+        "posted": "2021-02-23T04:11:29.103Z",
+        "lastScraped": "2021-03-05T04:11:29.103Z",
+        "description": "<div><div><p>It's fun to work in a company where people truly BELIEVE in what they're doing!</p><p></p><p><i>We're committed to bringing passion and customer focus to the business.</i></p><p></p><p></p><p><b>Job Description Summary:</b></p><p></p><p></p><p></p>Envestnet is a leading independent provider of technology-enabled, web-based investment solutions and services to financial advisors. Our mission is to help investors achieve their financial goals, by providing financial advisors the access, tools, and support they need to deliver excellence in wealth management. <br><br>The Envestnet Summer Internship is a full-time internship program designed for qualified college students to gain hands on experience within the Envestnet \"location\" Office. Interns will work alongside various department experts and collaborate with fellow Envestnet interns on a project presented to leaders in the company. <br><br>The Summer Internship program will run from June 2, 2021 through August 6, 2021.<p></p><p></p><p></p><p><b>Job Description:</b></p><p></p><p></p><p></p><p><b>Essential Duties and Responsibilities</b></p><p>You will join an agile software development team supporting the Tamarac Trading product. You will collaborate with mentors on the team to deliver high quality software used by over 3000 financial firms managing over $1.2 trillion in assets.</p><p></p><p>Tamarac Trading is used by financial advisors to manage client portfolios and rebalance to their financial wellness strategy. This tax aware platform processes over 500,000 trades weekly - making quality, scalability, and performance paramount.</p><p></p><p>You will:</p><ul><li>Participate in daily software scrum team activities.</li><li>Collaborate with a scrum team on feature development working in a .NET environment.</li><li>Develop test cases and implement test automation.</li><li>Participate in design, code, and test case reviews.</li></ul><p></p><p><b>Knowledge, Skills, and Abilities</b></p><p>Basic Qualifications</p><ul><li>Knowledge of programming languages such as Java or C#.</li><li>Knowledge of Computer Science fundamentals such as object-oriented design, algorithm design, data structures, problem solving, and complexity analysis.</li><li>Ability to effectively articulate technical challenges and solutions.</li></ul><p></p><p>Preferred Qualifications</p><ul><li>Experience with distributed, multi-tiered web applications, algorithms, and relational databases.</li><li>Experience in development tools such as Visual Studio and GIT.</li><li>Adept at handling ambiguous or undefined problems as well as ability to think abstractly.</li></ul><p></p><p><b><span class=\"long-word\">Education/Experience</span></b></p><ul><li>Currently enrolled in a Bachelor's or Master's Degree in Computer Science, Computer Engineering, or related field at time of application.</li></ul><p></p><p><b>NOTE: </b><i>This is intended to describe the general content of and qualifications for the job. It is not intended as an exhaustive statement of all functions, duties, or desired qualifications.</i></p><p></p><p><b>Envestnet is an Equal Opportunity Employer</b></p><p></p><p></p><p></p><p></p><p></p><p></p><p><i>If you like wild growth and working with happy, enthusiastic over-achievers, you'll enjoy your career with us!</i></p></div></div>",
+        "index": 4,
+        "skills": [
+            "project management",
+            "software engineering",
+            "java",
+            "data visualization",
+            "c and c++",
+            "information technology"
+        ],
+        "qualifications": [
+            "Bachelor's degree"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "Synopsys",
+        "location": {
+            "city": "Mountain View",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/d911a0caa123b31b7d48ef9ef1ea14f6?lvk=461qmXh-bspIHzARfh_oYA.--Lw7q5o66N",
+        "posted": "2021-02-25T04:11:30.470Z",
+        "lastScraped": "2021-03-05T04:11:30.470Z",
+        "description": "<div><p>Requisition Number: 29131BR <br>Job Description and Requirements: As an intern at Synopsys, you will have the opportunity to gain hands-on experience while working alongside industry professionals. You will build and refine skills relevant to your major and future career. The Synopsys intern program emphasizes integrating our interns, allowing you to work hand-in hand with mentors and colleagues on your team. Your contributions will be invaluable to the company and products, guaranteeing you a fulfilling internship that you can proudly bring back to your courses.<br><br>This internship in is Full Time 40 hours/week and will ideally start in May 2021 and last for the duration of 3 months.<br><br><b>What you'll learn and do: </b><br>This technical intern will learn application of SAT solvers as part of developing a new method for optimization of Boolean variables. The intern will research state-of-the-art solutions for Boolean optimization and apply them in C++.<br><br><b>Skill Requirements:</b><br>C++, SAT Solvers<br><br><b>Education Qualifications: </b><br>All interns must be currently enrolled in an accredited educational institution.&nbsp; Pursuing MS.<br><br>Our Silicon Design &amp; Verification business is all about building high-performance silicon chips-faster. We're the world's leading provider of solutions for designing and verifying advanced silicon chips. And we design the next-generation processes and models needed to manufacture those chips. We enable our customers to optimize chips for power, cost, and performance-eliminating months off their project schedules.<br><br>At Synopsys, we're at the heart of the innovations that change the way we work and play. Self-driving cars. Artificial Intelligence. The cloud. 5G. The Internet of Things. These breakthroughs are ushering in the Era of Smart Everything. And we're powering it all with the world's most advanced technologies for chip design and software security. If you share our passion for innovation, we want to meet you.<br><br><strong>Inclusion and Diversity are important to us. Synopsys considers all applicants for employment without regard to race, color, religion, national origin, gender, sexual orientation, gender identity, age, military veteran status, or disability.</strong><br><br>&nbsp; <br>Business Title: Software Engineering Intern <br>Hiring Location: USA - California - Mountain View/Sunnyvale <br>Hire Type: Intern <br>Job Category: Interns/Temp <br>Country: United States <br></p></div>",
+        "index": 5,
+        "skills": [
+            "software engineering",
+            "c and c++",
+            "machine learning",
+            "project management",
+            "information technology"
+        ],
+        "start": "2021-05-01T10:00:00.000Z",
+        "due": "2021-05-01T10:00:00.000Z",
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "METER Group",
+        "location": {
+            "city": "Pullman",
+            "state": "Washington",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/jobs/meter-group-83d487a5/software-engineering-intern-2d75edfa?lvk=y-jhJUFbGzVU-iHPZq7F4Q.--LwkVTk617",
+        "posted": "2021-02-26T04:11:32.001Z",
+        "lastScraped": "2021-03-05T04:11:32.001Z",
+        "description": "<div><p>METER is seeking a part-time Software Engineering Intern to support its Food Science Division. The successful candidate will be pursuing a degree in computer science or a related field at a local university within 50 miles of Pullman, WA. The Software Engineering Intern will champion a number of small projects under the supervision of the Director of Food Science Products and a mentor who is a seasoned software engineer. The duration of the internship will be at least three months. </p><p>Responsibilities:</p><ul><li>Design and implement systems using Python.</li><li>Create and maintain documentation.</li><li>Test systems for bugs.</li><li>Collaborate and communicate with coworkers in software, internal development partners, and at times external development partners regarding project progress, and issue resolution.</li></ul><p>Minimum Qualifications:</p><ul><li>At least a junior at a local university studying computer science or a similar field (candidates not located within the area won't be considered).</li><li>Experience with Python programming (a coding test will be required during the interview process).</li><li>Demonstrated problem solving ability. </li><li>Strong academic and/or professional references will be required.</li><li>Background check results satisfactory to METER.</li></ul><p>Preferred Qualifications:</p><ul><li>Experience with git version control.</li><li>Familiarity with scrum or agile development methodologies. </li></ul><p><strong>To Apply for This Position:</strong></p><p>We ask all applicants to apply through our website at <span class=\"long-word\">https://metergroup.applicantpro.com/jobs/.</span> If your interests, qualifications, and experience match any of our openings please apply for that position so that you are considered immediately. You may also subscribe at our careers page so that we email you when we have openings in your area of interest.</p><p>METER is an Equal Opportunity Employer. All qualified applicants are considered regardless of ethnicity, nationality, gender, veteran or disability status, religion, age, sexual orientation or gender identity, or other protected status.</p><br><br><b><i>Job Posted by ApplicantPro</i></b><br></div>",
+        "index": 6,
+        "skills": [
+            "software engineering",
+            "python",
+            "project management"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "Sparklight",
+        "location": {
+            "city": "Phoenix",
+            "state": "Arizona",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/3683fb3c1a319918f0781827c471c485?lvk=1GxPdXSmKjTAY1Pt14D0Tg.--LvEaHMbrZ",
+        "posted": "2021-02-10T04:11:33.454Z",
+        "lastScraped": "2021-03-05T04:11:33.454Z",
+        "description": "<div><div><p>Are you ready to get some hands-on experience with an amazing team? Sparklight is looking for a Software Engineering Intern for the summer session. As a Software Engineer Intern, you will spend 12 weeks learning and building software coded modules using Java and .NET. Our interns will have the opportunity to shadow Senior Software Developers and learn from their experience, in addition to working on projects individually. You will have our team's support every step of the way!&nbsp;</p><p><strong>Who is Sparklight? </strong></p><p>At Sparklight - a Cable One company, we keep our customers and associates connected to what matters most. For our associates, that means: a thriving and rewarding career, respect for the communities where they live and work, a focus on health and wellness, an excellent work/life balance, and an open and inclusive workplace. <br><br><strong>What you will do</strong></p><ul><li>Design, Build, Test and Deploy software coded modules and/or applications using Java or .Net programming languages</li><li>Apply logic when analyzing business processes to be automated via software code</li><li>Utilize GIT and/or TFS source control applications to maintain versioning of developed code modules</li><li>Develop database queries and stored procedures against MSSQL and Oracle RDMS</li><li>Actively participate in Agile Scrum development methodologies and ceremonies (including 2-week sprints, daily stand-ups, user-story creation, demos, retrospectives, etc.)</li><li>Analyze computer and application logs to troubleshoot system and application errors</li></ul><p><strong>Qualifications:</strong></p><ul><li>Enrolled in an associates or undergraduate degree program (preferably in Computer Science)</li><li>Experience working with MSSQL, Oracle RDMS, Java and .Net</li><li>Able to troubleshoot and think outside of the box</li><li>Excitement to learn and prepare yourself for your upcoming career!</li></ul><p><strong>What you will gain: </strong></p><ul><li>On the job training</li><li>A collaborative space to work with and interact with a team of experienced and talented software engineers</li><li>Experience in the day to day operations of a Software Engineer</li><li>Opportunities to discuss goals, career, and education in a one to one setting</li></ul><p><strong>Internship duration and schedule: </strong>40 hours per week; 12 weeks.</p><p><em>Diversity lies in the communities we serve and among the associates who dedicate themselves to ensure our continued success. At Cable One and our family of companies, we believe it is our individual and unique talents, backgrounds, and perspectives that, when combined, truly make us an unstoppable force. \"Stronger Together\" is not just a verbal cue, it is the motto that our associates live by, exemplify and embody each and every day. Cable One provides equal employment opportunities to all individuals of different races, colors, creeds, national origins, genders, marital and veteran statuses.</em></p></div></div>",
+        "index": 7,
+        "skills": [
+            "software engineering",
+            "java",
+            "machine learning",
+            "project management",
+            "information technology"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "Cable ONE",
+        "location": {
+            "city": "Phoenix",
+            "state": "Arizona",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/13bfd846d4951ecf12f944ccabfd03f4?lvk=H6oWfadyXNj0RtmH3BDSWQ.--LvE_xMC9c",
+        "posted": "2021-02-10T04:11:34.825Z",
+        "lastScraped": "2021-03-05T04:11:34.825Z",
+        "description": "<div><div><p>Are you ready to get some hands-on experience with an amazing team? Sparklight is looking for a Software Engineering Intern for the summer session. As a Software Engineer Intern, you will spend 12 weeks learning and building software coded modules using Java and .NET. Our interns will have the opportunity to shadow Senior Software Developers and learn from their experience, in addition to working on projects individually. You will have our team's support every step of the way!&nbsp;</p><p><strong>Who is Sparklight? </strong></p><p>At Sparklight - a Cable One company, we keep our customers and associates connected to what matters most. For our associates, that means: a thriving and rewarding career, respect for the communities where they live and work, a focus on health and wellness, an excellent work/life balance, and an open and inclusive workplace. <br><br><strong>What you will do</strong></p><ul><li>Design, Build, Test and Deploy software coded modules and/or applications using Java or .Net programming languages</li><li>Apply logic when analyzing business processes to be automated via software code</li><li>Utilize GIT and/or TFS source control applications to maintain versioning of developed code modules</li><li>Develop database queries and stored procedures against MSSQL and Oracle RDMS</li><li>Actively participate in Agile Scrum development methodologies and ceremonies (including 2-week sprints, daily stand-ups, user-story creation, demos, retrospectives, etc.)</li><li>Analyze computer and application logs to troubleshoot system and application errors</li></ul><p><strong>Qualifications:</strong></p><ul><li>Enrolled in an associates or undergraduate degree program (preferably in Computer Science)</li><li>Experience working with MSSQL, Oracle RDMS, Java and .Net</li><li>Able to troubleshoot and think outside of the box</li><li>Excitement to learn and prepare yourself for your upcoming career!</li></ul><p><strong>What you will gain: </strong></p><ul><li>On the job training</li><li>A collaborative space to work with and interact with a team of experienced and talented software engineers</li><li>Experience in the day to day operations of a Software Engineer</li><li>Opportunities to discuss goals, career, and education in a one to one setting</li></ul><p><strong>Internship duration and schedule: </strong>40 hours per week; 12 weeks.</p><p><em>Diversity lies in the communities we serve and among the associates who dedicate themselves to ensure our continued success. At Cable One and our family of companies, we believe it is our individual and unique talents, backgrounds, and perspectives that, when combined, truly make us an unstoppable force. \"Stronger Together\" is not just a verbal cue, it is the motto that our associates live by, exemplify and embody each and every day. Cable One provides equal employment opportunities to all individuals of different races, colors, creeds, national origins, genders, marital and veteran statuses.</em></p></div></div>",
+        "index": 8,
+        "skills": [
+            "software engineering",
+            "java",
+            "machine learning",
+            "project management",
+            "information technology"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "IAI - Integrity Applications Incorporated",
+        "location": {
+            "city": "Carlsbad",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/331d6c91dd15fe76872c1071d1d174ca?lvk=nC0AKsfj2KiXQT6VBsooUQ.--Lwihgj6l3",
+        "posted": "2021-02-10T04:11:36.141Z",
+        "lastScraped": "2021-03-05T04:11:36.141Z",
+        "description": "<div><div><p>Thank you for your interest in joining the Centauri team. Together, we can leverage the next generation of advanced technologies to deliver industry-leading capabilities across land, air, sea, space, and cyberspace. Our goal is to deliver innovative solutions using an agile, mission-first approach to address the most difficult technical challenges facing our customers. The only way that we can tackle these challenges is by recruiting the brightest minds in the industry to join our team.</p><p>Centauri is seeking a Software Engineering intern to support an excitnig project out of our Carrlsbad, CA office.&nbsp;</p><p><strong>Requirements / Selection Criteria: </strong></p><ul><li>Must be a rising Junior or Senior</li><li>Must have technical major/coursework in the areas of:&nbsp; Computer Science, Physics or Mathematics</li><li>Software development experience preferred</li><li>Previous internship experience highly desirable</li><li>Must work well both in a team environment, as well as independently </li><li>Must have strong research, writing and communication skills </li><li>Must be a full-time student at an accredited, U.S. college or university</li><li>Must have demonstrated a high level of academic achievement</li></ul><p><strong>Security Requirements:</strong> Must meet eligibility requirements for a&nbsp; government security clearance.</p><p>&nbsp;</p><p><em>Centauri&nbsp;is an Equal Opportunity / Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, protected veteran status or any other factor protected by law.</em></p></div></div>",
+        "index": 9,
+        "skills": [
+            "software engineering",
+            "project management",
+            "information technology"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "Centauri",
+        "location": {
+            "city": "Carlsbad",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/c57f42c38a741c7c3aa0caea327e5f86?lvk=njDVponM-4ur8USOQIqRpg.--Lwihfk8eJ",
+        "posted": "2021-02-10T04:11:37.566Z",
+        "lastScraped": "2021-03-05T04:11:37.566Z",
+        "description": "<div><div><p>Thank you for your interest in joining the Centauri team. Together, we can leverage the next generation of advanced technologies to deliver industry-leading capabilities across land, air, sea, space, and cyberspace. Our goal is to deliver innovative solutions using an agile, mission-first approach to address the most difficult technical challenges facing our customers. The only way that we can tackle these challenges is by recruiting the brightest minds in the industry to join our team.</p><p>Centauri is seeking a Software Engineering intern to support an excitnig project out of our Carrlsbad, CA office.&nbsp;</p><p><strong>Requirements / Selection Criteria: </strong></p><ul><li>Must be a rising Junior or Senior</li><li>Must have technical major/coursework in the areas of:&nbsp; Computer Science, Physics or Mathematics</li><li>Software development experience preferred</li><li>Previous internship experience highly desirable</li><li>Must work well both in a team environment, as well as independently </li><li>Must have strong research, writing and communication skills </li><li>Must be a full-time student at an accredited, U.S. college or university</li><li>Must have demonstrated a high level of academic achievement</li></ul><p><strong>Security Requirements:</strong> Must meet eligibility requirements for a&nbsp; government security clearance.</p><p>&nbsp;</p><p><em>Centauri&nbsp;is an Equal Opportunity / Affirmative Action employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, protected veteran status or any other factor protected by law.</em></p></div></div>",
+        "index": 10,
+        "skills": [
+            "software engineering",
+            "project management",
+            "information technology"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "Hewlett Packard Enterprise",
+        "location": {
+            "city": "Santa Clara",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/419b5590435a23f81cabf77de764498c?lvk=r_985_49NAgeK7MbEJ7brg.--Lv9wAzRhN",
+        "posted": "2021-02-10T04:11:39.275Z",
+        "lastScraped": "2021-03-05T04:11:39.275Z",
+        "description": "<div><div><p>Software Engineering Intern</p><p>&nbsp;&nbsp;</p><p><b>Job Description:</b></p><p>&nbsp;&nbsp;&nbsp;</p><p>At HPE, we bring together the brightest minds to create breakthrough technology solutions and advance the way people live and work. Our legacy inspires us as we forge ahead dedicated to helping our customers make their mark on the world.</p><p></p><p>Learning does not only happen through training. Relationships are among the most powerful ways for people to learn and grow, and this is part of our HPE culture. In addition to working alongside talented colleagues, you will have many opportunities to learn through coaching and stretch assignment opportunities. You'll be guided by feedback and support to accelerate your learning and maximize your knowledge. We also have a \"reverse mentoring\" program which allows us to share our knowledge and strengths across our multi-generation workforce.</p><p></p><p>About the Company</p><p>Aruba, a Hewlett Packard Enterprise company, is a leader in providing enterprise-scale WLAN/edge networking products. Our customers include major universities, giant tech companies, and international retail stores, with deployments numbering thousands of access points and tens of thousands of wireless devices.</p><p>Aruba @ HPE is currently hiring Software Engineer Internsfor theSanta Clara, CAlocation. This will be with the Aruba organization within HPE. Anticipated start date isMay/June 2021.</p><p>Aruba is redefining the \"IT EDGE\". Creating new customer experiences by building intelligent digital workspaces. We are focused on campus, branch, mobility and the Internet of Things (IoT) to transform business models with the combined power of compute, context, control and secure connectivity.</p><p></p><p>We are looking for energetic, compassionate and sharp individuals who can adapt to a fast-paced environment for a jumpstart in a challenging career.</p><p></p><p>Responsibilities:</p><ul><li>Design, code, document and test microservices in a cloud-based orchestration environment (Example: Kubernetes, Docker)</li><li>Integrate and use cloud-centric databases (Example: Cassandra, Postgres, ElasticSearch, Prometheus)</li><li>Employ cloud-oriented scalability techniques and messaging (Example: Kafka, RabbitMQ)</li><li>Design, develop, and test highly available, scalable, and distributed software systems in Cloud-based CI/CD development</li><li>Benchmark applications and service performance in a cloud-based environment</li><li>Develop solutions agnostic of specific Cloud platform (Example: AWS, Google Cloud, Azure)</li><li>Collaborate with Embedded Switch Development teams to extend network switching management and analytics into the Cloud</li><li>Work in a fast moving Agile and DevOps product development environment</li></ul><p></p><p>Requirements:</p><ul><li>Must currently be enrolled in a Bachelor's or Master's Degree in Computer Science, Electrical Engineering, Computer Engineering or related</li><li>Must be graduating AFTER May/June 2021 for summer internship</li><li>Familiarity with any modern cloud infrastructure or applications a big plus</li><li>Knowledgeable in GO, Java or Python or at least one high level language</li><li>Strong programming skills, a coding test will be part of the interview process</li></ul><p></p><p>We offer:</p><p> A competitive salary and extensive social benefits</p><p> Diverse and dynamic work environment</p><p> Work-life balance and support for career development</p><p> An amazing life inside the element! Want to know more about it?</p><p>Then let's stay connected!</p><p><span class=\"long-word\">https://www.facebook.com/HPECareers</span></p><p><span class=\"long-word\">https://twitter.com/HPE_Careers</span></p><p><b>Job:</b></p>Administration<p><b>Job Level:</b></p>N/A<p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p><b>Hewlett Packard Enterprise is EEO F/M/Protected Veteran/ Individual with Disabilities.</b></p><p>&nbsp;&nbsp;&nbsp;</p><p>HPE will comply with all applicable laws related to the use of arrest and conviction records, including the San Francisco Fair Chance Ordinance and similar laws and will consider for employment qualified applicants with criminal histories.</p></div></div>",
+        "index": 11,
+        "skills": [
+            "information technology",
+            "software engineering",
+            "java",
+            "devops",
+            "networks",
+            "machine learning",
+            "project management",
+            "python"
+        ],
+        "compensation": "paid",
+        "start": "2021-06-01T10:00:00.000Z",
+        "qualifications": [
+            "Bachelor's degree"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Software Engineering Intern",
+        "company": "Fluke",
+        "location": {
+            "city": "Everett",
+            "state": "Washington",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/21e4e4f79e42c673c6da4a12ca753031?lvk=MdID2rLXaXYDbIULtYfhgw.--Lw_Ic3AJF",
+        "posted": "2021-02-19T04:11:40.956Z",
+        "lastScraped": "2021-03-05T04:11:40.956Z",
+        "description": "<div><div><p>The software team at Fluke Calibration is looking for a front end or full stack software developer intern to join one of our software teams delivering game changing solutions for our industry. If you are looking for an opportunity to learn how large-scale client-server projects are being developed in serverless architecture and want to roll up your sleeves to also help, then this might be the position for you.</p><p>We are looking for developer interns to join our team and contribute to our SAAS projects delivering Calibration and Thermal Imaging software platforms. We leverage AWS serverless infrastructure and React/Redux, Node and Python in our front and backends. Our teams function in an Agile development environment, and leverage our Fortive Business Systems toolkits in a rapid iteration release cycle.&nbsp;</p><p>Responsibilities:&nbsp;<br> &nbsp;&nbsp; &nbsp;Contribute to our highly scalable React front-end integrated with our AWS micro-services stack<br> &nbsp;&nbsp; &nbsp;Contribute towards internal tools for analytics, tracking, marketing and support<br> &nbsp;&nbsp; &nbsp;Work with the Product and Test teams to help deliver on 2 week sprint cycles<br> &nbsp;</p><ul><li>Working towards a degree in Computer Science, Information Systems, Computer Engineering, Software Engineering, Mathematics or equivalent technical degree</li><li>For Front End devs: Some experience building web UI's utilizing React</li><li>For Full Stack devs: Some experience using Node for server side development</li><li>AWS knowledge is a huge plus</li><li>Ability to perform in an Agile team environment </li><li>Ability to work in a fast-paced environment, both independently and in a team</li></ul></div></div>",
+        "index": 12,
+        "skills": [
+            "software engineering",
+            "python",
+            "machine learning",
+            "project management",
+            "game design",
+            "information technology",
+            "react"
+        ],
+        "remote": false
+    }
+]

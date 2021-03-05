@@ -1,12 +1,12 @@
-import log from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import Logger from 'loglevel';
+import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
   // Scrapes position, location, company, posted, and description
   for (let i = 0; i < 5; i++) {
-    results.push(fetchInfo(page, 'h1[class="icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="jobsearch-CompanyInfoWithoutHeaderImage jobsearch-CompanyInfoWithReview"] > div > div > div:nth-child(2)', 'innerText'));
+    results.push(fetchInfo(page, 'div.jobsearch-JobInfoHeader-title-container ', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] + div', 'innerText'));
     results.push(fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML'));
@@ -14,13 +14,13 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
-  log.enableAll(); // Enables all console logging tags
   try {
-    [browser, page] = await startBrowser();
+    Logger.debug('Executing script for indeed...');
+    [browser, page] = await startBrowser(headless);
     // time out after 10 seconds
     await page.goto('https://www.indeed.com/');
     await page.waitForSelector('input[id="text-input-what"]');
@@ -38,7 +38,7 @@ async function main() {
       await page.waitForTimeout(2000);
       await page.click('a[class="icl-CloseButton popover-x-button-close"]');
     } catch (err2) {
-      log.warn('Our Error:', err2.message);
+      Logger.info('No popup');
     }
     await page.waitForSelector('div[class="serp-filters-sort-by-container"]');
     const date = await page.evaluate(
@@ -53,9 +53,9 @@ async function main() {
       await page.click('button[class="dropdown-button dd-target"]');
       await page.waitForTimeout(1000);
       await page.click('li[onmousedown="rbptk(\'rb\', \'dateposted\', \'4\');"]');
-      log.trace('Sorting by last 14 days...');
+      Logger.info('Sorting by last 14 days...');
     } catch (err3) {
-      log.warn('Our Error: No sorting by date posted.');
+      Logger.info('No sorting by date posted.');
     }
     let internshipDropdown = [];
     try {
@@ -68,13 +68,13 @@ async function main() {
         ),
       );
     } catch (err4) {
-      log.warn('No filter link');
+      Logger.info('No filter link');
     }
     if (internshipDropdown.length === 1) {
       await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
-      log.trace('Filtering by internship tag...');
+      Logger.trace('Filtering by internship tag...');
     } else {
-      log.warn('No internship tag.');
+      Logger.info('No internship tag.');
     }
     let totalJobs = 0;
     const urls = [];
@@ -94,13 +94,13 @@ async function main() {
         await page.waitForTimeout(1000);
         await page.click('li a[aria-label="Next"]');
       } catch (err4) {
-        log.trace('Reached the end of pages!');
+        Logger.trace('Reached the end of pages!');
         hasNext = false;
       }
     }
-    log.info('Total pages:', urls.length);
-    log.info('Total jobs: ', totalJobs);
-    log.info(urls);
+    Logger.info('Total pages:', urls.length);
+    Logger.info('Total jobs: ', totalJobs);
+    Logger.info(urls);
     // go through urls array to fetch info
     for (let i = 0; i < urls.length; i++) {
       for (let j = 0; j < urls[i].length; j++) {
@@ -150,20 +150,29 @@ async function main() {
             lastScraped: lastScraped,
             description: description,
           });
-          log.info(position);
+          Logger.info(position);
         } catch (err6) {
-          log.trace('--- Error with scraping... Skipping ---');
+          Logger.trace('--- Error with scraping... Skipping ---');
         }
       }
     }
     // write results to JSON file
     await writeToJSON(data, 'indeed');
-    log.info('Total internships scraped:', totalJobs);
+    Logger.info('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
-    log.warn('Our Error:', e.message);
+    Logger.warn('Our Error:', e.message);
     await browser.close();
   }
 }
 
-main();
+if (process.argv.includes('main')) {
+  const headless = checkHeadlessOrNot(process.argv);
+  if (headless === -1) {
+    Logger.error('Invalid argument supplied, please use "open", or "close"');
+    process.exit(0);
+  }
+  main(headless);
+}
+
+export default main;

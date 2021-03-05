@@ -572,18 +572,25 @@ function multiParser(file) {
       text[i].remote = false;
     }
     // if text has no location.state or it is empty
-    if (!text[i].location.state || text[i].location.state === '') {
-      text[i].location.state = 'Out of Country';
-      // Check to see if it's USA
-      for (let k = 0; k < cities.length; k++) {
-        if (text[i].location.city.includes(cities[k].City) || text[i].location.city.includes(cities[k].State)) {
-          text[i].location.state = 'United States';
+    try {
+      if (!text[i].location.state || text[i].location.state === '') {
+        text[i].location.state = 'Out of Country';
+        // Check to see if it's USA
+        for (let k = 0; k < cities.length; k++) {
+          if (text[i].location.city.includes(cities[k].City) || text[i].location.city.includes(cities[k].State)) {
+            text[i].location.state = 'United States';
+          }
         }
+      } else if (text[i].location.state === 'states' || text[i].location.state === 'States') {
+        text[i].location.state = 'United States';
+      } else {
+        text[i].location.state = convertRegion(text[i].location.state, 'name');
       }
-    } else if (text[i].location.state === 'states' || text[i].location.state === 'States') {
-      text[i].location.state = 'United States';
-    } else {
-      text[i].location.state = convertRegion(text[i].location.state, 'name');
+    } catch (locationErr) {
+      text[i].location = {
+        state: 'Error',
+        city: 'Error',
+      };
     }
   }
   Logger.info('Total entries:', text.length);
@@ -592,7 +599,7 @@ function multiParser(file) {
   Logger.info('');
   let fileName = file.match(/([[a-zA-Z-])+/g);
   fileName = fileName[2];
-  fs.writeFileSync(`../src/src/data/${fileName}.parsed.data.json`, JSON.stringify(text, null, 4), 'utf-8');
+  fs.writeFileSync(`../ui/src/data/${fileName}.parsed.data.json`, JSON.stringify(text, null, 4), 'utf-8');
 }
 
 /**
@@ -628,6 +635,10 @@ function main() {
     multiParser(files[i]);
   }
 
+}
+
+if (process.argv.includes('main')) {
+  main();
 }
 
 export default main;
