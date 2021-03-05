@@ -63,7 +63,6 @@ async function main(headless) {
       await page.waitForSelector('a[class="table--advanced-search__title"]');
       const urls = await page.evaluate(() => Array.from(document.querySelectorAll('a[class="table--advanced-search__title"]'),
           a => a.href));
-      console.log(urls);
       for (let j = 0; j < urls.length; j++) {
         try {
           await page.goto(urls[j]);
