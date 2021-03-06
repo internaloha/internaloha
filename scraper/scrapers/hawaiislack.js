@@ -28,8 +28,10 @@ async function main() {
             document.querySelectorAll('ul[class="job_listings"] > li > a'),
             a => `${a.getAttribute('href')}`,
         ));
+
     const data = [];
     // goes to each page
+    const expiredData = [];
     for (let i = 0; i < elements.length; i++) {
       await page.goto(elements[i]);
       try {
@@ -40,8 +42,14 @@ async function main() {
         } catch (noCompany) {
           company = 'Unknown';
         }
-        const posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerText');
+        let posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerText');
         // console.log(posted);
+        // ignores expired listings.
+        const expired = await fetchInfo(page, 'div[class="job-manager-info"]', 'innerText');
+        if (expired.includes('expired')) {
+          posted = '';
+          i++;
+        }
         const description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
         // Formats date
         const date = new Date(posted).toISOString();
@@ -63,7 +71,9 @@ async function main() {
         });
         log.info(position.trim());
       } catch (err) {
-        log.warn('Our Error: ', err.message);
+        log.trace(err.message);
+        log.trace('Listing expired, skipping');
+        expiredData.push(elements[i]);
       }
     }
     await fs.writeFile('./data/canonical/HawaiiSlack.canonical.data.json',
