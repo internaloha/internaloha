@@ -7,7 +7,7 @@ async function setSearchFilters(page) {
   // Navigate to internship page
   await page.waitForSelector('input[id="search_keywords"]');
   // change to internship when not testing
-  await page.type('input[id="search_keywords"]', 'internship');
+  await page.type('input[id="search_keywords"]', 'specialist');
   await page.click('[class="search_submit"]');
 }
 
@@ -31,7 +31,7 @@ async function main() {
 
     const data = [];
     // goes to each page
-    const expiredData = [];
+    // const expiredData = [];
     for (let i = 0; i < elements.length; i++) {
       await page.goto(elements[i]);
       try {
@@ -72,8 +72,8 @@ async function main() {
         log.info(position.trim());
       } catch (err) {
         log.trace(err.message);
-        log.trace('Listing expired, skipping');
-        expiredData.push(elements[i]);
+        // log.trace('Listing expired, skipping');
+        // expiredData.push(elements[i]);
       }
     }
     await fs.writeFile('./data/canonical/HawaiiSlack.canonical.data.json',
