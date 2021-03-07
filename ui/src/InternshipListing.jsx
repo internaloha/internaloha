@@ -65,13 +65,17 @@ function InternshipListing() {
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote} careerVal={career}/>
+          </Grid.Row>
+          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
             <Header style={{ paddingLeft: '105px', paddingTop: '30px' }}>
               Total Results: {internships.total(data)} <br/>
             </Header>
+          </Grid.Row>
+          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
             <div onScroll={handleScroll()} ref={ref}>
               <Card.Group doubling centered stackable>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard
-                    internship={internship} key={index}/>)}
+                  internship={internship} key={index}/>)}
               </Card.Group>
             </div>
           </Grid.Row>
