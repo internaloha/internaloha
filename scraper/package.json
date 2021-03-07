@@ -55,6 +55,7 @@
     "aexpress": "node scrapers/aexpress.js main",
     "hn": "node scrapers/hn.js",
     "apple": "node scrapers/apple.js main",
+    "hawaiislack": "node scrapers/hawaiislack.js",
     "nsf": "node scrapers/nsf-reu.js",
     "multi-parse": "node scrapers/multi-parser.js && node scrapers/statistics.js main",
     "multi-parse-only": "node scrapers/multi-parser.js main",
