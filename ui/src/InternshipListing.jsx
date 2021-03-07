@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
-import { Card, Container, Grid } from 'semantic-ui-react';
+import { Card, Container, Grid, Header } from 'semantic-ui-react';
 import InternshipListingCard from './InternshipListingCard';
 import SearchInternshipFeature from './SearchInternshipFeature';
 import InternshipsFilters from './InternshipFilters';
@@ -64,10 +64,17 @@ function InternshipListing() {
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote} careerVal={career}/>
+          </Grid.Row>
+          <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingBottom: '0px' }}>
+            <Header style={{ paddingLeft: '105px', paddingTop: '20px' }}>
+              Total Results: {internships.total(data)}
+            </Header>
+          </Grid.Row>
+          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
             <div onScroll={handleScroll()} ref={ref}>
               <Card.Group doubling centered stackable>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard
-                    internship={internship} key={index}/>)}
+                  internship={internship} key={index}/>)}
               </Card.Group>
             </div>
           </Grid.Row>

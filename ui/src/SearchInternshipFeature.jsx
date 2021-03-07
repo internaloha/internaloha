@@ -17,7 +17,6 @@ import { dropdownCareerInterest, recommendation } from './RecommendationScript';
 
 function SearchInternshipFeature({
                                    onChildClick,
-                                   passedData,
                                    locationVal,
                                    companyVal,
                                    sortVal,
@@ -41,12 +40,11 @@ function SearchInternshipFeature({
     { key: 'company', text: 'company', value: 'company' },
   ];
   const setFilters = () => {
-    let recommendedData = [];
     const remoteFilter = internships.isRemote(data, remoteCheck);
     const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
     const companyFiltered = internships.filterByCompany(searchFiltered, companyChange);
     const sorted = internships.sortedBy(companyFiltered, sortChange);
-    recommendedData = recommendation(skillChange, careerChange, sorted, locationChange);
+    const recommendedData = recommendation(skillChange, careerChange, sorted, locationChange);
     onChildClick(recommendedData, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck, careerChange);
     window.scrollTo({
       top: 30,
@@ -188,10 +186,7 @@ function SearchInternshipFeature({
         <Grid.Row>
           <Grid.Column>
             <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
-              Total results found: {internships.total(passedData)}
-            </Header>
-            <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
-              Scrapers last ran: {moment(internships.lastScraped(passedData)).fromNow()}
+              Last Updated: {moment(internships.lastScraped(data)).fromNow()}
             </Header>
           </Grid.Column>
           <Grid.Column textAlign={'right'}>
