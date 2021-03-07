@@ -17,7 +17,6 @@ import { dropdownCareerInterest, recommendation } from './RecommendationScript';
 
 function SearchInternshipFeature({
                                    onChildClick,
-                                   passedData,
                                    locationVal,
                                    companyVal,
                                    sortVal,
@@ -41,12 +40,11 @@ function SearchInternshipFeature({
     { key: 'company', text: 'company', value: 'company' },
   ];
   const setFilters = () => {
-    let recommendedData = [];
     const remoteFilter = internships.isRemote(data, remoteCheck);
     const searchFiltered = internships.filterBySearch(remoteFilter, searchQueryChange);
     const companyFiltered = internships.filterByCompany(searchFiltered, companyChange);
     const sorted = internships.sortedBy(companyFiltered, sortChange);
-    recommendedData = recommendation(skillChange, careerChange, sorted, locationChange);
+    const recommendedData = recommendation(skillChange, careerChange, sorted, locationChange);
     onChildClick(recommendedData, locationChange, companyChange, sortChange, searchQueryChange, skillChange, remoteCheck, careerChange);
     window.scrollTo({
       top: 30,

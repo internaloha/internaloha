@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 import { Card, Container, Grid, Header } from 'semantic-ui-react';
-import moment from 'moment';
 import InternshipListingCard from './InternshipListingCard';
 import SearchInternshipFeature from './SearchInternshipFeature';
 import InternshipsFilters from './InternshipFilters';
