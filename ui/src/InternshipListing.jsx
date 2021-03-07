@@ -65,9 +65,9 @@ function InternshipListing() {
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote} careerVal={career}/>
           </Grid.Row>
-          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
-            <Header style={{ paddingLeft: '105px', paddingTop: '30px' }}>
-              Total Results: {internships.total(data)} <br/>
+          <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingBottom: '0px' }}>
+            <Header style={{ paddingLeft: '105px', paddingTop: '20px' }}>
+              Total Results: {internships.total(data)}
             </Header>
           </Grid.Row>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
