@@ -17,10 +17,10 @@ const myArgs = process.argv.slice(2);
 
 /**
  *
- * @param browser: Default: true (do not open up browser)
+ * @param headless: Default: true (do not open up browser)
  * @returns {Promise<unknown[]>}
  */
-async function getData(headless = true) {
+async function getAllData(headless = true) {
   const results = [];
   results.push(apple(headless));
   results.push(acm(headless));
@@ -36,20 +36,35 @@ async function getData(headless = true) {
   return Promise.all(results);
 }
 
+/**
+ * @param scraperName String Name of the scraper you want to run
+ * @param headless Default true (do not open up browser)
+ * @returns {Promise<void>}
+ */
+async function getData(scraperName, headless = true) {
+  const list = {
+    apple: apple,
+    acm: acm,
+  };
+  await list[scraperName](headless);
+}
+
 async function main() {
-  if (myArgs[0] === 'dev') {
+  if (myArgs.length === 2) {
+    await getData(myArgs[0], false);
+  } else if (myArgs[0] === 'dev') {
     Logger.enableAll();
     if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
-      await getData(false);
+      await getAllData(false);
     } else if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
-      await getData(true);
+      await getAllData(true);
     } else {
       console.log('Invalid argument supplied, please use "dev open", "dev close", or "production');
       process.exit(0);
     }
   } else if (myArgs[0] === 'production') {
     Logger.setLevel('warn');
-    await getData(true);
+    await getAllData(true);
   } else {
     console.log('Invalid argument supplied, please use "dev open", "dev close", or "production".');
     process.exit(0);
