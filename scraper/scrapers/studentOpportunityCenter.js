@@ -2,8 +2,8 @@ import fs from 'fs';
 import Logger from 'loglevel';
 import { autoScroll, checkHeadlessOrNot, convertPostedToDate, fetchInfo, startBrowser } from './scraper-functions.js';
 
-const USERNAME_SELECTOR = '#login-form > div:nth-child(3) > form > mat-form-field.mat-form-field.ng-tns-c5-4.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-has-label.mat-form-field-hide-placeholder.mat-form-field-should-float.mat-form-field-autofilled.ng-dirty.ng-valid.ng-touched > div > div.mat-form-field-flex > div';
-const PASSWORD_SELECTOR = '#login-form > div:nth-child(3) > form > mat-form-field.mat-form-field.ng-tns-c5-5.mat-primary.mat-form-field-type-mat-input.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-has-label.mat-form-field-hide-placeholder.mat-form-field-should-float.mat-form-field-autofilled.ng-dirty.ng-valid.ng-touched > div > div.mat-form-field-flex > div';
+const USERNAME_SELECTOR = '#mat-input-0';
+const PASSWORD_SELECTOR = '#mat-input-1';
 const CTA_SELECTOR = '#login-submit-button';
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a > span';
@@ -37,6 +37,7 @@ export async function main(headless) {
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
     await page.waitForNavigation();
+    await page.setDefaultNavigationTimeout(0);
     await page.click(Search_SELECTOR);
     await autoScroll(page);
 
