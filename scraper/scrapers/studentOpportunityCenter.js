@@ -6,7 +6,7 @@ const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
 const CTA_SELECTOR = '#login-submit-button';
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a > span';
+const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
 
 async function getData(page) {
   const results = [];
@@ -37,9 +37,12 @@ export async function main(headless) {
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
     await page.waitForNavigation();
-    await page.setDefaultNavigationTimeout(0);
+    await page.setDefaultNavigationTimeout('#rc-imageselect', { timeout: 0 });
     await page.click(Search_SELECTOR);
     await autoScroll(page);
+    await page.click('#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix');
+    await page.keyboard.type('computer science internship');
+    await page.type(String.fromCharCode(13));
 
     const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
 
