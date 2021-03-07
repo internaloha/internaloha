@@ -188,10 +188,7 @@ function SearchInternshipFeature({
         <Grid.Row>
           <Grid.Column>
             <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
-              Total results found: {internships.total(passedData)}
-            </Header>
-            <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
-              Scrapers last ran: {moment(internships.lastScraped(passedData)).fromNow()}
+              Last Updated: {moment(internships.lastScraped(data)).fromNow()}
             </Header>
           </Grid.Column>
           <Grid.Column textAlign={'right'}>
