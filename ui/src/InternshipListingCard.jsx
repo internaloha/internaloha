@@ -182,7 +182,7 @@ function InternshipListingCard(props) {
         <Card.Content extra textAlign={'center'}>
           <a target='_blank' rel="noopener noreferrer" href={props.internship.url}>
             <Button style={{ borderRadius: '10rem' }}>
-              From: {siteName(props.internship.url)} Listing #{props.internship.index}
+              See Full Listing: {siteName(props.internship.url)}
             </Button>
           </a>
           <div>
