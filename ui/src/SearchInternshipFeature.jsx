@@ -35,7 +35,7 @@ function SearchInternshipFeature({
   let remoteCheck = isRemote;
   let careerChange = careerVal;
   const sortBy = [
-    { key: 'date', text: 'date', value: 'date' },
+    { key: 'date', text: 'posted', value: 'date' },
     { key: 'internship', text: 'internship', value: 'internship' },
     { key: 'company', text: 'company', value: 'company' },
   ];
