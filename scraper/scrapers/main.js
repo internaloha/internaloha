@@ -13,6 +13,8 @@ import stackoverflow from './stackoverflow.js';
 import indeed from './indeed.js';
 import idealist from './idealist.js';
 import hawaiislack from './hawaiislack.js';
+import chegg from './internships.js';
+import angellist from './angellist.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -57,6 +59,8 @@ async function getData(scraperName, headless = true) {
     indeed: indeed,
     idealist: idealist,
     hawaiislack: hawaiislack,
+    chegg: chegg,
+    angellist: angellist,
   };
   await list[scraperName](headless);
 }
