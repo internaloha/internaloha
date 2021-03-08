@@ -45,13 +45,30 @@ async function getData(scraperName, headless = true) {
   const list = {
     apple: apple,
     acm: acm,
+    aexpress: aexpress,
+    linkedin: linkedin,
+    monster: monster,
+    simplyhired: simplyHired,
+    cisco: cisco,
+    ziprecruiter: zipRecruiter,
+    stackoverflow: stackoverflow,
+    indeed: indeed,
+    idealist: idealist,
   };
   await list[scraperName](headless);
 }
 
 async function main() {
-  if (myArgs.length === 2) {
-    await getData(myArgs[0], false);
+  if (myArgs.length === 3) {
+    if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
+      await getData(myArgs[0], false);
+    } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
+      await getData(myArgs[0], true);
+    } else {
+      console.log('Invalid argument supplied, please use "dev open" or "dev close". For example, npm run scrapers' +
+        ' dev open.');
+      process.exit(0);
+    }
   } else if (myArgs[0] === 'dev') {
     Logger.enableAll();
     if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
