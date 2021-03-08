@@ -59,7 +59,7 @@ async function main(headless) {
           position: position.trim(),
           company: company.trim(),
           location: {
-            where: location.trim(),
+            city: location.trim(),
             state: 'HI',
           },
           posted: date,
