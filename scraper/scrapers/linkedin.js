@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { fetchInfo, autoScroll, writeToJSON, startBrowser, convertPostedToDate, checkHeadlessOrNot } from './scraper-functions.js';
+import { fetchInfo, autoScroll, writeToJSON, startBrowser, convertPostedToDate } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -133,15 +133,6 @@ export async function main(headless) {
     Logger.debug('Our Error:', e.message);
     await browser.close();
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
 }
 
 export default main;

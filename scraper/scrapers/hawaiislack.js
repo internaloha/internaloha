@@ -1,7 +1,5 @@
-import puppeteer from 'puppeteer';
-import fs from 'fs';
 import log from 'loglevel';
-import { fetchInfo } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function setSearchFilters(page) {
   // Navigate to internship page
@@ -11,16 +9,14 @@ async function setSearchFilters(page) {
   await page.click('[class="search_submit"]');
 }
 
-async function main() {
-  const browser = await puppeteer.launch({
-    headless: false,
-  });
-  const page = await browser.newPage();
-  await page.setViewport({ width: 1100, height: 900 });
-  // eslint-disable-next-line max-len
-  await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
-  log.enableAll();
+async function main(headless) {
+  let browser;
+  let page;
   try {
+    [browser, page] = await startBrowser(headless);
+    await page.setViewport({ width: 1100, height: 900 });
+    // eslint-disable-next-line max-len
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://jobs.hawaiitech.com/');
     await setSearchFilters(page);
     await page.waitForTimeout(2000);
@@ -63,7 +59,10 @@ async function main() {
         data.push({
           position: position.trim(),
           company: company.trim(),
-          location: location.trim(),
+          location: {
+            city: location.trim(),
+            state: 'HI',
+          },
           posted: date,
           url: elements[i],
           lastScraped: lastScraped,
@@ -76,14 +75,11 @@ async function main() {
         // expiredData.push(elements[i]);
       }
     }
-    await fs.writeFile('./data/canonical/HawaiiSlack.canonical.data.json',
-        JSON.stringify(data, null, 4), 'utf-8',
-        err => (err ? log.warn('\nData not written!', err) :
-            log.info('\nData successfully written!')));
+    await writeToJSON(data, 'hawaiislack');
     await browser.close();
   } catch (err) {
     log.warn('Our Error:', err.message);
     await browser.close();
   }
 }
-main();
+export default main;

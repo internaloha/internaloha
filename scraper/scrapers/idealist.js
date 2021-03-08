@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { startBrowser, fetchInfo, writeToJSON, checkHeadlessOrNot } from './scraper-functions.js';
+import { startBrowser, fetchInfo, writeToJSON } from './scraper-functions.js';
 
 async function getLinks(page) {
   return page.evaluate(
@@ -131,15 +131,6 @@ async function main(headless) {
     await browser.close();
     Logger.warn('Idealist Error:', e);
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
 }
 
 export default main;
