@@ -1,6 +1,6 @@
 import fs from 'fs';
 import Logger from 'loglevel';
-import { autoScroll, checkHeadlessOrNot, convertPostedToDate, fetchInfo, startBrowser } from './scraper-functions.js';
+import { autoScroll, convertPostedToDate, fetchInfo, startBrowser } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
@@ -101,15 +101,6 @@ export async function main(headless) {
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
 }
 
 export default main;
