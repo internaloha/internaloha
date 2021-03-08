@@ -1,5 +1,5 @@
 import Logger from 'loglevel';
-import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 /**
  * Adds delay time, since waitFor is deprecated.
@@ -90,15 +90,6 @@ async function main(headless) {
     await browser.close();
     Logger.error(err.message);
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
 }
 
 export default main;
