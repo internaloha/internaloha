@@ -1,12 +1,11 @@
 import Logger from 'loglevel';
-import { checkHeadlessOrNot, convertPostedToDate, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { convertPostedToDate, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 // eslint-disable-next-line consistent-return
 async function getData(page, elements) {
   try {
     const data = [];
     for (let i = 1; i <= elements.length; i++) {
-      const date = new Date();
       const lastScraped = new Date();
 
       const element = elements[i];
@@ -27,11 +26,11 @@ async function getData(page, elements) {
       let posted = '';
       try {
         posted = await fetchInfo(page, '.viewjob-labelWithIcon.viewjob-age span', 'innerText');
+        posted = await convertPostedToDate(posted.toLowerCase());
       } catch (err2) {
         posted = 'N/A';
         Logger.trace('No date found. Setting posted as: N/A');
       }
-      await convertPostedToDate(posted);
 
       let savedURL = '';
       try {
@@ -49,7 +48,7 @@ async function getData(page, elements) {
           state: location.match(/([^ ,]*)$/)[0],
         },
         qualifications: qualifications,
-        posted: date,
+        posted: posted,
         url: `https://www.simplyhired.com${savedURL}`,
         lastScraped: lastScraped,
         description: description,
@@ -65,8 +64,6 @@ async function getData(page, elements) {
   }
 }
 
-const myArgs = process.argv.slice(2);
-
 export async function main(headless) {
   let browser;
   let page;
@@ -75,14 +72,13 @@ export async function main(headless) {
     [browser, page] = await startBrowser(headless, false, 100);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
-    const searchQuery = myArgs.join(' ');
     await page.$eval('input[name=l]', (el) => {
       // eslint-disable-next-line no-param-reassign
       el.value = '';
     }, {});
-    await page.type('input[name=q]', searchQuery);
+    await page.type('input[name=q]', 'computer science intern');
     await page.click('button[type="submit"]');
-    Logger.info(`Inputted search query: ${searchQuery}`);
+    Logger.info('Inputted search query: computer science intern');
     await page.waitForSelector('div[data-id=JobType]');
     // Getting href link for internship filter
     const internshipDropdown = await page.evaluate(
@@ -145,7 +141,6 @@ export async function main(headless) {
               );
 
               for (let i = 1; i <= elements.length; i++) {
-                const date = new Date();
                 const lastScraped = new Date();
 
                 const element = elements[i];
@@ -159,11 +154,11 @@ export async function main(headless) {
                 try {
                   // posted = await page.evaluate(() => document.querySelector('.extra-info .info-unit i.far.fa-clock + span').innerHTML);
                   posted = await fetchInfo(page, 'span[class="viewjob-labelWithIcon viewjob-age"]', 'innerText');
+                  posted = await convertPostedToDate(posted.toLowerCase());
                 } catch (err4) {
                   posted = 'N/A';
                   Logger.trace('No date found. Setting posted as: N/A');
                 }
-                await convertPostedToDate(posted);
                 Logger.info(position);
                 data.push({
                   position: position,
@@ -172,7 +167,7 @@ export async function main(headless) {
                     city: location.match(/^([^,]*)/)[0],
                     state: location.match(/([^ ,]*)$/)[0],
                   },
-                  posted: date,
+                  posted: posted,
                   url: allJobLinks[i - 1],
                   lastScraped: lastScraped,
                   description: description,
@@ -202,7 +197,7 @@ export async function main(headless) {
       Logger.debug('\nData successfully written!');
 
     } else {
-      Logger.debug(`There are no internships with the search query: ${searchQuery}`);
+      Logger.debug('There are no internships with the search query: \'computer science intern\'');
     }
 
     await browser.close();
@@ -213,15 +208,6 @@ export async function main(headless) {
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
 }
 
 export default main;

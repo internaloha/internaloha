@@ -110,4 +110,4 @@ async function goTo() {
   }
   // process.exit(1);
 }
-goTo();
+export default goTo;
