@@ -1,11 +1,11 @@
-import log from 'loglevel';
+import Logger from 'loglevel';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function setSearchFilters(page) {
   // Navigate to internship page
   await page.waitForSelector('input[id="search_keywords"]');
   // change to internship when not testing
-  await page.type('input[id="search_keywords"]', 'specialist');
+  await page.type('input[id="search_keywords"]', 'internship');
   await page.click('[class="search_submit"]');
 }
 
@@ -24,7 +24,6 @@ async function main(headless) {
             document.querySelectorAll('ul[class="job_listings"] > li > a'),
             a => `${a.getAttribute('href')}`,
         ));
-
     const data = [];
     // goes to each page
     // const expiredData = [];
@@ -68,17 +67,17 @@ async function main(headless) {
           lastScraped: lastScraped,
           description: description.trim(),
         });
-        log.info(position.trim());
+        Logger.info(position.trim());
       } catch (err) {
-        log.trace(err.message);
-        // log.trace('Listing expired, skipping');
+        Logger.trace(err.message);
+        // Logger.trace('Listing expired, skipping');
         // expiredData.push(elements[i]);
       }
     }
     await writeToJSON(data, 'hawaiislack');
     await browser.close();
   } catch (err) {
-    log.warn('Our Error:', err.message);
+    Logger.warn('Our Error:', err.message);
     await browser.close();
   }
 }
