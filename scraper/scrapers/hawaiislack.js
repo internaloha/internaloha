@@ -21,9 +21,9 @@ async function main(headless) {
     await setSearchFilters(page);
     await page.waitForTimeout(2000);
     const elements = await page.evaluate(() => Array.from(
-            document.querySelectorAll('ul[class="job_listings"] > li > a'),
-            a => `${a.getAttribute('href')}`,
-        ));
+        document.querySelectorAll('ul[class="job_listings"] > li > a'),
+        a => `${a.getAttribute('href')}`,
+    ));
     const data = [];
     // goes to each page
     // const expiredData = [];
@@ -40,7 +40,7 @@ async function main(headless) {
         let posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerText');
         // console.log(posted);
         // ignores expired listings.
-        const expired = await fetchInfo(page, 'div[class="job-manager-info"]', 'innerText');
+        const expired = await fetchInfo(page, 'div[class="single_job_listing"] > div', 'innerText');
         if (expired.includes('expired')) {
           posted = '';
           i++;
@@ -51,7 +51,7 @@ async function main(headless) {
         const lastScraped = new Date();
         let location = '';
         try {
-          location = await fetchInfo(page, 'li[class="location"] > a', 'innerText');
+          location = await fetchInfo(page, 'li[class="location"]', 'innerText');
         } catch (noLocation) {
           location = '';
         }
@@ -59,7 +59,7 @@ async function main(headless) {
           position: position.trim(),
           company: company.trim(),
           location: {
-            city: location.trim(),
+            where: location.trim(),
             state: 'HI',
           },
           posted: date,

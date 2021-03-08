@@ -381,21 +381,21 @@
     },
     {
         "site": "Total",
-        "position": 1665,
-        "company": 1664,
+        "position": 1666,
+        "company": 1665,
         "contact": 136,
-        "location": 1665,
-        "posted": 813,
+        "location": 1666,
+        "posted": 814,
         "due": 49,
         "start": 66,
         "end": 0,
         "compensation": 425,
-        "qualifications": 434,
+        "qualifications": 435,
         "skills": 1594,
         "remote": 688,
         "lastScraped": "2021-03-08T01:22:35.648Z",
-        "index": 1665,
-        "url": 1665,
-        "description": 1664
+        "index": 1666,
+        "url": 1666,
+        "description": 1665
     }
 ]
