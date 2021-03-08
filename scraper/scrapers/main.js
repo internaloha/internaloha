@@ -12,6 +12,7 @@ import zipRecruiter from './zipRecruiter.js';
 import stackoverflow from './stackoverflow.js';
 import indeed from './indeed.js';
 import idealist from './idealist.js';
+import hawaiislack from './hawaiislack.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -33,6 +34,7 @@ async function getAllData(headless = true) {
   results.push(stackoverflow(headless));
   results.push(indeed(headless));
   results.push(idealist(headless));
+  results.push(hawaiislack(headless));
   return Promise.all(results);
 }
 
@@ -54,12 +56,14 @@ async function getData(scraperName, headless = true) {
     stackoverflow: stackoverflow,
     indeed: indeed,
     idealist: idealist,
+    hawaiislack: hawaiislack,
   };
   await list[scraperName](headless);
 }
 
 async function main() {
   if (myArgs.length === 3) {
+    Logger.enableAll();
     if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
       await getData(myArgs[0], false);
     } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
