@@ -1,4 +1,5 @@
 import log from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getLinks(page) {
@@ -15,8 +16,9 @@ async function main() {
   let browser;
   let page;
   const data = [];
-  log.enableAll(); // this enables console logging
+  const startTime = new Date();
   try {
+    log.error('Starting scraper ihiretechnology at', moment().format('LT'));
     [browser, page] = await startBrowser();
     // sign in process
     await page.goto('https://www.ihiretechnology.com/jobseeker/account/password');
@@ -150,6 +152,7 @@ async function main() {
     log.warn('Something went wrong', err.message);
     await browser.close();
   }
+  log.error(`Finished scraper ihiretechnology at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
 }
 
-main();
+export default main;

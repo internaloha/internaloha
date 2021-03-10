@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
@@ -14,8 +15,9 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for Monster...');
+    Logger.error('Starting scraper monster at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.setViewport({
       width: 1100, height: 700,
@@ -113,6 +115,7 @@ export async function main(headless) {
     Logger.debug('Our Error:', e.message);
     await browser.close();
   }
+  Logger.error(`Finished scraper monster at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
 }
 
 export default main;

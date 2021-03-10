@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { convertPostedToDate, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 // eslint-disable-next-line consistent-return
@@ -67,8 +68,9 @@ async function getData(page, elements) {
 export async function main(headless) {
   let browser;
   let page;
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for simplyHired');
+    Logger.error('Starting scraper simplyhired at', moment().format('LT'));
     [browser, page] = await startBrowser(headless, false, 100);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
@@ -208,6 +210,7 @@ export async function main(headless) {
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
+  Logger.error(`Finished scraper simplyhired at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
 }
 
 export default main;

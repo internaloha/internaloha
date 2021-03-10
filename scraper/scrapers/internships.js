@@ -1,6 +1,7 @@
 import puppeteer from 'puppeteer';
 import log from 'loglevel';
 import userAgent from 'user-agents';
+import moment from 'moment';
 import { fetchInfo, writeToJSON } from './scraper-functions.js';
 
 async function autoScroll(page) {
@@ -36,6 +37,8 @@ async function main() {
     headless: false,
     slowMo: 100,
   });
+  const startTime = new Date();
+  log.error('Starting scraper internships (chegg) at', moment().format('LT'));
   try {
     const page = await browser.newPage();
     await page.setViewport({
@@ -166,6 +169,7 @@ async function main() {
     log.error('Our Error:', e.message);
     await browser.close();
   }
+  log.error(`Finished scraper internships (chegg) at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
 }
 
 export default main;

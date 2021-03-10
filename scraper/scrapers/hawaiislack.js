@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function setSearchFilters(page) {
@@ -12,7 +13,9 @@ async function setSearchFilters(page) {
 async function main(headless) {
   let browser;
   let page;
+  const startTime = new Date();
   try {
+    Logger.error('Starting scraper hawaiislack at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.setViewport({ width: 1100, height: 900 });
     // eslint-disable-next-line max-len
@@ -80,5 +83,6 @@ async function main(headless) {
     Logger.warn('Our Error:', err.message);
     await browser.close();
   }
+  Logger.error(`Finished scraper hawaiislack at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
 }
 export default main;

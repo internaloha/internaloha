@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { startBrowser, fetchInfo, writeToJSON } from './scraper-functions.js';
 
 async function getLinks(page) {
@@ -106,8 +107,9 @@ async function main(headless) {
   // eslint-disable-next-line no-unused-vars
   let browser;
   let page;
+  const startTime = new Date();
   try {
-    Logger.debug('Executing script for idealist...');
+    Logger.error('Starting scraper idealist at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.idealist.org/en/');
@@ -131,6 +133,7 @@ async function main(headless) {
     await browser.close();
     Logger.warn('Idealist Error:', e);
   }
+  Logger.error(`Finished scraper idealist at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
 }
 
 export default main;
