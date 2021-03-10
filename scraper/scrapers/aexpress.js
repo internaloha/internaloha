@@ -28,7 +28,7 @@ async function main(headless) {
   const data = [];
   const startTime = new Date();
   try {
-    Logger.error('Starting scraper acm at', moment().format('LT'));
+    Logger.error('Starting scraper aexpress at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.americanexpress.com/jobs');
     await setSearchFilters(page);
