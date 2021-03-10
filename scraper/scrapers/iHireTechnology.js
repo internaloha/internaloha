@@ -152,7 +152,7 @@ async function main() {
     log.warn('Something went wrong', err.message);
     await browser.close();
   }
-  log.error(`Finished scraper ihiretechnology at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  log.error(`Elapsed time for ihiretechnology: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

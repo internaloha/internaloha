@@ -38,6 +38,7 @@ async function main() {
     slowMo: 100,
   });
   const startTime = new Date();
+  const data = [];
   log.error('Starting scraper internships (chegg) at', moment().format('LT'));
   try {
     const page = await browser.newPage();
@@ -74,7 +75,6 @@ async function main() {
     await page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
     const target = await page.$$('div[class="GridItem_jobContent__ENwap"]');
     const totalJobs = target.length;
-    const data = [];
     let finishedJobs = 0;
     let skipped = 0;
     log.info('Starting scraping:');
@@ -169,7 +169,7 @@ async function main() {
     log.error('Our Error:', e.message);
     await browser.close();
   }
-  log.error(`Finished scraper internships (chegg) at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  log.error(`Elapsed time for internships (Chegg): ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

@@ -92,7 +92,7 @@ async function main(headless) {
     await browser.close();
     Logger.error(err.message);
   }
-  Logger.error(`Finished scraper apple at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for apple: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

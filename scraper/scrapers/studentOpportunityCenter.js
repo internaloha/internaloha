@@ -102,7 +102,7 @@ export async function main(headless) {
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
-  Logger.error(`Finished scraper studentOpportunityCenter at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for studentOpportunityCenter: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;
