@@ -15,6 +15,8 @@ import idealist from './idealist.js';
 import hawaiislack from './hawaiislack.js';
 import chegg from './internships.js';
 import angellist from './angellist.js';
+import glassdoor from './glassdoor.js';
+import nsf_reu from './nsf-reu.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -37,6 +39,8 @@ async function getAllData(headless = true) {
   results.push(indeed(headless));
   results.push(idealist(headless));
   results.push(hawaiislack(headless));
+  results.push(glassdoor(headless));
+  results.push(nsf_reu(headless));
   return Promise.all(results);
 }
 
@@ -61,6 +65,8 @@ async function getData(scraperName, headless = true) {
     hawaiislack: hawaiislack,
     chegg: chegg,
     angellist: angellist,
+    glassdoor: glassdoor,
+    nsf_reu: nsf_reu,
   };
   await list[scraperName](headless);
 }

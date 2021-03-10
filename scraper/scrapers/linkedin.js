@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, autoScroll, writeToJSON, startBrowser, convertPostedToDate } from './scraper-functions.js';
 
 async function getData(page) {
@@ -17,8 +18,9 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for LinkedIn...');
+    Logger.error('Starting scraper linkedin at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
     await page.waitForSelector('section.results__list');
@@ -133,6 +135,7 @@ export async function main(headless) {
     Logger.debug('Our Error:', e.message);
     await browser.close();
   }
+  Logger.error(`Finished scraper linkedin at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
 }
 
 export default main;
