@@ -135,7 +135,7 @@ export async function main(headless) {
     Logger.debug('Our Error:', e.message);
     await browser.close();
   }
-  Logger.error(`Finished scraper linkedin at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for linkedin: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

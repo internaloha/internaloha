@@ -69,6 +69,7 @@ export async function main(headless) {
   let browser;
   let page;
   const startTime = new Date();
+  const data = [];
   try {
     Logger.error('Starting scraper simplyhired at', moment().format('LT'));
     [browser, page] = await startBrowser(headless, false, 100);
@@ -92,7 +93,6 @@ export async function main(headless) {
 
     let totalPages = 1;
     let totalJobs = 0;
-    const data = [];
 
     // check to see if internship tag exists
     if (internshipDropdown.length > 0) {
@@ -209,7 +209,7 @@ export async function main(headless) {
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
-  Logger.error(`Finished scraper simplyhired at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for simplyHired: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

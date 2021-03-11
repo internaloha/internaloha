@@ -89,7 +89,7 @@ async function main() {
   } catch (err3) {
     log.error(err3.message);
   }
-  log.error(`Finished scraper nsf-reu at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  log.error(`Elapsed time for nsf-reu: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

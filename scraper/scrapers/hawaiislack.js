@@ -14,6 +14,7 @@ async function main(headless) {
   let browser;
   let page;
   const startTime = new Date();
+  const data = [];
   try {
     Logger.error('Starting scraper hawaiislack at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
@@ -27,7 +28,6 @@ async function main(headless) {
         document.querySelectorAll('ul[class="job_listings"] > li > a'),
         a => `${a.getAttribute('href')}`,
     ));
-    const data = [];
     // goes to each page
     // const expiredData = [];
     for (let i = 0; i < elements.length; i++) {
@@ -83,6 +83,6 @@ async function main(headless) {
     Logger.warn('Our Error:', err.message);
     await browser.close();
   }
-  Logger.error(`Finished scraper hawaiislack at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for hawaiislack: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 export default main;

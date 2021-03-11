@@ -141,7 +141,7 @@ async function main() {
     Logger.warn('Our Error:', err4.message);
     await browser.close();
   }
-  Logger.error(`Finished scraper glassdoor at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for glassdoor: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

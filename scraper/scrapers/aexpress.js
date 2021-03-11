@@ -66,7 +66,7 @@ async function main(headless) {
     Logger.debug(err.message);
     await browser.close();
   }
-  Logger.error(`Finished scraper aexpress at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for aexpress: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

@@ -30,6 +30,7 @@ async function startBrowser() {
 }
 
 async function main(url) {
+  const startTime = new Date();
   log.error('Starting scraper angellist at', moment().format('LT'));
   const { browser, page } = await startBrowser();
   await page.setViewport({ width: 1366, height: 768 });
@@ -99,17 +100,17 @@ async function main(url) {
           log.warn(err);
         }
       });
+  log.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
   await browser.close();
 }
 
 async function goTo() {
-  const startTime = new Date();
+
   try {
     await main('https://angel.co/login');
   } catch (err) {
     log.warn('Our Error: ', err.message);
   }
-  log.error(`Finished scraper angellist at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
   // process.exit(1);
 }
 export default goTo;

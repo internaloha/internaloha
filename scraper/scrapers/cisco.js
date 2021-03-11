@@ -68,7 +68,7 @@ export async function main(headless) {
     Logger.error(err.message);
     await browser.close();
   }
-  Logger.error(`Finished scraper cisco at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for Cisco: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

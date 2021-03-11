@@ -130,7 +130,7 @@ async function main(headless) {
     Logger.warn('Our Error:', e.message);
     await browser.close();
   }
-  Logger.error(`Finished scraper zipRecruiter at ${moment().format('LT')} (${moment(startTime).fromNow()})`);
+  Logger.error(`Elapsed time for zipRecruiter: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;
