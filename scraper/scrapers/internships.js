@@ -107,15 +107,58 @@ async function main() {
       try {
         const element = elementLoaded[currentCounter];
         await element.click();
-        const position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
-        let company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
-        const location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
-        const posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
-        const url = page.url();
-        const description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
-        if (company === undefined) {
-          company = 'N/A';
+        let [position, company, location, posted, description] = '';
+        try {
+          position = document.querySelector('h1[class="DesktopHeader_title__2ihuJ"]');
+          if (position !== null) {
+            position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
+          } else {
+            position = 'N/A';
+          }
+        } catch (e) {
+          log.error('Something went wrong with position selector', e.message);
         }
+        try {
+          company = document.querySelector('h1[class="DesktopHeader_title__2ihuJ"]');
+          if (company !== null) {
+            company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
+          } else {
+            company = 'N/A';
+          }
+        } catch (e) {
+          log.error('Something went wrong with company selector', e.message);
+        }
+        try {
+          location = document.querySelector('span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]');
+          if (location !== null) {
+            location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
+          } else {
+            location = 'N/A';
+          }
+        } catch (e) {
+          log.error('Something went wrong with location selector', e.message);
+        }
+        try {
+          posted = document.querySelector('p[class="DesktopHeader_postedDate__11t-5"]');
+          if (posted !== null) {
+            posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
+          } else {
+            posted = 'N/A';
+          }
+        } catch (e) {
+          log.error('Something went wrong with company selector', e.message);
+        }
+        try {
+          description = document.querySelector('div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]');
+          if (description !== null) {
+            description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
+          } else {
+            description = 'N/A';
+          }
+        } catch (e) {
+          log.error('Something went wrong with description selector', e.message);
+        }
+        const url = page.url();
         const date = new Date();
         let daysBack = 0;
         const lastScraped = new Date();
