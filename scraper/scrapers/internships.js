@@ -115,40 +115,24 @@ async function main() {
           } else {
             position = 'N/A';
           }
-        } catch (e) {
-          log.error('Something went wrong with position selector', e.message);
-        }
-        try {
           company = document.querySelector('h1[class="DesktopHeader_title__2ihuJ"]');
           if (company !== null) {
             company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
           } else {
             company = 'N/A';
           }
-        } catch (e) {
-          log.error('Something went wrong with company selector', e.message);
-        }
-        try {
           location = document.querySelector('span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]');
           if (location !== null) {
             location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
           } else {
             location = 'N/A';
           }
-        } catch (e) {
-          log.error('Something went wrong with location selector', e.message);
-        }
-        try {
           posted = document.querySelector('p[class="DesktopHeader_postedDate__11t-5"]');
           if (posted !== null) {
             posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
           } else {
             posted = 'N/A';
           }
-        } catch (e) {
-          log.error('Something went wrong with company selector', e.message);
-        }
-        try {
           description = document.querySelector('div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]');
           if (description !== null) {
             description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
@@ -156,7 +140,7 @@ async function main() {
             description = 'N/A';
           }
         } catch (e) {
-          log.error('Something went wrong with description selector', e.message);
+          log.error('Something went wrong with selectors', e.message);
         }
         const url = page.url();
         const date = new Date();
