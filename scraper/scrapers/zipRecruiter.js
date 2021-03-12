@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON, autoScroll } from './scraper-functions.js';
 
 async function getData(page) {
@@ -17,8 +18,9 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.debug('Executing script for zip...');
+    Logger.error('Starting scraper zipRecruiter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');
     await page.waitForSelector('input[id="search1"]');
@@ -128,6 +130,7 @@ async function main(headless) {
     Logger.warn('Our Error:', e.message);
     await browser.close();
   }
+  Logger.error(`Elapsed time for zipRecruiter: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

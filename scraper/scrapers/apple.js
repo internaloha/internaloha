@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 /**
@@ -48,8 +49,9 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for apple...');
+    Logger.error('Starting scraper apple at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.apple.com/en-us/search?sort=relevance');
     await setSearchFilter(page);
@@ -90,6 +92,7 @@ async function main(headless) {
     await browser.close();
     Logger.error(err.message);
   }
+  Logger.error(`Elapsed time for apple: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

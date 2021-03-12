@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { convertPostedToDate, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 // eslint-disable-next-line consistent-return
@@ -67,8 +68,10 @@ async function getData(page, elements) {
 export async function main(headless) {
   let browser;
   let page;
+  const startTime = new Date();
+  const data = [];
   try {
-    Logger.info('Executing script for simplyHired');
+    Logger.error('Starting scraper simplyhired at', moment().format('LT'));
     [browser, page] = await startBrowser(headless, false, 100);
     await page.goto('https://www.simplyhired.com/');
     await page.waitForSelector('input[name=q]');
@@ -90,7 +93,6 @@ export async function main(headless) {
 
     let totalPages = 1;
     let totalJobs = 0;
-    const data = [];
 
     // check to see if internship tag exists
     if (internshipDropdown.length > 0) {
@@ -98,15 +100,15 @@ export async function main(headless) {
       Logger.info(`Directing to: ${url}`);
       await page.goto(url);
       await page.waitForSelector('div[data-id=JobType]');
-      // Setting filter as last '7 days'
+      // Setting filter as last '30 days'
       const lastPosted = await page.evaluate(
           () => Array.from(
-              document.querySelectorAll('div[data-id=Date] a[href*="7"]'),
+              document.querySelectorAll('div[data-id=Date] a[href*="30"]'),
               a => a.getAttribute('href'),
           ),
       );
       const lastPostedURL = `https://www.simplyhired.com/${lastPosted[0]}`;
-      Logger.info('Setting Date Relevance: 7 days');
+      Logger.info('Setting Date Relevance: 30 days');
       await page.goto(lastPostedURL);
       await page.waitForTimeout(1000);
       await page.click('a[class=SortToggle]');
@@ -186,9 +188,8 @@ export async function main(headless) {
           await nextPage.click();
           totalPages++;
         } catch (err5) {
-          Logger.trace(err5.message);
           hasNext = false;
-          Logger.debug('\nReached the end of pages!');
+          Logger.info('\nReached the end of pages!');
         }
       }
 
@@ -208,6 +209,7 @@ export async function main(headless) {
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
+  Logger.error(`Elapsed time for simplyHired: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

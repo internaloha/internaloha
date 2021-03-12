@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON, isRemote } from './scraper-functions.js';
 
 async function getData(page) {
@@ -81,13 +82,16 @@ async function getData(page) {
 async function main(headless) {
   let browser;
   let page;
+  const startTime = new Date();
+  let dataAm = [];
   try {
-    Logger.debug('Executing script for stackoverflow...');
+    Logger.error('Starting scraper stackoverflow at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://stackoverflow.com/jobs?q=internship');
     await page.waitForNavigation;
     // grab all links
     await getData(page).then((data => {
+      dataAm = data;
       Logger.info(data);
       writeToJSON(data, 'stackoverflow');
     }));
@@ -96,6 +100,7 @@ async function main(headless) {
     Logger.warn('Our Error:', err.message);
     await browser.close();
   }
+  Logger.error(`Elapsed time for stackoverflow: ${moment(startTime).fromNow(true)} | ${dataAm.length} listings scraped `);
 }
 
 export default main;

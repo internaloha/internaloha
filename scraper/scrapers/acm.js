@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
@@ -19,9 +20,9 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
-  // Logger.enableAll(); // this enables console logging. Will replace with CLI args later.
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for ACM...');
+    Logger.error('Starting scraper acm at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
     await page.waitForNavigation;
@@ -61,6 +62,7 @@ export async function main(headless) {
     Logger.error(err.message);
     await browser.close();
   }
+  Logger.error(`Elapsed time for acm: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

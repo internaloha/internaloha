@@ -77,11 +77,11 @@ function main() {
   const statistics = [];
   for (let i = 0; i < files.length; i++) {
     Logger.info('Parsing:', files[i]);
-    const text = JSON.parse(fs.readFileSync(files[i], 'utf8'));
-    data = _.concat(data, text);
     let fileName = files[i].match(/([[a-zA-Z-])+/g);
     fileName = fileName[3];
     if (fileName !== 'statistics') {
+      const text = JSON.parse(fs.readFileSync(files[i], 'utf8'));
+      data = _.concat(data, text);
       statistics.push(getStatistics(fileName, text));
     }
   }

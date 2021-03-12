@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function setSearchFilters(page) {
@@ -12,7 +13,10 @@ async function setSearchFilters(page) {
 async function main(headless) {
   let browser;
   let page;
+  const startTime = new Date();
+  const data = [];
   try {
+    Logger.error('Starting scraper hawaiislack at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.setViewport({ width: 1100, height: 900 });
     // eslint-disable-next-line max-len
@@ -21,10 +25,9 @@ async function main(headless) {
     await setSearchFilters(page);
     await page.waitForTimeout(2000);
     const elements = await page.evaluate(() => Array.from(
-            document.querySelectorAll('ul[class="job_listings"] > li > a'),
-            a => `${a.getAttribute('href')}`,
-        ));
-    const data = [];
+        document.querySelectorAll('ul[class="job_listings"] > li > a'),
+        a => `${a.getAttribute('href')}`,
+    ));
     // goes to each page
     // const expiredData = [];
     for (let i = 0; i < elements.length; i++) {
@@ -40,7 +43,7 @@ async function main(headless) {
         let posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerText');
         // console.log(posted);
         // ignores expired listings.
-        const expired = await fetchInfo(page, 'div[class="job-manager-info"]', 'innerText');
+        const expired = await fetchInfo(page, 'div[class="single_job_listing"] > div', 'innerText');
         if (expired.includes('expired')) {
           posted = '';
           i++;
@@ -51,7 +54,7 @@ async function main(headless) {
         const lastScraped = new Date();
         let location = '';
         try {
-          location = await fetchInfo(page, 'li[class="location"] > a', 'innerText');
+          location = await fetchInfo(page, 'li[class="location"]', 'innerText');
         } catch (noLocation) {
           location = '';
         }
@@ -80,5 +83,6 @@ async function main(headless) {
     Logger.warn('Our Error:', err.message);
     await browser.close();
   }
+  Logger.error(`Elapsed time for hawaiislack: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 export default main;
