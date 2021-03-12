@@ -42,7 +42,6 @@ async function getAllData(headless = true) {
   results.push(hawaiislack(headless));
   results.push(glassdoor(headless));
   results.push(nsf_reu(headless));
-  results.push(studentOpportunityCenter(headless));
   return Promise.all(results);
 }
 

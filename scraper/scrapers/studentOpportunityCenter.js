@@ -1,7 +1,8 @@
+import puppeteer from 'puppeteer';
 import fs from 'fs';
 import Logger from 'loglevel';
 import moment from 'moment';
-import { autoScroll, convertPostedToDate, fetchInfo, startBrowser } from './scraper-functions.js';
+import { autoScroll, convertPostedToDate, fetchInfo } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
@@ -22,15 +23,20 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-export async function main(headless) {
+export async function main() {
   // eslint-disable-next-line no-unused-vars
-  let browser;
-  let page;
+  const browser = await puppeteer.launch({
+    headless: false,
+    slowMo: 100,
+  });
   const data = [];
   const startTime = new Date();
+  Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
   try {
-    Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
-    [browser, page] = await startBrowser(headless);
+    const page = await browser.newPage();
+    await page.setViewport({
+      width: 1100, height: 900,
+    });
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.user);
