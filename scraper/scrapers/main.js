@@ -17,6 +17,7 @@ import chegg from './internships.js';
 import angellist from './angellist.js';
 import glassdoor from './glassdoor.js';
 import nsf_reu from './nsf-reu.js';
+import studentOpportunityCenter from './studentOpportunityCenter.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -41,6 +42,7 @@ async function getAllData(headless = true) {
   results.push(hawaiislack(headless));
   results.push(glassdoor(headless));
   results.push(nsf_reu(headless));
+  results.push(studentOpportunityCenter(headless));
   return Promise.all(results);
 }
 
