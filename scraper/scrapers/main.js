@@ -69,6 +69,7 @@ async function getData(scraperName, headless = true) {
     angellist: angellist,
     glassdoor: glassdoor,
     nsf_reu: nsf_reu,
+    studentOpportunityCenter: studentOpportunityCenter,
   };
   await list[scraperName](headless);
 }
