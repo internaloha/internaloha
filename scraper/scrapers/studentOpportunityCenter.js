@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 import fs from 'fs';
 import Logger from 'loglevel';
 import moment from 'moment';
-import { autoScroll, convertPostedToDate, fetchInfo } from './scraper-functions.js';
+import { autoScroll, convertPostedToDate, fetchInfo, writeToJSON } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
@@ -37,6 +37,7 @@ export async function main() {
     await page.setViewport({
       width: 1100, height: 900,
     });
+    await page.setDefaultTimeout(100000);
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.user);
@@ -105,6 +106,7 @@ export async function main() {
       }
       await element.click();
     }
+    await writeToJSON(data, 'monster');
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
