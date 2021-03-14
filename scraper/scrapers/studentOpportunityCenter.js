@@ -37,7 +37,7 @@ export async function main() {
     await page.setViewport({
       width: 1100, height: 900,
     });
-    await page.setDefaultTimeout(100000);
+    await page.setDefaultTimeout(600000);
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.user);
@@ -45,7 +45,8 @@ export async function main() {
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
     await page.waitForNavigation();
-    await page.setDefaultNavigationTimeout('#rc-imageselect', { timeout: 0 });
+    // await page.setDefaultNavigationTimeout('#rc-imageselect', { timeout: 0 });
+    await page.click('#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > button');
     await page.click(Search_SELECTOR);
     await autoScroll(page);
     await page.click('#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix');
