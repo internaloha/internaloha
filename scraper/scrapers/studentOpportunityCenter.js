@@ -44,9 +44,9 @@ export async function main() {
     await page.click(PASSWORD_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
-    await page.waitForNavigation();
     // await page.setDefaultNavigationTimeout('#rc-imageselect', { timeout: 0 });
-    await page.click('#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > button');
+    await page.waitForNavigation();
+    await page.click('#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-header.fuse-navy-900 > button.toggle-sidebar-folded.mat-icon-button > span > mat-icon');
     await page.click(Search_SELECTOR);
     await autoScroll(page);
     await page.click('#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix');
