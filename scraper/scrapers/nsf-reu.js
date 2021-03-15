@@ -1,12 +1,14 @@
 import log from 'loglevel';
-import { startBrowser, writeToJSON } from './scraperFunctions.js';
+import moment from 'moment';
+import { startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function main() {
   let browser;
   let page;
   const data = [];
-  log.enableAll();
+  const startTime = new Date();
   try {
+    log.error('Starting scraper nsf-reu at', moment().format('LT'));
     [browser, page] = await startBrowser();
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5049');
@@ -87,6 +89,7 @@ async function main() {
   } catch (err3) {
     log.error(err3.message);
   }
+  log.error(`Elapsed time for nsf-reu: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
-main();
+export default main;

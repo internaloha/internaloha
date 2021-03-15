@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
@@ -25,8 +26,9 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for aexpress');
+    Logger.error('Starting scraper aexpress at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.americanexpress.com/jobs');
     await setSearchFilters(page);
@@ -64,6 +66,7 @@ async function main(headless) {
     Logger.debug(err.message);
     await browser.close();
   }
+  Logger.error(`Elapsed time for aexpress: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

@@ -1,6 +1,7 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import log from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#user_email';
@@ -29,7 +30,8 @@ async function startBrowser() {
 }
 
 async function main(url) {
-  log.enableAll();
+  const startTime = new Date();
+  log.error('Starting scraper angellist at', moment().format('LT'));
   const { browser, page } = await startBrowser();
   await page.setViewport({ width: 1366, height: 768 });
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');
@@ -98,11 +100,12 @@ async function main(url) {
           log.warn(err);
         }
       });
+  log.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
   await browser.close();
 }
 
 async function goTo() {
-  log.enableAll();
+
   try {
     await main('https://angel.co/login');
   } catch (err) {

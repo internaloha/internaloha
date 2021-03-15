@@ -1,5 +1,6 @@
 import fs from 'fs';
 import Logger from 'loglevel';
+import moment from 'moment';
 import { autoScroll, convertPostedToDate, fetchInfo, startBrowser } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#mat-input-0';
@@ -26,9 +27,9 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
-  Logger.enableAll();
+  const startTime = new Date();
   try {
-    Logger.info('Executing script...');
+    Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
@@ -101,6 +102,7 @@ export async function main(headless) {
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
+  Logger.error(`Elapsed time for studentOpportunityCenter: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

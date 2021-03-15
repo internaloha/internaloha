@@ -1,4 +1,5 @@
 import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
@@ -18,8 +19,9 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.debug('Executing script for indeed...');
+    Logger.error('Starting scraper indeed at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     // time out after 10 seconds
     await page.goto('https://www.indeed.com/');
@@ -164,6 +166,7 @@ async function main(headless) {
     Logger.warn('Our Error:', e.message);
     await browser.close();
   }
+  Logger.error(`Elapsed time for indeed: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;
