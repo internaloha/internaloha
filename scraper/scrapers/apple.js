@@ -19,6 +19,7 @@ async function getData(page) {
     results.push(fetchInfo(page, 'time[id="jobPostDate"]', 'innerText'));
     results.push(fetchInfo(page, 'div[id="jd-description"]', 'innerHTML'));
     results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
+    results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
   }
   return Promise.all(results);
 }
