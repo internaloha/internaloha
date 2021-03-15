@@ -9,9 +9,10 @@ import glassData from './data/glassdoor.parsed.data';
 import indeedData from './data/indeed.parsed.data';
 import apple from './data/apple.parsed.data';
 import aexpress from './data/aexpress.parsed.data';
-import ACM from './data/acm.parsed.data';
+import acm from './data/acm.parsed.data';
 import idealist from './data/idealist.parsed.data';
 import coolworks from './data/coolworks.parsed.data';
+import internships from './data/internships.parsed.data.json';
 
 class InternshipsFilters {
   /* Returns total number of internship listing */
@@ -23,13 +24,14 @@ class InternshipsFilters {
     let data = [];
     data = _.concat(data, iHire);
     data = _.concat(zipData, simplyData);
+    data = _.concat(data, internships);
     data = _.concat(data, monsterData);
     data = _.concat(data, linkedinData);
     data = _.concat(data, youternData);
     data = _.concat(data, glassData);
     data = _.concat(data, indeedData);
     data = _.concat(data, idealist);
-    data = _.concat(data, ACM);
+    data = _.concat(data, acm);
     data = _.concat(data, coolworks);
     data = _.concat(data, aexpress);
     data = _.concat(data, apple);
