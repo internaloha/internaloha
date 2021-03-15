@@ -9,6 +9,9 @@ const PASSWORD_SELECTOR = '#mat-input-1';
 const CTA_SELECTOR = '#login-submit-button';
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
+const menu = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > button > div.mat-button-focus-overlay';
+const searchtab = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix';
+const enter = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-prefix.ng-tns-c32-28.ng-star-inserted';
 
 async function getData(page) {
   const results = [];
@@ -37,21 +40,21 @@ export async function main() {
     await page.setViewport({
       width: 1100, height: 900,
     });
-    await page.setDefaultTimeout(600000);
+    await page.setDefaultTimeout(1000000);
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.user);
     await page.click(PASSWORD_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
-    // await page.setDefaultNavigationTimeout('#rc-imageselect', { timeout: 0 });
+    // await page.setDefaultNavigationTimeout('#rc-imageselect', { timeout: 10000000 });
     await page.waitForNavigation();
-    await page.click('#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-header.fuse-navy-900 > button.toggle-sidebar-folded.mat-icon-button > span > mat-icon');
+    await page.click(menu);
     await page.click(Search_SELECTOR);
     await autoScroll(page);
-    await page.click('#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix');
+    await page.click(searchtab);
     await page.keyboard.type('computer science internship');
-    await page.type(String.fromCharCode(13));
+    await page.click(enter);
 
     const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
 
