@@ -5,6 +5,21 @@ import Logger from 'loglevel';
 /* global window */
 
 /**
+ * The behavior of this function is to wait for a selector, and if the waitForSelector times out without finding it, it returns null. Otherwise, it returns true
+ * @param page
+ * @param selector
+ * @returns {Promise<null|boolean>}
+ */
+async function waitForSelectorIfPresent(page, selector) {
+  try {
+    await page.waitForSelector(selector, { timeout: 10000 });
+  } catch (e) {
+    return null;
+  }
+  return true;
+}
+
+/**
  * Fetches the information from the page.
  * @param page The page we are scraping
  * @param selector The CSS Selector
@@ -12,14 +27,16 @@ import Logger from 'loglevel';
  * @returns {Promise<*>} The information as a String.
  */
 async function fetchInfo(page, selector, DOM_Element) {
-  let result = '';
-  // try/catch to wait for selector to load
-  try {
-    await page.waitForSelector(selector, { timeout: 10000 });
+  let result = await waitForSelectorIfPresent(page, selector);
+  if (result) {
     result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
-  } catch (e) {
+  } else {
+    // only prints trace when it's not in production
+    const oldLevel = Logger.getLevel();
+    if (oldLevel !== 3) {
+      console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
+    }
     result = 'Error';
-    console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
   }
   return result;
 }
