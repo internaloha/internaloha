@@ -12,13 +12,14 @@ import Logger from 'loglevel';
  * @returns {Promise<*>} The information as a String.
  */
 async function fetchInfo(page, selector, DOM_Element) {
-  // check to see if the selector exists
-  let result = await page.$(selector);
-  if (result === null) {
+  let result = '';
+  // try/catch to wait for selector to load
+  try {
+    await page.waitForSelector(selector, { timeout: 10000 });
+    result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
+  } catch (e) {
     result = 'Error';
     console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
-  } else {
-    result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
   }
   return result;
 }

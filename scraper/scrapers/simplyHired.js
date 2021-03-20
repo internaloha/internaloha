@@ -129,7 +129,7 @@ export async function main(headless) {
             // eslint-disable-next-line no-shadow
             await getData(page, elements).then((data => {
               Logger.info(data);
-}));
+            }));
           } catch (e) {
             Logger.debug('--- Loaded up old UI. Trying to scrape with old UI layout ---');
             try {
@@ -180,7 +180,7 @@ export async function main(headless) {
                 }
               }
             } catch (err) {
-              Logger.trace('InternAloha Error: ', err.message);
+              Logger.trace('SimplyHired Error: ', err.message);
             }
           }
 
