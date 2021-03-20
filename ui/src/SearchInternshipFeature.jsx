@@ -35,7 +35,7 @@ function SearchInternshipFeature({
   let remoteCheck = isRemote;
   let careerChange = careerVal;
   const sortBy = [
-    { key: 'date', text: 'posted', value: 'date' },
+    { key: 'posted', text: 'posted', value: 'posted' },
     { key: 'internship', text: 'internship', value: 'internship' },
     { key: 'company', text: 'company', value: 'company' },
   ];
@@ -103,7 +103,7 @@ function SearchInternshipFeature({
                   inline
                   header='Sort by...'
                   options={sortBy}
-                  defaultValue={sortBy[0].value}
+                  defaultValue={sortBy[0]}
                   onChange={getSort}
                 />
               </p>
