@@ -83,10 +83,11 @@ async function main(headless) {
         // grab all links
         const URLs = await page.evaluate(
           () => Array.from(
-            document.querySelectorAll('div[class="jobHeader d-flex justify-content-between align-items-start"] a'),
+            document.querySelectorAll('a[data-test="job-link"]'),
             a => `https://glassdoor.com${a.getAttribute('href')}`,
           ),
         );
+        Logger.info(URLs);
         urlArray = urlArray.concat(URLs);
         await page.click('a[data-test="pagination-next"]');
         await page.waitForNavigation({ waitUntil: 'networkidle0' });
