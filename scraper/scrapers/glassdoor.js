@@ -32,29 +32,29 @@ async function scrapeInfo(page, posted, url, data) {
   Logger.info(`${position} | ${company}`);
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
   const startTime = new Date();
   try {
     Logger.error('Starting scraper Glassdoor at', moment().format('LT'));
-    [browser, page] = await startBrowser();
+    [browser, page] = await startBrowser(headless);
     // filter by internship tag
     await page.goto('https://www.glassdoor.com/Job/computer-science-intern-jobs-SRCH_KO0,23.htm');
-    Logger.trace('Filtering by internships...');
+    Logger.info('Filtering by internships...');
     await page.waitForSelector('div[id="filter_jobType"]');
     await page.click('div[id="filter_jobType"]');
     await page.waitForSelector('div[id="filter_jobType"]');
     await page.click('li[value="internship"]');
     await page.waitForTimeout(3000);
-    Logger.trace('Selecting last 30 days');
+    Logger.info('Selecting last 30 days');
     await page.waitForSelector('div[id="filter_fromAge"]');
     await page.click('div[id="filter_fromAge"]');
     await page.waitForSelector('li[value="30"]');
     await page.click('li[value="30"]');
     await page.waitForTimeout(3000);
-    Logger.trace('Sorting by most recent');
+    Logger.info('Sorting by most recent');
     await page.waitForSelector('div[data-test="sort-by-header"]');
     await page.click('div[data-test="sort-by-header"]');
     await page.waitForSelector('li[data-test="date_desc"]');
@@ -65,10 +65,10 @@ async function main() {
     let urlArray = [];
     const skippedJobs = [];
     const skippedDates = [];
-    let pageLimit = await fetchInfo(page, 'div[class="cell middle hideMob padVertSm"]', 'innerHTML');
+    let pageLimit = await fetchInfo(page, 'div[class="cell middle hideHH py-sm"]', 'innerHTML');
     pageLimit = pageLimit.match(/(\d+)/gm);
     let currentPage = 1;
-    Logger.trace('Pages: ', pageLimit[1]);
+    Logger.info('Pages: ', pageLimit[1]);
     try {
       while (pageLimit[1] !== currentPage) {
         currentPage++;
@@ -90,10 +90,15 @@ async function main() {
         urlArray = urlArray.concat(URLs);
         await page.click('a[data-test="pagination-next"]');
         await page.waitForNavigation({ waitUntil: 'networkidle0' });
-        Logger.trace('Navigating to next page...');
+        Logger.info('Navigating to next page...');
+        await page.waitForTimeout(5000);
+        // close modal that pops up
+        if (currentPage === 2) {
+          await page.click('span[alt="Close"]');
+        }
       }
     } catch (err1) {
-      Logger.trace('Reached end. Scrapping pages now...');
+      Logger.info('Reached end. Scrapping pages now...');
     }
     let countError = 0;
     let breakOut = false;
@@ -111,7 +116,7 @@ async function main() {
         }
         countError++;
         Logger.warn(err5.message);
-        Logger.trace('Loading error, skipping');
+        Logger.error('Loading error, skipping');
         skippedJobs.push(urlArray[i]);
         skippedDates.push(postedDates[i]);
       }
