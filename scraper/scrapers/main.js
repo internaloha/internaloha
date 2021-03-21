@@ -72,6 +72,7 @@ async function getData(scraperName, headless = true) {
 }
 
 async function main() {
+  process.setMaxListeners(0);
   if (myArgs.length === 3) {
     Logger.enableAll();
     if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
