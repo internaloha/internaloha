@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
-import { Card, Container, Grid, Header } from 'semantic-ui-react';
+import { Card, Container, Grid, Header, Segment } from 'semantic-ui-react';
 import InternshipListingCard from './InternshipListingCard';
 import SearchInternshipFeature from './SearchInternshipFeature';
 import InternshipsFilters from './InternshipFilters';
@@ -12,7 +12,7 @@ function InternshipListing() {
   const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
   const [location, setLocation] = useState([]);
   const [company, setCompany] = useState('any');
-  const [sort, setSort] = useState('date');
+  const [sort, setSort] = useState('posted');
   const [search, setSearch] = useState('');
   const [skills, setSkills] = useState([]);
   const [remote, setRemote] = useState(false);
@@ -20,6 +20,7 @@ function InternshipListing() {
   const [height, setHeight] = useState(0);
   const [career, setCareer] = useState([]);
   const ref = useRef(null);
+  const totalListing = getInternshipData.length;
 
   /* Passes data up from SearchInternshipFeature. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
@@ -60,6 +61,29 @@ function InternshipListing() {
   return (
       <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid columns={'equal'} doubling stackable>
+          <Grid.Row style={{ maxWidth: '50%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
+            <Segment>
+              <h3 style={{ align: 'center' }}>
+                Total Results in Listing: {totalListing}
+              </h3>
+              <h4>
+                Websites Featured:
+                ACM,
+                Angel List,
+                American Express,
+                Chegg Internships,
+                Cisco,
+                Glassdoor,
+                Hawaii Slack,
+                Idealist,
+                Indeed,
+                Monster,
+                Simply Hired,
+                Student Opportunity Center,
+                Zip Recruiter
+              </h4>
+            </Segment>
+          </Grid.Row>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
@@ -67,7 +91,7 @@ function InternshipListing() {
           </Grid.Row>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingBottom: '0px' }}>
             <Header style={{ paddingLeft: '105px', paddingTop: '20px' }}>
-              Total Results: {internships.total(data)}
+              Results: {internships.total(data)}
             </Header>
           </Grid.Row>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
