@@ -13,6 +13,7 @@ import acm from './data/acm.parsed.data';
 import idealist from './data/idealist.parsed.data';
 import coolworks from './data/coolworks.parsed.data';
 import internships from './data/internships.parsed.data.json';
+import ciscoData from './data/cisco.parsed.data.json';
 
 class InternshipsFilters {
   /* Returns total number of internship listing */
@@ -23,7 +24,7 @@ class InternshipsFilters {
   mergeData() {
     let data = [];
     data = _.concat(data, iHire);
-    data = _.concat(zipData, simplyData);
+    data = _.concat(data, simplyData);
     data = _.concat(data, internships);
     data = _.concat(data, monsterData);
     data = _.concat(data, linkedinData);
@@ -35,6 +36,58 @@ class InternshipsFilters {
     data = _.concat(data, coolworks);
     data = _.concat(data, aexpress);
     data = _.concat(data, apple);
+    data = _.concat(data, zipData);
+    data = _.concat(data, ciscoData);
+    return data;
+  }
+
+  getData(name) {
+    let data = [];
+    if (name === 'iHire') {
+      data = _.concat(data, iHire);
+    }
+    if (name === 'SimplyHired') {
+      data = _.concat(zipData, simplyData);
+    }
+    if (name === 'Chegg') {
+      data = _.concat(data, internships);
+    }
+    if (name === 'Monster') {
+      data = _.concat(data, monsterData);
+    }
+    if (name === 'LinkedIn') {
+      data = _.concat(data, linkedinData);
+    }
+    if (name === 'Youtern') {
+      data = _.concat(data, youternData);
+    }
+    if (name === 'Glassdoor') {
+      data = _.concat(data, glassData);
+    }
+    if (name === 'Indeed') {
+      data = _.concat(data, indeedData);
+    }
+    if (name === 'Idealist') {
+      data = _.concat(data, idealist);
+    }
+    if (name === 'ACM') {
+      data = _.concat(data, acm);
+    }
+    if (name === 'Coolworks') {
+      data = _.concat(data, coolworks);
+    }
+    if (name === 'AExpress') {
+      data = _.concat(data, aexpress);
+    }
+    if (name === 'Apple') {
+      data = _.concat(data, apple);
+    }
+    if (name === 'ZipRecruiter') {
+      data = _.concat(data, zipData);
+    }
+    if (name === 'Cisco') {
+      data = _.concat(data, ciscoData);
+    }
     return data;
   }
 

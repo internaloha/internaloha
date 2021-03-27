@@ -67,20 +67,20 @@ function InternshipListing() {
                 Total Results in Listing: {totalListing}
               </h3>
               <h4>
-                Websites Featured:
-                ACM,
-                Angel List,
-                American Express,
-                Chegg Internships,
-                Cisco,
-                Glassdoor,
-                Hawaii Slack,
-                Idealist,
-                Indeed,
-                Monster,
-                Simply Hired,
-                Student Opportunity Center,
-                Zip Recruiter
+                Websites Featured: <br/>
+                ACM ({internships.getData('ACM').length})  <br/>
+                Angel List <br/>
+                American Express ({internships.getData('AExpress').length}) <br/>
+                Chegg Internships ({internships.getData('Chegg').length}) <br/>
+                Cisco <br/>
+                Glassdoor ({internships.getData('Glassdoor').length}) <br/>
+                Hawaii Slack <br/>
+                Idealist ({internships.getData('Idealist').length}) <br/>
+                Indeed ({internships.getData('Indeed').length}) <br/>
+                Monster ({internships.getData('Monster').length}) <br/>
+                Simply Hired ({internships.getData('SimplyHired').length}) <br/>
+                Student Opportunity Center <br/>
+                Zip Recruiter ({internships.getData('ZipRecruiter').length}) <br/>
               </h4>
             </Segment>
           </Grid.Row>
