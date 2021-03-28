@@ -5,7 +5,7 @@ import zipData from './data/ziprecruiter.parsed.data';
 import monsterData from './data/monster.parsed.data';
 import youternData from './data/youtern.parsed.data';
 import iHire from './data/iHireTech.parsed.data';
-import glassData from './data/glassdoor.parsed.data';
+import glassData from './data/glassdoor.parsed.data.json';
 import indeedData from './data/indeed.parsed.data';
 import apple from './data/apple.parsed.data';
 import aexpress from './data/aexpress.parsed.data';
@@ -14,6 +14,8 @@ import idealist from './data/idealist.parsed.data';
 import coolworks from './data/coolworks.parsed.data';
 import internships from './data/internships.parsed.data.json';
 import ciscoData from './data/cisco.parsed.data.json';
+import stackOverflow from './data/stackoverflow.parsed.data.json';
+import angelList from './data/angellist.parsed.data.json';
 
 class InternshipsFilters {
   /* Returns total number of internship listing */
@@ -38,6 +40,8 @@ class InternshipsFilters {
     data = _.concat(data, apple);
     data = _.concat(data, zipData);
     data = _.concat(data, ciscoData);
+    data = _.concat(data, stackOverflow);
+    data = _.concat(data, angelList);
     return data;
   }
 
@@ -47,7 +51,7 @@ class InternshipsFilters {
       data = _.concat(data, iHire);
     }
     if (name === 'SimplyHired') {
-      data = _.concat(zipData, simplyData);
+      data = _.concat(data, simplyData);
     }
     if (name === 'Chegg') {
       data = _.concat(data, internships);
@@ -87,6 +91,12 @@ class InternshipsFilters {
     }
     if (name === 'Cisco') {
       data = _.concat(data, ciscoData);
+    }
+    if (name === 'StackOverflow') {
+      data = _.concat(data, stackOverflow);
+    }
+    if (name === 'AngelList') {
+      data = _.concat(data, angelList);
     }
     return data;
   }

@@ -66,22 +66,26 @@ function InternshipListing() {
               <h3 style={{ align: 'center' }}>
                 Total Results in Listing: {totalListing}
               </h3>
-              <h4>
-                Websites Featured: <br/>
-                ACM ({internships.getData('ACM').length})  <br/>
-                Angel List <br/>
-                American Express ({internships.getData('AExpress').length}) <br/>
-                Chegg Internships ({internships.getData('Chegg').length}) <br/>
-                Cisco <br/>
-                Glassdoor ({internships.getData('Glassdoor').length}) <br/>
-                Hawaii Slack <br/>
-                Idealist ({internships.getData('Idealist').length}) <br/>
-                Indeed ({internships.getData('Indeed').length}) <br/>
-                Monster ({internships.getData('Monster').length}) <br/>
-                Simply Hired ({internships.getData('SimplyHired').length}) <br/>
-                Student Opportunity Center <br/>
-                Zip Recruiter ({internships.getData('ZipRecruiter').length}) <br/>
-              </h4>
+              <Grid.Column>
+                <h4>
+                  Websites Featured: <br/>
+                  ACM ({internships.getData('ACM').length})
+                  Angel List ({internships.getData('AngelList').length})
+                  American Express ({internships.getData('AExpress').length})
+                  Chegg Internships ({internships.getData('Chegg').length})
+                  Cisco ({internships.getData('Cisco').length})
+                  Glassdoor ({internships.getData('Glassdoor').length})
+                  Hawaii Slack (0)
+                  Idealist ({internships.getData('Idealist').length})
+                  Indeed ({internships.getData('Indeed').length})
+                  Monster ({internships.getData('Monster').length})
+                  Simply Hired ({internships.getData('SimplyHired').length})
+                  Stack Overflow ({internships.getData('StackOverflow').length})
+                  Student Opportunity Center (0)
+                  Youtern ({internships.getData('Youtern').length})
+                  Zip Recruiter ({internships.getData('ZipRecruiter').length})
+                </h4>
+              </Grid.Column>
             </Segment>
           </Grid.Row>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
