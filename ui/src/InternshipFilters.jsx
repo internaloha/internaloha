@@ -16,7 +16,7 @@ import internships from './data/internships.parsed.data.json';
 import ciscoData from './data/cisco.parsed.data.json';
 import stackOverflow from './data/stackoverflow.parsed.data.json';
 import angelList from './data/angellist.parsed.data.json';
-
+import hawaiislack from './data/hawaiislack.parsed.data.json';
 class InternshipsFilters {
   /* Returns total number of internship listing */
   total = (data) => data.length;
@@ -42,6 +42,7 @@ class InternshipsFilters {
     data = _.concat(data, ciscoData);
     data = _.concat(data, stackOverflow);
     data = _.concat(data, angelList);
+    data = _.concat(data, hawaiislack);
     return data;
   }
 
@@ -97,6 +98,9 @@ class InternshipsFilters {
     }
     if (name === 'AngelList') {
       data = _.concat(data, angelList);
+    }
+    if (name === 'HawaiiSlack') {
+      data = _.concat(data, hawaiislack);
     }
     return data;
   }

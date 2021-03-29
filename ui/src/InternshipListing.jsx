@@ -76,7 +76,7 @@ function InternshipListing() {
                   Chegg Internships ({internships.getData('Chegg').length})
                   Cisco ({internships.getData('Cisco').length})
                   Glassdoor ({internships.getData('Glassdoor').length})
-                  Hawaii Slack (0)
+                  Hawaii Slack ({internships.getData('HawaiiSlack').length})
                   Idealist ({internships.getData('Idealist').length})
                   Indeed ({internships.getData('Indeed').length})
                   LinkedIn ({internships.getData('LinkedIn').length})
