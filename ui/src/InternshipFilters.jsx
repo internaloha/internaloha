@@ -5,13 +5,17 @@ import zipData from './data/ziprecruiter.parsed.data';
 import monsterData from './data/monster.parsed.data';
 import youternData from './data/youtern.parsed.data';
 import iHire from './data/iHireTech.parsed.data';
-import glassData from './data/glassdoor.parsed.data';
+import glassData from './data/glassdoor.parsed.data.json';
 import indeedData from './data/indeed.parsed.data';
 import apple from './data/apple.parsed.data';
 import aexpress from './data/aexpress.parsed.data';
-import ACM from './data/acm.parsed.data';
+import acm from './data/acm.parsed.data';
 import idealist from './data/idealist.parsed.data';
 import coolworks from './data/coolworks.parsed.data';
+import internships from './data/internships.parsed.data.json';
+import ciscoData from './data/cisco.parsed.data.json';
+import stackOverflow from './data/stackoverflow.parsed.data.json';
+import angelList from './data/angellist.parsed.data.json';
 
 class InternshipsFilters {
   /* Returns total number of internship listing */
@@ -22,17 +26,78 @@ class InternshipsFilters {
   mergeData() {
     let data = [];
     data = _.concat(data, iHire);
-    data = _.concat(zipData, simplyData);
+    data = _.concat(data, simplyData);
+    data = _.concat(data, internships);
     data = _.concat(data, monsterData);
     data = _.concat(data, linkedinData);
     data = _.concat(data, youternData);
     data = _.concat(data, glassData);
     data = _.concat(data, indeedData);
     data = _.concat(data, idealist);
-    data = _.concat(data, ACM);
+    data = _.concat(data, acm);
     data = _.concat(data, coolworks);
     data = _.concat(data, aexpress);
     data = _.concat(data, apple);
+    data = _.concat(data, zipData);
+    data = _.concat(data, ciscoData);
+    data = _.concat(data, stackOverflow);
+    data = _.concat(data, angelList);
+    return data;
+  }
+
+  getData(name) {
+    let data = [];
+    if (name === 'iHire') {
+      data = _.concat(data, iHire);
+    }
+    if (name === 'SimplyHired') {
+      data = _.concat(data, simplyData);
+    }
+    if (name === 'Chegg') {
+      data = _.concat(data, internships);
+    }
+    if (name === 'Monster') {
+      data = _.concat(data, monsterData);
+    }
+    if (name === 'LinkedIn') {
+      data = _.concat(data, linkedinData);
+    }
+    if (name === 'Youtern') {
+      data = _.concat(data, youternData);
+    }
+    if (name === 'Glassdoor') {
+      data = _.concat(data, glassData);
+    }
+    if (name === 'Indeed') {
+      data = _.concat(data, indeedData);
+    }
+    if (name === 'Idealist') {
+      data = _.concat(data, idealist);
+    }
+    if (name === 'ACM') {
+      data = _.concat(data, acm);
+    }
+    if (name === 'Coolworks') {
+      data = _.concat(data, coolworks);
+    }
+    if (name === 'AExpress') {
+      data = _.concat(data, aexpress);
+    }
+    if (name === 'Apple') {
+      data = _.concat(data, apple);
+    }
+    if (name === 'ZipRecruiter') {
+      data = _.concat(data, zipData);
+    }
+    if (name === 'Cisco') {
+      data = _.concat(data, ciscoData);
+    }
+    if (name === 'StackOverflow') {
+      data = _.concat(data, stackOverflow);
+    }
+    if (name === 'AngelList') {
+      data = _.concat(data, angelList);
+    }
     return data;
   }
 
@@ -111,13 +176,16 @@ class InternshipsFilters {
 
   /* Sorts list by given parameters */
   sortedBy(data, value) {
-    if (value === 'date') {
+    if (value === 'posted') {
       return _.orderBy(data, ['posted'], ['desc']);
     }
     if (value === 'company') {
       return _.orderBy(data, ['company'], ['asc']);
     }
-    return _.orderBy(data, ['position'], ['asc']);
+    if (value === 'internship') {
+      return _.orderBy(data, ['position'], ['asc']);
+    }
+    return _.orderBy(data, ['posted'], ['desc']);
   }
 
   /* Returns a list based on skill/tags inputs */
