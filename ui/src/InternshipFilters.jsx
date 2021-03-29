@@ -17,6 +17,7 @@ import ciscoData from './data/cisco.parsed.data.json';
 import stackOverflow from './data/stackoverflow.parsed.data.json';
 import angelList from './data/angellist.parsed.data.json';
 import hawaiislack from './data/hawaiislack.parsed.data.json';
+
 class InternshipsFilters {
   /* Returns total number of internship listing */
   total = (data) => data.length;
