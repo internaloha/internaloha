@@ -72,22 +72,22 @@ function fromDir(startPath, filter) {
 
 function main() {
   // gets all file from the directory
-  const files = fromDir('../src/src/data/', '.json');
+  const files = fromDir('../ui/src/data/', '.json');
   let data = [];
   const statistics = [];
   for (let i = 0; i < files.length; i++) {
     Logger.info('Parsing:', files[i]);
-    const text = JSON.parse(fs.readFileSync(files[i], 'utf8'));
-    data = _.concat(data, text);
     let fileName = files[i].match(/([[a-zA-Z-])+/g);
     fileName = fileName[3];
     if (fileName !== 'statistics') {
+      const text = JSON.parse(fs.readFileSync(files[i], 'utf8'));
+      data = _.concat(data, text);
       statistics.push(getStatistics(fileName, text));
     }
   }
   statistics.push(getStatistics('Total', data));
 
-  fs.writeFile('../src/src/data/statistics.data.json',
+  fs.writeFile('../ui/src/data/statistics.data.json',
     JSON.stringify(statistics, null, 4), 'utf-8',
     err => (err ? console.log('\nData not written!', err) :
       Logger.info('Data successfully written!')));

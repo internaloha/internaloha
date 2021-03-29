@@ -1,5 +1,6 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON, isRemote, checkHeadlessOrNot } from './scraper-functions.js';
+import moment from 'moment';
+import { fetchInfo, startBrowser, writeToJSON, isRemote } from './scraper-functions.js';
 
 async function getData(page) {
   const data = [];
@@ -17,10 +18,10 @@ async function getData(page) {
   for (let i = 0; i < number[0]; i++) {
     await page.goto(elements[i]);
     try {
-      const position = await fetchInfo(page, 'div[class="grid--cell fl1"] h1', 'innerText');
+      const position = await fetchInfo(page, 'h1[class="fs-headline1 sticky:fs-body3 sticky:sm:fs-subheading t mb4 sticky:mb2"]', 'innerText');
       let company = '';
       try {
-        company = await fetchInfo(page, 'div[class="fc-black-700 mb4"] a', 'innerText');
+        company = await fetchInfo(page, 'div[class="fc-black-700 mb4 sticky:mb0 sticky:mr8 fs-body2 sticky:fs-body1 sticky:sm:fs-caption"] a', 'innerText');
       } catch (noCompany) {
         company = 'Unknown';
       }
@@ -46,7 +47,7 @@ async function getData(page) {
       let city = '';
       let state = '';
       try {
-        location = await fetchInfo(page, 'div[class="fc-black-700 mb4"] span', 'innerText');
+        location = await fetchInfo(page, 'div[class="fc-black-700 mb4 sticky:mb0 sticky:mr8 fs-body2 sticky:fs-body1 sticky:sm:fs-caption"] span', 'innerText');
         city = location.match(/([^ –\n][^,]*)/g)[0].trim();
         state = location.match(/([^,]*)/g)[2].trim();
       } catch (noLocation) {
@@ -81,13 +82,16 @@ async function getData(page) {
 async function main(headless) {
   let browser;
   let page;
+  const startTime = new Date();
+  let dataAm = [];
   try {
-    Logger.debug('Executing script for stackoverflow...');
+    Logger.error('Starting scraper stackoverflow at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://stackoverflow.com/jobs?q=internship');
     await page.waitForNavigation;
     // grab all links
     await getData(page).then((data => {
+      dataAm = data;
       Logger.info(data);
       writeToJSON(data, 'stackoverflow');
     }));
@@ -96,15 +100,7 @@ async function main(headless) {
     Logger.warn('Our Error:', err.message);
     await browser.close();
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
+  Logger.error(`Elapsed time for stackoverflow: ${moment(startTime).fromNow(true)} | ${dataAm.length} listings scraped `);
 }
 
 export default main;

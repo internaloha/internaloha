@@ -1,0 +1,10 @@
+{
+  "angellist": {
+    "user": "johnfoo@testing.com",
+    "password": "changeme"
+  },
+  "studentOpportunityCenter": {
+    "user": "johnfoo@testing.com",
+    "password": "changeme"
+  }
+}

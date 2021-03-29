@@ -1,5 +1,6 @@
 import Logger from 'loglevel';
-import { startBrowser, fetchInfo, writeToJSON, checkHeadlessOrNot } from './scraper-functions.js';
+import moment from 'moment';
+import { startBrowser, fetchInfo, writeToJSON } from './scraper-functions.js';
 
 async function getLinks(page) {
   return page.evaluate(
@@ -22,7 +23,6 @@ async function getElements(page) {
       await page.waitForTimeout(1000);
       await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
-      Logger.warn(e.message);
       hasNext = false;
       Logger.trace('Reached the end of pages!');
     }
@@ -32,13 +32,12 @@ async function getElements(page) {
 
 // eslint-disable-next-line consistent-return
 async function getData(page, elements) {
+  const data = [];
   try {
-    const data = [];
     for (let i = 0; i < elements.length; i++) {
       for (let j = 0; j < elements[i].length; j++) {
         const element = `https://www.idealist.org${elements[i][j]}`;
-        Logger.info(element);
-        await page.goto(`https://www.idealist.org${elements[i][j]}`);
+        await page.goto(element);
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
         let company = '';
         try {
@@ -50,14 +49,15 @@ async function getData(page, elements) {
         let location = '';
         let locationArray = {};
         try {
-          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 jczOfB"]', 'innerText');
-          const loc = location.split(', ');
-          const city = loc[0].trim();
-          const state = loc[1].trim();
+          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"] > div[class=" Box__BaseBox-sc-1wooqli-0 kMROVK"]', 'outerText');
+          const loc = location.split(/\n/);
+          const where = loc[2].split(', ');
+          const city = where[0].trim();
+          const state = where[1].trim();
           locationArray = { city: city, state: state };
         } catch (e) {
-          Logger.warn(e.message);
-          Logger.warn('No location found');
+          Logger.debug(e.message);
+          Logger.debug('No location found');
           location = 'N/A';
         }
         let time = '';
@@ -100,7 +100,7 @@ async function getData(page, elements) {
     }
     return data;
   } catch (e) {
-    Logger.warn(e.message);
+    Logger.warn('Idealist Error:', e.message);
   }
 }
 
@@ -108,8 +108,10 @@ async function main(headless) {
   // eslint-disable-next-line no-unused-vars
   let browser;
   let page;
+  const startTime = new Date();
+  let dataAm = [];
   try {
-    Logger.debug('Executing script for idealist...');
+    Logger.error('Starting scraper idealist at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36');
     await page.goto('https://www.idealist.org/en/');
@@ -125,22 +127,16 @@ async function main(headless) {
     await getElements(page).then((elements) => {
       getData(page, elements).then((data => {
         Logger.info(data);
+        dataAm = data;
         writeToJSON(data, 'idealist');
+        browser.close();
       }));
     });
-    await browser.close();
   } catch (e) {
-    Logger.warn(e);
+    await browser.close();
+    Logger.warn('Idealist Error:', e);
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
+  Logger.error(`Elapsed time for idealist: ${moment(startTime).fromNow(true)} | ${dataAm.length} listings scraped `);
 }
 
 export default main;

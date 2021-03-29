@@ -1,5 +1,6 @@
 import Logger from 'loglevel';
-import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import moment from 'moment';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -14,8 +15,9 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for Monster...');
+    Logger.error('Starting scraper monster at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.setViewport({
       width: 1100, height: 700,
@@ -113,15 +115,7 @@ export async function main(headless) {
     Logger.debug('Our Error:', e.message);
     await browser.close();
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
+  Logger.error(`Elapsed time for monster: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

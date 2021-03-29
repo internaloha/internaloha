@@ -1,6 +1,7 @@
 import puppeteer from 'puppeteer';
 import log from 'loglevel';
 import userAgent from 'user-agents';
+import moment from 'moment';
 import { fetchInfo, writeToJSON } from './scraper-functions.js';
 
 async function autoScroll(page) {
@@ -36,6 +37,9 @@ async function main() {
     headless: false,
     slowMo: 100,
   });
+  const startTime = new Date();
+  const data = [];
+  log.error('Starting scraper internships (chegg) at', moment().format('LT'));
   try {
     const page = await browser.newPage();
     await page.setViewport({
@@ -71,7 +75,6 @@ async function main() {
     await page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
     const target = await page.$$('div[class="GridItem_jobContent__ENwap"]');
     const totalJobs = target.length;
-    const data = [];
     let finishedJobs = 0;
     let skipped = 0;
     log.info('Starting scraping:');
@@ -104,15 +107,42 @@ async function main() {
       try {
         const element = elementLoaded[currentCounter];
         await element.click();
-        const position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
-        let company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
-        const location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
-        const posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
-        const url = page.url();
-        const description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
-        if (company === undefined) {
-          company = 'N/A';
+        let [position, company, location, posted, description] = '';
+        try {
+          position = document.querySelector('h1[class="DesktopHeader_title__2ihuJ"]');
+          if (position !== null) {
+            position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
+          } else {
+            position = 'N/A';
+          }
+          company = document.querySelector('h1[class="DesktopHeader_title__2ihuJ"]');
+          if (company !== null) {
+            company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
+          } else {
+            company = 'N/A';
+          }
+          location = document.querySelector('span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]');
+          if (location !== null) {
+            location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
+          } else {
+            location = 'N/A';
+          }
+          posted = document.querySelector('p[class="DesktopHeader_postedDate__11t-5"]');
+          if (posted !== null) {
+            posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
+          } else {
+            posted = 'N/A';
+          }
+          description = document.querySelector('div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]');
+          if (description !== null) {
+            description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
+          } else {
+            description = 'N/A';
+          }
+        } catch (e) {
+          log.error('Something went wrong with selectors', e.message);
         }
+        const url = page.url();
         const date = new Date();
         let daysBack = 0;
         const lastScraped = new Date();
@@ -166,6 +196,7 @@ async function main() {
     log.error('Our Error:', e.message);
     await browser.close();
   }
+  log.error(`Elapsed time for internships (Chegg): ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
-main();
+export default main;

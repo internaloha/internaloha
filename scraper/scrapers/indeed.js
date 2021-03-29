@@ -1,12 +1,13 @@
 import Logger from 'loglevel';
-import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import moment from 'moment';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
   // Scrapes position, location, company, posted, and description
   for (let i = 0; i < 5; i++) {
-    results.push(fetchInfo(page, 'h1[class="icl-u-xs-mb--xs icl-u-xs-mt--none jobsearch-JobInfoHeader-title"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="jobsearch-CompanyInfoWithoutHeaderImage jobsearch-CompanyInfoWithReview"] > div > div > div:nth-child(2)', 'innerText'));
+    results.push(fetchInfo(page, 'div.jobsearch-JobInfoHeader-title-container ', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="jobsearch-InlineCompanyRating icl-u-xs-mt--xs jobsearch-DesktopStickyContainer-companyrating"] + div', 'innerText'));
     results.push(fetchInfo(page, 'div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-JobMetadataFooter"]', 'innerText'));
     results.push(fetchInfo(page, 'div[class="jobsearch-jobDescriptionText"]', 'innerHTML'));
@@ -18,8 +19,9 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.debug('Executing script for indeed...');
+    Logger.error('Starting scraper indeed at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     // time out after 10 seconds
     await page.goto('https://www.indeed.com/');
@@ -38,7 +40,7 @@ async function main(headless) {
       await page.waitForTimeout(2000);
       await page.click('a[class="icl-CloseButton popover-x-button-close"]');
     } catch (err2) {
-      Logger.error('Our Error:', err2.message);
+      Logger.info('No popup');
     }
     await page.waitForSelector('div[class="serp-filters-sort-by-container"]');
     const date = await page.evaluate(
@@ -53,9 +55,9 @@ async function main(headless) {
       await page.click('button[class="dropdown-button dd-target"]');
       await page.waitForTimeout(1000);
       await page.click('li[onmousedown="rbptk(\'rb\', \'dateposted\', \'4\');"]');
-      Logger.trace('Sorting by last 14 days...');
+      Logger.info('Sorting by last 14 days...');
     } catch (err3) {
-      Logger.error('Our Error: No sorting by date posted.');
+      Logger.info('No sorting by date posted.');
     }
     let internshipDropdown = [];
     try {
@@ -68,13 +70,13 @@ async function main(headless) {
         ),
       );
     } catch (err4) {
-      Logger.warn('No filter link');
+      Logger.info('No filter link');
     }
     if (internshipDropdown.length === 1) {
       await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
       Logger.trace('Filtering by internship tag...');
     } else {
-      Logger.warn('No internship tag.');
+      Logger.info('No internship tag.');
     }
     let totalJobs = 0;
     const urls = [];
@@ -164,15 +166,7 @@ async function main(headless) {
     Logger.warn('Our Error:', e.message);
     await browser.close();
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
+  Logger.error(`Elapsed time for indeed: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

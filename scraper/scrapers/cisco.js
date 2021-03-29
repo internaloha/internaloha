@@ -1,5 +1,6 @@
 import Logger from 'loglevel';
-import { fetchInfo, startBrowser, writeToJSON, checkHeadlessOrNot } from './scraper-functions.js';
+import moment from 'moment';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -16,8 +17,9 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for Cisco...');
+    Logger.error('Starting scraper Cisco at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.cisco.com/jobs/SearchJobs/?21178=%5B169482%5D&21178_format=6020&21180=%5B165%5D&21180_format=6022&21181=%5B186%2C194%2C201%2C187%2C191%2C196%2C197%2C67822237%2C185%2C55816092%5D&21181_format=6023&listFilterMode=1');
     await page.waitForNavigation;
@@ -66,15 +68,7 @@ export async function main(headless) {
     Logger.error(err.message);
     await browser.close();
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
+  Logger.error(`Elapsed time for Cisco: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

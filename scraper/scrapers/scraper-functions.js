@@ -5,6 +5,21 @@ import Logger from 'loglevel';
 /* global window */
 
 /**
+ * The behavior of this function is to wait for a selector, and if the waitForSelector times out without finding it, it returns null. Otherwise, it returns true
+ * @param page
+ * @param selector
+ * @returns {Promise<null|boolean>}
+ */
+async function waitForSelectorIfPresent(page, selector) {
+  try {
+    await page.waitForSelector(selector, { timeout: 10000 });
+  } catch (e) {
+    return null;
+  }
+  return true;
+}
+
+/**
  * Fetches the information from the page.
  * @param page The page we are scraping
  * @param selector The CSS Selector
@@ -12,12 +27,15 @@ import Logger from 'loglevel';
  * @returns {Promise<*>} The information as a String.
  */
 async function fetchInfo(page, selector, DOM_Element) {
-  let result;
-  try {
-    await page.waitForSelector(selector, { timeout: 10000 });
+  let result = await waitForSelectorIfPresent(page, selector);
+  if (result) {
     result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
-  } catch (error) {
-    Logger.error('Our Error: fetchInfo() failed.\n', error.message);
+  } else {
+    // only prints trace when it's not in production
+    const oldLevel = Logger.getLevel();
+    if (oldLevel !== 3) {
+      console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
+    }
     result = 'Error';
   }
   return result;
@@ -88,14 +106,14 @@ async function writeToJSON(data, name) {
  * Converts posted strings to ISO format. This is ONLY if it follows the format of:
  * Posted: 4 days ago... 3 weeks ago... a month ago
  * @param posted The string
- * @returns {number}
+ * @returns {Date}
  */
 function convertPostedToDate(posted) {
   const date = new Date();
-  let daysBack;
+  let daysBack = 0;
   if (posted.includes('hours') || (posted.includes('hour')) || (posted.includes('minute'))
     || (posted.includes('minutes')) || (posted.includes('moment')) || (posted.includes('second'))
-    || (posted.includes('seconds'))) {
+    || (posted.includes('seconds')) || (posted.includes('today'))) {
     daysBack = 0;
   } else if ((posted.includes('week')) || (posted.includes('weeks'))) {
     daysBack = posted.match(/\d+/g) * 7;
@@ -104,18 +122,78 @@ function convertPostedToDate(posted) {
   } else {
     daysBack = posted.match(/\d+/g);
   }
-  return date.setDate(date.getDate() - daysBack);
+  date.setDate(date.getDate() - daysBack);
+  return date;
 }
 
-function checkHeadlessOrNot(args) {
-  const myArgs = args.slice(2);
-  if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
-    return false;
-  }
-  if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
-    return true;
-  }
-    return -1;
+async function installMouseHelper(page) {
+  await page.evaluateOnNewDocument(() => {
+    // Install mouse helper only for top-level frame.
+    if (window !== window.parent) return;
+    window.addEventListener('DOMContentLoaded', () => {
+      const box = document.createElement('puppeteer-mouse-pointer');
+      const styleElement = document.createElement('style');
+      styleElement.innerHTML = `
+        puppeteer-mouse-pointer {
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          z-index: 10000;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          background: rgba(0,0,0,.4);
+          border: 1px solid white;
+          border-radius: 10px;
+          margin: -10px 0 0 -10px;
+          padding: 0;
+          transition: background .2s, border-radius .2s, border-color .2s;
+        }
+        puppeteer-mouse-pointer.button-1 {
+          transition: none;
+          background: rgba(0,0,0,0.9);
+        }
+        puppeteer-mouse-pointer.button-2 {
+          transition: none;
+          border-color: rgba(0,0,255,0.9);
+        }
+        puppeteer-mouse-pointer.button-3 {
+          transition: none;
+          border-radius: 4px;
+        }
+        puppeteer-mouse-pointer.button-4 {
+          transition: none;
+          border-color: rgba(255,0,0,0.9);
+        }
+        puppeteer-mouse-pointer.button-5 {
+          transition: none;
+          border-color: rgba(0,255,0,0.9);
+        }
+      `;
+      document.head.appendChild(styleElement);
+      document.body.appendChild(box);
+      document.addEventListener('mousemove', event => {
+        box.style.left = `${event.pageX}px`;
+        box.style.top = `${event.pageY}px`;
+        // eslint-disable-next-line no-use-before-define
+        updateButtons(event.buttons);
+      }, true);
+      document.addEventListener('mousedown', event => {
+        // eslint-disable-next-line no-use-before-define
+        updateButtons(event.buttons);
+        box.classList.add(`button-${event.which}`);
+      }, true);
+      document.addEventListener('mouseup', event => {
+        // eslint-disable-next-line no-use-before-define
+        updateButtons(event.buttons);
+        box.classList.remove(`button-${event.which}`);
+      }, true);
+      function updateButtons(buttons) {
+        // eslint-disable-next-line no-bitwise
+        for (let i = 0; i < 5; i++) box.classList.toggle(`button-${i}`, buttons & (1 << i));
+      }
+    }, false);
+  });
 }
 
-export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate, checkHeadlessOrNot };
+export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate, installMouseHelper };

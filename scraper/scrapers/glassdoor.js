@@ -1,4 +1,5 @@
-import log from 'loglevel';
+import Logger from 'loglevel';
+import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function scrapeInfo(page, posted, url, data) {
@@ -28,31 +29,32 @@ async function scrapeInfo(page, posted, url, data) {
     lastScraped: lastScraped,
     description: description,
   });
-  log.info(`${position} | ${company}`);
+  Logger.info(`${position} | ${company}`);
 }
 
-async function main() {
+async function main(headless) {
   let browser;
   let page;
   const data = [];
-  log.enableAll(); // this enables console logging
+  const startTime = new Date();
   try {
-    [browser, page] = await startBrowser();
+    Logger.error('Starting scraper Glassdoor at', moment().format('LT'));
+    [browser, page] = await startBrowser(headless);
     // filter by internship tag
     await page.goto('https://www.glassdoor.com/Job/computer-science-intern-jobs-SRCH_KO0,23.htm');
-    log.trace('Filtering by internships...');
+    Logger.info('Filtering by internships...');
     await page.waitForSelector('div[id="filter_jobType"]');
     await page.click('div[id="filter_jobType"]');
     await page.waitForSelector('div[id="filter_jobType"]');
     await page.click('li[value="internship"]');
     await page.waitForTimeout(3000);
-    log.trace('Selecting last 30 days');
+    Logger.info('Selecting last 30 days');
     await page.waitForSelector('div[id="filter_fromAge"]');
     await page.click('div[id="filter_fromAge"]');
     await page.waitForSelector('li[value="30"]');
     await page.click('li[value="30"]');
     await page.waitForTimeout(3000);
-    log.trace('Sorting by most recent');
+    Logger.info('Sorting by most recent');
     await page.waitForSelector('div[data-test="sort-by-header"]');
     await page.click('div[data-test="sort-by-header"]');
     await page.waitForSelector('li[data-test="date_desc"]');
@@ -63,10 +65,10 @@ async function main() {
     let urlArray = [];
     const skippedJobs = [];
     const skippedDates = [];
-    let pageLimit = await fetchInfo(page, 'div[class="cell middle hideMob padVertSm"]', 'innerHTML');
+    let pageLimit = await fetchInfo(page, 'div[class="cell middle hideHH py-sm"]', 'innerHTML');
     pageLimit = pageLimit.match(/(\d+)/gm);
     let currentPage = 1;
-    log.trace('Pages: ', pageLimit[1]);
+    Logger.info('Pages: ', pageLimit[1]);
     try {
       while (pageLimit[1] !== currentPage) {
         currentPage++;
@@ -81,17 +83,23 @@ async function main() {
         // grab all links
         const URLs = await page.evaluate(
           () => Array.from(
-            document.querySelectorAll('div[class="jobHeader d-flex justify-content-between align-items-start"] a'),
+            document.querySelectorAll('a[data-test="job-link"]'),
             a => `https://glassdoor.com${a.getAttribute('href')}`,
           ),
         );
+        Logger.info(URLs);
         urlArray = urlArray.concat(URLs);
         await page.click('a[data-test="pagination-next"]');
         await page.waitForNavigation({ waitUntil: 'networkidle0' });
-        log.trace('Navigating to next page...');
+        Logger.info('Navigating to next page...');
+        await page.waitForTimeout(5000);
+        // close modal that pops up
+        if (currentPage === 2) {
+          await page.click('span[alt="Close"]');
+        }
       }
     } catch (err1) {
-      log.trace('Reached end. Scrapping pages now...');
+      Logger.info('Reached end. Scrapping pages now...');
     }
     let countError = 0;
     let breakOut = false;
@@ -108,8 +116,8 @@ async function main() {
           breakOut = true;
         }
         countError++;
-        log.warn(err5.message);
-        log.trace('Loading error, skipping');
+        Logger.warn(err5.message);
+        Logger.error('Loading error, skipping');
         skippedJobs.push(urlArray[i]);
         skippedDates.push(postedDates[i]);
       }
@@ -131,14 +139,15 @@ async function main() {
         countError++;
       }
     }
-    log.info('Total Jobs scraped: ', urlArray.length);
+    Logger.info('Total Jobs scraped: ', urlArray.length);
     await writeToJSON(data, 'glassdoor');
     await browser.close();
   } catch
     (err4) {
-    log.warn('Our Error:', err4.message);
+    Logger.warn('Our Error:', err4.message);
     await browser.close();
   }
+  Logger.error(`Elapsed time for glassdoor: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
-main();
+export default main;

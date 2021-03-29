@@ -64,6 +64,9 @@ function siteName(url) {
     if (url.includes('coolworks')) {
       return 'Coolworks';
     }
+    if (url.includes('slack')) {
+      return 'Hawaii Slack';
+    }
     return 'NSF-REU';
   } catch (e) {
     return 'Unknown';

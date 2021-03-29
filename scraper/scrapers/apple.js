@@ -1,5 +1,6 @@
 import Logger from 'loglevel';
-import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import moment from 'moment';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 /**
  * Adds delay time, since waitFor is deprecated.
@@ -18,6 +19,7 @@ async function getData(page) {
     results.push(fetchInfo(page, 'time[id="jobPostDate"]', 'innerText'));
     results.push(fetchInfo(page, 'div[id="jd-description"]', 'innerHTML'));
     results.push(fetchInfo(page, 'span[itemprop="addressLocality"]', 'innerText'));
+    results.push(fetchInfo(page, 'span[itemprop="addressRegion"]', 'innerText'));
   }
   return Promise.all(results);
 }
@@ -48,35 +50,39 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
-  // Logger.enableAll(); // Enable console logs until CLI in place
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for apple...');
+    Logger.error('Starting scraper apple at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.apple.com/en-us/search?sort=relevance');
     await setSearchFilter(page);
     let totalPage = await page.evaluate(() => document.querySelector('form[id="frmPagination"] span:last-child').innerHTML);
     // if there is just 1 page, set totalPage to 3 because for loop below starts at 2
-    if (totalPage === undefined) {
+    if (totalPage === undefined || totalPage === 1) {
       totalPage = 3;
     }
     // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
-    for (let i = 2; i < totalPage; i++) {
+    for (let i = 2; i <= totalPage; i++) {
       await page.waitForSelector('a[class="table--advanced-search__title"]');
       const urls = await page.evaluate(() => Array.from(document.querySelectorAll('a[class="table--advanced-search__title"]'),
           a => a.href));
       for (let j = 0; j < urls.length; j++) {
-        await page.goto(urls[j]);
-        const lastScraped = new Date();
-        const [position, posted, description, city, state] = await getData(page);
-        const date = new Date(posted).toISOString();
-        data.push({
-          url: urls[j],
-          position: position,
-          posted: date,
-          lastScraped: lastScraped,
-          location: { city: city, state: state },
-          description: description,
-        });
+        try {
+          await page.goto(urls[j]);
+          const lastScraped = new Date();
+          const [position, posted, description, city, state] = await getData(page);
+          const date = new Date(posted).toISOString();
+          data.push({
+            url: urls[j],
+            position: position,
+            posted: date,
+            lastScraped: lastScraped,
+            location: { city: city, state: state },
+            description: description,
+          });
+        } catch (err4) {
+          Logger.error(err4.message);
+        }
       }
       // Uses i value in for loop to navigate search pages
       await page.goto(`https://jobs.apple.com/en-us/search?search=internship&sort=relevance&location=united-states-USA&page=${i}`);
@@ -85,17 +91,9 @@ async function main(headless) {
     await browser.close();
   } catch (err) {
     await browser.close();
-    Logger.debug(err.message);
+    Logger.error(err.message);
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
+  Logger.error(`Elapsed time for apple: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;

@@ -1,5 +1,6 @@
 import Logger from 'loglevel';
-import { checkHeadlessOrNot, fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import moment from 'moment';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -25,8 +26,9 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const startTime = new Date();
   try {
-    Logger.info('Executing script for aexpress');
+    Logger.error('Starting scraper aexpress at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.americanexpress.com/jobs');
     await setSearchFilters(page);
@@ -64,15 +66,7 @@ async function main(headless) {
     Logger.debug(err.message);
     await browser.close();
   }
-}
-
-if (process.argv.includes('main')) {
-  const headless = checkHeadlessOrNot(process.argv);
-  if (headless === -1) {
-    Logger.error('Invalid argument supplied, please use "open", or "close"');
-    process.exit(0);
-  }
-  main(headless);
+  Logger.error(`Elapsed time for aexpress: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
 export default main;
