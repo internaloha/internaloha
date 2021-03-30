@@ -28,7 +28,7 @@ export async function main(headless) {
   let page;
   const data = [];
   const startTime = new Date();
-  const scraperName = "SOC: ";
+  const scraperName = 'SOC: ';
   try {
     Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
