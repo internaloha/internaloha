@@ -17,6 +17,7 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'Cisco: ';
   const startTime = new Date();
   try {
     Logger.error('Starting scraper Cisco at', moment().format('LT'));
@@ -65,7 +66,7 @@ export async function main(headless) {
     await writeToJSON(data, 'cisco');
     await browser.close();
   } catch (err) {
-    Logger.error(err.message);
+    Logger.error(scraperName, err.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for Cisco: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

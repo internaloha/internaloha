@@ -19,6 +19,7 @@ async function main(headless) {
   let page;
   const data = [];
   const startTime = new Date();
+  const scraperName = 'Zip: ';
   try {
     Logger.error('Starting scraper zipRecruiter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
@@ -49,7 +50,7 @@ async function main(headless) {
       });
       Logger.trace('Filtering based on internship tag...');
     } catch (err5) {
-      Logger.info('No internship tags found');
+      Logger.info(scraperName, 'No internship tags found');
     }
     // any distance
     await page.waitForSelector('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
@@ -60,7 +61,7 @@ async function main(headless) {
       await page.click('.load_more_jobs');
       await autoScroll(page);
     } catch (err) {
-      Logger.info('--- All jobs are Listed, no "Load More" button --- ');
+      Logger.info(scraperName, '--- All jobs are Listed, no "Load More" button --- ');
     }
     // grab all links
     const elements = await page.evaluate(
@@ -116,7 +117,7 @@ async function main(headless) {
           skippedPages.push(currentPage);
         }
       } catch (err4) {
-        Logger.warn('Error fetching link, skipping');
+        Logger.warn(scraperName, 'Error fetching link, skipping');
       }
     }
     // write results to JSON file
@@ -127,7 +128,7 @@ async function main(headless) {
     Logger.info('Closing browser...');
     await browser.close();
   } catch (e) {
-    Logger.warn('Our Error:', e.message);
+    Logger.warn(scraperName, 'Error: ', e.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for zipRecruiter: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

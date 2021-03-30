@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
-import log from 'loglevel';
+import Logger from 'loglevel';
 import moment from 'moment';
 import { fetchInfo, autoScroll } from './scraper-functions.js';
 
@@ -30,8 +30,10 @@ async function startBrowser() {
 }
 
 async function main(url) {
+  const data = [];
+  const scraperName = 'Angellist: ';
   const startTime = new Date();
-  log.error('Starting scraper angellist at', moment().format('LT'));
+  Logger.error('Starting scraper angellist at', moment().format('LT'));
   const { browser, page } = await startBrowser();
   await page.setViewport({ width: 1366, height: 768 });
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');
@@ -53,24 +55,23 @@ async function main(url) {
   const elements = await page.$x('a.component_21e4d.defaultLink_7325e.information_7136e');
   const src = await elements.getProperty('src');
   const srcTxt = await src.jsonValue();
-  log.info({ srcTxt });
+  Logger.info({ srcTxt });
   // const elements = await page.JSON.parse(
   //     () => Array.from(
   //         document.querySelectorAll('a.component_21e4d.defaultLink_7325e.information_7136e'),
   //         a => a.getAttribute('href'),
   //     ),
   // );
-  log.info(elements.length);
+  Logger.info(elements.length);
   elements.forEach(element => {
-    log.info(element);
+    Logger.info(element);
   });
   fs.writeFileSync('angellist-urls.json', JSON.stringify(elements, null, 4),
-      (err) => {
-        if (err) {
-          log.warn(err);
+      (err1) => {
+        if (err1) {
+          Logger.warn(scraperName, err1);
         }
       });
-  const data = [];
   for (let i = 0; i < elements.length; i++) {
     // elements[i] = 'http://angel.co' + elements[i];
     const element = `http://angel.co${elements[i]}`;
@@ -95,21 +96,21 @@ async function main(url) {
     );
   }
   await fs.writeFileSync('./data/canonical/angellist.canonical.data.json', JSON.stringify(data, null, 4),
-      (err) => {
-        if (err) {
-          log.warn(err);
+      (err2) => {
+        if (err2) {
+          Logger.warn(scraperName, err2);
         }
       });
-  log.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
+  Logger.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
   await browser.close();
 }
 
 async function goTo() {
-
+  const scraperName = 'Angellist: ';
   try {
     await main('https://angel.co/login');
   } catch (err) {
-    log.warn('Our Error: ', err.message);
+    Logger.warn(scraperName, 'Our Error: ', err.message);
   }
   // process.exit(1);
 }

@@ -36,6 +36,7 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'Glassdoor: ';
   const startTime = new Date();
   try {
     Logger.error('Starting scraper Glassdoor at', moment().format('LT'));
@@ -116,7 +117,7 @@ async function main(headless) {
           breakOut = true;
         }
         countError++;
-        Logger.warn(err5.message);
+        Logger.warn(scraperName, err5.message);
         Logger.error('Loading error, skipping');
         skippedJobs.push(urlArray[i]);
         skippedDates.push(postedDates[i]);
@@ -144,7 +145,7 @@ async function main(headless) {
     await browser.close();
   } catch
     (err4) {
-    Logger.warn('Our Error:', err4.message);
+    Logger.warn(scraperName, 'Our Error: ', err4.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for glassdoor: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

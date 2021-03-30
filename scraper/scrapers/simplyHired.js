@@ -4,6 +4,7 @@ import { convertPostedToDate, fetchInfo, startBrowser, writeToJSON } from './scr
 
 // eslint-disable-next-line consistent-return
 async function getData(page, elements) {
+  const scraperName = 'simplyHired: ';
   try {
     const data = [];
     for (let i = 1; i <= elements.length; i++) {
@@ -20,7 +21,7 @@ async function getData(page, elements) {
       try {
         qualifications = await fetchInfo(page, '.viewjob-section.viewjob-qualifications.viewjob-entities ul', 'innerText');
       } catch (err6) {
-        Logger.trace('Does not have qualifications section. Assigning it as N/A');
+        Logger.trace(scraperName, 'Does not have qualifications section. Assigning it as N/A');
         qualifications = 'N/A';
       }
       const description = await fetchInfo(page, '.viewjob-jobDescription > div.p', 'innerHTML');
@@ -30,7 +31,7 @@ async function getData(page, elements) {
         posted = await convertPostedToDate(posted.toLowerCase());
       } catch (err2) {
         posted = 'N/A';
-        Logger.trace('No date found. Setting posted as: N/A');
+        Logger.trace(scraperName, 'No date found. Setting posted as: N/A');
       }
 
       let savedURL = '';
@@ -38,7 +39,7 @@ async function getData(page, elements) {
         const pageURL = await elementLink.$('.card-link');
         savedURL = await page.evaluate(span => span.getAttribute('href'), pageURL);
       } catch (err6) {
-        Logger.trace('Error in fetching link for:', position);
+        Logger.trace(scraperName, 'Error in fetching link for:', position);
       }
       Logger.info(position);
       data.push({
@@ -61,7 +62,7 @@ async function getData(page, elements) {
     }
     return data;
   } catch (e) {
-    Logger.warn(e.message);
+    Logger.warn(scraperName, e.message);
   }
 }
 
@@ -70,6 +71,7 @@ export async function main(headless) {
   let page;
   const startTime = new Date();
   const data = [];
+  const scraperName = 'simplyHired: ';
   try {
     Logger.error('Starting scraper simplyhired at', moment().format('LT'));
     [browser, page] = await startBrowser(headless, false, 100);
@@ -159,7 +161,7 @@ export async function main(headless) {
                   posted = await convertPostedToDate(posted.toLowerCase());
                 } catch (err4) {
                   posted = 'N/A';
-                  Logger.trace('No date found. Setting posted as: N/A');
+                  Logger.trace(scraperName, 'No date found. Setting posted as: N/A');
                 }
                 Logger.info(position);
                 data.push({
@@ -180,7 +182,7 @@ export async function main(headless) {
                 }
               }
             } catch (err) {
-              Logger.trace('SimplyHired Error: ', err.message);
+              Logger.trace(scraperName, 'Error: ', err.message);
             }
           }
 
@@ -207,7 +209,7 @@ export async function main(headless) {
     Logger.debug('\nClosing browser...');
 
   } catch (e) {
-    Logger.trace('Our Error: ', e.message);
+    Logger.trace(scraperName, 'Error: ', e.message);
   }
   Logger.error(`Elapsed time for simplyHired: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }

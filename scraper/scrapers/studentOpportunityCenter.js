@@ -28,6 +28,7 @@ export async function main(headless) {
   let page;
   const data = [];
   const startTime = new Date();
+  const scraperName = "SOC: ";
   try {
     Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
@@ -94,13 +95,13 @@ export async function main(headless) {
         Logger.debug(position);
         totalInternships++;
       } catch (err5) {
-        Logger.trace(err5.message);
+        Logger.trace(scraperName, err5.message);
         Logger.trace('Skipping! Did not load...');
       }
       await element.click();
     }
   } catch (e) {
-    Logger.trace('Our Error: ', e.message);
+    Logger.trace(scraperName, 'Error: ', e.message);
   }
   Logger.error(`Elapsed time for studentOpportunityCenter: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
