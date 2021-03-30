@@ -58,6 +58,7 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'Linkedin: ';
   const startTime = new Date();
   let totalInternships = 0;
   try {
@@ -117,7 +118,7 @@ export async function main(headless) {
           Logger.info(position);
           totalInternships++;
         } catch (err5) {
-          Logger.info(err5.message);
+          Logger.info(scraperName, err5.message);
           Logger.info('Skipping! Did not load...');
           skippedURLs.push(urls[i]);
         }
@@ -180,7 +181,7 @@ export async function main(headless) {
     await writeToJSON(data, 'linkedin');
     await browser.close();
   } catch (e) {
-    Logger.debug('Our Error:', e.message);
+    Logger.debug(scraperName, 'Our Error: ', e.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for linkedin: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

@@ -19,6 +19,7 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'Indeed: ';
   const startTime = new Date();
   try {
     Logger.error('Starting scraper indeed at', moment().format('LT'));
@@ -40,7 +41,7 @@ async function main(headless) {
       await page.waitForTimeout(2000);
       await page.click('a[class="icl-CloseButton popover-x-button-close"]');
     } catch (err2) {
-      Logger.info('No popup');
+      Logger.info(scraperName, 'No popup');
     }
     await page.waitForSelector('div[class="serp-filters-sort-by-container"]');
     const date = await page.evaluate(
@@ -57,7 +58,7 @@ async function main(headless) {
       await page.click('li[onmousedown="rbptk(\'rb\', \'dateposted\', \'4\');"]');
       Logger.info('Sorting by last 14 days...');
     } catch (err3) {
-      Logger.info('No sorting by date posted.');
+      Logger.info(scraperName, 'No sorting by date posted.');
     }
     let internshipDropdown = [];
     try {
@@ -70,13 +71,13 @@ async function main(headless) {
         ),
       );
     } catch (err4) {
-      Logger.info('No filter link');
+      Logger.info(scraperName, 'No filter link');
     }
     if (internshipDropdown.length === 1) {
       await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
       Logger.trace('Filtering by internship tag...');
     } else {
-      Logger.info('No internship tag.');
+      Logger.info(scraperName, 'No internship tag.');
     }
     let totalJobs = 0;
     const urls = [];
@@ -96,7 +97,7 @@ async function main(headless) {
         await page.waitForTimeout(1000);
         await page.click('li a[aria-label="Next"]');
       } catch (err4) {
-        Logger.trace('Reached the end of pages!');
+        Logger.trace(scraperName, 'Reached the end of pages!');
         hasNext = false;
       }
     }
@@ -154,7 +155,7 @@ async function main(headless) {
           });
           Logger.info(position);
         } catch (err6) {
-          Logger.trace('--- Error with scraping... Skipping ---');
+          Logger.trace(scraperName, '--- Error with scraping... Skipping ---');
         }
       }
     }
@@ -163,7 +164,7 @@ async function main(headless) {
     Logger.info('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
-    Logger.warn('Our Error:', e.message);
+    Logger.warn(scraperName, 'Our Error: ', e.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for indeed: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

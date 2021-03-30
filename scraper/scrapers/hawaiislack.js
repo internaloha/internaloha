@@ -15,6 +15,7 @@ async function main(headless) {
   let page;
   const startTime = new Date();
   const data = [];
+  const scraperName = 'Hawaii Slack: ';
   try {
     Logger.error('Starting scraper hawaiislack at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
@@ -38,6 +39,7 @@ async function main(headless) {
         try {
           company = await fetchInfo(page, 'p[class="name"] > strong', 'innerText');
         } catch (noCompany) {
+          Logger.trace(scraperName, noCompany.message);
           company = 'Unknown';
         }
         let posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerText');
@@ -48,7 +50,12 @@ async function main(headless) {
           posted = '';
           i++;
         }
-        const description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
+        let description = '';
+        try {
+          description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
+        } catch (noDesc) {
+          Logger.trace(scraperName, noDesc.message);
+        }
         // Formats date
         const date = new Date(posted).toISOString();
         const lastScraped = new Date();
@@ -56,6 +63,7 @@ async function main(headless) {
         try {
           location = await fetchInfo(page, 'li[class="location"]', 'innerText');
         } catch (noLocation) {
+          Logger.trace(scraperName, noLocation.message);
           location = '';
         }
         data.push({
@@ -72,15 +80,15 @@ async function main(headless) {
         });
         Logger.info(position.trim());
       } catch (err) {
-        Logger.trace(err.message);
-        // Logger.trace('Listing expired, skipping');
+        Logger.trace(scraperName, err.message);
+        Logger.trace('Listing expired, skipping');
         // expiredData.push(elements[i]);
       }
     }
     await writeToJSON(data, 'hawaiislack');
     await browser.close();
   } catch (err) {
-    Logger.warn('Our Error:', err.message);
+    Logger.warn(scraperName, 'Our Error: ', err.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for hawaiislack: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

@@ -25,6 +25,7 @@ async function getData(page) {
 }
 
 async function setSearchFilter(page) {
+  const scraperName = 'Apple: ';
   try {
     await page.waitForSelector('input[id="searchview"]');
     await page.type('input[id="searchview"]', 'internship');
@@ -42,7 +43,7 @@ async function setSearchFilter(page) {
     await page.click('li[id="locations-filter-input-option-0"]');
     await delay(5000);
   } catch (err2) {
-    Logger.debug(err2.message);
+    Logger.debug(scraperName, err2.message);
   }
 }
 
@@ -50,6 +51,7 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'Apple: ';
   const startTime = new Date();
   try {
     Logger.error('Starting scraper apple at', moment().format('LT'));
@@ -81,7 +83,7 @@ async function main(headless) {
             description: description,
           });
         } catch (err4) {
-          Logger.error(err4.message);
+          Logger.error(scraperName, err4.message);
         }
       }
       // Uses i value in for loop to navigate search pages
@@ -91,7 +93,7 @@ async function main(headless) {
     await browser.close();
   } catch (err) {
     await browser.close();
-    Logger.error(err.message);
+    Logger.error(scraperName, err.message);
   }
   Logger.error(`Elapsed time for apple: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }

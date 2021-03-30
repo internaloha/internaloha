@@ -20,6 +20,7 @@ export async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'Acm: ';
   const startTime = new Date();
   try {
     Logger.error('Starting scraper acm at', moment().format('LT'));
@@ -51,15 +52,15 @@ export async function main(headless) {
           });
         }
       } catch (err1) {
-        Logger.error(err1.message);
+        Logger.error(scraperName, err1.message);
       }
       // Return to original search url, but next page
       await page.goto(`https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=PostDate%20desc&page=${i}`);
     }
     await writeToJSON(data, 'acm');
     await browser.close();
-  } catch (err) {
-    Logger.error(err.message);
+  } catch (err2) {
+    Logger.error(scraperName, err2.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for acm: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

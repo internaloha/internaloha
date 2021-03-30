@@ -7,6 +7,7 @@ async function main() {
   let page;
   const data = [];
   const startTime = new Date();
+  const scraperName = 'nsf-reu: ';
   try {
     log.error('Starting scraper nsf-reu at', moment().format('LT'));
     [browser, page] = await startBrowser();
@@ -78,16 +79,16 @@ async function main() {
           });
         }
       } catch (err1) {
-        log.error(err1.message);
+        log.error(scraperName, err1.message);
       }
       log.info(data);
     } catch (err2) {
-      log.error(err2.message);
+      log.error(scraperName, err2.message);
     }
     await writeToJSON(data, 'nsf-reu');
     await browser.close();
   } catch (err3) {
-    log.error(err3.message);
+    log.error(scraperName, err3.message);
   }
   log.error(`Elapsed time for nsf-reu: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }

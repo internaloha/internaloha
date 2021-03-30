@@ -16,6 +16,7 @@ export async function main(headless) {
   let page;
   const data = [];
   const startTime = new Date();
+  const scraperName = 'Monster: ';
   try {
     Logger.error('Starting scraper monster at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
@@ -102,7 +103,7 @@ export async function main(headless) {
         await page.waitForSelector('div[id="JobPreview"]');
         totalJobs++;
       } catch (err) {
-        Logger.debug('Error fetching link, skipping');
+        Logger.debug(scraperName, 'Error fetching link, skipping');
       }
     }
 
@@ -112,7 +113,7 @@ export async function main(headless) {
     await Logger.debug('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
-    Logger.debug('Our Error:', e.message);
+    Logger.debug(scraperName, 'Our Error: ', e.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for monster: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

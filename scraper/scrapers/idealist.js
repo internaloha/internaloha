@@ -110,6 +110,7 @@ async function main(headless) {
   let page;
   const startTime = new Date();
   let dataAm = [];
+  const scraperName = 'Idealist: ';
   try {
     Logger.error('Starting scraper idealist at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
@@ -134,7 +135,7 @@ async function main(headless) {
     });
   } catch (e) {
     await browser.close();
-    Logger.warn('Idealist Error:', e);
+    Logger.warn(scraperName, 'Error: ', e);
   }
   Logger.error(`Elapsed time for idealist: ${moment(startTime).fromNow(true)} | ${dataAm.length} listings scraped `);
 }
