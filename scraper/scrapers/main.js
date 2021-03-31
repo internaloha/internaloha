@@ -25,7 +25,7 @@ const optionDefinitions = [
   {
     name: 'unattended',
     description: 'Runs all the unattended scrapers in production mode',
-    typeLabel: '',
+    typeLabel: '...',
   },
   {
     name: 'dev',
