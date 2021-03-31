@@ -180,41 +180,11 @@ async function main() {
     console.log(usage);
     process.exit(0);
   }
-
-  // if (myArgs.length === 3) {
-  //   Logger.enableAll();
-  //   if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
-  //     await getData(myArgs[0], false);
-  //   } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
-  //     await getData(myArgs[0], true);
-  //   } else {
-  //     console.log('Invalid argument supplied, please use "dev open" or "dev close". For example, npm run scrapers' +
-  //       ' dev open.');
-  //     process.exit(0);
-  //   }
-  // } else if (myArgs[0] === 'dev') {
-  //   Logger.enableAll();
-  //   if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
-  //     await getAllData(false);
-  //   } else if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
-  //     await getAllData(true);
-  //   } else {
-  //     console.log('Invalid argument supplied, please use "dev open", "dev close", or "production');
-  //     process.exit(0);
-  //   }
-  // } else if (myArgs[0] === 'production') {
-  //   Logger.setLevel('warn');
-  //   await getAllData(true);
-  // } else {
-  //   Logger.setLevel('warn');
-  //   await getAllData(true);
-  // }
-  //
-  // Logger.info('Finished scraping!\nNow parsing');
-  // multi_parse();
-  // Logger.info('Finished parsing!\nNow getting statistics');
-  // statistics();
-  // Logger.info('Completed.');
+  Logger.info('Finished scraping!\nNow parsing');
+  multi_parse();
+  Logger.info('Finished parsing!\nNow getting statistics');
+  statistics();
+  Logger.info('Completed.');
 }
 
 main();
