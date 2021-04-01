@@ -6,7 +6,7 @@ import { autoScroll, convertPostedToDate, fetchInfo, writeToJSON } from './scrap
 
 const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
-const CTA_SELECTOR = '#login-submit-button';
+const CTA_SELECTOR = '#login-submit-button > div.mat-button-focus-overlay';
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
 const menu = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > button > div.mat-button-focus-overlay';
