@@ -3,7 +3,41 @@ import pkg from 'lodash';
 import Logger from 'loglevel';
 import path from 'path';
 
+import pkg2 from 'json-2-csv';
+
+const { json2csv } = pkg2;
+
 const { _ } = pkg;
+
+/**
+ * Exports data to CSV file.
+ * @param data
+ * @param name
+ */
+function convertToCSV(data, name) {
+
+  let dataObj = [];
+
+  if (fs.existsSync(`./data/csv/${name}.csv`)) {
+    dataObj = JSON.parse(fs.readFileSync(`./data/csv/${name}.csv`, 'utf8'));
+    console.log(dataObj);
+  }
+
+  json2csv(data, (err, csv) => {
+
+    if (err) {
+      console.log(`Error exporting ot CSV: ${data} | ${err}`);
+      throw err;
+    }
+
+    // print CSV string
+    console.log(csv);
+
+    // write CSV to a file
+    fs.writeFileSync(`./data/csv/${name}.csv`, csv);
+
+  }, { emptyFieldValue: 0 });
+}
 
 function getStatistics(name, data) {
   const counts = {
@@ -82,7 +116,11 @@ function main() {
     if (fileName !== 'statistics') {
       const text = JSON.parse(fs.readFileSync(files[i], 'utf8'));
       data = _.concat(data, text);
-      statistics.push(getStatistics(fileName, text));
+      const statisticsData = getStatistics(fileName, text);
+      // push to global statistics
+      statistics.push(statisticsData);
+      // export to csv file
+      convertToCSV(statisticsData, fileName);
     }
   }
   statistics.push(getStatistics('Total', data));
