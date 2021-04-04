@@ -2,10 +2,7 @@ import fs from 'fs';
 import pkg from 'lodash';
 import Logger from 'loglevel';
 import path from 'path';
-
 import pkg2 from 'json-2-csv';
-
-const { json2csv } = pkg2;
 
 const { _ } = pkg;
 
@@ -15,26 +12,24 @@ const { _ } = pkg;
  * @param name
  */
 function convertToCSV(data, name) {
+  const { json2csv } = pkg2;
 
   let dataObj = [];
 
   if (fs.existsSync(`./data/csv/${name}.csv`)) {
-    dataObj = JSON.parse(fs.readFileSync(`./data/csv/${name}.csv`, 'utf8'));
+    dataObj = JSON.parse(fs.readFileSync(`./data/csv/scraper-statistics-${name}.csv`, 'utf8'));
     console.log(dataObj);
   }
 
   json2csv(data, (err, csv) => {
 
     if (err) {
-      console.log(`Error exporting ot CSV: ${data} | ${err}`);
+      console.log(`Error exporting to CSV: ${data} | ${err}`);
       throw err;
     }
 
-    // print CSV string
-    console.log(csv);
-
     // write CSV to a file
-    fs.writeFileSync(`./data/csv/${name}.csv`, csv);
+    fs.writeFileSync(`./data/csv/scraper-statistics-${name}.csv`, csv);
 
   }, { emptyFieldValue: 0 });
 }
@@ -42,6 +37,7 @@ function convertToCSV(data, name) {
 function getStatistics(name, data) {
   const counts = {
     site: name,
+    lastScraped: 'N/A',
     position: 0,
     company: 0,
     contact: 0,
@@ -54,7 +50,6 @@ function getStatistics(name, data) {
     qualifications: 0,
     skills: 0,
     remote: 0,
-    lastScraped: 'N/A',
     index: 0,
     url: 0,
     description: 0,

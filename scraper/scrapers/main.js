@@ -1,5 +1,7 @@
 import Logger from 'loglevel';
+import pkg2 from 'json-2-csv';
 import commandLineUsage from 'command-line-usage';
+import fs from 'fs';
 import acm from './acm.js';
 import apple from './apple.js';
 import aexpress from './aexpress.js';
@@ -145,46 +147,91 @@ async function getData(scraperName, headless = true) {
   }
 }
 
+function convertToCVS(data) {
+  const { json2csv } = pkg2;
+  console.log(data);
+  json2csv(data, (error, csv) => {
+    if (error) {
+      console.log(`Error exporting to CSV: ${data} | ${error}`);
+      throw error;
+    }
+    // write CSV to a file
+    fs.writeFileSync(`./data/csv/${data[0].site}.csv`, csv);
+  }, { emptyFieldValue: 0 });
+}
+
+function exportToCSV() {
+  const { csv2json } = pkg2;
+  fs.readFile('../ui/src/data/statistics.data.json', (err, data) => {
+    if (err) {
+      throw err;
+    }
+    const statisticData = JSON.parse(data.toString());
+    for (let i = 0; i < statisticData.length; i++) {
+      const site = statisticData[i];
+      try {
+        if (site.site !== 'Total') {
+          if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
+            const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
+            csv2json(csvString, (error2, jsonObjs) => {
+              if (error2) {
+                throw error2;
+              }
+              jsonObjs.push(site);
+              convertToCVS(jsonObjs);
+            });
+          } else {
+            convertToCVS(site);
+          }
+        }
+      } catch (e5) {
+        console.log(`Error exporting to CSV: ${site.site} | ${e5}`);
+      }
+    }
+  });
+}
+
 async function main() {
   process.setMaxListeners(0);
 
-// default is running in production (doesn't open browsers)
-  if (myArgs.length === 0 || myArgs[0] === 'prod' || myArgs[0] === 'unattended') {
-      Logger.setLevel('warn');
-      await getAllData(true);
-// npm run dev [open|close], default is it doesn't up browsers
-  } else if (myArgs[0] === 'dev') {
-    Logger.enableAll();
-    if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
-      await getAllData(false);
-    } else if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
-      await getAllData(true);
-    } else {
-      // default for npm run dev is it doesn't open browsers
-      await getAllData(true);
-    }
-  } else if (myArgs[0] !== 'dev' && myArgs.length === 1) {
-    Logger.enableAll();
-    await getData(myArgs[0], true);
-// eg. npm run acm dev open (default is close)
-  } else if (myArgs.length === 3) {
-      Logger.enableAll();
-      if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
-        await getData(myArgs[0], false);
-      } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
-        await getData(myArgs[0], true);
-      } else {
-        await getData(myArgs[0], true);
-      }
-  } else {
-    console.log(usage);
-    process.exit(0);
-  }
-  Logger.info('Finished scraping!\nNow parsing');
-  multi_parse();
-  Logger.info('Finished parsing!\nNow getting statistics');
-  statistics();
-  Logger.info('Completed.');
+// // default is running in production (doesn't open browsers)
+//   if (myArgs.length === 0 || myArgs[0] === 'prod' || myArgs[0] === 'unattended') {
+//       Logger.setLevel('warn');
+//       await getAllData(true);
+// // npm run dev [open|close], default is it doesn't up browsers
+//   } else if (myArgs[0] === 'dev') {
+//     Logger.enableAll();
+//     if (myArgs[1] && myArgs[1].toLowerCase() === 'open') {
+//       await getAllData(false);
+//     } else if (myArgs[1] && myArgs[1].toLowerCase() === 'close') {
+//       await getAllData(true);
+//     } else {
+//       // default for npm run dev is it doesn't open browsers
+//       await getAllData(true);
+//     }
+//   } else if (myArgs[0] !== 'dev' && myArgs.length === 1) {
+//     Logger.enableAll();
+//     await getData(myArgs[0], true);
+// // eg. npm run acm dev open (default is close)
+//   } else if (myArgs.length === 3) {
+//       Logger.enableAll();
+//       if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
+//         await getData(myArgs[0], false);
+//       } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
+//         await getData(myArgs[0], true);
+//       } else {
+//         await getData(myArgs[0], true);
+//       }
+//   } else {
+//     console.log(usage);
+//     process.exit(0);
+//   }
+//   Logger.info('Finished scraping!\nNow parsing');
+//   multi_parse();
+//   Logger.info('Finished parsing!\nNow getting statistics');
+//   statistics();
+//   Logger.info('Completed.');
+  exportToCSV();
 }
 
 main();
