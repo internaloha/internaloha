@@ -2,37 +2,8 @@ import fs from 'fs';
 import pkg from 'lodash';
 import Logger from 'loglevel';
 import path from 'path';
-import pkg2 from 'json-2-csv';
 
 const { _ } = pkg;
-
-/**
- * Exports data to CSV file.
- * @param data
- * @param name
- */
-function convertToCSV(data, name) {
-  const { json2csv } = pkg2;
-
-  let dataObj = [];
-
-  if (fs.existsSync(`./data/csv/${name}.csv`)) {
-    dataObj = JSON.parse(fs.readFileSync(`./data/csv/scraper-statistics-${name}.csv`, 'utf8'));
-    console.log(dataObj);
-  }
-
-  json2csv(data, (err, csv) => {
-
-    if (err) {
-      console.log(`Error exporting to CSV: ${data} | ${err}`);
-      throw err;
-    }
-
-    // write CSV to a file
-    fs.writeFileSync(`./data/csv/scraper-statistics-${name}.csv`, csv);
-
-  }, { emptyFieldValue: 0 });
-}
 
 function getStatistics(name, data) {
   const counts = {
@@ -114,8 +85,6 @@ function main() {
       const statisticsData = getStatistics(fileName, text);
       // push to global statistics
       statistics.push(statisticsData);
-      // export to csv file
-      convertToCSV(statisticsData, fileName);
     }
   }
   statistics.push(getStatistics('Total', data));
