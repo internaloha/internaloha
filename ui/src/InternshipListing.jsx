@@ -61,7 +61,7 @@ function InternshipListing() {
   return (
       <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row style={{ maxWidth: '50%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
+          <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
             <Segment>
               <h3 style={{ align: 'center' }}>
                 Total Results in Listing: {totalListing}
