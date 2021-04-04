@@ -2,7 +2,6 @@ import Logger from 'loglevel';
 import pkg2 from 'json-2-csv';
 import commandLineUsage from 'command-line-usage';
 import fs from 'fs';
-import moment from 'moment';
 import acm from './acm.js';
 import apple from './apple.js';
 import aexpress from './aexpress.js';
@@ -164,17 +163,22 @@ async function getData(scraperName, headless = true) {
  */
 function convertToCVS(data, fileExists = false) {
   const { json2csv } = pkg2;
-  json2csv(data, (error, csv) => {
+  let fileName;
+  const savedData = data;
+  if (fileExists) {
+    fileName = savedData[savedData.length - 1].site;
+    delete savedData[savedData.length - 1].site;
+  } else {
+    fileName = savedData.site;
+    delete savedData.site;
+  }
+  json2csv(savedData, (error, csv) => {
     if (error) {
       throw error;
     }
     // check if file exists
-    if (fileExists) {
-      fs.writeFileSync(`./data/csv/${data[0].site}.csv`, csv);
-    } else {
-      fs.writeFileSync(`./data/csv/${data.site}.csv`, csv);
-    }
-  }, { emptyFieldValue: 0 });
+    fs.writeFileSync(`./data/csv/${fileName}.csv`, csv);
+  }, { trimHeaderFields: true, checkSchemaDifferences: true });
 }
 
 /**
@@ -194,7 +198,6 @@ function exportToCSV() {
       try {
         if (site.site !== 'Total') {
           if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
-            site.lastScraped = moment(site.lastScraped).format('l');
             const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
             csv2json(csvString, (error2, jsonObjs) => {
               if (error2) {
@@ -202,9 +205,8 @@ function exportToCSV() {
               }
               jsonObjs.push(site);
               convertToCVS(jsonObjs, true);
-            });
+            }, { trimHeaderFields: true });
           } else {
-            site.lastScraped = moment(site.lastScraped).format('l');
             convertToCVS(site);
           }
         }
