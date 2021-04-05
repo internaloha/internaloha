@@ -46,10 +46,6 @@ async function main(headless) {
         // console.log(posted);
         // ignores expired listings.
         const expired = await fetchInfo(page, 'div[class="single_job_listing"] > div', 'innerText');
-        if (expired.includes('expired')) {
-          posted = '';
-          i++;
-        }
         let description = '';
         try {
           description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
@@ -57,14 +53,30 @@ async function main(headless) {
           Logger.trace(scraperName, noDesc.message);
         }
         // Formats date
-        const date = new Date(posted).toISOString();
-        const lastScraped = new Date();
+        let date = '';
+        let lastScraped = '';
+        try {
+          lastScraped = new Date();
+          date = new Date(posted).toISOString();
+          // console.log(date);
+        } catch (noDate) {
+          Logger.trace(scraperName, noDate.message);
+          date = '';
+        }
         let location = '';
         try {
           location = await fetchInfo(page, 'li[class="location"]', 'innerText');
         } catch (noLocation) {
           Logger.trace(scraperName, noLocation.message);
           location = '';
+        }
+        if (expired.includes('expired.')) {
+          i++;
+          // data = [];
+          posted = '';
+          description = '';
+          location = '';
+          company = '';
         }
         data.push({
           position: position.trim(),
