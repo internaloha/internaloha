@@ -34,7 +34,7 @@ async function main(headless) {
     for (let i = 0; i < elements.length; i++) {
       await page.goto(elements[i]);
       const expired = await fetchInfo(page, 'div[class="single_job_listing"] > div', 'innerText');
-      console.log(expired);
+      // console.log(expired);
       if (expired.includes('expired.')) {
         i++;
       } else {
@@ -95,7 +95,7 @@ async function main(headless) {
           });
           Logger.info(position.trim());
         } catch (err) {
-          Logger.trace(scraperName, err.message);
+          Logger.error(scraperName, err.message);
           Logger.trace('Listing expired, skipping');
           // expiredData.push(elements[i]);
         }
