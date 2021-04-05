@@ -104,7 +104,7 @@ function InternshipListing() {
             <div onScroll={handleScroll()} ref={ref}>
               <Card.Group doubling centered stackable>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard
-                  internship={internship} key={index}/>)}
+                  selectedSkills={skills} internship={internship} key={index}/>)}
               </Card.Group>
             </div>
           </Grid.Row>
