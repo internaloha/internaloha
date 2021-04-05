@@ -1,9 +1,6 @@
 import puppeteer from 'puppeteer';
 import fs from 'fs';
 import Logger from 'loglevel';
-import pkg from 'json-2-csv';
-
-const { json2csv } = pkg;
 
 /* global window */
 
