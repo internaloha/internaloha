@@ -74,7 +74,6 @@ async function main(headless) {
           const lastScraped = new Date();
           const [position, posted, description, city, state] = await getData(page);
           const date = new Date(posted).toISOString();
-          console.log(date);
           data.push({
             url: urls[j],
             position: position,
