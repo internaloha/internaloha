@@ -28,8 +28,8 @@ function isRemote(remote) {
   }
 }
 
-function hasSkill(skill) {
-  const studentSkills = [''];
+function hasSkill(skill, selectedSkills) {
+  const studentSkills = selectedSkills;
   const has = {
     margin: '0.2rem',
     backgroundColor: '#5680E9',
@@ -176,7 +176,7 @@ function InternshipListingCard(props) {
         </Card.Content>
         <Card.Content extra>
           {props.internship.skills.map((skill) => (
-              hasSkill(skill)))}
+              hasSkill(skill, props.selectedSkills)))}
           {isRemote(props.internship.remote)}
         </Card.Content>
         <Card.Content extra textAlign={'center'}>
@@ -239,6 +239,7 @@ function InternshipListingCard(props) {
 
 InternshipListingCard.propTypes = {
   internship: PropTypes.object.isRequired,
+  selectedSkills: PropTypes.object.isRequired,
 };
 
 export default InternshipListingCard;

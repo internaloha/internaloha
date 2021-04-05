@@ -126,6 +126,11 @@ function convertPostedToDate(posted) {
   return date;
 }
 
+/**
+ * A mouse helper to see what is being clicked when running in browser mode
+ * @param page
+ * @returns {Promise<void>}
+ */
 async function installMouseHelper(page) {
   await page.evaluateOnNewDocument(() => {
     // Install mouse helper only for top-level frame.

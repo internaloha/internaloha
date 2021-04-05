@@ -11,6 +11,7 @@
     "command-line-usage": "^6.1.1",
     "fibers": "^5.0.0",
     "jquery": "^3.5.0",
+    "json-2-csv": "^3.10.3",
     "jsonfile": "^6.0.1",
     "lodash": "^4.17.15",
     "loglevel": "^1.7.1",
