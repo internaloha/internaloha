@@ -84,7 +84,7 @@ async function main(headless) {
             description: description,
           });
         } catch (err4) {
-          Logger.trace(scraperName, err4.message);
+          Logger.error(scraperName, err4.message);
         }
       }
       // Uses i value in for loop to navigate search pages

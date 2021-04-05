@@ -134,11 +134,11 @@
     },
     {
         "site": "hawaiislack",
-        "position": 1,
-        "company": 1,
+        "position": 0,
+        "company": 0,
         "contact": 0,
-        "location": 1,
-        "posted": 1,
+        "location": 0,
+        "posted": 0,
         "due": 0,
         "start": 0,
         "end": 0,
@@ -146,10 +146,10 @@
         "qualifications": 0,
         "skills": 0,
         "remote": 0,
-        "lastScraped": "2021-04-05T03:42:03.066Z",
-        "index": 1,
+        "lastScraped": "N/A",
+        "index": 0,
         "url": 0,
-        "description": 1
+        "description": 0
     },
     {
         "site": "idealist",
@@ -381,11 +381,11 @@
     },
     {
         "site": "Total",
-        "position": 2245,
-        "company": 2245,
+        "position": 2244,
+        "company": 2244,
         "contact": 181,
-        "location": 2247,
-        "posted": 1456,
+        "location": 2246,
+        "posted": 1455,
         "due": 43,
         "start": 87,
         "end": 0,
@@ -394,8 +394,8 @@
         "skills": 2187,
         "remote": 921,
         "lastScraped": "2021-04-01T11:14:20.808Z",
-        "index": 2247,
+        "index": 2246,
         "url": 2246,
-        "description": 2233
+        "description": 2232
     }
 ]
