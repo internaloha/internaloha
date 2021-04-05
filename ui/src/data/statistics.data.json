@@ -134,12 +134,11 @@
     },
     {
         "site": "hawaiislack",
-        "lastScraped": "2021-04-05T04:10:45.866Z",
-        "position": 1,
-        "company": 1,
+        "position": 0,
+        "company": 0,
         "contact": 0,
-        "location": 1,
-        "posted": 1,
+        "location": 0,
+        "posted": 0,
         "due": 0,
         "start": 0,
         "end": 0,
@@ -147,9 +146,10 @@
         "qualifications": 0,
         "skills": 0,
         "remote": 0,
-        "index": 1,
+        "lastScraped": "N/A",
+        "index": 0,
         "url": 0,
-        "description": 1
+        "description": 0
     },
     {
         "site": "idealist",

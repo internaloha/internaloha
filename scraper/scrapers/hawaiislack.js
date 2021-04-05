@@ -33,68 +33,72 @@ async function main(headless) {
     // const expiredData = [];
     for (let i = 0; i < elements.length; i++) {
       await page.goto(elements[i]);
-      try {
-        const position = await fetchInfo(page, 'h1[class="entry-title"]', 'innerText');
-        let company = '';
+      const expired = await fetchInfo(page, 'div[class="single_job_listing"] > div', 'innerText');
+      // console.log(expired);
+      if (expired.includes('expired.')) {
+        i++;
+      } else {
         try {
-          company = await fetchInfo(page, 'p[class="name"] > strong', 'innerText');
-        } catch (noCompany) {
-          Logger.trace(scraperName, noCompany.message);
-          company = 'Unknown';
+          const position = await fetchInfo(page, 'h1[class="entry-title"]', 'innerText');
+          let company = '';
+          try {
+            company = await fetchInfo(page, 'p[class="name"] > strong', 'innerText');
+          } catch (noCompany) {
+            Logger.trace(scraperName, noCompany.message);
+            company = 'Unknown';
+          }
+          const posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerText');
+          // console.log(posted);
+          // ignores expired listings.
+          let description = '';
+          try {
+            description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
+          } catch (noDesc) {
+            Logger.trace(scraperName, noDesc.message);
+          }
+          // Formats date
+          let date = '';
+          let lastScraped = '';
+          try {
+            lastScraped = new Date();
+            date = new Date(posted).toISOString();
+            // console.log(date);
+          } catch (noDate) {
+            Logger.trace(scraperName, noDate.message);
+            date = '';
+          }
+          let location = '';
+          try {
+            location = await fetchInfo(page, 'li[class="location"]', 'innerText');
+          } catch (noLocation) {
+            Logger.trace(scraperName, noLocation.message);
+            location = '';
+          }
+          // if (expired.includes('expired.')) {
+          //   i++;
+          //   posted = '';
+          //   description = '';
+          //   location = '';
+          //   company = '';
+          // }
+          data.push({
+            position: position.trim(),
+            company: company.trim(),
+            location: {
+              city: location.trim(),
+              state: 'HI',
+            },
+            posted: date,
+            url: elements[i],
+            lastScraped: lastScraped,
+            description: description.trim(),
+          });
+          Logger.info(position.trim());
+        } catch (err) {
+          Logger.error(scraperName, err.message);
+          Logger.trace('Listing expired, skipping');
+          // expiredData.push(elements[i]);
         }
-        let posted = await fetchInfo(page, 'li[class="post-date meta-wrapper"] > span[class="meta-text"] > a', 'innerText');
-        // console.log(posted);
-        // ignores expired listings.
-        const expired = await fetchInfo(page, 'div[class="single_job_listing"] > div', 'innerText');
-        let description = '';
-        try {
-          description = await fetchInfo(page, 'div[class="job_description"]', 'innerHTML');
-        } catch (noDesc) {
-          Logger.trace(scraperName, noDesc.message);
-        }
-        // Formats date
-        let date = '';
-        let lastScraped = '';
-        try {
-          lastScraped = new Date();
-          date = new Date(posted).toISOString();
-          // console.log(date);
-        } catch (noDate) {
-          Logger.trace(scraperName, noDate.message);
-          date = '';
-        }
-        let location = '';
-        try {
-          location = await fetchInfo(page, 'li[class="location"]', 'innerText');
-        } catch (noLocation) {
-          Logger.trace(scraperName, noLocation.message);
-          location = '';
-        }
-        if (expired.includes('expired.')) {
-          i++;
-          // data = [];
-          posted = '';
-          description = '';
-          location = '';
-          company = '';
-        }
-        data.push({
-          position: position.trim(),
-          company: company.trim(),
-          location: {
-            city: location.trim(),
-            state: 'HI',
-          },
-          posted: date,
-          url: elements[i],
-          lastScraped: lastScraped,
-          description: description.trim(),
-        });
-        Logger.info(position.trim());
-      } catch (err) {
-        Logger.trace(scraperName, err.message);
-        Logger.trace('Listing expired, skipping');
-        // expiredData.push(elements[i]);
       }
     }
     await writeToJSON(data, 'hawaiislack');
@@ -105,4 +109,5 @@ async function main(headless) {
   }
   Logger.error(`Elapsed time for hawaiislack: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
+
 export default main;
