@@ -1,12 +1,15 @@
 import Logger from 'loglevel';
 import moment from 'moment';
-import { fetchInfo, startBrowser, writeToJSON, autoScroll } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
-  for (let i = 0; i < 2; i++) {
-    results.push(fetchInfo(page, 'div.heading h2.subtitle', 'innerText'));
-    results.push(fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML'));
+  for (let i = 0; i < 3; i++) {
+    results.push(fetchInfo(page, 'div[class="full-jobview-container"] h1[name="job_title"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="full-jobview-container"] div[name="job_company_name"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="full-jobview-container"] p[id="jobPostedValue"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[name="job_company_location"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="value-description"]', 'innerHTML'));
   }
   return Promise.all(results);
 }
@@ -25,48 +28,27 @@ export async function main(headless) {
     const elementResult = await page.$('h1[name="jobCount"] strong');
     const totalResults = await page.evaluate(element => element.textContent, elementResult);
     let currentResult = await page.$$('div[class="results-card "]');
-    let i = 2;
-    while (currentResult.length < totalResults) {
+    let j = 2;
+    while (currentResult.length < 40) {
       // keep clicking until it reaches totalResult
       try {
         const oldVal = currentResult;
         currentResult = await page.$$('div[class="results-card "]');
         if (oldVal.length === currentResult.length) {
-          await currentResult[i].hover();
+          await currentResult[j].hover();
         } else {
           await Promise.all([
-            await currentResult[i].hover(),
+            await currentResult[j].hover(),
             await page.waitForTimeout(5000),
           ]);
         }
-        i += 2;
+        j += 2;
       } catch (e5) {
         // empty try/catch
       }
     }
     Logger.debug('Loaded all listings');
     const elements = await page.$$('div[class="results-card "]');
-    // grabs all the posted dates
-    const posted = await page.evaluate(
-      () => Array.from(
-        document.querySelectorAll('span[name="datePostedMeta"]'),
-        a => a.textContent,
-      ),
-    );
-    // grabs all position
-    const position = await page.evaluate(
-      () => Array.from(
-        document.querySelectorAll('span[name="datePostedMeta"] h2'),
-        a => a.textContent,
-      ),
-    );
-    // grabs all the company
-    const company = await page.evaluate(
-      () => Array.from(
-        document.querySelectorAll('div[class="title-company-location"] h3'),
-        a => a.textContent,
-      ),
-    );
 
     let totalJobs = 0;
     for (let i = 0; i < elements.length; i++) {
@@ -75,33 +57,29 @@ export async function main(headless) {
         const lastScraped = new Date();
         const element = elements[i];
         await element.click();
-        await page.waitForSelector('div[id="JobPreview"]');
+        await page.waitForSelector('div[class="full-jobview-container"]');
         await page.waitForTimeout(500);
-        const [location, description] = await getData(page);
-        // const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
-        // const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
+        const [position, company, posted, location, description] = await getData(page);
         const url = await page.url();
         let daysToGoBack = 0;
-        if (posted[i].includes('today')) {
+        if (posted.includes('today')) {
           daysToGoBack = 0;
         } else {
           // getting just the number (eg. 1, 3, 20...)
-          daysToGoBack = posted[i].match(/\d+/g);
+          daysToGoBack = posted.match(/\d+/g);
         }
         // going backwards
         date.setDate(date.getDate() - daysToGoBack);
-        let zip = location.match(/([^\D,])+/g);
-        if (zip != null) {
-          zip = zip[0];
-        } else {
+        let zip = location.split(',')[1].split(' ')[2];
+        if (zip === null || typeof zip === 'undefined') {
           zip = 'N/A';
         }
         data.push({
-          position: position[i].trim(),
-          company: company[i].trim(),
+          position: position.trim(),
+          company: company.trim(),
           location: {
-            city: location.match(/^([^,]*)/g)[0],
-            state: location.match(/([^,\d])+/g)[1].trim(),
+            city: location.split(',')[0],
+            state: location.split(',')[1].split(' ')[1],
             zip: zip,
           },
           url: url,
@@ -109,9 +87,11 @@ export async function main(headless) {
           lastScraped: lastScraped,
           description: description.trim(),
         });
-        await page.waitForSelector('div[id="JobPreview"]');
+        console.log(data);
+        await page.waitForSelector('div[class="full-jobview-container"]');
         totalJobs++;
       } catch (err) {
+        Logger.debug(scraperName, err.message);
         Logger.debug(scraperName, 'Error fetching link, skipping');
       }
     }
