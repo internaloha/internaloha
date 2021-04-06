@@ -1,6 +1,6 @@
 import Logger from 'loglevel';
 import moment from 'moment';
-import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { fetchInfo, startBrowser, writeToJSON, autoScroll } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -18,45 +18,54 @@ export async function main(headless) {
   const startTime = new Date();
   const scraperName = 'Monster: ';
   try {
+    [browser, page] = await startBrowser(false);
     Logger.error('Starting scraper monster at', moment().format('LT'));
-    [browser, page] = await startBrowser(headless);
-    await page.setViewport({
-      width: 1100, height: 700,
-    });
     await page.goto('https://www.monster.com/jobs/search/?q=computer-science-intern&intcid=skr_navigation_nhpso_searchMain&tm=30');
-    let nextPage = true;
-    while (nextPage === true) {
+    await page.waitForSelector('div[name="job-results-list"]', { timeout: 0 });
+    const elementResult = await page.$('h1[name="jobCount"] strong');
+    const totalResults = await page.evaluate(element => element.textContent, elementResult);
+    let currentResult = await page.$$('div[class="results-card "]');
+    let i = 2;
+    while (currentResult.length < totalResults) {
+      // keep clicking until it reaches totalResult
       try {
-        await page.waitForTimeout(2000);
-        await page.waitForSelector('div[class="mux-search-results"]');
-        await page.click('a[id="loadMoreJobs"]');
-        Logger.info('Nagivating to next page....');
-      } catch (e2) {
-        Logger.debug('Finished loading all pages.');
-        nextPage = false;
+        const oldVal = currentResult;
+        currentResult = await page.$$('div[class="results-card "]');
+        if (oldVal.length === currentResult.length) {
+          await currentResult[i].hover();
+        } else {
+          await Promise.all([
+            await currentResult[i].hover(),
+            await page.waitForTimeout(5000),
+          ]);
+        }
+        i += 2;
+      } catch (e5) {
+        // empty try/catch
       }
     }
-    const elements = await page.$$('div[id="SearchResults"] section:not(.is-fenced-hide):not(.apas-ad)');
+    Logger.debug('Loaded all listings');
+    const elements = await page.$$('div[class="results-card "]');
     // grabs all the posted dates
     const posted = await page.evaluate(
-        () => Array.from(
-            document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
-            a => a.textContent,
-        ),
+      () => Array.from(
+        document.querySelectorAll('span[name="datePostedMeta"]'),
+        a => a.textContent,
+      ),
     );
     // grabs all position
     const position = await page.evaluate(
-        () => Array.from(
-            document.querySelectorAll('div[id="SearchResults"] div.summary h2'),
-            a => a.textContent,
-        ),
+      () => Array.from(
+        document.querySelectorAll('span[name="datePostedMeta"] h2'),
+        a => a.textContent,
+      ),
     );
     // grabs all the company
     const company = await page.evaluate(
-        () => Array.from(
-            document.querySelectorAll('div[id="SearchResults"] div.company span.name'),
-            a => a.textContent,
-        ),
+      () => Array.from(
+        document.querySelectorAll('div[class="title-company-location"] h3'),
+        a => a.textContent,
+      ),
     );
 
     let totalJobs = 0;
@@ -109,11 +118,10 @@ export async function main(headless) {
 
     // write results to JSON file
     await writeToJSON(data, 'monster');
-    Logger.debug('\nData successfully written!');
     await Logger.debug('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
-    Logger.debug(scraperName, 'Our Error: ', e.message);
+    Logger.error(scraperName, 'Our Error: ', e.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for monster: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
