@@ -30,7 +30,7 @@ export async function main(headless) {
     let currentResult = await page.$$('div[class="results-card "]');
     let j = 2;
     let error = 0;
-    while (currentResult.length < totalResults && error <= 400) {
+    while (currentResult.length < totalResults && error <= 700) {
       // TODO: Tech Debt: Find a better way to auto scroll on specific div. At the moment, we have empty catch to ensure
       //  code keeps running.
       try {
