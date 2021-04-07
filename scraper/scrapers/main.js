@@ -94,6 +94,11 @@ const sections = [
         desc: '4. Running a scraper individually (eg. linkedin) with the browser open.',
         example: '$ npm run scrapers linkedin dev open',
       },
+      {
+        desc: '5. Running a scraper individually (eg. linkedin) with the browser open and saves its statistics in a' +
+          ' CVS file.',
+        example: '$ npm run scrapers linkedin dev open --save statistics',
+      },
     ],
   },
   {
@@ -263,12 +268,10 @@ async function main() {
       // default for npm run dev is it doesn't open browsers
       await getAllData(true);
     }
-  } else if (myArgs[0] !== 'dev') {
-    Logger.enableAll();
-    await getData(myArgs[0], true);
 // eg. npm run acm dev open (default is close)
-  } else if (myArgs.length > 3) {
+  } else if (myArgs.length >= 3) {
       Logger.enableAll();
+      console.log(myArgs);
       if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
         await getData(myArgs[0], false);
       } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
@@ -276,6 +279,9 @@ async function main() {
       } else {
         await getData(myArgs[0], true);
       }
+  } else if (myArgs[0] !== 'dev') {
+    Logger.enableAll();
+    await getData(myArgs[0], true);
   } else {
     console.log(usage);
     process.exit(0);
@@ -288,7 +294,9 @@ async function main() {
   if (process.argv.includes('statistics')) {
     console.log('Now saving data to CSV files.');
     // if running unattended scrapers
-    if (myArgs.length > 3 && myArgs[2] && myArgs[2].toLowerCase() === 'open') {
+    if (myArgs.length >= 3 && myArgs[2] && myArgs[2].toLowerCase() === 'open') {
+      exportToCSV(myArgs[0]);
+    } else if (myArgs[0] !== 'dev' && myArgs[0] !== 'unattended') {
       exportToCSV(myArgs[0]);
     } else {
       exportToCSV();
