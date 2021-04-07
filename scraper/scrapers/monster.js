@@ -4,9 +4,12 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
-  for (let i = 0; i < 2; i++) {
-    results.push(fetchInfo(page, 'div.heading h2.subtitle', 'innerText'));
-    results.push(fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML'));
+  for (let i = 0; i < 3; i++) {
+    results.push(fetchInfo(page, 'div[class="full-jobview-container"] h1[name="job_title"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="full-jobview-container"] div[name="job_company_name"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="full-jobview-container"] p[id="jobPostedValue"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[name="job_company_location"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="value-description"]', 'innerHTML'));
   }
   return Promise.all(results);
 }
@@ -18,102 +21,92 @@ export async function main(headless) {
   const startTime = new Date();
   const scraperName = 'Monster: ';
   try {
-    Logger.error('Starting scraper monster at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
-    await page.setViewport({
-      width: 1100, height: 700,
-    });
+    Logger.error('Starting scraper monster at', moment().format('LT'));
     await page.goto('https://www.monster.com/jobs/search/?q=computer-science-intern&intcid=skr_navigation_nhpso_searchMain&tm=30');
-    let nextPage = true;
-    while (nextPage === true) {
+    await page.waitForSelector('div[name="job-results-list"]', { timeout: 0 });
+    const elementResult = await page.$('h1[name="jobCount"] strong');
+    const totalResults = await page.evaluate(element => element.textContent, elementResult);
+    let currentResult = await page.$$('div[class="results-card "]');
+    let j = 2;
+    let error = 0;
+    while (currentResult.length < totalResults && error <= 400) {
+      // TODO: Tech Debt: Find a better way to auto scroll on specific div. At the moment, we have empty catch to ensure
+      //  code keeps running.
       try {
-        await page.waitForTimeout(2000);
-        await page.waitForSelector('div[class="mux-search-results"]');
-        await page.click('a[id="loadMoreJobs"]');
-        Logger.info('Nagivating to next page....');
-      } catch (e2) {
-        Logger.debug('Finished loading all pages.');
-        nextPage = false;
+        const oldVal = currentResult;
+        currentResult = await page.$$('div[class="results-card "]');
+        if (oldVal.length === currentResult.length) {
+          error++;
+          await currentResult[j].hover();
+          await page.waitForTimeout(2000);
+        } else {
+          await Promise.all([
+            await currentResult[j].hover(),
+            await page.waitForTimeout(5000),
+          ]);
+        }
+        j += 2;
+      } catch (e5) {
+        // empty try/catch
       }
     }
-    const elements = await page.$$('div[id="SearchResults"] section:not(.is-fenced-hide):not(.apas-ad)');
-    // grabs all the posted dates
-    const posted = await page.evaluate(
-        () => Array.from(
-            document.querySelectorAll('section:not(.is-fenced-hide):not(.apas-ad) div[class="meta flex-col"] time'),
-            a => a.textContent,
-        ),
-    );
-    // grabs all position
-    const position = await page.evaluate(
-        () => Array.from(
-            document.querySelectorAll('div[id="SearchResults"] div.summary h2'),
-            a => a.textContent,
-        ),
-    );
-    // grabs all the company
-    const company = await page.evaluate(
-        () => Array.from(
-            document.querySelectorAll('div[id="SearchResults"] div.company span.name'),
-            a => a.textContent,
-        ),
-    );
+    const urls = await page.evaluate(() => {
+      const urlFromWeb = document.querySelectorAll('a[class="view-details-link"]');
+      const urlList = [...urlFromWeb];
+      return urlList.map(url => url.href);
+    });
+    Logger.debug('Loaded all listings: ', urls.length);
 
     let totalJobs = 0;
-    for (let i = 0; i < elements.length; i++) {
+    for (let i = 0; i < urls.length; i++) {
       try {
+        await page.goto(urls[i], { waitUntil: 'domcontentloaded' });
         const date = new Date();
         const lastScraped = new Date();
-        const element = elements[i];
-        await element.click();
-        await page.waitForSelector('div[id="JobPreview"]');
+        await page.waitForSelector('div[class="full-jobview-container"]');
         await page.waitForTimeout(500);
-        const [location, description] = await getData(page);
-        // const location = await fetchInfo(page, 'div.heading h2.subtitle', 'innerText');
-        // const description = await fetchInfo(page, 'div[id="JobDescription"]', 'innerHTML');
-        const url = await page.url();
+        const [position, company, posted, location, description] = await getData(page);
         let daysToGoBack = 0;
-        if (posted[i].includes('today')) {
+        if (posted.includes('today')) {
           daysToGoBack = 0;
         } else {
           // getting just the number (eg. 1, 3, 20...)
-          daysToGoBack = posted[i].match(/\d+/g);
+          daysToGoBack = posted.match(/\d+/g);
         }
         // going backwards
         date.setDate(date.getDate() - daysToGoBack);
-        let zip = location.match(/([^\D,])+/g);
-        if (zip != null) {
-          zip = zip[0];
-        } else {
+        let zip = location.split(',')[1].split(' ')[2];
+        if (zip === null || typeof zip === 'undefined') {
           zip = 'N/A';
         }
         data.push({
-          position: position[i].trim(),
-          company: company[i].trim(),
+          position: position.trim(),
+          company: company.trim(),
           location: {
-            city: location.match(/^([^,]*)/g)[0],
-            state: location.match(/([^,\d])+/g)[1].trim(),
+            city: location.split(',')[0],
+            state: location.split(',')[1].split(' ')[1],
             zip: zip,
           },
-          url: url,
+          url: urls[i],
           posted: date,
           lastScraped: lastScraped,
           description: description.trim(),
         });
-        await page.waitForSelector('div[id="JobPreview"]');
+        await page.waitForSelector('div[class="full-jobview-container"]');
         totalJobs++;
       } catch (err) {
+        Logger.debug(scraperName, err.message);
         Logger.debug(scraperName, 'Error fetching link, skipping');
       }
     }
 
     // write results to JSON file
     await writeToJSON(data, 'monster');
-    Logger.debug('\nData successfully written!');
     await Logger.debug('Total internships scraped:', totalJobs);
     await browser.close();
   } catch (e) {
-    Logger.debug(scraperName, 'Our Error: ', e.message);
+    Logger.error(scraperName, 'Our Error: ', e.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for monster: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
