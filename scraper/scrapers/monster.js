@@ -21,7 +21,7 @@ export async function main(headless) {
   const startTime = new Date();
   const scraperName = 'Monster: ';
   try {
-    [browser, page] = await startBrowser(false);
+    [browser, page] = await startBrowser(headless);
     Logger.error('Starting scraper monster at', moment().format('LT'));
     await page.goto('https://www.monster.com/jobs/search/?q=computer-science-intern&intcid=skr_navigation_nhpso_searchMain&tm=30');
     await page.waitForSelector('div[name="job-results-list"]', { timeout: 0 });
@@ -29,13 +29,17 @@ export async function main(headless) {
     const totalResults = await page.evaluate(element => element.textContent, elementResult);
     let currentResult = await page.$$('div[class="results-card "]');
     let j = 2;
-    while (currentResult.length < 40) {
-      // keep clicking until it reaches totalResult
+    let error = 0;
+    while (currentResult.length < totalResults && error <= 400) {
+      // TODO: Tech Debt: Find a better way to auto scroll on specific div. At the moment, we have empty catch to ensure
+      //  code keeps running.
       try {
         const oldVal = currentResult;
         currentResult = await page.$$('div[class="results-card "]');
         if (oldVal.length === currentResult.length) {
+          error++;
           await currentResult[j].hover();
+          await page.waitForTimeout(2000);
         } else {
           await Promise.all([
             await currentResult[j].hover(),
@@ -47,20 +51,22 @@ export async function main(headless) {
         // empty try/catch
       }
     }
-    Logger.debug('Loaded all listings');
-    const elements = await page.$$('div[class="results-card "]');
+    const urls = await page.evaluate(() => {
+      const urlFromWeb = document.querySelectorAll('a[class="view-details-link"]');
+      const urlList = [...urlFromWeb];
+      return urlList.map(url => url.href);
+    });
+    Logger.debug('Loaded all listings: ', urls.length);
 
     let totalJobs = 0;
-    for (let i = 0; i < elements.length; i++) {
+    for (let i = 0; i < urls.length; i++) {
       try {
+        await page.goto(urls[i], { waitUntil: 'domcontentloaded' });
         const date = new Date();
         const lastScraped = new Date();
-        const element = elements[i];
-        await element.click();
         await page.waitForSelector('div[class="full-jobview-container"]');
         await page.waitForTimeout(500);
         const [position, company, posted, location, description] = await getData(page);
-        const url = await page.url();
         let daysToGoBack = 0;
         if (posted.includes('today')) {
           daysToGoBack = 0;
@@ -82,12 +88,11 @@ export async function main(headless) {
             state: location.split(',')[1].split(' ')[1],
             zip: zip,
           },
-          url: url,
+          url: urls[i],
           posted: date,
           lastScraped: lastScraped,
           description: description.trim(),
         });
-        console.log(data);
         await page.waitForSelector('div[class="full-jobview-container"]');
         totalJobs++;
       } catch (err) {
