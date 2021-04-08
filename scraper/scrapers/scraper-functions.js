@@ -36,7 +36,7 @@ async function fetchInfo(page, selector, DOM_Element) {
     if (oldLevel !== 3) {
       console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
     }
-    result = 'Error';
+    result = 'N/A';
   }
   return result;
 }
