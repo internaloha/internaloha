@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Table, Header, Icon } from 'semantic-ui-react';
 import _ from 'lodash';
+import fs from 'fs';
+import pkg from 'json-2-csv';
 import statisticData from './data/statistics.data';
 import StatisticsRow from './StatisticsRow';
 
@@ -23,6 +25,10 @@ class Statistics extends React.Component {
     this.setState({ statistics: _.orderBy(statisticData, value, ['desc']) });
     console.log(this.state.statistics);
   };
+
+  formatInfo = () => {
+    // something
+  }
 
   render() {
     return (
