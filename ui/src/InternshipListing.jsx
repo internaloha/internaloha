@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 import { Card, Container, Grid, Header, Segment } from 'semantic-ui-react';
+import moment from 'moment';
 import InternshipListingCard from './InternshipListingCard';
 import SearchInternshipFeature from './SearchInternshipFeature';
 import InternshipsFilters from './InternshipFilters';
@@ -63,29 +64,38 @@ function InternshipListing() {
         <Grid columns={'equal'} doubling stackable>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
             <Segment>
-              <h3 style={{ align: 'center' }}>
-                Total Results in Listing: {totalListing}
-              </h3>
+              <h2 style={{ align: 'center' }}>
+                Welcome to InternAloha!
+              </h2>
               <Grid.Column>
                 <h4>
-                  Websites Featured: <br/>
-                  ACM ({internships.getData('ACM').length})
-                  Angel List ({internships.getData('AngelList').length})
-                  American Express ({internships.getData('AExpress').length})
-                  Apple ({internships.getData('Apple').length})
-                  Chegg Internships ({internships.getData('Chegg').length})
-                  Cisco ({internships.getData('Cisco').length})
-                  Glassdoor ({internships.getData('Glassdoor').length})
-                  Hawaii Slack ({internships.getData('HawaiiSlack').length})
-                  Idealist ({internships.getData('Idealist').length})
-                  Indeed ({internships.getData('Indeed').length})
-                  LinkedIn ({internships.getData('LinkedIn').length})
-                  Monster ({internships.getData('Monster').length})
-                  Simply Hired ({internships.getData('SimplyHired').length})
-                  Stack Overflow ({internships.getData('StackOverflow').length})
-                  Student Opportunity Center (0)
-                  Youtern ({internships.getData('Youtern').length})
-                  Zip Recruiter ({internships.getData('ZipRecruiter').length})
+                  <p> InternAloha is a tool developed as part of the <a href="https://radgrad.org">RadGrad Project</a> to improve the undergraduate computer
+                    science degree experience by simplifying the internship discovery process.</p>
+                  <p> InternAloha regularly visits a large number of Internship and corporate sites and gathers
+                    information on computer science internships, with a focus on internships suitable to Hawaii students.
+                    Our hope is that you find InternAloha to be a superior way to find relevant internships based on your
+                    interests.</p>
+                  <p>Right now, the InternAloha database contains a total of {totalListing} listings, broken down as follows: <br/>
+                    ACM ({internships.getData('ACM').length}),
+                    Angel List ({internships.getData('AngelList').length}),
+                    American Express ({internships.getData('AExpress').length}),
+                    Apple ({internships.getData('Apple').length}),
+                    Chegg Internships ({internships.getData('Chegg').length}),
+                    Cisco ({internships.getData('Cisco').length}),
+                    Glassdoor ({internships.getData('Glassdoor').length}),
+                    Hawaii Slack ({internships.getData('HawaiiSlack').length}),
+                    Idealist ({internships.getData('Idealist').length}),
+                    Indeed ({internships.getData('Indeed').length}),
+                    LinkedIn ({internships.getData('LinkedIn').length}),
+                    Monster ({internships.getData('Monster').length}),
+                    Simply Hired ({internships.getData('SimplyHired').length}),
+                    Stack Overflow ({internships.getData('StackOverflow').length}),
+                    Student Opportunity Center (0),
+                    Youtern ({internships.getData('Youtern').length}),
+                    Zip Recruiter ({internships.getData('ZipRecruiter').length})</p>
+                  <p>InternAloha collected this information {moment(internships.lastScraped(data)).fromNow()}. </p>
+                  <p>If you have comments or question about InternAloha, please feel free to visit our
+                    <a href="https://internaloha.github.io/documentation/"> home page</a>. </p>
                 </h4>
               </Grid.Column>
             </Segment>
