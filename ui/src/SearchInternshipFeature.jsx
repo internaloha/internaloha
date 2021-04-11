@@ -184,11 +184,6 @@ function SearchInternshipFeature({
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column>
-            <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
-              Last Updated: {moment(internships.lastScraped(data)).fromNow()}
-            </Header>
-          </Grid.Column>
           <Grid.Column textAlign={'right'}>
             <Grid.Row>
               <div style={{ paddingBottom: '0', paddingRight: '0.5rem' }}>
