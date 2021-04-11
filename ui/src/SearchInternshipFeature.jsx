@@ -11,7 +11,6 @@ import {
   Grid,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import InternshipsFilters from './InternshipFilters';
 import { dropdownCareerInterest, recommendation } from './RecommendationScript';
 
