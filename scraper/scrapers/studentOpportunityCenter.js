@@ -40,7 +40,7 @@ export async function main() {
     await page.setViewport({
       width: 1100, height: 900,
     });
-    await page.setDefaultTimeout(95000);
+    await page.setDefaultTimeout(0);
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.user);
@@ -69,11 +69,11 @@ export async function main() {
     const urls = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
-            document.querySelectorAll('a.result-card__full-card-link'),
+            document.querySelectorAll('div.pb-12 > a'),
             a => a.href,
         ),
     );
-
+    console.log(urls);
     // eslint-disable-next-line no-unused-vars
     let totalInternships = 0;
     for (let i = 0; i < elements.length; i++) {
@@ -109,7 +109,7 @@ export async function main() {
       }
       await element.click();
     }
-    await writeToJSON(data, 'monster');
+    await writeToJSON(data, 'studentOpportunityCenter');
   } catch (e) {
     Logger.trace('Our Error: ', e.message);
   }
