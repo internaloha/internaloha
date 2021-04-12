@@ -73,7 +73,7 @@ export async function main() {
             a => a.href,
         ),
     );
-    console.log(urls);
+    // console.log(urls);
     // eslint-disable-next-line no-unused-vars
     let totalInternships = 0;
     for (let i = 0; i < elements.length; i++) {
