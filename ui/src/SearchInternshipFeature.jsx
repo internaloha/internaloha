@@ -1,14 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Segment,
   Header,
   Dropdown,
   Label,
-  Input,
   Form,
   Checkbox,
-  Popup,
-  Grid,
+  Grid, Radio,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
@@ -27,12 +25,13 @@ function SearchInternshipFeature({
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
   let locationChange = locationVal;
-  let companyChange = companyVal;
+  const companyChange = companyVal;
   let sortChange = sortVal;
-  let searchQueryChange = searchQuery;
+  const searchQueryChange = searchQuery;
   let skillChange = skillsVal;
   let remoteCheck = isRemote;
   let careerChange = careerVal;
+  const currentVal = useState(null);
   const sortBy = [
     { key: 'posted', text: 'posted', value: 'posted' },
     { key: 'internship', text: 'internship', value: 'internship' },
@@ -50,12 +49,6 @@ function SearchInternshipFeature({
       left: 100,
       behavior: 'smooth',
     });
-  };
-  const handleSearchChange = (event) => {
-    searchQueryChange = event.target.value;
-  };
-  const handleCompanyChange = (event) => {
-    companyChange = event.target.value;
   };
   const getRemote = () => {
     remoteCheck = !remoteCheck;
@@ -97,36 +90,37 @@ function SearchInternshipFeature({
           <Grid.Column>
             <p>
               <p>
-                Sort by {' '}
-                <Dropdown
-                  inline
-                  header='Sort by...'
-                  options={sortBy}
-                  defaultValue={sortBy[0]}
-                  onChange={getSort}
-                />
+                <Form>
+                  <Form.Field>
+                    Sort By: {''}
+                  </Form.Field>
+                  <Form.Field>
+                    <Radio
+                      label={sortBy[0].text}
+                      value={sortBy[0].value}
+                      checked={currentVal === sortBy[0].value}
+                      onChange={getSort}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Radio
+                      label= {sortBy[1].text}
+                      value={sortBy[1].value}
+                      checked={currentVal === sortBy[1].value}
+                      onChange={getSort}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Radio
+                      label= {sortBy[2].text}
+                      value={sortBy[2].value}
+                      checked={currentVal === sortBy[2].value}
+                      onChange={getSort}
+                    />
+                  </Form.Field>
+                </Form>
               </p>
             </p>
-          </Grid.Column>
-          <Grid.Column>
-            <Form onSubmit={handleSubmit}>
-              <Popup
-                trigger={
-                  <Form>
-                    <Form.Field icon='search'
-                                iconPosition='left'
-                                placeholder='Search ...'
-                                onChange={handleSearchChange}
-                                fluid
-                                control={Input}
-                                label={{ children: 'Search' }}
-                    />
-                  </Form>
-                }
-                content='Press enter to search by internship titles!'
-                on={'focus'}
-              />
-            </Form>
           </Grid.Column>
           <Grid.Column>
             <Form onSubmit={handleSubmit}>
@@ -168,18 +162,6 @@ function SearchInternshipFeature({
             </Form>
             <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                       onClick={getRemote}/>
-          </Grid.Column>
-          <Grid.Column>
-            <Form onSubmit={handleSubmit}>
-              <Form.Field icon='home'
-                          label={{ children: 'Company' }}
-                          control={Input}
-                          iconPosition='left'
-                          placeholder='Company'
-                          onChange={handleCompanyChange}
-                          fluid
-              />
-            </Form>
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
