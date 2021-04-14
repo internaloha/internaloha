@@ -169,7 +169,7 @@ async function getData(scraperName, headless = true) {
  * Fetches information from statistics.data.jsn and returns it as a JSON object
  */
 function fetchStatistics() {
-  const str = fs.readFileSync('../ui/src/data/statistics.data.json', 'utf8');
+  const str = fs.readFileSync('../ui/src/statistics/statistics.data.json', 'utf8');
   return JSON.parse(str.toString());
 }
 
@@ -335,7 +335,7 @@ async function main() {
       exportToCSV();
     }
     exportCVStoJSON(function (info) {
-      fs.writeFileSync('../ui/src/data/statistics-csv.json', JSON.stringify(info, null, 4));
+      fs.writeFileSync('../ui/src/statistics/statistics-csv.json', JSON.stringify(info, null, 4));
     });
   }
   console.log('Completed.');

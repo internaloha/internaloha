@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Table, Header, Icon } from 'semantic-ui-react';
 import _ from 'lodash';
-import statisticData from './data/statistics.data';
-import statisticsCSV from './statistics-csv';
+import statisticData from './statistics/statistics.data';
+import statisticsCSV from './statistics/statistics-csv';
 import StatisticsRow from './StatisticsRow';
 import StatisticsChart from './StatisticsChart';
 
