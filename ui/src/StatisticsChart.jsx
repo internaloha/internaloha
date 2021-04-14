@@ -11,25 +11,42 @@ class StatisticsChart extends React.Component {
 
   componentDidMount() {
     const _this = this;
-
     // Init chart with data from props.
-    const chart = Highcharts.chart('statistics', {
+    const chart = Highcharts.chart(this.props.statistics.name, {
 
       title: {
-        text: 'Number of Listings Scraped',
+        text: `Number of Listings Scraped: ${this.props.statistics.name}`,
       },
-
+      credits: {
+        enabled: false,
+      },
+      tooltip: {
+        formatter: function () {
+          let tooltip = new Date(this.x).toLocaleString('en-US', { dateStyle: 'short' });
+          const index = this.y;
+          tooltip += `<br><b>Value : </b>${index}`;
+          return tooltip;
+        },
+      },
       yAxis: {
+        allowDecimals: false,
         title: {
           text: 'Number of Listings Scraped',
         },
       },
-
       xAxis: {
         accessibility: {
           rangeDescription: 'Scraper Performance',
         },
-        type: 'datetime',
+        title: {
+          text: 'Over Time',
+        },
+        categories: _this.props.date.data,
+        labels: {
+          formatter: function () {
+            return new Date(this.value).toLocaleString('en-US', { dateStyle: 'short' });
+          },
+        },
       },
 
       legend: {
@@ -40,14 +57,13 @@ class StatisticsChart extends React.Component {
 
       plotOptions: {
         series: {
-          pointStart: Date.parse(_this.props.date),
           label: {
             connectorAllowed: false,
           },
         },
       },
 
-      series: _this.props.statistics,
+      series: [_this.props.statistics],
 
       responsive: {
         rules: [{
@@ -56,9 +72,9 @@ class StatisticsChart extends React.Component {
           },
           chartOptions: {
             legend: {
-              layout: 'horizontal',
-              align: 'center',
-              verticalAlign: 'bottom',
+              align: 'left',
+              verticalAlign: 'top',
+              borderWidth: 0,
             },
           },
         }],
@@ -68,12 +84,13 @@ class StatisticsChart extends React.Component {
   }
 
   render() {
-    return <div id='statistics' />;
+    return <div id={this.props.statistics.name} />;
   }
 }
 
 StatisticsChart.propTypes = {
-  statistics: PropTypes.array.isRequired,
+  statistics: PropTypes.object.isRequired,
+  date: PropTypes.object.isRequired,
 };
 
 export default StatisticsChart;

@@ -27,14 +27,14 @@ class Statistics extends React.Component {
 
   render() {
 
-    function formatInfo() {
+    function formatInfo(info) {
       delete statisticsCSV.siteName;
       const chartData = [];
 
       const arrays = _.map(statisticsCSV, function (site) {
         const arr = [];
         const siteInfo = _.map(site, function (data) {
-          arr.push(data.url);
+          arr.push(data[info]);
           return arr;
         });
         return [...new Set(siteInfo)];
@@ -49,6 +49,8 @@ class Statistics extends React.Component {
       return chartData;
     }
 
+    const dates = formatInfo('lastScraped');
+
     return (
         <div>
           <Container style={{ marginTop: '10rem', marginBottom: '4rem' }}>
@@ -57,7 +59,9 @@ class Statistics extends React.Component {
                     style={{ marginBottom: '2rem' }}>
               Statistics
             </Header>
-            <StatisticsChart statistics={formatInfo()} date={statisticsCSV.acm[0].lastScraped}/>
+            {_.map((formatInfo('url')), (statistics, index) => <StatisticsChart
+              statistics={statistics} key={index} date={dates[index]}/>)}
+            {/* <StatisticsChart statistics={formatInfo()} date={statisticsCSV.acm[0].lastScraped}/> */}
              <Table attached='top' celled sortable>
               <Table.Header onClick={(event) => this.onClick(event)}>
                 <Table.Row>
