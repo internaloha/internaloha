@@ -1,78 +1,33 @@
 [
     {
-        "position": "Business Fellowship",
-        "company": "Manifest MedEx",
-        "location": {
-            "city": "Emeryville",
-            "state": "California"
-        },
-        "posted": "2021-04-05T04:10:45.959Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/e752a006a048455baf1b4496f97c6dcf-business-fellowship-manifest-medex-emeryville",
-        "lastScraped": "2021-04-05T04:10:45.960Z",
-        "description": "Error",
-        "index": 1,
-        "skills": [],
-        "remote": false
-    },
-    {
-        "position": "Business Fellowship",
-        "company": "Manifest MedEx",
-        "location": {
-            "city": "Riverside",
-            "state": "California"
-        },
-        "posted": "2021-04-05T04:11:10.151Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/83178abcfcc0484a81f9a4dee5547b55-business-fellowship-manifest-medex-riverside",
-        "lastScraped": "2021-04-05T04:11:10.151Z",
-        "description": "Error",
-        "index": 2,
-        "skills": [],
-        "remote": false
-    },
-    {
         "position": "Conservation Stewardship Initiative Intern",
         "company": "The Nature Conservancy",
         "location": {
             "city": "Strong City",
             "state": "Kansas"
         },
-        "posted": "2021-04-05T04:11:35.509Z",
+        "posted": "2021-04-12T08:06:13.188Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/6faeda4554b04198b078a653b531dcd1-conservation-stewardship-initiative-intern-the-nature-conservancy-strong-city",
-        "lastScraped": "2021-04-05T04:11:35.509Z",
-        "description": "Error",
-        "index": 3,
+        "lastScraped": "2021-04-12T08:06:13.188Z",
+        "description": "N/A",
+        "index": 1,
         "skills": [],
         "remote": false
     },
     {
-        "position": "Communications, NLP and UX Design Internships (Remote, paid stipend) Sustainability, Tech Start Up company.",
+        "position": "Natural Language Processing and UX Design Internships (Remote, paid stipend) Sustainability, Tech Start Up company.",
         "company": "Realty Sage",
         "location": {
             "city": "Arlington",
             "state": "Virginia"
         },
-        "posted": "2021-04-05T04:12:00.764Z",
-        "url": "https://www.idealist.org/en/social-enterprise-internship/d85c2d1de617476784b458942f48bcd0-communications-nlp-and-ux-design-internships-remote-paid-stipend-sustainability-tech-start-up-company-realty-sage-arlington",
-        "lastScraped": "2021-04-05T04:12:00.764Z",
-        "description": "Error",
-        "index": 4,
+        "posted": "2021-04-12T08:06:36.380Z",
+        "url": "https://www.idealist.org/en/social-enterprise-internship/d85c2d1de617476784b458942f48bcd0-natural-language-processing-and-ux-design-internships-remote-paid-stipend-sustainability-tech-start-up-company-realty-sage-arlington",
+        "lastScraped": "2021-04-12T08:06:36.380Z",
+        "description": "N/A",
+        "index": 2,
         "skills": [],
         "remote": true
-    },
-    {
-        "position": "Government Affairs Fellowship with ITI",
-        "company": "Information Technology Industry Council",
-        "location": {
-            "city": "Washington",
-            "state": "District Of Columbia"
-        },
-        "posted": "2021-04-05T04:12:26.187Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/8eadbf3951e548e8b839da8a6f77991c-government-affairs-fellowship-with-iti-information-technology-industry-council-washington",
-        "lastScraped": "2021-04-05T04:12:26.187Z",
-        "description": "Error",
-        "index": 5,
-        "skills": [],
-        "remote": false
     },
     {
         "position": "EatSafe Intern",
@@ -81,11 +36,41 @@
             "city": "Washington",
             "state": "District Of Columbia"
         },
-        "posted": "2021-04-05T04:12:50.789Z",
+        "posted": "2021-04-12T08:07:00.262Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/a0da0628836b43ee988fddffa18683fd-eatsafe-intern-global-alliance-for-improved-nutrition-gain-washington",
-        "lastScraped": "2021-04-05T04:12:50.789Z",
-        "description": "Error",
-        "index": 6,
+        "lastScraped": "2021-04-12T08:07:00.262Z",
+        "description": "N/A",
+        "index": 3,
+        "skills": [],
+        "remote": false
+    },
+    {
+        "position": "Summer 2021 Graduate Intern",
+        "company": "Data Quality Campaign",
+        "location": {
+            "city": "Washington",
+            "state": "District Of Columbia"
+        },
+        "posted": "2021-04-12T08:07:22.614Z",
+        "url": "https://www.idealist.org/en/nonprofit-internship/cfdf53519a6744a199f6c559a154341b-summer-2021-graduate-intern-data-quality-campaign-washington",
+        "lastScraped": "2021-04-12T08:07:22.614Z",
+        "description": "N/A",
+        "index": 4,
+        "skills": [],
+        "remote": false
+    },
+    {
+        "position": "Government Affairs Fellowship with ITI",
+        "company": "Information Technology Industry Council",
+        "location": {
+            "city": "Washington",
+            "state": "District Of Columbia"
+        },
+        "posted": "2021-04-12T08:07:45.541Z",
+        "url": "https://www.idealist.org/en/nonprofit-internship/8eadbf3951e548e8b839da8a6f77991c-government-affairs-fellowship-with-iti-information-technology-industry-council-washington",
+        "lastScraped": "2021-04-12T08:07:45.541Z",
+        "description": "N/A",
+        "index": 5,
         "skills": [],
         "remote": false
     },
@@ -96,26 +81,11 @@
             "city": "New York",
             "state": "New York"
         },
-        "posted": "2021-04-05T04:13:15.054Z",
+        "posted": "2021-04-12T08:08:08.498Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/1122fb10906946ea95040c18bb78e16b-2021-women-peace-and-security-policy-fellowship-ngo-working-group-on-women-peace-and-security-new-york",
-        "lastScraped": "2021-04-05T04:13:15.054Z",
-        "description": "Error",
-        "index": 7,
-        "skills": [],
-        "remote": false
-    },
-    {
-        "position": "MEDICINE AND HEALTHCARE EXPERIENCE & OBSERVATION",
-        "company": "Aldeas de Paz - Peace Villages",
-        "location": {
-            "city": "Santa Barbara de Samaná",
-            "state": "Dominican Republic"
-        },
-        "posted": "2021-04-05T04:13:40.727Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/1e03f68d106c403292fb13f5d01cccf2-medicine-and-healthcare-experience-observation-aldeas-de-paz-peace-villages-santa-barbara-de-samana",
-        "lastScraped": "2021-04-05T04:13:40.727Z",
-        "description": "Error",
-        "index": 8,
+        "lastScraped": "2021-04-12T08:08:08.498Z",
+        "description": "N/A",
+        "index": 6,
         "skills": [],
         "remote": false
     },
@@ -126,30 +96,13 @@
             "city": "Dharamshala",
             "state": "India"
         },
-        "posted": "2021-04-05T04:14:06.116Z",
+        "posted": "2021-04-12T08:08:31.689Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/d3aba1daae9444a59b9edb2f750c580b-hazard-assessment-and-vulnerability-mapping-for-disaster-management-using-arcgis-educare-india-dharamshala",
-        "lastScraped": "2021-04-05T04:14:06.116Z",
-        "description": "Error",
-        "index": 9,
+        "lastScraped": "2021-04-12T08:08:31.689Z",
+        "description": "N/A",
+        "index": 7,
         "skills": [
             "project management"
-        ],
-        "remote": false
-    },
-    {
-        "position": "Data Analysis Intern, Healthcare Anchor Network",
-        "company": "Democracy Collaborative",
-        "location": {
-            "city": "Washington",
-            "state": "District Of Columbia"
-        },
-        "posted": "2021-04-05T04:14:31.376Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/2d0a689b0f6e49f198d321fd0d43ca8e-data-analysis-intern-healthcare-anchor-network-democracy-collaborative-washington",
-        "lastScraped": "2021-04-05T04:14:31.376Z",
-        "description": "Error",
-        "index": 10,
-        "skills": [
-            "networks"
         ],
         "remote": false
     },
@@ -160,11 +113,11 @@
             "city": "Washington",
             "state": "District Of Columbia"
         },
-        "posted": "2021-04-05T04:14:56.330Z",
+        "posted": "2021-04-12T08:08:55.061Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/5df1fcb4370e40c1b8d1e02aee62506c-healthcare-anchor-network-research-internship-democracy-collaborative-washington",
-        "lastScraped": "2021-04-05T04:14:56.330Z",
-        "description": "Error",
-        "index": 11,
+        "lastScraped": "2021-04-12T08:08:55.061Z",
+        "description": "N/A",
+        "index": 8,
         "skills": [
             "networks"
         ],
@@ -177,11 +130,11 @@
             "city": "Kangra",
             "state": "HP"
         },
-        "posted": "2021-04-05T04:15:20.802Z",
+        "posted": "2021-04-12T08:09:18.492Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/9f4d3bc0cc11454f8e90ba6110a048a3-assistant-physiotherapist-intern-educare-india-kangra",
-        "lastScraped": "2021-04-05T04:15:20.802Z",
-        "description": "Error",
-        "index": 12,
+        "lastScraped": "2021-04-12T08:09:18.492Z",
+        "description": "N/A",
+        "index": 9,
         "skills": [],
         "remote": false
     }
