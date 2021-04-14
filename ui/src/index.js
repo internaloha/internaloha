@@ -5,7 +5,7 @@ import 'semantic-ui-css/semantic.css';
 import './index.css';
 // import Landing from './Landing';
 import InternshipListing from './InternshipListing';
-import Statistics from './Statistcs';
+import Statistics from './Statistics';
 import NavBar from './NavBar';
 // import Profile from './Profile';
 // import JobCart from './JobCart';

@@ -259,6 +259,10 @@ function exportToCSV(fileName = '') {
   });
 }
 
+/**
+ * Converts all the CVS info into 1 JSON file
+ * @param callback
+ */
 function exportCVStoJSON(callback) {
   const { csv2json } = pkg2;
 
@@ -331,7 +335,7 @@ async function main() {
       exportToCSV();
     }
     exportCVStoJSON(function (info) {
-      fs.writeFileSync('./data/statistics-csv.json', JSON.stringify(info, null, 4));
+      fs.writeFileSync('../ui/src/data/statistics-csv.json', JSON.stringify(info, null, 4));
     });
   }
   console.log('Completed.');

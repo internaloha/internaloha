@@ -1,5 +1,6 @@
 import React from 'react';
 import Highcharts from 'highcharts';
+import PropTypes from 'prop-types';
 
 class StatisticsChart extends React.Component {
   constructor(props) {
@@ -10,60 +11,69 @@ class StatisticsChart extends React.Component {
 
   componentDidMount() {
     const _this = this;
+
     // Init chart with data from props.
-    const chart = Highcharts.chart('statistic-charts', {
-      chart: {
-        plotBackgroundColor: null,
-        plotBorderWidth: null,
-        plotShadow: false,
-        type: 'pie',
-      },
+    const chart = Highcharts.chart('statistics', {
+
       title: {
-        text: `${_this.props.month} Spending: $${_this.props.totalSpending}`,
+        text: 'Number of Listings Scraped',
       },
-      tooltip: {
-        // eslint-disable-next-line no-template-curly-in-string
-        pointFormat: '{point.name}: <b>${point.x}</b>',
-      },
-      credits: {
-        enabled: false,
-      },
-      accessibility: {
-        point: {
-          valueSuffix: '%',
+
+      yAxis: {
+        title: {
+          text: 'Number of Listings Scraped',
         },
       },
+
+      xAxis: {
+        accessibility: {
+          rangeDescription: 'Scraper Performance',
+        },
+        type: 'datetime',
+      },
+
+      legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+      },
+
       plotOptions: {
-        pie: {
-          allowPointSelect: true,
-          cursor: 'pointer',
-          dataLabels: {
-            enabled: true,
-            format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        series: {
+          pointStart: Date.parse(_this.props.date),
+          label: {
+            connectorAllowed: false,
           },
         },
       },
-      series: [{
-        name: 'Categories',
-        colorByPoint: true,
-        point: {
-          events: {
-            // have to fix later
-            click: function (e) {
-              const category = e.point.options.name;
-              this.setState({ categoryName: category });
+
+      series: _this.props.statistics,
+
+      responsive: {
+        rules: [{
+          condition: {
+            maxWidth: 500,
+          },
+          chartOptions: {
+            legend: {
+              layout: 'horizontal',
+              align: 'center',
+              verticalAlign: 'bottom',
             },
           },
-        },
-        data: _this.props.data,
-      }],
+        }],
+      },
     });
     this.setState({ chart: chart });
   }
 
   render() {
-    return <div id="statistic-charts" />;
+    return <div id='statistics' />;
   }
 }
+
+StatisticsChart.propTypes = {
+  statistics: PropTypes.array.isRequired,
+};
 
 export default StatisticsChart;
