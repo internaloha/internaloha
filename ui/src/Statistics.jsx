@@ -27,10 +27,8 @@ class Statistics extends React.Component {
 
   render() {
 
-    function formatInfo(info) {
+    function getData(info) {
       delete statisticsCSV.siteName;
-      const chartData = [];
-
       const arrays = _.map(statisticsCSV, function (site) {
         const arr = [];
         const siteInfo = _.map(site, function (data) {
@@ -39,17 +37,38 @@ class Statistics extends React.Component {
         });
         return [...new Set(siteInfo)];
       });
+      return arrays;
+    }
+
+    function formatInfo() {
+      const chartData = [];
+      const allData = [];
       const keys = Object.keys(statisticsCSV);
+      const types = [
+        'lastScraped', 'position', 'company', 'contact', 'location', 'posted', 'due', 'start',
+        'end', 'compensation', 'qualifications', 'skills', 'remote', 'index', 'url', 'description'];
+      for (let i = 0; i < types.length; i++) {
+        const arrays = getData(types[i]);
+        allData.push(arrays);
+      }
       for (let i = 0; i < keys.length; i++) {
+        const info = [];
+        for (let j = 0; j < keys.length; j++) {
+          const obj = {
+            name: types[j],
+            data: allData[j][i][0],
+          };
+          info.push(obj);
+        }
         chartData.push({
           name: keys[i],
-          data: arrays[i][0],
+          data: info,
         });
       }
       return chartData;
     }
 
-    const dates = formatInfo('lastScraped');
+    const dates = getData('lastScraped');
 
     return (
         <div>
@@ -60,7 +79,7 @@ class Statistics extends React.Component {
               Statistics
             </Header>
             {_.map((formatInfo('url')), (statistics, index) => <StatisticsChart
-              statistics={statistics} key={index} date={dates[index]}/>)}
+              statistics={statistics} key={index} date={dates[index][0]}/>)}
             {/* <StatisticsChart statistics={formatInfo()} date={statisticsCSV.acm[0].lastScraped}/> */}
              <Table attached='top' celled sortable>
               <Table.Header onClick={(event) => this.onClick(event)}>

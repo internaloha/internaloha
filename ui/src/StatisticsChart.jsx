@@ -21,12 +21,8 @@ class StatisticsChart extends React.Component {
         enabled: false,
       },
       tooltip: {
-        formatter: function () {
-          let tooltip = new Date(this.x).toLocaleString('en-US', { dateStyle: 'short' });
-          const index = this.y;
-          tooltip += `<br><b>Value : </b>${index}`;
-          return tooltip;
-        },
+        shared: true,
+        crosshairs: true,
       },
       yAxis: {
         allowDecimals: false,
@@ -41,7 +37,7 @@ class StatisticsChart extends React.Component {
         title: {
           text: 'Over Time',
         },
-        categories: _this.props.date.data,
+        categories: _this.props.date,
         labels: {
           formatter: function () {
             return new Date(this.value).toLocaleString('en-US', { dateStyle: 'short' });
@@ -63,7 +59,7 @@ class StatisticsChart extends React.Component {
         },
       },
 
-      series: [_this.props.statistics],
+      series: _this.props.statistics.data,
 
       responsive: {
         rules: [{
@@ -90,7 +86,7 @@ class StatisticsChart extends React.Component {
 
 StatisticsChart.propTypes = {
   statistics: PropTypes.object.isRequired,
-  date: PropTypes.object.isRequired,
+  date: PropTypes.array.isRequired,
 };
 
 export default StatisticsChart;
