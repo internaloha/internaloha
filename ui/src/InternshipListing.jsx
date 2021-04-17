@@ -22,6 +22,7 @@ function InternshipListing() {
   const [career, setCareer] = useState([]);
   const ref = useRef(null);
   const totalListing = getInternshipData.length;
+  const lastScraped = moment(getInternshipData).fromNow();
 
   /* Passes data up from SearchInternshipFeature. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
@@ -62,7 +63,7 @@ function InternshipListing() {
   return (
       <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
+          <Grid.Row style={{ maxWidth: '70%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
             <Segment>
               <h2 style={{ align: 'center' }}>
                 Welcome to InternAloha!
@@ -98,7 +99,7 @@ function InternshipListing() {
               </Grid.Column>
             </Segment>
           </Grid.Row>
-          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
+          <Grid.Row style={{ maxWidth: '70%', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote} careerVal={career}/>

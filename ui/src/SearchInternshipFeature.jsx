@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Segment,
   Header,
@@ -31,11 +31,10 @@ function SearchInternshipFeature({
   let skillChange = skillsVal;
   let remoteCheck = isRemote;
   let careerChange = careerVal;
-  const currentVal = useState(null);
   const sortBy = [
-    { key: 'posted', text: 'posted', value: 'posted' },
-    { key: 'internship', text: 'internship', value: 'internship' },
-    { key: 'company', text: 'company', value: 'company' },
+    { key: 'posted', text: 'Posted Date', value: 'posted' },
+    { key: 'internship', text: 'Internship (A-Z)', value: 'internship' },
+    { key: 'company', text: 'Company (A-Z)', value: 'company' },
   ];
   const setFilters = () => {
     const remoteFilter = internships.isRemote(data, remoteCheck);
@@ -98,7 +97,8 @@ function SearchInternshipFeature({
                     <Radio
                       label={sortBy[0].text}
                       value={sortBy[0].value}
-                      checked={currentVal === sortBy[0].value}
+                      checked={sortChange === sortBy[0].value}
+                      id="1"
                       onChange={getSort}
                     />
                   </Form.Field>
@@ -106,7 +106,8 @@ function SearchInternshipFeature({
                     <Radio
                       label= {sortBy[1].text}
                       value={sortBy[1].value}
-                      checked={currentVal === sortBy[1].value}
+                      checked={sortChange === sortBy[1].value}
+                      id="2"
                       onChange={getSort}
                     />
                   </Form.Field>
@@ -114,7 +115,8 @@ function SearchInternshipFeature({
                     <Radio
                       label= {sortBy[2].text}
                       value={sortBy[2].value}
-                      checked={currentVal === sortBy[2].value}
+                      checked={sortChange === sortBy[2].value}
+                      id="3"
                       onChange={getSort}
                     />
                   </Form.Field>
