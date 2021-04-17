@@ -1,8 +1,10 @@
 import React from 'react';
 import { Container, Table, Header, Icon } from 'semantic-ui-react';
 import _ from 'lodash';
-import statisticData from './data/statistics.data';
+import statisticData from './statistics/statistics.data';
+import statisticsCSV from './statistics/statistics-csv';
 import StatisticsRow from './StatisticsRow';
+import StatisticsChart from './StatisticsChart';
 
 /** A simple static component to render some text for the Statistics page. */
 class Statistics extends React.Component {
@@ -21,10 +23,53 @@ class Statistics extends React.Component {
     let value = this.lowercaseFirstLetter(event.target.textContent);
     value = value.replace(/ +/g, '');
     this.setState({ statistics: _.orderBy(statisticData, value, ['desc']) });
-    console.log(this.state.statistics);
   };
 
   render() {
+
+    function getData(info) {
+      delete statisticsCSV.siteName;
+      const arrays = _.map(statisticsCSV, function (site) {
+        const arr = [];
+        const siteInfo = _.map(site, function (data) {
+          arr.push(data[info]);
+          return arr;
+        });
+        return [...new Set(siteInfo)];
+      });
+      return arrays;
+    }
+
+    function formatInfo() {
+      const chartData = [];
+      const allData = [];
+      const keys = Object.keys(statisticsCSV);
+      const types = [
+        'lastScraped', 'position', 'company', 'contact', 'location', 'posted', 'due', 'start',
+        'end', 'compensation', 'qualifications', 'skills', 'remote', 'index', 'url', 'description'];
+      for (let i = 0; i < types.length; i++) {
+        const arrays = getData(types[i]);
+        allData.push(arrays);
+      }
+      for (let i = 0; i < keys.length; i++) {
+        const info = [];
+        for (let j = 0; j < keys.length; j++) {
+          const obj = {
+            name: types[j],
+            data: allData[j][i][0],
+          };
+          info.push(obj);
+        }
+        chartData.push({
+          name: keys[i],
+          data: info,
+        });
+      }
+      return chartData;
+    }
+
+    const dates = getData('lastScraped');
+
     return (
         <div>
           <Container style={{ marginTop: '10rem', marginBottom: '4rem' }}>
@@ -33,7 +78,10 @@ class Statistics extends React.Component {
                     style={{ marginBottom: '2rem' }}>
               Statistics
             </Header>
-            <Table attached='top' celled sortable>
+            {_.map((formatInfo('url')), (statistics, index) => <StatisticsChart
+              statistics={statistics} key={index} date={dates[index][0]}/>)}
+            {/* <StatisticsChart statistics={formatInfo()} date={statisticsCSV.acm[0].lastScraped}/> */}
+             <Table attached='top' celled sortable>
               <Table.Header onClick={(event) => this.onClick(event)}>
                 <Table.Row>
                   <Table.HeaderCell>Site
@@ -84,10 +132,10 @@ class Statistics extends React.Component {
                 </Table.Row>
               </Table.Header>
               <Table.Body>
-                {_.map((this.state.statistics), (statistics, index) => <StatisticsRow
+                 {_.map((this.state.statistics), (statistics, index) => <StatisticsRow
                     statistics={statistics} key={index}/>)}
               </Table.Body>
-            </Table>
+             </Table>
           </Container>
         </div>
     );

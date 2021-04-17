@@ -1,0 +1,261 @@
+{
+    "siteName": "ziprecruiter",
+    "acm": [
+        {
+            "lastScraped": "2021-04-05T04:10:27.060Z",
+            "position": 117,
+            "company": 117,
+            "contact": 10,
+            "location": 117,
+            "posted": 0,
+            "due": 1,
+            "start": 4,
+            "end": 0,
+            "compensation": 22,
+            "qualifications": 35,
+            "skills": 116,
+            "remote": 4,
+            "index": 117,
+            "url": 117,
+            "description": 117
+        },
+        {
+            "lastScraped": "2021-04-09T04:10:27.060Z",
+            "position": 500,
+            "company": 500,
+            "contact": 500,
+            "location": 500,
+            "posted": 500,
+            "due": 500,
+            "start": 500,
+            "end": 500,
+            "compensation": 500,
+            "qualifications": 500,
+            "skills": 500,
+            "remote": 500,
+            "index": 500,
+            "url": 500,
+            "description": 500
+        }
+    ],
+    "aexpress": [
+        {
+            "lastScraped": "2021-04-05T04:10:28.117Z",
+            "position": 5,
+            "company": 5,
+            "contact": 5,
+            "location": 5,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 3,
+            "skills": 5,
+            "remote": 0,
+            "index": 5,
+            "url": 5,
+            "description": 5
+        }
+    ],
+    "apple": [
+        {
+            "lastScraped": "2021-04-05T04:10:38.896Z",
+            "position": 40,
+            "company": 40,
+            "contact": 1,
+            "location": 40,
+            "posted": 40,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 39,
+            "remote": 0,
+            "index": 40,
+            "url": 40,
+            "description": 40
+        }
+    ],
+    "cisco": [
+        {
+            "lastScraped": "2021-04-05T04:10:22.532Z",
+            "position": 5,
+            "company": 5,
+            "contact": 0,
+            "location": 5,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 3,
+            "qualifications": 1,
+            "skills": 5,
+            "remote": 0,
+            "index": 5,
+            "url": 5,
+            "description": 5
+        }
+    ],
+    "glassdoor": [
+        {
+            "lastScraped": "2021-04-05T04:17:49.630Z",
+            "position": 900,
+            "company": 900,
+            "contact": 102,
+            "location": 900,
+            "posted": 900,
+            "due": 25,
+            "start": 50,
+            "end": 0,
+            "compensation": 222,
+            "qualifications": 350,
+            "skills": 900,
+            "remote": 242,
+            "index": 900,
+            "url": 900,
+            "description": 894
+        }
+    ],
+    "hawaiislack": [
+        {
+            "lastScraped": "2021-04-05T04:10:45.866Z",
+            "position": 1,
+            "company": 1,
+            "contact": 0,
+            "location": 1,
+            "posted": 1,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 0,
+            "remote": 0,
+            "index": 1,
+            "url": 0,
+            "description": 1
+        }
+    ],
+    "idealist": [
+        {
+            "lastScraped": "2021-04-05T04:10:45.960Z",
+            "position": 12,
+            "company": 12,
+            "contact": 0,
+            "location": 12,
+            "posted": 12,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 3,
+            "remote": 1,
+            "index": 12,
+            "url": 12,
+            "description": 0
+        }
+    ],
+    "indeed": [
+        {
+            "lastScraped": "2021-04-05T04:11:27.940Z",
+            "position": 204,
+            "company": 204,
+            "contact": 20,
+            "location": 204,
+            "posted": 200,
+            "due": 8,
+            "start": 11,
+            "end": 0,
+            "compensation": 45,
+            "qualifications": 85,
+            "skills": 203,
+            "remote": 69,
+            "index": 204,
+            "url": 204,
+            "description": 204
+        }
+    ],
+    "nsf-reu": [
+        {
+            "lastScraped": "2021-04-05T04:10:24.425Z",
+            "position": 96,
+            "company": 96,
+            "contact": 0,
+            "location": 96,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 84,
+            "remote": 1,
+            "index": 96,
+            "url": 96,
+            "description": 96
+        }
+    ],
+    "simplyHired": [
+        {
+            "lastScraped": "2021-04-05T04:10:39.170Z",
+            "position": 1005,
+            "company": 1005,
+            "contact": 127,
+            "location": 1005,
+            "posted": 1005,
+            "due": 21,
+            "start": 42,
+            "end": 0,
+            "compensation": 277,
+            "qualifications": 404,
+            "skills": 1004,
+            "remote": 340,
+            "index": 1005,
+            "url": 1005,
+            "description": 1005
+        }
+    ],
+    "stackoverflow": [
+        {
+            "lastScraped": "2021-04-05T04:10:22.820Z",
+            "position": 10,
+            "company": 10,
+            "contact": 1,
+            "location": 10,
+            "posted": 10,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 1,
+            "qualifications": 3,
+            "skills": 10,
+            "remote": 2,
+            "index": 10,
+            "url": 10,
+            "description": 10
+        }
+    ],
+    "ziprecruiter": [
+        {
+            "lastScraped": "2021-04-05T04:10:51.511Z",
+            "position": 40,
+            "company": 40,
+            "contact": 4,
+            "location": 40,
+            "posted": 40,
+            "due": 1,
+            "start": 2,
+            "end": 0,
+            "compensation": 26,
+            "qualifications": 26,
+            "skills": 40,
+            "remote": 25,
+            "index": 40,
+            "url": 40,
+            "description": 40
+        }
+    ]
+}

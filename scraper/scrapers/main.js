@@ -1,12 +1,12 @@
-import Logger from 'loglevel';
 import pkg2 from 'json-2-csv';
 import commandLineUsage from 'command-line-usage';
 import fs from 'fs';
+import Logger from 'loglevel';
+import multi_parse from './multi-parser.js';
+import statistics from './statistics.js';
 import acm from './acm.js';
 import apple from './apple.js';
 import aexpress from './aexpress.js';
-import multi_parse from './multi-parser.js';
-import statistics from './statistics.js';
 import linkedin from './linkedin.js';
 import monster from './monster.js';
 import simplyHired from './simplyHired.js';
@@ -166,6 +166,14 @@ async function getData(scraperName, headless = true) {
 }
 
 /**
+ * Fetches information from statistics.data.jsn and returns it as a JSON object
+ */
+function fetchStatistics() {
+  const str = fs.readFileSync('../ui/src/statistics/statistics.data.json', 'utf8');
+  return JSON.parse(str.toString());
+}
+
+/**
  * Converts json object to CSV
  * @param data
  * @param fileExists - if the file already exists. Default: false
@@ -251,6 +259,31 @@ function exportToCSV(fileName = '') {
   });
 }
 
+/**
+ * Converts all the CVS info into 1 JSON file
+ * @param callback
+ */
+function exportCVStoJSON(callback) {
+  const { csv2json } = pkg2;
+
+  const obj = {};
+  const statisticData = fetchStatistics();
+  for (let i = 0; i < statisticData.length; i++) {
+    const site = statisticData[i];
+    if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
+      const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
+      csv2json(csvString, (error2, jsonObjs) => {
+        if (error2) {
+          throw error2;
+        }
+        obj.siteName = site.site;
+        obj[site.site] = jsonObjs;
+        callback(obj);
+      }, { trimHeaderFields: true });
+    }
+  }
+}
+
 async function main() {
   process.setMaxListeners(0);
 // default is running in production (doesn't open browsers)
@@ -301,6 +334,9 @@ async function main() {
     } else {
       exportToCSV();
     }
+    exportCVStoJSON(function (info) {
+      fs.writeFileSync('../ui/src/statistics/statistics-csv.json', JSON.stringify(info, null, 4));
+    });
   }
   console.log('Completed.');
 }

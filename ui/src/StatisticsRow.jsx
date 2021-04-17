@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class StatisticsRow extends React.Component {
 
   render() {
-    const total = this.props.statistics.entries;
+    const total = this.props.statistics.index;
     const position = ((this.props.statistics.position / total) * 100).toString().substring(0, 5);
     const company = ((this.props.statistics.company / total) * 100).toString().substring(0, 5);
     const contact = ((this.props.statistics.contact / total) * 100).toString().substring(0, 5);
