@@ -33,8 +33,8 @@ function SearchInternshipFeature({
   let careerChange = careerVal;
   const sortBy = [
     { key: 'posted', text: 'Posted Date', value: 'posted' },
-    { key: 'internship', text: 'Internship (A-Z)', value: 'internship' },
-    { key: 'company', text: 'Company (A-Z)', value: 'company' },
+    { key: 'internship', text: 'Internship Title', value: 'internship' },
+    { key: 'company', text: 'Company', value: 'company' },
   ];
   const setFilters = () => {
     const remoteFilter = internships.isRemote(data, remoteCheck);
@@ -98,7 +98,6 @@ function SearchInternshipFeature({
                       label={sortBy[0].text}
                       value={sortBy[0].value}
                       checked={sortChange === sortBy[0].value}
-                      id="1"
                       onChange={getSort}
                     />
                   </Form.Field>
@@ -107,7 +106,6 @@ function SearchInternshipFeature({
                       label= {sortBy[1].text}
                       value={sortBy[1].value}
                       checked={sortChange === sortBy[1].value}
-                      id="2"
                       onChange={getSort}
                     />
                   </Form.Field>
@@ -116,7 +114,6 @@ function SearchInternshipFeature({
                       label= {sortBy[2].text}
                       value={sortBy[2].value}
                       checked={sortChange === sortBy[2].value}
-                      id="3"
                       onChange={getSort}
                     />
                   </Form.Field>
