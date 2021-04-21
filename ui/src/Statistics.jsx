@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, Header, Icon } from 'semantic-ui-react';
+import { Container, Table, Header, Icon, Tab, Label } from 'semantic-ui-react';
 import _ from 'lodash';
 import statisticData from './statistics/statistics.data';
 import statisticsCSV from './statistics/statistics-csv';
@@ -72,6 +72,45 @@ class Statistics extends React.Component {
 
     const dates = getData('lastScraped');
 
+    function getPercentageChange(oldNumber, newNumber) {
+      const decreaseValue = oldNumber - newNumber;
+
+      return (decreaseValue / oldNumber) * 100;
+    }
+
+    function showErrorIcon(site) {
+      console.log(site);
+      const url = site.data[14].data;
+      const currentNum = url[url.length - 1];
+      const prevNum = url.length >= 2 ? url[url.length - 2] : 0;
+      const total = getPercentageChange(currentNum, prevNum);
+      const icon = total < -20 ? 'warning sign' : '';
+      console.log(total);
+      const obj = {
+        color: 'blue',
+        key: site.name, icon: icon,
+        content: (
+          <div>
+            {site.name}
+            <Label>{url[url.length - 1]}</Label>
+          </div>
+        ),
+      };
+      return obj;
+    }
+
+    function getPanes() {
+      const info = formatInfo('url').map((site, index) => (
+        {
+        menuItem: (showErrorIcon(site)),
+        render: () => <Tab.Pane>
+          <StatisticsChart
+            statistics={site} key={index} date={dates[index][0]}/>
+        </Tab.Pane>,
+      }));
+      return info;
+    }
+
     return (
         <div>
           <Container style={{ marginTop: '10rem', marginBottom: '4rem' }}>
@@ -80,9 +119,12 @@ class Statistics extends React.Component {
                     style={{ marginBottom: '2rem' }}>
               Statistics
             </Header>
-            {_.map((formatInfo('url')), (statistics, index) => <StatisticsChart
-              statistics={statistics} key={index} date={dates[index][0]}/>)}
-            {/* <StatisticsChart statistics={formatInfo()} date={statisticsCSV.acm[0].lastScraped}/> */}
+            <Tab
+              menu={{ fluid: true, vertical: true, tabular: true }}
+              grid = {{ paneWidth: 13, tabWidth: 3 }}
+              panes={getPanes()} />
+             {/* {_.map((formatInfo('url')), (statistics, index) => <StatisticsChart */}
+             {/* statistics={statistics} key={index} date={dates[index][0]}/>)} */}
              <Table attached='top' celled sortable>
               <Table.Header onClick={(event) => this.onClick(event)}>
                 <Table.Row>
