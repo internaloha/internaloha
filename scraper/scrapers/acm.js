@@ -25,6 +25,7 @@ export async function main(headless) {
   try {
     Logger.error('Starting scraper acm at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
+    await page.setDefaultTimeout(60000);
     await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
     await page.waitForNavigation;
     const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
