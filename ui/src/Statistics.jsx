@@ -54,11 +54,13 @@ class Statistics extends React.Component {
       for (let i = 0; i < keys.length; i++) {
         const info = [];
         for (let j = 0; j < keys.length; j++) {
-          const obj = {
-            name: types[j],
-            data: allData[j][i][0],
-          };
-          info.push(obj);
+          if (allData && allData[j]) {
+            const obj = {
+              name: types[j],
+              data: allData[j][i][0],
+            };
+            info.push(obj);
+          }
         }
         chartData.push({
           name: keys[i],
