@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 import { Card, Container, Grid, Header, Segment } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 import moment from 'moment';
 import InternshipListingCard from './InternshipListingCard';
 import SearchInternshipFeature from './SearchInternshipFeature';
@@ -94,6 +95,9 @@ function InternshipListing() {
                   Youtern ({internships.getData('Youtern').length}),
                   Zip Recruiter ({internships.getData('ZipRecruiter').length})</p>
                 <p>InternAloha collected this information {lastScraped}. </p>
+                <p>We also collect statistics on the sites scraped. For more information, see
+                  <NavLink to="/statistics" exact> statistics.</NavLink>
+                </p>
                 <p>If you have comments or question about InternAloha, please feel free to visit our
                   <a href="https://internaloha.github.io/documentation/"> home page</a>. </p>
               </Grid.Column>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, Header, Icon, Tab, Label } from 'semantic-ui-react';
+import { Container, Header, Icon, Label, Tab, Table } from 'semantic-ui-react';
 import _ from 'lodash';
 import statisticData from './statistics/statistics.data';
 import statisticsCSV from './statistics/statistics-csv';
@@ -79,36 +79,32 @@ class Statistics extends React.Component {
     }
 
     function showErrorIcon(site) {
-      console.log(site);
       const url = site.data[14].data;
       const currentNum = url[url.length - 1];
       const prevNum = url.length >= 2 ? url[url.length - 2] : 0;
       const total = getPercentageChange(currentNum, prevNum);
-      const icon = total < -20 ? 'warning sign' : '';
-      console.log(total);
-      const obj = {
+      const icon = total <= -10 ? 'warning sign' : '';
+      return {
         color: 'blue',
         key: site.name, icon: icon,
         content: (
           <div>
             {site.name}
-            <Label>{url[url.length - 1]}</Label>
+            <Label style={{ backgroundColor: '#ffffff00' }}>{url[url.length - 1]}</Label>
           </div>
         ),
       };
-      return obj;
     }
 
     function getPanes() {
-      const info = formatInfo('url').map((site, index) => (
+      return formatInfo('url').map((site, index) => (
         {
-        menuItem: (showErrorIcon(site)),
-        render: () => <Tab.Pane>
-          <StatisticsChart
-            statistics={site} key={index} date={dates[index][0]}/>
-        </Tab.Pane>,
-      }));
-      return info;
+          menuItem: (showErrorIcon(site)),
+          render: () => <Tab.Pane style={{ backgroundColor: 'white' }}>
+            <StatisticsChart
+              statistics={site} key={index} date={dates[index][0]}/>
+          </Tab.Pane>,
+        }));
     }
 
     return (
@@ -120,11 +116,9 @@ class Statistics extends React.Component {
               Statistics
             </Header>
             <Tab
-              menu={{ fluid: true, vertical: true, tabular: true }}
+              menu={{ fluid: true, vertical: true }}
               grid = {{ paneWidth: 13, tabWidth: 3 }}
               panes={getPanes()} />
-             {/* {_.map((formatInfo('url')), (statistics, index) => <StatisticsChart */}
-             {/* statistics={statistics} key={index} date={dates[index][0]}/>)} */}
              <Table attached='top' celled sortable>
               <Table.Header onClick={(event) => this.onClick(event)}>
                 <Table.Row>
