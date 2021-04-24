@@ -203,7 +203,7 @@ function convertToCVS(data, fileExists = false) {
  */
 function exportToCSV(fileName = '') {
   const { csv2json } = pkg2;
-  fs.readFile('../ui/src/data/statistics.data.json', (err, data) => {
+  fs.readFile('../ui/src/statistics/statistics.data.json', (err, data) => {
     if (err) {
       throw err;
     }

@@ -80,7 +80,9 @@ class StatisticsChart extends React.Component {
   }
 
   render() {
-    return <div id={this.props.statistics.name} />;
+    return <div>
+      <div style={{ position: 'sticky' }} id={this.props.statistics.name}/>
+    </div>;
   }
 }
 
