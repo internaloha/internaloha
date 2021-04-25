@@ -95,9 +95,9 @@ function SearchInternshipFeature({
                   </Form.Field>
                   <Form.Radio
                     label={sortBy[0].text}
-                    value=''
+                    value={sortBy[0].value}
                     name='sortBy'
-                    checked={sortChange === ''}
+                    checked={sortChange === sortBy[0].value}
                     onChange={getSort}
                   />
                   <Form.Radio
