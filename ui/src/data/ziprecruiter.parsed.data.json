@@ -1,873 +1,340 @@
 [
     {
-        "position": "Software Engineering Intern",
-        "company": "KRB Government Solutions",
+        "position": "Mfg Engineer",
+        "company": "inSync Staffing",
         "location": {
-            "city": "Greenbelt",
-            "state": "Maryland",
+            "city": "San Jose",
+            "state": "California",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/ojob/eec4d26210f54b3800b09c274c97e37d?lvk=CbxZbudKyiI-lA2rmBBVIA.--LzR3rEQRB",
-        "posted": "2021-03-25T10:37:47.410Z",
-        "lastScraped": "2021-04-12T10:37:47.410Z",
-        "description": "<div><div><p><b>Title:</b></p>Software Engineering Intern<p></p><p></p><p>Around here, we define the future.</p><p></p><p>We are a company of innovators, thinkers, creators, explorers, volunteers, and dreamers. But we all share one goal: to improve the world responsibly and safely.</p><p></p><p>KBR is seeking several interns to work with scientific and engineering staff supporting projects using Artificial Intelligence, Machine Learning, Cybersecurity, Cloud, DevSecOps, and Autonomous Systems techniques.</p><p></p><p><b>Must be a U.S. Citizen </b></p><p><b>Internship dates: June 1st, 2021 - TBD</b></p><p></p><p>For each of the projects, interns will leverage the AWS machine learning tools, continue to advance KBR's knowledge and application of data analytics. Interns will collaborate with scientific and engineering staff supporting projects such as the development of a Cloud Security Strategy to leverage the built-in capabilities provided by Amazon Web Services (AWS). AWS tools used will include <span class=\"long-word\">CloudWatch,Inspector,</span> Systems Manager, GuardDuty, Kibana, and QuickSight, with opportunities for the addition of custom tools for configuration management, training, and other elements to complete a robust Cloud-based security framework forKBR.The frameworkwill include an end-to-end DevSecOps platform designed to automate security requirements by embedding security controls and processes early in the DevOps workflow, and will help our customers continue to develop and apply new technology capabilities while retaining systems security.</p><p></p><p>Additional projects will include investigating the value of Digital Twin (DT) in autonomous systems use cases; investigate setting up for the use cases and how the operational AI systems would interact with DT requirements. Explore methodology to address operational decision making utilizing machine learning in Air Traffic Management and other domains. Analyze textual information in transportation datasets to identify commonalities; demonstrate Natural Language Processing (NLP) capability. Managing telematics data, implement ability to overlay multiple vehicle routes on a map to assess road utilization.</p><p></p><p>Other projects will be similar to last year's summer internship program which consisted of: Reinforcement learning technique to enableautonomous systemsand robotics. Research Explainable AI and leveraging this technology to detect bias in machine learning models. Use distributed ledger/block-chain technology to enable governance and management of flight identifiers. Edge computing utilizing neuromorphic processing. Research and development of Augmented Reality and Virtual Reality (AR/VR) software and hardware tools; develop an AR/VR solution to simulate real-world environments and facilitate activities such as remote maintenance of complex systems and virtual training environments.</p><p></p><p>Interns will spend the majority of their time researching, installing, and configuring new tools, programming using the selected tools, and learning more efficient methods to solve a given problem. Interns are not required to be programming experts, but they should have a passion for learning new things and not be afraid to jump in and try out new tools and/or solutions.</p><p></p><p>Interns will leverage an Agile Development process with daily scrum meetings facilitated using Jira to capture user stories and track the status of all issues. Fridays are reserved for documenting the work each week in the form of a Wiki site, as well as numerous forms of documentation (PowerPoint, Word, Visio, etc.). Once a month, interns will present the work they have completed to other staff members atKBR, with a final presentation at the end of the summer to both KBR and customer personnel.</p><p></p><p></p><p><b>Required Education:</b></p><ul><li><p>Must be enrolled in undergraduate coursework in a related degree program at an accredited university</p></li><li><p>Must be a Rising Junior or Senior</p></li></ul><p></p><p><b>Preferred:</b></p><ul><li><p>Basic familiarity with virtual environments and cloud-based technologies, as well as programming languages such as Java, Python, Perl etc.</p></li></ul><p></p><p>Work Schedule: Estimated at 32-40 hours/week with flexibility to accommodate intern's education</p><p></p><p>Work Location: Telework</p><p></p><p></p><p></p><p><b>Scheduled Weekly Hours:</b></p>40<p></p><p></p><p>KBR is an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, disability, sex, sexual orientation, gender identity or expression, age, national origin, veteran status, genetic information, union status and/or beliefs, or any other characteristic protected by federal, state, or local law.</p><p></p><p></p><p></p></div></div>",
+        "url": "https://www.ziprecruiter.com/jobs/insync-staffing-f5578b52/mfg-engineer-37aa067c?lvk=ZU3S2t7_lWFbe_GoJlH0Bg.--M-iNhfmP3",
+        "posted": "2021-04-24T12:54:32.335Z",
+        "lastScraped": "2021-04-25T12:54:32.335Z",
+        "description": "<div><p>Pay $31.00<br>Day shift<br><br><em>4 year technical or science degree and experience in Medical Device Industry<br><br>Will consider recent BS grads with some applicable internship experience</em><br><em>Job Description:</em></p><ul><li><em>Support Medical Device R&amp;D efforts working with the customer and other engineers</em></li><li><em>Catheter experience preferred.</em></li><li><em>Cleanroom experience</em></li><li><em>Computer skills to access Manufacturing Process Instructions.</em></li><li><em>Good communication skills.</em></li><li><em>QA, Mfg or R&amp;D background</em></li></ul></div>",
         "index": 1,
         "skills": [
-            "virtual reality",
-            "software engineering",
-            "machine learning",
-            "project management",
-            "information technology",
-            "java",
-            "devops",
-            "hardware"
+            "software engineering"
         ],
-        "remote": true
+        "compensation": "paid",
+        "remote": false
     },
     {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
+        "position": "Electrical Engineer",
+        "company": "Elite Ed Services Staffing Agency, LLC",
         "location": {
-            "city": "Miccosukee",
-            "state": "Florida",
+            "city": "Las Vegas",
+            "state": "Nevada",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/ojob/db83a14bca4344c987ce6088d175cf38?lvk=a7lWgAUGC01e0xU8YydZHA.--LysZjCmig",
-        "posted": "2021-03-27T10:37:49.403Z",
-        "lastScraped": "2021-04-12T10:37:49.403Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
+        "url": "https://www.ziprecruiter.com/jobs/elite-ed-services-staffing-agency-llc-f3881386/electrical-engineer-c58937db?lvk=OjEw2y453kh2IjBpul9iIg.--M-m1ggghV",
+        "posted": "2021-04-25T12:54:35.234Z",
+        "lastScraped": "2021-04-25T12:54:35.234Z",
+        "description": "<div><p><strong>Summary</strong></p><p>Uses advanced techniques, theory, precepts and practices in the Electrical Engineering field. Serves as technical specialist, staff advisor and consultant in area of Electrical Engineering. Provides technical support for design effort including participation in planning and design; interpretation of design; application of construction methods; resolution and documentation of design conflicts; and constructability reviews. May be given project management responsibilities. Supervision of engineering and support personnel is usual at this level but may often be on a lead and project basis.</p><p><strong>Essential Responsibilities</strong></p><p>Reasonable accommodations may be made to enable individuals with disabilities to perform the essential functions.</p><ul><li>Prepare and provide oversight of technical studies, submittals, plans, specifications, diagrams, calculations, cost estimates and control strategies for public works projects and private developments involving electrical systems and equipment, high voltage and renewable energy power systems, control systems and instrumentation, lighting systems, traffic signal systems including voltage drop calculations, telecommunication systems and security systems.</li><li>Conduct a variety of electrical and power system studies, including lighting lamination analysis for transportation corridors</li><li>Perform difficult engineering research and analyze complex engineering and mathematical problems, evaluating alternatives and recommending or adopting effective courses of action</li><li>Ensure engineering activities comply with company and contract requirements and support overall project schedule.</li><li>Conduct field inspections and investigations to verify as-built conditions as they may impact design requirements;</li><li>Coordinate services during construction including attending progress meetings, supervising review of shop drawings, issuing RFI responses and investigating field changes.</li><li>Direct day-to-day project management activity on design and planning projects as assigned, including scheduling and budget.</li><li>Develop, implement, and administer project engineering procedures and other work controlling documents.</li><li>Assist in the proposal process for new contracts, including fee estimates and project scope.</li><li>Oversee work of engineering interns and/or technical staff on project-specific tasks.</li><li>Coordinate technical elements with multi-disciplinary engineering teams.</li></ul><p><strong>Knowledge, Skills, and Abilities</strong></p><ul><li>Theory, principles and practices of electrical engineering</li><li>Applicable laws, codes and regulations pertaining to electrical and instrumentation elements of waterworks infrastructure design and construction, including the National Electrical Code, IEEE standards and InterNational Electrical Testing Standards</li><li>Good working knowledge of CAD software, Civil 3D, ETAP, Microsoft programs (Word, Excel, and Project) and video <span class=\"long-word\">conferencing/communications</span> programs (Zoom, Teams, WebEx).</li><li>Ability to communicate clearly and concisely in written and oral communications.</li><li>Must be able to read and comprehend detailed correspondence and reports.</li><li>Ability to deal with problems involving several variables in standardized situations.</li></ul><p><strong>Education and Experience</strong> <strong>Requirements</strong></p><p>Bachelors of Science degree</p></div>",
         "index": 2,
         "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
             "project management",
-            "web development"
+            "software engineering"
         ],
-        "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Medley",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/498c0c7442f0a391730aa360367238c3?lvk=6veqRODChwtvQy5wbKGC9w.--LysZkcwjJ",
-        "posted": "2021-03-27T10:37:51.251Z",
-        "lastScraped": "2021-04-12T10:37:51.251Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 3,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "North Bay Village",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/f783db08de0c26849c35bab3bfe50140?lvk=XNTMo--RtGKGQQ42o1RRkA.--LysZje23k",
-        "posted": "2021-03-27T10:37:53.177Z",
-        "lastScraped": "2021-04-12T10:37:53.177Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 4,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Fort Lauderdale",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/c94292357460dd5f193b1b03fbd70988?lvk=WPxRsCptTpJBEuRshF_K3w.--LysZjKRn3",
-        "posted": "2021-03-27T10:37:55.130Z",
-        "lastScraped": "2021-04-12T10:37:55.130Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 5,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Boca Raton",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/bd6298bb344546be138cd7a3fac56047?lvk=cVuKQXtTUxFMYAxPraCsvg.--LysZkO407",
-        "posted": "2021-03-27T10:37:57.173Z",
-        "lastScraped": "2021-04-12T10:37:57.173Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 6,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Miami Shores",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/60c3c582dfc6c5a21c97ea4020e49701?lvk=5l5mvml_0RXZyKm2N5Zl5w.--LysZjsPaJ",
-        "posted": "2021-03-27T10:37:59.212Z",
-        "lastScraped": "2021-04-12T10:37:59.212Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 7,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Southwest Ranches",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/44e46054740358544b33087fb6585f95?lvk=2MiVJosJgdrb4dwSfsSDOA.--LysZkKkX-",
-        "posted": "2021-03-27T10:38:01.148Z",
-        "lastScraped": "2021-04-12T10:38:01.148Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 8,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "El Portal",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/d4c98ab89c57bffa245cfb43192c6a2e?lvk=acILOndGgZKC_cedGDBqKQ.--LysZjnRm3",
-        "posted": "2021-03-27T10:38:03.029Z",
-        "lastScraped": "2021-04-12T10:38:03.029Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 9,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Bay Harbor Islands",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/63525fb2fdb75a0f8eba7a21bb713805?lvk=3h2E_CwHjB-e2VKbzVlP5w.--LysZkUHQ3",
-        "posted": "2021-03-27T10:38:04.649Z",
-        "lastScraped": "2021-04-12T10:38:04.649Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 10,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Virginia Gardens",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/c01068685d1e3eadc867a1cc4611a429?lvk=nmpTrjldFV_lKH88HyEomQ.--LysZk9FUk",
-        "posted": "2021-03-27T10:38:06.572Z",
-        "lastScraped": "2021-04-12T10:38:06.572Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 11,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "West Miami",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/fffff5b4fbb84c423ddd732aefd4df62?lvk=BYXTICCvCGJYNIVjwt9aKA.--LysZjFMdZ",
-        "posted": "2021-03-27T10:38:08.623Z",
-        "lastScraped": "2021-04-12T10:38:08.623Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 12,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Kendall",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/8a068c1acab0e8c812f7acc329ed83cc?lvk=hUZnqACb1gaCOHLZRqKIpg.--LysZkPfnN",
-        "posted": "2021-03-27T10:38:10.211Z",
-        "lastScraped": "2021-04-12T10:38:10.211Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 13,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Hialeah",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/952edd1bd05c196ca9679a7797b167fb?lvk=RXHy7onv8f_dlghSUlwUfQ.--LysZjAih7",
-        "posted": "2021-03-27T10:38:12.296Z",
-        "lastScraped": "2021-04-12T10:38:12.296Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 14,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Pompano Beach",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/34dc8f5339ce47095af15eb73c4bcddd?lvk=2rBrpfNufOwIgPvWRWOKnw.--LysZkFL3N",
-        "posted": "2021-03-27T10:38:14.196Z",
-        "lastScraped": "2021-04-12T10:38:14.196Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 15,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Florida City",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/b520c1ecb4d49c1c82399593e41284a9?lvk=XI58KYYl9OKewLZmCAZO6A.--LysZjvvSZ",
-        "posted": "2021-03-27T10:38:15.686Z",
-        "lastScraped": "2021-04-12T10:38:15.686Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 16,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Pembroke Park",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/a2a22bbd2903d23231c9cc44b37a9baf?lvk=cIa7KpxDh6pPQIrfa4hxLQ.--LysZjlWLc",
-        "posted": "2021-03-27T10:38:17.730Z",
-        "lastScraped": "2021-04-12T10:38:17.730Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 17,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Miami Beach",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/39d1f8e866e553c4a11fa1164517ad51?lvk=DcpeanYTSqES9l2A13f5Hw.--LysZjT7xB",
-        "posted": "2021-03-27T10:38:19.261Z",
-        "lastScraped": "2021-04-12T10:38:19.261Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 18,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Key Biscayne",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/7f73b7574a88fc1ef9757c375cb2336b?lvk=XT9ZiUOIIyB7O9UeSbEaCw.--LysZkdZ-c",
-        "posted": "2021-03-27T10:38:21.414Z",
-        "lastScraped": "2021-04-12T10:38:21.414Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 19,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Homestead",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/fa7ce1f9b1b6a78340e310d2ece68894?lvk=dD9bFqadj_0R1EBA6-o2_g.--LysZk0LiJ",
-        "posted": "2021-03-27T10:38:23.357Z",
-        "lastScraped": "2021-04-12T10:38:23.357Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 20,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Assurant",
-        "location": {
-            "city": "Miami",
-            "state": "Florida",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/e30f6f0006c98bb96eb624b9e632bc10?lvk=KkJacMJE5OvNClfJ6Cg6MA.--LysZkLbKk",
-        "posted": "2021-03-26T10:38:24.891Z",
-        "lastScraped": "2021-04-12T10:38:24.891Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you’re learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology.&nbsp; The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We’ll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We’ll share more throughout the program.</p><p></p><p><b>What you’ll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including:<ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome&nbsp;</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed&nbsp;<br>&nbsp;</li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor’s degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p></div></div>",
-        "index": 21,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "javascript",
-            "devops",
-            "c and c++",
-            "machine learning",
-            "project management",
-            "web development"
-        ],
-        "compensation": "paid",
-        "qualifications": [
-            "Bachelor's degree"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Intel",
-        "location": {
-            "city": "Phoenix",
-            "state": "Arizona",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/18f1e1f0c45802473dac041cc659ec0f?lvk=G-0wdmtBKjavkemOVF1crw.--LzH-aM-BN",
-        "posted": "2021-04-05T10:38:26.852Z",
-        "lastScraped": "2021-04-12T10:38:26.852Z",
-        "description": "<div><div><b>Job Details:</b><p></p><p></p>Job Description:&nbsp;<p>Join a software team developing enhancing and supporting state-of-the-art database data model and infrastructure to enable process technology and process design kit automation. Collaborate with process design kit developers and process technology teams to enable highly efficient automation work flows. Responsibilities include:</p><ul><li>Collaborating with team members to determine best practices and requirements for software</li><li>Developing intuitive software that meets and exceeds the needs of the team</li><li>Maintaining all software and create updates regularly to address customer and company concerns</li><li>Analyzing and testing programs and products before formal launch</li><li>Troubleshooting coding problems quickly and efficiently to ensure a productive workplace</li></ul><p></p><p>Behavior traits we look for:</p><ul><li>Outstanding collaboration and communication skills</li></ul><p></p><p><i>This is an internship and compensation will be given accordingly based on candidate education level and internship duration</i></p><p></p><p></p><b>Qualifications:</b><p>You must possess the below requirements to be initially considered for this position. Preferred qualifications are in addition to the requirements and are considered a plus factor in identifying top candidates. Experience listed below would be obtained through a combination of your schoolwork and/or classes and/or research and/or relevant previous job and/or internship experiences.</p><p></p><p>Minimum requirements:</p><p>Pursuing a MS/PhD in Computer Science, Software Engineering, Computer Engineering. 6+ months experience in the following areas:</p><ul><li>On largescale software projects</li><li>Developing software utilizing various coding languages like Python and Ruby</li><li>Analyzing code for weaknesses and errors and present detailed plans to improve</li><li>Developing customized code for multiple projects simultaneously</li></ul><p></p><p>Preferred:</p><ul><li>Design rules and process technology is desirable</li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>Job Type:Student / Intern<p></p><p></p>Shift:Shift 1 (United States of America)<p></p><p></p>Primary Location:&nbsp;US, Oregon, Hillsboro<p></p><p></p>Additional Locations:US, Arizona, Phoenix, US, California, Santa Clara<p></p><p></p><p></p><p></p>Business group:As the world's largest chip manufacturer, Intel strives to make every facet of semiconductor manufacturing state-of-the-art -- from semiconductor process development and manufacturing, through yield improvement to packaging, final test and optimization, and world class Supply Chain and facilities support. Employees in the Technology and Manufacturing Group are part of a worldwide network of design, development, manufacturing, and assembly/test facilities, all focused on utilizing the power of Moore's Law to bring smart, connected devices to every person on Earth<p></p><p></p>Posting Statement:All qualified applicants will receive consideration for employment without regard to race, color, religion, religious creed, sex, national origin, ancestry, age, physical or mental disability, medical condition, genetic information, military and veteran status, marital status, pregnancy, gender, gender expression, gender identity, sexual orientation, or any other characteristic protected by local law, regulation, or ordinance.Position of TrustN/A</div></div>",
-        "index": 22,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "networks",
-            "python",
-            "project management"
         ],
         "remote": false
     },
     {
-        "position": "Software Engineering Intern",
-        "company": "Assurant, Inc",
+        "position": "Software Engineer",
+        "company": "sharpencx.corporation.",
         "location": {
-            "city": "Atlanta",
-            "state": "Georgia",
+            "city": "Houston",
+            "state": "Texas",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/ojob/bb097a00008736235c3b2ccb1347cce6?lvk=yvl5cGGqxeFSLotbfasuQg.--LyP_ky_Kg",
-        "posted": "2021-03-25T10:38:28.324Z",
-        "lastScraped": "2021-04-12T10:38:28.324Z",
-        "description": "<div><div><p>Do you want to join a team that helps people protect the things that matter the most to them? Are you interested in discovering how to apply the skills you're learning in school to solve real-world challenges? Are you looking for a well-rounded experience that enables and encourages continuous learning and participation in corporate social responsibility initiatives?</p><p></p><p>This internship is designed for current students and soon to be college graduates to gain a well-rounded introduction to and experience in Information Technology. The internship will focus on principles of Agile Application Development &amp; Software Engineering and will equip you with transferrable skills that can help you anywhere you go.</p><p></p><p>The program is a paid internship where you will be engaged in immersive learning experiences, from Dojos to tech talks, with the opportunity to showcase your work with our leadership.</p><p></p><p>We offer flexible schedules and an immersive remote environment. We'll also be on the look-out for individuals who might be a good fit to join us full-time after graduation. We'll share more throughout the program.</p><p></p><p><b>What you'll get to do:</b></p><ul><li>Plan, Develop, Implement and/or Support applications in various languages and disciplines including: <ul><li>C#</li><li>.NET</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></li><li>Creative problem solving</li><li>Object oriented programming</li><li>Learning new technologies in the web application space</li><li>Research, solve for, and engage others as necessary to develop solutions that will result in the desired business outcome</li><li>Web/mobile development &amp; integrated systems</li><li>Handle application development tasks from program flow design, coding, devops, testing, implementation rollout</li><li>Ability to work and think independently to produce working code</li><li>Work through and resolve production issues for applications supported by the department or functional area</li><li>Prepare documentation on work produced to ensure a smooth handoff to other developers, as needed<br></li></ul><p><b>You bring your experience, knowledge &amp; skills:</b></p><ul><li>Positive attitude and willingness to learn</li><li>Project or Teamwork</li><li>Presentations &amp; Tech challenges</li><li>Creative problem solver</li><li>Ability to demonstrate logical thinking</li><li>Community Involvement</li></ul><p></p><p><b>Education:</b></p><p>Currently enrolled in a bachelor's degree in Computer Science, Software Development, Information Systems, or a related program at an accredited university.</p><p></p><p></p><p></p></div></div>",
-        "index": 23,
+        "url": "https://www.ziprecruiter.com/jobs/sharpencx-corporation-c2a3d0f6/software-engineer-11efe69b?lvk=_jmyfaZ9IUHA6xMuFGzxgA.--M-jPreD6o",
+        "posted": null,
+        "lastScraped": "2021-04-25T12:54:38.900Z",
+        "description": "<div><p>The ideal candidate will be responsible for developing high-quality applications. They will also be responsible for designing and implementing testable and scalable code.</p><p>Develop functional software in accordance with the defined requirements.</p><p>Collaborate in the process of conceiving, specifying, designing, programming, documenting, testing, and bug fixing involved in creating and maintaining applications, frameworks, or other software components.</p><p></p><p>What we’re looking for:</p><p></p><p>Minimum 2+ years of software development experience using some of the following or similar technologies:</p><p>C#, .NET, ASP.Net, .NET core - front-end, Database, SQL Server - back-end, Entity Framework, Winforms, WPF - front-end.</p><p>Azure devOPS, CI/CD, Angular, React, JavaScript preferred, not required.</p><p>Relational database skills like SQL Server or MySQL or Oracle</p><p>Any deployment technology such as Container Services, Docker, Jenkins, Kubernetes, Elastic Beanstalk, Load Balancer, etc.</p><p>Writing functional software in JavaScript, C#, Python, Java, etc.</p><p>Familiarity with developing web applications deployed to the cloud (Azure, Amazon Web Services AWS, etc. is a plus, not required)</p><p>What Makes this a Great Opportunity?</p><p></p><p>Opportunity to learn and work with live big data and the latest cloud technologies!</p><p>Apply your software development skills working in a collaborative, team environment, with a company that makes a real difference in our everyday lives!</p><p>Highly Competitive Compensation Package!</p><p>Work in a rapidly growing, financially stable company with a highly motivated and successful support team!</p><p><strong>Responsibilities</strong></p><ul><li>Develop quality software and web applications</li><li>Analyze and maintain existing software applications</li><li>Design highly scalable, testable code</li><li>Discover and fix programming bugs</li></ul><p></p><p><strong>Qualifications</strong></p><ul><li>Bachelor's degree or equivalent experience in Computer Science or related field</li><li>Development experience with programming languages</li><li>SQL database or relational database skills</li></ul><p>Employment Type</p><p>Contract</p><p></p><p>Edit job description</p><p>Screening question</p><p>Must-have qualifications</p><ul><li><p>Are you willing to undergo a background check, in accordance with local law/regulations?</p><p>Ideal answer: Yes</p></li></ul><p></p><p>Edit screening question</p><p>0Applicants</p><p>0Views</p><p>Get 3x more qualified applicants Promote for free</p><p></p></div>",
+        "index": 3,
         "skills": [
-            "information technology",
+            "sql",
             "software engineering",
             "javascript",
+            "angular",
+            "java",
             "devops",
             "c and c++",
             "machine learning",
-            "project management",
-            "web development"
+            "python"
         ],
-        "compensation": "paid",
         "qualifications": [
             "Bachelor's degree"
         ],
-        "remote": true
+        "remote": false
     },
     {
-        "position": "Software Engineering Intern",
-        "company": "LiveRamp",
-        "location": {
-            "city": "San Francisco",
-            "state": "California",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/da1497df3f46a3ab92cf35ac9082b1a9?lvk=wtm3nDuV3loG7TTE3kp4XA.--LxwAoYnZJ",
-        "posted": "2021-03-17T10:38:30.225Z",
-        "lastScraped": "2021-04-12T10:38:30.225Z",
-        "description": "<div><div><p><strong>Software Engineering Intern, Summer 2021</strong></p><p>LiveRamp is the leading data connectivity platform for the safe and effective use of data. Our platform powers people-based customer experiences that improve the relevance of marketing and allow consumers to connect with the brands and products they love. We thrive on solving fascinating technical problems and enabling our customers' success-and we're always looking for smart, kind, compassionate people to help us blaze a trail.</p><p><strong>Mission: </strong>LiveRamp makes it safe and easy for businesses to use data effectively.</p><p>Get ready for the best learning experience of your life. You will receive the same orientation training as our full-time engineers, you will be matched with an individual mentor, and you will be committing production code by the end of your first week. In the course of your internship, you will be tasked with one or more mission-critical projects and make meaningful contributions to LiveRamp's success. Also, if our previous interns are any guide, you will have a ton of fun in the process!</p><p>Internships are 12 weeks long and will be remote. Should we want to extend you a full time offer after you graduate, we ask that you would be willing to consider this at the end of your internship. We are seeking interns interested in full-stack application development and big data back-end engineering.</p><p><strong>You will:</strong></p><ul><li>Contribute deeply to our real production systems - billions of requests a day, 80+ PBs of data, millions of anonymous people records, and powerful web applications to make it all accessible and intuitive.</li><li>Learn about the business and engineering practices at LiveRamp.</li><li>Prove yourself and earn the responsibilities of a full-time engineer.</li></ul><p><strong>About you:</strong>&nbsp;</p><ul><li>Possess strong coding skills that you are ready to turn into industry ready coding skills</li><li>Background? Pursuing a degree in Computer Science or other STEM degrees</li><li>Excited to learn new languages and technologies</li><li>Willing to dive in and learn by doing</li><li>Ready to work with others to solve hard problems</li><li>Possess a startup personality: smart, ethical, friendly, hard-working and proactive</li><li>At this time, we are only considering those that will be one year or less from graduation at the start of their internship.&nbsp;</li></ul><p><strong>Benefits:</strong></p><ul><li>People: work with talented, collaborative, and friendly people who love what they do.</li><li>Fun: we host fun virtual events for our intern class and entire company.</li><li>Work/Life Harmony: flexible paid time off and remote work support.</li><li>Savings: our 401K matching plan helps you plan ahead.</li></ul>&nbsp;<p><strong>More about us:</strong></p><p>LiveRamp's mission is to connect data in ways that matter, and doing so starts with our people. We know that inspired teams enlist people from a blend of backgrounds and experiences. And we know that individuals do their best when they not only bring their full selves to work but feel like they truly belong. Connecting LiveRampers to new ideas and one another is one of our guiding principles-one that informs how we hire, train, and grow our global team across eight countries and four continents.</p>LiveRamp is an affirmative action and equal opportunity employer <span class=\"long-word\">(AA/EOE/W/M/Vet/Disabled)</span> and does not discriminate in recruiting, hiring, training, promotion or other employment of associates or the awarding of subcontracts because of a person's race, color, sex, age, religion, national origin, protected veteran, disability, sexual orientation, gender identity, genetics or other protected status. Qualified applicants with arrest and conviction records will be considered for the position in accordance with the San Francisco Fair Chance Ordinance.&nbsp;California residents: Please see our California Personnel Privacy Policy for more information regarding how we collect, use, and disclose the personal information you provide during the job application process.<p><em>To all recruitment agencies: LiveRamp does not accept agency resumes. Please do not forward resumes to our jobs alias, LiveRamp employees or any other company location. LiveRamp is not responsible for any fees related to unsolicited resumes.</em></p><br><br></div></div>",
-        "index": 24,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "machine learning",
-            "project management",
-            "virtual reality"
-        ],
-        "compensation": "paid",
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Juniper Networks",
+        "position": "Clover Developer Relations (Summer Internship)",
+        "company": "Fiserv",
         "location": {
             "city": "Sunnyvale",
             "state": "California",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/ojob/3b69fcc771c81c65ac6f9ab7be931c6c?lvk=EGySxBYmfHHcDEd5B2RRkg.--LyLsDfuus",
-        "posted": "2021-03-14T10:38:32.196Z",
-        "lastScraped": "2021-04-12T10:38:32.196Z",
-        "description": "<div><div><p>About the Team:</p><p>The Routing Protocols team develops software that comprises the \"brains\" of Juniper's core products.&nbsp; We're looking for people who are interested in computer networking, but prior networking experience is not required.&nbsp; This is a pure software development role. The opportunities in this team include application of machine learning in protocol applications, virtualization, automation, telemetry and performance characterization. We are keen to have our summer interns have a productive experience that they can use as a launch point of their professional careers.</p><p>We are looking for a self-driven, motivated and quick-learning individual who will be willing&nbsp;to explore new areas in Routing Protocols and Linux Kernel with help from the rest of the team.&nbsp;We would prefer somebody with a major in Computer Science or Electrical Engineering. Proficiency&nbsp;in C/C++ and complex data-structures are absolute must. Previous exposure to TCP/IP, IPC&nbsp;(inter-process communication), object-oriented concepts and multi-threading are helpful.&nbsp;Familiarity with Python and Ruby is a plus.</p><p>Experience and Skills:</p><ul><li>Currently pursuing a BA/BS/MS/PhD in CS/CE/EE</li><li>Strong programming fundamentals, including algorithms and data structures</li><li>Coding expertise in C or C++</li><li>No&nbsp;specific domain knowledge required</li></ul><p>&nbsp;</p><p><strong>Juniper's University Talent Program (UTP)</strong> introduces next generation talent to Juniper's workforce and provides talented students with an opportunity to develop professional experience at a world-class technology company. And it's not hard to see why so many accomplished students have been compelled to spend their summers at Juniper!</p><p>Here at Juniper,&nbsp;UTP provides a comprehensive program that fosters professional as well as personal growth, thoroughly preparing its interns for the next step in their careers. Juniper internships are project-based, allowing interns to solve important problems, make lasting impacts on their teams, and contribute to the company's overall objectives. They are mentored by some of the most talented and skillful innovators in the industry; they connect with transformative thought leaders who promote disruptive ideas in their field. Interns participate in constructive professional workshops, company-wide community service initiatives, and executive speaker series.<strong>&nbsp;</strong>They build lasting friendships, expand their network, and connect with colleagues from around the world. </p><p>At Juniper Networks, you will not only have opportunities to build real-life, hands-on work experience - you'll also have the chance to&nbsp;learn from the best<strong>&nbsp;</strong>and lay the groundwork for a successful career.</p><p>Please note that Juniper's 2021 internship program will be conducted remotely. The location listed reflects the location of the team the intern will join, whereas the intern will work from their residence in the US.</p><p>&nbsp;</p></div></div>",
-        "index": 25,
+        "url": "https://www.ziprecruiter.com/ojob/05eb4630007e722d212112cd0f8f3481?lvk=J1k7ucLbR1-AO-nmMC57zQ.--M-gZDu05w",
+        "posted": "2021-04-23T12:54:41.025Z",
+        "lastScraped": "2021-04-25T12:54:41.025Z",
+        "description": "<div><div><p></p><p><b>Job Title</b></p>Clover Developer Relations (Summer Internship)<p></p><p><b>Job Purpose</b></p><p><b>Clover Developer Relations Internship</b></p><p></p><p><b>Program Overview:</b></p><p>Our Summer Intern program offers hardworking college students an opportunity to go beyond the classroom to develop leadership skills and gain relevant hands- on experience working as part of a global support team with professionals across the enterprise. Additionally, interns will participate in scheduled activities throughout the summer, including sessions with Senior Leaders, site tours, volunteer opportunities, and other social events. Fiserv interns are in session from June 2, 2021 - August 13, 2021 and work approximately 40 hours per week.</p><p></p><p><b>About Clover </b></p><p>Join the Fintech and SaaS revolution that is helping small businesses grow faster. At Clover, you will be part of an entrepreneurial team working in a fast-paced and high growth environment, with the benefits of a parent company, Fiserv, that is the largest payments processor and merchant acquirer worldwide.</p><p>Clover delivers the leading Point of Sale system with an elegant end-to-end solution that incorporates beautiful devices, cloud-based POS software, payments processing, platform API's for third-party developers, and an ecosystem with over 500 apps. The Clover platform delivers solutions in a scalable and modular fashion that powers tiny merchants and large football stadiums alike, supporting millions of transactions daily.</p><p></p><p><b>Clover's Developer Relations Team</b></p><p>Developer <span class=\"long-word\">Relationshelpsthird</span>-party developers build and maintain apps onour App Market. We provide documentation, tutorials, and webinarstoallow third-party developers to understand Clover Platform's APIs and SDKs.</p><p></p><p><b>What does a Clover Innovation Pod Intern do?</b></p><p>As an intern on the Clover Developer RelationsTeam, you will work in a small pod of 2-3 engineers and 1 product manager to own an initiative. With this project, you will build a solution from the ground up that addresses a real need for the Clover Team. It will not only help make our products perform better in the field, but also help productivity of our engineers. You will be working with experienced engineers and gain valuable insights into the software development process in a real-world environment.</p><p></p><p><b>The responsibilities of the Development Platform Engineering Team includes:</b></p><ul><li><p>Reviewing Clover SDKs and existing sample apps.</p></li><li><p>Revising and revamping the sample apps and documentation to enable ease of integration to our platform.</p></li><li><p>Marketing, educatingand publishing these sample apps for wide adoption.</p></li></ul><p></p><p><b>Requirements of the Internship</b></p><ul><li><p>Progress toward completion of bachelor's degree in <b>Computer Science,</b> <b>Information Technology</b>, <b>Management Information Systems </b>or related field by December 2021 / May 2023 with demonstrated academic achievement.</p></li><li><p>Knowledge of one of the following languages: Java, JavaScript, Swift, Python, Ruby</p></li><li><p>Minimum GPA of 3.0 (3.5 or above preferred)</p></li><li><p>Experience educating peers and adapting content to match different learning styles</p></li><li><p>Strategic and creative thinking; distinguished written and oral communications skills</p></li><li><p>Collaborative, team player who can thrive in a fast-paced environment with quickly changing, ambiguous requirements</p></li><li><p>Strong self-starter with an intellectual curiosity</p></li></ul><p></p><p><b>Learn more about Fiserv:</b></p><p></p><p>To support the total well-being of our associates, Fiserv takes a broad approach to our benefits. We offer a comprehensive benefits package that provides flexibility and affordability with a variety of medical, dental, vision, life insurance and disability options.</p><p>We are #FISVProud of our benefits and well-being programs. Our commitment to wellness, wellness education, preventive services and fitness activities are designed to meet you where you are.</p><p></p><p>Life moves fast. And as it does, we know most people aren't thinking about \"financial services\". But we are.</p><p></p><p>We help people and businesses move money and information every minute of every day. Our solutions connect financial institutions, corporations, merchants and consumers to one another, millions of times a day, behind the scenes, reliably and securely.</p><p></p><p>We're Fiserv, a global leader in Fintech and payments enabling innovative financial services experiences that are in step with the way people live and work today. The company's approximately 44,000 associates proudly serve clients in more than 100 countries, so their customers, members and consumers can move money when and where they need it, at the point of thought.</p><p></p><p>Our Aspiration is to move money and information in a way that moves the world. As a FORTUNE 500 company and one of FORTUNE Magazine World's Most Admired Companies for the seventh consecutive year, we are committed to excellence and purposeful innovation.</p><p></p><p>We welcome and encourage diversity in our workforce. Fiserv is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran.</p><p></p><p>Explore the possibilities of a career with Fiserv and Find Your Forward with us.</p><p></p><p>#FINT</p><p>Thank you for considering employment with Fiserv.&nbsp; Please:</p><p></p><ul><li>Apply using your legal name</li><li>Complete the step-by-step profile and attach your resume (either is acceptable, both are preferable).</li></ul><p></p><p></p><p>Fiserv is an Equal Employment Opportunity Employer, and it is the Company's policy to make all employment decisions without regard to race, color, religion, creed, age, sex, national origin, veteran status, disability (as long as the individual is able to perform the essential functions of the job with or without reasonable accommodation), and any other characteristic protected by Law.</p></div></div>",
+        "index": 4,
         "skills": [
-            "machine learning",
-            "software engineering",
-            "networks",
-            "c and c++",
-            "python",
             "project management",
-            "virtual reality",
-            "information technology"
-        ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Zwift",
-        "location": {
-            "city": "Long Beach",
-            "state": "California",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/047e877f034d76f3446d70b1edb6bd4a?lvk=4MjEKDWLUOlMj1OWa1fqVg.--LzLhfKYdB",
-        "posted": "2021-03-31T10:38:33.653Z",
-        "lastScraped": "2021-04-12T10:38:33.653Z",
-        "description": "<div><div><p><strong>Seniority Level: </strong><em>Intern</em></p><p><strong>Location: </strong><em>Remote (Select US states)</em></p><p><strong>About the role and about You:</strong></p><p>As a Software Engineer Intern, you will be working together with eCommerce, Payments, and Support teams to build and maintain our customer experiences around our shop, maintaining subscriptions, and supporting customer's needs on Zwift. You will collaborate in cross-functional teams including teammates from our engineering, product, design, operations, and support disciplines. We are looking for someone comfortable in this highly collaborative environment, working with ambiguity, and being an agent of change to help build a world-class experience for our customers.&nbsp;</p><p>Throughout this internship, you'll be mentored by our Engineering Managers. </p><p><strong>&nbsp;</strong><strong>What you'll do: </strong></p><ul><li>Participate in agile development processes to plan and estimate tasks</li><li>Build, modify, and maintain software applications and consumer-facing features</li><li>Write code, execute tests, and apply coding standards</li><li>Participate in peer code reviews and technical design sessions</li><li>Learn to build and sustain productive relationships with subject matter experts and stakeholders to drive the development of exceptional content</li></ul><p><strong>&nbsp;</strong><strong>What we're looking for:</strong></p><ul><li>An undergraduate student heading into their 3rd or 4th year and who is pursuing a degree in Computer Science or relevant degree</li><li>GPA of 3.0 and above</li><li>Foundational knowledge in Computer Science, Data Structures, Algorithms, and overall Software Design</li><li>Familiarity with GIT and/or SVN</li><li>Awareness of Test Driven Development and Continuous Integration</li><li>Willingness to roll up your sleeves and do whatever it takes to help your team win</li><li>Self-motivation to deliver results and seek continuous improvement</li></ul><p><strong>&nbsp;</strong><strong>Bonus points:&nbsp;</strong></p><ul><li>Experience with Java and C++</li><li>Experience working in eCommerce, payments, and/or customer support portals</li><li>Experience working with geographically distributed teams</li><li>Experience building user interfaces with HTML, CSS, and, Javascript</li><li>Experience with NodeJS and React/Angular</li></ul></div></div>",
-        "index": 26,
-        "skills": [
+            "information technology",
             "software engineering",
             "javascript",
-            "angular",
             "java",
-            "c and c++",
             "machine learning",
-            "project management",
-            "information technology",
-            "web development"
+            "python"
         ],
-        "remote": true
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Accolade, Inc.",
-        "location": {
-            "city": "Seattle",
-            "state": "Washington",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/jobs/accolade-inc-be6eba28/software-engineering-intern-08c0abc6?lvk=iQxHhyGarme3s9ECn3gxTQ.--Lyzg19aZR",
-        "posted": "2021-04-02T10:38:35.570Z",
-        "lastScraped": "2021-04-12T10:38:35.570Z",
-        "description": "<div>Company Description<br><br><p>Accolade is a personalized health and benefits solution that dramatically improves the experience, outcomes and cost of healthcare for employers, health plans and their members. With a unique blend of compassionate advisors, clinical experts and intelligent technologies, we engage individuals and families in their health, establish trust, and influence their decisions at every stage of care. Accolade connects the widest array of personal health data and programs to present a single point of contact to the most effective health and benefits resources, while coordinating with providers at every step. Accolade consistently achieves 70 and higher Net Promoter Scores, 98% consumer satisfaction ratings, and up to 15% employer cost savings. Accolade has been recognized as one of the nation’s 25 most promising companies by Forbes, a fastest-growing private healthcare company by Inc. 5000, and is consistently rated a Top Workplace across the country. For more information, visit accolade.com.</p>Job Description<br><br><p><strong>Role overview</strong><strong> </strong></p><p>The <strong>Internship – Data Engineering, </strong>reporting to<strong> Principle Data Engineer II</strong>,<strong> </strong>is an opportunity to cultivate valuable experience in modern data technologies. In this role you will collaborate directly with technical leads to implement solutions to real business problems and design data platform components that support our data science and data analytics efforts. You’ll also gain mentorship and hands on experience operating Python, Apache Spark, Kubernetes in a cloud environment to implement data solutions at scale.</p><p></p><p><strong>A day in the life…</strong></p><ul><li>Implement data pipelines in Python and Apache Spark to validate, transform and extract value from data</li><li>Collaborate on tooling and process documentation to refine the data platform and streamline data usage</li><li>Work closely with data architecture to establish best practices and automation to monitors and enhance data quality</li><li>Support the work of data scientists and data analysts through collaboration, tooling and automation</li></ul>Qualifications<br><br><ul><li>Proficiency using Python and SQL to interact with data, experience with Apache Spark is a plus</li><li>Comfortable on the linux command line, infrastructure and/or dev-ops experience is a plus</li><li>Familiarity with cloud platform technologies (AWS and/or GCP)</li><li>Experience with other data technologies is valuable (e.g. Elasticsearch, MongoDB, Hadoop and friends, any of the various SQL flavors)</li><li>A first principles mindset, we value observation over assumption and innovation over convention</li><li>Willingness to be in over your head, the data engineering space evolves rapidly and we’re always learning</li><li>A strong team mentality, our core responsibility is to support and act as a force multiplier for our data consumers</li></ul><br><br>Additional Information<br><br>All your information will be kept confidential according to EEO guidelines.</div>",
-        "index": 27,
-        "skills": [
-            "information technology",
-            "software engineering",
-            "sql",
-            "python",
-            "machine learning"
+        "qualifications": [
+            "Bachelor's degree"
         ],
         "remote": false
     },
     {
-        "position": "Software Engineering Intern",
-        "company": "Hewlett Packard Enterprise",
+        "position": "Product Engineering Summer Internship",
+        "company": "Alpha Measurement Solutions",
         "location": {
-            "city": "West Lafayette",
-            "state": "Indiana",
+            "city": "Houston",
+            "state": "Texas",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/ojob/4039f8a4c68c37b3b337b10fe085f0ca?lvk=TkMKgxx1-tl-3GnMPYv6dw.--Lz1tkcn9s",
-        "posted": "2021-04-02T10:38:37.621Z",
-        "lastScraped": "2021-04-12T10:38:37.621Z",
-        "description": "<div><div><p>Software Engineering Intern</p><p>&nbsp;&nbsp;</p><p><b>Job Description:</b></p><p>&nbsp;&nbsp;&nbsp;</p><p>At <b>Hewlett Packard Enterprise</b> (HPE), we don't just believe in the power of technology, we believe in the power of people when technology works for them. We believe in applying new thinking and ideas to improve the way our customers live and work.</p><p>Learning does not only happen through training. Relationships are among the most powerful ways for people to learn and grow, and this is part of our HPE culture. In addition to working alongside talented colleagues, you will have many opportunities to learn through coaching and stretch assignment opportunities. You'll be guided by feedback and support to accelerate your learning and maximize your knowledge. We also have a \"reverse mentoring\" program which allows us to share our knowledge and strengths across our multi-generation workforce.</p><p></p><p></p><p>Hewlett Packard Enterprise is seeking a highly motivated Software Engineering Intern (Servers). This is a unique internship for current Purdue students as it is full-time over the summer working for Hewlett Packard Enterprise remotely in the US and continues part-time (10-20 hours a week) during the school year on Purdue's campus (West Lafayette, IN) while you continue your degree.</p><p></p><p></p><p>The position may work with our High Performance Computing (HPC), Volume Compute, or Cyber Security groups as part of the team participating in production level projects including automation of tests, analyzing &amp; resolving technical issues, writing new code or revising current code for HPE programs, communicating with internal HPE and 3rd party teams.</p><p></p><p><b><b>Education and Experience Required: </b></b></p><ul><li>Computer Engineering or Computer Science majors at Purdue University</li><li>Desire to learn new skills and highly motivated.</li><li>Very organized and ability to communicate effectively with others.</li><li>Python coding experience.</li><li>Strong writing skills and ability to document work.</li><li>GPA above 3.0</li></ul><p></p><p><b><b>Hewlett Packard Enterprise Values:</b></b></p><p></p><p><b><b>Partnership first:</b></b> We believe in the power of collaboration - building long term relationships with our customers, our partners and each other</p><p><b><b>Bias for action:</b></b> We never sit still - we take advantage of every opportunity</p><p><b><b>Innovators at heart:</b></b> We are driven to innovate - creating both practical and breakthrough advancements</p><p></p><p>HPE is an EOE / Female / Minority / Individual with Disabilities / Protected Veteran Status</p><p></p><p><b><b>What do we offer?</b></b></p><p>Extensive social benefits, flexible working hours, a competitive salary and shared values, make Hewlett Packard Enterprise one of the worlds most attractive employers. At HPE our goal is to provide equal opportunities, work-life balance, and constantly evolving career opportunities.</p><p></p><p>If you are looking for challenges in a pleasant and international work environment, then we definitely want to hear from you. Apply now below, or directly via our Careers Portal at <span class=\"long-word\">www.hpe.com/careers</span></p><p></p><p>You can also find us on:</p><p><span class=\"long-word\">https://www.facebook.com/HPECareers</span></p><p><span class=\"long-word\">https://twitter.com/HPE_Careers</span></p><p><b>Job:</b></p>Administration<p><b>Job Level:</b></p>N/A<p>&nbsp;&nbsp;&nbsp;&nbsp;</p><p><b>Hewlett Packard Enterprise is EEO F/M/Protected Veteran/ Individual with Disabilities.</b></p><p>&nbsp;&nbsp;&nbsp;</p><p>HPE will comply with all applicable laws related to the use of arrest and conviction records, including the San Francisco Fair Chance Ordinance and similar laws and will consider for employment qualified applicants with criminal histories.</p></div></div>",
-        "index": 28,
+        "url": "https://www.ziprecruiter.com/jobs/alpha-measurement-solutions-926ce784/product-engineering-summer-internship-047daf59?lvk=v38gYp7xkIi1eZ2xOTSHJw.--M-_YIP4qJ",
+        "posted": "2021-04-23T12:54:43.870Z",
+        "lastScraped": "2021-04-25T12:54:43.870Z",
+        "description": "<div><p><strong>PRODUCT ENGINEERING SUMMER INTERNSHIP PROGRAM</strong></p><p><strong>OVERVIEW</strong></p><p>AlpHa Measurement Solutions is a liquid sensor technology platform serving the complex testing needs of water quality, pharmaceutical, laboratory, and industrial markets with an unmatched combination of precision, reliability, innovation, and flexibility. We are a vertically integrated manufacturer, creating thousands of units and processing several hundred orders and shipments each day for customers throughout the world. We approach the market with three core brands: Analytical Sensors &amp; Instruments (ASI), Van London, and Aurora Scientific Instruments. </p><p><strong>OPPORTUNITY</strong></p><p>AlpHa Measurement Solutions is experiencing aggressive growth through a global platform consolidation and recognizes a need to continuously strengthen its product development capabilities to meet increased demand and support continued growth. We are establishing a Product Engineering Summer Internship to contribute meaningfully to our Engineering and Operations Departments and develop future engineers. Interns will gain exposure and contribute to product design and product management functions as well as product manufacturing analysis and manufacturing software systems including ERP (Enterprise Resource Planning) software. </p><p>Our privately held company has over 100 years of liquid sensing experience, is growing, and currently employs 230 team members in Houston Texas and 140 in Shanghai China. Our global headquarters is conveniently located in Houston at the southwest intersection of I-69 and Sam Houston Tollway, just north of Sugar Land. </p><p>Product Engineering Interns are high visibility roles with the opportunity to engage directly with the senior leadership team of AlpHa Measurement Solutions. </p><p>Classification: Hourly, Full-Time, Monday through Friday, 8:30 AM to 5:00 PM. </p><p><strong>JOB DESCRIPTION </strong></p><p>Summary</p><p>The Product Engineering Interns will be responsible for assisting the engineering and operation teams with product development and management functions such as bill of material creation and validation, manufacturing labor analysis, and product configuration in ERP. We are accepting applications from individuals pursuing a Bachelor’s degree program in <strong>Industrial or Mechanical engineering</strong>. </p><p>Essential Functions</p><p>Reasonable accommodations may be made to enable individuals with disabilities to perform the following essential functions: </p><ul><li>1)Bill of Materials Creation and Validation – Review drawing packages to validate and/or generate engineering bill of materials and routing based upon assembly and work instructions and product design specification. </li><li>2)ERP Routing – Coordinate with operational management to develop and implement manufacturing routing for products. </li><li>3)Costing Analysis – Work with engineering and manufacturing management to analyze material and labor costs for various product lines. </li></ul><p>Required Qualifications and Experience</p><ul><li>Actively pursuing Bachelor’s degree in Industrial or Mechanical Engineering </li><li>Experience using Excel is highly preferred </li><li>Ability to read Engineering CAD drawings </li><li>Excellent written and verbal communication skills </li><li>Strong problem solving and critical thinking capabilities </li></ul><p>AlpHa Measurement Solutions provides equal employment opportunities (EEO) to all employees and applicants for employment without regard to race, color, religion, sex, national origin, age, disability or genetics. In addition to federal law requirements, AlpHa Measurement Solutions complies with applicable state and local laws governing nondiscrimination in employment. This policy applies to all terms and conditions of employment, including recruiting, hiring, placement, promotion, termination, layoff, recall, transfer, leaves of absence, compensation and training. </p><p>AlpHa Measurement Solutions expressly prohibits any form of workplace harassment based on race, color, religion, gender, sexual orientation, gender identity or expression, national origin, age, genetic information, disability, or veteran status. Improper interference with the ability of AlpHa Management Solutions’ employees to perform their job duties may result in discipline up to and including discharge.</p></div>",
+        "index": 5,
         "skills": [
+            "information technology",
             "software engineering",
-            "python",
-            "machine learning",
+            "project management"
+        ],
+        "qualifications": [
+            "Bachelor's degree"
+        ],
+        "remote": false
+    },
+    {
+        "position": "Technical Support Year-Round Internship",
+        "company": "South Atlantic Services",
+        "location": {
+            "city": "Austin",
+            "state": "Texas",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/931a4d98a3553b2f4dff13f8dc162f3e?lvk=g_3aiPybDkPxPgU5-XeHIw.--M-VTzsZa7",
+        "posted": "2021-04-16T12:54:45.911Z",
+        "lastScraped": "2021-04-25T12:54:45.911Z",
+        "description": "<div><div><p>Are you a problem solver, explorer, and knowledge seeker - always asking, \"What if?\"</p><p>&nbsp;</p><p>If so, you may be the new team member we're looking for. Because at SAS, your curiosity matters - whether you're developing algorithms, creating customer experiences or answering critical questions. Curiosity is our code, and the opportunities here are endless.</p><p>&nbsp;</p><p><strong>What we do&nbsp; </strong></p><p>We're the leader in analytics. Through our software and services, we inspire customers around the world to transform data into intelligence. Our curiosity fuels innovation, pushing boundaries, challenging the status quo and changing the way we live.</p><p>&nbsp;</p><p><strong>Opportunity</strong></p><p>We're not about coffee runs and boring busywork. Our SAS Summer internship program is focused on development, culture and community. We'll help you grow professionally, thrive in an award-winning work environment and make memorable connections with your co-workers and fellow interns. From contributing analytical code to improving insights for our Fortune 100 customers, the potential to make a real impact is exciting. We're proud to share that the SAS Intern Program was named one the 100 best internship programs in the United States for 2020! WayUp's panel of industry expert judges and public votes, selected us to join the list of top intern programs. &nbsp;Click here to view the list.</p><p><strong>&nbsp;</strong></p><p>The Austin team is responsible for providing top notch support to our customers.&nbsp; That means you will be interacting via email, phone or technical chat on a daily basis, working with some of the brightest people in the industry.</p><p>&nbsp;</p><p>&nbsp;</p><p><strong>We need you to:</strong></p><ul><li>Be enrolled in a degree seeking program and not graduating prior to Summer 2022.</li><li>Have strong communication skills - both written and verbal.</li><li>Be a leader. You're the one sitting in the front row of the class.</li><li>Embrace technology. You geek out over the latest and greatest!</li></ul><p><strong>What we're looking for</strong></p><ul><li>You're curious, passionate, authentic and accountable. These are our values and influence everything we do.</li><li>You're a college student enrolled in an accredited program.</li><li>You've got practical experience inside or outside of school or work. Do you enjoy fixing problems, think engineer, how about cars - ever had to fix your car? &nbsp;We'd love to hear about it!</li><li>Information Technology, Electrical or mechanical engineering, Decisions Science, Computer Science</li><li>IT would be even more amazing if you loved working in a team, learning quickly either by yourself or from others. Must be confident and great at explaining things in simple terms</li><li>Work Hours: Available to work 10-20 hours during the academic year, and full-time hours during the summer of 2021</li></ul><p><strong>&nbsp;</strong></p><p><strong>Why SAS</strong></p><ul><li>We love living the #SASlife and believe that happy, healthy people have a passion for life, and bring that energy to work. No matter what your specialty or where you are in the world, your unique contributions will make a difference.</li><li>Our multi-dimensional culture blends our different backgrounds, experiences, and perspectives. Here, it isn't about fitting into our culture, it's about adding to it - and we can't wait to see what you'll bring.</li></ul><p><strong>Additional Information</strong></p><p>To qualify, applicants must be legally authorized to work in the United States, and should not require, now or in the future, sponsorship for employment visa status. SAS is an equal opportunity employer. All qualified applicants are considered for employment without regard to race, color, religion, gender, sexual orientation, gender identity, age, national origin, disability status, protected veteran status or any other characteristic protected by law. Read more:&nbsp;Equal Employment Opportunity is the Law. Also view the supplementEEO is the Law, and the noticePay Transparency&nbsp;</p><p>&nbsp;</p><p>Equivalent combination of education, training and experience may be considered in place of the above qualifications. The level of this position will be determined based on the applicant's education, skills and experience.Resumes may be considered in the order they are received.SAS employees performing certain job functions may require access to technology or software subject to export or import regulations. To comply with these regulations, SAS may obtain nationality or citizenship information from applicants for employment. SAS collects this information solely for trade law compliance purposes and does not use it to discriminate unfairly in the hiring process.&nbsp;</p><p>&nbsp;</p><p>&nbsp;<em>All valid SAS job openings are located on the Careers page at&nbsp;www.sas.com. SAS only sends emails from verified \"sas.com\" email addresses and never asks for sensitive, personal information or money. Should you have any doubts about the authenticity of any type of communication from, for, or on behalf of SAS, please contact us at&nbsp;<span class=\"long-word\">Recruitingsupport@sas.com</span>&nbsp;before taking any further action.</em></p></div></div>",
+        "index": 6,
+        "skills": [
+            "information technology",
+            "software engineering",
+            "machine learning"
+        ],
+        "contact": "Recruitingsupport@sas.com",
+        "remote": false
+    },
+    {
+        "position": "Software Engineer Internship - Paid and Remote",
+        "company": "SquareTrade",
+        "location": {
+            "city": "San Francisco",
+            "state": "California",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/ad6cf21be241856d708d654f27ef8d67?lvk=DoN_GNe3rcTRCFYntHi6Bg.--M-X8SzoZw",
+        "posted": "2021-04-22T12:54:48.034Z",
+        "lastScraped": "2021-04-25T12:54:48.034Z",
+        "description": "<div><div><div><p></p> Company Description </div><div><p>SquareTrade is the fastest growing company of its kind. We're revolutionizing a $30b industry with service innovation and attention to customer satisfaction. We partner with some of the largest, most sophisticated retailers and carriers in the world (Amazon, Walmart, The Home Depot to name a few), consistently win industry awards, have received tens of thousands of 5-star reviews... and we're just getting started. A member of the Allstate family, SquareTrade has headquarters in San Francisco and London.&nbsp;We are currently expanding in Europe and Asia Pacific, including Japan and Australia.</p></div><div><p></p> Job Description </div><div><p>We are looking for a curious, passionate, and detail-oriented individual to join us this summer as a Software Engineer.</p><p>In this role, you will write software that will be used by our customers in production and has meaningful impact to the business. You will collaborate and work closely with other engineering groups to accomplish tasks and achieve project goals. Additionally, you will receive technical mentorship and feedback through code reviews and one on one meetings.</p><p><br><strong>WHAT'S GREAT ABOUT THIS ROLE?</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will be working for a fast-paced and dynamic company with a \"start-up feel\"</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This will be a rotational program through the teams within the customer facing applications engineering org where you'll be learning and contributing on day one</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The program will offer opportunities to showcase and highlight your hard and soft skillsets along with providing you with business context and exposure to upper management</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; You will have regularly scheduled checkpoints with your mentors and team members throughout the program to help guide you in the direction that best suits your abilities and interests</p><p>&nbsp;</p><p><strong>RESPONSIBILITIES:</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Work closely with your scrum teams to deliver product features for the business.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Attend regularly scheduled planning meetings and contribute ideas and provide status updates.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Regularly check-in with your mentors to discuss personal goals and receive feedback.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Have fun and learn in a top-notch engineering environment!</p></div><div><p></p> Qualifications </div><div><p><strong>WHAT DOES OUR IDEAL CANDIDATE LOOK LIKE?</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Team player with documented experience on team-based side projects or classwork</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Active listener who is open to direct feedback and learns from and fixes mistakes quickly</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Strong fundamentals in Computer Science along with programming experience and familiarity with Java or similar OOP programming languages (Python, Ruby, C++, etc)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ability to learn new, large scale systems and form an understanding of them quickly through independent research</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A thought leader;&nbsp; vocal and willing to regularly contribute ideas to team discussions</p><p><strong>&nbsp;&nbsp;</strong></p><p><strong>MINIMUM REQUIREMENTS:</strong></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Currently pursuing college degree related to Computer Science, Software Engineering,&nbsp; or related fields</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ability to work and deliver in a fast-paced, team environment</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Technology, retail and e-commerce enthusiast</p></div><div><p></p> Additional Information </div><div><p>All your information will be kept confidential according to EEO guidelines.</p><p>The Team:&nbsp; <span class=\"long-word\">http://www.squaretrade.com/leadership</span> &nbsp;<br>&nbsp;<br>SquareTrade is an Equal Opportunity Employer and complies with the San Francisco FCO</p><p>Our commitment to Diversity, Equity &amp; Inclusion</p><p>We're committed to growing high-performance teams where people can bring their whole-selves to work, and creating a greater force for good within our company, industry, and cities. We strive to hire and cultivate diverse teams, and respectfully challenge everyone to do their best regardless of background and experience. We believe that true innovation happens when everyone has the tools, resources, and opportunity to excel.</p></div>Qualifications: WHAT DOES OUR IDEAL CANDIDATE LOOK LIKE? Team player with documented experience on team-based side projects or classwork Active listener who is open to direct feedback and learns from and fixes mistakes quickly Strong fundamentals in Computer Science along with programming experience and familiarity with Java or similar OOP programming languages (Python, Ruby, C++, etc) Ability to learn new, large scale systems and form an understanding of them quickly through independent research A thought leader; vocal and willing to regularly contribute ideas to team discussions MINIMUM REQUIREMENTS: Currently pursuing college degree related to Computer Science, Software Engineering, or related fields Ability to work and deliver in a fast-paced, team environment Technology, retail and e-commerce <span class=\"long-word\">enthusiastResponsibilities:</span> We are looking for a curious, passionate, and detail-oriented individual to join us this summer as a Software Engineer. In this role, you will write software that will be used by our customers in production and has meaningful impact to the business. You will collaborate and work closely with other engineering groups to accomplish tasks and achieve project goals. Additionally, you will receive technical mentorship and feedback through code reviews and one on one meetings. WHAT'S GREAT ABOUT THIS ROLE? You will be working for a fast-paced and dynamic company with a \"start-up feel\" This will be a rotational program through the teams within the customer facing applications engineering org where you'll be learning and contributing on day one The program will offer opportunities to showcase and highlight your hard and soft skillsets along with providing you with business context and exposure to upper management You will have regularly scheduled checkpoints with your mentors and team members throughout the program to help guide you in the direction that best suits your abilities and interests RESPONSIBILITIES: Work closely with your scrum teams to deliver product features for the business. Attend regularly scheduled planning meetings and contribute ideas and provide status updates. Regularly check-in with your mentors to discuss personal goals and receive feedback. Have fun and learn in a top-notch engineering environment!</div></div>",
+        "index": 7,
+        "skills": [
             "project management",
-            "information technology"
+            "software engineering",
+            "information technology",
+            "java",
+            "c and c++",
+            "machine learning",
+            "python"
+        ],
+        "remote": true
+    },
+    {
+        "position": "Remote Software Engineer (SCRUM Master)",
+        "company": "Jobot",
+        "location": {
+            "city": "Pasco",
+            "state": "Washington",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/jobs/jobot-39b82e74/remote-software-engineer-scrum-master-8faaea81?lvk=0407XUOf7n58VSSOoCOyRQ.--M-WpHk0UJ",
+        "posted": "2021-04-22T12:54:52.452Z",
+        "lastScraped": "2021-04-25T12:54:52.452Z",
+        "description": "<div><b>Calling all Software Engineers who are also SCRUM Masters</b><br><br>This Jobot Job is hosted by: Mordy Ornguze<br>Are you a fit? Easy Apply now by clicking the \"Apply Now\" button and sending us your resume.<br>Salary: $120,000 - $150,000 per year<br><br><p><b>A bit about us:</b></p><br><br>We are comprised of professional engineers who love what we do and have fun doing it! We have earned the trust of our customers and peers, and ... we are growing! We are an employee managed company that empowers our team to make decisions and seek the best solutions for our customers. We operate as a family and passionately protect our company culture. We thrive on challenging problems with mission critical applications. We do not shy from asking or answering hard questions. We value active voices and diverse teams.<br><br>Things we are doing:<br><br>· Created new insights for U.S. financial institutions into their massive amounts of data.<br>· Provided real-time, enterprise solutions on enterprise architectures for DoD and Military strategic and tactical decision making<br>· Developed federal, state, and local law enforcement forensic investigations leveraging OSINT<br><br><p><b>Why join us?</b></p><br><ul><li> Competitive Base Salary!</li><li> Comprehensive benefits package to include health benefits</li><li>Unlimited paid time off</li><li>internal employee micro-bonus program</li><li> Paid time off</li><li> 401K matching</li><li> Tuition reimbursement</li></ul><br><br><p><b>Job Details</b></p><br><br>Are you an awesome Software Engineer with strong development skills AND SCRUM Master experience? We are looking for a skilled Developer who will help facilitate the software development lifecycle (SDLC) by installing, maintaining, and troubleshooting test and production environments as well as help. This will be a REMOTE position. You will join our talented team of engineers who deliver mission critical capability to our clients and ensure the highest levels of availability, performance and security. You should have a background in IT, systems administration, computer systems engineering, or systems engineering and analysis. We also expect you to demonstrate superb technical competency and strong teamwork skills.<br><br>Technologies You’ll Be Using<br>· Backend: Java, Scala, Vertica, PostgreSQL, Go, Groovy, Coffeescript, Python, Shell, Vertica<br>· Front End UX : Typescript, Angular, JavaScript, Handlebars<br>· Environment: Linux, AWS, Puppet, Nagios, Foreman, PCF (Pivotal Cloud Foundry)<br>· Opensource frameworks: Spark, Vertx, Node.js, Play, Hadoop, Hive SpringBoot<br>· Builds and support provided with: Git, BitBucket, Gradle, Airflow, Circle CI, Docker, Confluence, Jira, Rundeck, Concourse, Jenkins<br><br>Your Qualifications:<br>· Unrestricted right to work in the US without requiring sponsorship<br>· The ability to pass a thorough background check and a drug test<br>. Applied SCRUM Master experience<br>· Bachelors Degree in Computer Science, Computer Engineering, or similar discipline AND 5 years applicable experience<br>· Strong software engineering and software development skills<br>· Strong systems administration skills in Linux<br>· Strong database skills including schema management and SQL development<br>· Problem solving skills and ability to break down complex concepts<br>· Great time management and interpersonal skills<br>· Excellent verbal and written communication skills for both technical and non-technical personnel<br>· Detail-oriented and a team-player<br>· A creative thinker and enjoy a collaborative environment<br>· Work independently and make decisions under minimal supervision<br><br>You Might Also Have:<br>· ACTIVE SECRET/TOP SECRET government clearance is preferred (not required for this position)<br>· SCRUM Master certification (or applied experience)<br>· Some mobile development and/or UX<br>· Experience with Scala backend APIs, and a sense for the finer points of the Mobile user experience<br>· AWS (Amazon Web Services) Certifications (Solutions Architect, Developer), and/or any Specialties<br>· Experience with EC2 (Elastic Computer Cloud), RDS (Relational Database Service), S3 (Simple Storage Service), VPC (Virtual Private Cloud), EMR (Elastic Map Reduce)<br>· Familiarity with data structures, storage systems, cloud infrastructure, front-end frameworks<br>· Understanding of how technical decisions impact the user of what you’re building<br>· Proficiency with object oriented languages<br>· Adaptability in a rapidly changing environment with dynamic objectives and iteration with users<br>· Enjoy continuously learning (we realize making mistakes means progress)<br>· Actively seeking opportunities to grow and develop<br><br>Interested in hearing more? Easy Apply now by clicking the \"Apply Now\" button.</div>",
+        "index": 8,
+        "skills": [
+            "information technology",
+            "software engineering",
+            "sql",
+            "angular",
+            "java",
+            "scala",
+            "javascript"
+        ],
+        "compensation": "paid",
+        "qualifications": [
+            "Bachelor's degree"
+        ],
+        "remote": true
+    },
+    {
+        "position": "2021 Nestle USA Digital Analytics Internship (Remote)",
+        "company": "Nestle USA",
+        "location": {
+            "city": "Arlington",
+            "state": "Virginia",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/246a1fd542d3e4dbc0061097943ee7c1?lvk=T39oviHXxblJjUYH3hT9JQ.--M-mkyC05k",
+        "posted": "2021-04-16T12:54:56.715Z",
+        "lastScraped": "2021-04-25T12:54:56.715Z",
+        "description": "<div><div><p>You know us as the food and beverage company behind a lot of your favorites like Stouffer's, Nesquik, Toll House, and Lean Cuisine, as well as new discoveries like Sweet Earth and Chameleon Cold-Brew coffee. Across our organization, we're building a workplace where collaboration is essential, courage is rewarded, speed is encouraged, and agility is the norm to delight our consumers every single day!</p><p>&nbsp;</p><p>Here at Nestle USA, you are empowered to become a student of the business and deliver the best to our consumers. We're inviting forward-thinking and courageous future leaders to embrace an entrepreneurial approach and start their journey of growth.</p><p>&nbsp;</p><p>If you're a current technologist and analytically focused graduate student eager to make an impact on an enormous scale, take strides into greatness by joining Nestle USA.</p><p>&nbsp;</p><p><b>What To Expect</b></p><p>&nbsp;</p><p>Our 12 week paid internship with the Digital Acceleration Team is an opportunity to drive high-visibility, high-impact global outcomes for Nestle. The environment will challenge you to think differently about problem solving and is a phenomenal way to get a feel for working at Nestle. You will have hands on involvement with a significant business project from start to finish and get experience you won't find in the classroom. You will apply the analytical and coding knowledge you have gained in school in a real world setting, while being supported by a team that includes a project manager, buddy, and mentor. You will have an opportunity to develop your professional network and extend your own portfolio of work.&nbsp;</p><p>&nbsp;</p><p>Our projects are challenging, engaging and represent current business challenges that need a fresh perspective. You showcase the work you have done on your project at an end-of-internship presentation to senior leaders in the Digital organization. The internship experience also provides interaction with senior management and collaboration with team members across the business.&nbsp;</p><p>&nbsp;</p><p>Interns experience life at Nestle in a hands-on environment. We encourage students to question why we do things the way we do, provide fresh ideas, and improve processes and products. You'll be part of the action and working from day 1.</p><p>&nbsp;</p><p><b>After Your Internship</b></p><p>&nbsp;</p><p>Our intern program is designed to bring High Achievers into the Digital organization at Nestle USA and is intended to be a feeder into a full time position. We match your skill sets and passion with positions in our Digital organization. High performing summer interns are offered the opportunity to join the Digital organization after graduation and start their careers at Nestle.</p><b>Education Requirements</b><ul><li> Graduate students pursuing Master of Science in Data Science, Computer Science, Engineering (Operations Research, Industrial), Economics, Applied Mathematics and/or Statistics. Graduating between December 2021 and June 2022.&nbsp; </li><li> Showcases a strong level of academic success (Cumulative GPA 3.0 ) </li></ul> &nbsp; <b>Preferred Skills</b><ul><li> Coding skills for analytics and data analysis (SQL, R Python, etc.) </li><li> Experience with large data sets.&nbsp; </li><li> Results focused and can clearly speak to projects they've executed.&nbsp; </li><li> Passionate lifelong learners who are agile and stay abreast of the evolving technology and data landscape.&nbsp; </li><li> Embraces courage to propose new ways of operating and challenges the status quo. </li><li> Leverages their intellectual curiosity to aid in problem solving and distills complex information into simple ideas </li><li> Resourceful, self-starter who applies varied means to uncover answers and arrive at conclusions.&nbsp; </li><li> Fire from within to execute and deliver a successful end product and do it better than the competition.&nbsp; </li><li> Strong communicators who encourage others and excel in a team environment. </li></ul> &nbsp; <b>Perks</b><ul><li> Competitive compensation package.&nbsp; </li><li> Exposure to senior leadership through project presentation and mentoring </li><li> Volunteer in a community service opportunity with one of Nestle's Share Valued Organizations (e.g. Boys &amp; Girls Club of America &amp; Nestle Adopt-A-School Program) </li><li> Potential employment opportunities after completion of degree&nbsp; </li></ul> &nbsp; <strong>The Nestle Companies are an equal employment opportunity and affirmative action employer seeking diversity in qualified applicants for employment.&nbsp; All applicants will receive consideration for ...</strong></div></div>",
+        "index": 9,
+        "skills": [
+            "project management",
+            "information technology",
+            "sql",
+            "networks",
+            "python",
+            "software engineering"
         ],
         "compensation": "paid",
         "remote": true
     },
     {
-        "position": "Software Engineering Intern",
-        "company": "Ekata, Inc.",
+        "position": "Ticketing Services Internship",
+        "company": "PGA TOUR",
         "location": {
-            "city": "Seattle",
-            "state": "Washington",
+            "city": "Boca Raton",
+            "state": "Florida",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/ojob/641e9138a7f04986fef8b49d35613a5d?lvk=aamBqXNoU_j8ukeWa3Jzmw.--LzU7EXOtZ",
-        "posted": "2021-03-27T10:38:39.535Z",
-        "lastScraped": "2021-04-12T10:38:39.535Z",
-        "description": "<div><div><p></p><p>Ekata provides global identity verification via enterprise-grade APIs and a SaaS solution. Our product suite is powered by Ekata Identity Engine, the first and only cross-border identity engine of its kind. It uses complex machine learning algorithms across the five consumer attributes of email, phone, name, physical address, and IP to derive unique data links and features from billions of real-time transactions within our customer network and the globally sourced data of our graph. Businesses around the world including Alipay, Stripe, Airbnb, and Microsoft leverage our solutions to approve more good transactions, reduce friction, and find fraud.</p><p>We are looking for a <b>Software Engineering Intern</b>&nbsp;to be based out of Seattle, who thrives on designing, coding, and maintaining high performance data processing applications on the JVM platform (primarily in Clojure and Scala), running on AWS.&nbsp;</p><p>Your ideal internship should be one where you work in a small team and are empowered to make yourself and your team more productive on a daily basis. You should want to be part of a team where your desire to grow and learn are valued and aptly rewarded; where using and contributing to open source are looked upon as an asset; where innovating and executing are core to your teams' beliefs.</p><p><b>As a Software Engineering Intern, you will:</b></p><ul><li>Write performant code and write automated test to validate correctness of code</li><li>Develop and deploy large-scale microservices and/or data processing systems</li><li>Meet development milestones and business requirements on schedule</li><li>Independently analyze, propose and develop solutions for technical problems and issues</li><li>Ensure the adherence to the standards and procedures that result in an environment compliant with information security policy</li></ul><p><b>Our ideal Software Engineering Intern will have:</b></p><ul><li>A willingness to learn new languages and techniques to solve challenging problems.</li><li>Experience in functional programming fundamentals.</li><li>BS degree in Computer Science, related degree or equivalent. Graduating before August 2022.&nbsp;</li><li>Ability to write clean code that works, is readable, maintainable and follows best practices and coding standards</li><li>Understanding of OO and functional design, languages, algorithms and data structures</li><li>A philosophy of iteration and continuous improvement</li><li>A desire to own design and architecture end to end</li></ul><p>Unwavering in our pursuit of standardizing global identity data, we are approachable, real people that genuinely care about the success of those we partner with. With a commitment to service, innovation, and ownership, Ekata is a dynamic place to work for folks who want to make an impact on a global scale. We provide learning &amp; development opportunities for each employee and promote work-life flexibility through self-managed time off. Headquartered in downtown Seattle, Ekata is growing internationally with offices in Budapest, Hungary, Amsterdam, and in Singapore.</p><p>To learn more about the experience of working at Ekata visit: <span class=\"long-word\">https://ekata.com/careers/</span></p><p>Ekata prides itself on celebrating diversity, inclusivity, and being an equal-opportunity employer.<br><br>#LI-TD</p><p></p></div></div>",
-        "index": 29,
+        "url": "https://www.ziprecruiter.com/ojob/113d88c4563e6df102ca5972f9510635?lvk=Pn-ptRxRn6_zhd8-CKrnlw.--M-mjViFl-",
+        "posted": "2021-04-21T12:55:03.975Z",
+        "lastScraped": "2021-04-25T12:55:03.975Z",
+        "description": "<div><div><div><strong>About the internship:</strong></div><div>At the Boca Raton Champions Golf Charities (BRCGC), the host organization of the TimberTech Championship, we are passionate about growing the game of golf and celebrating the City of Boca Raton. The TimberTech Championship, a PGA TOUR Champions tournament eligible to professional golfers age 50 and over, is the semifinal playoff event in the season-long Charles Schwab Cup competition held November 1 - 7, 2021 at the Old Course at Broken Sound.</div><div></div><div><strong>Position Summary:</strong></div><div>This internship will focus on assisting the launch of a new ticket vendor partnership, educating our fanbase of our offerings, and driving attendance. This candidate will coordinate package execution with the ticket vendor, ensure the greatest level of customer service across all touchpoints by communicating the highest degree of courtesy, professionalism, thoughtfulness, and enthusiasm.</div><div></div><div><strong>Responsibilities:</strong></div><ul><li>Assist the development of ticket types, pricing plan, promotions, and distribution</li><li>Make product and process improvements that are designed to deliver amazing customer experiences</li><li>Leverage ticket vendor analytics to optimize decisions</li><li>Develop fan journey experiences including but not limited to on-site activations and shot spots </li><li>Support on-site box office and will call operations</li><li>Coordinate ticketing procedures including but not limited to terms and conditions and will-call protocol</li><li>Serve as a source of information for all spectators, managing in person questions, calls, and emails</li><li>Resolve customers' service or billing complaints by performing activities such as refunding purchases or adjusting bills</li><li>Complete contract forms, prepare change of address records, or issue service discontinuance orders</li></ul><div></div><div><strong>Qualifications:</strong></div><ul><li>Be knowledgeable about sports/event industry trends and use this knowledge to assist drive solutions for our product and our portfolio</li><li>Desire to work in a fast-paced environment while collaborating with team members</li><li>Organizational skills required to multitask, develop timelines, and meet deadlines</li><li>Strong verbal and clear writing presentation</li><li>Proficiency in Microsoft Office</li><li>1.5+ years of coursework in Computer Science, Sport Administration, Hospitality/Event Management, Business, or a related field</li></ul><div><br></div><div><strong>Internships are available to college students who are eligible to receive academic credit</strong></div><ul><li>Applicants should reside near Boca Raton or be willing to commute</li><li>A cover letter and resume must be submitted as attachments with the application</li></ul><div><br></div><div>*Please note internships are unpaid and students must receive academic credit. *BRGCGC is a not-for-profit, tax exempt 501(c)(3) organization who promotes the game of golf through the TimberTech Championship *We are an equal opportunity employer and all qualified applicants will receive consideration without regard to race, color, religion, sex, national origin, disability status, protected veteran status, or any other characteristic protected by law. </div>Employment Type: Intern</div></div>",
+        "index": 10,
         "skills": [
-            "machine learning",
-            "software engineering",
-            "scala",
-            "networks",
-            "project management",
-            "information technology"
-        ],
-        "remote": false
-    },
-    {
-        "position": "Software Engineering Intern",
-        "company": "Intel",
-        "location": {
-            "city": "Austin",
-            "state": "Texas",
-            "country": "USA"
-        },
-        "url": "https://www.ziprecruiter.com/ojob/c4dd3b6d3f82ba1f2a06b2aafb083def?lvk=PrcrfNnByATNYbJMG7t6Wg.--LxhMFCG8k",
-        "posted": "2021-03-15T10:38:41.466Z",
-        "lastScraped": "2021-04-12T10:38:41.466Z",
-        "description": "<div><div><b>Job Details:</b><p></p><p></p>Job Description:&nbsp;<p>The Developer Software Engineering Team at Intel, is looking for a low-level, platform software developer to help us enable and performance optimize matrix operations for our hardware products. The selected intern will design programming languages for machine learning applications. The candidate will contribute to the development of a DPC++ language interface across vector and tensor machines.</p><p></p><p></p><b>Qualifications:</b><p>You must possess the below minimum qualifications to be initially considered for this position. Experience listed below would be obtained through a combination of your school-work/ classes/ research and/or relevant previous job and/or internship experiences.</p><p></p><p>Minimum Qualifications</p><ul><li>Enrolled in MS in Computer Science or PhD. in Computer Science or Mathematics or Software Engineering related discipline.</li></ul><p></p><p>6+ months of experience with the following skills:</p><ul><li>Modern C++ software development including debugging and advanced features such as templates </li><li>Programming in OpenCL, CUDA, or SYCL</li><li>Knowledge of LLVM compiler infrastructure and passes</li><li>Knowledge of fundamental machine learning kernels and concepts</li><li>Experience with Python programming or similar scripting language for test scripting</li></ul><p></p><p>Preferred Qualifications:</p><ul><li>Experience with Linux</li><li>Strong understanding of computer system architecture and operating systems</li><li>Experience with parallel programming interfaces and communication runtimes</li><li>Familiarity with contemporary parallel programming models, e.g. MPI, PGAS</li><li>Familiarity with GPU </li><li>Familiarity with DPC++ and Level0</li></ul><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>Job Type:Student / Intern<p></p><p></p>Shift:Shift 1 (United States of America)<p></p><p></p>Primary Location:&nbsp;US, Texas, Austin<p></p><p></p>Additional Locations:Virtual US and Canada<p></p><p></p><p></p><p></p>Business group:Intel Architecture, Graphics, and Software (IAGS) brings Intel's technical strategy to life. We have embraced the new reality of competing at a product and solution level-not just a transistor one. We take pride in reshaping the status quo and thinking exponentially to achieve what's never been done before. We've also built a culture of continuous learning and persistent leadership that provides opportunities to practice until perfection and filter ambitious ideas into execution.<p></p><p></p>Posting Statement:All qualified applicants will receive consideration for employment without regard to race, color, religion, religious creed, sex, national origin, ancestry, age, physical or mental disability, medical condition, genetic information, military and veteran status, marital status, pregnancy, gender, gender expression, gender identity, sexual orientation, or any other characteristic protected by local law, regulation, or ordinance.Position of TrustN/A</div></div>",
-        "index": 30,
-        "skills": [
-            "machine learning",
-            "software engineering",
-            "virtual reality",
-            "hardware",
-            "python",
             "c and c++",
-            "information technology"
+            "project management",
+            "game design",
+            "information technology",
+            "cybersecurity"
+        ],
+        "compensation": "unpaid",
+        "remote": false
+    },
+    {
+        "position": "SW Engineer",
+        "company": "CyberCoders",
+        "location": {
+            "city": "Ridgeland",
+            "state": "Mississippi",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/jobs/cybercoders-06af0033/sw-engineer-e6b66e6d?lvk=B2QK2Hjq07stXaep3Xe7YQ.--M-c9F-1VZ",
+        "posted": "2021-04-16T12:55:11.315Z",
+        "lastScraped": "2021-04-25T12:55:11.315Z",
+        "description": "<div>SW Engineer <div>If you are a SW Engineer with experience, please read on!This position is available as a Software Developer I- III; depending on experience<br><br>Work in the Billing and Corporate Applications department, Corporate Applications team to provide and maintain highly specialized software solutions. Perform a variety of technical work in the front end or back end development of new applications including analysis, design, coding, testing, debugging, and documenting as well as support of current applications and systems.</div>What You Will Be Doing<div>Development:<br><br>Demonstrated ability and solid work ethic to perform technical tasks including analysis, design, coding, debugging, and implementation of software applications.<br><br>Write new programs or create modifications to existing applications as necessary based on project requirements.<br><br>Follow established standards for the design, coding, and testing of software.<br><br>Testing:<br><br>Assist in performing unit and integration testing, present final test results, and obtain agreement and approval.<br><br>Work with users to validate system testing and conformity with functional requirements.<br><br>Implementation and Support:<br><br>Follow appropriate change management and implementation procedures.<br><br>Research, propose, and implement solutions to production issues and trouble tickets as assigned by Systems Analyst and/or Manager.<br><br>Prepare program and/or process documentation.<br><br>Perform additional duties as assigned by Systems Analyst and/or Manager.</div>What You Need for this Position<div>Baccalaureate degree in Information Systems, Computer Science, or equivalent experience in software development.<br><br>Extensive knowledge of commonly used concepts, practices, and procedures within the software development field is required.<br><br>Extensive knowledge of standard web languages (i.e. HTML, CSS, JavaScript, XML and JSON) required.<br><br>Excellent verbal and written communications skills are required.<br><br>PREFERRED<br><br>Extensive software development experience and experience in web-based technologies and in Java, SQL, Spring Framework, Web Services (RESTful and SOAP), UNIX and Windows operating system experience preferred.</div><div>So, if you are a SW Engineer with experience, please apply today!</div> - <p>Applicants must be authorized to work in the U.S.</p><br><br><b>CyberCoders, Inc is proud to be an Equal Opportunity Employer</b><br><br> All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, national origin, disability, protected veteran status, or any other characteristic protected by law. <br><br><b>Your Right to Work</b> – In compliance with federal law, all persons hired will be required to verify identity and eligibility to work in the United States and to complete the required employment eligibility verification document form upon hire.</div>",
+        "index": 11,
+        "skills": [
+            "project management",
+            "software engineering",
+            "information technology",
+            "sql",
+            "javascript",
+            "java",
+            "web development"
         ],
         "remote": false
     },
     {
-        "position": "Software Engineering Intern",
-        "company": "SmartNews",
+        "position": "Data Scientist Summer Intern",
+        "company": "Fiserv",
         "location": {
-            "city": "Palo Alto",
+            "city": "San Jose",
             "state": "California",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/jobs/smartnews-b2488a27/software-engineering-intern-fbb641a3?lvk=uFZgAdSJd70wmHuG81nHnQ.--LxrBm0Az3",
-        "posted": "2021-03-19T10:38:44.165Z",
-        "lastScraped": "2021-04-12T10:38:44.165Z",
-        "description": "<div><p>SmartNews is a leading mobile app of news aggregation services. We analyze millions of articles to deliver the most engaging information with high quality, in near-real-time fashion, to millions of users around the world. <br></p><p>The marketing technology team is looking for a talented software engineering intern to help us build systems and features that can acquire more users. </p><p><br></p><p><strong>Responsibilities</strong></p><ul><li>Take ownership of a challenging problem, build and ship the system under strong mentorship</li><li>Write high-quality code and ship solid features.</li><li>Document and present what you did to SmartNews leadership.</li></ul><p><strong>Requirements</strong></p><ul><li>Majored in computer sciences or related subjects. Preferred Junior and above students. A graduate student is a plus. </li><li>Strong communication skills and learning ability.</li><li>Proficient in one or two modern programming languages, preferred Python3, Swift, Kotlin Go, or Java.</li><li>Strong problem-solving skills and algorithmic thinking. </li><li>Familiar with data analytics, SQL, and relational databases. Sensitive to numbers and charts.</li><li>Passionate about building systems, solving challenging problems.</li><li>Previous internship experience in Ads technology is a plus, but not required.</li><li>Be familiar with modern development tools, e.g. git, k8s, docker, is a plus.</li></ul></div>",
-        "index": 31,
+        "url": "https://www.ziprecruiter.com/ojob/0be043ef8ff0355255498895a4533afc?lvk=ylwNGabbcJXTSMYSIeqRRg.--M-8PIqvd3",
+        "posted": "2021-04-16T12:55:13.315Z",
+        "lastScraped": "2021-04-25T12:55:13.315Z",
+        "description": "<div><div><p></p><p><b>Job Title</b></p>Data Scientist Summer Intern<p></p><p><b>Job Purpose</b></p><p><b><b>Data Science Internship</b></b></p><p></p><p><b>Program Overview:</b></p><p>Our Summer Intern program offers hardworking college students an opportunity to go beyond the classroom to develop leadership skills and gain relevant hands on experience working as part of a global support team with professionals across the enterprise. Additionally, interns will participate in scheduled activities throughout the summer, including sessions with Senior Leaders, site tours, volunteer opportunities, and other social events. Fiserv interns are in session from June 2, 2021 - August 13, 2021 and work approximately 40 hours per week.</p><p></p><p><b>About Ondot</b></p><p>Ondot, now part of Fiserv, has helped over 4,500 financial institutions modernize their credit and debit cards with digital technology. Over the last 10 years, Ondot has won numerous awards for its technology, and is excited to bring this innovation to Fiserv.</p><p></p><p><b>What does the Data Science team do?</b></p><p>As a member of the Data Scientist team, you will have the opportunity to work on real industry use cases, use your data science skills to discover data insights for card holders based on the analysis of a variety of data context, including card data, transaction data, merchant data, and location data, and build Data Insight products that bring intelligence to the consumer's digital card management and card spending experience</p><p></p><p><b>As a Data Scientist you will: </b></p><p>The candidate will work on improving the Transaction Enrichment (TE) solution, and apply exploratory data analysis, statistical algorithms and machine learning algorithms to cleanse raw payment transaction data and enrich it with additional attributes, such as merchant names, locations, merchant contacts, merchant categories, logos, etc. The responsibilities include:</p><ul><li><p>Work with managers and cross-functional product teams to create the prioritized list of data use cases and data challenges</p></li><li><p>Conduct independent data analysis to gain thorough understanding of the main characteristics of the data, and identify the main gaps in algorithms or the main data issues to resolve</p></li><li><p>Leverage data warehousing and visualization methods to create dashboards and tools for effectively performing data analysis and model evaluation</p></li><li><p>Recommend statistical or machine learning methods to solve the data issues</p></li><li><p>Process data from multiple data sources to create clean and normalized datasets for training, validation and testing</p></li><li><p>Execute model training, hyperparameter tuning, feature selection, and performance evaluation</p></li></ul><p></p><p><b>Requirements of the Internship:</b></p><ul><li><p>Progress toward completion of Bachelor's or Master's degree in Mathematics, Statistics, Data Science, Computer Science, or other related fields. by December 2021/ May 2023 with demonstrated academic achievement. - <b>Master's preferred</b></p></li><li><p>Minimum GPA of 3.0 (3.5 or above preferred)</p></li><li><p><b>Must be passionate about data</b>: you feel a strong sense of achievement when you discover the hidden patterns within the data, the exceptions not dealt with before, the beauty of feature engineering, and the new model yielding best performance without overfitting</p></li><li><p>Experience or knowledge of data processing skills and abilities to deal with large amount of data</p></li><li><p>Experience with SQL, Python, and/or data processing pipeline</p></li><li><p>Experience or knowledge with machine learning models, such as classification, NLP, NER, neural network, and other deep learning algorithms using Tensorflow or PyTorch</p></li><li><p>Experience or knowledge in feature engineering, hyperparameter tuning, and model training</p></li><li><p>Extremely attentive to metric and details: precision, recall, accuracy, outliers, anomalies, trends, etc.</p></li><li><p>Respect data privacy and data governance rules and regulations</p></li><li><p>Ability to communicate clearly with different stakeholders</p></li><li><p>A team player who can learn and grow with other team members, while contributing to the success of the product</p></li></ul><p></p><p><b>Learn more about Fiserv:</b></p><p>To support the total well-being of our associates, Fiserv takes a broad approach to our benefits. We offer a comprehensive benefits package that provides flexibility and affordability with a variety of medical, dental, vision, life insurance and disability options.</p><p></p><p>We are #FISVProud of our benefits and well-being programs. Our commitment to wellness, wellness education, preventive services and fitness activities are designed to meet you where you are.</p><p></p><p>Life moves fast. And as it does, we know most people aren't thinking about \"financial services\". But we are.</p><p></p><p>We help people and businesses move money and information every minute of every day. Our solutions connect financial institutions, corporations, merchants and consumers to one another, millions of times a day, behind the scenes, reliably and securely.</p><p></p><p>We're Fiserv, a global leader in Fintech and payments enabling innovative financial services experiences that are in step with the way people live and work today. The company's approximately 44,000 associates proudly serve clients in more than 100 countries, so their customers, members and consumers can move money when and where they need it, at the point of thought.</p><p></p><p>Our Aspiration is to move money and information in a way that moves the world. As a FORTUNE 500 company and one of FORTUNE Magazine World's Most Admired Companies for the seventh consecutive year, we are committed to excellence and purposeful innovation.</p><p></p><p>We welcome and encourage diversity in our workforce. Fiserv is an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, or status as a protected veteran. </p><p></p><p>Explore the possibilities of a career with Fiserv and Find Your Forward with us.</p><p></p><p>#FINT</p><p></p><p>Thank you for considering employment with Fiserv.&nbsp; Please:</p><p></p><ul><li>Apply using your legal name</li><li>Complete the step-by-step profile and attach your resume (either is acceptable, both are preferable).</li></ul><p></p><p></p><p>Fiserv is an Equal Employment Opportunity Employer, and it is the Company's policy to make all employment decisions without regard to race, color, religion, creed, age, sex, national origin, veteran status, disability (as long as the individual is able to perform the essential functions of the job with or without reasonable accommodation), and any other characteristic protected by Law.</p></div></div>",
+        "index": 12,
         "skills": [
+            "machine learning",
             "information technology",
-            "software engineering",
             "sql",
-            "java",
-            "python",
-            "machine learning"
+            "data visualization",
+            "networks",
+            "deep learning",
+            "project management",
+            "python"
+        ],
+        "qualifications": [
+            "Bachelor's degree"
         ],
         "remote": false
     },
     {
-        "position": "Software Engineering Intern",
-        "company": "CDK",
+        "position": "NANA SHAREHOLDER INTERNSHIP - Natural Resources Intern - Paid Internship (Open to NANA Shareholde...",
+        "company": "NANA REGIONAL CORPORATION",
         "location": {
-            "city": "Austin",
-            "state": "Texas",
+            "city": "Anchorage",
+            "state": "Alaska",
             "country": "USA"
         },
-        "url": "https://www.ziprecruiter.com/ojob/f205c3bfd8caf26b755a813d9628c181?lvk=FNjnfBBeZQ2hzTsO1UYFfg.--LynnSFhes",
-        "posted": "2021-03-23T10:38:46.098Z",
-        "lastScraped": "2021-04-12T10:38:46.098Z",
-        "description": "<div><div><p><strong>Accelerate Your Career</strong></p><p><em>Drive global technology</em></p><p>&nbsp;</p><p>We’re a global market leader in providing software and digital marketing solutions to the automotive industry<em>. </em>We’re innovating the way that automotive dealerships drive their customers’ car-buying experience from the moment they run a search online all the way through to bringing their car back in for a service. Join us and be a part of the evolution.</p><p>&nbsp;</p><p>We’re large enough to make a difference but small enough for your voice to be heard. This means that we are an organisation where every person matters. You can make an impact on the success of our business and that of our customers regardless of what career you decide to pursue.</p><p>&nbsp;</p><p><strong>Power the Possibilities</strong>.</p><p>The CDK Global technology team is looking for collaborative innovators who are passionate about making their mark on emerging enterprise software products. We're building and developing cloud technology for the automotive retail industry that will change the landscape for automotive dealers, original equipment manufacturers (OEMs) and the customers they serve.<br><br><strong>Be Part of Something Bigger</strong><br>Each year, more than three percent of the U.S. gross domestic product (GDP) is attributed to the auto industry, which flows through our customer, the auto dealer. It's time you joined an evolving marketplace where research and development. We're expanding our workforce – engineers, architects, developers &amp; more – onboarding early adopters who can optimize, pivot and keep pace with ever-evolving development roadmaps and applications.<br><br><strong>Join Our Team</strong><br>Growth potential, flexibility and material impact on the success and quality of a next-gen, enterprise software product make CDK an excellent choice for those who thrive in challenging, fast-paced engineering environments. We have exceptional opportunities to evolve our industry by driving change through technology.</p><p><br><strong>If you're ready for high-impact, you're ready for CDK.</strong></p><p></p><p>As a<strong>Software Engineering Intern</strong>, you will work side-by-side with our core development teams to help engineer the next generation of enterprise-class software solutions at CDK utilizing a broad range of the latest technologies ranging from React.js, Node.js, Java, Spring Boot, Postgres, DynamoDB, TestNG, Selenium, Docker, kubernetes to various DevOps tools. Your primary responsibilities will include development of applications, services and components. We will provide hands-on technical experience and an opportunity to work with our engineering teams, architects and product owners in the early and continuous delivery of high quality software products.</p><p></p><p><strong>Requirements:</strong></p><ul><li>Actively enrolled in a Bachelor's or Master's Computer Science or related program</li><li>Anticipated graduation date after December 2021</li><li>Software skills and a passion to develop them</li><li>A great attitude &amp; the drive to learn and innovate</li><li>Ability to participate in a summer internship program of 10 weeks (June-August)</li></ul><p><strong>What We Offer You:</strong></p><p></p><ul><li>Meaningful &amp; challenging project work in a collaborative team environment</li><li>Dedicated mentor and a community of encouragement &amp; support</li><li>Global volunteer &amp; team-building activities to enhance your summer experience</li></ul><p></p><p><strong>Locations:</strong><strong>Austin</strong>TX,<strong>Portland</strong>OR,<strong>San Jose</strong>CA,<strong>Destin</strong>FL<br></p><p>&nbsp;</p><p><strong>Why a career with CDK Global?</strong></p><p>&nbsp;</p><p><strong>We demand diversity</strong>. Our people may be spread across countries, continents and cultures, but we’re united by a passion and enthusiasm to drive our business forward. This means no matter where you work you’ll feel like part of our global team. Diverse backgrounds, ideas and experiences are the only way to deliver world-class service to our customers. Our differences are our strengths</p><p>&nbsp;</p><p><strong>Your benefits. </strong>To help us attract and retain the best, we pay people according to performance, not length of service. We will also help you grow your career, not only through focused investment in learning and development but also by enabling you to explore the exciting opportunities our global market has to offer.</p><p>&nbsp;</p><p><strong>The perfect opportunity awaits. Start your career with CDK Global.</strong></p></div></div>",
-        "index": 32,
+        "url": "https://www.ziprecruiter.com/ojob/d4bcc8ba2d0b9a1349c93e984edf52b1?lvk=ojdZS6USwgA9POrHb3IFGQ.--M-XTuTb17",
+        "posted": "2021-04-17T12:55:42.652Z",
+        "lastScraped": "2021-04-25T12:55:42.652Z",
+        "description": "<div><div><p>Summary </p><p>The Natural Resources Intern will participate in multiple facets of the natural resources department work.&nbsp; Helping to learn about and tell the story of the importance of responsible natural resource development to NANA by participating in multiple department activities.&nbsp; The majority of the work will be in the Anchorage office, potentially including field work in the NANA region.&nbsp; </p><p>&nbsp;</p><p>The successful candidate will be able to take direction from multiple sources and use analytical skills to take the information collected to help put together a timeline and history of NANA's natural resources story.&nbsp; Helping to analyze historical data and interact with department members to help catalog and record what the department has done over the last 30 years, starting with ANCSA land selections and the Red Dog Mine.&nbsp; Learning about the various phases of a mining project.&nbsp; Participating in departmental meetings and shadowing department members on certain meetings.&nbsp; Including adding to, and utilizing archived data and items.</p><p>&nbsp;</p><p>The field work could support various programs currently being overseen by the department and may include multiple trips to communities in the NANA region including overnight stays. Examples of potential activities include: gravel pit remediation, seed harvest studies, and early stage mineral exploration.&nbsp; Anchorage office work will include analysis and write-ups for any of the field activities performed.&nbsp; </p><p>&nbsp;</p><p>Essential Duties and Responsibilities</p><ul><li>Ability to communicate clearly in both verbal and written communication.</li><li>Ability to analyze and interpret both quantitative and qualitative data.</li><li>Attention to detail.</li><li>This position has no supervisory responsibilities.</li><li>Other duties that are pertinent to the department or unit's success also may be assigned. </li><li>Ability to take direction and feedback.</li></ul><ul><li>Must be a NANA shareholder.&nbsp; NANA shareholders own stock in NANA Regional Corporation, Inc.</li><li>Must be currently enrolled in college and completed at least 1 year.</li><li>Must be currently pursuing or interested in pursuing a degree in Science, Technology, Engineering, or Mathematics (STEM) </li><li>Intermediate to advanced computer skills in Microsoft Office.</li></ul><p>&nbsp;</p><p>Preferred Requirements</p><ul><li>Curriculum focus on Science, Engineering or Mathematics.</li><li>Having participated in the GeoFORCE and/or ANSEP programs.</li></ul><p>&nbsp;</p><p>Competencies </p><ul><li>Desire to work with people.</li><li>Ability to encourage, motivate, and engage people.</li><li>Ability to analyze and problem solve.</li><li>Must have excellent oral and written communication, interpersonal and listening skills.</li><li>Ability to be flexible and adapt to change.</li><li>Must have a personality suitable to this position requiring strong teamwork skills.</li><li>Ability to prioritize and organize.</li><li>Ability to meet deadlines.</li></ul><p>&nbsp;</p><p>Working Conditions and Physical Requirements </p><p>Weather: Indoors - environmentally controlled; requires most or all work to be done inside.</p><p>Noise level: The noise level in the work environment is usually that of a standard office atmosphere.</p><p>Description of environment: Office building with standard office environment.</p><p>Physical requirements:&nbsp; Employee is required to occasionally lift and/or move up to 25 lbs. Frequently required to sit, stand, walk, use hands/fingers to handle or feel, climb, stoop, kneel, crouch or crawl, talk/hear, see, taste/smell, and carry weight/lift.</p><p>Travel: Employee may travel up to 25% to various locations within the U.S. and/or remote locations and may be required to use alternative modes of transportation, including but not limited to snow machines, boats, small airplanes and ATVs. </p><p>&nbsp;</p><p>Required Language</p><p>Equal Opportunity <span class=\"long-word\">Employer/Shareholder</span> Preference </p><p>NANA Regional Corporation is an equal employment opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, protected status or any other characteristic protected by applicable law. NANA grants employment preference to shareholders of NANA and their spouses and descendants to the extent allowed by law.</p><p>&nbsp;</p><p>It is NANA Regional Corporation policy to conduct background checks, drug testing and a physical assessment, as applicable, once an offer has been accepted, in accordance with company and/or contract requirements.</p><p>&nbsp;</p><p><i>Accommodation Request</i></p><p>If you are a job seeker with a disability and require accessibility assistance or an accommodation to apply for one of our jobs, please submit a request by telephone or via email. In order to appropriately assist you with an accommodation, we ask that you please specify the assistance needed in order to access our jobsite and post for a position. The dedicated email and telephonic options are listed below and are reserved only for individuals with disabilities needing accessibility assistance.</p><p>&nbsp;</p><p>To request an accommodation by telephone, contact us at: 1-800-478-2000</p><p>To request an accommodation by email, contact us at <span class=\"long-word\">recruiting@nana.com</span></p></div></div>",
+        "index": 13,
         "skills": [
+            "machine learning",
+            "information technology",
+            "project management",
+            "software engineering"
+        ],
+        "start": "2021-05-01T10:00:00.000Z",
+        "contact": "recruiting@nana.com, 1-800-478-2000",
+        "remote": true
+    },
+    {
+        "position": "JR0163021 - Computer Architecture Graduate Internship",
+        "company": "Intel",
+        "location": {
+            "city": "Hillsboro",
+            "state": "Oregon",
+            "country": "USA"
+        },
+        "url": "https://www.ziprecruiter.com/ojob/2de6fb7e6af4252c53dc88879d398170?lvk=Bal7tht7u8QE2hn-W6GnNg.--M-VSTGy1g",
+        "posted": "2021-04-16T12:55:47.629Z",
+        "lastScraped": "2021-04-25T12:55:47.629Z",
+        "description": "<div><p>Job ID: JR0163021 Job Category: Intern/Student Primary Location: Hudson, MA US Other Locations: US, California, Santa Clara;US, Oregon, Hillsboro;US, Texas, Austin Job Type: Intern Computer Architecture Graduate Internship Job Description Responsibilities may be quite diverse of a technical nature US experience and education requirements will vary significantly depending on the unique needs of the job. Responsibilities will include simulating Intel-based platforms to study and categorize the effects of errors on running systems and workloads. Intel internship job assignments are usually for the summer or for short periods during breaks from school Qualifications Must be pursuing a PhD degree in Electrical Engineering, Computer Engineering, Computer Science. </p><p>Minimum of 3 months experience with software and scripting programming languages (ie. C/C++, Python, Perl, etc.) Minimum of 3 months experience with computer architecture Preferred Qualifications: Knowledge of Intel Architecture Intel Internship in Architecture Organization Coursework or project work experience dealing with soft errors or reliability modeling. Working knowledge of Linux and tools such as GDB, Git, Shell scripts Knowledge of cache hierarchies and protocols specially in context of new emerging memory technologies Inside this Business Group Intel Architecture, Graphics, and Software (IAGS) brings Intel's technical strategy to life. </p><p>We have embraced the new reality of competing at a product and solution level-not just a transistor one. We take pride in reshaping the status quo and thinking exponentially to achieve what's never been done before. We've also built a culture of continuous learning and persistent leadership that provides opportunities to practice until perfection and filter ambitious ideas into execution. </p><p>Other Locations US, California, Santa Clara;US, Oregon, Hillsboro;US, Texas, Austin Posting Statement All qualified applicants will receive consideration for employment without regard to race, color, religion, religious creed, sex, national origin, ancestry, age, physical or mental disability, medical condition, genetic information, military and veteran status, marital status, pregnancy, gender, gender expression, gender identity, sexual orientation, or any other characteristic protected by local law, regulation, or ordinance. <span class=\"long-word\">USInternJR0163021Hudson</span></p></div>",
+        "index": 14,
+        "skills": [
+            "information technology",
             "software engineering",
-            "java",
-            "devops",
+            "python",
+            "c and c++",
             "machine learning",
             "project management",
-            "information technology",
-            "react"
-        ],
-        "qualifications": [
-            "Bachelor's degree"
+            "virtual reality"
         ],
         "remote": false
     }

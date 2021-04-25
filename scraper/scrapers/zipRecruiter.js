@@ -1,6 +1,9 @@
 import Logger from 'loglevel';
 import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON, autoScroll } from './scraper-functions.js';
+// import fs from 'fs';
+
+// const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
 async function getData(page) {
   const results = [];
@@ -23,38 +26,78 @@ async function main(headless) {
   try {
     Logger.error('Starting scraper zipRecruiter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
-    await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');
-    await page.waitForSelector('input[id="search1"]');
-    await page.waitForSelector('input[id="location1"]');
-    const searchQuery = 'computer science intern';
-    Logger.info('Inputting search query:', searchQuery);
-    await page.type('input[id="search1"', searchQuery);
+    // await page.goto('https://www.ziprecruiter.com/');
+    await page.goto('https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=10&radius=25&refine_by_salary=&refine_by_tags=&refine_by_title=&refine_by_org_name=');
+    // await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');
+    // const emailQuery = credentials.zipRecruiter.user;
+    // Logger.info('Inputting search query:', emailQuery);
+    // await page.waitForSelector('input[id="email_address"]');
+    // await page.type('input[id="email_address"]', emailQuery);
+    // await page.click('div[class="submit"] > input[class="cta"]');
+    // await page.mouse.click(1, 300);
+    // const usedEmail = await fetchInfo(page, 'body[class="tlight logged_out redesign candidateSearchResults search_infinite_scroll js6210_search_form_header has_universal_footer logged_out _header-stick at-top doc_loaded"]', 'innerText');
+    // console.log(usedEmail);
+    // if (usedEmail.includes('already have your email on file!')) {
+    //   await page.mouse.click(1, 1);
+    //   // await page.click('input[class="cta hf-validated hf-valid hf-in-range"]');
+    // }
+
+
+
+    // await page.waitForSelector('input[id="search1"]');
+    // await page.waitForSelector('input[id="location1"]');
+    // const searchQuery = 'computer science internship';
+    // Logger.info('Inputting search query:', searchQuery);
+    // await page.type('input[id="search1"', searchQuery);
+
+
+
+    // await page.focus('input[id="location1"]');
+    // await page.keyboard.down('Control');
+    // await page.keyboard.press('A');
+    // await page.keyboard.up('Control');
+    // await page.keyboard.press('Backspace');
+    // const locationQuery = 'US';
+    // hf-validated hf-valid hf-in-range
+    // await page.type('input[class="location gtm_onchange hf-validated hf-valid hf-in-range hf-user-valid"', locationQuery);
     // eslint-disable-next-line no-param-reassign,no-return-assign
-    await page.$eval('input[id="location1"]', (el) => el.value = '');
-    await page.click('button.job_search_hide + input');
-    await page.waitForSelector('.modal-dialog');
+
+
+    // await page.$eval('input[id="location1"]', (el) => el.value = 'US');
+    // await page.click('button.job_search_hide + input');
+
+
+    // await page.waitForSelector('input[id="email_address"]');
+    await page.mouse.click(1, 1);
+    // await page.waitForSelector('.modal-dialog');
     await page.mouse.click(1000, 800);
     await page.waitForTimeout(5000);
     // Filters based on jobs posted within last 10 days
     await page.click('button[class="select-menu-header"]');
     await page.click('.select-menu-item:nth-child(3)');
-    await page.waitForSelector('.breadcrumb_list.breadcrumb li:nth-child(2)');
-    await page.click('.breadcrumb_list.breadcrumb li:nth-child(2)');
+    // causes to change to hawaii
+
+    // await page.waitForSelector('.breadcrumb_list.breadcrumb li:nth-child(2)');
+    // await page.click('.breadcrumb_list.breadcrumb li:nth-child(2)');
     Logger.info('Setting filter by 10 days...');
     // Filters based on internship tag
     await page.waitForSelector('menu[id="select-menu-search_filters_tags"] .select-menu-item');
     try {
-      await page.evaluate(() => {
-        [...document.querySelectorAll('menu[id="select-menu-search_filters_tags"] .select-menu-item')]
-            .find(element => element.textContent.includes('Software Engineering Intern')).click();
-      });
+      // await page.evaluate(() => {
+      //   [...document.querySelectorAll('menu[id="select-menu-search_filters_tags"] .select-menu-item')]
+      //       .find(element => element.textContent.includes('internship')).click();
+      // });
+      await page.waitFor(10000);
       Logger.trace('Filtering based on internship tag...');
     } catch (err5) {
       Logger.info(scraperName, 'No internship tags found');
     }
+    // causes to change to hawaii
+
+
     // any distance
-    await page.waitForSelector('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
-    await page.click('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
+    // await page.waitForSelector('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
+    // await page.click('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
     await page.waitForSelector('.job_content');
     try {
       // Click the "Load More" button
