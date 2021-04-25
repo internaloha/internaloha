@@ -91,7 +91,7 @@ function SearchInternshipFeature({
               <p>
                 <Form>
                   <Form.Field>
-                    Sort By: {''}
+                    Sort By:
                   </Form.Field>
                   <Form.Radio
                     label={sortBy[0].text}
