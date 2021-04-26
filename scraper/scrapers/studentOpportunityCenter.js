@@ -2,16 +2,16 @@ import puppeteer from 'puppeteer';
 import fs from 'fs';
 import Logger from 'loglevel';
 import moment from 'moment';
-import { autoScroll, convertPostedToDate, fetchInfo, writeToJSON } from './scraper-functions.js';
+import { convertPostedToDate, fetchInfo, writeToJSON } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
 const CTA_SELECTOR = '#login-submit-button > div.mat-button-ripple.mat-ripple';
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
+// const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
 // const menu = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > button > div.mat-button-ripple.mat-ripple.mat-button-ripple-round';
-const searchtab = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix';
-const enter = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-prefix.ng-tns-c32-28.ng-star-inserted';
+// const searchtab = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix';
+// const enter = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-prefix.ng-tns-c32-28.ng-star-inserted';
 
 async function getData(page) {
   const results = [];
