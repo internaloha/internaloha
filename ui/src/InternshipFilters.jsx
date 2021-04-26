@@ -182,7 +182,7 @@ class InternshipsFilters {
   /* Sorts list by given parameters */
   sortedBy(data, value) {
     if (value === 'posted') {
-      return _.orderBy(data, ['posted'], ['desc']);
+      return _.orderBy(data, [({ posted }) => posted || ''], ['desc']);
     }
     if (value === 'company') {
       return _.orderBy(data, ['company'], ['asc']);
@@ -190,7 +190,7 @@ class InternshipsFilters {
     if (value === 'internship') {
       return _.orderBy(data, ['position'], ['asc']);
     }
-    return _.orderBy(data, ['posted'], ['desc']);
+    return _.orderBy(data, [({ posted }) => posted || ''], ['desc']);
   }
 
   /* Returns a list based on skill/tags inputs */
