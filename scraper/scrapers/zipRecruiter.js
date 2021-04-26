@@ -44,11 +44,10 @@ async function main(headless) {
     // Logger.info('Setting filter by any distance...');
     // await page.click('menu[id="select-menu-search_filters_radius"]');
     // await page.click('.select-menu-item:nth-child(6)');
-    await page.waitFor(5000);
+    await page.waitForTimeout(5000);
     Logger.info('Setting filter based on internship tag...');
     await page.click('menu[id="select-menu-search_filters_tags"] > button[class="select-menu-header"]');
     await page.click('menu[id="select-menu-search_filters_tags"] .select-menu-item:nth-child(3)');
-    await page.waitFor(5000);
     await page.waitForSelector('.job_content');
     try {
       // Click the "Load More" button
