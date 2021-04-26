@@ -23,38 +23,31 @@ async function main(headless) {
   try {
     Logger.error('Starting scraper zipRecruiter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
-    await page.goto('https://www.ziprecruiter.com/candidate/search?search=Internship&location=Honolulu%2C+HI&days=30&radius=5000&refine_by_salary=&refine_by_tags=&refine_by_title=Software+Engineering+Intern&refine_by_org_name=');
+    // await page.goto('https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=10&radius=25&refine_by_salary=&refine_by_tags=&refine_by_title=&refine_by_org_name=');
+    await page.goto('https://www.ziprecruiter.com/');
     await page.waitForSelector('input[id="search1"]');
     await page.waitForSelector('input[id="location1"]');
-    const searchQuery = 'computer science intern';
+    const searchQuery = 'computer science internship';
     Logger.info('Inputting search query:', searchQuery);
     await page.type('input[id="search1"', searchQuery);
     // eslint-disable-next-line no-param-reassign,no-return-assign
-    await page.$eval('input[id="location1"]', (el) => el.value = '');
+    await page.$eval('input[id="location1"]', (el) => el.value = 'US');
     await page.click('button.job_search_hide + input');
+    await page.mouse.click(1, 1);
     await page.waitForSelector('.modal-dialog');
     await page.mouse.click(1000, 800);
     await page.waitForTimeout(5000);
-    // Filters based on jobs posted within last 10 days
+    Logger.info('Setting filter by 10 days...');
+    await page.click('menu[id="select-menu-search_filters_days"]');
     await page.click('button[class="select-menu-header"]');
     await page.click('.select-menu-item:nth-child(3)');
-    await page.waitForSelector('.breadcrumb_list.breadcrumb li:nth-child(2)');
-    await page.click('.breadcrumb_list.breadcrumb li:nth-child(2)');
-    Logger.info('Setting filter by 10 days...');
-    // Filters based on internship tag
-    await page.waitForSelector('menu[id="select-menu-search_filters_tags"] .select-menu-item');
-    try {
-      await page.evaluate(() => {
-        [...document.querySelectorAll('menu[id="select-menu-search_filters_tags"] .select-menu-item')]
-            .find(element => element.textContent.includes('Software Engineering Intern')).click();
-      });
-      Logger.trace('Filtering based on internship tag...');
-    } catch (err5) {
-      Logger.info(scraperName, 'No internship tags found');
-    }
-    // any distance
-    await page.waitForSelector('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
-    await page.click('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
+    // Logger.info('Setting filter by any distance...');
+    // await page.click('menu[id="select-menu-search_filters_radius"]');
+    // await page.click('.select-menu-item:nth-child(6)');
+    await page.waitForTimeout(5000);
+    Logger.info('Setting filter based on internship tag...');
+    await page.click('menu[id="select-menu-search_filters_tags"] > button[class="select-menu-header"]');
+    await page.click('menu[id="select-menu-search_filters_tags"] .select-menu-item:nth-child(3)');
     await page.waitForSelector('.job_content');
     try {
       // Click the "Load More" button
