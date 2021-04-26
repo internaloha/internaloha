@@ -37,36 +37,27 @@ async function main(headless) {
     await page.waitForSelector('.modal-dialog');
     await page.mouse.click(1000, 800);
     await page.waitForTimeout(5000);
-    // Filters based on jobs posted within last 10 days
+    Logger.info('Setting filter by 10 days...');
+    await page.click('menu[id="select-menu-search_filters_days"]');
     await page.click('button[class="select-menu-header"]');
     await page.click('.select-menu-item:nth-child(3)');
-    await page.click('div[class="select-menu-submenu-wrapper"]');
-    // await page.waitForSelector('button[class="select-menu-item"] > button:nth-child(2)');
-    // await page.click('button[class="select-menu-item"] > button:nth-child(2)');
-    // await page.click('.select-menu-submenu button:nth-child(2)');
-    await page.waitFor(10000);
-    await page.click('menu[id="select-menu-search_filters_days"] > button[class="select-menu-header"]');
-    await page.waitFor(10000);
+    // Logger.info('Setting filter by any distance...');
+    // await page.click('menu[id="select-menu-search_filters_radius"]');
+    // await page.click('.select-menu-item:nth-child(6)');
+    Logger.info('Setting filter based on internship tag...');
+    await page.click('menu[id="select-menu-search_filters_tags"]');
+    await page.click('button[class="select-menu-header"]');
     await page.click('.select-menu-item:nth-child(3)');
-    // causes to change to hawaii
-    // await page.waitForSelector('.breadcrumb_list.breadcrumb li:nth-child(2)');
-    // await page.click('.breadcrumb_list.breadcrumb li:nth-child(2)');
-    Logger.info('Setting filter by 10 days...');
-    // Filters based on internship tag
-    // await page.waitForSelector('menu[id="select-menu-search_filters_tags"] .select-menu-item');
+    await page.waitForSelector('menu[id="select-menu-search_filters_tags"] .select-menu-item');
     try {
       await page.evaluate(() => {
         [...document.querySelectorAll('menu[id="select-menu-search_filters_tags"] .select-menu-item')]
-            .find(element => element.textContent.includes('internship')).click();
+            .find(element => element.textContent.includes('Internship')).click();
       });
       Logger.trace('Filtering based on internship tag...');
     } catch (err5) {
       Logger.info(scraperName, 'No internship tags found');
     }
-    // causes to change to hawaii
-    // any distance
-    // await page.waitForSelector('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
-    // await page.click('ol[itemtype="http://schema.org/BreadcrumbList"] li:nth-child(2)');
     await page.waitForSelector('.job_content');
     try {
       // Click the "Load More" button
