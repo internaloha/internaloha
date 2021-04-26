@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Table, Header, Icon } from 'semantic-ui-react';
+import { Container, Header, Icon, Label, Tab, Table } from 'semantic-ui-react';
 import _ from 'lodash';
 import statisticData from './statistics/statistics.data';
 import statisticsCSV from './statistics/statistics-csv';
@@ -54,11 +54,13 @@ class Statistics extends React.Component {
       for (let i = 0; i < keys.length; i++) {
         const info = [];
         for (let j = 0; j < keys.length; j++) {
-          const obj = {
-            name: types[j],
-            data: allData[j][i][0],
-          };
-          info.push(obj);
+          if (allData && allData[j]) {
+            const obj = {
+              name: types[j],
+              data: allData[j][i][0],
+            };
+            info.push(obj);
+          }
         }
         chartData.push({
           name: keys[i],
@@ -70,6 +72,41 @@ class Statistics extends React.Component {
 
     const dates = getData('lastScraped');
 
+    function getPercentageChange(oldNumber, newNumber) {
+      const decreaseValue = oldNumber - newNumber;
+
+      return (decreaseValue / oldNumber) * 100;
+    }
+
+    function showErrorIcon(site) {
+      const url = site.data[14].data;
+      const currentNum = url[url.length - 1];
+      const prevNum = url.length >= 2 ? url[url.length - 2] : 0;
+      const total = getPercentageChange(currentNum, prevNum);
+      const icon = total <= -10 ? 'warning sign' : '';
+      return {
+        color: 'blue',
+        key: site.name, icon: icon,
+        content: (
+          <div>
+            {site.name}
+            <Label style={{ backgroundColor: '#ffffff00' }}>{url[url.length - 1]}</Label>
+          </div>
+        ),
+      };
+    }
+
+    function getPanes() {
+      return formatInfo('url').map((site, index) => (
+        {
+          menuItem: (showErrorIcon(site)),
+          render: () => <Tab.Pane style={{ backgroundColor: 'white' }}>
+            <StatisticsChart
+              statistics={site} key={index} date={dates[index][0]}/>
+          </Tab.Pane>,
+        }));
+    }
+
     return (
         <div>
           <Container style={{ marginTop: '10rem', marginBottom: '4rem' }}>
@@ -78,9 +115,10 @@ class Statistics extends React.Component {
                     style={{ marginBottom: '2rem' }}>
               Statistics
             </Header>
-            {_.map((formatInfo('url')), (statistics, index) => <StatisticsChart
-              statistics={statistics} key={index} date={dates[index][0]}/>)}
-            {/* <StatisticsChart statistics={formatInfo()} date={statisticsCSV.acm[0].lastScraped}/> */}
+            <Tab
+              menu={{ fluid: true, vertical: true }}
+              grid = {{ paneWidth: 13, tabWidth: 3 }}
+              panes={getPanes()} />
              <Table attached='top' celled sortable>
               <Table.Header onClick={(event) => this.onClick(event)}>
                 <Table.Row>
