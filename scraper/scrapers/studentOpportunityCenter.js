@@ -48,12 +48,9 @@ export async function main() {
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
     await page.waitForNavigation();
-    await page.click('mat-icon[class=mat-icon materialclassNames mat-icon-no-color role=img aria-hidden=true]');
-    await page.click(Search_SELECTOR);
-    await autoScroll(page);
-    await page.click(searchtab);
+    await page.click('input[aria-label="Search Bar"]');
     await page.keyboard.type('computer science internship');
-    await page.click(enter);
+    await page.keyboard.press('Enter');
 
     const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
 
