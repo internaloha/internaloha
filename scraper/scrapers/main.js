@@ -170,7 +170,13 @@ async function getData(scraperName, headless = true) {
  */
 function fetchStatistics() {
   const str = fs.readFileSync('../ui/src/statistics/statistics.data.json', 'utf8');
-  return JSON.parse(str.toString());
+  let info = [];
+  try {
+    info = JSON.parse(str.toString());
+  } catch (e) {
+    console.log('Error: ', e.message);
+  }
+  return info;
 }
 
 /**
