@@ -6,7 +6,7 @@ import {
   Label,
   Form,
   Checkbox,
-  Grid, Radio,
+  Grid,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import InternshipsFilters from './InternshipFilters';
@@ -91,32 +91,29 @@ function SearchInternshipFeature({
               <p>
                 <Form>
                   <Form.Field>
-                    Sort By: {''}
+                    Sort By:
                   </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label={sortBy[0].text}
-                      value={sortBy[0].value}
-                      checked={sortChange === sortBy[0].value}
-                      onChange={getSort}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label= {sortBy[1].text}
-                      value={sortBy[1].value}
-                      checked={sortChange === sortBy[1].value}
-                      onChange={getSort}
-                    />
-                  </Form.Field>
-                  <Form.Field>
-                    <Radio
-                      label= {sortBy[2].text}
-                      value={sortBy[2].value}
-                      checked={sortChange === sortBy[2].value}
-                      onChange={getSort}
-                    />
-                  </Form.Field>
+                  <Form.Radio
+                    label={sortBy[0].text}
+                    value={sortBy[0].value}
+                    name='sortBy'
+                    checked={sortChange === sortBy[0].value}
+                    onChange={getSort}
+                  />
+                  <Form.Radio
+                    label={sortBy[1].text}
+                    value={sortBy[1].value}
+                    name='sortBy'
+                    checked={sortChange === sortBy[1].value}
+                    onChange={getSort}
+                  />
+                  <Form.Radio
+                    label={sortBy[2].text}
+                    value={sortBy[2].value}
+                    name='sortBy'
+                    checked={sortChange === sortBy[2].value}
+                    onChange={getSort}
+                  />
                 </Form>
               </p>
             </p>

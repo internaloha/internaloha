@@ -11,7 +11,6 @@ import apple from './data/apple.parsed.data';
 import aexpress from './data/aexpress.parsed.data';
 import acm from './data/acm.parsed.data';
 import idealist from './data/idealist.parsed.data';
-import coolworks from './data/coolworks.parsed.data';
 import internships from './data/internships.parsed.data.json';
 import ciscoData from './data/cisco.parsed.data.json';
 import stackOverflow from './data/stackoverflow.parsed.data.json';
@@ -36,7 +35,6 @@ class InternshipsFilters {
     data = _.concat(data, indeedData);
     data = _.concat(data, idealist);
     data = _.concat(data, acm);
-    data = _.concat(data, coolworks);
     data = _.concat(data, aexpress);
     data = _.concat(data, apple);
     data = _.concat(data, zipData);
@@ -78,9 +76,6 @@ class InternshipsFilters {
     }
     if (name === 'ACM') {
       data = _.concat(data, acm);
-    }
-    if (name === 'Coolworks') {
-      data = _.concat(data, coolworks);
     }
     if (name === 'AExpress') {
       data = _.concat(data, aexpress);
@@ -182,7 +177,7 @@ class InternshipsFilters {
   /* Sorts list by given parameters */
   sortedBy(data, value) {
     if (value === 'posted') {
-      return _.orderBy(data, ['posted'], ['desc']);
+      return _.orderBy(data, [({ posted }) => posted || ''], ['desc']);
     }
     if (value === 'company') {
       return _.orderBy(data, ['company'], ['asc']);
@@ -190,7 +185,7 @@ class InternshipsFilters {
     if (value === 'internship') {
       return _.orderBy(data, ['position'], ['asc']);
     }
-    return _.orderBy(data, ['posted'], ['desc']);
+    return _.orderBy(data, [({ posted }) => posted || ''], ['desc']);
   }
 
   /* Returns a list based on skill/tags inputs */

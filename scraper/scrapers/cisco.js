@@ -22,6 +22,7 @@ export async function main(headless) {
   try {
     Logger.error('Starting scraper Cisco at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
+    await page.setDefaultNavigationTimeout(0);
     await page.goto('https://jobs.cisco.com/jobs/SearchJobs/?21178=%5B169482%5D&21178_format=6020&21180=%5B165%5D&21180_format=6022&21181=%5B186%2C194%2C201%2C187%2C191%2C196%2C197%2C67822237%2C185%2C55816092%5D&21181_format=6023&listFilterMode=1');
     await page.waitForNavigation;
     const urlList = [];
@@ -42,7 +43,6 @@ export async function main(headless) {
       ));
       urlList.push(urls);
       await page.click('div[class="pagination autoClearer"] a:last-child');
-      await page.waitForTimeout(2000);
       hasPage = await page.$('div[class="pagination autoClearer"] a:last-child');
     }
     const lastScraped = new Date();
