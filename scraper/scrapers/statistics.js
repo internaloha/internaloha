@@ -89,7 +89,7 @@ function main() {
   }
   statistics.push(getStatistics('Total', data));
 
-  const content = JSON.stringify(statistics);
+  const content = JSON.stringify(statistics, null, 4);
 
   try {
     fs.writeFileSync('../ui/src/statistics/statistics.data.json', content);
