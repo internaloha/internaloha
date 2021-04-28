@@ -1,16 +1,31 @@
 [
     {
+        "position": "Research Assistant (Temporary: Summer 2021 Position)",
+        "company": "Center for WorkLife Law",
+        "location": {
+            "city": "San Francisco",
+            "state": "California"
+        },
+        "posted": "2021-04-28T00:51:38.377Z",
+        "url": "https://www.idealist.org/en/nonprofit-internship/6dd1b782456440fb86fb29d0ea5eb941-research-assistant-temporary-summer-2021-position-center-for-worklife-law-san-francisco",
+        "lastScraped": "2021-04-28T00:51:38.377Z",
+        "description": "N/A",
+        "index": 1,
+        "skills": [],
+        "remote": false
+    },
+    {
         "position": "Natural Language Processing and UX Design Internships (Remote, paid stipend) Sustainability, Tech Start Up company.",
         "company": "Realty Sage",
         "location": {
             "city": "Arlington",
             "state": "Virginia"
         },
-        "posted": "2021-04-24T17:02:02.886Z",
+        "posted": "2021-04-28T00:52:04.764Z",
         "url": "https://www.idealist.org/en/social-enterprise-internship/d85c2d1de617476784b458942f48bcd0-natural-language-processing-and-ux-design-internships-remote-paid-stipend-sustainability-tech-start-up-company-realty-sage-arlington",
-        "lastScraped": "2021-04-24T17:02:02.886Z",
+        "lastScraped": "2021-04-28T00:52:04.764Z",
         "description": "N/A",
-        "index": 1,
+        "index": 2,
         "skills": [],
         "remote": true
     },
@@ -21,11 +36,11 @@
             "city": "Washington",
             "state": "District Of Columbia"
         },
-        "posted": "2021-04-24T17:02:25.407Z",
+        "posted": "2021-04-28T00:52:29.798Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/75f3f825ff8c4ddcaa8fc25101041098-scientific-program-intern-foundation-for-food-and-agriculture-research-washington",
-        "lastScraped": "2021-04-24T17:02:25.407Z",
+        "lastScraped": "2021-04-28T00:52:29.798Z",
         "description": "N/A",
-        "index": 2,
+        "index": 3,
         "skills": [],
         "remote": false
     },
@@ -36,24 +51,9 @@
             "city": "Washington",
             "state": "District Of Columbia"
         },
-        "posted": "2021-04-24T17:02:47.747Z",
+        "posted": "2021-04-28T00:52:53.817Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/cfdf53519a6744a199f6c559a154341b-summer-2021-graduate-intern-data-quality-campaign-washington",
-        "lastScraped": "2021-04-24T17:02:47.747Z",
-        "description": "N/A",
-        "index": 3,
-        "skills": [],
-        "remote": false
-    },
-    {
-        "position": "2021 Women, Peace and Security Policy Fellowship",
-        "company": "NGO Working Group on Women, Peace and Security",
-        "location": {
-            "city": "New York",
-            "state": "New York"
-        },
-        "posted": "2021-04-24T17:03:09.943Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/1122fb10906946ea95040c18bb78e16b-2021-women-peace-and-security-policy-fellowship-ngo-working-group-on-women-peace-and-security-new-york",
-        "lastScraped": "2021-04-24T17:03:09.944Z",
+        "lastScraped": "2021-04-28T00:52:53.817Z",
         "description": "N/A",
         "index": 4,
         "skills": [],
@@ -66,9 +66,9 @@
             "city": "Newton",
             "state": "Massachusetts"
         },
-        "posted": "2021-04-24T17:03:32.175Z",
+        "posted": "2021-04-28T00:53:18.931Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/cd7d4774696549399c1a086d2c847123-software-engineer-intern-saga-education-newton",
-        "lastScraped": "2021-04-24T17:03:32.175Z",
+        "lastScraped": "2021-04-28T00:53:18.931Z",
         "description": "N/A",
         "index": 5,
         "skills": [
@@ -83,29 +83,12 @@
             "city": "Santa Barbara de Samaná",
             "state": "Dominican Republic"
         },
-        "posted": "2021-04-24T17:03:54.489Z",
+        "posted": "2021-04-28T00:53:44.040Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/43f5145fe3cf47b1bc376022852fff02-medicine-and-healthcare-experience-observation-aldeas-de-paz-peace-villages-santa-barbara-de-samana",
-        "lastScraped": "2021-04-24T17:03:54.489Z",
+        "lastScraped": "2021-04-28T00:53:44.040Z",
         "description": "N/A",
         "index": 6,
         "skills": [],
-        "remote": false
-    },
-    {
-        "position": "Hazard Assessment and Vulnerability Mapping for Disaster Management using ArcGIS",
-        "company": "EduCARE India",
-        "location": {
-            "city": "Dharamshala",
-            "state": "India"
-        },
-        "posted": "2021-04-24T17:04:17.156Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/d3aba1daae9444a59b9edb2f750c580b-hazard-assessment-and-vulnerability-mapping-for-disaster-management-using-arcgis-educare-india-dharamshala",
-        "lastScraped": "2021-04-24T17:04:17.156Z",
-        "description": "N/A",
-        "index": 7,
-        "skills": [
-            "project management"
-        ],
         "remote": false
     },
     {
@@ -115,26 +98,11 @@
             "city": "Arlington",
             "state": "Virginia"
         },
-        "posted": "2021-04-24T17:04:40.157Z",
+        "posted": "2021-04-28T00:54:09.344Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/3360fbf767214deeb940f78f96437169-research-fellow-arlington-thrive-inc-arlington",
-        "lastScraped": "2021-04-24T17:04:40.157Z",
+        "lastScraped": "2021-04-28T00:54:09.344Z",
         "description": "N/A",
-        "index": 8,
-        "skills": [],
-        "remote": false
-    },
-    {
-        "position": "Assistant Physiotherapist (Intern)",
-        "company": "EduCARE India",
-        "location": {
-            "city": "Kangra",
-            "state": "HP"
-        },
-        "posted": "2021-04-24T17:05:02.932Z",
-        "url": "https://www.idealist.org/en/nonprofit-internship/9f4d3bc0cc11454f8e90ba6110a048a3-assistant-physiotherapist-intern-educare-india-kangra",
-        "lastScraped": "2021-04-24T17:05:02.932Z",
-        "description": "N/A",
-        "index": 9,
+        "index": 7,
         "skills": [],
         "remote": false
     }
