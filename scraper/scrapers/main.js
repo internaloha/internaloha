@@ -21,10 +21,6 @@ import angellist from './angellist.js';
 import glassdoor from './glassdoor.js';
 import nsf_reu from './nsf-reu.js';
 
-const currentDate = new Date();
-const currentDay = currentDate.getDay();
-const currentMonth = currentDate.getMonth();
-
 const myArgs = process.argv.slice(2);
 
 const optionDefinitions = [
@@ -209,17 +205,12 @@ function convertToCVS(data, fileExists = false) {
  */
 function exportToCSV(fileName = '') {
   const { csv2json } = pkg2;
-  fs.readFile('../ui/src/statistics/statistics.data.json', (err, data) => {
-    if (err) {
-      throw err;
-    }
 
-    const statisticData = JSON.parse(data.toString());
+  const str = fs.readFileSync('../ui/src/statistics/statistics.data.json', 'utf8');
+  try {
+    const statisticData = JSON.parse(str.toString());
     for (let i = 0; i < statisticData.length; i++) {
       const site = statisticData[i];
-      const scrapedDate = new Date(site.lastScraped);
-      const scrapedDay = scrapedDate.getDay();
-      const scrapedMonth = scrapedDate.getMonth();
       // For attended scrapers; only exports data of scraper that is being ran (eg. chegg, angellist)
       if (fileName.length !== 0) {
         try {
@@ -243,26 +234,26 @@ function exportToCSV(fileName = '') {
       } else {
         // only update sites that were scraped today (eg. unattended)
         try {
-          if (currentDay === scrapedDay && currentMonth === scrapedMonth && site.site !== 'Total') {
-            if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
-              const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
-              csv2json(csvString, (error2, jsonObjs) => {
-                if (error2) {
-                  throw error2;
-                }
-                jsonObjs.push(site);
-                convertToCVS(jsonObjs, true);
-              }, { trimHeaderFields: true });
-            } else {
-              convertToCVS(site);
-            }
+          if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
+            const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
+            csv2json(csvString, (error2, jsonObjs) => {
+              if (error2) {
+                throw error2;
+              }
+              jsonObjs.push(site);
+              convertToCVS(jsonObjs, true);
+            }, { trimHeaderFields: true });
+          } else {
+            convertToCVS(site);
           }
         } catch (e5) {
           console.log(`Error exporting to CSV: ${site.site} | ${e5}`);
         }
       }
     }
-  });
+  } catch (e) {
+    console.log('Error: ', e.message);
+  }
 }
 
 /**
@@ -294,8 +285,8 @@ async function main() {
   process.setMaxListeners(0);
 // default is running in production (doesn't open browsers)
   if (myArgs.length === 0 || myArgs[0] === 'prod' || myArgs[0] === 'unattended' || myArgs[0] === 'statistics') {
-      Logger.setLevel('warn');
-      await getAllData(true);
+    Logger.setLevel('warn');
+    await getAllData(true);
 // npm run dev [open|close], default is it doesn't up browsers
   } else if (myArgs[0] === 'dev') {
     Logger.enableAll();
@@ -309,15 +300,15 @@ async function main() {
     }
 // eg. npm run acm dev open (default is close)
   } else if (myArgs.length >= 3) {
-      Logger.enableAll();
-      console.log(myArgs);
-      if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
-        await getData(myArgs[0], false);
-      } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
-        await getData(myArgs[0], true);
-      } else {
-        await getData(myArgs[0], true);
-      }
+    Logger.enableAll();
+    console.log(myArgs);
+    if (myArgs[2] && myArgs[2].toLowerCase() === 'open') {
+      await getData(myArgs[0], false);
+    } else if (myArgs[2] && myArgs[2].toLowerCase() === 'close') {
+      await getData(myArgs[0], true);
+    } else {
+      await getData(myArgs[0], true);
+    }
   } else if (myArgs[0] !== 'dev') {
     Logger.enableAll();
     await getData(myArgs[0], true);
@@ -335,7 +326,7 @@ async function main() {
     // if running unattended scrapers
     if (myArgs.length >= 3 && myArgs[2] && myArgs[2].toLowerCase() === 'open') {
       exportToCSV(myArgs[0]);
-    } else if (myArgs[0] !== 'dev' && myArgs[0] !== 'unattended') {
+    } else if (myArgs[0] !== 'dev' && myArgs[0] !== 'unattended' && myArgs[0] !== 'statistics') {
       exportToCSV(myArgs[0]);
     } else {
       exportToCSV();
