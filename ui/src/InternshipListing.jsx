@@ -10,8 +10,8 @@ import InternshipsFilters from './InternshipFilters';
 function InternshipListing() {
   const internships = new InternshipsFilters();
   const getInternshipData = internships.mergeData();
-  const [data, setData] = useState(getInternshipData);
-  const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
+  const [data, setData] = useState('');
+  const [paginatedData, setPaginatedData] = useState('');
   const [location, setLocation] = useState([]);
   const [company, setCompany] = useState('any');
   const [sort, setSort] = useState('');
