@@ -89,10 +89,14 @@ function main() {
   }
   statistics.push(getStatistics('Total', data));
 
-  fs.writeFile('../ui/src/statistics/statistics.data.json',
-    JSON.stringify(statistics, null, 4), 'utf-8',
-    err => (err ? console.log('\nData not written!', err) :
-      Logger.info('Data successfully written!')));
+  const content = JSON.stringify(statistics);
+
+  try {
+    fs.writeFileSync('../ui/src/statistics/statistics.data.json', content);
+    Logger.info('Data successfully written');
+  } catch (er2) {
+    Logger.trace('\nData not written!', er2);
+  }
 }
 
 if (process.argv.includes('main')) {
