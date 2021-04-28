@@ -43,7 +43,7 @@ function InternshipListing() {
   /* Grabs the height */
   useEffect(() => {
     setHeight(ref.current.clientHeight);
-  });
+  }, [ref]);
 
   /* Infinite scrolling */
   function handleScroll() {

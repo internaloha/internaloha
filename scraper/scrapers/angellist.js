@@ -39,7 +39,7 @@ async function main(url) {
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');
   await page.goto(url);
   // await page.waitForTimeout(30000);
-  await page.waitForSelector(USERNAME_SELECTOR);
+  await page.waitForSelector(USERNAME_SELECTOR, { timeout: 120000 });
   await page.click(USERNAME_SELECTOR);
   await page.keyboard.type(credentials.angellist.user);
   await page.click(PASSWORD_SELECTOR);

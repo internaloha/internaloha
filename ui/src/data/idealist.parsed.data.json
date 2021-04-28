@@ -6,28 +6,13 @@
             "city": "San Francisco",
             "state": "California"
         },
-        "posted": "2021-04-28T00:51:38.377Z",
+        "posted": "2021-04-28T16:16:44.030Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/6dd1b782456440fb86fb29d0ea5eb941-research-assistant-temporary-summer-2021-position-center-for-worklife-law-san-francisco",
-        "lastScraped": "2021-04-28T00:51:38.377Z",
+        "lastScraped": "2021-04-28T16:16:44.030Z",
         "description": "N/A",
         "index": 1,
         "skills": [],
         "remote": false
-    },
-    {
-        "position": "Natural Language Processing and UX Design Internships (Remote, paid stipend) Sustainability, Tech Start Up company.",
-        "company": "Realty Sage",
-        "location": {
-            "city": "Arlington",
-            "state": "Virginia"
-        },
-        "posted": "2021-04-28T00:52:04.764Z",
-        "url": "https://www.idealist.org/en/social-enterprise-internship/d85c2d1de617476784b458942f48bcd0-natural-language-processing-and-ux-design-internships-remote-paid-stipend-sustainability-tech-start-up-company-realty-sage-arlington",
-        "lastScraped": "2021-04-28T00:52:04.764Z",
-        "description": "N/A",
-        "index": 2,
-        "skills": [],
-        "remote": true
     },
     {
         "position": "Scientific Program Intern",
@@ -36,11 +21,11 @@
             "city": "Washington",
             "state": "District Of Columbia"
         },
-        "posted": "2021-04-28T00:52:29.798Z",
+        "posted": "2021-04-28T16:17:05.103Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/75f3f825ff8c4ddcaa8fc25101041098-scientific-program-intern-foundation-for-food-and-agriculture-research-washington",
-        "lastScraped": "2021-04-28T00:52:29.798Z",
+        "lastScraped": "2021-04-28T16:17:05.103Z",
         "description": "N/A",
-        "index": 3,
+        "index": 2,
         "skills": [],
         "remote": false
     },
@@ -51,11 +36,11 @@
             "city": "Washington",
             "state": "District Of Columbia"
         },
-        "posted": "2021-04-28T00:52:53.817Z",
+        "posted": "2021-04-28T16:17:27.092Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/cfdf53519a6744a199f6c559a154341b-summer-2021-graduate-intern-data-quality-campaign-washington",
-        "lastScraped": "2021-04-28T00:52:53.817Z",
+        "lastScraped": "2021-04-28T16:17:27.092Z",
         "description": "N/A",
-        "index": 4,
+        "index": 3,
         "skills": [],
         "remote": false
     },
@@ -66,11 +51,11 @@
             "city": "Newton",
             "state": "Massachusetts"
         },
-        "posted": "2021-04-28T00:53:18.931Z",
+        "posted": "2021-04-28T16:17:48.581Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/cd7d4774696549399c1a086d2c847123-software-engineer-intern-saga-education-newton",
-        "lastScraped": "2021-04-28T00:53:18.931Z",
+        "lastScraped": "2021-04-28T16:17:48.581Z",
         "description": "N/A",
-        "index": 5,
+        "index": 4,
         "skills": [
             "software engineering"
         ],
@@ -83,11 +68,11 @@
             "city": "Santa Barbara de Samaná",
             "state": "Dominican Republic"
         },
-        "posted": "2021-04-28T00:53:44.040Z",
+        "posted": "2021-04-28T16:18:09.868Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/43f5145fe3cf47b1bc376022852fff02-medicine-and-healthcare-experience-observation-aldeas-de-paz-peace-villages-santa-barbara-de-samana",
-        "lastScraped": "2021-04-28T00:53:44.040Z",
+        "lastScraped": "2021-04-28T16:18:09.868Z",
         "description": "N/A",
-        "index": 6,
+        "index": 5,
         "skills": [],
         "remote": false
     },
@@ -98,11 +83,11 @@
             "city": "Arlington",
             "state": "Virginia"
         },
-        "posted": "2021-04-28T00:54:09.344Z",
+        "posted": "2021-04-28T16:18:31.081Z",
         "url": "https://www.idealist.org/en/nonprofit-internship/3360fbf767214deeb940f78f96437169-research-fellow-arlington-thrive-inc-arlington",
-        "lastScraped": "2021-04-28T00:54:09.344Z",
+        "lastScraped": "2021-04-28T16:18:31.081Z",
         "description": "N/A",
-        "index": 7,
+        "index": 6,
         "skills": [],
         "remote": false
     }
