@@ -87,36 +87,32 @@ function SearchInternshipFeature({
       <Grid columns={'equal'}>
         <Grid.Row>
           <Grid.Column>
-            <p>
-              <p>
-                <Form>
-                  <Form.Field>
-                    Sort By:
-                  </Form.Field>
-                  <Form.Radio
-                    label={sortBy[0].text}
-                    value={sortBy[0].value}
-                    name='sortBy'
-                    checked={sortChange === sortBy[0].value}
-                    onChange={getSort}
-                  />
-                  <Form.Radio
-                    label={sortBy[1].text}
-                    value={sortBy[1].value}
-                    name='sortBy'
-                    checked={sortChange === sortBy[1].value}
-                    onChange={getSort}
-                  />
-                  <Form.Radio
-                    label={sortBy[2].text}
-                    value={sortBy[2].value}
-                    name='sortBy'
-                    checked={sortChange === sortBy[2].value}
-                    onChange={getSort}
-                  />
-                </Form>
-              </p>
-            </p>
+            <Form>
+              <Form.Field>
+                Sort By:
+              </Form.Field>
+              <Form.Radio
+                label={sortBy[0].text}
+                value={sortBy[0].value}
+                name='sortBy'
+                checked={sortChange === sortBy[0].value}
+                onChange={getSort}
+              />
+              <Form.Radio
+                label={sortBy[1].text}
+                value={sortBy[1].value}
+                name='sortBy'
+                checked={sortChange === sortBy[1].value}
+                onChange={getSort}
+              />
+              <Form.Radio
+                label={sortBy[2].text}
+                value={sortBy[2].value}
+                name='sortBy'
+                checked={sortChange === sortBy[2].value}
+                onChange={getSort}
+              />
+            </Form>
           </Grid.Column>
           <Grid.Column>
             <Form onSubmit={handleSubmit}>
