@@ -239,7 +239,7 @@ function InternshipListingCard(props) {
 
 InternshipListingCard.propTypes = {
   internship: PropTypes.object.isRequired,
-  selectedSkills: PropTypes.object.isRequired,
+  selectedSkills: PropTypes.array.isRequired,
 };
 
 export default InternshipListingCard;

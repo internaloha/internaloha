@@ -12,7 +12,7 @@ function InternshipListing() {
   const getInternshipData = internships.mergeData();
   const [data, setData] = useState([]);
   const [paginatedData, setPaginatedData] = useState('');
-  const [location, setLocation] = useState('');
+  const [location, setLocation] = useState([]);
   const [company, setCompany] = useState('any');
   const [sort, setSort] = useState('');
   const [search, setSearch] = useState('');
