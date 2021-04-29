@@ -10,9 +10,9 @@ import InternshipsFilters from './InternshipFilters';
 function InternshipListing() {
   const internships = new InternshipsFilters();
   const getInternshipData = internships.mergeData();
-  const [data, setData] = useState('');
+  const [data, setData] = useState([]);
   const [paginatedData, setPaginatedData] = useState('');
-  const [location, setLocation] = useState([]);
+  const [location, setLocation] = useState('');
   const [company, setCompany] = useState('any');
   const [sort, setSort] = useState('');
   const [search, setSearch] = useState('');
@@ -43,7 +43,7 @@ function InternshipListing() {
   /* Grabs the height */
   useEffect(() => {
     setHeight(ref.current.clientHeight);
-  });
+  }, []);
 
   /* Infinite scrolling */
   function handleScroll() {
