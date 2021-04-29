@@ -185,7 +185,7 @@ function SearchInternshipFeature({
 SearchInternshipFeature.propTypes = {
   onChildClick: PropTypes.func.isRequired,
   passedData: PropTypes.array.isRequired,
-  locationVal: PropTypes.string.isRequired,
+  locationVal: PropTypes.array.isRequired,
   companyVal: PropTypes.string.isRequired,
   sortVal: PropTypes.string.isRequired,
   searchQuery: PropTypes.string.isRequired,
