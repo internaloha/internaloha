@@ -34,6 +34,7 @@ export async function main() {
   });
   const data = [];
   const startTime = new Date();
+  const scraperName = 'SOC: ';
   Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
   try {
     const page = await browser.newPage();
@@ -101,14 +102,14 @@ export async function main() {
         Logger.debug(position);
         totalInternships++;
       } catch (err5) {
-        Logger.trace(err5.message);
+        Logger.trace(scraperName, err5.message);
         Logger.trace('Skipping! Did not load...');
       }
       await element.click();
     }
     await writeToJSON(data, 'studentOpportunityCenter');
   } catch (e) {
-    Logger.trace('Our Error: ', e.message);
+    Logger.trace(scraperName, 'Error: ', e.message);
   }
   Logger.error(`Elapsed time for studentOpportunityCenter: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }

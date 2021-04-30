@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
-import { Card, Container, Grid, Header } from 'semantic-ui-react';
+import { Card, Container, Grid, Header, Segment } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
+import moment from 'moment';
 import InternshipListingCard from './InternshipListingCard';
 import SearchInternshipFeature from './SearchInternshipFeature';
 import InternshipsFilters from './InternshipFilters';
@@ -8,11 +10,11 @@ import InternshipsFilters from './InternshipFilters';
 function InternshipListing() {
   const internships = new InternshipsFilters();
   const getInternshipData = internships.mergeData();
-  const [data, setData] = useState(getInternshipData);
-  const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
+  const [data, setData] = useState([]);
+  const [paginatedData, setPaginatedData] = useState('');
   const [location, setLocation] = useState([]);
   const [company, setCompany] = useState('any');
-  const [sort, setSort] = useState('date');
+  const [sort, setSort] = useState('');
   const [search, setSearch] = useState('');
   const [skills, setSkills] = useState([]);
   const [remote, setRemote] = useState(false);
@@ -20,6 +22,8 @@ function InternshipListing() {
   const [height, setHeight] = useState(0);
   const [career, setCareer] = useState([]);
   const ref = useRef(null);
+  const totalListing = getInternshipData.length;
+  const lastScraped = moment(getInternshipData[0].lastScraped).fromNow();
 
   /* Passes data up from SearchInternshipFeature. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
@@ -39,7 +43,7 @@ function InternshipListing() {
   /* Grabs the height */
   useEffect(() => {
     setHeight(ref.current.clientHeight);
-  });
+  }, []);
 
   /* Infinite scrolling */
   function handleScroll() {
@@ -60,21 +64,60 @@ function InternshipListing() {
   return (
       <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
+          <Grid.Row style={{ maxWidth: '70%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
+            <Segment>
+              <h2 style={{ align: 'center' }}>
+                Welcome to InternAloha!
+              </h2>
+              <Grid.Column>
+                <p> InternAloha is a tool developed as part of the <a href="https://radgrad.org">RadGrad Project</a> to improve the undergraduate computer
+                  science degree experience by simplifying the internship discovery process.</p>
+                <p> InternAloha regularly visits a large number of Internship and corporate sites and gathers
+                  information on computer science internships, with a focus on internships suitable to Hawaii students.
+                  Our hope is that you find InternAloha to be a superior way to find relevant internships based on your
+                  interests.</p>
+                <p>Right now, the InternAloha database contains a total of {totalListing} listings, broken down as follows: <br/>
+                  ACM ({internships.getData('ACM').length}),
+                  Angel List ({internships.getData('AngelList').length}),
+                  American Express ({internships.getData('AExpress').length}),
+                  Apple ({internships.getData('Apple').length}),
+                  Chegg Internships ({internships.getData('Chegg').length}),
+                  Cisco ({internships.getData('Cisco').length}),
+                  Glassdoor ({internships.getData('Glassdoor').length}),
+                  Hawaii Slack ({internships.getData('HawaiiSlack').length}),
+                  Idealist ({internships.getData('Idealist').length}),
+                  Indeed ({internships.getData('Indeed').length}),
+                  LinkedIn ({internships.getData('LinkedIn').length}),
+                  Monster ({internships.getData('Monster').length}),
+                  Simply Hired ({internships.getData('SimplyHired').length}),
+                  Stack Overflow ({internships.getData('StackOverflow').length}),
+                  Student Opportunity Center (0),
+                  Youtern ({internships.getData('Youtern').length}),
+                  Zip Recruiter ({internships.getData('ZipRecruiter').length})</p>
+                <p>InternAloha collected this information {lastScraped}. </p>
+                <p>We also collect statistics on the sites scraped. For more information, see
+                  <NavLink to="/statistics" exact> statistics.</NavLink>
+                </p>
+                <p>If you have comments or question about InternAloha, please feel free to visit our
+                  <a href="https://internaloha.github.io/documentation/"> home page</a>. </p>
+              </Grid.Column>
+            </Segment>
+          </Grid.Row>
+          <Grid.Row style={{ maxWidth: '70%', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote} careerVal={career}/>
           </Grid.Row>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingBottom: '0px' }}>
             <Header style={{ paddingLeft: '105px', paddingTop: '20px' }}>
-              Total Results: {internships.total(data)}
+              Results: {internships.total(data)}
             </Header>
           </Grid.Row>
           <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
             <div onScroll={handleScroll()} ref={ref}>
               <Card.Group doubling centered stackable>
                 {_.map(paginatedData, (internship, index) => <InternshipListingCard
-                  internship={internship} key={index}/>)}
+                  selectedSkills={skills} internship={internship} key={index}/>)}
               </Card.Group>
             </div>
           </Grid.Row>

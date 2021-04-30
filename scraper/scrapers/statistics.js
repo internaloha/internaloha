@@ -8,6 +8,7 @@ const { _ } = pkg;
 function getStatistics(name, data) {
   const counts = {
     site: name,
+    lastScraped: 'N/A',
     position: 0,
     company: 0,
     contact: 0,
@@ -20,7 +21,6 @@ function getStatistics(name, data) {
     qualifications: 0,
     skills: 0,
     remote: 0,
-    lastScraped: 'N/A',
     index: 0,
     url: 0,
     description: 0,
@@ -82,15 +82,21 @@ function main() {
     if (fileName !== 'statistics') {
       const text = JSON.parse(fs.readFileSync(files[i], 'utf8'));
       data = _.concat(data, text);
-      statistics.push(getStatistics(fileName, text));
+      const statisticsData = getStatistics(fileName, text);
+      // push to global statistics
+      statistics.push(statisticsData);
     }
   }
   statistics.push(getStatistics('Total', data));
 
-  fs.writeFile('../ui/src/data/statistics.data.json',
-    JSON.stringify(statistics, null, 4), 'utf-8',
-    err => (err ? console.log('\nData not written!', err) :
-      Logger.info('Data successfully written!')));
+  const content = JSON.stringify(statistics, null, 4);
+
+  try {
+    fs.writeFileSync('../ui/src/statistics/statistics.data.json', content);
+    Logger.info('Data successfully written');
+  } catch (er2) {
+    Logger.trace('\nData not written!', er2);
+  }
 }
 
 if (process.argv.includes('main')) {

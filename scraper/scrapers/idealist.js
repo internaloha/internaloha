@@ -49,10 +49,11 @@ async function getData(page, elements) {
         let location = '';
         let locationArray = {};
         try {
-          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 jczOfB"]', 'innerText');
-          const loc = location.split(', ');
-          const city = loc[0].trim();
-          const state = loc[1].trim();
+          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"] > div[class=" Box__BaseBox-sc-1wooqli-0 kMROVK"]', 'outerText');
+          const loc = location.split(/\n/);
+          const where = loc[2].split(', ');
+          const city = where[0].trim();
+          const state = where[1].trim();
           locationArray = { city: city, state: state };
         } catch (e) {
           Logger.debug(e.message);
@@ -109,6 +110,7 @@ async function main(headless) {
   let page;
   const startTime = new Date();
   let dataAm = [];
+  const scraperName = 'Idealist: ';
   try {
     Logger.error('Starting scraper idealist at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
@@ -133,7 +135,7 @@ async function main(headless) {
     });
   } catch (e) {
     await browser.close();
-    Logger.warn('Idealist Error:', e);
+    Logger.warn(scraperName, 'Error: ', e);
   }
   Logger.error(`Elapsed time for idealist: ${moment(startTime).fromNow(true)} | ${dataAm.length} listings scraped `);
 }

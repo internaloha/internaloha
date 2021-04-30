@@ -26,6 +26,7 @@ async function main(headless) {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'Aexpress: ';
   const startTime = new Date();
   try {
     Logger.error('Starting scraper aexpress at', moment().format('LT'));
@@ -56,14 +57,14 @@ async function main(headless) {
           location: { city: city, state: state, country: location.trim() },
           description: description,
         });
-      } catch (err2) {
-        Logger.debug(err2.message);
+      } catch (err1) {
+        Logger.debug(scraperName, err1.message);
       }
     }
     await writeToJSON(data, 'aexpress');
     await browser.close();
-  } catch (err) {
-    Logger.debug(err.message);
+  } catch (err2) {
+    Logger.debug(scraperName, err2.message);
     await browser.close();
   }
   Logger.error(`Elapsed time for aexpress: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

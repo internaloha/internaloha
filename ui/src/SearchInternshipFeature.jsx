@@ -4,14 +4,11 @@ import {
   Header,
   Dropdown,
   Label,
-  Input,
   Form,
   Checkbox,
-  Popup,
   Grid,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 import InternshipsFilters from './InternshipFilters';
 import { dropdownCareerInterest, recommendation } from './RecommendationScript';
 
@@ -28,16 +25,16 @@ function SearchInternshipFeature({
   const internships = new InternshipsFilters();
   const data = internships.mergeData();
   let locationChange = locationVal;
-  let companyChange = companyVal;
+  const companyChange = companyVal;
   let sortChange = sortVal;
-  let searchQueryChange = searchQuery;
+  const searchQueryChange = searchQuery;
   let skillChange = skillsVal;
   let remoteCheck = isRemote;
   let careerChange = careerVal;
   const sortBy = [
-    { key: 'date', text: 'posted', value: 'date' },
-    { key: 'internship', text: 'internship', value: 'internship' },
-    { key: 'company', text: 'company', value: 'company' },
+    { key: 'posted', text: 'Posted Date', value: 'posted' },
+    { key: 'internship', text: 'Internship Title', value: 'internship' },
+    { key: 'company', text: 'Company', value: 'company' },
   ];
   const setFilters = () => {
     const remoteFilter = internships.isRemote(data, remoteCheck);
@@ -51,12 +48,6 @@ function SearchInternshipFeature({
       left: 100,
       behavior: 'smooth',
     });
-  };
-  const handleSearchChange = (event) => {
-    searchQueryChange = event.target.value;
-  };
-  const handleCompanyChange = (event) => {
-    companyChange = event.target.value;
   };
   const getRemote = () => {
     remoteCheck = !remoteCheck;
@@ -96,36 +87,30 @@ function SearchInternshipFeature({
       <Grid columns={'equal'}>
         <Grid.Row>
           <Grid.Column>
-            <p>
-              <p>
-                Sort by {' '}
-                <Dropdown
-                  inline
-                  header='Sort by...'
-                  options={sortBy}
-                  defaultValue={sortBy[0].value}
-                  onChange={getSort}
-                />
-              </p>
-            </p>
-          </Grid.Column>
-          <Grid.Column>
-            <Form onSubmit={handleSubmit}>
-              <Popup
-                trigger={
-                  <Form>
-                    <Form.Field icon='search'
-                                iconPosition='left'
-                                placeholder='Search ...'
-                                onChange={handleSearchChange}
-                                fluid
-                                control={Input}
-                                label={{ children: 'Search' }}
-                    />
-                  </Form>
-                }
-                content='Press enter to search by internship titles!'
-                on={'focus'}
+            <Form>
+              <Form.Field>
+                Sort By:
+              </Form.Field>
+              <Form.Radio
+                label={sortBy[0].text}
+                value={sortBy[0].value}
+                name='sortBy'
+                checked={sortChange === sortBy[0].value}
+                onChange={getSort}
+              />
+              <Form.Radio
+                label={sortBy[1].text}
+                value={sortBy[1].value}
+                name='sortBy'
+                checked={sortChange === sortBy[1].value}
+                onChange={getSort}
+              />
+              <Form.Radio
+                label={sortBy[2].text}
+                value={sortBy[2].value}
+                name='sortBy'
+                checked={sortChange === sortBy[2].value}
+                onChange={getSort}
               />
             </Form>
           </Grid.Column>
@@ -170,25 +155,8 @@ function SearchInternshipFeature({
             <Checkbox style={{ paddingTop: '1rem' }} label='Remote'
                       onClick={getRemote}/>
           </Grid.Column>
-          <Grid.Column>
-            <Form onSubmit={handleSubmit}>
-              <Form.Field icon='home'
-                          label={{ children: 'Company' }}
-                          control={Input}
-                          iconPosition='left'
-                          placeholder='Company'
-                          onChange={handleCompanyChange}
-                          fluid
-              />
-            </Form>
-          </Grid.Column>
         </Grid.Row>
         <Grid.Row>
-          <Grid.Column>
-            <Header style={{ paddingBottom: '0', marginTop: '0rem' }}>
-              Last Updated: {moment(internships.lastScraped(data)).fromNow()}
-            </Header>
-          </Grid.Column>
           <Grid.Column textAlign={'right'}>
             <Grid.Row>
               <div style={{ paddingBottom: '0', paddingRight: '0.5rem' }}>
@@ -217,7 +185,7 @@ function SearchInternshipFeature({
 SearchInternshipFeature.propTypes = {
   onChildClick: PropTypes.func.isRequired,
   passedData: PropTypes.array.isRequired,
-  locationVal: PropTypes.string.isRequired,
+  locationVal: PropTypes.array.isRequired,
   companyVal: PropTypes.string.isRequired,
   sortVal: PropTypes.string.isRequired,
   searchQuery: PropTypes.string.isRequired,

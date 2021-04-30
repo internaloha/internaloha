@@ -16,6 +16,7 @@ async function main() {
   let browser;
   let page;
   const data = [];
+  const scraperName = 'iHire: ';
   const startTime = new Date();
   try {
     log.error('Starting scraper ihiretechnology at', moment().format('LT'));
@@ -84,7 +85,7 @@ async function main() {
         }
       }
     } catch (e) {
-      log.warn('Error with getting links: ', e.message);
+      log.warn(scraperName, 'Error with getting links: ', e.message);
     }
     try {
       // go through each link and fetch info
@@ -137,19 +138,19 @@ async function main() {
         }
       }
     } catch (er2) {
-      log.warn('Error scraping links:', er2.message);
+      log.warn(scraperName, 'Error scraping links:', er2.message);
     }
     log.info(data);
     log.info(jobNumber);
     try {
       await writeToJSON(data, 'iHireTech');
     } catch (err) {
-      log.warn('Something went wrong', err.message);
+      log.warn(scraperName, 'Error: ', err.message);
     }
     await browser.close();
     log.trace('Process Completed');
   } catch (err) {
-    log.warn('Something went wrong', err.message);
+    log.warn(scraperName, 'Error: ', err.message);
     await browser.close();
   }
   log.error(`Elapsed time for ihiretechnology: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

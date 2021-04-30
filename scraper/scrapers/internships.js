@@ -23,7 +23,6 @@ async function autoScroll(page) {
       // sometimes it gets stuck on the same number. If it gets stuck more than 5 times, we exit
       if (prevNum === results) {
         stuck++;
-        log.error('Got stuck on autoscrolling...');
       }
     }
     log.info('Finished Loading:', results);
@@ -100,45 +99,19 @@ async function main() {
             reachedTotal = true;
           }
         }
-        log.info('Loading more data...');
       }
-      log.info('Total elementLoaded:', elementLoaded.length);
       // sometimes a job doesn't load properly so put it in try/catch to allow rest of script to run
       try {
         const element = elementLoaded[currentCounter];
         await element.click();
+        await page.waitForTimeout(2000);
         let [position, company, location, posted, description] = '';
         try {
-          position = document.querySelector('h1[class="DesktopHeader_title__2ihuJ"]');
-          if (position !== null) {
-            position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
-          } else {
-            position = 'N/A';
-          }
-          company = document.querySelector('h1[class="DesktopHeader_title__2ihuJ"]');
-          if (company !== null) {
-            company = await fetchInfo(page, 'div[class="DesktopHeader_subTitleRow__yQeLl"] span', 'innerText');
-          } else {
-            company = 'N/A';
-          }
-          location = document.querySelector('span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]');
-          if (location !== null) {
-            location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
-          } else {
-            location = 'N/A';
-          }
-          posted = document.querySelector('p[class="DesktopHeader_postedDate__11t-5"]');
-          if (posted !== null) {
-            posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
-          } else {
-            posted = 'N/A';
-          }
-          description = document.querySelector('div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]');
-          if (description !== null) {
-            description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
-          } else {
-            description = 'N/A';
-          }
+          position = await fetchInfo(page, 'h1[class="DesktopHeader_title__2ihuJ"]', 'innerText');
+          company = await fetchInfo(page, 'a[class="Link_anchor__1oD5h Link_linkColoring__394wp Link_medium__25UK6 DesktopHeader_subTitle__3k6XA"]', 'innerText');
+          location = await fetchInfo(page, 'span[class="DesktopHeader_subTitle__3k6XA DesktopHeader_location__3jiWp"]', 'innerText');
+          posted = await fetchInfo(page, 'p[class="DesktopHeader_postedDate__11t-5"]', 'innerText');
+          description = await fetchInfo(page, 'div[class="ql-editor ql-snow ql-container ql-editor-display Body_rteText__U3_Ce"]', 'innerHTML');
         } catch (e) {
           log.error('Something went wrong with selectors', e.message);
         }

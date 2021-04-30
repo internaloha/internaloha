@@ -5,6 +5,21 @@ import Logger from 'loglevel';
 /* global window */
 
 /**
+ * The behavior of this function is to wait for a selector, and if the waitForSelector times out without finding it, it returns null. Otherwise, it returns true
+ * @param page
+ * @param selector
+ * @returns {Promise<null|boolean>}
+ */
+async function waitForSelectorIfPresent(page, selector) {
+  try {
+    await page.waitForSelector(selector, { timeout: 10000 });
+  } catch (e) {
+    return null;
+  }
+  return true;
+}
+
+/**
  * Fetches the information from the page.
  * @param page The page we are scraping
  * @param selector The CSS Selector
@@ -12,13 +27,16 @@ import Logger from 'loglevel';
  * @returns {Promise<*>} The information as a String.
  */
 async function fetchInfo(page, selector, DOM_Element) {
-  // check to see if the selector exists
-  let result = await page.$(selector);
-  if (result === null) {
-    result = 'Error';
-    console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
-  } else {
+  let result = await waitForSelectorIfPresent(page, selector);
+  if (result) {
     result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
+  } else {
+    // only prints trace when it's not in production
+    const oldLevel = Logger.getLevel();
+    if (oldLevel !== 3) {
+      console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
+    }
+    result = 'N/A';
   }
   return result;
 }
@@ -108,4 +126,79 @@ function convertPostedToDate(posted) {
   return date;
 }
 
-export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate };
+/**
+ * A mouse helper to see what is being clicked when running in browser mode
+ * @param page
+ * @returns {Promise<void>}
+ */
+async function installMouseHelper(page) {
+  await page.evaluateOnNewDocument(() => {
+    // Install mouse helper only for top-level frame.
+    if (window !== window.parent) return;
+    window.addEventListener('DOMContentLoaded', () => {
+      const box = document.createElement('puppeteer-mouse-pointer');
+      const styleElement = document.createElement('style');
+      styleElement.innerHTML = `
+        puppeteer-mouse-pointer {
+          pointer-events: none;
+          position: absolute;
+          top: 0;
+          z-index: 10000;
+          left: 0;
+          width: 20px;
+          height: 20px;
+          background: rgba(0,0,0,.4);
+          border: 1px solid white;
+          border-radius: 10px;
+          margin: -10px 0 0 -10px;
+          padding: 0;
+          transition: background .2s, border-radius .2s, border-color .2s;
+        }
+        puppeteer-mouse-pointer.button-1 {
+          transition: none;
+          background: rgba(0,0,0,0.9);
+        }
+        puppeteer-mouse-pointer.button-2 {
+          transition: none;
+          border-color: rgba(0,0,255,0.9);
+        }
+        puppeteer-mouse-pointer.button-3 {
+          transition: none;
+          border-radius: 4px;
+        }
+        puppeteer-mouse-pointer.button-4 {
+          transition: none;
+          border-color: rgba(255,0,0,0.9);
+        }
+        puppeteer-mouse-pointer.button-5 {
+          transition: none;
+          border-color: rgba(0,255,0,0.9);
+        }
+      `;
+      document.head.appendChild(styleElement);
+      document.body.appendChild(box);
+      document.addEventListener('mousemove', event => {
+        box.style.left = `${event.pageX}px`;
+        box.style.top = `${event.pageY}px`;
+        // eslint-disable-next-line no-use-before-define
+        updateButtons(event.buttons);
+      }, true);
+      document.addEventListener('mousedown', event => {
+        // eslint-disable-next-line no-use-before-define
+        updateButtons(event.buttons);
+        box.classList.add(`button-${event.which}`);
+      }, true);
+      document.addEventListener('mouseup', event => {
+        // eslint-disable-next-line no-use-before-define
+        updateButtons(event.buttons);
+        box.classList.remove(`button-${event.which}`);
+      }, true);
+      function updateButtons(buttons) {
+        // eslint-disable-next-line no-bitwise
+        for (let i = 0; i < 5; i++) box.classList.toggle(`button-${i}`, buttons & (1 << i));
+      }
+    }, false);
+  });
+}
+
+export { fetchInfo, autoScroll, isRemote, startBrowser, writeToJSON, convertPostedToDate, installMouseHelper };
