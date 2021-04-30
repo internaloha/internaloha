@@ -12,6 +12,8 @@
     "jquery": "^3.5.0",
     "jsonfile": "^6.0.1",
     "lodash": "^4.17.15",
+    "loglevel": "^1.7.1",
+    "mime": "^2.5.2",
     "moment": "^2.27.0",
     "natural": "^2.1.5",
     "node-sass": "^4.14.1",
@@ -33,8 +35,8 @@
   "scripts": {
     "test": "node test.js",
     "eject": "react-scripts eject",
-    "lint": "eslint --quiet --ext .jsx --ext .js ./src",
-    "statistics": "node scrapers/statistics.js",
+    "lint": "eslint --quiet --ext .jsx --ext .js ./scrapers",
+    "statistics": "node scrapers/statistics.js main",
     "internships": "node scrapers/internships.js",
     "simply": "node scrapers/simplyHired.js",
     "zip": "node scrapers/zipRecruiter.js",
@@ -42,7 +44,7 @@
     "indeed": "node scrapers/indeed.js",
     "monster": "node scrapers/monster.js",
     "linkedin": "node scrapers/linkedin.js",
-    "single-parse": "node scrapers/single_parser.js",
+    "single-parse": "node scrapers/single-parser.js",
     "youtern": "node scrapers/Youtern.js",
     "cool": "node scrapers/Cooworks.js",
     "stackoverflow": "node scrapers/stackoverflow.js",
@@ -54,7 +56,13 @@
     "aexpress": "node scrapers/aexpress.js",
     "hn": "node scrapers/hn.js",
     "apple": "node scrapers/apple.js",
-    "multi-parse": "node scrapers/multi_parser.js && node scrapers/statistics.js"
+    "hawaiislack": "node scrapers/hawaiislack.js",
+    "nsf": "node scrapers/nsf-reu.js",
+    "multi-parse": "node scrapers/multi-parser.js main && node scrapers/statistics.js main",
+    "multi-parse-only": "node scrapers/multi-parser.js main",
+    "scrapers": "node scrapers/main.js",
+    "cisco": "node scrapers/cisco.js main",
+    "studentOpportunityCenter": "node scrapers/studentOpportunityCenter.js"
   },
   "browserslist": {
     "production": [

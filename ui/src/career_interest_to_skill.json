@@ -1,0 +1,171 @@
+[
+  {
+    "career": "Full Stack Developer",
+    "skills": [
+      "javascript",
+      "react",
+      "css",
+      "html",
+      "database",
+      "api",
+      "sql"
+    ]
+  },
+  {
+    "career": "Mobile App Developer",
+    "skills": [
+      "react native",
+      "mobile development",
+      "flutter"
+    ]
+  },
+  {
+    "career": "DevOps Engineer",
+    "skills": [
+      "javascript",
+      "c and c++",
+      "database",
+      "api",
+      "networks",
+      "software engineering",
+      "mobile development"
+    ]
+  },
+  {
+    "career": "Data Scientist",
+    "skills": [
+      "python",
+      "numpy",
+      "database",
+      "data science"
+    ]
+  },
+  {
+    "career": "Software Engineering",
+    "skills": [
+      "javascript",
+      "react",
+      "css",
+      "html",
+      "database",
+      "api",
+      "sql"
+    ]
+  },
+  {
+    "career": "Systems Analyst",
+    "skills": [
+      "javascript",
+      "c and c++",
+      "database",
+      "api",
+      "sql"
+    ]
+  },
+  {
+    "career": "Security Engineering",
+    "skills": [
+      "cybersecurity",
+      "c and c++",
+      "database"
+    ]
+  },
+  {
+    "career": "Computer Network Architect",
+    "skills": [
+      "networking",
+      "c and c++",
+      "database"
+    ]
+  },
+  {
+    "career": "Network Engineer",
+    "skills": [
+      "software engineering",
+      "cybersecurity",
+      "hardware",
+      "networks"
+    ]
+  },
+  {
+    "career": "Information Security Analyst",
+    "skills": [
+      "database",
+      "networks",
+      "cybersecurity"
+    ]
+  },
+  {
+    "career": "Database Administrator",
+    "skills": [
+      "database",
+      "software engineering",
+      "web development"
+    ]
+  },
+  {
+    "career": "IoT Architect",
+    "skills": [
+      "database",
+      "hardware",
+      "networks",
+      "cybersecurity",
+      "data science"
+    ]
+  },
+  {
+    "career": "VR/AR Engineer",
+    "skills": [
+      "artificial intelligence",
+      "data visualization",
+      "software engineering",
+      "virtual reality",
+      "game design"
+    ]
+  },
+  {
+    "career": "Information System Manager",
+    "skills": [
+      "information technology",
+      "project management",
+      "data science",
+      "project management"
+    ]
+  },
+  {
+    "career": "UX Designer",
+    "skills": [
+      "data visualization",
+      "web development",
+      "machine learning"
+    ]
+  },
+  {
+    "career": "Robotics Engineer",
+    "skills": [
+      "hardware",
+      "software engineering",
+      "robotics",
+      "projects management",
+      "machine learning"
+    ]
+  },
+  {
+    "career": "Game Developer",
+    "skills": [
+      "database",
+      "data visualization",
+      "game design",
+      "virtual reality"
+    ]
+  },
+  {
+    "career": "AI/Machine Learning Engineer",
+    "skills": [
+      "database",
+      "artificial intelligence",
+      "data science",
+      "machine learning"
+    ]
+  }
+]
