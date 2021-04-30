@@ -15,6 +15,7 @@
     "jsonfile": "^6.0.1",
     "lodash": "^4.17.15",
     "loglevel": "^1.7.1",
+    "mime": "^2.5.2",
     "moment": "^2.27.0",
     "natural": "^2.1.5",
     "node-sass": "^4.14.1",
@@ -63,7 +64,7 @@
     "multi-parse-only": "node scrapers/multi-parser.js main",
     "scrapers": "node scrapers/main.js",
     "cisco": "node scrapers/cisco.js main",
-    "student": "node scrapers/studentOpportunityCenter.js main"
+    "studentOpportunityCenter": "node scrapers/studentOpportunityCenter.js"
   },
   "browserslist": {
     "production": [

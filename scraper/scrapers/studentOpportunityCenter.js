@@ -1,13 +1,17 @@
+import puppeteer from 'puppeteer';
 import fs from 'fs';
 import Logger from 'loglevel';
 import moment from 'moment';
-import { autoScroll, convertPostedToDate, fetchInfo, startBrowser } from './scraper-functions.js';
+import { convertPostedToDate, fetchInfo, writeToJSON } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
-const CTA_SELECTOR = '#login-submit-button';
+const CTA_SELECTOR = '#login-submit-button > div.mat-button-ripple.mat-ripple';
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
+// const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
+// const menu = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > button > div.mat-button-ripple.mat-ripple.mat-button-ripple-round';
+// const searchtab = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix';
+// const enter = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-prefix.ng-tns-c32-28.ng-star-inserted';
 
 async function getData(page) {
   const results = [];
@@ -22,16 +26,22 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-export async function main(headless) {
+export async function main() {
   // eslint-disable-next-line no-unused-vars
-  let browser;
-  let page;
+  const browser = await puppeteer.launch({
+    headless: false,
+    slowMo: 100,
+  });
   const data = [];
   const startTime = new Date();
   const scraperName = 'SOC: ';
+  Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
   try {
-    Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
-    [browser, page] = await startBrowser(headless);
+    const page = await browser.newPage();
+    await page.setViewport({
+      width: 1100, height: 900,
+    });
+    await page.setDefaultTimeout(0);
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.user);
@@ -39,12 +49,9 @@ export async function main(headless) {
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
     await page.waitForNavigation();
-    await page.setDefaultNavigationTimeout('#rc-imageselect', { timeout: 0 });
-    await page.click(Search_SELECTOR);
-    await autoScroll(page);
-    await page.click('#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix');
+    await page.click('input[aria-label="Search Bar"]');
     await page.keyboard.type('computer science internship');
-    await page.type(String.fromCharCode(13));
+    await page.keyboard.press('Enter');
 
     const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
 
@@ -60,11 +67,11 @@ export async function main(headless) {
     const urls = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
-            document.querySelectorAll('a.result-card__full-card-link'),
+            document.querySelectorAll('div.pb-12 > a'),
             a => a.href,
         ),
     );
-
+    // console.log(urls);
     // eslint-disable-next-line no-unused-vars
     let totalInternships = 0;
     for (let i = 0; i < elements.length; i++) {
@@ -100,6 +107,7 @@ export async function main(headless) {
       }
       await element.click();
     }
+    await writeToJSON(data, 'studentOpportunityCenter');
   } catch (e) {
     Logger.trace(scraperName, 'Error: ', e.message);
   }

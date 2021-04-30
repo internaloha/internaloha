@@ -20,6 +20,7 @@ import chegg from './internships.js';
 import angellist from './angellist.js';
 import glassdoor from './glassdoor.js';
 import nsf_reu from './nsf-reu.js';
+import studentOpportunityCenter from './studentOpportunityCenter.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -126,6 +127,7 @@ async function getAllData(headless = true) {
   results.push(glassdoor(headless));
   results.push(nsf_reu(headless));
   results.push(stackoverflow(headless));
+  results.push(studentOpportunityCenter(headless));
   return Promise.all(results);
 }
 
@@ -152,6 +154,7 @@ async function getData(scraperName, headless = true) {
     angellist: angellist,
     glassdoor: glassdoor,
     nsf_reu: nsf_reu,
+    studentOpportunityCenter: studentOpportunityCenter,
   };
   try {
     await list[scraperName](headless);
