@@ -58,7 +58,7 @@ function formatDate(stringDate) {
   if (typeof stringDate === 'undefined') {
     return 'N/A';
   }
-  const date = moment(stringDate).fromNow();
+  const date = moment(stringDate, ['YYYY/MM/DD']).fromNow();
   if (date !== 'Invalid Date') {
     return date;
   }
