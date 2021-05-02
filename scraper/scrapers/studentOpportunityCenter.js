@@ -8,20 +8,16 @@ const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
 const CTA_SELECTOR = '#login-submit-button > div.mat-button-ripple.mat-ripple';
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-// const Search_SELECTOR = '#container-1 > core-sidebar > navbar > navbar-vertical-style-2 > div.navbar-content.fuse-navy-700.ps > core-navigation > div > div > div:nth-child(1) > core-nav-vertical-item:nth-child(2) > a';
-// const menu = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > button > div.mat-button-ripple.mat-ripple.mat-button-ripple-round';
-// const searchtab = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-infix';
-// const enter = '#container-2 > toolbar > mat-toolbar > div > div:nth-child(1) > student-search-bar > mat-form-field > div > div.mat-form-field-flex > div.mat-form-field-prefix.ng-tns-c32-28.ng-star-inserted';
 
 async function getData(page) {
   const results = [];
-  for (let i = 0; i < 5; i++) {
-    // title, category, deadlines, date, location
-    results.push(fetchInfo(page, '#container-3 > content > student-search > div > div.content.container > div > div.search-content > opportunity-card.ng-tns-c30-83.ng-tns-c36-4.ng-trigger.ng-trigger-animate.ng-star-inserted > div > div.w-100-p > div.pb-12 > a', 'innerHTML'));
-    results.push(fetchInfo(page, '#container-3 > content > student-search > div > div.content.container > div > div.search-content > opportunity-card.ng-tns-c30-83.ng-tns-c36-4.ng-trigger.ng-trigger-animate.ng-star-inserted > div > div.w-100-p > div.pb-8 > div:nth-child(1)', 'innerText'));
-    results.push(fetchInfo(page, '#container-3 > content > student-search > div > div.content.container > div > div.search-content > opportunity-card.ng-tns-c30-83.ng-tns-c36-4.ng-trigger.ng-trigger-animate.ng-star-inserted > div > div.w-100-p > div.pb-8 > div:nth-child(2)', 'innerText'));
-    results.push(fetchInfo(page, '#container-3 > content > student-search > div > div.content.container > div > div.search-content > opportunity-card.ng-tns-c30-83.ng-tns-c36-4.ng-trigger.ng-trigger-animate.ng-star-inserted > div > div.w-100-p > div.pb-8 > div:nth-child(3)', 'innerText'));
-    results.push(fetchInfo(page, '#container-3 > content > student-search > div > div.content.container > div > div.search-content > opportunity-card.ng-tns-c30-83.ng-tns-c36-4.ng-trigger.ng-trigger-animate.ng-star-inserted > div > div.w-100-p > div.pb-8 > div:nth-child(4)', 'innerText'));
+  for (let i = 0; i < 3; i++) {
+    // title, category, deadlines
+    results.push(fetchInfo(page, 'div.pb-12 > a', 'innerHTML'));
+    results.push(fetchInfo(page, 'div[class="ml-8"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[class="pl-6"]', 'innerText'));
+    // results.push(fetchInfo(page, '', 'innerText'));
+   // results.push(fetchInfo(page, '#container-3 > content > student-search > div > div.content.container > div > div.search-content > opportunity-card.ng-tns-c30-83.ng-tns-c36-4.ng-trigger.ng-trigger-animate.ng-star-inserted > div > div.w-100-p > div.pb-8 > div:nth-child(4)', 'innerText'));
   }
   return Promise.all(results);
 }
@@ -41,13 +37,16 @@ export async function main() {
     await page.setViewport({
       width: 1100, height: 900,
     });
-    await page.setDefaultTimeout(0);
+    await page.setDefaultTimeout(100000);
     await page.goto('https://app.studentopportunitycenter.com/auth/login');
     await page.click(USERNAME_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.user);
     await page.click(PASSWORD_SELECTOR);
     await page.keyboard.type(credentials.studentOpportunityCenter.password);
     await page.click(CTA_SELECTOR);
+    // await page.setDefaultNavigationTimeout(200000);
+    // await page.waitForNavigation();
+    await page.waitForTimeout(98000);
     await page.waitForNavigation();
     await page.click('input[aria-label="Search Bar"]');
     await page.keyboard.type('computer science internship');
