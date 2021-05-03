@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 import fs from 'fs';
 import Logger from 'loglevel';
 import moment from 'moment';
-import { convertPostedToDate, fetchInfo, writeToJSON } from './scraper-functions.js';
+import { fetchInfo, writeToJSON } from './scraper-functions.js';
 
 const USERNAME_SELECTOR = '#mat-input-0';
 const PASSWORD_SELECTOR = '#mat-input-1';
@@ -12,10 +12,10 @@ const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 async function getData(page) {
   const results = [];
   for (let i = 0; i < 3; i++) {
-    // title, category, deadlines
-    results.push(fetchInfo(page, 'div.pb-12 > a', 'innerHTML'));
-    results.push(fetchInfo(page, 'div[class="ml-8"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="pl-6"]', 'innerText'));
+    // get title, description,and website
+    results.push(fetchInfo(page, 'span[class="opportunity-heading pr-6 open-sans ng-tns-c66-203 ng-star-inserted"]', 'innerText'));
+    results.push(fetchInfo(page, 'span[class="pb-8 mat-body-1 wrap-text"]', 'innerText'));
+    results.push(fetchInfo(page, 'button[class="ng-tns-c66-296 mat-stroked-button"]', 'innerHTML'));
     // results.push(fetchInfo(page, '', 'innerText'));
    // results.push(fetchInfo(page, '#container-3 > content > student-search > div > div.content.container > div > div.search-content > opportunity-card.ng-tns-c30-83.ng-tns-c36-4.ng-trigger.ng-trigger-animate.ng-star-inserted > div > div.w-100-p > div.pb-8 > div:nth-child(4)', 'innerText'));
   }
@@ -46,13 +46,14 @@ export async function main() {
     await page.click(CTA_SELECTOR);
     // await page.setDefaultNavigationTimeout(200000);
     // await page.waitForNavigation();
-    await page.waitForTimeout(98000);
+    await page.waitForTimeout(10000);
     await page.waitForNavigation();
     await page.click('input[aria-label="Search Bar"]');
     await page.keyboard.type('computer science internship');
     await page.keyboard.press('Enter');
 
-    const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
+    // const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
+    const urls = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
 
     // eslint-disable-next-line no-unused-vars
    const times = await page.evaluate(
@@ -63,37 +64,46 @@ export async function main() {
         ),
     );
 
-    const urls = await page.evaluate(
+    /** const urls = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
            document.querySelectorAll('div.pb-12 > a'),
             a => a.href,
         ),
-    );
+    );* */
     console.log(urls);
     // eslint-disable-next-line no-unused-vars
     let totalInternships = 0;
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i];
+    for (let i = 0; i < urls.length; i++) {
+      // eslint-disable-next-line no-shadow
+      const urls = await page.evaluate(
+          () => Array.from(
+              // eslint-disable-next-line no-undef
+              document.querySelectorAll('div.pb-12 > a'),
+              a => a.href,
+          ),
+      );
+      // const element = elements[i];
       try {
         await page.waitForSelector('div[class="details-pane__content details-pane__content--show"]');
         const lastScraped = new Date();
-        const [position, company, location, posted, description] = await getData(page);
-        await convertPostedToDate(posted);
-        let state = '';
-        if (!location.match(/([^,]*)/g)[2]) {
+        // eslint-disable-next-line no-unused-vars
+        const [position, description, website] = await getData(page);
+        // await convertPostedToDate(posted);
+        const state = '';
+        /** if (!location.match(/([^,]*)/g)[2]) {
           state = 'United States';
         } else {
           state = location.match(/([^,]*)/g)[2].trim();
-        }
+        } * */
         data.push({
           position: position,
-          company: company,
+          company: website,
           location: {
-            city: location.match(/([^,]*)/g)[0],
+            // city: location.match(/([^,]*)/g)[0],
             state: state,
           },
-          posted: posted,
+          // posted: posted,
           url: urls[i],
           lastScraped: lastScraped,
           description: description,
@@ -104,7 +114,8 @@ export async function main() {
         Logger.trace(scraperName, err5.message);
         Logger.trace('Skipping! Did not load...');
       }
-      await element.click();
+      // await element.click();
+      await urls.click();
     }
     await writeToJSON(data, 'studentOpportunityCenter');
   } catch (e) {
