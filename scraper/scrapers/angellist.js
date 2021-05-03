@@ -8,11 +8,7 @@ const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
 async function login(page) {
   // Navigate to login page
-  // await page.waitForSelector('a[class="u-fontSize14 u-cursorPointer js-use-password-trigger"]', { timeout: 0 });
-  // await page.click('a[class="u-fontSize14 u-cursorPointer js-use-password-trigger"]');
-  // await page.click('input[class="u-fontSize14 js-email"]');
   await page.type('input[id="user_email"]', credentials.angellist.user);
-  // await page.click('input[name="user[password]"]');
   await page.type('input[id="user_password"]', credentials.angellist.password);
   await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
 }
@@ -21,20 +17,11 @@ async function getData(page) {
   const results = [];
   for (let i = 0; i < 6; i++) {
     // description, location, title, company
-    // Click internships
-    // description
     results.push(fetchInfo(page, 'div[class="styles_description__4fnTp"]', 'innerHTML'));
-    console.log(fetchInfo(page, 'div[class="styles_description__4fnTp"]', 'innerHTML'));
-    // location
     results.push(fetchInfo(page, 'div[class="styles_component__1iUh1"] > div:nth-child(1) > dd > div > span', 'innerText'));
-    // title
     results.push(fetchInfo(page, 'h2[class="styles_component__1kg4S styles_header__3m1pY __halo_fontSizeMap_size--2xl __halo_fontWeight_medium"]', 'innerText'));
-    // company
     results.push(fetchInfo(page, 'a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_anchor__2aXMZ"]', 'innerText'));
-    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.content_6572f > div', 'innerHTML'));
-    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.sidebar_f82a8 > div > div.component_4105f > div:nth-child(1) > dd > div > span', 'innerText'));
-    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.title_927e9 > div > h2', 'innerText'));
-    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > section > div > div.name_af83c > div > div.styles_component__1WTsC.styles_flexRow__35QHu > h1 > a', 'innerText'));
+
   }
   return Promise.all(results);
 }
@@ -64,8 +51,7 @@ async function main(url) {
   await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
   await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
   await page.keyboard.press('Backspace');
-  // Change Android Developer back to engineering when done
-  await page.keyboard.type('Android Developer');
+  await page.keyboard.type('Engineering');
   await page.keyboard.press('Enter');
   await page.click('div[class="styles_locationWrapper__ScGs8"] > button');
   await page.keyboard.press('Backspace');
@@ -84,7 +70,6 @@ async function main(url) {
   await autoScroll(page);
   await autoScroll(page);
   await autoScroll(page);
-  // await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
   // gets elements for length for loop
   const elements = await page.evaluate(
       () => Array.from(
@@ -103,7 +88,6 @@ async function main(url) {
         }
       });
   for (let i = 0; i < elements.length; i++) {
-    // elements[i] = 'http://angel.co' + elements[i];
       const element = `http://angel.co${elements[i]}`;
     await page.goto(element, { waitUntil: 'domcontentloaded' });
     const currentURL = page.url();
