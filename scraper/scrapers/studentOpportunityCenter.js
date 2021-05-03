@@ -46,7 +46,7 @@ export async function main() {
     await page.click(CTA_SELECTOR);
     // await page.setDefaultNavigationTimeout(200000);
     // await page.waitForNavigation();
-    await page.waitForTimeout(10000);
+    await page.waitForTimeout(70000);
     await page.waitForNavigation();
     await page.click('input[aria-label="Search Bar"]');
     await page.keyboard.type('computer science internship');
