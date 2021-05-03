@@ -4,26 +4,44 @@ import Logger from 'loglevel';
 import moment from 'moment';
 import { fetchInfo, autoScroll } from './scraper-functions.js';
 
-const USERNAME_SELECTOR = '#user_email';
-const PASSWORD_SELECTOR = '#user_password';
-const CTA_SELECTOR = '#new_user > div:nth-child(6) > input';
-
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+
+async function login(page) {
+  // Navigate to login page
+  // await page.waitForSelector('a[class="u-fontSize14 u-cursorPointer js-use-password-trigger"]', { timeout: 0 });
+  // await page.click('a[class="u-fontSize14 u-cursorPointer js-use-password-trigger"]');
+  // await page.click('input[class="u-fontSize14 js-email"]');
+  await page.type('input[id="user_email"]', credentials.angellist.user);
+  // await page.click('input[name="user[password]"]');
+  await page.type('input[id="user_password"]', credentials.angellist.password);
+  await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
+}
 
 async function getData(page) {
   const results = [];
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < 6; i++) {
     // description, location, title, company
-    results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.content_6572f > div', 'innerHTML'));
-    results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.sidebar_f82a8 > div > div.component_4105f > div:nth-child(1) > dd > div > span', 'innerText'));
-    results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.title_927e9 > div > h2', 'innerText'));
-    results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > section > div > div.name_af83c > div > div.styles_component__1WTsC.styles_flexRow__35QHu > h1 > a', 'innerText'));
+    // Click internships
+    // description
+    results.push(fetchInfo(page, 'div[class="styles_description__4fnTp"]', 'innerHTML'));
+    console.log(fetchInfo(page, 'div[class="styles_description__4fnTp"]', 'innerHTML'));
+    // location
+    results.push(fetchInfo(page, 'div[class="styles_component__1iUh1"] > div:nth-child(1) > dd > div > span', 'innerText'));
+    // title
+    results.push(fetchInfo(page, 'h2[class="styles_component__1kg4S styles_header__3m1pY __halo_fontSizeMap_size--2xl __halo_fontWeight_medium"]', 'innerText'));
+    // company
+    results.push(fetchInfo(page, 'a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_anchor__2aXMZ"]', 'innerText'));
+    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.content_6572f > div', 'innerHTML'));
+    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.body_31259 > div.sidebar_f82a8 > div > div.component_4105f > div:nth-child(1) > dd > div > span', 'innerText'));
+    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > div.profile_89ad5 > div > div > div.component_659a3 > div.title_927e9 > div > h2', 'innerText'));
+    // results.push(fetchInfo(page, '#main > div.component_70709 > div > div > div > section > div > div.name_af83c > div > div.styles_component__1WTsC.styles_flexRow__35QHu > h1 > a', 'innerText'));
   }
   return Promise.all(results);
 }
 
 async function startBrowser() {
-  const browser = await puppeteer.launch({ headless: false, devtools: true, slowMo: 2000, // slow down by 250ms
+  // Slowmo changes speed of typing as well
+  const browser = await puppeteer.launch({ headless: false, devtools: true, slowMo: 100, // slow down by 250ms
   });
   const page = await browser.newPage();
   return { browser, page };
@@ -37,31 +55,43 @@ async function main(url) {
   const { browser, page } = await startBrowser();
   await page.setViewport({ width: 1366, height: 768 });
   await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');
-  await page.goto(url);
-  // await page.waitForTimeout(30000);
-  await page.waitForSelector(USERNAME_SELECTOR);
-  await page.click(USERNAME_SELECTOR);
-  await page.keyboard.type(credentials.angellist.user);
-  await page.click(PASSWORD_SELECTOR);
-  await page.keyboard.type(credentials.angellist.password);
-  await page.click(CTA_SELECTOR);
+  await page.setDefaultNavigationTimeout(0);
+  await page.goto(url, { waitUntil: 'load', timeout: 0 });
+  await page.waitForSelector('input[id="user_email"]', { timeout: 1000000 });
+  await login(page);
   await page.waitForNavigation();
   // await page.waitForTimeout(5000);
-  await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
+  await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
+  await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
+  await page.keyboard.press('Backspace');
+  // Change Android Developer back to engineering when done
+  await page.keyboard.type('Android Developer');
+  await page.keyboard.press('Enter');
+  await page.click('div[class="styles_locationWrapper__ScGs8"] > button');
+  await page.keyboard.press('Backspace');
+  await page.keyboard.type('United States');
+  await page.keyboard.press('Enter');
+  await page.click('button[class="styles_component__3A0_k styles_secondary__2g46E styles_small__6SIIc styles_toggle__3_6jN"]');
+  await page.waitForSelector('button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
+  if (await page.$('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button') !== null) {
+    // click clear
+    await page.click('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button');
+    await page.click('label[for="form-input--jobTypes--internship"]');
+  } else {
+    await page.click('label[for="form-input--jobTypes--internship"]');
+  }
+  await page.click('div[class="styles_footer__3DmVI"] > button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
   await autoScroll(page);
   await autoScroll(page);
   await autoScroll(page);
-  await page.waitForSelector('a.component_21e4d.defaultLink_7325e.information_7136e');
-  const elements = await page.$x('a.component_21e4d.defaultLink_7325e.information_7136e');
-  const src = await elements.getProperty('src');
-  const srcTxt = await src.jsonValue();
-  Logger.info({ srcTxt });
-  // const elements = await page.JSON.parse(
-  //     () => Array.from(
-  //         document.querySelectorAll('a.component_21e4d.defaultLink_7325e.information_7136e'),
-  //         a => a.getAttribute('href'),
-  //     ),
-  // );
+  // await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
+  // gets elements for length for loop
+  const elements = await page.evaluate(
+      () => Array.from(
+          document.querySelectorAll('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]'),
+          a => a.getAttribute('href'),
+      ),
+  );
   Logger.info(elements.length);
   elements.forEach(element => {
     Logger.info(element);
@@ -74,7 +104,7 @@ async function main(url) {
       });
   for (let i = 0; i < elements.length; i++) {
     // elements[i] = 'http://angel.co' + elements[i];
-    const element = `http://angel.co${elements[i]}`;
+      const element = `http://angel.co${elements[i]}`;
     await page.goto(element, { waitUntil: 'domcontentloaded' });
     const currentURL = page.url();
     const skills = 'N/A';

@@ -5,7 +5,6 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 async function setSearchFilters(page) {
   // Navigate to internship page
   await page.waitForSelector('input[id="search_keywords"]');
-  // change to internship when not testing
   await page.type('input[id="search_keywords"]', 'internship');
   await page.click('[class="search_submit"]');
 }
