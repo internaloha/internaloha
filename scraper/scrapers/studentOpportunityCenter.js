@@ -55,7 +55,7 @@ export async function main() {
     const elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
 
     // eslint-disable-next-line no-unused-vars
-    const times = await page.evaluate(
+   const times = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
             document.querySelectorAll('div.result-card__meta.job-result-card__meta time:last-child'),
@@ -66,11 +66,11 @@ export async function main() {
     const urls = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
-            document.querySelectorAll('div.pb-12 > a'),
+           document.querySelectorAll('div.pb-12 > a'),
             a => a.href,
         ),
     );
-    // console.log(urls);
+    console.log(urls);
     // eslint-disable-next-line no-unused-vars
     let totalInternships = 0;
     for (let i = 0; i < elements.length; i++) {
