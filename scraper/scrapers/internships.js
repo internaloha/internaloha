@@ -23,7 +23,6 @@ async function autoScroll(page) {
       // sometimes it gets stuck on the same number. If it gets stuck more than 5 times, we exit
       if (prevNum === results) {
         stuck++;
-        log.error('Got stuck on autoscrolling...');
       }
     }
     log.info('Finished Loading:', results);

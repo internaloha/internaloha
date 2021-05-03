@@ -58,7 +58,7 @@ function formatDate(stringDate) {
   if (typeof stringDate === 'undefined') {
     return 'N/A';
   }
-  const date = moment(stringDate).fromNow();
+  const date = moment(stringDate, ['YYYY/MM/DD']).fromNow();
   if (date !== 'Invalid Date') {
     return date;
   }
@@ -239,7 +239,7 @@ function InternshipListingCard(props) {
 
 InternshipListingCard.propTypes = {
   internship: PropTypes.object.isRequired,
-  selectedSkills: PropTypes.object.isRequired,
+  selectedSkills: PropTypes.array.isRequired,
 };
 
 export default InternshipListingCard;

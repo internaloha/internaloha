@@ -35,22 +35,26 @@ async function getDataTwo(page) {
 }
 
 async function reload(page) {
-  await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
-  await page.waitForSelector('section.results__list');
-  Logger.info('Fetching jobs...');
-  await autoScroll(page);
-  let loadMore = true;
-  let loadCount = 0;
-  // Sometimes infinite scroll stops and switches to a "load more" button
-  while (loadMore === true && loadCount <= 15) {
-    try {
-      await page.waitForTimeout(1000);
-      await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
-      loadCount++;
-    } catch (e2) {
-      loadMore = false;
-      Logger.debug('Finished loading...');
+  try {
+    await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
+    await page.waitForSelector('section.results__list');
+    Logger.info('Fetching jobs...');
+    await autoScroll(page);
+    let loadMore = true;
+    let loadCount = 0;
+    // Sometimes infinite scroll stops and switches to a "load more" button
+    while (loadMore === true && loadCount <= 15) {
+      try {
+        await page.waitForTimeout(1000);
+        await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
+        loadCount++;
+      } catch (e2) {
+        loadMore = false;
+        Logger.debug('Finished loading...');
+      }
     }
+  } catch (e) {
+    Logger.error('Linkedin Error: ', e.message);
   }
 }
 
@@ -181,7 +185,8 @@ export async function main(headless) {
     await writeToJSON(data, 'linkedin');
     await browser.close();
   } catch (e) {
-    Logger.debug(scraperName, 'Our Error: ', e.message);
+    Logger.error(scraperName, 'Our Error: ', e.message);
+    await writeToJSON(data, 'linkedin');
     await browser.close();
   }
   Logger.error(`Elapsed time for linkedin: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

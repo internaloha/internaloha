@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import _ from 'lodash';
 import { Card, Container, Grid, Header, Segment } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 import moment from 'moment';
 import InternshipListingCard from './InternshipListingCard';
 import SearchInternshipFeature from './SearchInternshipFeature';
@@ -9,11 +10,11 @@ import InternshipsFilters from './InternshipFilters';
 function InternshipListing() {
   const internships = new InternshipsFilters();
   const getInternshipData = internships.mergeData();
-  const [data, setData] = useState(getInternshipData);
-  const [paginatedData, setPaginatedData] = useState(getInternshipData.slice(0, 40));
+  const [data, setData] = useState('');
+  const [paginatedData, setPaginatedData] = useState('');
   const [location, setLocation] = useState([]);
   const [company, setCompany] = useState('any');
-  const [sort, setSort] = useState('posted');
+  const [sort, setSort] = useState('');
   const [search, setSearch] = useState('');
   const [skills, setSkills] = useState([]);
   const [remote, setRemote] = useState(false);
@@ -22,6 +23,7 @@ function InternshipListing() {
   const [career, setCareer] = useState([]);
   const ref = useRef(null);
   const totalListing = getInternshipData.length;
+  const lastScraped = moment(getInternshipData[0].lastScraped).fromNow();
 
   /* Passes data up from SearchInternshipFeature. SetPaginatedData allows data to be rendered
   * for infinite scroll. */
@@ -41,7 +43,7 @@ function InternshipListing() {
   /* Grabs the height */
   useEffect(() => {
     setHeight(ref.current.clientHeight);
-  });
+  }, [ref]);
 
   /* Infinite scrolling */
   function handleScroll() {
@@ -62,7 +64,7 @@ function InternshipListing() {
   return (
       <Container fluid style={{ paddingTop: '5rem', marginLeft: '0.5rem', marginRight: '0.5rem' }}>
         <Grid columns={'equal'} doubling stackable>
-          <Grid.Row style={{ maxWidth: '80%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
+          <Grid.Row style={{ maxWidth: '70%', margin: 'auto', paddingTop: '20px', marginBottom: '-40px' }}>
             <Segment>
               <h2 style={{ align: 'center' }}>
                 Welcome to InternAloha!
@@ -92,13 +94,16 @@ function InternshipListing() {
                   Student Opportunity Center (0),
                   Youtern ({internships.getData('Youtern').length}),
                   Zip Recruiter ({internships.getData('ZipRecruiter').length})</p>
-                <p>InternAloha collected this information {moment(internships.lastScraped(data)).fromNow()}. </p>
+                <p>InternAloha collected this information {lastScraped}. </p>
+                <p>We also collect statistics on the sites scraped. For more information, see
+                  <NavLink to="/statistics" exact> statistics.</NavLink>
+                </p>
                 <p>If you have comments or question about InternAloha, please feel free to visit our
                   <a href="https://internaloha.github.io/documentation/"> home page</a>. </p>
               </Grid.Column>
             </Segment>
           </Grid.Row>
-          <Grid.Row style={{ maxWidth: '80%', margin: 'auto' }}>
+          <Grid.Row style={{ maxWidth: '70%', margin: 'auto' }}>
             <SearchInternshipFeature onChildClick={handleChildClick} passedData={data}
                                      companyVal={company} locationVal={location} sortVal={sort}
                                      searchQuery={search} skillsVal={skills} isRemote={remote} careerVal={career}/>

@@ -117,8 +117,8 @@ async function main(headless) {
           breakOut = true;
         }
         countError++;
-        Logger.warn(scraperName, err5.message);
-        Logger.error('Loading error, skipping');
+        Logger.info(scraperName, err5.message);
+        Logger.info('Loading error, skipping');
         skippedJobs.push(urlArray[i]);
         skippedDates.push(postedDates[i]);
       }
