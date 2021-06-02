@@ -66,7 +66,7 @@ async function main(headless) {
     let urlArray = [];
     const skippedJobs = [];
     const skippedDates = [];
-    let pageLimit = await fetchInfo(page, 'div[class="cell middle hideHH py-sm"]', 'innerHTML');
+    let pageLimit = await fetchInfo(page, 'div[class="cell middle d-none d-md-block py-sm"]', 'innerHTML');
     pageLimit = pageLimit.match(/(\d+)/gm);
     let currentPage = 1;
     Logger.info('Pages: ', pageLimit[1]);
@@ -82,6 +82,7 @@ async function main(headless) {
         );
         postedDates = postedDates.concat(dates);
         // grab all links
+        await page.waitForTimeout(5000);
         const URLs = await page.evaluate(
           () => Array.from(
             document.querySelectorAll('a[data-test="job-link"]'),
