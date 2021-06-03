@@ -14,7 +14,7 @@ async function getData(page) {
   const results = [];
   for (let i = 0; i < 5; i++) {
     results.push(fetchInfo(page, 'h2.topcard__title', 'innerText'));
-    results.push(fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name" ]', 'innerText'));
+    results.push(fetchInfo(page, 'a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerText'));
     results.push(fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText'));
     results.push(fetchInfo(page, 'span.topcard__flavor--metadata.posted-time-ago__text', 'innerText'));
     results.push(fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML'));
@@ -26,7 +26,7 @@ async function getDataTwo(page) {
   const results = [];
   for (let i = 0; i < 5; i++) {
     results.push(fetchInfo(page, 'h1[class="topcard__title"]', 'innerText'));
-    results.push(fetchInfo(page, 'a[data-tracking-control-name="public_jobs_topcard_org_name" ]', 'innerText'));
+    results.push(fetchInfo(page, 'a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerText'));
     results.push(fetchInfo(page, 'span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText'));
     results.push(fetchInfo(page, 'span.topcard__flavor--metadata.posted-time-ago__text', 'innerText'));
     results.push(fetchInfo(page, 'div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML'));
@@ -37,16 +37,22 @@ async function getDataTwo(page) {
 async function reload(page) {
   try {
     await page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
-    await page.waitForSelector('section.results__list');
+    await page.waitForSelector('a[class="base-card__full-link"]');
     Logger.info('Fetching jobs...');
+    await autoScroll(page);
+    await page.waitForTimeout(5000);
     await autoScroll(page);
     let loadMore = true;
     let loadCount = 0;
     // Sometimes infinite scroll stops and switches to a "load more" button
-    while (loadMore === true && loadCount <= 15) {
+    while (loadMore === true && loadCount <= 40) {
       try {
-        await page.waitForTimeout(1000);
-        await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
+        await page.waitForTimeout(5000);
+        if (await page.waitForSelector('button[data-tracking-control-name="infinite-scroller_show-more"]')) {
+          await page.click('button[data-tracking-control-name="infinite-scroller_show-more"]');
+        } else {
+          await autoScroll(page);
+        }
         loadCount++;
       } catch (e2) {
         loadMore = false;
@@ -68,22 +74,24 @@ export async function main(headless) {
   try {
     Logger.error('Starting scraper linkedin at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
+    await page.setDefaultTimeout(0);
     await installMouseHelper(page);
     await reload(page);
-    let elements = await page.$$('li[class="result-card job-result-card result-card--with-hover-state"]');
+    let elements = await page.$$('a[class="base-card__full-link"]');
+    console.log('Getting Times');
     // eslint-disable-next-line no-unused-vars
     let times = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
-            document.querySelectorAll('div.result-card__meta.job-result-card__meta time:last-child'),
+            document.querySelectorAll('time[class="job-search-card__listdate--new"]'),
             a => a.textContent,
         ),
     );
-
+    console.log('Getting Urls');
     let urls = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
-            document.querySelectorAll('a.result-card__full-card-link'),
+            document.querySelectorAll('a[class="base-card__full-link"]'),
             a => a.href,
         ),
     );
