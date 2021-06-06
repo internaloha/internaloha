@@ -28,7 +28,9 @@ export async function main(headless) {
   try {
     Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
-    await page.goto('https://app.studentopportunitycenter.com/auth/login');
+    await page.goto('https://studentopportunitycenter.com/');
+    await page.click('#menu-item-322');
+    await page.waitForNavigation();
     // Logging in
     await page.type('input[id=mat-input-0]', credentials.studentOpportunityCenter.user);
     await page.type('input[id=mat-input-1]', credentials.studentOpportunityCenter.password);
