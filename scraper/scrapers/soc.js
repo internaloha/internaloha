@@ -28,10 +28,9 @@ export async function main(headless) {
   try {
     Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
-    await page.goto('https://studentopportunitycenter.com/');
-    await page.click('#menu-item-322');
-    await page.waitForNavigation();
+    await page.goto('https://app.studentopportunitycenter.com/auth/login');
     // Logging in
+    await page.reload();
     await page.type('input[id=mat-input-0]', credentials.studentOpportunityCenter.user);
     await page.type('input[id=mat-input-1]', credentials.studentOpportunityCenter.password);
     await page.click('#login-submit-button');
@@ -39,15 +38,19 @@ export async function main(headless) {
 
     // Searching with keyword 'computer science'
     await page.click('#mat-input-0');
-    await page.keyboard.type('Computer Science');
+    await page.keyboard.type('Computer Science Internship');
     await page.keyboard.press('Enter');
+    await page.waitForNavigation();
 
-    const cards = await page.evaluate(() => {
-      const divs = document.querySelectorAll('.listing-card p-30 mb-20 ng-tns-c30-63 ng-star-inserted');
-      const test = document.querySelector('h2');
-      return test.innerHTML;
-    });
+    // let filter = await page.evaluate(() => document.querySelector('.mat-select-value'));
+    await page.waitForTimeout(3000);
+    await page.click('.mat-select-value');
+    await page.waitForTimeout(3000);
+    await page.click('#mat-option-27');
+    await page.waitForTimeout(5000);
+    const cards = await page.evaluate(() => document.querySelectorAll('.listing-card p-30 mb-20 ng-tns-c30-63 ng-star-inserted'));
     console.log(cards);
+    await page.waitForNavigation({ timeout: 120000 });
 
     const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
     // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
