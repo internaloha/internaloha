@@ -20,7 +20,7 @@ import chegg from './internships.js';
 import angellist from './angellist.js';
 import glassdoor from './glassdoor.js';
 import nsf_reu from './nsf-reu.js';
-import soc from './studentOpportunityCenter.js';
+import soc from './soc.js';
 
 const myArgs = process.argv.slice(2);
 
