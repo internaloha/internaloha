@@ -34,7 +34,7 @@ export async function main(headless) {
     await page.type('input[id=mat-input-0]', credentials.studentOpportunityCenter.user);
     await page.type('input[id=mat-input-1]', credentials.studentOpportunityCenter.password);
     await page.click('#login-submit-button');
-    await page.waitForNavigation({ timeout: 90000 });
+    await page.waitForNavigation({ timeout: 120000 });
 
     // Searching with keyword 'computer science'
     await page.click('#mat-input-0');
@@ -42,46 +42,21 @@ export async function main(headless) {
     await page.keyboard.press('Enter');
     await page.waitForNavigation();
 
-    // let filter = await page.evaluate(() => document.querySelector('.mat-select-value'));
+    await page.reload();
     await page.waitForTimeout(3000);
     await page.click('.mat-select-value');
     await page.waitForTimeout(3000);
-    await page.click('#mat-option-18');
+    await page.click('#mat-option-17');
     await page.waitForTimeout(5000);
-    const cards = await page.evaluate(() => document.querySelectorAll('opportunity-card'));
-    console.log(cards);
+    const urls = await page.evaluate(() => {
+      const urlFromWeb = document.querySelectorAll('.pb-12 a');
+      console.log(urlFromWeb);
+      const urlList = [...urlFromWeb];
+      return urlList.map(url => url.href);
+    });
+    console.log(urls);
     await page.waitForNavigation({ timeout: 120000 });
 
-    const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
-    // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
-    for (let i = 2; i <= totalPage; i++) {
-      // Fetching all urls in page into a list
-      const urls = await page.evaluate(() => {
-        const urlFromWeb = document.querySelectorAll('h3 a');
-        const urlList = [...urlFromWeb];
-        return urlList.map(url => url.href);
-      });
-      // Iterate through all internship positions
-      try {
-        for (let j = 0; j < urls.length; j++) {
-          await page.goto(urls[j]);
-          const lastScraped = new Date();
-          const [position, company, description, city, state, zip] = await getData(page);
-          data.push({
-            url: urls[j],
-            position: position,
-            company: company.trim(),
-            location: { city: city, state: state, zip: zip },
-            lastScraped: lastScraped,
-            description: description,
-          });
-        }
-      } catch (err1) {
-        Logger.error(scraperName, err1.message);
-      }
-      // Return to original search url, but next page
-      await page.goto(`https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=PostDate%20desc&page=${i}`);
-    }
     await writeToJSON(data, 'acm');
     await browser.close();
   } catch (err2) {
