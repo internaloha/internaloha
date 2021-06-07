@@ -78,7 +78,6 @@ export async function main(headless) {
     await installMouseHelper(page);
     await reload(page);
     let elements = await page.$$('a[class="base-card__full-link"]');
-    console.log('Getting Times');
     // eslint-disable-next-line no-unused-vars
     let times = await page.evaluate(
         () => Array.from(
@@ -87,7 +86,6 @@ export async function main(headless) {
             a => a.textContent,
         ),
     );
-    console.log('Getting Urls');
     let urls = await page.evaluate(
         () => Array.from(
             // eslint-disable-next-line no-undef
