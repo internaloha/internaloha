@@ -46,9 +46,9 @@ export async function main(headless) {
     await page.waitForTimeout(3000);
     await page.click('.mat-select-value');
     await page.waitForTimeout(3000);
-    await page.click('#mat-option-27');
+    await page.click('#mat-option-18');
     await page.waitForTimeout(5000);
-    const cards = await page.evaluate(() => document.querySelectorAll('.listing-card p-30 mb-20 ng-tns-c30-63 ng-star-inserted'));
+    const cards = await page.evaluate(() => document.querySelectorAll('opportunity-card'));
     console.log(cards);
     await page.waitForNavigation({ timeout: 120000 });
 
