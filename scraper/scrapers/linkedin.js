@@ -104,9 +104,10 @@ export async function main(headless) {
         // sometimes clicking it doesn't show the panel, try/catch to allow it to keep going
         try {
           await page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', { timeout: 1500 });
-          await page.waitForTimeout(2000);
-          const [position, company, location, posted, description] = await getData(page);
-          await convertPostedToDate(posted);
+          await page.waitForTimeout(1500);
+          // eslint-disable-next-line prefer-const
+          let [position, company, location, posted, description] = await getData(page);
+          posted = convertPostedToDate(posted);
           let state = '';
           if (!location.match(/([^,]*)/g)[2]) {
             state = 'United States';
@@ -162,8 +163,9 @@ export async function main(headless) {
       await page.goto(skippedURLs[i]);
       await page.waitForSelector('section.core-rail');
       const skills = 'N/A';
-      const [position, company, location, posted, description] = await getDataTwo(page);
-      await convertPostedToDate(posted);
+      // eslint-disable-next-line prefer-const
+      let [position, company, location, posted, description] = await getDataTwo(page);
+      posted = convertPostedToDate(posted);
       let state = '';
       if (!location.match(/([^,]*)/g)[2]) {
         state = 'United States';
