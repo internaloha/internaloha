@@ -1,7 +1,9 @@
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-extra';
 import fs from 'fs';
 import Logger from 'loglevel';
 import moment from 'moment';
+import pluginStealth from 'puppeteer-extra-plugin-stealth';
+import randomUserAgent from 'random-useragent';
 import { fetchInfo, autoScroll } from './scraper-functions.js';
 
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
@@ -39,9 +41,11 @@ async function main(url) {
   const scraperName = 'Angellist: ';
   const startTime = new Date();
   Logger.error('Starting scraper angellist at', moment().format('LT'));
+  puppeteer.use(pluginStealth());
   const { browser, page } = await startBrowser();
   await page.setViewport({ width: 1366, height: 768 });
-  await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_2) AppleWebKit/601.3.9 (KHTML, like Gecko) Version/9.0.2 Safari/601.3.9');
+  const userAgent = randomUserAgent.getRandom();
+  await page.setUserAgent(userAgent);
   await page.setDefaultNavigationTimeout(0);
   await page.goto(url, { waitUntil: 'load', timeout: 0 });
   await page.waitForSelector('input[id="user_email"]', { timeout: 1000000 });
