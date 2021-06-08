@@ -25,32 +25,30 @@ export async function main(headless) {
     Logger.error('Starting scraper monster at', moment().format('LT'));
     await page.goto('https://www.monster.com/jobs/search/?q=computer-science-intern&intcid=skr_navigation_nhpso_searchMain&tm=30');
     await page.waitForSelector('div[name="job-results-list"]', { timeout: 0 });
-    const elementResult = await page.$('h1[name="jobCount"] strong');
-    const totalResults = await page.evaluate(element => element.textContent, elementResult);
-    let currentResult = await page.$$('div[class="results-card "]');
+    const totalResults = 1000;
+    let currentResult = await page.$$('div[class="results-card"]');
     let j = 2;
     let error = 0;
-    while (currentResult.length < totalResults && error <= 700) {
-      // TODO: Tech Debt: Find a better way to auto scroll on specific div. At the moment, we have empty catch to ensure
-      //  code keeps running.
+    while (currentResult.length < totalResults && error <= 1000) {
       try {
         const oldVal = currentResult;
         currentResult = await page.$$('div[class="results-card "]');
         if (oldVal.length === currentResult.length) {
           error++;
           await currentResult[j].hover();
-          await page.waitForTimeout(2000);
+          await page.waitForTimeout(1000);
         } else {
           await Promise.all([
             await currentResult[j].hover(),
-            await page.waitForTimeout(5000),
+            await page.waitForTimeout(6000),
           ]);
         }
-        j += 2;
+        j++;
       } catch (e5) {
-        // empty try/catch
+        Logger.debug('Reached the end of page');
       }
     }
+    // await reload(page);
     const urls = await page.evaluate(() => {
       const urlFromWeb = document.querySelectorAll('a[class="view-details-link"]');
       const urlList = [...urlFromWeb];
