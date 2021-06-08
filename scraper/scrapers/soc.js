@@ -22,12 +22,16 @@ async function getData(page) {
         });
         return returnValues;
       });
-      results.push(labels[2]);
+      const cleanLocation = labels[2].slice(29, labels[2].lastIndexOf(' '));
+      const city = cleanLocation.slice(0, cleanLocation.indexOf(','));
+      results.push(city);
+      const state = cleanLocation.slice(cleanLocation.indexOf(',') + 2, cleanLocation.lastIndexOf(','));
+      results.push(state);
     } catch (e) {
+      results.push('N/A');
       results.push('N/A');
       console.log(e);
     }
-    results.push('N/A');
     results.push('N/A');
   }
   return Promise.all(results);
