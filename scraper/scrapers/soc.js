@@ -13,17 +13,18 @@ async function getData(page) {
     results.push('N/A');
     results.push(fetchInfo(page, 'p', 'innerText'));
     try {
+      await page.waitForSelector('.pl-6');
       const labels = await page.evaluate(() => {
-        const tags = document.querySelectorAll('div .pl-6');
+        const tags = document.querySelectorAll('.pl-6');
         const returnValues = [];
         tags.forEach((tag) => {
           returnValues.push(tag.innerHTML);
         });
         return returnValues;
       });
-      console.log(labels[2]);
-      results.push(labels);
+      results.push(labels[2]);
     } catch (e) {
+      results.push('N/A');
       console.log(e);
     }
     results.push('N/A');
