@@ -54,13 +54,6 @@ export async function main(headless) {
     await page.click('#login-submit-button');
     await page.waitForNavigation({ timeout: 120000 });
 
-    // Searching with keyword 'computer science'
-    /*
-    await page.click('#mat-input-0');
-    await page.keyboard.type('Computer Science Internship');
-    await page.keyboard.press('Enter');
-    await page.waitForNavigation();
-     */
     await page.waitForTimeout(3000);
     await page.goto('https://app.studentopportunitycenter.com/app/search/');
     await page.waitForSelector('#mat-input-0');
@@ -72,12 +65,31 @@ export async function main(headless) {
     await page.click('.mat-select-value');
     await page.waitForTimeout(3000);
     await page.click('#mat-option-17');
+    await page.click('#soc-custom-loading-screen');
     await page.waitForTimeout(5000);
-    const urls = await page.evaluate(() => {
-      const urlFromWeb = document.querySelectorAll('.pb-12 a');
-      const urlList = [...urlFromWeb];
-      return urlList.map(url => url.href);
-    });
+
+    await page.waitForSelector('.mat-paginator-range-label');
+    const range = await page.evaluate(() => document.querySelector('div[class="mat-paginator-range-label"]').innerHTML);
+    let totalInternships = range.toString();
+    totalInternships = totalInternships.slice(totalInternships.indexOf('f') + 2, totalInternships.length);
+    totalInternships = parseInt(totalInternships, 0);
+    const pages = Math.floor(totalInternships / 20);
+    let urls = [];
+
+    // Iterating all of the pages
+    for (let i = 0; i < pages; i++) {
+      await page.waitForTimeout(5000);
+      const pageUrls = await page.evaluate(() => {
+        const urlFromWeb = document.querySelectorAll('.pb-12 a');
+        const urlList = [...urlFromWeb];
+        return urlList.map(url => url.href);
+      });
+      urls = urls.concat(pageUrls);
+      await page.waitForSelector('.mat-paginator-navigation-next');
+      await page.click('.mat-paginator-navigation-next');
+    }
+
+    console.log(urls);
 
     try {
       for (let j = 0; j < urls.length; j++) {
