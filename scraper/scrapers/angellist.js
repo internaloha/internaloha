@@ -55,7 +55,7 @@ async function main(url) {
   await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
   await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
   await page.keyboard.press('Backspace');
-  await page.keyboard.type('Computer Science');
+  await page.keyboard.type('Engineering');
   await page.keyboard.press('Enter');
   await page.click('div[class="styles_locationWrapper__ScGs8"] > button');
   await page.keyboard.press('Backspace');
