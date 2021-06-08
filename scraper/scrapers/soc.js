@@ -11,7 +11,8 @@ async function getData(page) {
     // get title, company, description, city, state, and zip
     results.push(fetchInfo(page, '.opportunity-heading', 'innerHTML'));
     results.push('N/A');
-    results.push(fetchInfo(page, 'p', 'innerText'));
+    results.push(fetchInfo(page, '.opportunity-details', 'innerText'));
+    // gets location and splits into city and state
     try {
       await page.waitForSelector('.pl-6');
       const labels = await page.evaluate(() => {
@@ -30,7 +31,6 @@ async function getData(page) {
     } catch (e) {
       results.push('N/A');
       results.push('N/A');
-      console.log(e);
     }
     results.push('N/A');
   }
