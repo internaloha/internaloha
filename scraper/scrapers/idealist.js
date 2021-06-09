@@ -16,11 +16,11 @@ async function getElements(page) {
   const elements = [];
   while (hasNext === true) {
     try {
-      await page.waitForTimeout(5000);
+      await page.waitForTimeout(1000);
       getLinks(page).then(links => {
         elements.push(links);
       });
-      await page.waitForTimeout(5000);
+      await page.waitForTimeout(1000);
       await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
       hasNext = false;
@@ -36,7 +36,6 @@ async function getData(page, elements) {
   try {
     for (let i = 0; i < elements.length; i++) {
       for (let j = 0; j < elements[i].length; j++) {
-        Logger.info(elements[i][j]);
         const element = `https://www.idealist.org${elements[i][j]}`;
         await page.goto(element);
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
@@ -44,8 +43,12 @@ async function getData(page, elements) {
         try {
           company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
         } catch (e) {
-          Logger.info('No company found. Setting to N/A');
-          company = 'N/A';
+          try {
+            company = await fetchInfo(page, 'div[class=" Box__BaseBox-sc-1wooqli-0 kMROVK"]', 'innerText');
+          } catch (e1) {
+            Logger.info('No company found. Setting to N/A');
+            company = 'N/A';
+          }
         }
         let location = '';
         let locationArray = {};
@@ -64,7 +67,6 @@ async function getData(page, elements) {
         let time = '';
         try {
           time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 gzGAku"]', 'innerText');
-          Logger.info(time);
           const date = new Date();
           let daysBack = 0;
           // time = scraped posting- "30 days.. 2 hours ago.. etc"
