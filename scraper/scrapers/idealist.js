@@ -5,7 +5,7 @@ import { startBrowser, fetchInfo, writeToJSON } from './scraper-functions.js';
 async function getLinks(page) {
   return page.evaluate(
     () => Array.from(
-      document.querySelectorAll('[data-qa-id=search-result-link]'),
+      document.querySelectorAll('[data-qa-id="search-result-link"]'),
       a => a.getAttribute('href'),
     ),
   );
@@ -16,11 +16,11 @@ async function getElements(page) {
   const elements = [];
   while (hasNext === true) {
     try {
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(5000);
       getLinks(page).then(links => {
         elements.push(links);
       });
-      await page.waitForTimeout(1000);
+      await page.waitForTimeout(5000);
       await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
     } catch (e) {
       hasNext = false;
@@ -36,6 +36,7 @@ async function getData(page, elements) {
   try {
     for (let i = 0; i < elements.length; i++) {
       for (let j = 0; j < elements[i].length; j++) {
+        Logger.info(elements[i][j]);
         const element = `https://www.idealist.org${elements[i][j]}`;
         await page.goto(element);
         const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
@@ -62,13 +63,16 @@ async function getData(page, elements) {
         }
         let time = '';
         try {
-          time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 cWSRKM"]', 'innerText');
+          time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 gzGAku"]', 'innerText');
+          Logger.info(time);
           const date = new Date();
           let daysBack = 0;
           // time = scraped posting- "30 days.. 2 hours ago.. etc"
           if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute')) || (time.includes('minutes'))) {
             // set to 0 because it was posted today
             daysBack = 0;
+          } else if ((time.includes('day')) || (time.includes('days'))) {
+            daysBack = time.match(/\d+/g);
           } else if ((time.includes('week')) || (time.includes('weeks'))) {
             // regex just takes the date number (eg. '2' from 2 weeks ago). Multiply by 7 because 7 days in a week
             daysBack = time.match(/\d+/g) * 7;
@@ -86,7 +90,7 @@ async function getData(page, elements) {
         const lastScraped = new Date();
         // clicking read more description
         await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
-        const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 ctyuXi"]', 'innerHTML');
+        const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 bDfKdG"]', 'innerHTML');
         data.push({
           position: position,
           company: company,
@@ -118,7 +122,7 @@ async function main(headless) {
     await page.goto('https://www.idealist.org/en/');
     await page.waitForSelector('#layout-root > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.lnKqQM > div.idlst-flx.Box__BaseBox-sc-1wooqli-0.dCQmbn.BaseLayout__PageContent-sc-10xtgtb-2.heQjSt > div.Box__BaseBox-sc-1wooqli-0.bsSECh > div > div.Box__BaseBox-sc-1wooqli-0.hpEILX > div.Box__BaseBox-sc-1wooqli-0.datyjK > div > div > div.idlst-flx.idlst-lgncntr.Box__BaseBox-sc-1wooqli-0.cDmdoN > div > form > div.Box__BaseBox-sc-1wooqli-0.ejycyy > div > input');
     // Selecting internships
-    await page.click('div[class="css-bg1rzq-control react-select__control"]');
+    await page.click('div[class="react-select__control css-yk16xz-control"]');
     await page.click('div[id="react-select-2-option-2"]');
     // inputting search query
     await page.type('input[data-qa-id="search-input"]', 'computer science intern');
