@@ -28,9 +28,9 @@ export async function main(headless) {
     await page.setDefaultTimeout(60000);
     await page.goto('https://80000hours.org/job-board/ai-safety-policy/?role-type=internship');
 
-    await page.waitForSelector('#single-job-list');
+    await page.waitForSelector('.panel');
     const urls = await page.evaluate(() => {
-      const urlFromWeb = document.querySelectorAll('#single-job-list a');
+      const urlFromWeb = document.querySelectorAll('.panel a');
       const urlList = [...urlFromWeb];
       return urlList.map(url => url.href);
     });
