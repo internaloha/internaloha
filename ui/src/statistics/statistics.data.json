@@ -152,6 +152,25 @@
         "description": 0
     },
     {
+        "site": "hours",
+        "lastScraped": "N/A",
+        "position": 0,
+        "company": 0,
+        "contact": 0,
+        "location": 0,
+        "posted": 0,
+        "due": 0,
+        "start": 0,
+        "end": 0,
+        "compensation": 0,
+        "qualifications": 0,
+        "skills": 0,
+        "remote": 0,
+        "index": 0,
+        "url": 0,
+        "description": 0
+    },
+    {
         "site": "idealist",
         "lastScraped": "2021-05-03T04:46:07.973Z",
         "position": 8,
