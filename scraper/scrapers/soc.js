@@ -5,6 +5,7 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
 
+// Used when scraping individual pages
 async function getData(page) {
   const results = [];
   for (let i = 0; i < 6; i++) {
@@ -54,6 +55,7 @@ export async function main(headless) {
     await page.click('#login-submit-button');
     await page.waitForNavigation({ timeout: 120000 });
 
+    // Searching with keyphrase 'Computer Science Internship'
     await page.waitForTimeout(3000);
     await page.goto('https://app.studentopportunitycenter.com/app/search/');
     await page.waitForSelector('#mat-input-0');
@@ -61,6 +63,7 @@ export async function main(headless) {
     await page.keyboard.type('Computer Science Internship');
     await page.keyboard.press('Enter');
 
+    // Selecting the 'Internship' filter
     await page.waitForTimeout(3000);
     await page.click('.mat-select-value');
     await page.waitForTimeout(3000);
@@ -68,15 +71,16 @@ export async function main(headless) {
     await page.click('#soc-custom-loading-screen');
     await page.waitForTimeout(5000);
 
+    // Getting total number of internships
     await page.waitForSelector('.mat-paginator-range-label');
     const range = await page.evaluate(() => document.querySelector('div[class="mat-paginator-range-label"]').innerHTML);
     let totalInternships = range.toString();
     totalInternships = totalInternships.slice(totalInternships.indexOf('f') + 2, totalInternships.length);
     totalInternships = parseInt(totalInternships, 0);
     const pages = Math.floor(totalInternships / 20);
-    let urls = [];
 
-    // Iterating all of the pages
+    // Grabbing all of the URLS
+    let urls = [];
     for (let i = 0; i < pages; i++) {
       await page.waitForTimeout(5000);
       const pageUrls = await page.evaluate(() => {
@@ -89,8 +93,7 @@ export async function main(headless) {
       await page.click('.mat-paginator-navigation-next');
     }
 
-    console.log(urls);
-
+    // Iterating through all of the pages
     try {
       for (let j = 0; j < urls.length; j++) {
         await page.goto(urls[j]);
@@ -104,15 +107,12 @@ export async function main(headless) {
           lastScraped: lastScraped,
           description: description,
         });
-        console.log(data[j]);
       }
     } catch (err1) {
       Logger.error(scraperName, err1.message);
     }
 
-    console.log(data);
-
-    // await writeToJSON(data, 'soc');
+    await writeToJSON(data, 'soc');
     await browser.close();
   } catch (err2) {
     Logger.error(scraperName, err2.message);
