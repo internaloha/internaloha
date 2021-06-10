@@ -11,11 +11,105 @@ async function getLinks(page) {
   );
 }
 
+async function getElements(page) {
+  let hasNext = true;
+  const elements = [];
+  while (hasNext === true) {
+    try {
+      await page.waitForTimeout(1000);
+      getLinks(page).then(links => {
+        elements.push(links);
+      });
+      await page.waitForTimeout(1000);
+      await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
+    } catch (e) {
+      hasNext = false;
+      Logger.trace('Reached the end of pages!');
+    }
+  }
+  return elements;
+}
+
+async function getData(page, elements) {
+  const data = [];
+  try {
+    for (let i = 0; i < elements.length; i++) {
+      for (let j = 0; j < elements[i].length; j++) {
+        const element = `https://www.idealist.org${elements[i][j]}`;
+        await page.goto(element);
+        const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
+        let company = '';
+        try {
+          company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
+        } catch (e) {
+          Logger.info('No company found. Setting to N/A');
+          company = 'N/A';
+        }
+        let location = '';
+        let locationArray = {};
+        try {
+          location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"] > div[class=" Box__BaseBox-sc-1wooqli-0 kMROVK"]', 'outerText');
+          const loc = location.split(/\n/);
+          const where = loc[2].split(', ');
+          const city = where[0].trim();
+          const state = where[1].trim();
+          locationArray = { city: city, state: state };
+        } catch (e) {
+          Logger.debug(e.message);
+          Logger.debug('No location found');
+          location = 'N/A';
+        }
+        let time = '';
+        try {
+          time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 gzGAku"]', 'innerText');
+          const date = new Date();
+          let daysBack = 0;
+          // time = scraped posting- "30 days.. 2 hours ago.. etc"
+          if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute')) || (time.includes('minutes'))) {
+            // set to 0 because it was posted today
+            daysBack = 0;
+          } else if ((time.includes('day')) || (time.includes('days'))) {
+            daysBack = time.match(/\d+/g);
+          } else if ((time.includes('week')) || (time.includes('weeks'))) {
+            // regex just takes the date number (eg. '2' from 2 weeks ago). Multiply by 7 because 7 days in a week
+            daysBack = time.match(/\d+/g) * 7;
+          } else {
+            // month tag (varies but i just used 30)
+            daysBack = time.match(/\d+/g) * 30;
+          }
+// sets the date back how many days back (eg. 30 days back
+          date.setDate(date.getDate() - daysBack);
+          time = date;
+        } catch (e) {
+          Logger.warn('No startDate found. Setting to N/A');
+          time = 'N/A';
+        }
+        const lastScraped = new Date();
+        // clicking read more description
+        await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
+        const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 bDfKdG"]', 'innerHTML');
+        data.push({
+          position: position,
+          company: company,
+          location: locationArray,
+          posted: time,
+          url: element,
+          lastScraped: lastScraped,
+          description: description,
+        });
+      }
+    }
+  } catch (e) {
+    Logger.warn('Idealist Error:', e.message);
+  }
+  return data;
+}
+
 async function main(headless) {
   // eslint-disable-next-line no-unused-vars
   let browser;
   let page;
-  const data = [];
+  let data = [];
   const startTime = new Date();
   const scraperName = 'Idealist: ';
   try {
@@ -32,91 +126,8 @@ async function main(headless) {
     await page.waitForSelector('button[data-qa-id="search-button"]');
     await page.click('button[data-qa-id="search-button"]');
     await page.waitForSelector('#results > div > div > div.Box__BaseBox-sc-1wooqli-0.iuHlOF > div:nth-child(2) > div > a');
-    let hasNext = true;
-    const elements = [];
-    while (hasNext === true) {
-      try {
-        await page.waitForTimeout(1000);
-        getLinks(page).then(links => {
-          elements.push(links);
-        });
-        await page.waitForTimeout(1000);
-        await page.click('button[class="Button__StyledButton-sc-1avp0bd-0 ggDAbQ Pagination__ArrowLink-nuwudv-2 eJsmUe"]:last-child');
-      } catch (e) {
-        hasNext = false;
-        Logger.trace('Reached the end of pages!');
-      }
-    }
-    try {
-      for (let i = 0; i < elements.length; i++) {
-        for (let j = 0; j < elements[i].length; j++) {
-          const element = `https://www.idealist.org${elements[i][j]}`;
-          await page.goto(element);
-          const position = await fetchInfo(page, '[data-qa-id=listing-name]', 'innerText');
-          let company = '';
-          try {
-            company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
-          } catch (e) {
-              Logger.info('No company found. Setting to N/A');
-              company = 'N/A';
-          }
-          let location = '';
-          let locationArray = {};
-          try {
-            location = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 dSMMlM"] > div[class=" Box__BaseBox-sc-1wooqli-0 kMROVK"]', 'outerText');
-            const loc = location.split(/\n/);
-            const where = loc[2].split(', ');
-            const city = where[0].trim();
-            const state = where[1].trim();
-            locationArray = { city: city, state: state };
-          } catch (e) {
-            Logger.debug(e.message);
-            Logger.debug('No location found');
-            location = 'N/A';
-          }
-          let time = '';
-          try {
-            time = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 gzGAku"]', 'innerText');
-            const date = new Date();
-            let daysBack = 0;
-            // time = scraped posting- "30 days.. 2 hours ago.. etc"
-            if (time.includes('hours') || (time.includes('hour')) || (time.includes('minute')) || (time.includes('minutes'))) {
-              // set to 0 because it was posted today
-              daysBack = 0;
-            } else if ((time.includes('day')) || (time.includes('days'))) {
-              daysBack = time.match(/\d+/g);
-            } else if ((time.includes('week')) || (time.includes('weeks'))) {
-              // regex just takes the date number (eg. '2' from 2 weeks ago). Multiply by 7 because 7 days in a week
-              daysBack = time.match(/\d+/g) * 7;
-            } else {
-              // month tag (varies but i just used 30)
-              daysBack = time.match(/\d+/g) * 30;
-            }
-// sets the date back how many days back (eg. 30 days back
-            date.setDate(date.getDate() - daysBack);
-            time = date;
-          } catch (e) {
-            Logger.warn('No startDate found. Setting to N/A');
-            time = 'N/A';
-          }
-          const lastScraped = new Date();
-          // clicking read more description
-          await page.click('div[class=" Box__BaseBox-sc-1wooqli-0 gHIryv"]');
-          const description = await fetchInfo(page, 'div[class="Text-sc-1wv914u-0 kXDBTb idlst-rchtxt Text__StyledRichText-sc-1wv914u-1 bDfKdG"]', 'innerHTML');
-          data.push({
-            position: position,
-            company: company,
-            location: locationArray,
-            posted: time,
-            url: element,
-            lastScraped: lastScraped,
-            description: description,
-          });
-        }
-      }
-    } catch (e) {
-      Logger.warn('Idealist Error:', e.message);
-    }
+    const elements = await getElements(page);
+    data = await getData(page, elements);
     await writeToJSON(data, 'idealist');
     await browser.close();
   } catch (e) {
