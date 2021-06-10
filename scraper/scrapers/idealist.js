@@ -57,12 +57,8 @@ async function main(headless) {
           try {
             company = await fetchInfo(page, '[data-qa-id=org-link]', 'innerText');
           } catch (e) {
-            try {
-              company = await fetchInfo(page, 'div[class=" Box__BaseBox-sc-1wooqli-0 kMROVK"]', 'innerText');
-            } catch (e1) {
               Logger.info('No company found. Setting to N/A');
               company = 'N/A';
-            }
           }
           let location = '';
           let locationArray = {};
