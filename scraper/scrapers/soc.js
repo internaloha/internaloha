@@ -33,7 +33,6 @@ async function getData(page) {
       results.push('N/A');
       results.push('N/A');
     }
-    results.push('N/A');
   }
   return Promise.all(results);
 }
@@ -98,12 +97,12 @@ export async function main(headless) {
       for (let j = 0; j < urls.length; j++) {
         await page.goto(urls[j]);
         const lastScraped = new Date();
-        const [position, company, description, city, state, zip] = await getData(page);
+        const [position, company, description, city, state] = await getData(page);
         data.push({
           url: urls[j],
           position: position,
           company: company.trim(),
-          location: { city: city, state: state, zip: zip },
+          location: { city: city, state: state },
           lastScraped: lastScraped,
           description: description,
         });
