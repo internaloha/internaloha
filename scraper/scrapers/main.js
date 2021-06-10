@@ -127,6 +127,7 @@ async function getAllData(headless = true) {
   results.push(glassdoor(headless));
   results.push(nsf_reu(headless));
   results.push(stackoverflow(headless));
+  results.push(hours(headless));
   return Promise.all(results);
 }
 

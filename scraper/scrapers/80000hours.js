@@ -12,7 +12,6 @@ async function getData(page, id) {
     results.push(fetchInfo(page, `#${id} span`, 'innerText'));
     results.push(fetchInfo(page, `#${id} div[class="panel-vacancy__location"]`, 'innerText'));
     results.push('N/A');
-    results.push('N/A');
   }
   return Promise.all(results);
 }
@@ -43,12 +42,12 @@ export async function main(headless) {
         const divID = urls[j].replace('https://80000hours.org/job-board/?role=', '');
         await page.goto(urls[j]);
         const lastScraped = new Date();
-        const [position, company, description, posted, city, state, zip] = await getData(page, divID);
+        const [position, company, description, posted, city, state] = await getData(page, divID);
         data.push({
           url: urls[j],
           position: position,
           company: company.trim(),
-          location: { city: city, state: state, zip: zip },
+          location: { city: city, state: state },
           posted: posted,
           lastScraped: lastScraped,
           description: description,
