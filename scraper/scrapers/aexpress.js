@@ -16,13 +16,15 @@ async function getDescription(page) {
 async function getData(page) {
   const data = [];
   try {
-    await page.waitForTimeout(1000);
+    // Scrapes internships one by one (do not scroll during this process or the scraper will stop)
+    await page.waitForTimeout(5000);
     const totalJobs = await fetchInfo(page, 'div[class="personalization-bar personalization-bar-pre-upload"] > div > span > span > strong', 'innerText');
     const numberOfJobs = await totalJobs.match(/\d+/g);
     Logger.info(totalJobs);
     for (let i = 0; i < numberOfJobs[0]; i++) {
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(1000);
       const cardName = `div[data-test-id="position-card-${i}"]`;
+      await page.waitForSelector(`div[data-test-id="position-card-${i}"]`);
       await page.click(cardName);
       const city = 'N/A';
       const state = 'Error';
@@ -42,7 +44,7 @@ async function getData(page) {
       });
     }
   } catch (e) {
-    Logger.trace('Reached the end of list of jobs!');
+    Logger.error(e);
   }
   return data;
 }
@@ -50,7 +52,7 @@ async function getData(page) {
 async function setSearchFilters(page) {
   // Navigate to internship page
   await page.waitForSelector('input[id="main-search-box"]');
-  await page.type('input[id="main-search-box"]', 'internship');
+  await page.type('input[id="main-search-box"]', 'Internships');
   await page.waitForSelector('input[aria-label="Filter position by Location"]');
   await page.type('input[aria-label="Filter position by Location"]', 'USA');
   await page.keyboard.press('Enter');
