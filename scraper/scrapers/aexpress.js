@@ -21,6 +21,7 @@ async function getData(page) {
     const numberOfJobs = await totalJobs.match(/\d+/g);
     Logger.info(totalJobs);
     for (let i = 0; i < numberOfJobs[0]; i++) {
+      await page.waitForTimeout(500);
       const cardName = `div[data-test-id="position-card-${i}"]`;
       await page.click(cardName);
       const city = 'N/A';
@@ -49,7 +50,7 @@ async function getData(page) {
 async function setSearchFilters(page) {
   // Navigate to internship page
   await page.waitForSelector('input[id="main-search-box"]');
-  await page.type('input[id="main-search-box"]', 'learn');
+  await page.type('input[id="main-search-box"]', 'internship');
   await page.waitForSelector('input[aria-label="Filter position by Location"]');
   await page.type('input[aria-label="Filter position by Location"]', 'USA');
   await page.keyboard.press('Enter');
