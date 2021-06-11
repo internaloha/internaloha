@@ -67,7 +67,7 @@ async function main(headless) {
   try {
     Logger.error('Starting scraper aexpress at', moment().format('LT'));
     [browser, page] = await startBrowser(headless);
-    await page.goto('https://aexp.eightfold.ai/careers?intlink=us-amex-career-en-us-home-findalljobs');
+    await page.goto('https://aexp.eightfold.ai/careers?location=United%20States&query=Campus');
     await setSearchFilters(page);
     data = await getData(page);
     await writeToJSON(data, 'aexpress');
