@@ -46,7 +46,7 @@ async function main(headless) {
     Logger.info('Filtering by internships...');
     await page.waitForSelector('div[id="filter_jobType"]');
     await page.click('div[id="filter_jobType"]');
-    await page.waitForSelector('div[id="filter_jobType"]');
+    await page.waitForSelector('li[value="internship"]');
     await page.click('li[value="internship"]');
     await page.waitForTimeout(3000);
     Logger.info('Selecting last 30 days');
