@@ -4,12 +4,13 @@ import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
-  for (let i = 0; i < 3; i++) {
-    results.push(fetchInfo(page, 'div[class="full-jobview-container"] h1[name="job_title"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="full-jobview-container"] div[name="job_company_name"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="full-jobview-container"] p[id="jobPostedValue"]', 'innerText'));
+  for (let i = 0; i < 5; i++) {
+    // position, company, posted, location, description
+    results.push(fetchInfo(page, 'h1[name="job_title"]', 'innerText'));
+    results.push(fetchInfo(page, 'div[name="job_company_name"]', 'innerText'));
+    results.push(fetchInfo(page, 'p[id="jobPostedValue"]', 'innerText'));
     results.push(fetchInfo(page, 'div[name="job_company_location"]', 'innerText'));
-    results.push(fetchInfo(page, 'div[class="value-description"]', 'innerHTML'));
+    results.push(fetchInfo(page, 'div[name="sanitizedHtml"]', 'innerHTML'));
   }
   return Promise.all(results);
 }
@@ -62,7 +63,6 @@ export async function main(headless) {
         await page.goto(urls[i], { waitUntil: 'domcontentloaded' });
         const date = new Date();
         const lastScraped = new Date();
-        await page.waitForSelector('div[class="full-jobview-container"]');
         await page.waitForTimeout(500);
         const [position, company, posted, location, description] = await getData(page);
         let daysToGoBack = 0;
@@ -91,7 +91,6 @@ export async function main(headless) {
           lastScraped: lastScraped,
           description: description.trim(),
         });
-        await page.waitForSelector('div[class="full-jobview-container"]');
         totalJobs++;
       } catch (err) {
         Logger.debug(scraperName, err.message);
