@@ -2,6 +2,7 @@ import puppeteer from 'puppeteer-extra';
 import fs from 'fs';
 import Logger from 'loglevel';
 import moment from 'moment';
+import _ from 'lodash';
 import pluginStealth from 'puppeteer-extra-plugin-stealth';
 import randomUserAgent from 'random-useragent';
 import { fetchInfo, autoScroll } from './scraper-functions.js';
@@ -71,16 +72,17 @@ async function main(url) {
     await page.click('label[for="form-input--jobTypes--internship"]');
   }
   await page.click('div[class="styles_footer__3DmVI"] > button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
-  await autoScroll(page);
-  await autoScroll(page);
-  await autoScroll(page);
+  for (let i = 0; i < 3; i++) {
+    await autoScroll(page);
+  }
   // gets elements for length for loop
-  const elements = await page.evaluate(
+  let elements = await page.evaluate(
       () => Array.from(
           document.querySelectorAll('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]'),
           a => a.getAttribute('href'),
       ),
   );
+  elements = _.uniq(elements);
   Logger.info(elements.length);
   elements.forEach(element => {
     Logger.info(element);
