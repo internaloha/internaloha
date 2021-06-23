@@ -83,15 +83,28 @@ async function main(headless) {
     const urls = [];
     let hasNext = true;
     while (hasNext === true) {
-      await page.waitForSelector('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a');
-      const url = await page.evaluate(
-        () => Array.from(
-          document.querySelectorAll('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a'),
-          a => a.getAttribute('href'),
-        ),
-      );
-      totalJobs += url.length;
-      urls.push(url);
+      try {
+        await page.waitForSelector('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a');
+        const url = await page.evaluate(
+            () => Array.from(
+                document.querySelectorAll('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a'),
+                a => a.getAttribute('href'),
+            ),
+        );
+        totalJobs += url.length;
+        urls.push(url);
+      } catch {
+        await page.waitForSelector('.tapItem.fs-unmask.result');
+        const url = await page.evaluate(
+            () => Array.from(
+                document.querySelectorAll('.tapItem.fs-unmask.result'),
+                a => a.getAttribute('href'),
+            ),
+        );
+        totalJobs += url.length;
+        urls.push(url);
+      }
+
       // keep clicking next until it reaches end
       try {
         await page.waitForTimeout(1000);
