@@ -234,6 +234,24 @@
             "index": 66,
             "url": 66,
             "description": 66
+        },
+        {
+            "lastScraped": "N/A",
+            "position": 0,
+            "company": 0,
+            "contact": 0,
+            "location": 0,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 0,
+            "remote": 0,
+            "index": 0,
+            "url": 0,
+            "description": 0
         }
     ],
     "aexpress": [
@@ -452,6 +470,24 @@
             "index": 2,
             "url": 2,
             "description": 2
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:28.219Z",
+            "position": 1,
+            "company": 1,
+            "contact": 1,
+            "location": 1,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 1,
+            "remote": 0,
+            "index": 1,
+            "url": 1,
+            "description": 1
         }
     ],
     "angellist": [
@@ -706,6 +742,42 @@
             "index": 906,
             "url": 906,
             "description": 906
+        },
+        {
+            "lastScraped": "2021-06-24T18:50:17.430Z",
+            "position": 906,
+            "company": 906,
+            "contact": 42,
+            "location": 906,
+            "posted": 0,
+            "due": 6,
+            "start": 7,
+            "end": 0,
+            "compensation": 184,
+            "qualifications": 66,
+            "skills": 848,
+            "remote": 760,
+            "index": 906,
+            "url": 906,
+            "description": 906
+        },
+        {
+            "lastScraped": "2021-06-28T20:02:50.742Z",
+            "position": 904,
+            "company": 904,
+            "contact": 42,
+            "location": 904,
+            "posted": 0,
+            "due": 6,
+            "start": 9,
+            "end": 0,
+            "compensation": 184,
+            "qualifications": 67,
+            "skills": 844,
+            "remote": 755,
+            "index": 904,
+            "url": 904,
+            "description": 904
         }
     ],
     "apple": [
@@ -942,6 +1014,24 @@
             "index": 20,
             "url": 20,
             "description": 20
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:42.176Z",
+            "position": 20,
+            "company": 20,
+            "contact": 1,
+            "location": 20,
+            "posted": 20,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 15,
+            "remote": 0,
+            "index": 20,
+            "url": 20,
+            "description": 20
         }
     ],
     "cisco": [
@@ -1160,9 +1250,45 @@
             "index": 6,
             "url": 6,
             "description": 6
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:39.175Z",
+            "position": 4,
+            "company": 4,
+            "contact": 0,
+            "location": 4,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 4,
+            "qualifications": 2,
+            "skills": 4,
+            "remote": 0,
+            "index": 4,
+            "url": 4,
+            "description": 4
         }
     ],
     "coolworks": [
+        {
+            "lastScraped": "2020-12-07T03:45:08.464Z",
+            "position": 6,
+            "company": 6,
+            "contact": 6,
+            "location": 6,
+            "posted": 6,
+            "due": 1,
+            "start": 1,
+            "end": 0,
+            "compensation": 2,
+            "qualifications": 1,
+            "skills": 6,
+            "remote": 0,
+            "index": 6,
+            "url": 6,
+            "description": 6
+        },
         {
             "lastScraped": "2020-12-07T03:45:08.464Z",
             "position": 6,
@@ -1542,6 +1668,24 @@
             "index": 900,
             "url": 900,
             "description": 900
+        },
+        {
+            "lastScraped": "2021-06-24T19:30:48.058Z",
+            "position": 900,
+            "company": 900,
+            "contact": 67,
+            "location": 900,
+            "posted": 900,
+            "due": 16,
+            "start": 28,
+            "end": 0,
+            "compensation": 296,
+            "qualifications": 364,
+            "skills": 896,
+            "remote": 227,
+            "index": 900,
+            "url": 900,
+            "description": 900
         }
     ],
     "hawaiislack": [
@@ -1562,6 +1706,24 @@
             "index": 1,
             "url": 0,
             "description": 1
+        },
+        {
+            "lastScraped": "N/A",
+            "position": 0,
+            "company": 0,
+            "contact": 0,
+            "location": 0,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 0,
+            "remote": 0,
+            "index": 0,
+            "url": 0,
+            "description": 0
         },
         {
             "lastScraped": "N/A",
@@ -1798,6 +1960,24 @@
             "index": 6,
             "url": 6,
             "description": 6
+        },
+        {
+            "lastScraped": "N/A",
+            "position": 0,
+            "company": 0,
+            "contact": 0,
+            "location": 0,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 0,
+            "remote": 0,
+            "index": 0,
+            "url": 0,
+            "description": 0
         }
     ],
     "idealist": [
@@ -2016,9 +2196,45 @@
             "index": 14,
             "url": 14,
             "description": 14
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:36.029Z",
+            "position": 13,
+            "company": 13,
+            "contact": 0,
+            "location": 13,
+            "posted": 13,
+            "due": 6,
+            "start": 2,
+            "end": 0,
+            "compensation": 6,
+            "qualifications": 5,
+            "skills": 13,
+            "remote": 9,
+            "index": 13,
+            "url": 13,
+            "description": 13
         }
     ],
     "iHireTech": [
+        {
+            "lastScraped": "N/A",
+            "position": 0,
+            "company": 0,
+            "contact": 0,
+            "location": 0,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 0,
+            "remote": 0,
+            "index": 0,
+            "url": 0,
+            "description": 0
+        },
         {
             "lastScraped": "N/A",
             "position": 0,
@@ -2380,6 +2596,24 @@
             "index": 148,
             "url": 148,
             "description": 148
+        },
+        {
+            "lastScraped": "2021-06-28T18:13:29.466Z",
+            "position": 135,
+            "company": 135,
+            "contact": 13,
+            "location": 135,
+            "posted": 132,
+            "due": 5,
+            "start": 12,
+            "end": 0,
+            "compensation": 62,
+            "qualifications": 62,
+            "skills": 135,
+            "remote": 64,
+            "index": 135,
+            "url": 135,
+            "description": 135
         }
     ],
     "internships": [
@@ -2472,6 +2706,24 @@
             "index": 32,
             "url": 32,
             "description": 32
+        },
+        {
+            "lastScraped": "2021-06-07T00:05:21.434Z",
+            "position": 41,
+            "company": 41,
+            "contact": 0,
+            "location": 41,
+            "posted": 41,
+            "due": 0,
+            "start": 8,
+            "end": 0,
+            "compensation": 8,
+            "qualifications": 1,
+            "skills": 41,
+            "remote": 23,
+            "index": 41,
+            "url": 41,
+            "description": 41
         },
         {
             "lastScraped": "2021-06-07T00:05:21.434Z",
@@ -2726,9 +2978,45 @@
             "index": 68,
             "url": 68,
             "description": 68
+        },
+        {
+            "lastScraped": "2021-06-28T18:10:48.433Z",
+            "position": 64,
+            "company": 64,
+            "contact": 3,
+            "location": 64,
+            "posted": 64,
+            "due": 0,
+            "start": 2,
+            "end": 0,
+            "compensation": 12,
+            "qualifications": 12,
+            "skills": 63,
+            "remote": 18,
+            "index": 64,
+            "url": 64,
+            "description": 64
         }
     ],
     "manualInput": [
+        {
+            "lastScraped": "",
+            "position": 1,
+            "company": 1,
+            "contact": 0,
+            "location": 1,
+            "posted": 0,
+            "due": 1,
+            "start": 1,
+            "end": 0,
+            "compensation": 1,
+            "qualifications": 0,
+            "skills": 1,
+            "remote": 0,
+            "index": 1,
+            "url": 1,
+            "description": 1
+        },
         {
             "lastScraped": "",
             "position": 1,
@@ -3090,6 +3378,24 @@
             "index": 170,
             "url": 170,
             "description": 170
+        },
+        {
+            "lastScraped": "2021-06-28T18:12:55.600Z",
+            "position": 170,
+            "company": 170,
+            "contact": 43,
+            "location": 170,
+            "posted": 170,
+            "due": 5,
+            "start": 24,
+            "end": 0,
+            "compensation": 63,
+            "qualifications": 87,
+            "skills": 170,
+            "remote": 23,
+            "index": 170,
+            "url": 170,
+            "description": 170
         }
     ],
     "nsf-reu": [
@@ -3293,6 +3599,24 @@
         },
         {
             "lastScraped": "2021-06-24T10:55:35.000Z",
+            "position": 97,
+            "company": 97,
+            "contact": 0,
+            "location": 97,
+            "posted": 0,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 0,
+            "skills": 85,
+            "remote": 1,
+            "index": 97,
+            "url": 97,
+            "description": 97
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:36.760Z",
             "position": 97,
             "company": 97,
             "contact": 0,
@@ -3526,6 +3850,24 @@
             "index": 790,
             "url": 790,
             "description": 790
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:32.405Z",
+            "position": 604,
+            "company": 604,
+            "contact": 72,
+            "location": 604,
+            "posted": 604,
+            "due": 45,
+            "start": 72,
+            "end": 0,
+            "compensation": 229,
+            "qualifications": 245,
+            "skills": 604,
+            "remote": 196,
+            "index": 604,
+            "url": 604,
+            "description": 604
         }
     ],
     "soc": [
@@ -3600,6 +3942,96 @@
             "index": 1283,
             "url": 1283,
             "description": 1283
+        },
+        {
+            "lastScraped": "2021-06-24T20:44:35.781Z",
+            "position": 1460,
+            "company": 1460,
+            "contact": 178,
+            "location": 1460,
+            "posted": 0,
+            "due": 48,
+            "start": 74,
+            "end": 0,
+            "compensation": 387,
+            "qualifications": 614,
+            "skills": 1457,
+            "remote": 388,
+            "index": 1460,
+            "url": 1460,
+            "description": 1460
+        },
+        {
+            "lastScraped": "2021-06-24T20:44:35.781Z",
+            "position": 1460,
+            "company": 1460,
+            "contact": 178,
+            "location": 1460,
+            "posted": 0,
+            "due": 48,
+            "start": 74,
+            "end": 0,
+            "compensation": 387,
+            "qualifications": 614,
+            "skills": 1457,
+            "remote": 388,
+            "index": 1460,
+            "url": 1460,
+            "description": 1460
+        },
+        {
+            "lastScraped": "2021-06-24T20:44:35.781Z",
+            "position": 1460,
+            "company": 1460,
+            "contact": 178,
+            "location": 1460,
+            "posted": 0,
+            "due": 48,
+            "start": 74,
+            "end": 0,
+            "compensation": 387,
+            "qualifications": 614,
+            "skills": 1457,
+            "remote": 388,
+            "index": 1460,
+            "url": 1460,
+            "description": 1460
+        },
+        {
+            "lastScraped": "2021-06-24T20:44:35.781Z",
+            "position": 1460,
+            "company": 1460,
+            "contact": 178,
+            "location": 1460,
+            "posted": 0,
+            "due": 48,
+            "start": 74,
+            "end": 0,
+            "compensation": 387,
+            "qualifications": 614,
+            "skills": 1457,
+            "remote": 388,
+            "index": 1460,
+            "url": 1460,
+            "description": 1460
+        },
+        {
+            "lastScraped": "2021-06-28T20:46:02.908Z",
+            "position": 1340,
+            "company": 1340,
+            "contact": 166,
+            "location": 1340,
+            "posted": 0,
+            "due": 49,
+            "start": 70,
+            "end": 0,
+            "compensation": 352,
+            "qualifications": 553,
+            "skills": 1337,
+            "remote": 356,
+            "index": 1340,
+            "url": 1340,
+            "description": 1340
         }
     ],
     "stackoverflow": [
@@ -3818,9 +4250,45 @@
             "index": 10,
             "url": 10,
             "description": 10
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:19.878Z",
+            "position": 13,
+            "company": 13,
+            "contact": 1,
+            "location": 13,
+            "posted": 13,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 3,
+            "skills": 13,
+            "remote": 2,
+            "index": 13,
+            "url": 13,
+            "description": 13
         }
     ],
     "youtern": [
+        {
+            "lastScraped": "2020-12-19T09:08:15.932Z",
+            "position": 1,
+            "company": 1,
+            "contact": 0,
+            "location": 1,
+            "posted": 1,
+            "due": 1,
+            "start": 0,
+            "end": 0,
+            "compensation": 1,
+            "qualifications": 1,
+            "skills": 1,
+            "remote": 0,
+            "index": 1,
+            "url": 1,
+            "description": 1
+        },
         {
             "lastScraped": "2020-12-19T09:08:15.932Z",
             "position": 1,
@@ -4200,6 +4668,24 @@
             "index": 1,
             "url": 1,
             "description": 1
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:34.480Z",
+            "position": 14,
+            "company": 14,
+            "contact": 0,
+            "location": 14,
+            "posted": 13,
+            "due": 0,
+            "start": 1,
+            "end": 0,
+            "compensation": 6,
+            "qualifications": 7,
+            "skills": 14,
+            "remote": 2,
+            "index": 14,
+            "url": 14,
+            "description": 14
         }
     ],
     "Total": [
@@ -4346,6 +4832,24 @@
             "index": 4492,
             "url": 4492,
             "description": 4492
+        },
+        {
+            "lastScraped": "2021-06-28T18:08:28.219Z",
+            "position": 4450,
+            "company": 4450,
+            "contact": 427,
+            "location": 4450,
+            "posted": 1977,
+            "due": 134,
+            "start": 232,
+            "end": 0,
+            "compensation": 1261,
+            "qualifications": 1470,
+            "skills": 4367,
+            "remote": 1713,
+            "index": 4450,
+            "url": 4450,
+            "description": 4450
         }
     ]
 }
