@@ -44,10 +44,13 @@ async function main(headless) {
     // filter by internship tag
     await page.goto('https://www.glassdoor.com/Job/computer-science-intern-jobs-SRCH_KO0,23.htm');
     Logger.info('Filtering by internships...');
+    await page.waitForTimeout(3000);
     await page.waitForSelector('div[id="filter_jobType"]');
     await page.click('div[id="filter_jobType"]');
+    await page.waitForTimeout(3000);
     await page.waitForSelector('li[value="internship"]');
     await page.click('li[value="internship"]');
+    Logger.info('Internship tag added');
     await page.waitForTimeout(3000);
     Logger.info('Selecting last 30 days');
     await page.waitForSelector('div[id="filter_fromAge"]');
