@@ -1,6 +1,9 @@
+import puppeteer from 'puppeteer-extra';
+import pluginStealth from 'puppeteer-extra-plugin-stealth';
+import randomUserAgent from 'random-useragent';
 import Logger from 'loglevel';
 import moment from 'moment';
-import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import { fetchInfo, writeToJSON } from './scraper-functions.js';
 
 async function getData(page) {
   const results = [];
@@ -16,18 +19,27 @@ async function getData(page) {
   return Promise.all(results);
 }
 
-export async function main(headless) {
-  let browser;
-  let page;
+async function startBrowser() {
+  const browser = await puppeteer.launch({ headless: false });
+  const page = await browser.newPage();
+  return { browser, page };
+}
+
+export async function main() {
   const data = [];
   const scraperName = 'Acm: ';
   const startTime = new Date();
   try {
     Logger.error('Starting scraper acm at', moment().format('LT'));
-    [browser, page] = await startBrowser(headless);
-    await page.setDefaultTimeout(60000);
+    puppeteer.use(pluginStealth());
+    const { browser, page } = await startBrowser();
+    await page.setViewport({ width: 1366, height: 768 });
+    const userAgent = randomUserAgent.getRandom();
+    await page.setUserAgent(userAgent);
+    await page.setDefaultTimeout(0);
     await page.goto('https://jobs.acm.org/jobs/results/title/Internship/United+States?normalizedCountry=US&radius=5&sort=scorelocation%20desc');
     await page.waitForNavigation;
+    await page.waitForSelector('ul[class="pagination"] li');
     const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
     // for loop allows for multiple iterations of pages -- start at 2 because initial landing is page 1
     for (let i = 2; i <= totalPage; i++) {
@@ -62,7 +74,6 @@ export async function main(headless) {
     await browser.close();
   } catch (err2) {
     Logger.error(scraperName, err2.message);
-    await browser.close();
   }
   Logger.error(`Elapsed time for acm: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }

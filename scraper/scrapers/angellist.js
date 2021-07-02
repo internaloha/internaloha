@@ -49,7 +49,7 @@ async function main(url) {
   await page.setUserAgent(userAgent);
   await page.setDefaultNavigationTimeout(0);
   await page.goto(url, { waitUntil: 'load', timeout: 0 });
-  await page.waitForSelector('input[id="user_email"]', { timeout: 1000000 });
+  await page.waitForSelector('input[id="user_email"]');
   await login(page);
   await page.waitForNavigation();
   // await page.waitForTimeout(5000);
