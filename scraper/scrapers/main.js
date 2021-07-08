@@ -154,7 +154,7 @@ async function getData(scraperName, headless = true) {
     chegg: chegg,
     angellist: angellist,
     glassdoor: glassdoor,
-    nsf_reu: nsf_reu,
+    nsf: nsf_reu,
     hours: hours,
     soc: soc,
   };
