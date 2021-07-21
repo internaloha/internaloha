@@ -29,12 +29,11 @@ async function main(headless) {
     await page.waitForSelector('input[id="text-input-what"]');
     await page.waitForSelector('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
     await page.type('input[id="text-input-what"]', 'computer science intern');
+    await page.waitForTimeout(2000);
+    await page.waitForSelector('input[id="text-input-where"]');
+    await page.click('input[id="text-input-where"]', { clickCount: 3 });
+    await page.type('input[id="text-input-where"]', 'United States');
     await page.click('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
-    await page.waitForSelector('input[id="where"]');
-    await page.waitForSelector('input[id="fj"]');
-    // eslint-disable-next-line no-return-assign,no-param-reassign
-    await page.$eval('input[id="where"]', (el) => el.value = '');
-    await page.click('input[id="fj"]');
     // closing module that pops up
     try {
       await page.waitForSelector('a[class="icl-CloseButton popover-x-button-close"]', { timeout: 5000 });
@@ -46,38 +45,30 @@ async function main(headless) {
     await page.waitForSelector('div[class="serp-filters-sort-by-container"]');
     const date = await page.evaluate(
       () => Array.from(
-        document.querySelectorAll('a[href*="sort=date"]'),
+        document.querySelectorAll('a[class="yosegi-FilterPill-dropdownListItemLink"]'),
         a => a.getAttribute('href'),
       ),
     );
     await page.goto(`https://www.indeed.com${date}`);
-    // try to only show those posted within last 14 days
+    // filter for internships within 14 days
     try {
-      await page.click('button[class="dropdown-button dd-target"]');
+      await page.waitForSelector('button[aria-controls="filter-dateposted-menu"]');
+      await page.click('button[aria-controls="filter-dateposted-menu"]');
       await page.waitForTimeout(1000);
-      await page.click('li[onmousedown="rbptk(\'rb\', \'dateposted\', \'4\');"]');
+      await page.click('#filter-dateposted-menu > li:nth-child(4)');
       Logger.info('Sorting by last 14 days...');
     } catch (err3) {
       Logger.info(scraperName, 'No sorting by date posted.');
     }
-    let internshipDropdown = [];
+    // filter for internship
     try {
-      await page.waitForSelector('ul[id="filter-job-type-menu"] li a[href*="internship"]');
-      // Getting href link for internship filter
-      internshipDropdown = await page.evaluate(
-        () => Array.from(
-          document.querySelectorAll('ul[id="filter-job-type-menu"] li a[href*="internship"]'),
-          a => a.getAttribute('href'),
-        ),
-      );
+      await page.waitForSelector('button[aria-controls="filter-jobtype-menu"]');
+      await page.waitForTimeout(1000);
+      await page.click('button[aria-controls="filter-jobtype-menu"]');
+      await page.click('#filter-jobtype-menu > li:nth-child(1)');
+      Logger.info('Sorting by internship listing');
     } catch (err4) {
-      Logger.info(scraperName, 'No filter link');
-    }
-    if (internshipDropdown.length === 1) {
-      await page.goto(`https://www.indeed.com${internshipDropdown[0]}`);
-      Logger.trace('Filtering by internship tag...');
-    } else {
-      Logger.info(scraperName, 'No internship tag.');
+      Logger.info(scraperName, 'No Internship Filter');
     }
     let totalJobs = 0;
     const urls = [];
@@ -107,7 +98,7 @@ async function main(headless) {
 
       // keep clicking next until it reaches end
       try {
-        await page.waitForTimeout(1000);
+        await page.waitForTimeout(3000);
         await page.click('li a[aria-label="Next"]');
       } catch (err4) {
         Logger.trace(scraperName, 'Reached the end of pages!');
