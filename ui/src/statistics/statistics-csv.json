@@ -994,6 +994,24 @@
             "index": 868,
             "url": 868,
             "description": 868
+        },
+        {
+            "lastScraped": "2021-07-16T07:34:57.501Z",
+            "position": 423,
+            "company": 423,
+            "contact": 13,
+            "location": 423,
+            "posted": 0,
+            "due": 6,
+            "start": 9,
+            "end": 0,
+            "compensation": 98,
+            "qualifications": 31,
+            "skills": 405,
+            "remote": 358,
+            "index": 423,
+            "url": 423,
+            "description": 423
         }
     ],
     "apple": [
@@ -2736,6 +2754,24 @@
             "index": 10,
             "url": 10,
             "description": 10
+        },
+        {
+            "lastScraped": "2021-07-22T10:10:39.080Z",
+            "position": 6,
+            "company": 6,
+            "contact": 0,
+            "location": 6,
+            "posted": 6,
+            "due": 2,
+            "start": 2,
+            "end": 0,
+            "compensation": 5,
+            "qualifications": 3,
+            "skills": 6,
+            "remote": 4,
+            "index": 6,
+            "url": 6,
+            "description": 6
         }
     ],
     "iHireTech": [
@@ -3208,6 +3244,24 @@
             "index": 120,
             "url": 120,
             "description": 120
+        },
+        {
+            "lastScraped": "2021-07-21T18:59:01.416Z",
+            "position": 105,
+            "company": 105,
+            "contact": 10,
+            "location": 105,
+            "posted": 105,
+            "due": 3,
+            "start": 9,
+            "end": 0,
+            "compensation": 46,
+            "qualifications": 47,
+            "skills": 105,
+            "remote": 45,
+            "index": 105,
+            "url": 105,
+            "description": 105
         }
     ],
     "internships": [
@@ -4932,6 +4986,42 @@
             "index": 1120,
             "url": 1120,
             "description": 1120
+        },
+        {
+            "lastScraped": "2021-07-15T22:55:15.459Z",
+            "position": 1120,
+            "company": 1120,
+            "contact": 136,
+            "location": 1120,
+            "posted": 0,
+            "due": 34,
+            "start": 61,
+            "end": 0,
+            "compensation": 276,
+            "qualifications": 466,
+            "skills": 1118,
+            "remote": 293,
+            "index": 1120,
+            "url": 1120,
+            "description": 1120
+        },
+        {
+            "lastScraped": "2021-07-22T10:18:51.140Z",
+            "position": 356,
+            "company": 356,
+            "contact": 19,
+            "location": 356,
+            "posted": 0,
+            "due": 15,
+            "start": 27,
+            "end": 0,
+            "compensation": 88,
+            "qualifications": 145,
+            "skills": 353,
+            "remote": 82,
+            "index": 356,
+            "url": 356,
+            "description": 356
         }
     ],
     "stackoverflow": [
