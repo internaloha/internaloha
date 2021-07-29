@@ -1012,6 +1012,24 @@
             "index": 423,
             "url": 423,
             "description": 423
+        },
+        {
+            "lastScraped": "2021-07-22T17:22:09.782Z",
+            "position": 753,
+            "company": 753,
+            "contact": 33,
+            "location": 753,
+            "posted": 0,
+            "due": 7,
+            "start": 13,
+            "end": 0,
+            "compensation": 156,
+            "qualifications": 49,
+            "skills": 713,
+            "remote": 642,
+            "index": 753,
+            "url": 753,
+            "description": 753
         }
     ],
     "apple": [
@@ -3262,6 +3280,24 @@
             "index": 105,
             "url": 105,
             "description": 105
+        },
+        {
+            "lastScraped": "2021-07-29T09:45:41.806Z",
+            "position": 120,
+            "company": 120,
+            "contact": 13,
+            "location": 120,
+            "posted": 120,
+            "due": 1,
+            "start": 10,
+            "end": 0,
+            "compensation": 37,
+            "qualifications": 67,
+            "skills": 120,
+            "remote": 38,
+            "index": 120,
+            "url": 120,
+            "description": 120
         }
     ],
     "internships": [
@@ -5022,6 +5058,24 @@
             "index": 356,
             "url": 356,
             "description": 356
+        },
+        {
+            "lastScraped": "2021-07-23T18:48:05.452Z",
+            "position": 1060,
+            "company": 1060,
+            "contact": 104,
+            "location": 1060,
+            "posted": 0,
+            "due": 36,
+            "start": 58,
+            "end": 0,
+            "compensation": 270,
+            "qualifications": 451,
+            "skills": 1056,
+            "remote": 267,
+            "index": 1060,
+            "url": 1060,
+            "description": 1060
         }
     ],
     "stackoverflow": [
