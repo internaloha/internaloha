@@ -219,6 +219,7 @@ function exportToCSV(fileName = '') {
       // For attended scrapers; only exports data of scraper that is being ran (eg. chegg, angellist)
       if (fileName.length !== 0) {
         try {
+          // Check if scraper is doing comp eng/comp sci scraping
           if (fileName.toLowerCase() === site.site.toString().toLowerCase()) {
             if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
               const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
@@ -239,6 +240,7 @@ function exportToCSV(fileName = '') {
       } else {
         // only update sites that were scraped today (eg. unattended)
         try {
+          // Check if scraper is doing comp eng/comp sci scraping
           if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
             const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
             csv2json(csvString, (error2, jsonObjs) => {
@@ -272,6 +274,7 @@ function exportCVStoJSON(callback) {
   const statisticData = fetchStatistics();
   for (let i = 0; i < statisticData.length; i++) {
     const site = statisticData[i];
+    // Check if scraper is doing comp eng/comp sci scraping
     if (fs.existsSync(`./data/csv/${site.site}.csv`)) {
       const csvString = (fs.readFileSync(`./data/csv/${site.site}.csv`, 'utf8'));
       csv2json(csvString, (error2, jsonObjs) => {
@@ -286,6 +289,7 @@ function exportCVStoJSON(callback) {
   }
 }
 
+// gonna have to add an a check for cs/ceng args
 async function main() {
   process.setMaxListeners(0);
 // default is running in production (doesn't open browsers)
