@@ -47,7 +47,7 @@ class angellistTest extends Scraper {
     await page.setDefaultNavigationTimeout(0);
     await page.goto(url, { waitUntil: 'load', timeout: 0 });
     await page.waitForSelector('input[id="user_email"]');
-    await login(page);
+    await this.login(page);
     await page.waitForNavigation();
     await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
     await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
