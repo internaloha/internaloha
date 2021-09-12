@@ -1,19 +1,27 @@
+import fs from 'fs';
+
 export class Scraper {
   /** Initialize the scraper state and provide configuration info. */
-  constructor(name, url, credentials, minimumListings, listingFilePath, statisticsFilePath) {}
+  constructor(name, url, credentials, minimumListings, listingFilePath, statisticsFilePath) {
+    this.name = name;
+    this.url = url;
+    this.credentials = credentials;
+    this.minimumListings = minimumListings;
+    this.listingFilePath = listingFilePath;
+    this.statisticsFilePath = statisticsFilePath;
+  }
 
   /**
    * Go to the site and perform any login necessary.
    * @throws Error if login fails or site cannot be found.
    * page: the website page
-   * name: the name of the website e.g. angelist...
    */
-  login(page, name) {
-    // Navigate to login page
-    /* await page.type('input[id="user_email"]', credentials.name.user); we need the name of the page
-    await page.type('input[id="user_password"]', credentials.name.password);
-    await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]'); I think this has to deal with the cs of the page I dont know if we would be able to make this a general function, maybe have it take css as a property?
-    */
+  async login(page) {
+    // Navigate to login page for angellist
+    const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
+    await page.type('input[id="user_email"]', credentials.angellist.user);
+    await page.type('input[id="user_password"]', credentials.angellist.password);
+    await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
   }
 
   /**
