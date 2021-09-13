@@ -22,6 +22,7 @@ import glassdoor from './glassdoor.js';
 import nsf_reu from './nsf-reu.js';
 import hours from './80000hours.js';
 import soc from './soc.js';
+import angellistTest from './angellistTest';
 
 const myArgs = process.argv.slice(2);
 
@@ -129,6 +130,7 @@ async function getAllData(headless = true) {
   results.push(nsf_reu(headless));
   results.push(stackoverflow(headless));
   results.push(hours(headless));
+
   return Promise.all(results);
 }
 
@@ -153,6 +155,7 @@ async function getData(scraperName, headless = true) {
     hawaiislack: hawaiislack,
     chegg: chegg,
     angellist: angellist,
+    angellistTest: angellistTest,
     glassdoor: glassdoor,
     nsf: nsf_reu,
     hours: hours,

@@ -171,25 +171,6 @@
         "description": 6
     },
     {
-        "site": "idealist",
-        "lastScraped": "2021-07-29T07:32:32.904Z",
-        "position": 2,
-        "company": 2,
-        "contact": 0,
-        "location": 2,
-        "posted": 2,
-        "due": 0,
-        "start": 0,
-        "end": 0,
-        "compensation": 1,
-        "qualifications": 1,
-        "skills": 2,
-        "remote": 1,
-        "index": 2,
-        "url": 2,
-        "description": 2
-    },
-    {
         "site": "iHireTech",
         "lastScraped": "N/A",
         "position": 0,
@@ -207,6 +188,25 @@
         "index": 0,
         "url": 0,
         "description": 0
+    },
+    {
+        "site": "idealist",
+        "lastScraped": "2021-07-29T07:32:32.904Z",
+        "position": 2,
+        "company": 2,
+        "contact": 0,
+        "location": 2,
+        "posted": 2,
+        "due": 0,
+        "start": 0,
+        "end": 0,
+        "compensation": 1,
+        "qualifications": 1,
+        "skills": 2,
+        "remote": 1,
+        "index": 2,
+        "url": 2,
+        "description": 2
     },
     {
         "site": "indeed",

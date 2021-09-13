@@ -34,9 +34,11 @@ class angellistTest extends Scraper {
     super(name, url, credentials, minimumListings, listingFilePath, statisticsFilePath);
     this.credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
     this.name = 'Angellist: ';
+    this.url = 'https://angel.co/login';
   }
 
-  async mainScraper() {
+  async mainScraper(url) {
+    const data = [];
     const startTime = new Date();
     Logger.error('Starting scraper angellist at', moment().format('LT'));
     puppeteer.use(pluginStealth());
@@ -86,7 +88,7 @@ class angellistTest extends Scraper {
     fs.writeFileSync('angellist-urls.json', JSON.stringify(elements, null, 4),
         (err1) => {
           if (err1) {
-            Logger.warn(scraperName, err1);
+            Logger.warn(this.name, err1);
           }
         });
     for (let i = 0; i < elements.length; i++) {
@@ -114,21 +116,22 @@ class angellistTest extends Scraper {
     await fs.writeFileSync('./data/canonical/angellist.canonical.data.json', JSON.stringify(data, null, 4),
         (err2) => {
           if (err2) {
-            Logger.warn(scraperName, err2);
+            Logger.warn(this.name, err2);
           }
         });
     Logger.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
     await browser.close();
   }
-}
 
-async function goTo() {
+  async goTo() {
   const scraperName = 'Angellist: ';
   try {
-    await main('https://angel.co/login');
+    await mainScraper('https://angel.co/login');
   } catch (err) {
     Logger.warn(scraperName, 'Our Error: ', err.message);
   }
   // process.exit(1);
 }
-export default goTo;
+}
+
+export default angellistTest;
