@@ -20,9 +20,24 @@ export class Scraper {
   /**
    * login() {
    *  // Navigate to login page
-   *  await page.type('input[id="user_email"]', credentials.name.user);
-   *  await page.type('input[id="user_password"]', credentials.name.password);
-   *  await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
+   *  switch(name) {
+   *    case angellist:
+   *        await page.type('input[id="user_email"]', credentials.name.user);
+   *        await page.type('input[id="user_password"]', credentials.name.password);
+   *        await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
+   *        break;
+   *    case 'SOC':
+   *        await page.goto('https://app.studentopportunitycenter.com/auth/login');
+            await page.click(USERNAME_SELECTOR);
+            await page.keyboard.type(credentials.studentOpportunityCenter.user);
+            await page.click(PASSWORD_SELECTOR);
+            await page.keyboard.type(credentials.studentOpportunityCenter.password);
+            await page.click(CTA_SELECTOR);
+            await page.waitForNavigation();
+   *        break;
+   *     default:
+   *        break;
+   *  }
    * }
   */
   /**
@@ -32,21 +47,27 @@ export class Scraper {
    */
   /**
    * search() {
-   * const data = [];
-   * const scrapperName = this.name+":";
-   * const startTime = new DATE();
-   * try {
-   *    Logger.error('Starting scraper' + name + 'at', moment().format('LT'));
-   *    puppeteer.use(pluginStealth());
-   *    const { browser, page } = await startBrowser();
-   *    await page.setViewport({ width: 1366, height: 768 });
-   *    await page.setUserAgent(userAgent);
-   *    await page.setDefaultTimeout(0);
-   *    await page.goto(url, { waitUntil: 'load', timeout: 0 });
-   *    if the name is anglelist or then do a login
-   *    await page.goto(url);
-   *    await page.waitForNavigation;
+   *
    * }
+   *
+   * Sets an internal cursor to point to the next listing to be parsed.
+   * @return false if there are no more listings to parse.
+   * @throws Error if a problem occurred getting the next listing.
+   *
+   *nextListing() {
+   *
+   *}
+   *
+   * parseListing() {
+   *
+   * }
+   *
+   * writeListings() {
+   *
+   * }
+   *
+   * writeStatistics() {
+   *
    * }
    */
 }
