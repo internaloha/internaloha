@@ -6,7 +6,7 @@ import _ from 'lodash';
 import pluginStealth from 'puppeteer-extra-plugin-stealth';
 import randomUserAgent from 'random-useragent';
 import { fetchInfo, autoScroll } from './scraper-functions.js';
-import Scraper from '../components/Scraper';
+import Scraper from '../components/Scraper.js';
 
 async function getData(page) {
   const results = [];
@@ -37,7 +37,7 @@ class angellistTest extends Scraper {
     this.url = 'https://angel.co/login';
   }
 
-  async mainScraper(url) {
+  async mainScraper() {
     const data = [];
     const startTime = new Date();
     Logger.error('Starting scraper angellist at', moment().format('LT'));
@@ -47,7 +47,7 @@ class angellistTest extends Scraper {
     const userAgent = randomUserAgent.getRandom();
     await page.setUserAgent(userAgent);
     await page.setDefaultNavigationTimeout(0);
-    await page.goto(url, { waitUntil: 'load', timeout: 0 });
+    await page.goto(this.url, { waitUntil: 'load', timeout: 0 });
     await page.waitForSelector('input[id="user_email"]');
     await this.login(page);
     await page.waitForNavigation();
@@ -126,7 +126,7 @@ class angellistTest extends Scraper {
   async goTo() {
   const scraperName = 'Angellist: ';
   try {
-    await mainScraper('https://angel.co/login');
+    await this.mainScraper();
   } catch (err) {
     Logger.warn(scraperName, 'Our Error: ', err.message);
   }

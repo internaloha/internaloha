@@ -22,7 +22,7 @@ import glassdoor from './glassdoor.js';
 import nsf_reu from './nsf-reu.js';
 import hours from './80000hours.js';
 import soc from './soc.js';
-import angellistTest from './angellistTest';
+import angellistTest from './angellistTest.js';
 
 const myArgs = process.argv.slice(2);
 

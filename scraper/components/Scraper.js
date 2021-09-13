@@ -64,3 +64,5 @@ export class Scraper {
   writeStatistics() {}
 
 }
+
+export default Scraper;
