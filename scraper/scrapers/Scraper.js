@@ -5,7 +5,7 @@ import moment from 'moment';
 import _ from 'lodash';
 import pluginStealth from 'puppeteer-extra-plugin-stealth';
 import randomUserAgent from 'random-useragent';
-import { fetchInfo, autoScroll } from './scraper-functions.js';
+import { fetchInfo, autoScroll, startBrowser } from './scraper-functions.js';
 
 export class Scraper {
   /** Initialize the scraper state and provide configuration info. * */
@@ -25,25 +25,10 @@ export class Scraper {
 
   async login(page, name) {
     const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-    // Navigate to login page
-    switch (name) {
-      case angellist:
-        await page.type('input[id="user_email"]', credentials.angellist.user);
-        await page.type('input[id="user_password"]', credentials.angellist.password);
-        await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
-        break;
-      case 'SOC':
-        await page.goto('https://app.studentopportunitycenter.com/auth/login');
-        await page.click(USERNAME_SELECTOR);
-        await page.keyboard.type(credentials.studentOpportunityCenter.user);
-        await page.click(PASSWORD_SELECTOR);
-        await page.keyboard.type(credentials.studentOpportunityCenter.password);
-        await page.click(CTA_SELECTOR);
-        await page.waitForNavigation();
-        break;
-      default:
-        break;
-    }
+    const userName = credentials.name.user;
+    const password = credentials.name.password;
+    Logger.error('Starting scraper angellist at', moment().format('LT'));
+
   }
 
   /**
@@ -51,6 +36,16 @@ export class Scraper {
    * This can yield either a set of URLs to pages with listings, or a single page with all the listings.
    * @throws Error if the search generates an error, or if it does not yield minimumListings.
    */
+  async search(name, url) {
+    const data = [];
+    const startTime = new Date();
+    puppeteer.use(pluginStealth());
+    const { browser, page } = await startBrowser();
+    await page.setViewport({ width: 1366, height: 768 });
+    const userAgent = randomUserAgent.getRandom();
+
+
+  }
   /**
    * search() {
    *
