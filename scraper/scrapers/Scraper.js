@@ -56,7 +56,7 @@ export class Scraper {
    * Parses the current listing.
    * Adds the parsed listing to an internal object.
    * @throws Error if a problem occurred parsing this listing.
-   */
+   *
   parseListing() {}
 
   /**
