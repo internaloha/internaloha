@@ -5,7 +5,7 @@ import moment from 'moment';
 import _ from 'lodash';
 import pluginStealth from 'puppeteer-extra-plugin-stealth';
 import randomUserAgent from 'random-useragent';
-import { fetchInfo, autoScroll, startBrowser } from './scraper-functions.js';
+import { fetchInfo, autoScroll, startBrowser, writeToJSON } from './scraper-functions.js';
 
 export class Scraper {
   /** Initialize the scraper state and provide configuration info. * */
@@ -36,6 +36,13 @@ export class Scraper {
    */
   search(page) {
     const results = [];
+    for (let i = 0; i < 6; i++) {
+      //get the title, company, description, city, state, and zip
+      results.push(fetchInfo(page, 'div[class="styles_description__4fnTp"]', 'innerHTML') ));
+      results.push(fetchInfo(page, 'div[class="styles_component__1iUh1"] > div:nth-child(1) > dd > div > span', 'innerText'));
+      results.push(fetchInfo(page, 'h2[class="styles_component__1kg4S styles_header__3m1pY __halo_fontSizeMap_size--2xl __halo_fontWeight_medium"]', 'innerText'));
+      results.push(fetchInfo(page, 'a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_anchor__2aXMZ"]', 'innerText'));
+    }
   }
 
   /**
@@ -56,7 +63,28 @@ export class Scraper {
    * Writes the listings to the outputFilePath.
    * @throws Error if a problem occurred writing the listings.
    */
-  writeListings() {}
+  async writeListings(page, urls) {
+    const data = [];
+    const totalPage = await page.evaluate(() => document.querySelectorAll('ul[class="pagination"] li').length);
+    try {
+      for (let i = 0; i <= urls.length; i++) {
+        await page.goto(urls[i]);
+        const lastScrapped = new Date();
+        const [position, company, description, city, state, zip] = await getData(page);
+        data.push({
+          url: urls[i],
+          position: position,
+          company: company.trim(),
+          location: { city: city, state: state, zip: zip },
+          lastScrapped: lastScrapped,
+          description: description,
+        });
+      }
+    } catch (err1) {
+      Logger.error(err1.message);
+    }
+    await writeToJSON(data, page.name);
+  }
 
   /**
    * Appends a line to the statisticsFilePath with statistics about this run.
@@ -68,5 +96,5 @@ export class Scraper {
    *   * Total number of listings found.
    *   * Any errors thrown (including short description)
    */
-  writeStatistics() {}
+  async writeStatistics() {}
 }
