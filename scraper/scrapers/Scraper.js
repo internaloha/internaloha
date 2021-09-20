@@ -96,5 +96,13 @@ export class Scraper {
    *   * Total number of listings found.
    *   * Any errors thrown (including short description)
    */
-  async writeStatistics() {}
+  async writeStatistics(data) {
+    await fs.writeFileSync('./data/canonical/angellist.canonical.data.json', JSON.stringify(data, null, 4),
+        (err2) => {
+          if (err2) {
+            Logger.warn(data., err2);
+          }
+        });
+    Logger.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
+  }
 }
