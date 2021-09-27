@@ -140,6 +140,7 @@ async function getAllData(headless = true) {
  * @returns {Promise<void>}
  */
 async function getData(scraperName, headless = true) {
+  const angellistTest1 = await new angellistTest().goTo();
   const list = {
     apple: apple,
     acm: acm,
@@ -155,7 +156,7 @@ async function getData(scraperName, headless = true) {
     hawaiislack: hawaiislack,
     chegg: chegg,
     angellist: angellist,
-    angellistTest: angellistTest,
+    angellistTest: angellistTest1,
     glassdoor: glassdoor,
     nsf: nsf_reu,
     hours: hours,
