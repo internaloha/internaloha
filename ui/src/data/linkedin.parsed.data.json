@@ -1,1 +1,41 @@
-[]
+[
+    {
+        "position": "Software Engineer Intern",
+        "company": "Walnut ",
+        "location": {
+            "city": " United States",
+            "state": "United States"
+        },
+        "posted": "2021-09-13T01:35:24.927Z",
+        "url": "https://www.linkedin.com/jobs/view/software-engineer-intern-at-walnut-2720863896?refId=tlsuxlL8jTvCrhaMYx1Eiw%3D%3D&trackingId=YgmqDna6%2BUNHdjVCE6CMDQ%3D%3D&position=3&pageNum=0&trk=public_jobs_jserp-result_search-card",
+        "lastScraped": "2021-09-27T01:35:19.219Z",
+        "description": "\n        <p><strong>👋 About Walnut</strong></p><p><br></p><p><strong>Our Mission</strong></p><p>We believe that nobody should struggle financially to receive healthcare. Every year, 500,000 families in the United States declare bankruptcy due to large medical bills. People should not have their lives destroyed because they can’t afford something they require to survive. At Walnut, we’re on a mission to change this number from 500,000 bankruptcies per year to 0.</p><p><br></p><p><strong>What we do</strong></p><p>Walnut is a fintech company that expands financial access to healthcare. We’re building a point-of-sale embedded lending platform that makes healthcare more affordable for patients by breaking up large medical bills into small, monthly payments. This helps patients actually afford healthcare and helps healthcare providers capture more revenue and increase collections. We’re backed by prominent investors including Gradient Ventures (Google’s AI-focused venture fund), Plaid, Afore Capital, 2048 Ventures, Newark Venture Partners, Supernode Ventures, and others.</p><p><br></p><p><strong>✍️ About the Role</strong></p><p><br></p><p><strong>Overview</strong></p><p>As a Software Engineering Intern, you will be an integral member of a small, fast-paced engineering team building our core product and scaling it as the company grows. As our first hire, this is a tremendous opportunity to influence the growth of a new team and build a novel and impactful technology that improves the financial well-being of patients.&nbsp;</p><p><br></p><p><strong>🔨 What You’ll Do</strong></p><ul><li>As an early member of our engineering team, you will work directly with the CTO and Head of Product to spec, design, and build the core product functionality</li><li>Specifically, you’ll work on expanding the functionality of our live MVP to optimize the user onboarding flow, enhance authentication, integrate with 3rd-party data providers we use for underwriting decisioning, build out the decision engine itself, and much more.</li><li>Be part of our weekly product development cycle where you'll convert product requirements into functionality.</li><li>Develop product intuition by spending time with our users and increasingly take ownership of coming up with product requirements.</li><li>Solve problems you don't know how to solve: You'll encounter challenges we haven't yet come across yet. And when the time comes, you'll think through problems, evaluate approaches and teach yourself whatever is needed.</li><li>Lay a solid foundation for the product to scale, keep our technical debt in check and help us hire a team of incredible engineers.&nbsp;</li><li>Have something you want to learn or accomplish in this role? Tell us about it! We want to give you the best career opportunity you've ever had.</li></ul><p><br></p><p><strong>🙌 What We’re Looking For</strong></p><ul><li>0-3 years of experience as a software engineer</li><li>Hustle &amp; Grit.&nbsp; Willingness and desire to take on personal responsibility for the business as a whole and “figure it out”, whether it’s in your exact functional lane or not.</li><li>Excitement and passion for expanding financial access to healthcare.&nbsp;</li><li>Experience with Java, a relational database, React (or a comparable front-end framework) and building full-stack web apps.</li><li>A great understanding of how Restful services and Gradle works</li><li>Our full tech stack includes: Docker, Spring, Gradle, Hibernate, ExpressJS, NextJS, Amazon Web Services, Java, N8N, Python</li></ul><p><br></p><p><strong>🔥 What We Offer</strong></p><ul><li>💰 Competitive compensation - we will pay you for your level of experience</li><li>🌴Unlimited vacation with a minimum of 10 days off per year</li><li>💻 New equipment for you to do your best work</li><li>🚀 Opportunity to make a significant contribution to a product that's already transforming how people pay for healthcare</li><li>🧳 An organization that supports learning and development. We will find mentors to help you level up, provide you the stretch opportunities and make resources available to help you grow</li></ul><p><br></p><p><strong>Interested in applying? Get in touch: roshan@hellowalnut.com&nbsp;</strong></p><p><br></p>\n      ",
+        "index": 1,
+        "skills": [
+            "software engineering",
+            "java",
+            "python",
+            "machine learning",
+            "information technology",
+            "react",
+            "artificial intelligence"
+        ],
+        "contact": "roshan@hellowalnut.com",
+        "remote": false
+    },
+    {
+        "position": "N/A",
+        "company": "N/A",
+        "location": {
+            "city": "N/A",
+            "state": "United States"
+        },
+        "posted": "2021-09-27T01:35:27.263Z",
+        "url": "https://www.linkedin.com/jobs/view/software-engineer-internship-%E2%80%93-autopilot-fall-2021-at-tesla-2728568198?refId=tlsuxlL8jTvCrhaMYx1Eiw%3D%3D&trackingId=SKaZkXHH%2FVNpv55jBXxC1w%3D%3D&position=4&pageNum=0&trk=public_jobs_jserp-result_search-card",
+        "lastScraped": "2021-09-27T01:35:19.219Z",
+        "description": "N/A",
+        "index": 2,
+        "skills": [],
+        "remote": false
+    }
+]

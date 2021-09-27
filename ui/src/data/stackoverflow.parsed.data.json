@@ -1,40 +1,21 @@
 [
     {
-        "position": "Technical Internship: Siri Development Engineer in Test",
-        "company": "Apple",
-        "location": {
-            "city": "Yokohama",
-            "state": "Japan"
-        },
-        "posted": "2021-09-20T18:35:07.564Z",
-        "url": "https://stackoverflow.com/jobs/544971/technical-internship-siri-development-engineer-apple?a=2WLw5Jfua4x2&so=i&pg=1&offset=0&total=2&so_medium=Internal&so_source=JobSearch&q=internship",
-        "skills": [
-            "machine learning",
-            "software engineering",
-            "information technology"
-        ],
-        "lastScraped": "2021-09-23T18:35:07.564Z",
-        "description": "<h2 class=\"fs-subheading mb16 fc-dark\">Job description</h2>\n            <div>\nWould you like to play a part in the next revolution in human-computer interaction? Contribute to a product that is redefining mobile and desktop computing, create groundbreaking technology to support large scale systems, spoken language, big data, and artificial intelligence and work with the people who built the intelligent assistant that helps millions of people get things done - just by asking. \nJoin the Siri team at Apple as the Siri Development Engineer in Test, Intern. You will design and build tools for automation in support of qualifying Siri features. This is a fast-paced role with high visibility, impact and helping to build the most advanced systems in the industry.<br><br><span>This position requires someone with the passion for Quality Engineering in support of delivering high quality products to Apple Customers, as well as, being a great partner with Product Engineering teams in establishing solid Automation and test frameworks. We also need a strong candidate that can work cross-functionally to understand the challenges and to design, review proposals and build solutions. You will gain a wealth of experience in the Machine Learning System Evaluation Engineering (ML SEE) team in being exposed to all teams, tools, and technologies. You should join the Apple Siri ML SEE team if you want to help deliver the next amazing Apple product and learn within a great team environment.</span>            </div>",
-        "index": 1,
-        "remote": false
-    },
-    {
         "position": "Technical Internship: Machine Learning/AI Engineering & Research Internship",
         "company": "Apple",
         "location": {
             "city": "Tokyo",
             "state": "Japan"
         },
-        "posted": "2021-09-20T18:35:09.402Z",
-        "url": "https://stackoverflow.com/jobs/550222/technical-internship-machine-learning-ai-apple?a=2YwHsI21zmow&so=i&pg=1&offset=1&total=2&so_medium=Internal&so_source=JobSearch&q=internship",
+        "posted": "2021-09-14T01:30:51.048Z",
+        "url": "https://stackoverflow.com/jobs/550222/technical-internship-machine-learning-ai-apple?a=2YwHsI21zmqA&so=i&pg=1&offset=0&total=1&so_medium=Internal&so_source=JobSearch&q=internship",
         "skills": [
             "machine learning",
             "software engineering",
             "artificial intelligence"
         ],
-        "lastScraped": "2021-09-23T18:35:09.402Z",
+        "lastScraped": "2021-09-27T01:30:51.048Z",
         "description": "<h2 class=\"fs-subheading mb16 fc-dark\">Job description</h2>\n            <div>\nImagine what you could do here? At Apple, new ideas have a way of becoming phenomenal products, services, and customer experiences very quickly. Bring passion and dedication to your job and there's no telling what you could accomplish. Every role at Apple is crafted around our intention to leave the world a better place than we found it! \nApple is seeking highly qualified people for the position of AI/ML Engineer and AI/ML Researcher on the Global Product Experience team. The team pursues advancement of the end-to-end experience of Siri Japanese users through improving machine learning (ML) in areas of deep learning (DL) and Natural Language Processing (NLP). As a member of the team, you will work on some of the most ambitious technical problems, develop new and/or extend existing ML solutions that will impact future Apple products, and collaborate with the best product teams to integrate your ideas into products.<br><br><span>You will research and develop innovative ML strategies for challenging problems that will affect future Apple products. You will collaborate with broader teams across Apple to transfer AI/ML solutions. You will have opportunities to provide technical mentorship and guidance and prepare technical reports for publication and conference talks. You are self-motivated, excellent problem solver, a go-getter. You are quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.</span>            </div>",
-        "index": 2,
+        "index": 1,
         "remote": false
     }
 ]
