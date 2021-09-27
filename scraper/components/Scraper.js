@@ -29,14 +29,18 @@ export class Scraper {
    * This can yield either a set of URLs to pages with listings, or a single page with all the listings.
    * @throws Error if the search generates an error, or if it does not yield minimumListings.
    */
-  search() {}
+  search() {
+
+  }
 
   /**
    * Sets an internal cursor to point to the next listing to be parsed.
    * @return false if there are no more listings to parse.
    * @throws Error if a problem occurred getting the next listing.
    */
-  nextListing() {}
+  nextListing() {
+
+  }
 
   /**
    * Parses the current listing.

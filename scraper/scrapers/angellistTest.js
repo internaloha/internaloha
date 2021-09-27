@@ -37,6 +37,11 @@ class angellistTest extends Scraper {
     this.url = 'https://angel.co/login';
   }
 
+  /**
+   * @mainScraper
+   * Does the general scrapping of the website, also compiles a
+   * data array of internships.
+   */
   async mainScraper() {
     const data = [];
     const startTime = new Date();
@@ -123,6 +128,10 @@ class angellistTest extends Scraper {
     await browser.close();
   }
 
+  /**
+   * @goTo
+   * Try/catch runs the main scraper catching errors.
+   */
   async goTo() {
   const scraperName = 'Angellist: ';
   try {
