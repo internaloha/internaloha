@@ -17,11 +17,11 @@ import indeed from './indeed.js';
 import idealist from './idealist.js';
 import hawaiislack from './hawaiislack.js';
 import chegg from './internships.js';
-import angellist from './angellist.js';
+import Angellist from './angellist.js';
 import glassdoor from './glassdoor.js';
-import nsf_reu from './nsf-reu.js';
-import hours from './80000hours.js';
-import soc from './soc.js';
+import NsfReu from './nsf-reu.js';
+import EightyThousandHours from './80000hours.js';
+import Soc from './soc.js';
 
 const myArgs = process.argv.slice(2);
 
@@ -114,6 +114,8 @@ const usage = commandLineUsage(sections);
  */
 async function getAllData(headless = true) {
   const results = [];
+  const hoursGetData = new EightyThousandHours().mainScraper(headless);
+  const nsf_reuGetData = new NsfReu().mainScraper(headless);
   results.push(apple(headless));
   results.push(acm(headless));
   results.push(aexpress(headless));
@@ -126,13 +128,15 @@ async function getAllData(headless = true) {
   results.push(idealist(headless));
   results.push(hawaiislack(headless));
   results.push(glassdoor(headless));
-  results.push(nsf_reu(headless));
+  results.push(nsf_reuGetData);
   results.push(stackoverflow(headless));
-  results.push(hours(headless));
+  results.push(hoursGetData);
+
   return Promise.all(results);
 }
 
 /**
+ * @function getData: creates a new instance the scraper you want to run.
  * @param scraperName String Name of the scraper you want to run
  * @param headless Default true (do not open up browser)
  * @returns {Promise<void>}
@@ -152,14 +156,14 @@ async function getData(scraperName, headless = true) {
     idealist: idealist,
     hawaiislack: hawaiislack,
     chegg: chegg,
-    angellist: angellist,
+    angellist: new Angellist(),
     glassdoor: glassdoor,
-    nsf: nsf_reu,
-    hours: hours,
-    soc: soc,
+    nsf: new NsfReu(),
+    hours: new EightyThousandHours(),
+    soc: new Soc(),
   };
   try {
-    await list[scraperName](headless);
+    await list[scraperName].mainScraper(headless); //
   } catch (e) {
     console.log(usage);
     process.exit(0);
