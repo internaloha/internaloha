@@ -20,8 +20,8 @@ import chegg from './internships.js';
 import angellist from './angellist.js';
 import glassdoor from './glassdoor.js';
 import nsf_reu from './nsf-reu.js';
-import hours from './80000hours.js';
-import soc from './soc.js';
+import EightyThousandHours from './80000hours.js';
+import Soc from './soc.js';
 import angellistTest from './angellistTest.js';
 
 const myArgs = process.argv.slice(2);
@@ -141,6 +141,8 @@ async function getAllData(headless = true) {
  */
 async function getData(scraperName, headless = true) {
   const angellistTest1 = await new angellistTest().goTo();
+  const socgetData = await new Soc().mainScraper(headless);
+  const hoursGetData = await new EightyThousandHours().main(headless);
   const list = {
     apple: apple,
     acm: acm,
@@ -155,12 +157,12 @@ async function getData(scraperName, headless = true) {
     idealist: idealist,
     hawaiislack: hawaiislack,
     chegg: chegg,
-    angellist: angellist,
+    //angellist: angellist,
     angellistTest: angellistTest1,
     glassdoor: glassdoor,
     nsf: nsf_reu,
-    hours: hours,
-    soc: soc,
+    hours: hoursGetData,
+    soc: socgetData,
   };
   try {
     await list[scraperName](headless);

@@ -1,6 +1,7 @@
 import Logger from 'loglevel';
 import moment from 'moment';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
+import Scraper from '../components/Scraper.js';
 
 async function getData(page, id) {
   const results = [];
@@ -16,54 +17,59 @@ async function getData(page, id) {
   return Promise.all(results);
 }
 
-export async function main(headless) {
-  let browser;
-  let page;
-  const data = [];
-  const scraperName = '80000hours: ';
-  const startTime = new Date();
-  try {
-    Logger.error('Starting scraper 80000hours at', moment().format('LT'));
-    [browser, page] = await startBrowser(headless);
-    await page.setDefaultTimeout(60000);
-    await page.goto('https://80000hours.org/job-board/ai-safety-policy/?role-type=internship');
-
-    await page.waitForSelector('.panel');
-    let urls = await page.evaluate(() => {
-      const urlFromWeb = document.querySelectorAll('.panel a');
-      const urlList = [...urlFromWeb];
-      return urlList.map(url => url.href);
-    });
-
-    urls = urls.filter((url) => url.includes('https://80000hours.org/job-board/?role='));
+class EightyThousandHours extends Scraper {
+  async main(headless) {
+    let browser;
+    let page;
+    const data = [];
+    const scraperName = '80000hours: ';
+    const startTime = new Date();
 
     try {
-      for (let j = 0; j < urls.length; j++) {
-        const divID = urls[j].replace('https://80000hours.org/job-board/?role=', '');
-        await page.goto(urls[j]);
-        const lastScraped = new Date();
-        const [position, company, description, posted, city, state] = await getData(page, divID);
-        data.push({
-          url: urls[j],
-          position: position,
-          company: company.trim(),
-          location: { city: city, state: state },
-          posted: posted,
-          lastScraped: lastScraped,
-          description: description,
-        });
-      }
-    } catch (err1) {
-      Logger.error(scraperName, err1.message);
-    }
+      Logger.error('Starting scraper 80000hours at', moment().format('LT'));
 
-    await writeToJSON(data, '80000hours');
-    await browser.close();
-  } catch (err2) {
-    Logger.error(scraperName, err2.message);
-    await browser.close();
+      // Start navigating to web page
+      [browser, page] = await startBrowser(headless);
+      await page.setDefaultTimeout(60000);
+      await page.goto('https://80000hours.org/job-board/ai-safety-policy/?role-type=internship');
+
+      await page.waitForSelector('.panel');
+      let urls = await page.evaluate(() => {
+        const urlFromWeb = document.querySelectorAll('.panel a');
+        const urlList = [...urlFromWeb];
+        return urlList.map(url => url.href);
+      });
+
+      urls = urls.filter((url) => url.includes('https://80000hours.org/job-board/?role='));
+
+      try {
+        for (let j = 0; j < urls.length; j++) {
+          const divID = urls[j].replace('https://80000hours.org/job-board/?role=', '');
+          await page.goto(urls[j]);
+          const lastScraped = new Date();
+          const [position, company, description, posted, city, state] = await getData(page, divID);
+          data.push({
+            url: urls[j],
+            position: position,
+            company: company.trim(),
+            location: { city: city, state: state },
+            posted: posted,
+            lastScraped: lastScraped,
+            description: description,
+          });
+        }
+      } catch (err1) {
+        Logger.error(scraperName, err1.message);
+      }
+
+      await writeToJSON(data, '80000hours');
+      await browser.close();
+    } catch (err2) {
+      Logger.error(scraperName, err2.message);
+      await browser.close();
+    }
+    Logger.error(`Elapsed time for 80000hours: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
   }
-  Logger.error(`Elapsed time for 80000hours: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }
 
-export default main;
+export default EightyThousandHours;

@@ -45,7 +45,14 @@ class angellistTest extends Scraper {
   async mainScraper() {
     const data = [];
     const startTime = new Date();
-    Logger.error('Starting scraper angellist at', moment().format('LT'));
+    const credentialsUsername = this.credentials.angellist.user;
+    const credentialsPassword = this.credentials.angellist.password;
+    const usernameElements = 'input[id="user_email"]';
+    const passwordElements = 'input[id="user_password"]';
+    const loginButtonElements = 'input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]';
+
+    // Starts scraper
+    Logger.error('Starting scraper AngellistTest at', moment().format('LT'));
     puppeteer.use(pluginStealth());
     const { browser, page } = await startBrowser();
     await page.setViewport({ width: 1366, height: 768 });
@@ -53,9 +60,13 @@ class angellistTest extends Scraper {
     await page.setUserAgent(userAgent);
     await page.setDefaultNavigationTimeout(0);
     await page.goto(this.url, { waitUntil: 'load', timeout: 0 });
+
+    // Login
     await page.waitForSelector('input[id="user_email"]');
-    await this.login(page);
+    await this.login(page, credentialsUsername, credentialsPassword, usernameElements, passwordElements, loginButtonElements);
     await page.waitForNavigation();
+
+    // Start searching
     await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
     await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
     await page.keyboard.press('Backspace');
@@ -78,7 +89,7 @@ class angellistTest extends Scraper {
     for (let i = 0; i < 3; i++) {
       await autoScroll(page);
     }
-// gets elements for length for loop
+  // gets elements for length for loop
     let elements = await page.evaluate(
         () => Array.from(
             document.querySelectorAll('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]'),

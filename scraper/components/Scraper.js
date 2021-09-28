@@ -1,4 +1,4 @@
-import fs from 'fs';
+
 
 export class Scraper {
   /** Initialize the scraper state and provide configuration info. */
@@ -15,13 +15,16 @@ export class Scraper {
    * Go to the site and perform any login necessary.
    * @throws Error if login fails or site cannot be found.
    * page: the website page
+   * credentialsUser: the the login username
+   * credentialsPassword: the the login Password
+   * elementsUser: the css element for username
+   * elementsPassword: the css element for password
+   * elementsLogin: the css element for the login button
    */
-  async login(page) {
-    // Navigate to login page for angellist
-    const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-    await page.type('input[id="user_email"]', credentials.angellist.user);
-    await page.type('input[id="user_password"]', credentials.angellist.password);
-    await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
+  async login(page, credentialsUser, credentialsPassword, elementsUser, elementsPassword, elementsLogin) {
+    await page.type(elementsUser, credentialsUser);
+    await page.type(elementsPassword, credentialsPassword);
+    await page.click(elementsLogin);
   }
 
   /**
