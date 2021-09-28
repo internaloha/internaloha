@@ -6,15 +6,7 @@ import _ from 'lodash';
 import pluginStealth from 'puppeteer-extra-plugin-stealth';
 import randomUserAgent from 'random-useragent';
 import { fetchInfo, autoScroll } from './scraper-functions.js';
-
-const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-
-async function login(page) {
-  // Navigate to login page
-  await page.type('input[id="user_email"]', credentials.angellist.user);
-  await page.type('input[id="user_password"]', credentials.angellist.password);
-  await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
-}
+import Scraper from '../components/Scraper.js';
 
 async function getData(page) {
   const results = [];
@@ -37,101 +29,134 @@ async function startBrowser() {
   return { browser, page };
 }
 
-async function main(url) {
-  const data = [];
-  const scraperName = 'Angellist: ';
-  const startTime = new Date();
-  Logger.error('Starting scraper angellist at', moment().format('LT'));
-  puppeteer.use(pluginStealth());
-  const { browser, page } = await startBrowser();
-  await page.setViewport({ width: 1366, height: 768 });
-  const userAgent = randomUserAgent.getRandom();
-  await page.setUserAgent(userAgent);
-  await page.setDefaultNavigationTimeout(0);
-  await page.goto(url, { waitUntil: 'load', timeout: 0 });
-  await page.waitForSelector('input[id="user_email"]');
-  await login(page);
-  await page.waitForNavigation();
-  // await page.waitForTimeout(5000);
-  await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
-  await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
-  await page.keyboard.press('Backspace');
-  await page.keyboard.type('Engineering');
-  await page.keyboard.press('Enter');
-  await page.click('div[class="styles_locationWrapper__ScGs8"] > button');
-  await page.keyboard.press('Backspace');
-  await page.keyboard.type('United States');
-  await page.keyboard.press('Enter');
-  await page.click('button[class="styles_component__3A0_k styles_secondary__2g46E styles_small__6SIIc styles_toggle__3_6jN"]');
-  await page.waitForSelector('button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
-  if (await page.$('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button') !== null) {
-    // click clear
-    await page.click('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button');
-    await page.click('label[for="form-input--jobTypes--internship"]');
-  } else {
-    await page.click('label[for="form-input--jobTypes--internship"]');
-  }
-  await page.click('div[class="styles_footer__3DmVI"] > button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
-  for (let i = 0; i < 3; i++) {
-    await autoScroll(page);
-  }
-  // gets elements for length for loop
-  let elements = await page.evaluate(
-      () => Array.from(
-          document.querySelectorAll('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]'),
-          a => a.getAttribute('href'),
-      ),
-  );
-  elements = _.uniq(elements);
-  Logger.info(elements.length);
-  elements.forEach(element => {
-    Logger.info(element);
-  });
-  fs.writeFileSync('angellist-urls.json', JSON.stringify(elements, null, 4),
-      (err1) => {
-        if (err1) {
-          Logger.warn(scraperName, err1);
-        }
-      });
-  for (let i = 0; i < elements.length; i++) {
-      const element = `http://angel.co${elements[i]}`;
-    await page.goto(element, { waitUntil: 'domcontentloaded' });
-    const currentURL = page.url();
-    const skills = 'N/A';
-    const lastScraped = new Date();
-    const [description, location, title, company] = await getData(page);
-    data.push(
-        {
-          position: title.trim(),
-          company: company.trim(),
-          location: {
-            city: location.trim(),
-            state: '',
-          },
-          url: currentURL,
-          skills: skills,
-          lastScraped: lastScraped,
-          description: description.trim(),
-        },
+class Angellist extends Scraper {
+  constructor(minimumListings, listingFilePath, statisticsFilePath) {
+    super(
+        'Angellist: ',
+        'https://angel.co/login',
+        JSON.parse(fs.readFileSync('./config.json', 'utf8')),
     );
   }
-  await fs.writeFileSync('./data/canonical/angellist.canonical.data.json', JSON.stringify(data, null, 4),
-      (err2) => {
-        if (err2) {
-          Logger.warn(scraperName, err2);
-        }
-      });
-  Logger.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
-  await browser.close();
+
+  /**
+   * @runScraper
+   * Does the general scrapping of the website, also compiles a
+   * data array of internships.
+   */
+  async runScraper() {
+    const data = [];
+    const startTime = new Date();
+    const credentialsUsername = this.credentials.angellist.user;
+    const credentialsPassword = this.credentials.angellist.password;
+    const usernameElements = 'input[id="user_email"]';
+    const passwordElements = 'input[id="user_password"]';
+    const loginButtonElements = 'input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]';
+
+    // Starts scraper
+    Logger.error('Starting scraper Angellist at', moment().format('LT'));
+    puppeteer.use(pluginStealth());
+    const { browser, page } = await startBrowser();
+    await page.setViewport({ width: 1366, height: 768 });
+    const userAgent = randomUserAgent.getRandom();
+    await page.setUserAgent(userAgent);
+    await page.setDefaultNavigationTimeout(0);
+    await page.goto(this.url, { waitUntil: 'load', timeout: 0 });
+
+    // Login
+    await page.waitForSelector('input[id="user_email"]');
+    await this.login(page, credentialsUsername, credentialsPassword, usernameElements, passwordElements, loginButtonElements);
+    await page.waitForNavigation();
+
+    // Start searching
+    await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
+    await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
+    await page.keyboard.press('Backspace');
+    await page.keyboard.type('Engineering');
+    await page.keyboard.press('Enter');
+    await page.click('div[class="styles_locationWrapper__ScGs8"] > button');
+    await page.keyboard.press('Backspace');
+    await page.keyboard.type('United States');
+    await page.keyboard.press('Enter');
+    await page.click('button[class="styles_component__3A0_k styles_secondary__2g46E styles_small__6SIIc styles_toggle__3_6jN"]');
+    await page.waitForSelector('button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
+
+    if (await page.$('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button') !== null) {
+      // click clear
+      await page.click('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button');
+      await page.click('label[for="form-input--jobTypes--internship"]');
+    } else {
+      await page.click('label[for="form-input--jobTypes--internship"]');
+    }
+
+    await page.click('div[class="styles_footer__3DmVI"] > button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
+    for (let i = 0; i < 3; i++) {
+      await autoScroll(page);
+    }
+    // gets elements for length for loop
+    let elements = await page.evaluate(
+        () => Array.from(
+            document.querySelectorAll('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]'),
+            a => a.getAttribute('href'),
+        ),
+    );
+    elements = _.uniq(elements);
+    Logger.info(elements.length);
+    elements.forEach(element => {
+      Logger.info(element);
+    });
+
+    fs.writeFileSync('angellist-urls.json', JSON.stringify(elements, null, 4),
+        (err1) => {
+          if (err1) {
+            Logger.warn(this.name, err1);
+          }
+        });
+
+    for (let i = 0; i < elements.length; i++) {
+      const element = `http://angel.co${elements[i]}`;
+      await page.goto(element, { waitUntil: 'domcontentloaded' });
+      const currentURL = page.url();
+      const skills = 'N/A';
+      const lastScraped = new Date();
+      const [description, location, title, company] = await getData(page);
+      data.push(
+          {
+            position: title.trim(),
+            company: company.trim(),
+            location: {
+              city: location.trim(),
+              state: '',
+            },
+            url: currentURL,
+            skills: skills,
+            lastScraped: lastScraped,
+            description: description.trim(),
+          },
+      );
+    }
+    await fs.writeFileSync('./data/canonical/angellist.canonical.data.json', JSON.stringify(data, null, 4),
+        (err2) => {
+          if (err2) {
+            Logger.warn(this.name, err2);
+          }
+        });
+    Logger.error(`Elapsed time for angellist: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
+    await browser.close();
+  }
+
+  /**
+   * @mainScraper
+   * Try/catch runs the main scraper catching errors.
+   */
+  async mainScraper() {
+    const scraperName = 'Angellist: ';
+    try {
+      await this.runScraper();
+    } catch (err) {
+      Logger.warn(scraperName, 'Our Error: ', err.message);
+    }
+    // process.exit(1);
+  }
 }
 
-async function goTo() {
-  const scraperName = 'Angellist: ';
-  try {
-    await main('https://angel.co/login');
-  } catch (err) {
-    Logger.warn(scraperName, 'Our Error: ', err.message);
-  }
-  // process.exit(1);
-}
-export default goTo;
+export default Angellist;

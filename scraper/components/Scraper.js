@@ -1,5 +1,3 @@
-
-
 export class Scraper {
   /** Initialize the scraper state and provide configuration info. */
   constructor(name, url, credentials, minimumListings, listingFilePath, statisticsFilePath) {

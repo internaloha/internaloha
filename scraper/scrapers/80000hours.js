@@ -1,5 +1,6 @@
 import Logger from 'loglevel';
 import moment from 'moment';
+import fs from 'fs';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 import Scraper from '../components/Scraper.js';
 
@@ -18,11 +19,18 @@ async function getData(page, id) {
 }
 
 class EightyThousandHours extends Scraper {
-  async main(headless) {
+
+  constructor(minimumListings, listingFilePath, statisticsFilePath) {
+    super(
+        '80000hours: ',
+        'https://80000hours.org/job-board/ai-safety-policy/?role-type=internship',
+    );
+  }
+
+  async mainScraper(headless) {
     let browser;
     let page;
     const data = [];
-    const scraperName = '80000hours: ';
     const startTime = new Date();
 
     try {
@@ -31,7 +39,7 @@ class EightyThousandHours extends Scraper {
       // Start navigating to web page
       [browser, page] = await startBrowser(headless);
       await page.setDefaultTimeout(60000);
-      await page.goto('https://80000hours.org/job-board/ai-safety-policy/?role-type=internship');
+      await page.goto(this.url);
 
       await page.waitForSelector('.panel');
       let urls = await page.evaluate(() => {
@@ -59,13 +67,13 @@ class EightyThousandHours extends Scraper {
           });
         }
       } catch (err1) {
-        Logger.error(scraperName, err1.message);
+        Logger.error(this.name, err1.message);
       }
 
       await writeToJSON(data, '80000hours');
       await browser.close();
     } catch (err2) {
-      Logger.error(scraperName, err2.message);
+      Logger.error(this.name, err2.message);
       await browser.close();
     }
     Logger.error(`Elapsed time for 80000hours: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);

@@ -4,7 +4,11 @@ import fs from 'fs';
 import { fetchInfo, startBrowser, writeToJSON } from './scraper-functions.js';
 import Scraper from '../components/Scraper.js';
 
-// Used when scraping individual pages
+/**
+ * getData: Scrapes individual pages.
+ * @param page
+ * @returns {Promise<unknown[]>}
+ */
 async function getData(page) {
   const results = [];
   for (let i = 0; i < 6; i++) {
@@ -38,11 +42,12 @@ async function getData(page) {
 
 class Soc extends Scraper {
 
-  constructor(name, url, credentials, minimumListings, listingFilePath, statisticsFilePath) {
-    super(name, url, credentials, minimumListings, listingFilePath, statisticsFilePath);
-    this.credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-    this.name = 'SOC: ';
-    this.url = 'https://app.studentopportunitycenter.com/auth/login';
+  constructor(minimumListings, listingFilePath, statisticsFilePath) {
+    super(
+        'SOC: ',
+        'https://app.studentopportunitycenter.com/auth/login',
+        JSON.parse(fs.readFileSync('./config.json', 'utf8')),
+    );
   }
 
   async mainScraper(headless) {
@@ -58,9 +63,11 @@ class Soc extends Scraper {
     const loginButtonElements = '#login-submit-button';
 
     try {
+      // Starting Scraper and navigating to page.
       Logger.error('Starting scraper studentOpportunityCenter at', moment().format('LT'));
       [browser, page] = await startBrowser(headless);
-      await page.goto('https://app.studentopportunitycenter.com/auth/login');
+      await page.goto(this.url);
+
       // Logging in
       await page.reload();
       await this.login(page, credentialsUsername, credentialsPassword, usernameElements, passwordElements, loginButtonElements);
