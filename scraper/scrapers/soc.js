@@ -127,13 +127,13 @@ class Soc extends Scraper {
           });
         }
       } catch (err1) {
-        Logger.error(scraperName, err1.message);
+        Logger.error(this.name, err1.message);
       }
 
       await writeToJSON(data, 'soc');
       await browser.close();
     } catch (err2) {
-      Logger.error(scraperName, err2.message);
+      Logger.error(this.name, err2.message);
       await browser.close();
     }
     Logger.error(`Elapsed time for soc: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
