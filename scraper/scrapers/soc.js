@@ -54,7 +54,6 @@ class Soc extends Scraper {
     let browser;
     let page;
     const data = [];
-    const scraperName = 'SOC: ';
     const startTime = new Date();
     const credentialsUsername = this.credentials.studentOpportunityCenter.user;
     const credentialsPassword = this.credentials.studentOpportunityCenter.password;
