@@ -22,11 +22,10 @@ export class Scraper {
    * Go to the site and perform any login necessary.
    * @throws Error if login fails or site cannot be found.
    */
-  async login(name, page) {
-    const credentials = JSON.parse(fs.readFileSync('./config.json', 'utf8'));
-    await page.type('input[id="user_email"]', credentials.angellist.user);
-    await page.type('input[id="user_password"]', credentials.angellist.password);
-    await page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]');
+  async login(page, credentialUser, credentialPassword, elementsUser, elementsPassowrd, elementsLogin) {
+    await page.type(elementsUser, credentialUser);
+    await page.type(elementsPassowrd, elementsPassowrd);
+    await page.click(elementsLogin);
   }
 
   /**
