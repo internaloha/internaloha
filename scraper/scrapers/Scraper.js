@@ -21,6 +21,12 @@ export class Scraper {
   /**
    * Go to the site and perform any login necessary.
    * @throws Error if login fails or site cannot be found.
+   * page
+   * credentialUser
+   * credentialPassword
+   * elementsUser
+   * elementsPassword
+   * elementsLogin
    */
   async login(page, credentialUser, credentialPassword, elementsUser, elementsPassowrd, elementsLogin) {
     await page.type(elementsUser, credentialUser);
