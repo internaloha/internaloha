@@ -39,7 +39,34 @@ export class Scraper {
    * This can yield either a set of URLs to pages with listings, or a single page with all the listings.
    * @throws Error if the search generates an error, or if it does not yield minimumListings.
    */
-  search(page) {
+  async search(page) {
+    await page.waitForNavigation();
+    await page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
+    await page.click('div[class="styles_roleWrapper__2xVmi"] > button');
+    await page.keyboard.press('Backspace');
+    await page.keyboard.type('Engineering');
+    await page.keyboard.press('Enter');
+    await page.click('div[class="styles_locationWrapper__ScGs8"] > button');
+    await page.keyboard.press('Backspace');
+    await page.keyboard.type('United States');
+    await page.keyboard.press('Enter');
+  }
+
+  /**
+   * Sets an internal cursor to point to the next listing to be parsed.
+   * @return false if there are no more listings to parse.
+   * @throws Error if a problem occurred getting the next listing.
+   */
+  nextListing(page) {
+
+  }
+
+  /**
+   * Parses the current listing.
+   * Adds the parsed listing to an internal object.
+   * @throws Error if a problem occurred parsing this listing.
+   */
+  parseListing(page) {
     const results = [];
     for (let i = 0; i < 6; i++) {
       //get the title, company, description, city, state, and zip
@@ -49,20 +76,6 @@ export class Scraper {
       results.push(fetchInfo(page, 'a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_anchor__2aXMZ"]', 'innerText'));
     }
   }
-
-  /**
-   * Sets an internal cursor to point to the next listing to be parsed.
-   * @return false if there are no more listings to parse.
-   * @throws Error if a problem occurred getting the next listing.
-   */
-  nextListing() {}
-
-  /**
-   * Parses the current listing.
-   * Adds the parsed listing to an internal object.
-   * @throws Error if a problem occurred parsing this listing.
-   */
-  parseListing() {}
 
   /**
    * Writes the listings to the outputFilePath.
