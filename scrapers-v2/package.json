@@ -1,0 +1,37 @@
+{
+  "name": "scrapers",
+  "version": "2.0.0",
+  "type": "module",
+  "homepage": ".",
+  "private": true,
+  "dependencies": {
+    "commander": "^8.2.0",
+    "command-line-usage": "^6.1.1",
+    "json-2-csv": "^3.10.3",
+    "lodash": "^4.17.15",
+    "loglevel": "^1.7.1",
+    "moment": "^2.27.0",
+    "natural": "^2.1.5",
+    "puppeteer": "^5.2.1",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.8",
+    "random-useragent": "^0.5.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^3.8.3",
+    "user-agents": "^1.0.559"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4"
+  },
+  "scripts": {
+    "lint": "eslint --quiet --ext .ts main.ts",
+    "start": "node --loader ts-node/esm main.ts -scraper foo",
+    "unimported": "npx unimported"
+  }
+}
