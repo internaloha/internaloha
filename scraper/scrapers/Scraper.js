@@ -57,8 +57,16 @@ export class Scraper {
    * @return false if there are no more listings to parse.
    * @throws Error if a problem occurred getting the next listing.
    */
-  nextListing(page) {
-
+  async nextListing(page) {
+    await page.click('button[class="styles_component__3A0_k styles_secondary__2g46E styles_small__6SIIc styles_toggle__3_6jN"]');
+    await page.waitForSelector('button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
+    if (await page.$('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button') !== null) {
+      // click clear
+      await page.click('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button');
+      await page.click('label[for="form-input--jobTypes--internship"]');
+    } else {
+      await page.click('label[for="form-input--jobTypes--internship"]');
+    }
   }
 
   /**
