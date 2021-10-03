@@ -9,6 +9,18 @@ Scrapers V2 reimplements the initial version of InternAloha's scrapers with:
   * Sequential rather than parallel execution.
   * Use of [commander](https://www.npmjs.com/package/commander) for top-level CLI processing.
 
+## Installation
+
+Change directories into `scrapers-v2`, then run
+
+```
+npm install
+```
+
+## Invocation
+
+
+
 
 
 
