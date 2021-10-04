@@ -1066,6 +1066,24 @@
             "index": 753,
             "url": 753,
             "description": 753
+        },
+        {
+            "lastScraped": "2021-09-06T00:56:06.469Z",
+            "position": 500,
+            "company": 500,
+            "contact": 22,
+            "location": 500,
+            "posted": 0,
+            "due": 2,
+            "start": 7,
+            "end": 0,
+            "compensation": 134,
+            "qualifications": 44,
+            "skills": 488,
+            "remote": 388,
+            "index": 500,
+            "url": 500,
+            "description": 500
         }
     ],
     "apple": [
@@ -3788,6 +3806,24 @@
             "index": 34,
             "url": 34,
             "description": 34
+        },
+        {
+            "lastScraped": "2021-10-04T10:50:28.804Z",
+            "position": 122,
+            "company": 122,
+            "contact": 13,
+            "location": 122,
+            "posted": 122,
+            "due": 2,
+            "start": 13,
+            "end": 0,
+            "compensation": 35,
+            "qualifications": 48,
+            "skills": 122,
+            "remote": 20,
+            "index": 122,
+            "url": 122,
+            "description": 122
         }
     ],
     "manualInput": [
@@ -4822,6 +4858,24 @@
             "index": 313,
             "url": 313,
             "description": 313
+        },
+        {
+            "lastScraped": "2021-10-04T09:38:20.305Z",
+            "position": 411,
+            "company": 411,
+            "contact": 38,
+            "location": 411,
+            "posted": 411,
+            "due": 21,
+            "start": 50,
+            "end": 0,
+            "compensation": 170,
+            "qualifications": 149,
+            "skills": 411,
+            "remote": 134,
+            "index": 411,
+            "url": 411,
+            "description": 411
         }
     ],
     "soc": [
