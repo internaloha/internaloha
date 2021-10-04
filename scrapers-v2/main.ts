@@ -10,7 +10,7 @@ const options = program.opts();
 console.log(options);
 
 // Now indicate that processing is starting.
-console.log(`Running scraper: ${options['scraper']}. Log level: ${options['logLevel']}`);
+console.log(`Starting up scraper: ${options['scraper']}. Log level: ${options['logLevel']}`);
 
 const testScraper = new TestScraper({ logLevel: options['logLevel'] });
 
