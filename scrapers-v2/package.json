@@ -5,11 +5,13 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
+    "chalk": "^4.1.2",
     "commander": "^8.2.0",
     "command-line-usage": "^6.1.1",
     "json-2-csv": "^3.10.3",
     "lodash": "^4.17.15",
     "loglevel": "^1.7.1",
+    "loglevel-plugin-prefix": "^0.8.4",
     "moment": "^2.27.0",
     "natural": "^2.1.5",
     "puppeteer": "^5.2.1",
@@ -35,7 +37,7 @@
   },
   "scripts": {
     "lint": "eslint --quiet --ext .ts main.ts",
-    "start": "node --loader ts-node/esm main.ts -scraper foo",
+    "scrape": "node --loader ts-node/esm main.ts",
     "unimported": "npx unimported"
   }
 }

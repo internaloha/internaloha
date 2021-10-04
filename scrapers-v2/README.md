@@ -19,6 +19,38 @@ npm install
 
 ## Invocation
 
+To run all of the scrapers, invoke:
+
+```
+npm run scrape
+```
+
+To run a specific scraper, add `--` and then the `--scraper` parameter. For example, to run just the nsf-reu scraper, invoke:
+
+```
+npm run scrape -- --scraper nsf-reu
+```
+
+## Logging
+
+The scraper uses the [log-level](https://www.npmjs.com/package/loglevel) package.
+
+The default logging level is 'warn'.
+
+To change the default logging level, use the `--log-level` parameter. For example:
+
+```
+npm run scrape -- --log-level info
+```
+
+## Help
+
+See the current command line options with the `--help` option:
+
+```
+npm run scrape -- --help
+```
+
 
 
 

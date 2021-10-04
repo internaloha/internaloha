@@ -1,5 +1,11 @@
 export class Scraper {
-  private name: string;
+  protected name: string;
+  protected url: string;
+  protected credentials: string;
+  protected minimumListings: string;
+  protected statisticsFilePath: string;
+  protected listingFilePath: string;
+
   /** Initialize the scraper state and provide configuration info. */
   constructor(name, url, credentials, minimumListings, listingFilePath, statisticsFilePath) {
     this.name = name;
