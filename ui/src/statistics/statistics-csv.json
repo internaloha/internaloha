@@ -5184,6 +5184,24 @@
             "index": 1060,
             "url": 1060,
             "description": 1060
+        },
+        {
+            "lastScraped": "2021-10-04T11:36:02.788Z",
+            "position": 863,
+            "company": 863,
+            "contact": 217,
+            "location": 863,
+            "posted": 0,
+            "due": 46,
+            "start": 55,
+            "end": 0,
+            "compensation": 308,
+            "qualifications": 409,
+            "skills": 862,
+            "remote": 169,
+            "index": 863,
+            "url": 863,
+            "description": 863
         }
     ],
     "stackoverflow": [
@@ -5456,6 +5474,24 @@
             "index": 17,
             "url": 17,
             "description": 17
+        },
+        {
+            "lastScraped": "2021-10-04T11:22:49.461Z",
+            "position": 9,
+            "company": 9,
+            "contact": 1,
+            "location": 9,
+            "posted": 9,
+            "due": 0,
+            "start": 0,
+            "end": 0,
+            "compensation": 0,
+            "qualifications": 2,
+            "skills": 9,
+            "remote": 1,
+            "index": 9,
+            "url": 9,
+            "description": 9
         }
     ],
     "youtern": [
