@@ -1,7 +1,5 @@
 import { Command } from 'commander';
-import { createRequire } from 'module';
-
-const TestScraper = createRequire('./scrapers/Scraper.test.ts');
+import { TestScraper } from './scrapers/Scraper.test';
 
 // Process the command line arguments.
 const program = new Command()
@@ -9,11 +7,11 @@ const program = new Command()
   .option('--log-level <level>', 'One of: trace, debug, info, warn, error.', 'warn')
   .parse(process.argv);
 const options = program.opts();
-// console.log(program.opts());
+console.log(options);
 
 // Now indicate that processing is starting.
-console.log(`Running scraper: ${options.Scraper}. Log level: ${options.LogLevel}`);
+console.log(`Running scraper: ${options['scraper']}. Log level: ${options['logLevel']}`);
 
-const testScraper = TestScraper(options.LogLevel);
+const testScraper = new TestScraper({ logLevel: options['logLevel'] });
 
 testScraper.scrape();

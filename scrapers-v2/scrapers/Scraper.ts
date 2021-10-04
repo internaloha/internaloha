@@ -1,6 +1,7 @@
 import log from 'loglevel';
 import chalk from 'chalk';
-import prefix from 'loglevel-plugin-prefix';
+
+const prefix = require('loglevel-plugin-prefix');
 
 const colors = {
   TRACE: chalk.magenta,
@@ -9,6 +10,13 @@ const colors = {
   WARN: chalk.yellow,
   ERROR: chalk.red,
 };
+
+prefix.reg(log);
+prefix.apply(log, {
+  format(level, logname, timestamp) {
+    return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](logname)} ${colors[level.toUpperCase()](level)}`;
+  },
+});
 
 export class Scraper {
   protected name: string;
@@ -28,14 +36,8 @@ export class Scraper {
     this.listingFilePath = listingFilePath;
     this.statisticsFilePath = statisticsFilePath;
     this.log = log.getLogger(this.name);
+    console.log('about to set logLevel to', logLevel);
     this.log.setLevel(logLevel);
-    // Automatically add a timestamp and the level to each log message.
-    prefix.reg(this.log);
-    prefix.apply(this.log, {
-      format(level, logname, timestamp) {
-        return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](logname)} ${colors[level.toUpperCase()](level)}`;
-      },
-    });
   }
 
   /**
@@ -98,6 +100,7 @@ export class Scraper {
   }
 
   scrape() {
+    console.log('startng scrape');
     this.login();
     this.search();
     this.nextListing();

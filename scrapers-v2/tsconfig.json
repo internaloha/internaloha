@@ -1,22 +1,21 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
-    "moduleResolution": "node",
-    "alwaysStrict": true,
-    "esModuleInterop": true,
+    "module": "esnext",
+    "target": "es5",
     "sourceMap": true,
-    "lib": [
-      "dom",
-      "es2015"
-    ],
-    "allowJs": false,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "skipLibCheck": true,
     "noImplicitAny": false,
     "strictNullChecks": false
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-  ]
+  "exclude": ["node_modules"]
 }
