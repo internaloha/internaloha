@@ -43,9 +43,13 @@ Object.values(scrapers).forEach(scraper => {
   scraper.config = config;
 });
 
+async function runScraper(scraper) {
+  await scraper.scrape();
+}
+
 /* Run the scraper(s). */
 if (options['scraper'] === 'all') {
-  Object.values(scrapers).forEach(scraper => scraper.scrape());
+  Object.values(scrapers).forEach(runScraper);
 } else {
   scrapers[options['scraper'].toUpperCase()].scrape();
 }

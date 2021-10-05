@@ -41,52 +41,48 @@ export class Scraper {
     this.statisticsFilePath = statisticsFilePath;
     this.log = log.getLogger(this.name);
     this.log.setLevel(logLevel);
-    this.log.info(`Creating scraper: ${this.name}`);
+    this.log.trace(`Creating scraper: ${this.name}`);
   }
 
   /**
    * Go to the site and perform any login necessary.
    * @throws Error if login fails or site cannot be found.
    */
-  login() {
-    this.log.info('Starting login');
+  async login() {
+    this.log.trace('Starting login');
   }
 
   /**
    * Search for internship listings.
-   * This can yield either a set of URLs to pages with listings, or a single page with all the listings.
+   * This should set some kind of internal state to represent all of the relevant listings at this site.
    * @throws Error if the search generates an error, or if it does not yield minimumListings.
    */
-  search() {
-    this.log.info('Starting search');
-
+  async findListings() {
+    this.log.trace('Starting find listings');
   }
 
   /**
-   * Sets an internal cursor to point to the next listing to be parsed.
-   * @return false if there are no more listings to parse.
-   * @throws Error if a problem occurred getting the next listing.
+   * True if there is a remaining listing to be processed by processListing.
    */
-  nextListing() {
-    this.log.info('Starting next listing');
-
+  moreListings() {
+   return false;
   }
 
   /**
-   * Parses the current listing.
-   * Adds the parsed listing to an internal object.
+   * Processes the current listing and changes internal state to point to the next listing if available.
+   * Processing means extracting the relevant information for writing.
    * @throws Error if a problem occurred parsing this listing.
    */
-  parseListing() {
-    this.log.info('Starting parse listing');
+  async processListing() {
+    this.log.trace('Starting process listing');
   }
 
   /**
-   * Writes the listings to the outputFilePath.
+   * Writes the listings to a file in listingFilePath.
    * @throws Error if a problem occurred writing the listings.
    */
-  writeListings() {
-    this.log.info('Starting write listings');
+  async writeListings() {
+    this.log.trace('Starting write listings');
   }
 
   /**
@@ -99,16 +95,18 @@ export class Scraper {
    *   * Total number of listings found.
    *   * Any errors thrown (including short description)
    */
-  writeStatistics() {
-    this.log.info('Starting write statistics');
+  async writeStatistics() {
+    this.log.trace('Starting write statistics');
   }
 
-  scrape() {
-    this.login();
-    this.search();
-    this.nextListing();
-    this.parseListing();
-    this.writeListings();
-    this.writeStatistics();
+  /** Runs the components of this scraper. */
+  async scrape() {
+    await this.login();
+    await this.findListings();
+    while (this.moreListings()) {
+      await this.processListing();
+    }
+    await this.writeListings();
+    await this.writeStatistics();
   }
 }

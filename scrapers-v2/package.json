@@ -26,7 +26,7 @@
   },
   "scripts": {
     "scrape": "ts-node -P tsconfig.buildScripts.json main.ts",
-    "lint": "eslint --quiet --ext .ts main.ts",
+    "lint": "eslint --quiet --ext .ts main.ts && eslint --quiet --ext .ts ./scrapers",
     "unimported": "npx unimported"
   }
 }
