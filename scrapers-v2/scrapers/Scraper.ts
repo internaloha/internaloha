@@ -1,6 +1,7 @@
 import log from 'loglevel';
 import chalk from 'chalk';
 
+// For some reason, loglevel-plugin-prefix needs 'require' rather than 'import'.
 const prefix = require('loglevel-plugin-prefix');
 
 const colors = {
@@ -11,10 +12,11 @@ const colors = {
   ERROR: chalk.red,
 };
 
+// Logging messages are prefixed with the timestamp, the scraper name, and the log level.
 prefix.reg(log);
 prefix.apply(log, {
   format(level, logname, timestamp) {
-    return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](logname)} ${colors[level.toUpperCase()](level)}`;
+    return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](level)} ${colors[level.toUpperCase()](logname)}`;
   },
 });
 
@@ -36,8 +38,8 @@ export class Scraper {
     this.listingFilePath = listingFilePath;
     this.statisticsFilePath = statisticsFilePath;
     this.log = log.getLogger(this.name);
-    console.log('about to set logLevel to', logLevel);
     this.log.setLevel(logLevel);
+    this.log.info(`Creating scraper: ${this.name}`);
   }
 
   /**
@@ -100,7 +102,6 @@ export class Scraper {
   }
 
   scrape() {
-    console.log('startng scrape');
     this.login();
     this.search();
     this.nextListing();
