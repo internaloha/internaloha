@@ -21,6 +21,8 @@ npm install
 
 You must create a (git-ignored) configuration file containing credentials. This file's name defaults to config.json. Currently, credentials must be specified for Angel List and Student Opportunity Center.
 
+You can copy sample.config.json to config.json to create a template version of this file. If you are running scrapers that don't require credentials, then the template will be sufficient.
+
 ## Invocation
 
 ### Default: `npm run scrape`

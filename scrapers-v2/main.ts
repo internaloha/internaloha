@@ -28,7 +28,14 @@ const options = program.opts();
 
 const logLevel = options['logLevel'];
 const configFile = options['configFile'];
-const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+
+let config;
+try {
+  config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
+} catch (Exception) {
+  console.log(`${configFile} missing or unable to be parsed. Exiting without running scrapers.`);
+  process.exit(0);
+}
 
 /* Set the log level and config file for all scrapers. */
 Object.values(scrapers).forEach(scraper => {
