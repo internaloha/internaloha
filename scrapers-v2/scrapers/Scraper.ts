@@ -21,13 +21,13 @@ prefix.apply(log, {
 });
 
 export class Scraper {
-  protected name: string;
+  public name: string;
   protected url: string;
   protected credentials: Record<string, string>;
   protected minimumListings: number;
   protected statisticsFilePath: string;
   protected listingFilePath: string;
-  protected log: any;
+  public log: any;
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url, credentials = {}, minimumListings = 0, listingFilePath = './listings', statisticsFilePath = './statistics', logLevel = 'warn' }) {

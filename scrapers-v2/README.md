@@ -133,7 +133,11 @@ Options:
   -h, --help           display help for command
 ```
 
+## To Do
 
+* Specify config file as a CLI param, initialize it in superclass.
+* Set up the browser in the superclass.
+* Set logging to trace
 
 
 
