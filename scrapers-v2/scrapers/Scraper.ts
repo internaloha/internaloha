@@ -22,17 +22,19 @@ prefix.apply(log, {
 
 export class Scraper {
   public name: string;
+  public log: any;
+  public config: object;
   protected url: string;
   protected credentials: Record<string, string>;
   protected minimumListings: number;
   protected statisticsFilePath: string;
   protected listingFilePath: string;
-  public log: any;
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url, credentials = {}, minimumListings = 0, listingFilePath = './listings', statisticsFilePath = './statistics', logLevel = 'warn' }) {
     this.name = name;
     this.url = url;
+    this.config = {};
     this.credentials = credentials;
     this.minimumListings = minimumListings;
     this.listingFilePath = listingFilePath;

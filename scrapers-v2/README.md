@@ -17,6 +17,10 @@ Change directories into `scrapers-v2`, then run
 npm install
 ```
 
+## Define config.json
+
+You must create a (git-ignored) configuration file containing credentials. This file's name defaults to config.json. Currently, credentials must be specified for Angel List and Student Opportunity Center.
+
 ## Invocation
 
 ### Default: `npm run scrape`
@@ -38,7 +42,7 @@ $ npm run scrape
 
 Ultimately, this is the command you will run most of the time, as it will invoke all of the scrapers and produce output only for warnings and errors.
 
-### Option: --scraper
+### Option: `-s, --scraper`
 
 To run a specific scraper, add `--` and the `--scraper` parameter. For example, to run just the "testscraper" scraper, invoke:
 
@@ -55,9 +59,9 @@ $ npm run scrape -- --scraper testscraper
 > ts-node -P tsconfig.buildScripts.json main.ts "--scraper" "testscraper"
 ```
 
-## Option: --log-level
+### Option: `-l, --log-level`
 
-The scraper uses the [log-level](https://www.npmjs.com/package/loglevel) package.
+Specify the logging level as one of: trace, debug, info, warn, error.
 
 The default logging level is 'warn'.
 
@@ -109,7 +113,11 @@ $ npm run scrape -- --log-level info --scraper testscraper2
 [14:12:41] INFO TestScraper2 Starting write statistics
 ```
 
-## Option: --help
+### Option `-c, --config-file`
+
+Specify the name of the config file. Defaults to config.json.
+
+### Option: `-h, --help`
 
 Finally, you can find out about the current command line options with the `--help` option:
 
@@ -128,9 +136,10 @@ $ npm run scrape -- --help
 Usage: main [options]
 
 Options:
-  --scraper <scraper>  Run a specific scraper. (default: "all")
-  --log-level <level>  One of: trace, debug, info, warn, error. (default: "warn")
-  -h, --help           display help for command
+  -s, --scraper <scraper>          Specify a single scraper, or "all" for all. (choices: "testscraper", "testscraper2", "all", default: "all")
+  -l, --log-level <level>          Specify logging level (choices: "trace", "debug", "info", "warn", "error", default: "warn")
+  -c, --config-file <config-file>  Specify config file name. (default: "config.json")
+  -h, --help                       display help for command
 ```
 
 ## To Do

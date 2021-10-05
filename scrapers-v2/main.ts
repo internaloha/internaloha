@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import { Command, Option } from 'commander';
 import { TestScraper } from './scrapers/Scraper.test';
 import { TestScraper2 } from './scrapers/Scraper2.test';
@@ -19,14 +20,21 @@ const program = new Command()
   .addOption(new Option('-l, --log-level <level>', 'Specify logging level')
     .default('warn')
     .choices(['trace', 'debug', 'info', 'warn', 'error']))
+  .addOption(new Option('-c, --config-file <config-file>', 'Specify config file name.')
+    .default('config.json'))
   .parse(process.argv);
 const options = program.opts();
 // console.log(options);
 
 const logLevel = options['logLevel'];
+const configFile = options['configFile'];
+const config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
 
-/* Set the log level for all scrapers. */
-Object.values(scrapers).forEach(scraper => scraper.log.setLevel(logLevel));
+/* Set the log level and config file for all scrapers. */
+Object.values(scrapers).forEach(scraper => {
+  scraper.log.setLevel(logLevel);
+  scraper.config = config;
+});
 
 /* Run the scraper(s). */
 if (options['scraper'] === 'all') {

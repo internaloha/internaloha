@@ -29,6 +29,7 @@
     "max-len": "off",
     "no-await-in-loop": "off",
     "no-confusing-arrow": ["error", {"allowParens": true}],
+    "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
     "object-curly-newline": "off",
