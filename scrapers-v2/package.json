@@ -1,0 +1,32 @@
+{
+  "name": "scraper",
+  "version": "2.0.0",
+  "description": "Collect internship descriptions from various online sites.",
+  "private": true,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "@types/chalk": "^0.4.31",
+    "@types/node": "^16.10.2",
+    "babel-eslint": "^10.1.0",
+    "chalk": "^2.1.0",
+    "commander": "^8.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4",
+    "tslint": "^5.0.0",
+    "loglevel": "^1.7.1",
+    "loglevel-plugin-prefix": "^0.8.4",
+    "ts-node": "^3.3.0",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "scrape": "ts-node -P tsconfig.buildScripts.json main.ts",
+    "lint": "eslint --quiet --ext .ts main.ts",
+    "unimported": "npx unimported"
+  }
+}
