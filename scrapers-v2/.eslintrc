@@ -1,0 +1,46 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2017,
+    "sourceType": "module",
+  },
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "settings": {
+  },
+  "extends": [
+    "airbnb/base"
+  ],
+  "rules": {
+    "arrow-parens": "off",
+    "camelcase": "off",
+    "class-methods-use-this": "off",
+    "dot-notation": "off",
+    "func-names": "off",
+    "import/no-absolute-path": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "import/imports-first": "off",
+    "import/prefer-default-export": "off",
+    "import/no-extraneous-dependencies": "off",
+    "linebreak-style": "off",
+    "lines-between-class-members": "off",
+    "max-len": "off",
+    "no-await-in-loop": "off",
+    "no-confusing-arrow": ["error", {"allowParens": true}],
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "object-curly-newline": "off",
+    "object-property-newline": "off",
+    "object-shorthand": "off",
+    "operator-linebreak": "off",
+    "padded-blocks": "off",
+    "indent": "off",
+    "prefer-arrow-callback": "off",
+    "prefer-destructuring": "off",
+    "prefer-promise-reject-errors": "off"
+  },
+  "globals": {
+  }
+}
