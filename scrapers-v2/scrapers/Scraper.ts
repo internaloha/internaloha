@@ -119,8 +119,8 @@ export class Scraper {
     this.log.debug('Starting write statistics');
   }
 
-  close() {
-    this.browser.close();
+  async close() {
+    await this.browser.close();
   }
 
   /** Runs the components of this scraper. */
@@ -131,8 +131,8 @@ export class Scraper {
     while (this.moreListings()) {
       await this.processListing();
     }
-    this.close();
     await this.writeListings();
     await this.writeStatistics();
+    await this.close();
   }
 }
