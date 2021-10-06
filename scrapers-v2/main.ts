@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import { Command, Option } from 'commander';
+import { NsfReuScraper } from './scrapers/Scraper.nsf-reu';
 import { TestScraper } from './scrapers/Scraper.test';
 import { TestScraper2 } from './scrapers/Scraper2.test';
 
@@ -7,6 +8,7 @@ import { TestScraper2 } from './scrapers/Scraper2.test';
 const scrapers = {
   testscraper: new TestScraper(),
   testscraper2: new TestScraper2(),
+  'nsf-reu': new NsfReuScraper(),
 };
 
 /* Now create an array of scraper names for reference in CLI help. */
@@ -22,12 +24,17 @@ const program = new Command()
     .choices(['trace', 'debug', 'info', 'warn', 'error']))
   .addOption(new Option('-c, --config-file <config-file>', 'Specify config file name.')
     .default('config.json'))
+  .option('--no-headless', 'Disable headless operation (display browser window during execution)')
+  .option('--devtools', 'Open a devtools window during run.')
+  .option('--slowMo', 'Pause each puppeteer action by the provided number of milliseconds.', '0')
   .parse(process.argv);
 const options = program.opts();
 // console.log(options);
 
 const logLevel = options['logLevel'];
 const configFile = options['configFile'];
+const headless = options['headless'];
+const slowMo = options['slowMo'];
 
 let config;
 try {
@@ -37,19 +44,18 @@ try {
   process.exit(0);
 }
 
-/* Set the log level and config file for all scrapers. */
+/* Set the run options for all scrapers. */
 Object.values(scrapers).forEach(scraper => {
   scraper.log.setLevel(logLevel);
   scraper.config = config;
+  scraper.headless = headless;
+  scraper.slowMo = parseInt(slowMo, 10);
 });
 
-async function runScraper(scraper) {
-  await scraper.scrape();
-}
-
 /* Run the scraper(s). */
+const runScraper = async (scraper) => scraper.scrape();
 if (options['scraper'] === 'all') {
   Object.values(scrapers).forEach(runScraper);
 } else {
-  scrapers[options['scraper'].toUpperCase()].scrape();
+  scrapers[options['scraper'].toLowerCase()].scrape();
 }

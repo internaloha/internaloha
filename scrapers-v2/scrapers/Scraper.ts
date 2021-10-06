@@ -1,8 +1,11 @@
 import log from 'loglevel';
 import chalk from 'chalk';
+import puppeteer from 'puppeteer-extra';
 
-// For some reason, loglevel-plugin-prefix needs 'require' rather than 'import'.
+// For some reason, the following packages generate TS errors if I use import.
 const prefix = require('loglevel-plugin-prefix');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+const randomUserAgent = require('random-useragent');
 
 const colors = {
   TRACE: chalk.magenta,
@@ -24,11 +27,16 @@ export class Scraper {
   public name: string;
   public log: any;
   public config: object;
+  public headless: boolean;
+  public slowMo: number;
   protected url: string;
   protected credentials: Record<string, string>;
   protected minimumListings: number;
   protected statisticsFilePath: string;
   protected listingFilePath: string;
+  protected browser;
+  protected page;
+  protected devtools;
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url, credentials = {}, minimumListings = 0, listingFilePath = './listings', statisticsFilePath = './statistics', logLevel = 'warn' }) {
@@ -41,7 +49,19 @@ export class Scraper {
     this.statisticsFilePath = statisticsFilePath;
     this.log = log.getLogger(this.name);
     this.log.setLevel(logLevel);
-    this.log.trace(`Creating scraper: ${this.name}`);
+    this.log.debug(`Creating scraper: ${this.name}`);
+  }
+
+  /* Set up the puppeteer process. */
+  async launch() {
+    this.log.debug('Starting launch');
+    puppeteer.use(StealthPlugin());
+    this.browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
+    this.page = await this.browser.newPage();
+    await this.page.setViewport({ width: 1366, height: 768 });
+    const userAgent = randomUserAgent.getRandom();
+    await this.page.setUserAgent(userAgent);
+    await this.page.setDefaultTimeout(0);
   }
 
   /**
@@ -49,7 +69,7 @@ export class Scraper {
    * @throws Error if login fails or site cannot be found.
    */
   async login() {
-    this.log.trace('Starting login');
+    this.log.debug('Starting login');
   }
 
   /**
@@ -58,7 +78,7 @@ export class Scraper {
    * @throws Error if the search generates an error, or if it does not yield minimumListings.
    */
   async findListings() {
-    this.log.trace('Starting find listings');
+    this.log.debug('Starting find listings');
   }
 
   /**
@@ -74,7 +94,7 @@ export class Scraper {
    * @throws Error if a problem occurred parsing this listing.
    */
   async processListing() {
-    this.log.trace('Starting process listing');
+    this.log.debug('Starting process listing');
   }
 
   /**
@@ -82,7 +102,7 @@ export class Scraper {
    * @throws Error if a problem occurred writing the listings.
    */
   async writeListings() {
-    this.log.trace('Starting write listings');
+    this.log.debug('Starting write listings');
   }
 
   /**
@@ -96,16 +116,22 @@ export class Scraper {
    *   * Any errors thrown (including short description)
    */
   async writeStatistics() {
-    this.log.trace('Starting write statistics');
+    this.log.debug('Starting write statistics');
+  }
+
+  close() {
+    this.browser.close();
   }
 
   /** Runs the components of this scraper. */
   async scrape() {
+    await this.launch();
     await this.login();
     await this.findListings();
     while (this.moreListings()) {
       await this.processListing();
     }
+    this.close();
     await this.writeListings();
     await this.writeStatistics();
   }
