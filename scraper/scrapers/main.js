@@ -322,9 +322,9 @@ async function main() {
     process.exit(0);
   }
   console.log('Finished scraping!\nNow parsing...');
-  multi_parse();
+  // multi_parse();
   console.log('Finished parsing!\nNow getting statistics...');
-  statistics();
+  // statistics();
   console.log('Finished getting statistics.');
   if (process.argv.includes('statistics')) {
     console.log('Now saving data to CSV files.');

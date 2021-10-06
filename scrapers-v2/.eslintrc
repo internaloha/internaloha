@@ -43,5 +43,6 @@
     "prefer-promise-reject-errors": "off"
   },
   "globals": {
+    "document": true
   }
 }

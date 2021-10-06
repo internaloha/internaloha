@@ -25,36 +25,36 @@ async function main() {
          return urlList.map(url => url.href);
       });
       log.info(urls);
-      log.info(urls.length);
+      // log.info(urls.length);
       const position = await page.evaluate(() => {
         const positions = document.querySelectorAll('td[data-label="Site Information: "] > div > a');
         const posList = [...positions];
         return posList.map(pos => pos.innerText);
       });
-      log.info(position);
-      log.info(position.length);
+      // log.info(position);
+      // log.info(position.length);
       const company = await page.evaluate(() => {
         const companies = document.querySelectorAll('td[data-label="Site Information: "] > div > strong');
         const compList = [...companies];
         return compList.map(com => com.innerText);
       });
-      log.info(company);
-      log.info(company.length);
+      // log.info(company);
+      // log.info(company.length);
       const description = await page.evaluate(() => {
         const skills = document.querySelectorAll('td[data-label="Additional Information: "] > div ');
         const skillList = [...skills];
         return skillList.map(list => list.innerText);
       });
-      log.info(description);
-      log.info(description.length);
+      // log.info(description);
+      // log.info(description.length);
        await page.waitForSelector('td[data-label="Site Location: "] > div');
       const location = await page.evaluate(() => {
         const locations = document.querySelectorAll('td[data-label="Site Location: "] > div');
         const locList = [...locations];
         return locList.map(loc => loc.innerText);
       });
-      log.info(description);
-      log.info(description.length);
+      // log.info(description);
+      // log.info(description.length);
       const city = [];
       const state = [];
       for (let i = 0; i < location.length; i++) {
@@ -62,10 +62,10 @@ async function main() {
         city.push(loc[0]);
         state.push(loc[1]);
       }
-      log.info(city);
-      log.info(city.length);
-      log.info(state);
-      log.info(state.length);
+      // log.info(city);
+      // log.info(city.length);
+      // log.info(state);
+      // log.info(state.length);
       try {
         const lastScraped = new Date();
         for (let i = 0; i < urls.length; i++) {
@@ -81,14 +81,14 @@ async function main() {
       } catch (err1) {
         log.error(scraperName, err1.message);
       }
-      log.info(data);
+      // log.info(data);
     } catch (err2) {
       log.error(scraperName, err2.message);
     }
-    await writeToJSON(data, 'nsf-reu');
+    // await writeToJSON(data, 'nsf-reu');
     await browser.close();
   } catch (err3) {
-    log.error(scraperName, err3.message);
+    // log.error(scraperName, err3.message);
   }
   log.error(`Elapsed time for nsf-reu: ${moment(startTime).fromNow(true)} | ${data.length} listings scraped `);
 }

@@ -24,9 +24,10 @@ prefix.apply(log, {
 });
 
 /**
- * Public fields are set by the main.ts script. Protected fields are set by the subclass.
+ * Abstract superclass providing the structure and supporting functions for all scrapers.
  */
 export class Scraper {
+  // public fields are set by the main.ts script.
   public config: object;
   public defaultTimeout: number;
   public devtools;
@@ -38,7 +39,7 @@ export class Scraper {
   public statisticsDir: string;
   public viewportHeight: number;
   public viewportWidth: number;
-
+  // protected fields are set by the subclass.
   protected browser;
   protected name: string;
   protected page;
@@ -52,12 +53,12 @@ export class Scraper {
     this.log.debug(`Creating scraper: ${this.name}`);
   }
 
-  /** Allow CLI access to the name of this scraper. */
+  /** Allow CLI access to the name of this scraper. (Subclass: do not override). */
   getName() {
     return this.name;
   }
 
-  /* Set up the puppeteer process. (Subclass: generally no need to override.) */
+  /** Set up puppeteer. (Subclass: do not override.) */
   async launch() {
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
@@ -68,10 +69,7 @@ export class Scraper {
     await this.page.setDefaultTimeout(this.defaultTimeout);
   }
 
-  /**
-   * Go to the site and perform any login necessary. (Subclass: must override.)
-   * @throws Error if login fails or site cannot be found.
-   */
+  /** Login to site. (Subclass: must override.) */
   async login() {
     this.log.debug('Starting login');
   }
