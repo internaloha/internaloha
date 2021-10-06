@@ -5,150 +5,91 @@
 Scrapers V2 reimplements the initial version of InternAloha's scrapers with:
 
   * Typescript rather than Javascript.
-  * A Scraper superclass that provides a common structure for implementation of a scraper. This design is documented in [https://github.com/radgrad/radgrad2/issues/726](https://github.com/radgrad/radgrad2/issues/726).
-  * Sequential rather than parallel execution.
+  * A Scraper superclass that provides a common structure for implementation of a scraper.
   * Use of [commander](https://www.npmjs.com/package/commander) for top-level CLI processing.
 
 ## Installation
 
-Change directories into `scrapers-v2`, then run
+### Install libraries
+
+To install libraries, change directories into `scrapers-v2`, then run
 
 ```
 npm install
 ```
 
-## Define config.json
+### Define config.json
 
-You must create a (git-ignored) configuration file containing credentials. This file's name defaults to config.json. Currently, credentials must be specified for Angel List and Student Opportunity Center.
+To install the system, you must create a (git-ignored) configuration file containing credentials. This file's name defaults to config.json. Currently, credentials must be specified for Angel List and Student Opportunity Center.
 
 You can copy sample.config.json to config.json to create a template version of this file. If you are running scrapers that don't require credentials, then the template will be sufficient.
 
+### Fix chromium permissions (MacOS)
+
+On recent versions of MacOS, there is an annoying popup window that appears each time puppeteer runs.  This problem is documented in [https://github.com/puppeteer/puppeteer/issues/4752](https://github.com/puppeteer/puppeteer/issues/4752).
+
+If you are running MacOS, and get this popup, you can run the fix-chromium-permissions.sh script to address this problem. Note that if you reinstall Chromium (due to an update, for example), you will need to re-run the script.
+
+After running the script, you may get the popup one final time.
+
+
+
 ## Invocation
 
-### Default: `npm run scrape`
+### Default: `npm run scrape -- -s <scraper>`
 
-To run all of the scrapers, invoke:
-
-```
-npm run scrape
-```
-
-This invocation uses default values for `--scraper` (all) and `--log-level` (warn).  Currently, this command produces the following output:
+This is the simplest version of the script, which runs a single scraper. For example:
 
 ```
-$ npm run scrape
-
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts
-```
-
-Ultimately, this is the command you will run most of the time, as it will invoke all of the scrapers and produce output only for warnings and errors.
-
-### Option: `-s, --scraper`
-
-To run a specific scraper, add `--` and the `--scraper` parameter. For example, to run just the "testscraper" scraper, invoke:
-
-```
-npm run scrape -- --scraper testscraper
+npm run scrape -- -s nsf-reu
 ```
 
 Currently, this command produces the following output:
 
 ```
-$ npm run scrape -- --scraper testscraper
+$ npm run scrape -- -s nsf-reu
 
 > scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "--scraper" "testscraper"
+> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf-reu"
+
+$
 ```
 
-### Option: `-l, --log-level`
 
-Specify the logging level as one of: trace, debug, info, warn, error.
+### Available options: `npm run scrape -- -h`
 
-The default logging level is 'warn'.
-
-To change the default logging level, use the `--log-level` parameter. For example:
-
-```
-npm run scrape -- --log-level info
-```
-
-When this command is invoked, it currently produces the following output:
-
-```
-$ npm run scrape -- --log-level info
-
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "--log-level" "info"
-
-[14:11:20] INFO TestScraper Creating scraper: TestScraper
-[14:11:20] INFO TestScraper2 Creating scraper: TestScraper2
-[14:11:20] INFO TestScraper Starting login
-[14:11:20] INFO TestScraper Starting search
-[14:11:20] INFO TestScraper Starting next listing
-[14:11:20] INFO TestScraper Starting parse listing
-[14:11:20] INFO TestScraper Starting write listings
-[14:11:20] INFO TestScraper Starting write statistics
-[14:11:20] INFO TestScraper2 Starting login
-[14:11:20] INFO TestScraper2 Starting search
-[14:11:20] INFO TestScraper2 Starting next listing
-[14:11:20] INFO TestScraper2 Starting parse listing
-[14:11:20] INFO TestScraper2 Starting write listings
-[14:11:20] INFO TestScraper2 Starting write statistics
-```
-
-You can combine this with the --scraper option to run a single scraper with additional output:
-
-```
-$ npm run scrape -- --log-level info --scraper testscraper2
-
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "--log-level" "info" "--scraper" "testscraper2"
-
-[14:12:41] INFO TestScraper Creating scraper: TestScraper
-[14:12:41] INFO TestScraper2 Creating scraper: TestScraper2
-[14:12:41] INFO TestScraper2 Starting login
-[14:12:41] INFO TestScraper2 Starting search
-[14:12:41] INFO TestScraper2 Starting next listing
-[14:12:41] INFO TestScraper2 Starting parse listing
-[14:12:41] INFO TestScraper2 Starting write listings
-[14:12:41] INFO TestScraper2 Starting write statistics
-```
-
-### Option `-c, --config-file`
-
-Specify the name of the config file. Defaults to config.json.
-
-### Option: `-h, --help`
-
-Finally, you can find out about the current command line options with the `--help` option:
+There are many options for customizing the run of a scraper.  To see them, invoke help:
 
 ```
 npm run scrape -- --help
 ```
 
-For example:
+Here is the output from a prior run. There may be additional options or changes in your version.
 
 ```
-$ npm run scrape -- --help
+$ npm run scrape -- -h
 
 > scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "--help"
+> ts-node -P tsconfig.buildScripts.json main.ts "-h"
 
 Usage: main [options]
 
 Options:
-  -s, --scraper <scraper>          Specify a single scraper, or "all" for all. (choices: "testscraper", "testscraper2", "all", default: "all")
+  -s, --scraper <scraper>          Specify the scraper. (choices: "testscraper", "testscraper2", "nsf-reu")
   -l, --log-level <level>          Specify logging level (choices: "trace", "debug", "info", "warn", "error", default: "warn")
   -c, --config-file <config-file>  Specify config file name. (default: "config.json")
+  -nh, --no-headless               Disable headless operation (display browser window during execution)
+  -dt, --devtools                  Open a devtools window during run.
+  -sm, --slowMo                    Pause each puppeteer action by the provided number of milliseconds. (default: "0")
   -h, --help                       display help for command
 ```
 
-## To Do
+## Multi-scraper invocation
 
-* Specify config file as a CLI param, initialize it in superclass.
-* Set up the browser in the superclass.
-* Set logging to trace
+In the previous version of the scraper, we discovered that puppeteer is not "thread safe", in the sense that running multiple scrapers simultaneously can result in execution errors that do not appear when running each scraper individually.
+
+To avoid this problem, the `scrape` script supports running of only a single scraper. To support batch execution of multiple scrapers, we recommend that you create an OS-level shell script that invokes the `scrape` script multiple times, once per scraper. This will isolate each run of the scraper in its own OS process and prevent these sorts of problems from occurring.
+
 
 
 
