@@ -15,14 +15,6 @@ const colors = {
   ERROR: chalk.red,
 };
 
-// Logging messages are prefixed with the timestamp, the scraper name, and the log level.
-prefix.reg(log);
-prefix.apply(log, {
-  format(level, logname, timestamp) {
-    return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](level)} ${colors[level.toUpperCase()](logname)}`;
-  },
-});
-
 /**
  * Abstract superclass providing the structure and supporting functions for all scrapers.
  */
@@ -60,6 +52,14 @@ export class Scraper {
 
   /** Set up puppeteer. (Subclass: do not override.) */
   async launch() {
+    // Set up logging.
+    prefix.reg(log);
+    prefix.apply(log, {
+      format(level, logname, timestamp) {
+        return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](level)} ${colors[level.toUpperCase()](logname)}`;
+      },
+    });
+
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
     this.browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
@@ -75,28 +75,12 @@ export class Scraper {
   }
 
   /**
-   * Search for internship listings. (Subclass: must override.)
-   * This should set some kind of internal state to represent all of the relevant listings at this site.
-   * @throws Error if the search generates an error, or if it does not yield minimumListings.
-   */
-  async findListings() {
-    this.log.debug('Starting find listings');
-  }
-
-  /**
-   * True if there is a remaining listing to be processed by processListing. (Subclass: must override.)
-   */
-  moreListings() {
-   return false;
-  }
-
-  /**
    * Processes the current listing and changes internal state to point to the next listing if available. (Subclass: must override.)
    * Processing means extracting the relevant information for writing.
    * @throws Error if a problem occurred parsing this listing.
    */
-  async processListing() {
-    this.log.debug('Starting process listing');
+  async processListings() {
+    this.log.debug('Starting process listings');
   }
 
   /**
@@ -134,10 +118,7 @@ export class Scraper {
   async scrape() {
     await this.launch();
     await this.login();
-    await this.findListings();
-    while (this.moreListings()) {
-      await this.processListing();
-    }
+    await this.processListings();
     await this.writeListings();
     await this.writeStatistics();
     await this.close();

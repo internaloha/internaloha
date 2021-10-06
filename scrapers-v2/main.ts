@@ -1,8 +1,7 @@
 import * as fs from 'fs';
 import { Command, Option } from 'commander';
-import { NsfReuScraper } from './scrapers/Scraper.nsf-reu';
-import { TestScraper } from './scrapers/Scraper.test';
-import { TestScraper2 } from './scrapers/Scraper2.test';
+import { NsfScraper } from './scrapers/Scraper.nsf';
+import { TemplateScraper } from './scrapers/Scraper.template';
 
 /**
  *  Create all possible scraper instances next. Keys must be all lower case.
@@ -15,9 +14,8 @@ import { TestScraper2 } from './scrapers/Scraper2.test';
  *  After we process the CLI args, we then configure the selected scraper from the CLI values before execution.
  */
 const scrapers = {
-  testscraper: new TestScraper(),
-  testscraper2: new TestScraper2(),
-  'nsf-reu': new NsfReuScraper(),
+  template: new TemplateScraper(),
+  nsf: new NsfScraper(),
 };
 
 /* Create an array of scraper names to be used by the CLI. */

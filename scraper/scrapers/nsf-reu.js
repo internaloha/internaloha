@@ -31,7 +31,7 @@ async function main() {
         const posList = [...positions];
         return posList.map(pos => pos.innerText);
       });
-      // log.info(position);
+      log.info(position);
       // log.info(position.length);
       const company = await page.evaluate(() => {
         const companies = document.querySelectorAll('td[data-label="Site Information: "] > div > strong');
