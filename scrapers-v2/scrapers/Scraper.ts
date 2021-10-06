@@ -29,6 +29,7 @@ export class Scraper {
   public config: object;
   public headless: boolean;
   public slowMo: number;
+  public defaultTimeout: number;
   protected url: string;
   protected credentials: Record<string, string>;
   protected minimumListings: number;
@@ -49,19 +50,19 @@ export class Scraper {
     this.statisticsFilePath = statisticsFilePath;
     this.log = log.getLogger(this.name);
     this.log.setLevel(logLevel);
+    this.defaultTimeout = 0; // disable timeouts.
     this.log.debug(`Creating scraper: ${this.name}`);
   }
 
-  /* Set up the puppeteer process. */
+  /* Set up the puppeteer process. You shouldn't have to override this method. */
   async launch() {
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
     this.browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
     this.page = await this.browser.newPage();
     await this.page.setViewport({ width: 1366, height: 768 });
-    const userAgent = randomUserAgent.getRandom();
-    await this.page.setUserAgent(userAgent);
-    await this.page.setDefaultTimeout(0);
+    await this.page.setUserAgent(randomUserAgent.getRandom());
+    await this.page.setDefaultTimeout(this.defaultTimeout);
   }
 
   /**
