@@ -5,9 +5,14 @@ import { TestScraper } from './scrapers/Scraper.test';
 import { TestScraper2 } from './scrapers/Scraper2.test';
 
 /**
- *  Create all possible scraper instances here. Keys must be all lower case.
+ *  Create all possible scraper instances next. Keys must be all lower case.
  *  When adding a new scraper to the system, you should only need to import it above
  *  and add it to the scrapers object below.
+ *
+ *  We make default instances of all scrapers before processing command line arguments in order to tell
+ *  the CLI what the set of legal scraper names are.
+ *
+ *  After we process the CLI args, we then configure the selected scraper from the CLI values before execution.
  */
 const scrapers = {
   testscraper: new TestScraper(),
@@ -15,20 +20,10 @@ const scrapers = {
   'nsf-reu': new NsfReuScraper(),
 };
 
-/**
- * ts-node does not allow top-level await.  This makes it hard to sequentialize execution of scrapers
- * within this script if I try to invoke more than one. We have experienced issues with parallelized scraper
- * execution in the past (perhaps a problem with puppeteer).
- * Therefore, for now, this script is set up to allow running of only a single scraper
- * at a time.
- * As a workaround, you can create an OS-level script to invoke this script multiple times with different scrapers.
- * This will bring up a new JS process each time, which guarantees isolation. This might be preferable
- */
+/* Create an array of scraper names to be used by the CLI. */
+const scraperNames = Object.values(scrapers).map(scraper => scraper.getName().toLowerCase());
 
-/* Now create an array of scraper names for reference in CLI help. */
-const scraperNames = Object.values(scrapers).map(scraper => scraper.name.toLowerCase());
-
-// Process the command line arguments.
+// Process the command line arguments. A legal scraper name is required.
 const program = new Command()
   .addOption(new Option('-s, --scraper <scraper>', 'Specify the scraper.')
     .choices(scraperNames)
@@ -36,15 +31,24 @@ const program = new Command()
   .addOption(new Option('-l, --log-level <level>', 'Specify logging level')
     .default('warn')
     .choices(['trace', 'debug', 'info', 'warn', 'error']))
-  .addOption(new Option('-c, --config-file <config-file>', 'Specify config file name.')
+  .addOption(new Option('-cf, --config-file <config-file>', 'Specify config file name.')
     .default('config.json'))
   .option('-nh, --no-headless', 'Disable headless operation (display browser window during execution)')
-  .option('-dt, --devtools', 'Open a devtools window during run.')
-  .option('-sm, --slowMo', 'Pause each puppeteer action by the provided number of milliseconds.', '0')
+  .option('-dt, --devtools', 'Open a devtools window during run.', false)
+  .option('-sm, --slowMo <milliseconds>', 'Pause each puppeteer action by the provided number of milliseconds.', '0')
+  .option('-t,  --default-timeout <seconds>', 'Set default timeout in seconds for puppeteer.', '0')
+  .option('-ld, --listing-dir <listingdir>', 'Set the directory to hold listing files.', './listings')
+  .option('-ml, --minimum-listings <minlistings>', 'Throw error if this number of listings not found.', '10')
+  .option('-sd, --statistics-dir <statisticsdir>', 'Set the directory to hold statistics files.', './statistics')
+  .option('-vph, --viewport-height <height>', 'Set the viewport height (when browser displayed).', '700')
+  .option('-vpw, --viewport-width <width>', 'Set the viewport width (when browser displayed).', '1000')
   .parse(process.argv);
 const options = program.opts();
-// console.log(options);
 
+// Uncomment the following line to verify the CLI option values.
+// console.log('cli options:', options);
+
+// Now process the command line args.
 const configFile = options['configFile'];
 let config;
 try {
@@ -54,13 +58,22 @@ try {
   process.exit(0);
 }
 
-/* Set the run options for all scrapers, even though we will (currently) only run one of them. */
-Object.values(scrapers).forEach(scraper => {
-  scraper.config = config;
-  scraper.log.setLevel(options['logLevel']);
-  scraper.headless = options['headless'];
-  scraper.slowMo = parseInt(options['slowMo'], 10);
-});
+/* Set the runtime options for the selected scraper. */
+const scraper = scrapers[options['scraper'].toLowerCase()];
+scraper.config = config;
+scraper.defaultTimeout = parseInt(options['defaultTimeout'], 10);
+scraper.devTools = options['devtools'];
+scraper.headless = options['headless'];
+scraper.listingDir = options['listingDir'];
+scraper.log.setLevel(options['logLevel']);
+scraper.minimumListings = parseInt(options['minimumListings'], 10);
+scraper.slowMo = parseInt(options['slowMo'], 10);
+scraper.statisticsDir = options['statisticsDir'];
+scraper.viewportHeight = parseInt(options['viewportHeight'], 10);
+scraper.viewportWidth = parseInt(options['viewportWidth'], 10);
+
+// Uncomment the following line to verify the scraper state prior to running.
+// Object.keys(scraper).map(key => console.log(`${key}: ${scraper[key]}`));
 
 /* Run the chosen scraper. */
-scrapers[options['scraper'].toLowerCase()].scrape();
+scraper.scrape();

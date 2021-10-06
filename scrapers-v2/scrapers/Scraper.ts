@@ -23,50 +23,53 @@ prefix.apply(log, {
   },
 });
 
+/**
+ * Public fields are set by the main.ts script. Protected fields are set by the subclass.
+ */
 export class Scraper {
-  public name: string;
-  public log: any;
   public config: object;
-  public headless: boolean;
-  public slowMo: number;
   public defaultTimeout: number;
-  protected url: string;
-  protected credentials: Record<string, string>;
-  protected minimumListings: number;
-  protected statisticsFilePath: string;
-  protected listingFilePath: string;
+  public devtools;
+  public headless: boolean;
+  public listingDir: string;
+  public log: any;
+  public minimumListings: number;
+  public slowMo: number;
+  public statisticsDir: string;
+  public viewportHeight: number;
+  public viewportWidth: number;
+
   protected browser;
+  protected name: string;
   protected page;
-  protected devtools;
+  protected url: string;
 
   /** Initialize the scraper state and provide configuration info. */
-  constructor({ name, url, credentials = {}, minimumListings = 0, listingFilePath = './listings', statisticsFilePath = './statistics', logLevel = 'warn' }) {
+  constructor({ name, url }) {
     this.name = name;
     this.url = url;
-    this.config = {};
-    this.credentials = credentials;
-    this.minimumListings = minimumListings;
-    this.listingFilePath = listingFilePath;
-    this.statisticsFilePath = statisticsFilePath;
-    this.log = log.getLogger(this.name);
-    this.log.setLevel(logLevel);
-    this.defaultTimeout = 0; // disable timeouts.
+    this.log = log;
     this.log.debug(`Creating scraper: ${this.name}`);
   }
 
-  /* Set up the puppeteer process. You shouldn't have to override this method. */
+  /** Allow CLI access to the name of this scraper. */
+  getName() {
+    return this.name;
+  }
+
+  /* Set up the puppeteer process. (Subclass: generally no need to override.) */
   async launch() {
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
     this.browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
     this.page = await this.browser.newPage();
-    await this.page.setViewport({ width: 1366, height: 768 });
+    await this.page.setViewport({ width: this.viewportWidth, height: this.viewportHeight });
     await this.page.setUserAgent(randomUserAgent.getRandom());
     await this.page.setDefaultTimeout(this.defaultTimeout);
   }
 
   /**
-   * Go to the site and perform any login necessary.
+   * Go to the site and perform any login necessary. (Subclass: must override.)
    * @throws Error if login fails or site cannot be found.
    */
   async login() {
@@ -74,7 +77,7 @@ export class Scraper {
   }
 
   /**
-   * Search for internship listings.
+   * Search for internship listings. (Subclass: must override.)
    * This should set some kind of internal state to represent all of the relevant listings at this site.
    * @throws Error if the search generates an error, or if it does not yield minimumListings.
    */
@@ -83,14 +86,14 @@ export class Scraper {
   }
 
   /**
-   * True if there is a remaining listing to be processed by processListing.
+   * True if there is a remaining listing to be processed by processListing. (Subclass: must override.)
    */
   moreListings() {
    return false;
   }
 
   /**
-   * Processes the current listing and changes internal state to point to the next listing if available.
+   * Processes the current listing and changes internal state to point to the next listing if available. (Subclass: must override.)
    * Processing means extracting the relevant information for writing.
    * @throws Error if a problem occurred parsing this listing.
    */
@@ -99,7 +102,7 @@ export class Scraper {
   }
 
   /**
-   * Writes the listings to a file in listingFilePath.
+   * Writes the listings to a file in listingFilePath. (Subclass: generally no need to override.)
    * @throws Error if a problem occurred writing the listings.
    */
   async writeListings() {
@@ -107,7 +110,7 @@ export class Scraper {
   }
 
   /**
-   * Appends a line to the statisticsFilePath with statistics about this run.
+   * Appends a line to the statisticsFilePath with statistics about this run. (Subclass: generally no need to override.)
    * The statistics file is in CSV format.
    * Statistics include:
    *   * Name of scraper
@@ -120,11 +123,16 @@ export class Scraper {
     this.log.debug('Starting write statistics');
   }
 
+  /**
+   * Perform any final close-down operations. (Subclass: may not need to override.)
+   */
   async close() {
     await this.browser.close();
   }
 
-  /** Runs the components of this scraper. */
+  /**
+   * Runs the scraper.  (Subclass: no need to override.)
+   */
   async scrape() {
     await this.launch();
     await this.login();
