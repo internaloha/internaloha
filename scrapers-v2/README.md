@@ -8,6 +8,24 @@ Scrapers V2 reimplements the initial version of InternAloha's scrapers with:
   * A Scraper superclass that provides a common structure for implementation of a scraper.
   * Use of [commander](https://www.npmjs.com/package/commander) for top-level CLI processing.
 
+Most importantly, this version implements a "standard processing workflow" in the form of the scrape() method:
+
+```js
+ async scrape() {
+    await this.launch();
+    await this.login();
+    await this.generateListings();
+    await this.processListings();
+    await this.writeListings();
+    await this.writeStatistics();
+    await this.close();
+  }
+```
+
+Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc.
+
+I have implemented one scraper (NSF) using this approach, and it seems to work. You can use it as a model for guiding your own scraper development.
+
 ## Installation
 
 ### Install libraries
