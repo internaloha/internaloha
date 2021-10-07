@@ -68,7 +68,7 @@ export class Scraper {
   parseListing(page) {
     const results = [];
     for (let i = 0; i < 6; i++) {
-      //get the title, company, description, city, state, and zip
+      // get the title, company, description, city, state, and zip
       results.push(fetchInfo(page, 'div[class="styles_description__4fnTp"]', 'innerHTML'));
       results.push(fetchInfo(page, 'div[class="styles_component__1iUh1"] > div:nth-child(1) > dd > div > span', 'innerText'));
       results.push(fetchInfo(page, 'h2[class="styles_component__1kg4S styles_header__3m1pY __halo_fontSizeMap_size--2xl __halo_fontWeight_medium"]', 'innerText'));
