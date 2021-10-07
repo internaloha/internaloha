@@ -22,7 +22,7 @@ async scrape() {
 }
 ```
 
-Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc.
+Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc. You shouldn't need to touch the scrape() method.
 
 I have implemented one scraper (NSF) using this approach, and it seems to work. You can use it as a model for guiding your own scraper development.
 
