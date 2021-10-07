@@ -1,6 +1,8 @@
 import log from 'loglevel';
 import chalk from 'chalk';
 import puppeteer from 'puppeteer-extra';
+// eslint-disable-next-line no-unused-vars
+import { Listings } from './Listings';
 
 // For some reason, the following packages generate TS errors if I use import.
 const prefix = require('loglevel-plugin-prefix');
@@ -36,29 +38,39 @@ export class Scraper {
   protected name: string;
   protected page;
   protected url: string;
+  protected listings: Listings;
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url }) {
     this.name = name;
     this.url = url;
     this.log = log;
-    this.log.debug(`Creating scraper: ${this.name}`);
   }
 
-  /** Allow CLI access to the name of this scraper. (Subclass: do not override). */
+  /**
+   * Allow CLI access to the name of this scraper.
+   * Subclass: do not override.
+   */
   getName() {
     return this.name;
   }
 
-  /** Set up puppeteer. (Subclass: do not override.) */
+  /**
+   * Set up puppeteer.
+   * Subclass: invoke `await super.launch()` first if you override.
+   */
   async launch() {
     // Set up logging.
-    prefix.reg(log);
-    prefix.apply(log, {
+    prefix.reg(this.log);
+    prefix.apply(this.log, {
       format(level, logname, timestamp) {
-        return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](level)} ${colors[level.toUpperCase()](logname)}`;
+        const color = colors[level.toUpperCase()];
+        return `${color(timestamp)} ${color(level)} ${color(logname)}`;
       },
     });
+
+    // Set up the Listings object, now that we know the listingDir, name, and log.
+    this.listings = new Listings({ listingDir: this.listingDir, name: this.name, log: this.log });
 
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
@@ -69,55 +81,66 @@ export class Scraper {
     await this.page.setDefaultTimeout(this.defaultTimeout);
   }
 
-  /** Login to site. (Subclass: must override.) */
+  /**
+   * Login to site.
+   * Subclass: invoke `await super.login()` if you need to override.
+   */
   async login() {
     this.log.debug('Starting login');
   }
 
   /**
-   * Processes the current listing and changes internal state to point to the next listing if available. (Subclass: must override.)
+   * Scrapes the page and stores preliminary results in the this.listings field.
+   * Subclass: invoke `await super.processListings()` when you override.
    * Processing means extracting the relevant information for writing.
    * @throws Error if a problem occurred parsing this listing.
    */
-  async processListings() {
-    this.log.debug('Starting process listings');
+  async generateListings() {
+    this.log.debug('Starting generate listings');
   }
 
   /**
-   * Writes the listings to a file in listingFilePath. (Subclass: generally no need to override.)
-   * @throws Error if a problem occurred writing the listings.
+   * After the this.listings field is populated, use this method to further process the data.
+   * Subclass: invoke `await super.processListings` if you override.
+   */
+  async processListings() {
+    this.log.debug('Starting processListings');
+  }
+
+  /**
+   * Writes the listings to a file in listingFilePath.
+   * Subclass: generally no need to override.
    */
   async writeListings() {
     this.log.debug('Starting write listings');
+    this.listings.writeListings();
   }
 
   /**
-   * Appends a line to the statisticsFilePath with statistics about this run. (Subclass: generally no need to override.)
-   * The statistics file is in CSV format.
-   * Statistics include:
-   *   * Name of scraper
-   *   * Date and time of the run.
-   *   * Elapsed time for this run.
-   *   * Total number of listings found.
-   *   * Any errors thrown (including short description)
+   * Writes out statistics about this run.
+   * Subclass: generally no need to override.
    */
   async writeStatistics() {
     this.log.debug('Starting write statistics');
   }
 
   /**
-   * Perform any final close-down operations. (Subclass: may not need to override.)
+   * Perform any final close-down operations.
+   * Subclass: generally no need to override.
    */
   async close() {
+    this.log.debug('Starting close');
     await this.browser.close();
   }
 
   /**
-   * Runs the scraper.  (Subclass: no need to override.)
+   * Runs the scraper.
+   * Subclass: do not override.
    */
   async scrape() {
     await this.launch();
     await this.login();
+    await this.generateListings();
     await this.processListings();
     await this.writeListings();
     await this.writeStatistics();

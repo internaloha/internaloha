@@ -1,0 +1,1 @@
+This directory contains statistics data files from scrapers.

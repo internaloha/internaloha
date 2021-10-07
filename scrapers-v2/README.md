@@ -75,13 +75,19 @@ $ npm run scrape -- -h
 Usage: main [options]
 
 Options:
-  -s, --scraper <scraper>          Specify the scraper. (choices: "testscraper", "testscraper2", "nsf-reu")
-  -l, --log-level <level>          Specify logging level (choices: "trace", "debug", "info", "warn", "error", default: "warn")
-  -c, --config-file <config-file>  Specify config file name. (default: "config.json")
-  -nh, --no-headless               Disable headless operation (display browser window during execution)
-  -dt, --devtools                  Open a devtools window during run.
-  -sm, --slowMo                    Pause each puppeteer action by the provided number of milliseconds. (default: "0")
-  -h, --help                       display help for command
+  -s, --scraper <scraper>                Specify the scraper. (choices: "template", "nsf")
+  -l, --log-level <level>                Specify logging level (choices: "trace", "debug", "info", "warn", "error", default: "warn")
+  -cf, --config-file <config-file>       Specify config file name. (default: "config.json")
+  -nh, --no-headless                     Disable headless operation (display browser window during execution)
+  -dt, --devtools                        Open a devtools window during run. (default: false)
+  -sm, --slowMo <milliseconds>           Pause each puppeteer action by the provided number of milliseconds. (default: "0")
+  -t,  --default-timeout <seconds>       Set default timeout in seconds for puppeteer. (default: "0")
+  -ld, --listing-dir <listingdir>        Set the directory to hold listing files. (default: "./listings")
+  -ml, --minimum-listings <minlistings>  Throw error if this number of listings not found. (default: "10")
+  -sd, --statistics-dir <statisticsdir>  Set the directory to hold statistics files. (default: "./statistics")
+  -vph, --viewport-height <height>       Set the viewport height (when browser displayed). (default: "700")
+  -vpw, --viewport-width <width>         Set the viewport width (when browser displayed). (default: "1000")
+  -h, --help                             display help for command
 ```
 
 ## Multi-scraper invocation
@@ -90,6 +96,95 @@ In the previous version of the scraper, we discovered that puppeteer is not "thr
 
 To avoid this problem, the `scrape` script supports running of only a single scraper. To support batch execution of multiple scrapers, we recommend that you create an OS-level shell script that invokes the `scrape` script multiple times, once per scraper. This will isolate each run of the scraper in its own OS process and prevent these sorts of problems from occurring.
 
+## Example: NSF REU Scraper
+
+I have finished a preliminary version of the NSF REU scraper which provides a proof-of-concept for the system.
+
+Here is the default run of the scraper. The log level defaults to 'warn', so there's no output.
+
+```
+$ npm run scrape -- -s nsf
+
+> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
+> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf"
+```
+
+Running the scraper with log level 'info' produces a bit more output:
+
+```
+$ npm run scrape -- -s nsf -l info
+
+> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
+> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf" "-l" "info"
+
+15:44:32 INFO NSF Launching scraper.
+15:44:36 INFO NSF Wrote data
+```
+
+Running the scraper with log level 'debug' produces a lot of output, much of which I'll elide:
+
+```
+$ npm run scrape -- -s nsf -l debug
+
+> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
+> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf" "-l" "debug"
+
+15:45:17 DEBUG root Starting launch
+15:45:18 INFO NSF Launching scraper.
+15:45:18 DEBUG NSF Starting login
+15:45:20 DEBUG NSF Starting generate listings
+15:45:22 DEBUG NSF URLS:
+https://engineering.asu.edu/sensip/reu-index-html/,https://web.asu.edu/imaging-lyceum/visual-media-reu,http://www.eng.auburn.edu/comp/research/impact/,http://www.eng.auburn
+ :
+ :
+15:45:22 DEBUG NSF Positions:
+Sensor Signal and Information Processing (SenSIP),Computational Imaging and Mixed-Reality for Visual Media Creation and Visualization,Research Experience for Undergraduate on Smart UAVs,REU Site: Parallel and Distributed Computing,Data-driven Security,Undergraduate Research Experiences in Big Data Security and Privacy,
+  :
+  :
+15:45:22 DEBUG NSF Descriptions:
+Research Topics/Keywords: Sensors and signal processing algorithms, sensor design and fabrication, signal processing, wearable and flexible sensors, machine learning, interface circuits, sensors for Internet of Things
+ :
+ :
+15:45:22 DEBUG NSF Locations:
+Tempe, Arizona,Arizona,Auburn, Alabama,Auburn, Alabama,Boise, Idaho,Pomona, California,Pittsburgh, Pennsylvania,Pittsburgh, Pennsylvania,Potsdam, New York
+ :
+
+15:45:22 DEBUG NSF Starting processListings
+15:45:22 DEBUG NSF Starting write listings
+15:45:22 INFO NSF Wrote data
+15:45:22 DEBUG NSF Starting write statistics
+15:45:22 DEBUG NSF Starting close
+```
+
+## To Do
+
+There are still things to do for the NSF scraper (and scraping in general):
+  * I have not implemented a "processListings" method for the NSF scraper.
+  * I have not yet implemented the statistics file.
+
+I should be able to work on these issues concurrently while others implement scrapers without too much conflict.
+
+## Implement your own scraper.
+
+First, make a copy of scrapers/`Scraper.template.ts`, and replace 'template' by the name of your scraper. So, for example, `Scraper.glassdoor.ts`. Edit the file as follows:
+
+  * Fix the class name (for example, to "GlassDoorScraper")
+  * Fix the name field on line 7 from 'template' to your scraper name (for example, to 'glassdoor'). Keep the scraper name lower case, all one word, no hyphens. This will make it easier for the CLI.
+
+Second, update `main.ts` so that the CLI knows about your scraper. Edit the file as follows:
+
+  * Add an import of your new scraper (for example, `import { GlassDoorScraper } from './scrapers/Scraper.glassdoor';`)
+  * Update the `scrapers` object definition to include a new field and value for your scraper. For example, `glassdoor: new GlassDoorScraper(),`
+
+Third, test the CLI to see if it understands your scraper. For example:
+
+```
+npm run scrape -- -s glassdoor -l debug
+```
+
+You should get a few lines of output and no errors.
+
+Finally, the "easy" part. Migrate the scraper code from the old version of the system into this new format.  There are some CLI options to help you, such as `--no-headless`, `--devtools`, `--slowmo`, and so forth.
 
 
 
