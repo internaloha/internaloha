@@ -55,6 +55,7 @@ $ npm run scrape -- -s nsf-reu
 $
 ```
 
+You will see that a file called `nsf.json` has been written to the `listings` directory.
 
 ### Available options: `npm run scrape -- -h`
 
@@ -64,7 +65,7 @@ There are many options for customizing the run of a scraper.  To see them, invok
 npm run scrape -- --help
 ```
 
-Here is the output from a prior run. There may be additional options or changes in your version.
+Here is the output from a recent run. There may be additional options or changes in your version.
 
 ```
 $ npm run scrape -- -h
@@ -90,7 +91,9 @@ Options:
   -h, --help                             display help for command
 ```
 
-## Multi-scraper invocation
+You can provide any combination of these parameters, in any order.  The only required parameter is the scraper.
+
+## Why no multi-scraper invocation?
 
 In the previous version of the scraper, we discovered that puppeteer is not "thread safe", in the sense that running multiple scrapers simultaneously can result in execution errors that do not appear when running each scraper individually.
 
@@ -100,7 +103,7 @@ To avoid this problem, the `scrape` script supports running of only a single scr
 
 I have finished a preliminary version of the NSF REU scraper which provides a proof-of-concept for the system.
 
-Here is the default run of the scraper. The log level defaults to 'warn', so there's no output.
+Here is the default run of the scraper. The log level defaults to 'warn', so there's very little output.
 
 ```
 $ npm run scrape -- -s nsf
@@ -185,6 +188,8 @@ npm run scrape -- -s glassdoor -l debug
 You should get a few lines of output and no errors.
 
 Finally, the "easy" part. Migrate the scraper code from the old version of the system into this new format.  There are some CLI options to help you, such as `--no-headless`, `--devtools`, `--slowmo`, and so forth.
+
+Check out the nsf scraper for hints.  There is some code (such as the array spread operator) which works in the old version of the system, but which I had to replace with a call to forEach in version 2.  If you run into difficulties where code works in the old version but not here and you can't figure it out, don't hesitate to ask for help.
 
 
 
