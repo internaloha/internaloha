@@ -188,9 +188,9 @@ I should be able to work on these issues concurrently while others implement scr
 
 ## Implement your own scraper.
 
-First, check to make sure that you can run the NSF scraper successfully in your own environment. I suggest you read through the Scraper.ts and Scraper.nsf.ts files and make sure you understand the superclass and subclass relationship.  Notice how the NSF scraper methods frequently call the superclass method initially, then augment this behavior with additional code.
+First, check to make sure that you can run the NSF scraper successfully in your own environment. I suggest you read through the `Scraper.ts` and `Scraper.nsf.ts` files and make sure you understand the superclass and subclass relationship.  Notice how the NSF scraper methods frequently call the superclass method initially, then augment this behavior with additional code.
 
-Next, make a copy of scrapers/`Scraper.template.ts`, and replace 'template' by the name of your scraper. So, for example, `Scraper.glassdoor.ts`. Edit the file as follows:
+Next, make a copy of `scrapers/Scraper.template.ts`, and replace 'template' by the name of your scraper. So, for example, `Scraper.glassdoor.ts`. Edit the file as follows:
 
   * Fix the class name (for example, to "GlassDoorScraper")
   * Fix the name field on line 7 from 'template' to your scraper name (for example, to 'glassdoor'). Keep the scraper name lower case, all one word, no hyphens. This will make it easier for the CLI.
