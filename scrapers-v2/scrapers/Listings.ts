@@ -24,7 +24,7 @@ export class Listings {
   writeListings() {
     try {
       const file = `${this.listingDir}/${this.name}.json`;
-      const data = JSON.stringify(this.listings, null, 2)
+      const data = JSON.stringify(this.listings, null, 2);
       fs.writeFileSync(file, data, 'utf-8');
       this.log.info('Wrote data');
     } catch (error) {
