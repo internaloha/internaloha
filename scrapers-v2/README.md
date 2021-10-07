@@ -11,15 +11,15 @@ Scrapers V2 reimplements the initial version of InternAloha's scrapers with:
 Most importantly, this version implements a "standard processing workflow" in the form of the scrape() method:
 
 ```js
- async scrape() {
-    await this.launch();
-    await this.login();
-    await this.generateListings();
-    await this.processListings();
-    await this.writeListings();
-    await this.writeStatistics();
-    await this.close();
-  }
+async scrape() {
+  await this.launch();
+  await this.login();
+  await this.generateListings();
+  await this.processListings();
+  await this.writeListings();
+  await this.writeStatistics();
+  await this.close();
+}
 ```
 
 Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc.
