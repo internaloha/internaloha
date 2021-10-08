@@ -44,6 +44,7 @@ const program = new Command()
     .default('config.json'))
   .option('-nh, --no-headless', 'Disable headless operation (display browser window during execution)')
   .option('-dt, --devtools', 'Open a devtools window during run.', false)
+  .option('-cf, --commit-files', 'Write listing and statistic files that are not git-ignored.', false)
   .option('-sm, --slowMo <milliseconds>', 'Pause each puppeteer action by the provided number of milliseconds.', '0')
   .option('-t,  --default-timeout <seconds>', 'Set default timeout in seconds for puppeteer.', '0')
   .option('-ld, --listing-dir <listingdir>', 'Set the directory to hold listing files.', './listings')
@@ -70,6 +71,7 @@ try {
 /* Set the runtime options for the selected scraper. */
 const scraper = scrapers[options.scraper.toLowerCase()];
 scraper.config = config;
+scraper.commitFiles = options['commitFiles'];
 scraper.defaultTimeout = parseInt(options.defaultTimeout, 10);
 scraper.devTools = options.devtools;
 scraper.discipline = options.discipline;

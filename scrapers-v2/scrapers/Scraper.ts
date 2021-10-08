@@ -23,7 +23,7 @@ export class Scraper {
   // public fields are set by the main.ts script.
   public config: object;
   public defaultTimeout: number;
-  public devtools;
+  public devtools: boolean;
   public discipline;
   public commitFiles: boolean;
   public headless: boolean;
@@ -71,7 +71,7 @@ export class Scraper {
     });
 
     // Set up the Listings object, now that we know the listingDir, name, and log.
-    this.listings = new Listings({ listingDir: this.listingDir, name: this.name, log: this.log });
+    this.listings = new Listings({ listingDir: this.listingDir, name: this.name, log: this.log, commitFiles: this.commitFiles });
 
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());

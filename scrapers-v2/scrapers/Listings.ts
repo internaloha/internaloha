@@ -5,16 +5,18 @@ const fs = require('fs');
 
 /** Each instance holds an array of writeable Listing objects. */
 export class Listings {
+  private commitFiles: boolean;
   private listings: Listing[];
   private listingDir: string;
   private name: string;
   private log;
 
-  constructor({ listingDir, name, log }) {
+  constructor({ listingDir, name, log, commitFiles }) {
     this.listingDir = listingDir;
     this.listings = [];
     this.name = name;
     this.log = log;
+    this.commitFiles = commitFiles;
   }
 
   addListing(listing) {
@@ -23,7 +25,8 @@ export class Listings {
 
   writeListings() {
     try {
-      const file = `${this.listingDir}/${this.name}.json`;
+      const suffix = this.commitFiles ? 'json' : 'dev.json';
+      const file = `${this.listingDir}/${this.name}.${suffix}`;
       const data = JSON.stringify(this.listings, null, 2);
       fs.writeFileSync(file, data, 'utf-8');
       this.log.info('Wrote data');

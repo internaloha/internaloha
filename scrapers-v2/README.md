@@ -8,6 +8,24 @@ Scrapers V2 reimplements the initial version of InternAloha's scrapers with:
   * A Scraper superclass that provides a common structure for implementation of a scraper.
   * Use of [commander](https://www.npmjs.com/package/commander) for top-level CLI processing.
 
+Most importantly, this version implements a "standard processing workflow" in the form of the scrape() method:
+
+```js
+async scrape() {
+  await this.launch();
+  await this.login();
+  await this.generateListings();
+  await this.processListings();
+  await this.writeListings();
+  await this.writeStatistics();
+  await this.close();
+}
+```
+
+Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc. You shouldn't need to touch the scrape() method.
+
+I have implemented one scraper (NSF) using this approach, and it seems to work. You can use it as a model for guiding your own scraper development.
+
 ## Installation
 
 ### Install libraries
@@ -57,6 +75,7 @@ $ npm run scrape -- -s nsf-reu
 $
 ```
 
+You will see that a file called `nsf.json` has been written to the `listings` directory.
 
 ### Available options: `npm run scrape -- -h`
 
@@ -66,7 +85,7 @@ There are many options for customizing the run of a scraper.  To see them, invok
 npm run scrape -- --help
 ```
 
-Here is the output from a prior run. There may be additional options or changes in your version.
+Here is the output from a recent run. There may be additional options or changes in your version.
 
 ```
 $ npm run scrape -- -h
@@ -82,6 +101,7 @@ Options:
   -cf, --config-file <config-file>       Specify config file name. (default: "config.json")
   -nh, --no-headless                     Disable headless operation (display browser window during execution)
   -dt, --devtools                        Open a devtools window during run. (default: false)
+  -cf, --commit-files                    Write listing and statistic files that are not git-ignored. (default: false)
   -sm, --slowMo <milliseconds>           Pause each puppeteer action by the provided number of milliseconds. (default: "0")
   -t,  --default-timeout <seconds>       Set default timeout in seconds for puppeteer. (default: "0")
   -ld, --listing-dir <listingdir>        Set the directory to hold listing files. (default: "./listings")
@@ -92,7 +112,9 @@ Options:
   -h, --help                             display help for command
 ```
 
-## Multi-scraper invocation
+You can provide any combination of these parameters, in any order.  The only required parameter is the scraper.
+
+## Why no multi-scraper invocation?
 
 In the previous version of the scraper, we discovered that puppeteer is not "thread safe", in the sense that running multiple scrapers simultaneously can result in execution errors that do not appear when running each scraper individually.
 
@@ -102,7 +124,7 @@ To avoid this problem, the `scrape` script supports running of only a single scr
 
 I have finished a preliminary version of the NSF REU scraper which provides a proof-of-concept for the system.
 
-Here is the default run of the scraper. The log level defaults to 'warn', so there's no output.
+Here is the default run of the scraper. The log level defaults to 'warn', so there's very little output.
 
 ```
 $ npm run scrape -- -s nsf
@@ -168,17 +190,19 @@ I should be able to work on these issues concurrently while others implement scr
 
 ## Implement your own scraper.
 
-First, make a copy of scrapers/`Scraper.template.ts`, and replace 'template' by the name of your scraper. So, for example, `Scraper.glassdoor.ts`. Edit the file as follows:
+First, check to make sure that you can run the NSF scraper successfully in your own environment. I suggest you read through the `Scraper.ts` and `Scraper.nsf.ts` files and make sure you understand the superclass and subclass relationship.  Notice how the NSF scraper methods frequently call the superclass method initially, then augment this behavior with additional code.
+
+Next, make a copy of `scrapers/Scraper.template.ts`, and replace 'template' by the name of your scraper. So, for example, `Scraper.glassdoor.ts`. Edit the file as follows:
 
   * Fix the class name (for example, to "GlassDoorScraper")
   * Fix the name field on line 7 from 'template' to your scraper name (for example, to 'glassdoor'). Keep the scraper name lower case, all one word, no hyphens. This will make it easier for the CLI.
 
-Second, update `main.ts` so that the CLI knows about your scraper. Edit the file as follows:
+Next, update `main.ts` so that the CLI knows about your scraper. Edit the file as follows:
 
   * Add an import of your new scraper (for example, `import { GlassDoorScraper } from './scrapers/Scraper.glassdoor';`)
   * Update the `scrapers` object definition to include a new field and value for your scraper. For example, `glassdoor: new GlassDoorScraper(),`
 
-Third, test the CLI to see if it understands your scraper. For example:
+Next, test the CLI to see if it understands your scraper. For example:
 
 ```
 npm run scrape -- -s glassdoor -l debug
@@ -187,6 +211,10 @@ npm run scrape -- -s glassdoor -l debug
 You should get a few lines of output and no errors.
 
 Finally, the "easy" part. Migrate the scraper code from the old version of the system into this new format.  There are some CLI options to help you, such as `--no-headless`, `--devtools`, `--slowmo`, and so forth.
+
+Check out the nsf scraper for hints.  There is some code (such as the array spread operator) which works in the old version of the system, but which I had to replace with a call to forEach in version 2 since the new version uses Typescript.  If you run into difficulties where code works in the old version but not here and you can't figure it out, don't hesitate to ask for help.
+
+Note that there is a CLI flag, --commit-files, which is false by default.  When --commit-files is false, the data files generated by running the system have the suffix '.dev.json', which is git-ignored in the listings/ and statistics/ directories. This is done so that all of us can run and develop each other's scrapers concurrently without creating a ton of merge errors in the data directories.
 
 
 

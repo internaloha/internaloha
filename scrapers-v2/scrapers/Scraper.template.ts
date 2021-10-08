@@ -10,6 +10,7 @@ export class TemplateScraper extends Scraper {
   async launch() {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
+    this.log.info('Launching scraper.');
   }
 
   async login() {
