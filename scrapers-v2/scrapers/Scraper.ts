@@ -1,4 +1,4 @@
-import fs from 'fs';
+//import fs from 'fs';
 import log from 'loglevel';
 import chalk from 'chalk';
 import puppeteer from 'puppeteer-extra';
@@ -131,18 +131,18 @@ export class Scraper {
    */
   async writeStatistics() {
     this.log.debug('Starting write statistics');
-    const elapsedTimeSeconds = Math.trunc((this.endTime.getTime() - this.startTime.getTime()) / 1000);
-    const numErrors = this.errors.length;
-    const filename
-    try {
-      const suffix = this.commitFiles ? 'json' : 'dev.json';
-      const file = `${this.statisticsDir}/${this.discipline}/${this.name}.${suffix}`;
-      const data = JSON.stringify(this.listings, null, 2);
-      fs.writeFileSync(file, data, 'utf-8');
-      this.log.info('Wrote data');
-    } catch (error) {
-      this.log.error(`Error in Listings.writeListings: ${error}`);
-    }
+    // const elapsedTimeSeconds = Math.trunc((this.endTime.getTime() - this.startTime.getTime()) / 1000);
+    // const numErrors = this.errors.length;
+    // const filename
+    // try {
+    //   const suffix = this.commitFiles ? 'json' : 'dev.json';
+    //   const file = `${this.statisticsDir}/${this.discipline}/${this.name}.${suffix}`;
+    //   const data = JSON.stringify(this.listings, null, 2);
+    //   fs.writeFileSync(file, data, 'utf-8');
+    //   this.log.info('Wrote data');
+    // } catch (error) {
+    //   this.log.error(`Error in Listings.writeListings: ${error}`);
+    // }
   }
 
   /**
@@ -166,7 +166,7 @@ export class Scraper {
       await this.generateListings();
       await this.processListings();
     } catch (error) {
-      this.errors.push(error.message);
+      this.errors.push(error['message']);
     } finally {
       await this.close();
       await this.writeListings();
