@@ -71,7 +71,8 @@ export class Scraper {
     });
 
     // Set up the Listings object, now that we know the listingDir, name, and log.
-    this.listings = new Listings({ listingDir: this.listingDir, name: this.name, log: this.log, commitFiles: this.commitFiles });
+    const listingSubDir = `${this.listingDir}/${this.discipline}`;
+    this.listings = new Listings({ listingDir: listingSubDir, name: this.name, log: this.log, commitFiles: this.commitFiles });
 
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
