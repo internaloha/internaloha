@@ -18,6 +18,14 @@ const scrapers = {
   nsf: new NsfScraper(),
 };
 
+// You don't normally edit anything below.
+
+export enum DISCIPLINES {
+  CompSci = 'compsci',
+  CompEng = 'compeng'
+}
+export type DisciplinesType = keyof typeof DISCIPLINES;
+
 /* Create an array of scraper names to be used by the CLI. */
 const scraperNames = Object.values(scrapers).map(scraper => scraper.getName().toLowerCase());
 
@@ -29,6 +37,9 @@ const program = new Command()
   .addOption(new Option('-l, --log-level <level>', 'Specify logging level')
     .default('warn')
     .choices(['trace', 'debug', 'info', 'warn', 'error']))
+  .addOption(new Option('-d, --discipline <discipline>', 'Specify what types of internships to find')
+    .default(DISCIPLINES.CompSci)
+    .choices(Object.values(DISCIPLINES)))
   .addOption(new Option('-cf, --config-file <config-file>', 'Specify config file name.')
     .default('config.json'))
   .option('-nh, --no-headless', 'Disable headless operation (display browser window during execution)')

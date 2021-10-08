@@ -25,6 +25,8 @@ export class Scraper {
   public config: object;
   public defaultTimeout: number;
   public devtools;
+  public discipline;
+  public commitFiles: boolean;
   public headless: boolean;
   public listingDir: string;
   public log: any;
