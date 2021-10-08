@@ -6,8 +6,10 @@ import { Listings } from './Listings';
 
 // For some reason, the following packages generate TS errors if I use import.
 const prefix = require('loglevel-plugin-prefix');
+const moment = require('moment');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 const randomUserAgent = require('random-useragent');
+const fs = require('fs');
 
 const colors = {
   TRACE: chalk.magenta,
@@ -43,14 +45,14 @@ export class Scraper {
   protected listings: Listings;
   protected startTime: Date;
   protected endTime: Date;
-  protected errors: string[];
+  protected errorMessages: string[];
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url }) {
     this.name = name;
     this.url = url;
     this.log = log;
-    this.errors = [];
+    this.errorMessages = [];
   }
 
   /**
@@ -131,18 +133,20 @@ export class Scraper {
    */
   async writeStatistics() {
     this.log.debug('Starting write statistics');
-    // const elapsedTimeSeconds = Math.trunc((this.endTime.getTime() - this.startTime.getTime()) / 1000);
-    // const numErrors = this.errors.length;
-    // const filename
-    // try {
-    //   const suffix = this.commitFiles ? 'json' : 'dev.json';
-    //   const file = `${this.statisticsDir}/${this.discipline}/${this.name}.${suffix}`;
-    //   const data = JSON.stringify(this.listings, null, 2);
-    //   fs.writeFileSync(file, data, 'utf-8');
-    //   this.log.info('Wrote data');
-    // } catch (error) {
-    //   this.log.error(`Error in Listings.writeListings: ${error}`);
-    // }
+    const elapsedTime = Math.trunc((this.endTime.getTime() - this.startTime.getTime()) / 1000);
+    const numErrors = this.errorMessages.length;
+    const numListings = this.listings.length();
+    const suffix = this.commitFiles ? 'json' : 'dev.json';
+    const dateString = moment().format('YYYY-MM-DD');
+    const filename = `${this.statisticsDir}/${this.discipline}/${this.name}-${dateString}-${suffix}`;
+    try {
+      const data = { date: dateString, elapsedTime, numErrors, numListings, errorMessages: this.errorMessages };
+      const dataString = JSON.stringify(data, null, 2);
+      fs.writeFileSync(filename, dataString, 'utf-8');
+      this.log.info('Wrote statistics.');
+    } catch (error) {
+      this.log.error(`Error in Scraper.writeStatistics: ${error}`);
+    }
   }
 
   /**
@@ -166,7 +170,7 @@ export class Scraper {
       await this.generateListings();
       await this.processListings();
     } catch (error) {
-      this.errors.push(error['message']);
+      this.errorMessages.push(error['message']);
     } finally {
       await this.close();
       await this.writeListings();
