@@ -138,7 +138,7 @@ export class Scraper {
     const numListings = this.listings.length();
     const suffix = this.commitFiles ? 'json' : 'dev.json';
     const dateString = moment().format('YYYY-MM-DD');
-    const filename = `${this.statisticsDir}/${this.discipline}/${this.name}-${dateString}-${suffix}`;
+    const filename = `${this.statisticsDir}/${this.discipline}/${this.name}-${dateString}.${suffix}`;
     try {
       const data = { date: dateString, elapsedTime, numErrors, numListings, errorMessages: this.errorMessages };
       const dataString = JSON.stringify(data, null, 2);
