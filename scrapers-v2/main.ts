@@ -72,6 +72,7 @@ const scraper = scrapers[options.scraper.toLowerCase()];
 scraper.config = config;
 scraper.defaultTimeout = parseInt(options.defaultTimeout, 10);
 scraper.devTools = options.devtools;
+scraper.discipline = options.discipline;
 scraper.headless = options.headless;
 scraper.listingDir = options.listingDir;
 scraper.log.setLevel(options.logLevel);
@@ -82,7 +83,7 @@ scraper.viewportHeight = parseInt(options.viewportHeight, 10);
 scraper.viewportWidth = parseInt(options.viewportWidth, 10);
 
 // Uncomment the following line to verify the scraper state prior to running.
-// Object.keys(scraper).map(key => console.log(`${key}: ${scraper[key]}`));
+Object.keys(scraper).map(key => console.log(`${key}: ${scraper[key]}`));
 
 /* Run the chosen scraper. */
 scraper.scrape();

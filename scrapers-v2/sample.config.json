@@ -1,10 +1,12 @@
 {
-  "angellist": {
-    "user": "johnfoo@testing.com",
-    "password": "changeme"
-  },
-  "studentOpportunityCenter": {
-    "user": "johnfoo@testing.com",
-    "password": "changeme"
+  "credentials": {
+    "angellist": {
+      "user": "johnfoo@testing.com",
+      "password": "changeme"
+    },
+    "studentOpportunityCenter": {
+      "user": "johnfoo@testing.com",
+      "password": "changeme"
+    }
   }
 }

@@ -20,9 +20,11 @@ npm install
 
 ### Define config.json
 
-To install the system, you must create a (git-ignored) configuration file containing credentials. This file's name defaults to config.json. Currently, credentials must be specified for Angel List and Student Opportunity Center.
+To install the system, you must create a (git-ignored) configuration file. This file's name defaults to config.json. Currently, this file contains credentials necessary to run the Angel List and Student Opportunity Center scrapers.
 
 You can copy sample.config.json to config.json to create a template version of this file. If you are running scrapers that don't require credentials, then the template will be sufficient.
+
+Note: the syntax of the config.json file has changed slightly in V2. You can't simply copy over your previous config.json file. Instead, make a copy of sample.config.jons and update it manually from your V1 version.
 
 ### Fix chromium permissions (MacOS)
 
