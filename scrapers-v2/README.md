@@ -7,6 +7,7 @@ Scrapers V2 reimplements the initial version of InternAloha's scrapers with:
   * Typescript rather than Javascript.
   * A Scraper superclass that provides a common structure for implementation of a scraper.
   * Use of [commander](https://www.npmjs.com/package/commander) for top-level CLI processing.
+  * Structural support for multiple disciplines (i.e. scraping for computer science, for computer engineering, etc.)
 
 Most importantly, this version implements a "standard processing workflow" in the form of the scrape() method:
 
@@ -98,6 +99,7 @@ Usage: main [options]
 Options:
   -s, --scraper <scraper>                Specify the scraper. (choices: "template", "nsf")
   -l, --log-level <level>                Specify logging level (choices: "trace", "debug", "info", "warn", "error", default: "warn")
+  -d, --discipline <discipline>          Specify what types of internships to find (choices: "compsci", "compeng", default: "compsci")
   -cf, --config-file <config-file>       Specify config file name. (default: "config.json")
   -nh, --no-headless                     Disable headless operation (display browser window during execution)
   -dt, --devtools                        Open a devtools window during run. (default: false)
@@ -179,6 +181,15 @@ Tempe, Arizona,Arizona,Auburn, Alabama,Auburn, Alabama,Boise, Idaho,Pomona, Cali
 15:45:22 DEBUG NSF Starting write statistics
 15:45:22 DEBUG NSF Starting close
 ```
+
+## Multi-discipline support
+
+The scrape script provides a --discipline parameter that defaults to "compsci" but also supports "compeng". The value of this parameter is available to each scraper in a field called "discipline".  Each scraper can consult the value of the discipline field and alter their search behavior if they want to implement discipline-specific internship listings.
+
+The discipline parameter also affects where the choice of directory where the listing and statistics files are written. The compsci files are written into `listings/compsci` and `statistics/compsci`. The compeng files are written into `listings/compeng` and `statistics/compeng`.
+
+At this time, the scrapers do not change their behavior according to the value of the --discipline parameter. So, if you call the scrape script with "--discipline compeng", the only impact will be to write out the listing and statistics files to a different subdirectory.
+
 
 ## To Do
 
