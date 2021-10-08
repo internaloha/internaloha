@@ -23,6 +23,7 @@
     "eslint-plugin-react-hooks": "^4",
     "loglevel": "^1.7.1",
     "loglevel-plugin-prefix": "^0.8.4",
+    "moment": "^2.29.1",
     "puppeteer": "^5.2.1",
     "puppeteer-extra": "^3.1.18",
     "puppeteer-extra-plugin-stealth": "^2.7.8",

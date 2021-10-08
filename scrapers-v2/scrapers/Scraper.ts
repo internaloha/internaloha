@@ -1,3 +1,4 @@
+import fs from 'fs';
 import log from 'loglevel';
 import chalk from 'chalk';
 import puppeteer from 'puppeteer-extra';
@@ -40,12 +41,16 @@ export class Scraper {
   protected page;
   protected url: string;
   protected listings: Listings;
+  protected startTime: Date;
+  protected endTime: Date;
+  protected errors: string[];
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url }) {
     this.name = name;
     this.url = url;
     this.log = log;
+    this.errors = [];
   }
 
   /**
@@ -73,6 +78,8 @@ export class Scraper {
     // Set up the Listings object, now that we know the listingDir, name, and log.
     const listingSubDir = `${this.listingDir}/${this.discipline}`;
     this.listings = new Listings({ listingDir: listingSubDir, name: this.name, log: this.log, commitFiles: this.commitFiles });
+
+    this.startTime = new Date();
 
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
@@ -124,6 +131,18 @@ export class Scraper {
    */
   async writeStatistics() {
     this.log.debug('Starting write statistics');
+    const elapsedTimeSeconds = Math.trunc((this.endTime.getTime() - this.startTime.getTime()) / 1000);
+    const numErrors = this.errors.length;
+    const filename
+    try {
+      const suffix = this.commitFiles ? 'json' : 'dev.json';
+      const file = `${this.statisticsDir}/${this.discipline}/${this.name}.${suffix}`;
+      const data = JSON.stringify(this.listings, null, 2);
+      fs.writeFileSync(file, data, 'utf-8');
+      this.log.info('Wrote data');
+    } catch (error) {
+      this.log.error(`Error in Listings.writeListings: ${error}`);
+    }
   }
 
   /**
@@ -132,6 +151,7 @@ export class Scraper {
    */
   async close() {
     this.log.debug('Starting close');
+    this.endTime = new Date();
     await this.browser.close();
   }
 
@@ -140,12 +160,17 @@ export class Scraper {
    * Subclass: do not override.
    */
   async scrape() {
-    await this.launch();
-    await this.login();
-    await this.generateListings();
-    await this.processListings();
-    await this.writeListings();
-    await this.writeStatistics();
-    await this.close();
+    try {
+      await this.launch();
+      await this.login();
+      await this.generateListings();
+      await this.processListings();
+    } catch (error) {
+      this.errors.push(error.message);
+    } finally {
+      await this.close();
+      await this.writeListings();
+      await this.writeStatistics();
+    }
   }
 }
