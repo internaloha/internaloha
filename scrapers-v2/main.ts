@@ -58,7 +58,7 @@ const options = program.opts();
 // console.log('cli options:', options);
 
 // Now process the command line args.
-const configFile = options['configFile'];
+const configFile = options.configFile;
 let config;
 try {
   config = JSON.parse(fs.readFileSync(configFile, 'utf8'));
@@ -68,18 +68,18 @@ try {
 }
 
 /* Set the runtime options for the selected scraper. */
-const scraper = scrapers[options['scraper'].toLowerCase()];
+const scraper = scrapers[options.scraper.toLowerCase()];
 scraper.config = config;
-scraper.defaultTimeout = parseInt(options['defaultTimeout'], 10);
-scraper.devTools = options['devtools'];
-scraper.headless = options['headless'];
-scraper.listingDir = options['listingDir'];
-scraper.log.setLevel(options['logLevel']);
-scraper.minimumListings = parseInt(options['minimumListings'], 10);
-scraper.slowMo = parseInt(options['slowMo'], 10);
-scraper.statisticsDir = options['statisticsDir'];
-scraper.viewportHeight = parseInt(options['viewportHeight'], 10);
-scraper.viewportWidth = parseInt(options['viewportWidth'], 10);
+scraper.defaultTimeout = parseInt(options.defaultTimeout, 10);
+scraper.devTools = options.devtools;
+scraper.headless = options.headless;
+scraper.listingDir = options.listingDir;
+scraper.log.setLevel(options.logLevel);
+scraper.minimumListings = parseInt(options.minimumListings, 10);
+scraper.slowMo = parseInt(options.slowMo, 10);
+scraper.statisticsDir = options.statisticsDir;
+scraper.viewportHeight = parseInt(options.viewportHeight, 10);
+scraper.viewportWidth = parseInt(options.viewportWidth, 10);
 
 // Uncomment the following line to verify the scraper state prior to running.
 // Object.keys(scraper).map(key => console.log(`${key}: ${scraper[key]}`));

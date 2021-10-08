@@ -1,7 +1,6 @@
 import log from 'loglevel';
 import chalk from 'chalk';
 import puppeteer from 'puppeteer-extra';
-// eslint-disable-next-line no-unused-vars
 import { Listings } from './Listings';
 
 // For some reason, the following packages generate TS errors if I use import.
