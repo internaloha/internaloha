@@ -36,7 +36,7 @@
   "scripts": {
     "scrape": "ts-node -P tsconfig.buildScripts.json scrape.ts",
     "statistics": "ts-node -P tsconfig.buildScripts.json statistics.ts",
-    "lint": "eslint --quiet --ext .ts main.ts && eslint --quiet --ext .ts ./scrapers",
+    "lint": "eslint --quiet --ext .ts . && eslint --quiet --ext .ts ./scrapers",
     "unimported": "npx unimported"
   }
 }

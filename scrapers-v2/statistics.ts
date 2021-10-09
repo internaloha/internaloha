@@ -1,14 +1,9 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { Command, Option } from 'commander';
+import { DISCIPLINES } from './scrape';
 
-export enum DISCIPLINES {
-  CompSci = 'compsci',
-  CompEng = 'compeng'
-}
-export type DisciplinesType = keyof typeof DISCIPLINES;
-
-// Process the command line arguments. A legal scraper name is required.
+// Process the command line arguments. All options are optional.
 const program = new Command()
   .addOption(new Option('-l, --log-level <level>', 'Specify logging level')
     .default('warn')
@@ -27,10 +22,17 @@ const options = program.opts();
 const directory = path.join(options.statisticsDir, options.discipline);
 
 const statisticsFiles = fs.readdirSync(directory).filter(file => path.extname(file) === '.json');
+const statistics = [];
 
+// Initialize the statistics array with all statistics in the statistics dir.
 statisticsFiles.forEach(file => {
   const fileData = fs.readFileSync(path.join(directory, file));
-  const json = JSON.parse(fileData.toString());
-  console.log(json);
+  statistics.push(JSON.parse(fileData.toString()));
 });
+
+
+
+
+
+
 
