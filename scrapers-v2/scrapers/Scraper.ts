@@ -1,15 +1,14 @@
-//import fs from 'fs';
 import log from 'loglevel';
 import chalk from 'chalk';
 import puppeteer from 'puppeteer-extra';
 import { Listings } from './Listings';
+import * as prefix from 'loglevel-plugin-prefix';
+import * as moment from 'moment';
+import * as fs from 'fs';
+import * as randomUserAgent from 'random-useragent';
 
-// For some reason, the following packages generate TS errors if I use import.
-const prefix = require('loglevel-plugin-prefix');
-const moment = require('moment');
+// For some reason, the following package(s) generate TS errors if I use import.
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-const randomUserAgent = require('random-useragent');
-const fs = require('fs');
 
 const colors = {
   TRACE: chalk.magenta,
@@ -140,7 +139,7 @@ export class Scraper {
     const dateString = moment().format('YYYY-MM-DD');
     const filename = `${this.statisticsDir}/${this.discipline}/${this.name}-${dateString}.${suffix}`;
     try {
-      const data = { date: dateString, elapsedTime, numErrors, numListings, errorMessages: this.errorMessages };
+      const data = { date: dateString, elapsedTime, numErrors, numListings, errorMessages: this.errorMessages, scraper: this.name };
       const dataString = JSON.stringify(data, null, 2);
       fs.writeFileSync(filename, dataString, 'utf-8');
       this.log.info('Wrote statistics.');
