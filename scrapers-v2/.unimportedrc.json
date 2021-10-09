@@ -1,0 +1,16 @@
+{
+  "entry": [
+    "main.ts"
+  ],
+  "ignoreUnresolved": [
+  ],
+  "ignoreUnimported": [
+  ],
+  "ignoreUnused": [
+    "ts-node"
+  ],
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/typings/**"
+  ]
+}

@@ -7,7 +7,7 @@ on:
 
 defaults:
   run:
-    working-directory: ./scraper
+    working-directory: ./scrapers-v2
 
 jobs:
   build:

@@ -1,0 +1,16 @@
+{
+  "entry": [
+    "scrapers/*.js"
+  ],
+  "ignoreUnresolved": [
+  ],
+  "ignoreUnimported": [
+  ],
+  "ignoreUnused": [
+
+  ],
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/typings/**"
+  ]
+}
