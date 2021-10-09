@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es5",
-    "sourceMap": true,
-    "moduleResolution": "node",
+    "allowJs": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "strict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true,
+    "importHelpers": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "removeComments": true,
     "skipLibCheck": true,
-    "noImplicitAny": false,
-    "strictNullChecks": false
+    "sourceMap": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5"
   },
   "exclude": ["node_modules"]
 }

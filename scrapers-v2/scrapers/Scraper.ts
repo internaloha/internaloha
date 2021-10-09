@@ -1,8 +1,14 @@
 import log from 'loglevel';
 import chalk from 'chalk';
+import puppeteer from 'puppeteer-extra';
+import { Listings } from './Listings';
+import * as prefix from 'loglevel-plugin-prefix';
+import * as moment from 'moment';
+import * as fs from 'fs';
+import * as randomUserAgent from 'random-useragent';
 
-// For some reason, loglevel-plugin-prefix needs 'require' rather than 'import'.
-const prefix = require('loglevel-plugin-prefix');
+// For some reason, the following package(s) generate TS errors if I use import.
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 
 const colors = {
   TRACE: chalk.magenta,
@@ -12,101 +18,162 @@ const colors = {
   ERROR: chalk.red,
 };
 
-// Logging messages are prefixed with the timestamp, the scraper name, and the log level.
-prefix.reg(log);
-prefix.apply(log, {
-  format(level, logname, timestamp) {
-    return `${chalk.gray(`[${timestamp}]`)} ${colors[level.toUpperCase()](level)} ${colors[level.toUpperCase()](logname)}`;
-  },
-});
-
+/**
+ * Abstract superclass providing the structure and supporting functions for all scrapers.
+ */
 export class Scraper {
+  // public fields are set by the main.ts script.
+  public config: object;
+  public defaultTimeout: number;
+  public devtools: boolean;
+  public discipline;
+  public commitFiles: boolean;
+  public headless: boolean;
+  public listingDir: string;
+  public log: any;
+  public minimumListings: number;
+  public slowMo: number;
+  public statisticsDir: string;
+  public viewportHeight: number;
+  public viewportWidth: number;
+  // protected fields are set by the subclass.
+  protected browser;
   protected name: string;
+  protected page;
   protected url: string;
-  protected credentials: Record<string, string>;
-  protected minimumListings: number;
-  protected statisticsFilePath: string;
-  protected listingFilePath: string;
-  protected log: any;
+  protected listings: Listings;
+  protected startTime: Date;
+  protected endTime: Date;
+  protected errorMessages: string[];
 
   /** Initialize the scraper state and provide configuration info. */
-  constructor({ name, url, credentials = {}, minimumListings = 0, listingFilePath = './listings', statisticsFilePath = './statistics', logLevel = 'warn' }) {
+  constructor({ name, url }) {
     this.name = name;
     this.url = url;
-    this.credentials = credentials;
-    this.minimumListings = minimumListings;
-    this.listingFilePath = listingFilePath;
-    this.statisticsFilePath = statisticsFilePath;
-    this.log = log.getLogger(this.name);
-    this.log.setLevel(logLevel);
-    this.log.info(`Creating scraper: ${this.name}`);
+    this.log = log;
+    this.errorMessages = [];
   }
 
   /**
-   * Go to the site and perform any login necessary.
-   * @throws Error if login fails or site cannot be found.
+   * Allow CLI access to the name of this scraper.
+   * Subclass: do not override.
    */
-  login() {
-    this.log.info('Starting login');
+  getName() {
+    return this.name;
   }
 
   /**
-   * Search for internship listings.
-   * This can yield either a set of URLs to pages with listings, or a single page with all the listings.
-   * @throws Error if the search generates an error, or if it does not yield minimumListings.
+   * Set up puppeteer.
+   * Subclass: invoke `await super.launch()` first if you override.
    */
-  search() {
-    this.log.info('Starting search');
+  async launch() {
+    // Set up logging.
+    prefix.reg(this.log);
+    prefix.apply(this.log, {
+      format(level, logname, timestamp) {
+        const color = colors[level.toUpperCase()];
+        return `${color(timestamp)} ${color(level)} ${color(logname)}`;
+      },
+    });
 
+    // Set up the Listings object, now that we know the listingDir, name, and log.
+    const listingSubDir = `${this.listingDir}/${this.discipline}`;
+    this.listings = new Listings({ listingDir: listingSubDir, name: this.name, log: this.log, commitFiles: this.commitFiles });
+
+    this.startTime = new Date();
+
+    this.log.debug('Starting launch');
+    puppeteer.use(StealthPlugin());
+    this.browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
+    this.page = await this.browser.newPage();
+    await this.page.setViewport({ width: this.viewportWidth, height: this.viewportHeight });
+    await this.page.setUserAgent(randomUserAgent.getRandom());
+    await this.page.setDefaultTimeout(this.defaultTimeout);
   }
 
   /**
-   * Sets an internal cursor to point to the next listing to be parsed.
-   * @return false if there are no more listings to parse.
-   * @throws Error if a problem occurred getting the next listing.
+   * Login to site.
+   * Subclass: invoke `await super.login()` if you need to override.
    */
-  nextListing() {
-    this.log.info('Starting next listing');
-
+  async login() {
+    this.log.debug('Starting login');
   }
 
   /**
-   * Parses the current listing.
-   * Adds the parsed listing to an internal object.
+   * Scrapes the page and stores preliminary results in the this.listings field.
+   * Subclass: invoke `await super.processListings()` when you override.
+   * Processing means extracting the relevant information for writing.
    * @throws Error if a problem occurred parsing this listing.
    */
-  parseListing() {
-    this.log.info('Starting parse listing');
+  async generateListings() {
+    this.log.debug('Starting generate listings');
   }
 
   /**
-   * Writes the listings to the outputFilePath.
-   * @throws Error if a problem occurred writing the listings.
+   * After the this.listings field is populated, use this method to further process the data.
+   * Subclass: invoke `await super.processListings` if you override.
    */
-  writeListings() {
-    this.log.info('Starting write listings');
+  async processListings() {
+    this.log.debug('Starting processListings');
   }
 
   /**
-   * Appends a line to the statisticsFilePath with statistics about this run.
-   * The statistics file is in CSV format.
-   * Statistics include:
-   *   * Name of scraper
-   *   * Date and time of the run.
-   *   * Elapsed time for this run.
-   *   * Total number of listings found.
-   *   * Any errors thrown (including short description)
+   * Writes the listings to a file in listingFilePath.
+   * Subclass: generally no need to override.
    */
-  writeStatistics() {
-    this.log.info('Starting write statistics');
+  async writeListings() {
+    this.log.debug('Starting write listings');
+    this.listings.writeListings();
   }
 
-  scrape() {
-    this.login();
-    this.search();
-    this.nextListing();
-    this.parseListing();
-    this.writeListings();
-    this.writeStatistics();
+  /**
+   * Writes out statistics about this run.
+   * Subclass: generally no need to override.
+   */
+  async writeStatistics() {
+    this.log.debug('Starting write statistics');
+    const elapsedTime = Math.trunc((this.endTime.getTime() - this.startTime.getTime()) / 1000);
+    const numErrors = this.errorMessages.length;
+    const numListings = this.listings.length();
+    const suffix = this.commitFiles ? 'json' : 'dev.json';
+    const dateString = moment().format('YYYY-MM-DD');
+    const filename = `${this.statisticsDir}/${this.discipline}/${this.name}-${dateString}.${suffix}`;
+    try {
+      const data = { date: dateString, elapsedTime, numErrors, numListings, errorMessages: this.errorMessages, scraper: this.name };
+      const dataString = JSON.stringify(data, null, 2);
+      fs.writeFileSync(filename, dataString, 'utf-8');
+      this.log.info('Wrote statistics.');
+    } catch (error) {
+      this.log.error(`Error in Scraper.writeStatistics: ${error}`);
+    }
+  }
+
+  /**
+   * Perform any final close-down operations.
+   * Subclass: generally no need to override.
+   */
+  async close() {
+    this.log.debug('Starting close');
+    this.endTime = new Date();
+    await this.browser.close();
+  }
+
+  /**
+   * Runs the scraper.
+   * Subclass: do not override.
+   */
+  async scrape() {
+    try {
+      await this.launch();
+      await this.login();
+      await this.generateListings();
+      await this.processListings();
+    } catch (error) {
+      this.errorMessages.push(error['message']);
+    } finally {
+      await this.close();
+      await this.writeListings();
+      await this.writeStatistics();
+    }
   }
 }

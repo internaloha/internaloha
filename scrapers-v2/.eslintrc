@@ -3,6 +3,7 @@
   "parserOptions": {
     "ecmaVersion": 2017,
     "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": [
     "@typescript-eslint"
@@ -10,9 +11,18 @@
   "settings": {
   },
   "extends": [
-    "airbnb/base"
+    "airbnb-typescript"
   ],
   "rules": {
+    "@typescript-eslint/lines-between-class-members": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/no-loop-func": "off",
+    "@typescript-eslint/no-redeclare": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "@typescript-eslint/object-curly-spacing": "off",
+    "@typescript-eslint/space-infix-ops": "off",
+    "@typescript-eslint/dot-notation": "off",
+    "react/jsx-filename-extension": "off",
     "arrow-parens": "off",
     "camelcase": "off",
     "class-methods-use-this": "off",
@@ -29,6 +39,8 @@
     "max-len": "off",
     "no-await-in-loop": "off",
     "no-confusing-arrow": ["error", {"allowParens": true}],
+    "no-multiple-empty-lines": "error",
+    "no-param-reassign": "off",
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
     "object-curly-newline": "off",
@@ -42,5 +54,6 @@
     "prefer-promise-reject-errors": "off"
   },
   "globals": {
+    "document": true
   }
 }
