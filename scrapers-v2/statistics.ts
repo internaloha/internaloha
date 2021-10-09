@@ -29,10 +29,3 @@ statisticsFiles.forEach(file => {
   const fileData = fs.readFileSync(path.join(directory, file));
   statistics.push(JSON.parse(fileData.toString()));
 });
-
-
-
-
-
-
-
