@@ -60,25 +60,12 @@ statistics.forEach(statistic => {
   elapsedTimeInfo[name][date] = elapsedTime;
 });
 
-console.log(numListingsInfo);
-
 function writeFile(name, data) {
-  let csv;
-  try {
-    csv = parse(Object.values(data), { quote: ''});
-    console.log(csv);
-  } catch (err) {
-    console.error(err);
-  }
-  try {
-    const suffix = options['commitFiles'] ? 'csv' : 'dev.csv';
-    const file = path.join(directory, `statistics.${name}.${suffix}`);
-    // const dataString = JSON.stringify(csv, null, 2);
-    fs.writeFileSync(file, csv, 'utf-8');
-    console.log('Wrote listings.');
-  } catch (error) {
-    console.error(`Error in Listings.writeListings: ${error}`);
-  }
+  const csv = parse(Object.values(data), { quote: ''});
+  const suffix = options['commitFiles'] ? 'csv' : 'dev.csv';
+  const file = path.join(directory, `statistics.${name}.${suffix}`);
+  fs.writeFileSync(file, csv, 'utf-8');
+  console.log(`Wrote ${file}.`);
 }
 
 writeFile('num-listings', numListingsInfo);
