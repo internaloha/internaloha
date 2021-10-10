@@ -2,11 +2,13 @@ import log from 'loglevel';
 import chalk from 'chalk';
 import puppeteer from 'puppeteer-extra';
 import { Listings } from './Listings';
+import * as prefix from 'loglevel-plugin-prefix';
+import * as moment from 'moment';
+import * as fs from 'fs';
+import * as randomUserAgent from 'random-useragent';
 
-// For some reason, the following packages generate TS errors if I use import.
-const prefix = require('loglevel-plugin-prefix');
+// For some reason, the following package(s) generate TS errors if I use import.
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-const randomUserAgent = require('random-useragent');
 
 const colors = {
   TRACE: chalk.magenta,
@@ -40,12 +42,16 @@ export class Scraper {
   protected page;
   protected url: string;
   protected listings: Listings;
+  protected startTime: Date;
+  protected endTime: Date;
+  protected errorMessages: string[];
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url }) {
     this.name = name;
     this.url = url;
     this.log = log;
+    this.errorMessages = [];
   }
 
   /**
@@ -73,6 +79,8 @@ export class Scraper {
     // Set up the Listings object, now that we know the listingDir, name, and log.
     const listingSubDir = `${this.listingDir}/${this.discipline}`;
     this.listings = new Listings({ listingDir: listingSubDir, name: this.name, log: this.log, commitFiles: this.commitFiles });
+
+    this.startTime = new Date();
 
     this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
@@ -124,6 +132,20 @@ export class Scraper {
    */
   async writeStatistics() {
     this.log.debug('Starting write statistics');
+    const elapsedTime = Math.trunc((this.endTime.getTime() - this.startTime.getTime()) / 1000);
+    const numErrors = this.errorMessages.length;
+    const numListings = this.listings.length();
+    const suffix = this.commitFiles ? 'json' : 'dev.json';
+    const dateString = moment().format('YYYY-MM-DD');
+    const filename = `${this.statisticsDir}/${this.discipline}/${this.name}-${dateString}.${suffix}`;
+    try {
+      const data = { date: dateString, elapsedTime, numErrors, numListings, errorMessages: this.errorMessages, scraper: this.name };
+      const dataString = JSON.stringify(data, null, 2);
+      fs.writeFileSync(filename, dataString, 'utf-8');
+      this.log.info('Wrote statistics.');
+    } catch (error) {
+      this.log.error(`Error in Scraper.writeStatistics: ${error}`);
+    }
   }
 
   /**
@@ -132,6 +154,7 @@ export class Scraper {
    */
   async close() {
     this.log.debug('Starting close');
+    this.endTime = new Date();
     await this.browser.close();
   }
 
@@ -140,12 +163,19 @@ export class Scraper {
    * Subclass: do not override.
    */
   async scrape() {
-    await this.launch();
-    await this.login();
-    await this.generateListings();
-    await this.processListings();
-    await this.writeListings();
-    await this.writeStatistics();
-    await this.close();
+    try {
+      await this.launch();
+      await this.login();
+      await this.generateListings();
+      await this.processListings();
+    } catch (error) {
+      const message = error['message'];
+      this.errorMessages.push(message);
+      this.log.error(message);
+    } finally {
+      await this.close();
+      await this.writeListings();
+      await this.writeStatistics();
+    }
   }
 }

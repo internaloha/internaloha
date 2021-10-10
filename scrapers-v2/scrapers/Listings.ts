@@ -23,13 +23,17 @@ export class Listings {
     this.listings.push(listing);
   }
 
+  length() {
+    return this.listings.length;
+  }
+
   writeListings() {
     try {
       const suffix = this.commitFiles ? 'json' : 'dev.json';
       const file = `${this.listingDir}/${this.name}.${suffix}`;
       const data = JSON.stringify(this.listings, null, 2);
       fs.writeFileSync(file, data, 'utf-8');
-      this.log.info('Wrote data');
+      this.log.info('Wrote listings.');
     } catch (error) {
       this.log.error(`Error in Listings.writeListings: ${error}`);
     }

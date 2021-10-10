@@ -8,22 +8,32 @@ Scrapers V2 reimplements the initial version of InternAloha's scrapers with:
   * A Scraper superclass that provides a common structure for implementation of a scraper.
   * Use of [commander](https://www.npmjs.com/package/commander) for top-level CLI processing.
   * Structural support for multiple disciplines (i.e. scraping for computer science, for computer engineering, etc.)
+  * Automatic generation of scraper statistics
 
 Most importantly, this version implements a "standard processing workflow" in the form of the scrape() method:
 
 ```js
 async scrape() {
-  await this.launch();
-  await this.login();
-  await this.generateListings();
-  await this.processListings();
-  await this.writeListings();
-  await this.writeStatistics();
-  await this.close();
+  try {
+    await this.launch();
+    await this.login();
+    await this.generateListings();
+    await this.processListings();
+  } catch (error) {
+    const message = error['message'];
+    this.errorMessages.push(message);
+    this.log.error(message);
+  } finally {
+    await this.close();
+    await this.writeListings();
+    await this.writeStatistics();
+  }
 }
 ```
 
 Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc. You shouldn't need to touch the scrape() method.
+
+The standard processing workflow will catch any errors thrown during launch(), login(), generateListings(), and processListings(). (We don't expect errors during close(), writeListings(), or writeStatistics().) A scraper should not implement try-catch blocks unless they are able to handle the error and continue processing. If an error is encountered, then it will be printed out to the console and indicated in the statistics file generated for that run.
 
 I have implemented one scraper (NSF) using this approach, and it seems to work. You can use it as a model for guiding your own scraper development.
 
@@ -39,9 +49,9 @@ npm install
 
 ### Define config.json
 
-To install the system, you must create a (git-ignored) configuration file. This file's name defaults to config.json. Currently, this file contains credentials necessary to run the Angel List and Student Opportunity Center scrapers.
+To run the scraper script, you must provide a (git-ignored) configuration file. This file's name defaults to config.json. Currently, this file contains credentials necessary to run the Angel List and Student Opportunity Center scrapers.
 
-You can copy sample.config.json to config.json to create a template version of this file. If you are running scrapers that don't require credentials, then the template will be sufficient.
+You can copy sample.config.json to config.json to create a template version of this file. If you are running scrapers that don't require credentials, then copying the template will be sufficient. Otherwise, you have to edit this file and provide your own credentials to log into the site that will be scraped.
 
 Note: the syntax of the config.json file has changed slightly in V2. You can't simply copy over your previous config.json file. Instead, make a copy of sample.config.jons and update it manually from your V1 version.
 
@@ -52,8 +62,6 @@ On recent versions of MacOS, there is an annoying popup window that appears each
 If you are running MacOS, and get this popup, you can run the fix-chromium-permissions.sh script to address this problem. Note that if you reinstall Chromium (due to an update, for example), you will need to re-run the script.
 
 After running the script, you may get the popup one final time.
-
-
 
 ## Invocation
 
@@ -190,14 +198,52 @@ The discipline parameter also affects where the choice of directory where the li
 
 At this time, the scrapers do not change their behavior according to the value of the --discipline parameter. So, if you call the scrape script with "--discipline compeng", the only impact will be to write out the listing and statistics files to a different subdirectory.
 
+## Generating statistics
 
-## To Do
+Each time you run a scraper, a json file is written to a subdirectory of `/statistics` containing information about that run. The file name contains the timestamp YYYY-MM-DD, so statistics are only maintained for the last run of the day.
 
-There are still things to do for the NSF scraper (and scraping in general):
-  * I have not implemented a "processListings" method for the NSF scraper.
-  * I have not yet implemented the statistics file.
+For example, here are the contents of `statistics/compsci/nsf-2021-10-08.dev.json`:
 
-I should be able to work on these issues concurrently while others implement scrapers without too much conflict.
+```
+{
+  "date": "2021-10-08",
+  "elapsedTime": 5,
+  "numErrors": 0,
+  "numListings": 99,
+  "scraper": "nsf",
+  "errorMessages": []
+}
+```
+
+You can run the "statistics" script to read all of the files in the statistics directory and generate a set of CSV files that provide historical trends for the scrapers:
+
+```
+$ npm run statistics
+
+> scraper@2.0.0 statistics /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
+> ts-node -P tsconfig.buildScripts.json statistics.ts
+
+Wrote statistics/compsci/statistics.num-listings.dev.csv.
+Wrote statistics/compsci/statistics.num-errors.dev.csv.
+Wrote statistics/compsci/statistics.elapsed-time.dev.csv.
+```
+
+These files are designed to open in a spreadsheet program. For example, here are the contents of statistics.elapsed-time.dev.csv:
+
+```
+scraper,2021-10-08,2021-10-09,2021-10-10
+nsf,5,3,3
+```
+
+Since only one scraper is implemented and has data available for it, the csv file contains only two rows: a header row, and a single data row containing available information for three days in which the NSF scraper was invoked.
+
+## Development mode (don't commit output files)
+
+During development, people will be running scrapers and generating both listing and statistics "output" files in their branches.  This could lead to lots of spurious merge conflicts when trying to merge your branches back into main.
+
+To avoid this problem, both the scrape and statistics scripts have a flag called "--commit-files" which is (currently) false by default.  When false, all listing file names have a ".dev.json" suffix, and all statistics file names have a ".dev.csv" suffix.  Both of these suffixes are git-ignored, with the result that all output files you create during development are not committed to your branch or to main.
+
+If you want your data files to be committed, then you just run either script with the option "--commit-files", which makes that flag true. Then the associated output files are created with ".json" (rather than ".dev.json") or ".csv" (rather than ".dev.csv"), and so they will not be git-ignored.
 
 ## Implement your own scraper.
 
