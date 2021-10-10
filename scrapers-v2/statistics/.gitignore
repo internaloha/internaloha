@@ -1,2 +1,3 @@
 # don't commit files generated during development.
 *.dev.json
+**/.DS_Store
