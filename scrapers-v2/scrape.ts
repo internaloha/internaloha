@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { Command, Option } from 'commander';
 import { NsfScraper } from './scrapers/Scraper.nsf';
+import { CiscoScraper } from './scrapers/Scraper.cisco';
 import { TemplateScraper } from './scrapers/Scraper.template';
 
 /**
@@ -16,6 +17,7 @@ import { TemplateScraper } from './scrapers/Scraper.template';
 const scrapers = {
   template: new TemplateScraper(),
   nsf: new NsfScraper(),
+  cisco: new CiscoScraper(),
 };
 
 // You don't normally edit anything below.
