@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import { Command, Option } from 'commander';
-import { DISCIPLINES } from './scrape';
+import { DISCIPLINES } from './disciplines';
 
 // Process the command line arguments. All options are optional.
 const program = new Command()
@@ -29,3 +29,21 @@ statisticsFiles.forEach(file => {
   const fileData = fs.readFileSync(path.join(directory, file));
   statistics.push(JSON.parse(fileData.toString()));
 });
+console.log(statistics);
+
+// Goal Format: [{scraper: <name1>, <date1>: <numListings1>, <date2>: <numListings2>} ... ]
+// Intermediate format: { <name1> : { scraper: <name1>, <date1>: <numListings1>, <date2>: <numListings2>} ...}
+
+// const info = {};
+
+// const { parse } = require('json2csv');
+
+// extract the dates in order to compute the fields.
+// const fields = ['scraper', 'num', 'field3'];
+// const opts = { fields };
+// try {
+//   const csv = parse(myData, opts);
+//   console.log(csv);
+// } catch (err) {
+//   console.error(err);
+// }
