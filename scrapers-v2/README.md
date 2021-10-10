@@ -33,7 +33,7 @@ async scrape() {
 
 Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc. You shouldn't need to touch the scrape() method.
 
-The standard processing workflow will catch any errors thrown during launch(), login(), generateListings(), and processListings(). (We don't expect errors during close, writeListings, or writeStatistics.) A scraper should not implement try-catch blocks unless they are able to handle the error and continue processing. If an error is encountered, then it will be printed out to the console and indicated in the statistics file generated for that run.
+The standard processing workflow will catch any errors thrown during launch(), login(), generateListings(), and processListings(). (We don't expect errors during close(), writeListings(), or writeStatistics().) A scraper should not implement try-catch blocks unless they are able to handle the error and continue processing. If an error is encountered, then it will be printed out to the console and indicated in the statistics file generated for that run.
 
 I have implemented one scraper (NSF) using this approach, and it seems to work. You can use it as a model for guiding your own scraper development.
 
