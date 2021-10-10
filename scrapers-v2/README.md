@@ -14,17 +14,26 @@ Most importantly, this version implements a "standard processing workflow" in th
 
 ```js
 async scrape() {
-  await this.launch();
-  await this.login();
-  await this.generateListings();
-  await this.processListings();
-  await this.writeListings();
-  await this.writeStatistics();
-  await this.close();
+  try {
+    await this.launch();
+    await this.login();
+    await this.generateListings();
+    await this.processListings();
+  } catch (error) {
+    const message = error['message'];
+    this.errorMessages.push(message);
+    this.log.error(message);
+  } finally {
+    await this.close();
+    await this.writeListings();
+    await this.writeStatistics();
+  }
 }
 ```
 
 Basically, you implement a scraper by overriding (or adding functionality to) the methods launch(), login(), generateListings(), etc. You shouldn't need to touch the scrape() method.
+
+The standard processing workflow will catch any errors thrown during launch(), login(), generateListings(), and processListings(). (We don't expect errors during close, writeListings, or writeStatistics.) A scraper should not implement try-catch blocks unless they are able to handle the error and continue processing. If an error is encountered, then it will be printed out to the console and indicated in the statistics file generated for that run.
 
 I have implemented one scraper (NSF) using this approach, and it seems to work. You can use it as a model for guiding your own scraper development.
 
