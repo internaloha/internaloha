@@ -228,6 +228,14 @@ nsf,5,3,3
 
 Since only one scraper is implemented and has data available for it, the csv file contains only two rows: a header row, and a single data row containing available information for three days in which the NSF scraper was invoked.
 
+## Development mode (don't commit output files)
+
+During development, people will be running scrapers and generating both listing and statistics "output" files in their branches.  This could lead to lots of spurious merge conflicts when trying to merge your branches back into main.
+
+To avoid this problem, both the scrape and statistics scripts have a flag called "--commit-files" which is (currently) false by default.  When false, all listing file names have a ".dev.json" suffix, and all statistics file names have a ".dev.csv" suffix.  Both of these suffixes are git-ignored, with the result that all output files you create during development are not committed to your branch or to main.
+
+If you want your data files to be committed, then you just run either script with the option "--commit-files", which makes that flag true. Then the associated output files are created with ".json" (rather than ".dev.json") or ".csv" (rather than ".dev.csv"), and so they will not be git-ignored.
+
 ## Implement your own scraper.
 
 First, check to make sure that you can run the NSF scraper successfully in your own environment. I suggest you read through the `Scraper.ts` and `Scraper.nsf.ts` files and make sure you understand the superclass and subclass relationship.  Notice how the NSF scraper methods frequently call the superclass method initially, then augment this behavior with additional code.
