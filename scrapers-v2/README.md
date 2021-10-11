@@ -70,21 +70,21 @@ After running the script, you may get the popup one final time.
 This is the simplest version of the script, which runs a single scraper. For example:
 
 ```
-npm run scrape -- -s nsf-reu
+npm run scrape -- -s nsf
 ```
 
 Currently, this command produces the following output:
 
 ```
-$ npm run scrape -- -s nsf-reu
+$ npm run scrape -- -s nsf
 
 > scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf-reu"
+> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf"
 
 $
 ```
 
-You will see that a file called `nsf.json` has been written to the `listings` directory.
+You will see that a file called `nsf.dev.json` has been written to the `listings/compsci` directory, and a file called (for example) `nsf-2021-10-18.dev.json` has been written to the `statistics/compsci` directory.
 
 ### Available options: `npm run scrape -- -h`
 
