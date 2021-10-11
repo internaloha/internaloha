@@ -169,7 +169,9 @@ export class Scraper {
       await this.generateListings();
       await this.processListings();
     } catch (error) {
-      this.errorMessages.push(error['message']);
+      const message = error['message'];
+      this.errorMessages.push(message);
+      this.log.error(message);
     } finally {
       await this.close();
       await this.writeListings();
