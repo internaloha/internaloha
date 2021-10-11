@@ -19,7 +19,14 @@ export class NsfScraper extends Scraper {
     await this.page.goto(this.url);
   }
 
-  async getValues(selector, field) {
+  /**
+   * Get the values associated with the passed selector and associated field.
+   * Because we can't do closures with puppeteer, special arguments are needed to pass selector and field into page.evaluate().
+   * See: https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevaluatepagefunction-args
+   * Also: we have to create a returnVals variable and await it, then return it.
+   * It's worth it because we call this function four times in generateListings.
+   */
+  private async getValues(selector, field) {
     const returnVals = await this.page.evaluate((selector, field) => {
       const vals = [];
       const nodes = document.querySelectorAll(selector);
