@@ -47,38 +47,49 @@ export class CiscoScraper extends Scraper {
           await this.page.click('div[class="pagination autoClearer"] a:last-child');
           hasPage = await this.page.$('div[class="pagination autoClearer"] a:last-child');
       }
-      // Create array of position titles.
-      const positions = await this.page.evaluate(() => {
-          const vals = [];
-          const nodes = document.querySelectorAll('h2[itemprop="title"]');
-          nodes.forEach(node => vals.push(node['innerText']));
-          return vals;
-      });
-      this.log.debug(`Positions: \n${positions}`);
-
-      // Create array of descriptions.
-      const descriptions = await this.page.evaluate(() => {
-          const vals = [];
-          const nodes = document.querySelectorAll('div[itemprop="description"]');
-          nodes.forEach(node => vals.push(node['innerText']));
-          return vals;
-      });
-      this.log.debug(`Descriptions: \n${descriptions}`);
-
-      // Create array of locations, then create arrays of cities and states from it.
-      const locations = await this.page.evaluate(() => {
-          const vals = [];
-          const nodes = document.querySelectorAll('div[itemprop="jobLocation"]');
-          nodes.forEach(node => vals.push(node['innerText']));
-          return vals;
-      });
-      this.log.debug(`Locations: \n${locations}`);
+      const descriptions = [];
+      const positions = [];
+      const locations = [];
       const cities = [];
       const states = [];
-      for (let i = 0; i < locations.length; i++) {
-          const loc = locations[i].split(', ');
-          cities.push(loc[0]);
-          states.push(loc[1]);
+      for (let j = 0; j < urls.length; j++) {
+          await this.page.goto(urls[j]);
+          // Create array of position titles.
+          const position = await this.page.evaluate(() => {
+              const vals = [];
+              const nodes = document.querySelectorAll('h2[itemprop="title"]');
+              nodes.forEach(node => vals.push(node['innerText']));
+              return vals;
+          });
+          this.log.debug(`Position: \n${position}`);
+          positions.push(position);
+
+          // Create array of descriptions.
+          const description = await this.page.evaluate(() => {
+              const vals = [];
+              const nodes = document.querySelectorAll('div[itemprop="description"]');
+              nodes.forEach(node => vals.push(node['innerText']));
+              return vals;
+          });
+          this.log.debug(`Description: \n${description}`);
+          descriptions.push(description);
+
+          // Create array of locations, then create arrays of cities and states from it.
+          const location = await this.page.evaluate(() => {
+              const vals = [];
+              const nodes = document.querySelectorAll('div[itemprop="jobLocation"]');
+              nodes.forEach(node => vals.push(node['innerText']));
+              return vals;
+          });
+          this.log.debug(`Location: \n${location}`);
+          locations.push((location))
+          for (let i = 0; i < location.length; i++) {
+              const loc = location[i].split(', ');
+              this.log.debug(`Location: \n${loc}`);
+              cities.push(loc[0]);
+              states.push(loc[1]);
+          }
+
       }
 
       // Now we add listings. All arrays are (hopefully!) the same length.
