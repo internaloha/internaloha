@@ -42,9 +42,16 @@ export class ZipRecruiterScraper extends Scraper {
       const vals = [];
       const nodes = document.querySelectorAll('.job_link.t_job_link');
       nodes.forEach(node => vals.push(node['innerText']));
-      return vals;
+      return vals.map(val => val.replace('https://www.nsf.gov/cgi-bin/good-bye?', ''));
     });
     //create the array of positions
+    const positions = await this.page.evaluate(() => {
+      const vals = [];
+      const nodes = document.querySelectorAll('.job_link.t_job_link');
+      nodes.forEach(node => vals.push(node['innerText']));
+      return vals;
+    });
+    this.log.debug(`Positions: \n${positions}`);
 
     //create the array of companies
 
