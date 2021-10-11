@@ -3,6 +3,7 @@ import { Command, Option } from 'commander';
 import { NsfScraper } from './scrapers/Scraper.nsf';
 import { CiscoScraper } from './scrapers/Scraper.cisco';
 import { TemplateScraper } from './scrapers/Scraper.template';
+import { DISCIPLINES } from './disciplines';
 
 /**
  *  Create all possible scraper instances next. Keys must be all lower case.
@@ -21,12 +22,6 @@ const scrapers = {
 };
 
 // You don't normally edit anything below.
-
-export enum DISCIPLINES {
-  CompSci = 'compsci',
-  CompEng = 'compeng'
-}
-export type DisciplinesType = keyof typeof DISCIPLINES;
 
 /* Create an array of scraper names to be used by the CLI. */
 const scraperNames = Object.values(scrapers).map(scraper => scraper.getName().toLowerCase());
