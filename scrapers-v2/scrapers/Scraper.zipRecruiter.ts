@@ -32,8 +32,14 @@ export class ZipRecruiterScraper extends Scraper {
     await this.page.waitForSelector('.modal-dialog');
     await this.page.mouse.click(1000, 800);
     await this.page.waitForTimeout(5000);
+    await this.page.click('menu[id="select-menu-search_filters_tags"] > button[class="select-menu-header"]');
+    await this.page.click('menu[id="select-menu-search_filters_tags"] .select-menu-item:nth-child(3)');
+    await this.page.waitForSelector('.job_content');
     const urls = await this.page.evaluate(() => {
       const vals = [];
+      const nodes = document.querySelectorAll('.job_link.t_job_link');
+      nodes.forEach(node => vals.push(node['innerText']));
+
     });
   }
 }
