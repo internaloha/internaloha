@@ -1,3 +1,4 @@
+
 export class Listing {
   public url: string;
   public position?: string;

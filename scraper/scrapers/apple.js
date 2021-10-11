@@ -58,6 +58,7 @@ async function main(headless) {
     [browser, page] = await startBrowser(headless);
     await page.goto('https://jobs.apple.com/en-us/search?sort=relevance');
     await setSearchFilter(page);
+
     let totalPage = await page.evaluate(() => document.querySelector('form[id="frmPagination"] span:last-child').innerHTML);
     // if there is just 1 page, set totalPage to 3 because for loop below starts at 2
     if (totalPage === undefined || totalPage === 1) {
