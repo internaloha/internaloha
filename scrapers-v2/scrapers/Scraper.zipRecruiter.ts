@@ -18,7 +18,22 @@ export class ZipRecruiterScraper extends Scraper {
     super.login();
     await this.page.goto(this.url);
   }
-  
 
-
+  async generateListings() {
+    super.generateListings();
+    await this.page.goto('https://www.ziprecruiter.com/');
+    await this.page.waitForSelector('input[id="search1"]');
+    await this.page.waitForSelector('input[id="location1"]');
+    const searchQuery = 'computer science internship';
+    await this.page.type('input[id="search1"', searchQuery);
+    await this.page.$eval('input[id="location1"]', (el) => el.value = 'US');
+    await this.page.click('button.job_search_hide + input');
+    await this.page.mouse.click(1, 1);
+    await this.page.waitForSelector('.modal-dialog');
+    await this.page.mouse.click(1000, 800);
+    await this.page.waitForTimeout(5000);
+    const urls = await this.page.evaluate(() => {
+      const vals = [];
+    });
+  }
 }
