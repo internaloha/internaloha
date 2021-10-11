@@ -39,7 +39,7 @@ export class NsfScraper extends Scraper {
     });
     this.log.debug(`URLS: \n${urls}`);
 
-    // Create array of position titles.
+    // Position titles.
     const positions = await this.page.evaluate(() => {
       const vals = [];
       const nodes = document.querySelectorAll('td[data-label="Site Information: "] > div > a');
@@ -48,7 +48,16 @@ export class NsfScraper extends Scraper {
     });
     this.log.debug(`Positions: \n${positions}`);
 
-    // Create array of descriptions.
+    // Companies
+    const companies = await this.page.evaluate(() => {
+      const vals = [];
+      const nodes = document.querySelectorAll('td[data-label="Site Information: "] > div > strong');
+      nodes.forEach(node => vals.push(node['innerText']));
+      return vals;
+    });
+    this.log.debug(`Companies: \n${companies}`);
+
+    // Descriptions.
     const descriptions = await this.page.evaluate(() => {
       const vals = [];
       const nodes = document.querySelectorAll('td[data-label="Additional Information: "] > div ');
@@ -75,8 +84,8 @@ export class NsfScraper extends Scraper {
 
     // Now we add listings. All arrays are (hopefully!) the same length.
     for (let i = 0; i < urls.length; i++) {
-      const location = { city: cities[i], state: states[i] };
-      const listing = new Listing({ url: urls[i], position: positions[i], location, description: descriptions[i] });
+      const location = { city: cities[i], state: states[i], country: '' };
+      const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
       this.listings.addListing(listing);
     }
   }
