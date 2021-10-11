@@ -24,7 +24,7 @@ export class NsfScraper extends Scraper {
    * Because we can't do closures with puppeteer, special arguments are needed to pass selector and field into page.evaluate().
    * See: https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevaluatepagefunction-args
    * Also: we have to create a returnVals variable and await it, then return it.
-   * It's worth it because we call this function four times in generateListings.
+   * It's worth it because we call this function five times in generateListings.
    */
   private async getValues(selector, field) {
     const returnVals = await this.page.evaluate((selector, field) => {
@@ -59,6 +59,10 @@ export class NsfScraper extends Scraper {
     const descriptions = await this.getValues('td[data-label="Additional Information: "] > div ', 'innerText');
     this.log.debug(`Descriptions: \n${descriptions}`);
 
+    // Companies
+    const companies = await this.getValues('td[data-label="Site Information: "] > div > strong', 'innerText');
+    this.log.debug(`Companies: \n${companies}`);
+
     // Locations
     const locations = await this.getValues('td[data-label="Site Location: "] > div', 'innerText');
     this.log.debug(`Locations: \n${locations}`);
@@ -72,8 +76,8 @@ export class NsfScraper extends Scraper {
 
     // Now generate listings. All arrays are (hopefully!) the same length.
     for (let i = 0; i < urls.length; i++) {
-      const location = { city: cities[i], state: states[i] };
-      const listing = new Listing({ url: urls[i], position: positions[i], location, description: descriptions[i] });
+      const location = { city: cities[i], state: states[i], country: '' };
+      const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
       this.listings.addListing(listing);
     }
   }
