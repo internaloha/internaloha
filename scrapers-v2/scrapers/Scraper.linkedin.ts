@@ -33,7 +33,7 @@ export class LinkedinScraper extends Scraper {
                     totalHeight += distance;
                     if (totalHeight >= scrollHeight) {
                         clearInterval(timer);
-                        resolve();
+                        resolve(); //????
                     }
                 }, 400);
             });
@@ -168,7 +168,7 @@ export class LinkedinScraper extends Scraper {
                   this.log.info(position);
                   totalInternships++;
               } catch (err5) {
-                  this.log.info('LinkedIn', err5.message);
+                  // this.log.info('LinkedIn', err5.message);
                   this.log.info('Skipping! Did not load...');
                   skippedURLs.push(urls[i]);
               }
