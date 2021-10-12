@@ -3,6 +3,7 @@ import { Command, Option } from 'commander';
 import { NsfScraper } from './scrapers/Scraper.nsf';
 import { TemplateScraper } from './scrapers/Scraper.template';
 import { DISCIPLINES } from './disciplines';
+import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
 
 /**
  *  Create all possible scraper instances next. Keys must be all lower case.
@@ -17,6 +18,7 @@ import { DISCIPLINES } from './disciplines';
 const scrapers = {
   template: new TemplateScraper(),
   nsf: new NsfScraper(),
+  simplyhired: new SimplyHiredScraper(),
 };
 
 // You don't normally edit anything below.

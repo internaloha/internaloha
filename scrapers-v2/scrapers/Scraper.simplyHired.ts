@@ -1,6 +1,7 @@
-import { Listing } from './Listing';
+// import { Listing } from './Listing';
 import { Scraper } from './Scraper';
 import Logger from 'loglevel';
+import { Listing } from './Listing';
 
 const prefix = require('loglevel-plugin-prefix');
 
@@ -57,9 +58,6 @@ export class SimplyHiredScraper extends Scraper {
       ),
     );
 
-    let totalPages = 1;
-    let totalJobs = 0;
-
     if (internshipDropdown.length > 0) {
       const url = `https://www.simplyhired.com/${internshipDropdown[0]}`;
       this.log.info(`Directing to: ${url}`);
@@ -92,13 +90,53 @@ export class SimplyHiredScraper extends Scraper {
             await this.page.waitForSelector('h2.viewjob-jobTitle');
             await this.page.waitForSelector('.viewjob-labelWithIcon');
             // eslint-disable-next-line no-shadow
-            await getData(this.page, elements).then((data => {
-              this.log.info(data);
-            }));
+            // await getData(this.page, elements).then((data => {
+            //   this.log.info(data);
+            // }));
 
           } catch (e) {
             this.log.debug('--- Loaded up old UI. Trying to scrape with old UI layout ---');
+            try {
+              await this.page.waitForTimeout(1000);
+              const urls = await this.page.evaluate(
+                () => Array.from(
+                  // eslint-disable-next-line no-undef
+                  document.querySelectorAll('a[class="SerpJob-link card-link"]'),
+                  // @ts-ignore
+                  a => a.href,
+                ),
+              );
+              this.log.debug(`URLS: \n${urls}`);
+
+              for (let i = 1; i <= elements.length; i++) {
+                const element = elements[i];
+                const position = await this.getValues('div[class="viewjob-jobTitle h2"]', 'innerText');
+                const company = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
+                const location = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+                const description = await this.getValues('div[class="viewjob-jobDescription"]', 'innerHTML');
+                this.log.debug(`Position: \n${position}`);
+                this.log.debug(`Company: \n${company}`);
+                this.log.debug(`Location: \n${location}`);
+                this.log.debug(`Description: \n${description}`);
+                const listing = new Listing({
+                  url: urls[i - 1], location: {
+                    city: location.match(/^([^,]*)/)[0],
+                    state: location.match(/([^ ,]*)$/)[0],
+                    country: '',
+                  },
+                  position, description, company});
+                this.listings.addListing(listing);
+                if (i < elements.length) {
+                  await element.click();
+                }
+              }
+            } catch (err) {
+              this.log.trace(this.name, 'Error: ', err);
+            }
           }
+          const nextPage = await this.page.$('a[class="Pagination-link next-pagination"]');
+          await nextPage.click();
+
         } catch (err5) {
           hasNext = false;
           this.log.info('\nReached the end of pages!');
