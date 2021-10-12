@@ -22,7 +22,7 @@ const colors = {
  * Abstract superclass providing the structure and supporting functions for all scrapers.
  */
 export class Scraper {
-  // public fields are set by the main.ts script.
+  // public fields are set by the scrape.ts script.
   public config: object;
   public defaultTimeout: number;
   public devtools: boolean;
