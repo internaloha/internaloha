@@ -1,13 +1,15 @@
 {
   "entry": [
-    "main.ts"
+    "scrape.ts",
+    "statistics.ts"
   ],
   "ignoreUnresolved": [
   ],
   "ignoreUnimported": [
   ],
   "ignoreUnused": [
-    "ts-node"
+    "ts-node",
+    "tslib"
   ],
   "ignorePatterns": [
     "**/node_modules/**",
