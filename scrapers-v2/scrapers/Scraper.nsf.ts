@@ -19,6 +19,23 @@ export class NsfScraper extends Scraper {
     await this.page.goto(this.url);
   }
 
+  /**
+   * Get the values associated with the passed selector and associated field.
+   * Because we can't do closures with puppeteer, special arguments are needed to pass selector and field into page.evaluate().
+   * See: https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevaluatepagefunction-args
+   * Also: we have to create a returnVals variable and await it, then return it.
+   * It's worth it because we call this function five times in generateListings.
+   */
+  private async getValues(selector, field) {
+    const returnVals = await this.page.evaluate((selector, field) => {
+      const vals = [];
+      const nodes = document.querySelectorAll(selector);
+      nodes.forEach(node => vals.push(node[field]));
+      return vals;
+    }, selector, field);
+    return returnVals;
+  }
+
   async generateListings() {
     super.generateListings();
     await this.page.goto('https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5049');
@@ -27,52 +44,27 @@ export class NsfScraper extends Scraper {
     await this.page.waitForSelector('a[onclick="showItemsPerPageForm(event, \'All\', \'?unitid=5049\')"]');
     await this.page.click('a[onclick="showItemsPerPageForm(event, \'All\', \'?unitid=5049\')"]');
     await this.page.waitForSelector('td[data-label="Site Information: "] > div > a');
-    await this.page.waitForSelector('td[data-label="Site Information: "] > div > a');
     // Generate a set of parallel arrays containing the fields to be put into each listing.
     // Each array should be the same length, and each positional element should refer to the same listing.
     // Start by creating an array of URLs.
-    const urls = await this.page.evaluate(() => {
-      const vals = [];
-      const nodes = document.querySelectorAll('td[data-label="Site Information: "] > div > a');
-      nodes.forEach(node => vals.push(node['href']));
-      return vals.map(val => val.replace('https://www.nsf.gov/cgi-bin/good-bye?', ''));
-    });
+    let urls = await this.getValues('td[data-label="Site Information: "] > div > a', 'href');
+    urls = urls.map(val => val.replace('https://www.nsf.gov/cgi-bin/good-bye?', ''));
     this.log.debug(`URLS: \n${urls}`);
 
-    // Position titles.
-    const positions = await this.page.evaluate(() => {
-      const vals = [];
-      const nodes = document.querySelectorAll('td[data-label="Site Information: "] > div > a');
-      nodes.forEach(node => vals.push(node['innerText']));
-      return vals;
-    });
+    // Positions
+    const positions = await this.getValues('td[data-label="Site Information: "] > div > a', 'innerText');
     this.log.debug(`Positions: \n${positions}`);
 
-    // Companies
-    const companies = await this.page.evaluate(() => {
-      const vals = [];
-      const nodes = document.querySelectorAll('td[data-label="Site Information: "] > div > strong');
-      nodes.forEach(node => vals.push(node['innerText']));
-      return vals;
-    });
-    this.log.debug(`Companies: \n${companies}`);
-
-    // Descriptions.
-    const descriptions = await this.page.evaluate(() => {
-      const vals = [];
-      const nodes = document.querySelectorAll('td[data-label="Additional Information: "] > div ');
-      nodes.forEach(node => vals.push(node['innerText']));
-      return vals;
-    });
+    // Descriptions
+    const descriptions = await this.getValues('td[data-label="Additional Information: "] > div ', 'innerText');
     this.log.debug(`Descriptions: \n${descriptions}`);
 
-    // Create array of locations, then create arrays of cities and states from it.
-    const locations = await this.page.evaluate(() => {
-      const vals = [];
-      const nodes = document.querySelectorAll('td[data-label="Site Location: "] > div');
-      nodes.forEach(node => vals.push(node['innerText']));
-      return vals;
-    });
+    // Companies
+    const companies = await this.getValues('td[data-label="Site Information: "] > div > strong', 'innerText');
+    this.log.debug(`Companies: \n${companies}`);
+
+    // Locations
+    const locations = await this.getValues('td[data-label="Site Location: "] > div', 'innerText');
     this.log.debug(`Locations: \n${locations}`);
     const cities = [];
     const states = [];
@@ -82,7 +74,7 @@ export class NsfScraper extends Scraper {
       states.push(loc[1]);
     }
 
-    // Now we add listings. All arrays are (hopefully!) the same length.
+    // Now generate listings. All arrays are (hopefully!) the same length.
     for (let i = 0; i < urls.length; i++) {
       const location = { city: cities[i], state: states[i], country: '' };
       const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
@@ -92,6 +84,6 @@ export class NsfScraper extends Scraper {
 
   async processListings() {
     await super.processListings();
-    // Not yet implemented.
+    // No post-processing (yet) for NSF scraper results.
   }
 }
