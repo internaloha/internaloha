@@ -35,9 +35,27 @@ export class ZipRecruiterScraper extends Scraper {
     await this.page.click('menu[id="select-menu-search_filters_tags"] > button[class="select-menu-header"]');
     await this.page.click('menu[id="select-menu-search_filters_tags"] .select-menu-item:nth-child(3)');
     await this.page.waitForSelector('.job_content');
+    try {
+      // Click the "Load More" button
+      await this.page.click('.load_more_jobs');
+    } catch (err) {
+    }
+
     // Generate a set of parallel arrays containing the fields to be put into each listing.
     // Each array should be the same length, and each positional element should refer to the same listing.
     // Start by creating an array of URLs.
+    let urls = await this.page.evaluate(
+      () => Array.from(
+        // eslint-disable-next-line no-undef
+        document.querySelectorAll('.job_link.t_job_link'),
+        a => a.getAttribute('href'),
+      ),
+    );
+
+    //generate the arrays
+    for (let i = 0; i < urls.length; i++) {
+
+    }
 
 
     //create the array of companies
