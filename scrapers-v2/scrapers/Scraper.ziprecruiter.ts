@@ -25,6 +25,7 @@ export class ZipRecruiterScraper extends Scraper {
     await this.page.waitForSelector('input[id="search1"]');
     await this.page.waitForSelector('input[id="location1"]');
     const searchQuery = 'computer science internship';
+    this.log.debug('Inputting search query:', searchQuery);
     await this.page.type('input[id="search1"', searchQuery);
     await this.page.$eval('input[id="location1"]', (el) => el.value = 'US');
     await this.page.click('button.job_search_hide + input');
@@ -32,13 +33,16 @@ export class ZipRecruiterScraper extends Scraper {
     await this.page.waitForSelector('.modal-dialog');
     await this.page.mouse.click(1000, 800);
     await this.page.waitForTimeout(5000);
+    this.log.debug('Setting filter by 10 days...');
     await this.page.click('menu[id="select-menu-search_filters_tags"] > button[class="select-menu-header"]');
     await this.page.click('menu[id="select-menu-search_filters_tags"] .select-menu-item:nth-child(3)');
+    await this.page.waitForTimeout(5000);
     await this.page.waitForSelector('.job_content');
     try {
       // Click the "Load More" button
       await this.page.click('.load_more_jobs');
     } catch (err) {
+      this.log.debug('--- All jobs are Listed, no "Load More" button --- ');
     }
 
     // Generate a set of parallel arrays containing the fields to be put into each listing.
@@ -51,6 +55,8 @@ export class ZipRecruiterScraper extends Scraper {
         a => a.getAttribute('href'),
       ),
     );
+    this.log.debug(`URLS: \n${urls}`);
+
 
     //generate the arrays
     for (let i = 0; i < urls.length; i++) {
