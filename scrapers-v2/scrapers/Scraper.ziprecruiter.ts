@@ -57,19 +57,9 @@ export class ZipRecruiterScraper extends Scraper {
     );
     this.log.debug(`URLS: \n${urls}`);
 
-
     //generate the arrays
     for (let i = 0; i < urls.length; i++) {
 
     }
-
-
-    //create the array of companies
-
-
-    //create the array of descriptions
-
-    //create the array of locations
-
   }
 }
