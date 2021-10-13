@@ -1,6 +1,4 @@
-// import { Listing } from './Listing';
 import { Scraper } from './Scraper';
-import Logger from 'loglevel';
 import { Listing } from './Listing';
 
 const prefix = require('loglevel-plugin-prefix');
@@ -76,16 +74,20 @@ export class SimplyHiredScraper extends Scraper {
       await this.page.waitForTimeout(1000);
       await this.page.click('a[class=SortToggle]');
       this.log.info('Filtering by: Most recent');
+      const internships = await this.getValues('span[class="CategoryPath-total"]', 'innerText');
+      const numInternships = parseInt(`${internships}`.replace(/,/g, ''));
+      this.log.info(`Found ${internships} internships, roughly ${numInternships / 19} pages.`);
+      let totalPages = 0;
       let hasNext = true;
-      while (hasNext === true) {
+      do {
         try {
           await this.page.waitForSelector('.SerpJob-jobCard.card');
           const elements = await this.page.$$('.SerpJob-jobCard.card');
-          this.log.info('\n\nTotal results: ', elements.length);
+          this.log.debug('Results on page: ', elements.length);
           try {
             // Test to see which UI loads
             await this.page.evaluate(() => document.querySelector('.rpContent.ViewJob.ViewJob-redesign.ViewJob-v3').innerHTML);
-            Logger.info('Loaded up with new UI... \n');
+            this.log.info('Loaded up with new UI... \n');
             await this.page.waitForSelector('.RightPane');
             await this.page.waitForSelector('h2.viewjob-jobTitle');
             await this.page.waitForSelector('.viewjob-labelWithIcon');
@@ -97,7 +99,7 @@ export class SimplyHiredScraper extends Scraper {
           } catch (e) {
             this.log.debug('--- Loaded up old UI. Trying to scrape with old UI layout ---');
             try {
-              await this.page.waitForTimeout(1000);
+              // await this.page.waitForTimeout(1000);
               const urls = await this.page.evaluate(
                 () => Array.from(
                   // eslint-disable-next-line no-undef
@@ -106,42 +108,55 @@ export class SimplyHiredScraper extends Scraper {
                   a => a.href,
                 ),
               );
-              this.log.debug(`URLS: \n${urls}`);
-
+              // this.log.debug(`URLS: \n${urls}`);
+              this.log.debug(`Listing length: ${this.listings.length()}`);
               for (let i = 1; i <= elements.length; i++) {
+                await this.page.waitForTimeout(500);
                 const element = elements[i];
                 const position = await this.getValues('div[class="viewjob-jobTitle h2"]', 'innerText');
                 const company = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
-                const location = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+                const locationObj = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+                const locationStr = `${locationObj}`;
                 const description = await this.getValues('div[class="viewjob-jobDescription"]', 'innerHTML');
-                this.log.debug(`Position: \n${position}`);
-                this.log.debug(`Company: \n${company}`);
-                this.log.debug(`Location: \n${location}`);
-                this.log.debug(`Description: \n${description}`);
-                const listing = new Listing({
-                  url: urls[i - 1], location: {
-                    city: location.match(/^([^,]*)/)[0],
-                    state: location.match(/([^ ,]*)$/)[0],
-                    country: '',
-                  },
-                  position, description, company});
+                this.log.debug(`Position: ${position}`);
+                // this.log.debug(`Company: ${company}`);
+                // this.log.debug(`LocationStr: ${locationStr} ${typeof locationStr}`);
+                // this.log.debug(`Description: ${description}`);
+                const url = urls[i - 1];
+                const lSplit = locationStr.split(', ');
+                // this.log.debug(`${lSplit.length}`);
+                const city = (lSplit.length > 0) ? lSplit[0] : '';
+                const state = (lSplit.length > 1) ? lSplit[1] : '';
+                const country = '';
+                // this.log.debug(`Location obj: ${city}, ${state}`);
+                const location = { city, state, country };
+
+                // this.log.debug(`Position: \n${position}`);
+                // this.log.debug(`Company: \n${company}`);
+                // this.log.debug(`Location: \n${location}`);
+                // this.log.debug(`Description: \n${description}`);
+                const listing = new Listing({ url, location, position, description, company });
+                // this.log.debug(`${listing}`);
                 this.listings.addListing(listing);
+                // this.log.info(`Listing length: ${this.listings.length()}`);
                 if (i < elements.length) {
                   await element.click();
                 }
               }
             } catch (err) {
-              this.log.trace(this.name, 'Error: ', err);
+              this.log.debug(this.name, 'Error: ', err);
             }
           }
           const nextPage = await this.page.$('a[class="Pagination-link next-pagination"]');
           await nextPage.click();
-
+          totalPages++;
+          this.log.info(`Processed page ${totalPages}`);
         } catch (err5) {
           hasNext = false;
-          this.log.info('\nReached the end of pages!');
+          this.log.info('Reached the end of pages!');
         }
-      }
+      } while (hasNext === true);
+      this.log.debug(`Found ${totalPages} pages.`);
     } else {
       this.log.debug('There are no internships with the search query: \'computer science intern\'');
     }
