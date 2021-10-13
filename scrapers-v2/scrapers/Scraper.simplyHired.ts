@@ -4,6 +4,8 @@ import { Listing } from './Listing';
 const prefix = require('loglevel-plugin-prefix');
 
 export class SimplyHiredScraper extends Scraper {
+  private timeout: number;
+
   constructor() {
     super({ name: 'simplyHired', url: 'https://www.simplyhired.com/' });
   }
@@ -29,6 +31,9 @@ export class SimplyHiredScraper extends Scraper {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
     this.log.info('Launching scraper.');
+    // check the config file to set the timeouts.
+    // @ts-ignore
+    this.timeout = this.config?.simplyhired?.timeout || 500;
   }
 
   async login() {
@@ -71,7 +76,7 @@ export class SimplyHiredScraper extends Scraper {
       const lastPostedURL = `https://www.simplyhired.com/${lastPosted[0]}`;
       this.log.info('Setting Date Relevance: 30 days');
       await this.page.goto(lastPostedURL);
-      await this.page.waitForTimeout(1000);
+      await this.page.waitForTimeout(this.timeout);
       await this.page.click('a[class=SortToggle]');
       this.log.info('Filtering by: Most recent');
       const internships = await this.getValues('span[class="CategoryPath-total"]', 'innerText');
@@ -111,7 +116,7 @@ export class SimplyHiredScraper extends Scraper {
               // this.log.debug(`URLS: \n${urls}`);
               this.log.debug(`Listing length: ${this.listings.length()}`);
               for (let i = 1; i <= elements.length; i++) {
-                await this.page.waitForTimeout(500);
+                await this.page.waitForTimeout(this.timeout);
                 const element = elements[i];
                 const position = await this.getValues('div[class="viewjob-jobTitle h2"]', 'innerText');
                 const company = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
@@ -145,6 +150,7 @@ export class SimplyHiredScraper extends Scraper {
               }
             } catch (err) {
               this.log.debug(this.name, 'Error: ', err);
+              throw new Error(`${this.name}, Error: ${err}`);
             }
           }
           const nextPage = await this.page.$('a[class="Pagination-link next-pagination"]');
