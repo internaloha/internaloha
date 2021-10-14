@@ -19,7 +19,7 @@ const program = new Command()
 const options = program.opts();
 
 // Uncomment the following line to verify the CLI option values.
-console.log('cli options:', options);
+// console.log('cli options:', options);
 
 // const directory = `${options.statisticsDir}/${options.discipline}`;
 const directory = path.join(options.statisticsDir, options.discipline);
