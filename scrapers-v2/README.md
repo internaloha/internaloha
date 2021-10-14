@@ -287,6 +287,21 @@ Make sure that your code passes lint:
 npm run lint
 ```
 
+## Running the scrapers "in production"
+
+There is a bash script called `run-scrapers.sh` that is intended to invoke all of the scrapers in "production mode" and then generate statistics.  Currently, it looks like this:
+
+```sh
+npm run scrape -- -l info -cf true -s nsf -ml 100
+npm run scrape -- -l info -cf true -s simplyhired -ml 1000
+
+npm run statistics -- -cf true
+```
+
+One important thing to note is that the --commit-files parameter is set to true, so the listings and statistics files will be committed to github.
+
+For now, it seems like "info" logging provides the most appropriate feedback on progress, although maybe that will change i future.
+
 ## Developer Tips
 
 ### Read the puppeteer documentation

@@ -37,7 +37,7 @@ const program = new Command()
   .addOption(new Option('-d, --discipline <discipline>', 'Specify what types of internships to find')
     .default(DISCIPLINES.CompSci)
     .choices(Object.values(DISCIPLINES)))
-  .addOption(new Option('-cf, --config-file <config-file>', 'Specify config file name.')
+  .addOption(new Option('-c, --config-file <config-file>', 'Specify config file name.')
     .default('config.json'))
   .option('-nh, --no-headless', 'Disable headless operation (display browser window during execution)')
   .option('-dt, --devtools', 'Open a devtools window during run.', false)
@@ -68,7 +68,7 @@ try {
 /* Set the runtime options for the selected scraper. */
 const scraper = scrapers[options.scraper.toLowerCase()];
 scraper.config = config;
-scraper.commitFiles = options['commitFiles'];
+scraper.commitFiles = !!options['commitFiles'];
 scraper.defaultTimeout = parseInt(options.defaultTimeout, 10);
 scraper.devTools = options.devtools;
 scraper.discipline = options.discipline;
