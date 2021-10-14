@@ -307,7 +307,7 @@ await page.evaluate(() => {
 });
 ```
 
-I have found other reasons to avoid `page.evaluate()`. For example, I ported this code:
+I have found other reasons to avoid `page.evaluate()`. For example, I originally ported this code into the NSF scraper from version 1 that used `page.evaluate`:
 
 ```js
 public async getValues(selector, field) {
@@ -321,7 +321,7 @@ public async getValues(selector, field) {
 }
 ```
 
-and then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner:
+and then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
 
 ```js
 public async getValues(selector, field) {
