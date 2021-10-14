@@ -82,13 +82,14 @@ export class Scraper {
 
     this.startTime = new Date();
 
-    this.log.debug('Starting launch');
     puppeteer.use(StealthPlugin());
     this.browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
     this.page = await this.browser.newPage();
     await this.page.setViewport({ width: this.viewportWidth, height: this.viewportHeight });
     await this.page.setUserAgent(randomUserAgent.getRandom());
     await this.page.setDefaultTimeout(this.defaultTimeout);
+    // Echo console messages from puppeteer in this process
+    this.page.on('console', (msg) => this.log.debug(`PUPPETEER CONSOLE: ${msg.text()}`));
   }
 
   /**
@@ -122,7 +123,7 @@ export class Scraper {
    * Subclass: generally no need to override.
    */
   async writeListings() {
-    this.log.debug('Starting write listings');
+    this.log.warn(`Writing ${this.listings.length()} listings`);
     this.listings.writeListings();
   }
 
@@ -156,6 +157,9 @@ export class Scraper {
     this.log.debug('Starting close');
     this.endTime = new Date();
     await this.browser.close();
+    if (this.listings.length() < this.minimumListings) {
+      this.log.error(`Generated listings (${this.listings.length()}) less than minimum listings (${this.minimumListings})`);
+    }
   }
 
   /**

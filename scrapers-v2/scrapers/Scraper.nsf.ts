@@ -11,7 +11,7 @@ export class NsfScraper extends Scraper {
   async launch() {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
-    this.log.info('Launching scraper.');
+    this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
   }
 
   async login() {
