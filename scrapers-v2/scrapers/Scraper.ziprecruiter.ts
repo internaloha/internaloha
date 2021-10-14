@@ -1,4 +1,3 @@
-import { Listing } from './Listing';
 import { Scraper } from './Scraper';
 
 const prefix = require('loglevel-plugin-prefix');
@@ -21,6 +20,7 @@ export class ZipRecruiterScraper extends Scraper {
 
   async generateListings() {
     super.generateListings();
+    const data = [];
     await this.page.goto('https://www.ziprecruiter.com/');
     await this.page.waitForSelector('input[id="search1"]');
     await this.page.waitForSelector('input[id="location1"]');
@@ -48,13 +48,45 @@ export class ZipRecruiterScraper extends Scraper {
     // Generate a set of parallel arrays containing the fields to be put into each listing.
     // Each array should be the same length, and each positional element should refer to the same listing.
     // Start by creating an array of URLs.
-    let urls = await this.page.evaluate(
+    let elements = await this.page.evaluate(
       () => Array.from(
         // eslint-disable-next-line no-undef
         document.querySelectorAll('.job_link.t_job_link'),
         a => a.getAttribute('href'),
       ),
     );
+    this.log.debug(elements.length);
+    for (let i = 0; i < elements; i++) {
+      const element = elements[i];
+      await this.page.goto(element, { waitUntil: 'domcontentloaded' });
+      const currentPage = this.page.url();
+      if (currentPage.startsWith('https://www.ziprecruiter.com')) {
+        await this.page.waitForSelector('.pc_message');
+        await this.page.click('.pc_message');
+        const date = new Date();
+        let daysBack = 0;
+        const lastScraped = new Date();
+        const [position, company, location, description, posted] = await getData(this.page);
+        if (posted.includes('yesterday')) {
+          daysBack = 1;
+      } else {
+          daysBack = posted.match(/\d+/g);
+        }
+        date.setDate(date.getDate() - daysBack);
+        data.push({
+          position: position.trim(),
+          company: company.trim(),
+          location: {
+            city: location.match(/([^,]*)/g)[0].trim(),
+            state: location.match(/([^,]*)/g)[2].trim(),
+            country: location.match(/([^,]*)/g)[4].trim(),
+          },
+          url: currentPage,
+          posted: date,
+          lastScraped: lastScraped,
+          description: description.trim(),
+        });
+    }
     this.log.debug(`URLS: \n${urls}`);
 
     //generate the arrays
