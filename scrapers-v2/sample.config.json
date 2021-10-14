@@ -8,5 +8,10 @@
       "user": "johnfoo@testing.com",
       "password": "changeme"
     }
+  },
+  "additionalParams": {
+    "simplyHired": {
+      "timeout": 500
+    }
   }
 }
