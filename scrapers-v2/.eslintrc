@@ -22,6 +22,7 @@
     "@typescript-eslint/object-curly-spacing": "off",
     "@typescript-eslint/space-infix-ops": "off",
     "@typescript-eslint/dot-notation": "off",
+    "@typescript-eslint/return-await": "off",
     "react/jsx-filename-extension": "off",
     "arrow-parens": "off",
     "camelcase": "off",
