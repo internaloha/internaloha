@@ -307,6 +307,8 @@ await page.evaluate(() => {
 });
 ```
 
+We definitely want to avoid "fake events", because certain sites might use them to bar us from scraping them.
+
 I have found other reasons to avoid `page.evaluate()`. For example, I originally ported this code into the NSF scraper from version 1 that used `page.evaluate`:
 
 ```js
