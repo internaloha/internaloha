@@ -78,9 +78,11 @@ Currently, this command produces the following output:
 ```
 $ npm run scrape -- -s nsf
 
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf"
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf"
 
+11:42:19 WARN NSF Launching NSF scraper
+11:42:22 WARN NSF Writing 100 listings
 $
 ```
 
@@ -139,8 +141,11 @@ Here is the default run of the scraper. The log level defaults to 'warn', so the
 ```
 $ npm run scrape -- -s nsf
 
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf"
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf"
+
+11:42:19 WARN NSF Launching NSF scraper
+11:42:22 WARN NSF Writing 100 listings
 ```
 
 Running the scraper with log level 'info' produces a bit more output:
@@ -148,11 +153,14 @@ Running the scraper with log level 'info' produces a bit more output:
 ```
 $ npm run scrape -- -s nsf -l info
 
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf" "-l" "info"
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf" "-l" "info"
 
-15:44:32 INFO NSF Launching scraper.
-15:44:36 INFO NSF Wrote data
+11:43:25 WARN NSF Launching NSF scraper
+11:43:27 WARN NSF Writing 100 listings
+11:43:27 INFO NSF Wrote listings.
+11:43:27 INFO NSF Wrote statistics.
+
 ```
 
 Running the scraper with log level 'debug' produces a lot of output, much of which I'll elide:
@@ -278,6 +286,53 @@ Make sure that your code passes lint:
 ```
 npm run lint
 ```
+
+## Developer Tips
+
+### Read the puppeteer documentation
+
+It's actually quite informative to read the Puppeteer documentation at [https://pptr.dev/](https://pptr.dev/).
+
+I recommend reading the intro section, and then the [Page](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-class-page) API page, as that is the API you will be using most frequently.
+
+### Avoid `page.evaluate()`
+
+The FAQ section of [https://pptr.dev/](https://pptr.dev/) has a question entitled "What’s the difference between a “trusted" and "untrusted" input event?". It turns out that to avoid sites from blocking us as robots, we should always generate "trusted" events. This means that we should avoid the use of `page.evaluate()`, which generates untrusted events. Here's a quote from the docs:
+
+*For automation purposes it’s important to generate trusted events. All input events generated with Puppeteer are trusted and fire proper accompanying events. If, for some reason, one needs an untrusted event, it’s always possible to hop into a page context with page.evaluate and generate a fake event:*
+
+```js
+await page.evaluate(() => {
+  document.querySelector('button[type=submit]').click();
+});
+```
+
+I have found other reasons to avoid `page.evaluate()`. For example, I ported this code:
+
+```js
+public async getValues(selector, field) {
+  const returnVals = await this.page.evaluate((selector, field) => {
+    const vals = [];
+    const nodes = document.querySelectorAll(selector);
+    nodes.forEach(node => vals.push(node[field]));
+    return vals;
+  }, selector, field);
+  return returnVals;
+}
+```
+
+and then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner:
+
+```js
+public async getValues(selector, field) {
+  return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
+}
+``
+
+
+
+
+`
 
 
 
