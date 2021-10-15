@@ -71,7 +71,7 @@ try {
 const scraper = scrapers[options.scraper.toLowerCase()];
 scraper.config = config;
 scraper.commitFiles = !!options['commitFiles'];
-scraper.defaultTimeout = parseInt(options.defaultTimeout, 10);
+scraper.defaultTimeout = parseInt(options.defaultTimeout, 10) * 1000;
 scraper.devTools = options.devtools;
 scraper.discipline = options.discipline;
 scraper.headless = options.headless;

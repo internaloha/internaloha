@@ -84,7 +84,8 @@ export class Scraper {
 
     puppeteer.use(StealthPlugin());
     this.browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
-    this.page = await this.browser.newPage();
+    const context = await this.browser.createIncognitoBrowserContext();
+    this.page = await context.newPage();
     await this.page.setViewport({ width: this.viewportWidth, height: this.viewportHeight });
     await this.page.setUserAgent(randomUserAgent.getRandom());
     await this.page.setDefaultTimeout(this.defaultTimeout);

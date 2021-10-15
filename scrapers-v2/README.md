@@ -338,6 +338,21 @@ public async getValues(selector, field) {
 }
 ```
 
+## Page navigation pattern
+
+There is a standard pattern for when your script performs an action (such as logging in) that results in page navigation. It looks like this:
+
+```js
+await Promise.all([
+  this.page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]'),
+  this.page.waitForNavigation()
+]);
+```
+
+The idea is that you have to combine the page.waitForNavigation() with the page.click() (or whatever) in a Promise.all() so that you don't proceed to the next command until both have completed. Doing them serially won't work.
+
+For more details, see [https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions).
+
 and then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
 
 ```js
