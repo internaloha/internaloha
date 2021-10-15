@@ -346,7 +346,7 @@ public async getValues(selector, field) {
 }
 ```
 
-## Page navigation pattern
+### Page navigation pattern
 
 There is a standard pattern for when your script performs an action (such as logging in) that results in page navigation. It looks like this:
 
