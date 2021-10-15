@@ -73,7 +73,7 @@ export class SimplyHiredScraper extends Scraper {
     const internshipDropdown = await this.page.$$eval('a[href*="internship"]', (nodes) => nodes.map(node => node.getAttribute('href')));
     if (internshipDropdown.length > 0) {
       const url = `${this.url}${internshipDropdown[0]}`;
-      this.log.info(`Directing to: ${url}`);
+      // this.log.info(`Directing to: ${url}`);
       await this.page.goto(url);
       await this.page.waitForSelector('div[data-id=JobType]');
       // Setting filter as last '30 days'
