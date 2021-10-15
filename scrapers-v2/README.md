@@ -338,6 +338,14 @@ public async getValues(selector, field) {
 }
 ```
 
+I then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
+
+```js
+public async getValues(selector, field) {
+  return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
+}
+```
+
 ## Page navigation pattern
 
 There is a standard pattern for when your script performs an action (such as logging in) that results in page navigation. It looks like this:
@@ -353,13 +361,6 @@ The idea is that you have to combine the page.waitForNavigation() with the page.
 
 For more details, see [https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions).
 
-and then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
-
-```js
-public async getValues(selector, field) {
-  return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
-}
-```
 
 
 
