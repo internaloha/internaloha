@@ -287,6 +287,21 @@ Make sure that your code passes lint:
 npm run lint
 ```
 
+## Running the scrapers "in production"
+
+There is a bash script called `run-scrapers.sh` that is intended to invoke all of the scrapers in "production mode" and then generate statistics.  Currently, it looks like this:
+
+```sh
+npm run scrape -- -l info -cf true -s nsf -ml 100
+npm run scrape -- -l info -cf true -s simplyhired -ml 1000
+
+npm run statistics -- -cf true
+```
+
+One important thing to note is that the --commit-files parameter is set to true, so the listings and statistics files will be committed to github.
+
+For now, it seems like "info" logging provides the most appropriate feedback on progress, although maybe that will change i future.
+
 ## Developer Tips
 
 ### Read the puppeteer documentation
@@ -323,13 +338,29 @@ public async getValues(selector, field) {
 }
 ```
 
-and then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
+I then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
 
 ```js
 public async getValues(selector, field) {
   return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
 }
 ```
+
+### Page navigation pattern
+
+There is a standard pattern for when your script performs an action (such as logging in) that results in page navigation. It looks like this:
+
+```js
+await Promise.all([
+  this.page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]'),
+  this.page.waitForNavigation()
+]);
+```
+
+The idea is that you have to combine the page.waitForNavigation() with the page.click() (or whatever) in a Promise.all() so that you don't proceed to the next command until both have completed. Doing them serially won't work.
+
+For more details, see [https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions).
+
 
 
 
