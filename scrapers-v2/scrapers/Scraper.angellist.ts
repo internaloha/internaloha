@@ -1,5 +1,5 @@
 import { Scraper } from './Scraper';
-import _ from 'lodash';
+import _ from 'underscore';
 
 const prefix = require('loglevel-plugin-prefix');
 
@@ -38,13 +38,10 @@ export class AngelListScraper extends Scraper {
   }
 
   async launch() {
-    // AngelList scraper requires slowMo
-    if (this.slowMo < 250) {
-      this.slowMo = 250;
-    }
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
+    console.log('underscore', _);
   }
 
   /**
@@ -87,6 +84,7 @@ export class AngelListScraper extends Scraper {
     await this.page.waitForSelector('button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
     if (await this.page.$('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button') !== null) {
       // click clear
+      this.log.warn('inside if');
       await this.page.click('div[class="styles_component__3ztKJ styles_active__3CAxI"] > div[class="styles_header__PMZlN"] > button');
       await this.page.click('label[for="form-input--jobTypes--internship"]');
     } else {
@@ -104,6 +102,7 @@ export class AngelListScraper extends Scraper {
         a => a.getAttribute('href'),
       ),
     );
+
     elements = _.uniq(elements);
     this.log.info(elements.length);
     this.log.warn('got here 3');
