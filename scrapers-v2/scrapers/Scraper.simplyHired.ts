@@ -84,11 +84,11 @@ export class SimplyHiredScraper extends Scraper {
       await this.page.goto(lastPostedURL);
       await this.page.waitForTimeout(this.timeout);
       await this.page.click('a[class=SortToggle]');
+      await this.page.waitForNavigation();
       // Filtering by most recent
       this.log.info('Filtering by: Most recent');
-      const internships = await this.getValues('span[class="posting-total"]', 'innerText');
-      this.log.info(`Found ${internships} internships.`);
       let totalPages = 0;
+      let internshipsPerPage = 0;
       let hasNext = true;
       do {
         await this.page.waitForSelector('.SerpJob-jobCard.card');
@@ -154,6 +154,7 @@ export class SimplyHiredScraper extends Scraper {
           const listing = new Listing({ url, location, position, description, company, posted });
           // this.log.debug(`${listing}`);
           this.listings.addListing(listing);
+          internshipsPerPage++;
           // this.log.info(`Listing length: ${this.listings.length()}`);
           if (i < elements.length) {
             await element.click();
@@ -166,7 +167,7 @@ export class SimplyHiredScraper extends Scraper {
         } else {
           await nextPage.click();
           totalPages++;
-          this.log.info(`Processed page ${totalPages}`);
+          this.log.info(`Processed page ${totalPages}, ${internshipsPerPage} internships`);
         }
       } while (hasNext === true);
       this.log.debug(`Found ${totalPages} pages.`);
