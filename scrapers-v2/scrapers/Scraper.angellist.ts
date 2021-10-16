@@ -1,5 +1,5 @@
 import { Scraper } from './Scraper';
-import _ from 'lodash';
+import _ from 'underscore';
 
 const prefix = require('loglevel-plugin-prefix');
 
@@ -41,6 +41,7 @@ export class AngelListScraper extends Scraper {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
+    console.log('underscore', _);
   }
 
   /**
@@ -101,6 +102,7 @@ export class AngelListScraper extends Scraper {
         a => a.getAttribute('href'),
       ),
     );
+
     elements = _.uniq(elements);
     this.log.info(elements.length);
     this.log.warn('got here 3');
