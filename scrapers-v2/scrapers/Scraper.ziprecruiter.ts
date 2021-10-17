@@ -68,6 +68,7 @@ export class ZipRecruiterScraper extends Scraper {
       ),
     );
     this.log.debug(elements.length);
+    const skippedPages = [];
     for (let i = 0; i < elements; i++) {
       const element = elements[i];
       await this.page.goto(element, { waitUntil: 'domcontentloaded' });
@@ -81,7 +82,7 @@ export class ZipRecruiterScraper extends Scraper {
         const [position, company, location, description, posted] = await getData(this.page);
         if (posted.includes('yesterday')) {
           daysBack = 1;
-      } else {
+        } else {
           daysBack = posted.match(/\d+/g);
         }
         date.setDate(date.getDate() - daysBack);
@@ -98,12 +99,15 @@ export class ZipRecruiterScraper extends Scraper {
           lastScraped: lastScraped,
           description: description.trim(),
         });
+      } else {
+        this.log.debug('--- Went off of ZipRecruiter, skipping ---');
+        skippedPages.push(currentPage);
+      }
     }
-    this.log.debug(`URLS: \n${urls}`);
+  }
 
-    //generate the arrays
-    for (let i = 0; i < urls.length; i++) {
-
-    }
+  async processListings() {
+    await super.processListings();
+    // No post-processing (yet) for NSF scraper results.
   }
 }
