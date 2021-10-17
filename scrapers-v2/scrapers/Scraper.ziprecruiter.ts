@@ -1,6 +1,30 @@
 import { Scraper } from './Scraper';
-import { fetchInfo } from './scraper-functions.js';
 const prefix = require('loglevel-plugin-prefix');
+import Logger from 'loglevel';
+
+async function waitForSelectorIfPresent(page, selector) {
+  try {
+    await page.waitForSelector(selector, { timeout: 10000 });
+  } catch (e) {
+    return null;
+  }
+  return true;
+}
+
+async function fetchInfo(page, selector, DOM_Element) {
+  let result: null | boolean = await waitForSelectorIfPresent(page, selector);
+  if (result) {
+    result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
+  } else {
+    // only prints trace when it's not in production
+    const oldLevel = Logger.getLevel();
+    if (oldLevel !== 3) {
+      console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
+    }
+    result = 'N/A';
+  }
+  return result;
+}
 
 async function getData(page) {
   const results = [];
