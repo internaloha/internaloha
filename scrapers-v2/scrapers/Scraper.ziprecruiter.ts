@@ -1,6 +1,18 @@
 import { Scraper } from './Scraper';
-
+import { fetchInfo } from './scraper-functions.js';
 const prefix = require('loglevel-plugin-prefix');
+
+async function getData(page) {
+  const results = [];
+  for (let i = 0; i < 5; i++) {
+    results.push(fetchInfo(page, '.job_title', 'innerText'));
+    results.push(fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText'));
+    results.push(fetchInfo(page, 'span[data-name="address"]', 'innerText'));
+    results.push(fetchInfo(page, '.jobDescriptionSection', 'innerHTML'));
+    results.push(fetchInfo(page, '.job_more span[class="data"]', 'innerText'));
+  }
+  return Promise.all(results);
+}
 
 export class ZipRecruiterScraper extends Scraper {
   constructor() {
