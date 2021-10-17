@@ -11,8 +11,15 @@ async function waitForSelectorIfPresent(page, selector) {
   return true;
 }
 
+/**
+ * Fetches the information from the page.
+ * @param page The page we are scraping
+ * @param selector The CSS Selector
+ * @param DOM_Element The DOM element we want to use. Common ones are innerHTML, innerText, textContent
+ * @returns {Promise<*>} The information as a String.
+ */
 async function fetchInfo(page, selector, DOM_Element) {
-  let result: null | boolean = await waitForSelectorIfPresent(page, selector);
+  let result = await waitForSelectorIfPresent(page, selector);
   if (result) {
     result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
   } else {
