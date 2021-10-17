@@ -31,30 +31,20 @@ export class SimplyHiredScraper extends Scraper {
   private timeout: number;
 
   constructor() {
-    super({ name: 'simplyHired', url: 'https://www.simplyhired.com/' });
+    super({ name: 'simplyHired', url: 'https://www.simplyhired.com' });
   }
 
   /**
    * Get the values associated with the passed selector and associated field.
-   * Because we can't do closures with puppeteer, special arguments are needed to pass selector and field into page.evaluate().
-   * See: https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pageevaluatepagefunction-args
-   * Also: we have to create a returnVals variable and await it, then return it.
-   * It's worth it because we call this function five times in generateListings.
    */
   private async getValues(selector, field) {
-    const returnVals = await this.page.evaluate((selector, field) => {
-      const vals = [];
-      const nodes = document.querySelectorAll(selector);
-      nodes.forEach(node => vals.push(node[field]));
-      return vals;
-    }, selector, field);
-    return returnVals;
+    return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
   }
 
   async launch() {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
-    this.log.info('Launching scraper.');
+    this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
     // check the config file to set the timeouts.
     // @ts-ignore
     this.timeout = this.config?.additionalParams?.simplyHired?.timeout || 500;
@@ -63,6 +53,7 @@ export class SimplyHiredScraper extends Scraper {
 
   async login() {
     super.login();
+    this.log.debug(`Going to ${this.url}`);
     await this.page.goto(this.url);
   }
 
@@ -79,34 +70,25 @@ export class SimplyHiredScraper extends Scraper {
     this.log.info('Inputted search query: computer science intern');
     await this.page.waitForSelector('div[data-id=JobType]');
     // Getting href link for internship filter
-    const internshipDropdown = await this.page.evaluate(
-      () => Array.from(
-        document.querySelectorAll('a[href*="internship"]'),
-        a => a.getAttribute('href'),
-      ),
-    );
-
+    const internshipDropdown = await this.page.$$eval('a[href*="internship"]', (nodes) => nodes.map(node => node.getAttribute('href')));
     if (internshipDropdown.length > 0) {
       const url = `${this.url}${internshipDropdown[0]}`;
-      this.log.info(`Directing to: ${url}`);
+      // this.log.info(`Directing to: ${url}`);
       await this.page.goto(url);
       await this.page.waitForSelector('div[data-id=JobType]');
       // Setting filter as last '30 days'
-      const lastPosted = await this.page.evaluate(
-        () => Array.from(
-          document.querySelectorAll('div[data-id=Date] a[href*="30"]'),
-          a => a.getAttribute('href'),
-        ),
-      );
+      const lastPosted = await this.page.$$eval('div[data-id=Date] a[href*="30"]', (nodes) => nodes.map(node => node.getAttribute('href')));
       const lastPostedURL = `${this.url}${lastPosted[0]}`;
       this.log.info('Setting Date Relevance: 30 days');
+      this.log.info(`Directing to: ${lastPostedURL}`);
       await this.page.goto(lastPostedURL);
       await this.page.waitForTimeout(this.timeout);
       await this.page.click('a[class=SortToggle]');
+      await this.page.waitForNavigation();
+      // Filtering by most recent
       this.log.info('Filtering by: Most recent');
-      const internships = await this.getValues('span[class="posting-total"]', 'innerText');
-      this.log.info(`Found ${internships} internships.`);
       let totalPages = 0;
+      let internshipsPerPage = 0;
       let hasNext = true;
       do {
         await this.page.waitForSelector('.SerpJob-jobCard.card');
@@ -114,14 +96,7 @@ export class SimplyHiredScraper extends Scraper {
         this.log.debug('Results on page: ', elements.length);
         this.log.debug('--- Trying to scrape with old UI layout ---');
         // await this.page.waitForTimeout(1000);
-        const urls = await this.page.evaluate(
-          () => Array.from(
-            // eslint-disable-next-line no-undef
-            document.querySelectorAll('a[class="SerpJob-link card-link"]'),
-            // @ts-ignore
-            a => a.href,
-          ),
-        );
+        const urls = await this.page.$$eval('a[class="SerpJob-link card-link"]', (nodes) => nodes.map(node => node.href));
         // this.log.debug(`URLS: \n${urls}`);
         for (let i = 1; i <= elements.length; i++) {
           await this.page.waitForTimeout(this.timeout);
@@ -179,6 +154,7 @@ export class SimplyHiredScraper extends Scraper {
           const listing = new Listing({ url, location, position, description, company, posted });
           // this.log.debug(`${listing}`);
           this.listings.addListing(listing);
+          internshipsPerPage++;
           // this.log.info(`Listing length: ${this.listings.length()}`);
           if (i < elements.length) {
             await element.click();
@@ -191,7 +167,7 @@ export class SimplyHiredScraper extends Scraper {
         } else {
           await nextPage.click();
           totalPages++;
-          this.log.info(`Processed page ${totalPages}`);
+          this.log.info(`Processed page ${totalPages}, ${internshipsPerPage} internships`);
         }
       } while (hasNext === true);
       this.log.debug(`Found ${totalPages} pages.`);

@@ -78,9 +78,11 @@ Currently, this command produces the following output:
 ```
 $ npm run scrape -- -s nsf
 
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf"
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf"
 
+11:42:19 WARN NSF Launching NSF scraper
+11:42:22 WARN NSF Writing 100 listings
 $
 ```
 
@@ -139,8 +141,11 @@ Here is the default run of the scraper. The log level defaults to 'warn', so the
 ```
 $ npm run scrape -- -s nsf
 
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf"
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf"
+
+11:42:19 WARN NSF Launching NSF scraper
+11:42:22 WARN NSF Writing 100 listings
 ```
 
 Running the scraper with log level 'info' produces a bit more output:
@@ -148,11 +153,14 @@ Running the scraper with log level 'info' produces a bit more output:
 ```
 $ npm run scrape -- -s nsf -l info
 
-> scraper@2.0.0 scrape /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2
-> ts-node -P tsconfig.buildScripts.json main.ts "-s" "nsf" "-l" "info"
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf" "-l" "info"
 
-15:44:32 INFO NSF Launching scraper.
-15:44:36 INFO NSF Wrote data
+11:43:25 WARN NSF Launching NSF scraper
+11:43:27 WARN NSF Writing 100 listings
+11:43:27 INFO NSF Wrote listings.
+11:43:27 INFO NSF Wrote statistics.
+
 ```
 
 Running the scraper with log level 'debug' produces a lot of output, much of which I'll elide:
@@ -278,6 +286,86 @@ Make sure that your code passes lint:
 ```
 npm run lint
 ```
+
+## Running the scrapers "in production"
+
+There is a bash script called `run-scrapers.sh` that is intended to invoke all of the scrapers in "production mode" and then generate statistics.  Currently, it looks like this:
+
+```sh
+npm run scrape -- -l info -cf true -s nsf -ml 100
+npm run scrape -- -l info -cf true -s simplyhired -ml 1000
+
+npm run statistics -- -cf true
+```
+
+One important thing to note is that the --commit-files parameter is set to true, so the listings and statistics files will be committed to github.
+
+For now, it seems like "info" logging provides the most appropriate feedback on progress, although maybe that will change i future.
+
+## Developer Tips
+
+### Read the puppeteer documentation
+
+It's actually quite informative to read the Puppeteer documentation at [https://pptr.dev/](https://pptr.dev/).
+
+I recommend reading the intro section, and then the [Page](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-class-page) API page, as that is the API you will be using most frequently.
+
+### Avoid `page.evaluate()`
+
+The FAQ section of [https://pptr.dev/](https://pptr.dev/) has a question entitled "What’s the difference between a “trusted" and "untrusted" input event?". It turns out that to avoid sites from blocking us as robots, we should always generate "trusted" events. This means that we should avoid the use of `page.evaluate()`, which generates untrusted events. Here's a quote from the docs:
+
+*For automation purposes it’s important to generate trusted events. All input events generated with Puppeteer are trusted and fire proper accompanying events. If, for some reason, one needs an untrusted event, it’s always possible to hop into a page context with page.evaluate and generate a fake event:*
+
+```js
+await page.evaluate(() => {
+  document.querySelector('button[type=submit]').click();
+});
+```
+
+We definitely want to avoid "fake events", because certain sites might use them to bar us from scraping them.
+
+I have found other reasons to avoid `page.evaluate()`. For example, I originally ported this code into the NSF scraper from version 1 that used `page.evaluate`:
+
+```js
+public async getValues(selector, field) {
+  const returnVals = await this.page.evaluate((selector, field) => {
+    const vals = [];
+    const nodes = document.querySelectorAll(selector);
+    nodes.forEach(node => vals.push(node[field]));
+    return vals;
+  }, selector, field);
+  return returnVals;
+}
+```
+
+I then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
+
+```js
+public async getValues(selector, field) {
+  return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
+}
+```
+
+### Page navigation pattern
+
+There is a standard pattern for when your script performs an action (such as logging in) that results in page navigation. It looks like this:
+
+```js
+await Promise.all([
+  this.page.click('input[class="c-button c-button--blue s-vgPadLeft1_5 s-vgPadRight1_5"]'),
+  this.page.waitForNavigation()
+]);
+```
+
+The idea is that you have to combine the page.waitForNavigation() with the page.click() (or whatever) in a Promise.all() so that you don't proceed to the next command until both have completed. Doing them serially won't work.
+
+For more details, see [https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions).
+
+
+
+
+
+`
 
 
 

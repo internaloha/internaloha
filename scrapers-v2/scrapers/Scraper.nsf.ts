@@ -26,7 +26,7 @@ export class NsfScraper extends Scraper {
    * Also: we have to create a returnVals variable and await it, then return it.
    * It's worth it because we call this function five times in generateListings.
    */
-  private async getValues(selector, field) {
+  public async getValuesOLD(selector, field) {
     const returnVals = await this.page.evaluate((selector, field) => {
       const vals = [];
       const nodes = document.querySelectorAll(selector);
@@ -34,6 +34,10 @@ export class NsfScraper extends Scraper {
       return vals;
     }, selector, field);
     return returnVals;
+  }
+
+  public async getValues(selector, field) {
+    return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
   }
 
   async generateListings() {

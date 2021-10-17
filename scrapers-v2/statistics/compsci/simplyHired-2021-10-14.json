@@ -1,0 +1,10 @@
+{
+  "date": "2021-10-14",
+  "elapsedTime": 704,
+  "numErrors": 1,
+  "numListings": 1082,
+  "errorMessages": [
+    "Execution context was destroyed, most likely because of a navigation."
+  ],
+  "scraper": "simplyHired"
+}

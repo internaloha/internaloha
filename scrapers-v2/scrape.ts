@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import { Command, Option } from 'commander';
+import { AngelListScraper } from './scrapers/Scraper.angellist';
 import { NsfScraper } from './scrapers/Scraper.nsf';
 import { TemplateScraper } from './scrapers/Scraper.template';
 import { DISCIPLINES } from './disciplines';
@@ -19,6 +20,7 @@ const scrapers = {
   template: new TemplateScraper(),
   nsf: new NsfScraper(),
   simplyhired: new SimplyHiredScraper(),
+  angellist: new AngelListScraper(),
 };
 
 // You don't normally edit anything below.
@@ -37,7 +39,7 @@ const program = new Command()
   .addOption(new Option('-d, --discipline <discipline>', 'Specify what types of internships to find')
     .default(DISCIPLINES.CompSci)
     .choices(Object.values(DISCIPLINES)))
-  .addOption(new Option('-cf, --config-file <config-file>', 'Specify config file name.')
+  .addOption(new Option('-c, --config-file <config-file>', 'Specify config file name.')
     .default('config.json'))
   .option('-nh, --no-headless', 'Disable headless operation (display browser window during execution)')
   .option('-dt, --devtools', 'Open a devtools window during run.', false)
@@ -68,9 +70,9 @@ try {
 /* Set the runtime options for the selected scraper. */
 const scraper = scrapers[options.scraper.toLowerCase()];
 scraper.config = config;
-scraper.commitFiles = options['commitFiles'];
-scraper.defaultTimeout = parseInt(options.defaultTimeout, 10);
-scraper.devTools = options.devtools;
+scraper.commitFiles = !!options['commitFiles'];
+scraper.defaultTimeout = parseInt(options.defaultTimeout, 10) * 1000;
+scraper.devtools = options.devtools;
 scraper.discipline = options.discipline;
 scraper.headless = options.headless;
 scraper.listingDir = options.listingDir;
