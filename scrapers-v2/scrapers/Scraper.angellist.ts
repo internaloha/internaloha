@@ -23,7 +23,7 @@ export class AngelListScraper extends Scraper {
     await this.page.evaluate(async () => {
       await new Promise<void>((resolve) => {
         let totalHeight = 0;
-        const distance = 400;
+        const distance = 400; // this.viewportHeight?
         const timer = setInterval(() => {
           const scrollHeight = document.body.scrollHeight;
           window.scrollBy(0, distance);
@@ -41,7 +41,6 @@ export class AngelListScraper extends Scraper {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
-    console.log('underscore', _);
   }
 
   /**
@@ -68,8 +67,7 @@ export class AngelListScraper extends Scraper {
     ]);
   }
 
-  async generateListings() {
-    await super.generateListings();
+  public async setFilter() {
     await this.page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
     await this.page.click('div[class="styles_roleWrapper__2xVmi"] > button');
     await this.page.keyboard.press('Backspace');
@@ -90,6 +88,12 @@ export class AngelListScraper extends Scraper {
     } else {
       await this.page.click('label[for="form-input--jobTypes--internship"]');
     }
+  }
+
+
+  async generateListings() {
+    await super.generateListings();
+    // await this.setFilter();
     await this.page.click('div[class="styles_footer__3DmVI"] > button[class="styles_component__3A0_k styles_primary__3xZwV styles_small__6SIIc styles_emphasis__KRjK8"]');
     for (let i = 0; i < 3; i++) {
       // await this.autoScroll();
