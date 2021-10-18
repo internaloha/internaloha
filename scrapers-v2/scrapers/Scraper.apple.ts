@@ -57,6 +57,7 @@ export class Apple extends Scraper {
     // Separated 'United' and 'States' so that dropdown list comes out
     await this.page.type('input[id="locations-filter-input"]', 'United');
     await this.page.type('input[id="locations-filter-input"]', ' States');
+
     // Delay prevents code from bypassing page changes
     await this.delay(5000);
     await this.page.waitForSelector('li[id="locations-filter-input-option-0"]');
@@ -76,15 +77,17 @@ export class Apple extends Scraper {
       const positions = await this.getValues('h1[itemprop="title"]', 'innerText');
       // Descriptions
       const descriptions = await this.getValues('div[id="jd-description"]', 'innerHTML');
-      // Cities
+      // States
       const states = await this.getValues('span[itemprop="addressRegion"]', 'innerText');
-
+      //Cities
       const cities = await this.getValues('span[itemprop="addressLocality"]', 'innerText');
 
       const location = { city: cities, state: states, country: 'United States' };
 
-      const listing = new Listing({ url: urls[i], position: positions[i], location, company: 'Apple', description:
-        descriptions });
+      const listing = new Listing({
+        url: urls[i], position: positions[i], location, company: 'Apple', description:
+        descriptions
+      });
       this.listings.addListing(listing);
     }
   }
