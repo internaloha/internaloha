@@ -2,6 +2,7 @@ import * as fs from 'fs';
 import { Command, Option } from 'commander';
 import { AngelListScraper } from './scrapers/Scraper.angellist';
 import { NsfScraper } from './scrapers/Scraper.nsf';
+import { CiscoScraper } from './scrapers/Scraper.cisco';
 import { TemplateScraper } from './scrapers/Scraper.template';
 import { DISCIPLINES } from './disciplines';
 import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
@@ -23,6 +24,7 @@ const scrapers = {
   simplyhired: new SimplyHiredScraper(),
   angellist: new AngelListScraper(),
   apple: new Apple(),
+  cisco: new CiscoScraper(),
 };
 
 // You don't normally edit anything below.
