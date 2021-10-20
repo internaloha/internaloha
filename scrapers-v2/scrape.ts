@@ -5,6 +5,7 @@ import { NsfScraper } from './scrapers/Scraper.nsf';
 import { TemplateScraper } from './scrapers/Scraper.template';
 import { DISCIPLINES } from './disciplines';
 import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
+import { ZipRecruiterScraper } from './scrapers/Scraper.ziprecruiter';
 
 /**
  *  Create all possible scraper instances next. Keys must be all lower case.
@@ -21,6 +22,7 @@ const scrapers = {
   nsf: new NsfScraper(),
   simplyhired: new SimplyHiredScraper(),
   angellist: new AngelListScraper(),
+  ziprecruiter: new ZipRecruiterScraper(),
 };
 
 // You don't normally edit anything below.
