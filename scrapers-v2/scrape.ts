@@ -8,6 +8,7 @@ import { DISCIPLINES } from './disciplines';
 import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
 import { Apple } from './scrapers/Scraper.apple';
 import { LinkedinScraper } from './scrapers/Scraper.linkedin';
+import { ZipRecruiterScraper } from './scrapers/Scraper.ziprecruiter';
 
 
 /**
@@ -28,6 +29,7 @@ const scrapers = {
   apple: new Apple(),
   cisco: new CiscoScraper(),
   linkedin: new LinkedinScraper(),
+  ziprecruiter: new ZipRecruiterScraper(),
 };
 
 // You don't normally edit anything below.
