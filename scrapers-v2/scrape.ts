@@ -2,10 +2,13 @@ import * as fs from 'fs';
 import { Command, Option } from 'commander';
 import { AngelListScraper } from './scrapers/Scraper.angellist';
 import { NsfScraper } from './scrapers/Scraper.nsf';
+import { CiscoScraper } from './scrapers/Scraper.cisco';
 import { TemplateScraper } from './scrapers/Scraper.template';
 import { DISCIPLINES } from './disciplines';
 import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
-import { ZipRecruiterScraper } from './scrapers/Scraper.ziprecruiter';
+import { Apple } from './scrapers/Scraper.apple';
+import { LinkedinScraper } from './scrapers/Scraper.linkedin';
+
 
 /**
  *  Create all possible scraper instances next. Keys must be all lower case.
@@ -22,7 +25,9 @@ const scrapers = {
   nsf: new NsfScraper(),
   simplyhired: new SimplyHiredScraper(),
   angellist: new AngelListScraper(),
-  ziprecruiter: new ZipRecruiterScraper(),
+  apple: new Apple(),
+  cisco: new CiscoScraper(),
+  linkedin: new LinkedinScraper(),
 };
 
 // You don't normally edit anything below.
