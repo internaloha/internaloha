@@ -25,7 +25,7 @@ export class LinkedinScraper extends Scraper {
    */
   async autoScroll() {
     await this.page.evaluate(async () => {
-      await new Promise((resolve) => {
+      await new Promise<void>((resolve) => {
         let totalHeight = 0;
         const distance = 400;
         const timer = setInterval(() => {
