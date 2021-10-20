@@ -7,6 +7,8 @@ import { TemplateScraper } from './scrapers/Scraper.template';
 import { DISCIPLINES } from './disciplines';
 import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
 import { Apple } from './scrapers/Scraper.apple';
+import { LinkedinScraper } from './scrapers/Scraper.linkedin';
+
 
 /**
  *  Create all possible scraper instances next. Keys must be all lower case.
@@ -25,6 +27,7 @@ const scrapers = {
   angellist: new AngelListScraper(),
   apple: new Apple(),
   cisco: new CiscoScraper(),
+  linkedin: new LinkedinScraper(),
 };
 
 // You don't normally edit anything below.
