@@ -3,7 +3,6 @@ import { Command, Option } from 'commander';
 import { AngelListScraper } from './scrapers/Scraper.angellist';
 import { NsfScraper } from './scrapers/Scraper.nsf';
 import { CiscoScraper } from './scrapers/Scraper.cisco';
-import { TemplateScraper } from './scrapers/Scraper.template';
 import { DISCIPLINES } from './disciplines';
 import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
 import { Apple } from './scrapers/Scraper.apple';
@@ -22,13 +21,12 @@ import { ZipRecruiterScraper } from './scrapers/Scraper.ziprecruiter';
  *  After we process the CLI args, we then configure the selected scraper from the CLI values before execution.
  */
 const scrapers = {
-  template: new TemplateScraper(),
-  nsf: new NsfScraper(),
-  simplyhired: new SimplyHiredScraper(),
   angellist: new AngelListScraper(),
   apple: new Apple(),
   cisco: new CiscoScraper(),
   linkedin: new LinkedinScraper(),
+  nsf: new NsfScraper(),
+  simplyhired: new SimplyHiredScraper(),
   ziprecruiter: new ZipRecruiterScraper(),
 };
 

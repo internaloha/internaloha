@@ -55,6 +55,15 @@ export class Scraper {
   }
 
   /**
+   * Return a list of field values based on selector.
+   * @param selector The nodes to be selected from the current page.
+   * @param field The field to extract from the nodes returned from the selector.
+   */
+  async getValues(selector, field) {
+    return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
+  }
+
+  /**
    * Allow CLI access to the name of this scraper.
    * Subclass: do not override.
    */

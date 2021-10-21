@@ -34,13 +34,6 @@ export class SimplyHiredScraper extends Scraper {
     super({ name: 'simplyHired', url: 'https://www.simplyhired.com' });
   }
 
-  /**
-   * Get the values associated with the passed selector and associated field.
-   */
-  private async getValues(selector, field) {
-    return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
-  }
-
   async launch() {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
