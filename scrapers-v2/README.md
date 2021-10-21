@@ -304,13 +304,13 @@ For now, it seems like "info" logging provides the most appropriate feedback on 
 
 ## Developer Tips
 
-### Read the puppeteer documentation
+### Tip 1: Read the puppeteer documentation
 
 It's actually quite informative to read the Puppeteer documentation at [https://pptr.dev/](https://pptr.dev/).
 
 I recommend reading the intro section, and then the [Page](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-class-page) API page, as that is the API you will be using most frequently.
 
-### Avoid `page.evaluate()`
+### Tip 2: Avoid `page.evaluate()`
 
 The FAQ section of [https://pptr.dev/](https://pptr.dev/) has a question entitled "What’s the difference between a “trusted" and "untrusted" input event?". It turns out that to avoid sites from blocking us as robots, we should always generate "trusted" events. This means that we should avoid the use of `page.evaluate()`, which generates untrusted events. Here's a quote from the docs:
 
@@ -322,12 +322,14 @@ await page.evaluate(() => {
 });
 ```
 
-We definitely want to avoid "fake events", because certain sites might use them to bar us from scraping them.
+We definitely want to avoid "fake events", because certain sites might use them to bar us from scraping them. Note that it's OK to use page.evaluate() if you aren't generating events (i.e. you are just inspecting the page contents).  You should avoid things like .click() inside page.evaluate().
 
-I have found other reasons to avoid `page.evaluate()`. For example, I originally ported this code into the NSF scraper from version 1 that used `page.evaluate`:
+### Tip 3: Prefer super.getValues()
+
+Many scrapers implement code similar to this:
 
 ```js
-public async getValues(selector, field) {
+async oldVersionOfGetValues(selector, field) {
   const returnVals = await this.page.evaluate((selector, field) => {
     const vals = [];
     const nodes = document.querySelectorAll(selector);
@@ -341,14 +343,16 @@ public async getValues(selector, field) {
 I then discovered after studying the Puppeteer documentation that it could be replaced with a one-liner using `page.$$eval`:
 
 ```js
-public async getValues(selector, field) {
+async getValues(selector, field) {
   return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
 }
 ```
 
-### Page navigation pattern
+This is used sufficiently often that it is now present in the Scraper.ts superclass. So, you should replace code similar to oldVersionOfGetValues with super.getValues().
 
-There is a standard pattern for when your script performs an action (such as logging in) that results in page navigation. It looks like this:
+### Tip 4: Page navigation pattern
+
+There is a standard pattern for when your script performs an action (such as logging in or clicking a button) that results in page navigation. It looks like this:
 
 ```js
 await Promise.all([
@@ -360,6 +364,8 @@ await Promise.all([
 The idea is that you have to combine the page.waitForNavigation() with the page.click() (or whatever) in a Promise.all() so that you don't proceed to the next command until both have completed. Doing them serially won't work.
 
 For more details, see [https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-pagewaitfornavigationoptions).
+
+Note: if you use `page.goto()`, you don't need to add `page.waitForNavigation()`.  See [https://stackoverflow.com/a/57881877/2038293](https://stackoverflow.com/a/57881877/2038293) for details.
 
 
 
