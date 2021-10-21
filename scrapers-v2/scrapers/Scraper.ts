@@ -133,7 +133,6 @@ export class Scraper {
    * Subclass: generally no need to override.
    */
   async writeListings() {
-    this.log.warn(`Writing ${this.listings.length()} listings`);
     this.listings.writeListings();
   }
 

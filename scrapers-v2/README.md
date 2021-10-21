@@ -304,13 +304,47 @@ For now, it seems like "info" logging provides the most appropriate feedback on 
 
 ## Developer Tips
 
-### Tip 1: Read the puppeteer documentation
+### Tip 1: Use logging levels appropriately
+
+While a quick console.log() can be useful during development, please remove them before committing to master. Instead, you should use the built-in logging system to output information to the console according to the following guidelines:
+
+`this.log.error()`. When you want to indicate that a non-recoverable error has occurred, call `this.log.error()`. That said, it's probably more convenient to simply throw an Error for code in `login()`, `launch()`, `generateListings()`, or `processListings()`. That's because these errors will be caught by the superclass and a `this.log.error()` will be invoked automatically.
+
+`this.log.warn()`.  When something exceptional happens that you think should be highlighted, use `this.log.warn()`.  This logging level is also used to indicate that a scraper has started.  Running a scraper with logging set to `warn` means that there will typically be only one line of output under normal conditions.
+
+`this.log.info()`. This is the default level of logging. The goal of "info" logging is to provide the user with feedback that enables them to know that the scraper is making progress, but without overwhelming them with output. Try to be judicious. For example, if your scraper is normally going to go through 90 pages, maybe emit an info message every 5 or 10 pages so that there aren't 90 lines of output.
+
+`this.log.debug()`. You can emit as much output as you want at the debug level.
+
+`this.log.trace()`. Calling this will emit a stack trace at the moment of invocation.
+
+So, for example, here is the default output for the NSF scraper:
+
+```
+$ npm run scrape -- -s nsf
+
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf"
+
+12:21:06 WARN NSF Launching NSF scraper
+12:21:10 INFO NSF Wrote 100 listings.
+12:21:10 INFO NSF Wrote statistics.
+```
+
+Since this scraper runs quickly, there's no need to augment the built-in logging messages.
+
+On the other hand, the Simply Hired scraper default (info) output might best look like this:
+
+```
+```
+
+### Tip 2: Read the puppeteer documentation
 
 It's actually quite informative to read the Puppeteer documentation at [https://pptr.dev/](https://pptr.dev/).
 
 I recommend reading the intro section, and then the [Page](https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show=api-class-page) API page, as that is the API you will be using most frequently.
 
-### Tip 2: Avoid `page.evaluate()`
+### Tip 3: Avoid `page.evaluate()`
 
 The FAQ section of [https://pptr.dev/](https://pptr.dev/) has a question entitled "What’s the difference between a “trusted" and "untrusted" input event?". It turns out that to avoid sites from blocking us as robots, we should always generate "trusted" events. This means that we should avoid the use of `page.evaluate()`, which generates untrusted events. Here's a quote from the docs:
 
@@ -324,7 +358,7 @@ await page.evaluate(() => {
 
 We definitely want to avoid "fake events", because certain sites might use them to bar us from scraping them. Note that it's OK to use page.evaluate() if you aren't generating events (i.e. you are just inspecting the page contents).  You should avoid things like .click() inside page.evaluate().
 
-### Tip 3: Prefer super.getValues()
+### Tip 4: Prefer super.getValues()
 
 Many scrapers implement code similar to this:
 
@@ -350,7 +384,7 @@ async getValues(selector, field) {
 
 This is used sufficiently often that it is now present in the Scraper.ts superclass. So, you should replace code similar to oldVersionOfGetValues with super.getValues().
 
-### Tip 4: Page navigation pattern
+### Tip 5: Page navigation pattern
 
 There is a standard pattern for when your script performs an action (such as logging in or clicking a button) that results in page navigation. It looks like this:
 
