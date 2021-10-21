@@ -134,9 +134,7 @@ To avoid this problem, the `scrape` script supports running of only a single scr
 
 ## Example: NSF REU Scraper
 
-I have finished a preliminary version of the NSF REU scraper which provides a proof-of-concept for the system.
-
-Here is the default run of the scraper. The log level defaults to 'warn', so there's very little output.
+Here is the default run of the NSF scraper. The log level defaults to 'info', so there's very little output.
 
 ```
 $ npm run scrape -- -s nsf
@@ -144,23 +142,9 @@ $ npm run scrape -- -s nsf
 > scraper@2.0.0 scrape
 > ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf"
 
-11:42:19 WARN NSF Launching NSF scraper
-11:42:22 WARN NSF Writing 100 listings
-```
-
-Running the scraper with log level 'info' produces a bit more output:
-
-```
-$ npm run scrape -- -s nsf -l info
-
-> scraper@2.0.0 scrape
-> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "nsf" "-l" "info"
-
-11:43:25 WARN NSF Launching NSF scraper
-11:43:27 WARN NSF Writing 100 listings
-11:43:27 INFO NSF Wrote listings.
-11:43:27 INFO NSF Wrote statistics.
-
+12:21:06 WARN NSF Launching NSF scraper
+12:21:10 INFO NSF Wrote 100 listings.
+12:21:10 INFO NSF Wrote statistics.
 ```
 
 Running the scraper with log level 'debug' produces a lot of output, much of which I'll elide:
@@ -336,6 +320,32 @@ Since this scraper runs quickly, there's no need to augment the built-in logging
 On the other hand, the Simply Hired scraper default (info) output might best look like this:
 
 ```
+$ npm run scrape -- -s simplyhired
+
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "simplyhired"
+
+12:24:03 WARN SIMPLYHIRED Launching SIMPLYHIRED scraper
+12:24:23 INFO SIMPLYHIRED Processed page 1, 19 internships
+12:26:07 INFO SIMPLYHIRED Processed page 10, 152 internships
+12:27:49 INFO SIMPLYHIRED Processed page 20, 279 internships
+12:29:23 INFO SIMPLYHIRED Processed page 30, 399 internships
+12:30:59 INFO SIMPLYHIRED Processed page 40, 519 internships
+12:32:38 INFO SIMPLYHIRED Processed page 50, 646 internships
+12:34:37 INFO SIMPLYHIRED Processed page 60, 798 internships
+12:36:59 INFO SIMPLYHIRED Processed page 70, 983 internships
+12:39:15 INFO SIMPLYHIRED Processed page 80, 1163 internships
+12:41:28 INFO SIMPLYHIRED Processed page 90, 1343 internships
+12:41:54 INFO SIMPLYHIRED Reached the end of pages!
+12:41:54 INFO SIMPLYHIRED Wrote 1377 listings.
+12:41:54 INFO SIMPLYHIRED Wrote statistics.
+```
+
+In this case, there's about 90 seconds delay between each line of output. You can write code like this to elide output in info mode but print it all out in debug mode.
+
+```
+const message = `Processed page ${totalPages}, ${internshipsPerPage} internships`;
+((totalPages === 1) || (totalPages % 10 === 0)) ? this.log.info(message) : this.log.debug(message);
 ```
 
 ### Tip 2: Read the puppeteer documentation
