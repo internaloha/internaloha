@@ -288,7 +288,7 @@ For now, it seems like "info" logging provides the most appropriate feedback on 
 
 ## Developer Tips
 
-### Tip 1: Use logging levels appropriately
+### Tip 1: Use log levels appropriately
 
 While a quick console.log() can be useful during development, please remove them before committing to master. Instead, you should use the built-in logging system to output information to the console according to the following guidelines:
 
