@@ -47,7 +47,7 @@ async function getData(page) {
 
 export class ZipRecruiterScraper extends Scraper {
   constructor() {
-    super({ name: 'Zip:', url: 'https://www.ziprecruiter.com/' });
+    super({ name: 'ziprecruiter', url: 'https://www.ziprecruiter.com/' });
   }
 
   async launch() {

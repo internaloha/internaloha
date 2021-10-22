@@ -17,7 +17,7 @@
     "strict": true,
     "strictNullChecks": false,
     "suppressImplicitAnyIndexErrors": true,
-    "target": "es5"
+    "target": "esnext"
   },
   "exclude": ["node_modules"]
 }
