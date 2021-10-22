@@ -59,25 +59,29 @@ export class SimplyHiredScraper extends Scraper {
     }, {});
     // TODO this should be in the config or other file for other instances.
     await this.page.type('input[name=q]', 'computer science intern');
-    await this.page.click('button[type="submit"]');
+    await Promise.all([
+      this.page.click('button[type="submit"]'),
+      this.page.waitForNavigation()
+    ]);
     this.log.info('Inputted search query: computer science intern');
     await this.page.waitForSelector('div[data-id=JobType]');
     // Getting href link for internship filter
-    const internshipDropdown = await this.page.$$eval('a[href*="internship"]', (nodes) => nodes.map(node => node.getAttribute('href')));
+    const internshipDropdown = await super.getValues('a[href*="internship"]', 'href');
     if (internshipDropdown.length > 0) {
-      const url = `${this.url}${internshipDropdown[0]}`;
-      // this.log.info(`Directing to: ${url}`);
+      const url = `${internshipDropdown[0]}`;
+      this.log.debug(`Directing to: ${url}`);
       await this.page.goto(url);
       await this.page.waitForSelector('div[data-id=JobType]');
       // Setting filter as last '30 days'
-      const lastPosted = await this.page.$$eval('div[data-id=Date] a[href*="30"]', (nodes) => nodes.map(node => node.getAttribute('href')));
-      const lastPostedURL = `${this.url}${lastPosted[0]}`;
+      const lastPosted = await super.getValues('div[data-id=Date] a[href*="30"]', 'href');
+      const lastPostedURL = `${lastPosted[0]}`;
       this.log.info('Setting Date Relevance: 30 days');
       this.log.info(`Directing to: ${lastPostedURL}`);
       await this.page.goto(lastPostedURL);
-      await this.page.waitForTimeout(this.timeout);
-      await this.page.click('a[class=SortToggle]');
-      await this.page.waitForNavigation();
+      await Promise.all([
+        this.page.click('a[class=SortToggle]'),
+        this.page.waitForNavigation()
+      ]);
       // Filtering by most recent
       this.log.info('Filtering by: Most recent');
       let totalPages = 0;
@@ -89,7 +93,7 @@ export class SimplyHiredScraper extends Scraper {
         this.log.debug('Results on page: ', elements.length);
         this.log.debug('--- Trying to scrape with old UI layout ---');
         // await this.page.waitForTimeout(1000);
-        const urls = await this.page.$$eval('a[class="SerpJob-link card-link"]', (nodes) => nodes.map(node => node.href));
+        const urls = await super.getValues('a[class="SerpJob-link card-link"]', 'href');
         // this.log.debug(`URLS: \n${urls}`);
         for (let i = 1; i <= elements.length; i++) {
           await this.page.waitForTimeout(this.timeout);
@@ -158,7 +162,10 @@ export class SimplyHiredScraper extends Scraper {
           hasNext = false;
           this.log.info('Reached the end of pages!');
         } else {
-          await nextPage.click();
+          await Promise.all([
+            nextPage.click(),
+            this.page.waitForNavigation()
+          ]);
           totalPages++;
           this.log.info(`Processed page ${totalPages}, ${internshipsPerPage} internships`);
         }
