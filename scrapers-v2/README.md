@@ -368,7 +368,7 @@ await page.evaluate(() => {
 
 We definitely want to avoid "fake events", because certain sites might use them to bar us from scraping them. Note that it's OK to use page.evaluate() if you aren't generating events (i.e. you are just inspecting the page contents).  You should avoid things like .click() inside page.evaluate().
 
-### Tip 4: Prefer super.getValues()
+### Tip 4: Prefer await super.getValues()
 
 Many scrapers implement code similar to this:
 
@@ -436,4 +436,36 @@ while (await super.selectorExists(listingSelector)) {
 }
 ```
 
+### Tip 7: Be kind to future you
+
+"Future you" refers to you in several months when you have been working on other things, but have to come back to fix a broken scraper.  Being kind of future you means structuring your code in such a way that it is easier to re-understand.  Here are some tips:
+
+#### Provide meaningful variable names to document "magic" strings
+
+Consider the following line of code:
+
+```
+await this.page.waitForSelector('a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]');
+```
+
+What, precisely are we waiting for?  The problem here is that the meaning of this selector string is opaque: it doesn't provide us with any information about what it is, where it might be, and why we might be waiting for it.
+
+One good way to fix this is to assign that string to a variable whose name provides more information:
+
+```
+const internshipLink = 'a[class="styles_component__1c6JC styles_defaultLink__1mFc1 styles_information__1TxGq"]';
+await this.page.waitForSelector(internshipLink);
+```
+
+A benefit of this approach over simply adding a comment string is that if you want to inspect the page manually using DevTools, you can simply copy-and-paste the line containing the variable definition into the DevTools console, which makes it easy to replicate the query using non-Puppeteer Dev Tools operations such as:
+
+```
+document.querySelector(internshipLink)
+```
+
+#### Avoid deep nesting
+
+If your code has an if statement inside a while loop inside an if statement, for example, it will be hard to read.
+
+In these cases, think about how to modularize your code. Maybe there is a block of code that can be refactored into a private method with a useful return value.  That is useful for understanding, and also for debugging.
 
