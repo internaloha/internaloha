@@ -64,6 +64,13 @@ export class Scraper {
   }
 
   /**
+   * Return true if the passed selector appears on the page.
+   */
+  async selectorExists(selector) {
+    return !! await this.page.$(selector);
+  }
+
+  /**
    * Allow CLI access to the name of this scraper.
    * Subclass: do not override.
    */

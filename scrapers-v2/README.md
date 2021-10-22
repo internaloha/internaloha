@@ -411,11 +411,29 @@ For more details, see [https://pptr.dev/#?product=Puppeteer&version=v10.4.0&show
 
 Note: if you use `page.goto()`, you don't need to add `page.waitForNavigation()`.  See [https://stackoverflow.com/a/57881877/2038293](https://stackoverflow.com/a/57881877/2038293) for details.
 
+### Tip 6: prefer `await super.selectorExists()`
 
+There are lots of situations in which you want to do some processing as long as there's at least one occurrence of a selector on the page.  Because this is such a common pattern, the Scraper superclass provides a simple method for this:
 
+```
+/**
+ * Return true if the passed selector appears on the page.
+ */
+async selectorExists(selector) {
+  return !! await this.page.$(selector);
+}
+```
 
+This makes it more readable to write loops:
 
-`
+```
+const listingSelector = '#listing';
 
+this.page.goto(getUrl());
+while (await super.selectorExists(listingSelector)) {
+  // process listings on this page.
+  this.page.goto(getNextUrl());
+}
+```
 
 
