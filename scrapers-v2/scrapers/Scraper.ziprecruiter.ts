@@ -25,21 +25,59 @@ async function fetchInfo(page, selector, DOM_Element) {
   return result;
 }
 
-async function getData(page) {
-  const results = [];
-  for (let i = 0; i < 5; i++) {
-    results.push(fetchInfo(page, '.job_title', 'innerText'));
-    results.push(fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText'));
-    results.push(fetchInfo(page, 'span[data-name="address"]', 'innerText'));
-    results.push(fetchInfo(page, '.jobDescriptionSection', 'innerHTML'));
-    results.push(fetchInfo(page, '.job_more span[class="data"]', 'innerText'));
-  }
-  return Promise.all(results);
-}
 
 export class ZipRecruiterScraper extends Scraper {
   constructor() {
     super({ name: 'ziprecruiter', url: 'https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25' });
+  }
+
+  /**
+   * Scrolls down a specific amount every 4 milliseconds.
+   * @param page The page we are scrolling.
+   * @returns {Promise<void>}
+   */
+  async autoScroll() {
+    await this.page.evaluate(async () => {
+      await new Promise<void>((resolve) => {
+        let totalHeight = 0;
+        const distance = 400;
+        const timer = setInterval(() => {
+          const scrollHeight = document.body.scrollHeight;
+          window.scrollBy(0, distance);
+          totalHeight += distance;
+          if (totalHeight >= scrollHeight) {
+            clearInterval(timer);
+            resolve(); //????
+          }
+        }, 400);
+      });
+    });
+  }
+
+  async reload() {
+    await this.page.goto('https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25');
+    await this.page.waitForSelector('.job_content');
+    this.log.info('Fetching jobs...');
+    await this.autoScroll();
+    await this.page.waitForTimeout(5000);
+    await this.autoScroll();
+    let loadMore = true;
+    let loadCount = 0;
+    // Sometimes infinite scroll stops and switches to a "load more" button
+    while (loadMore === true && loadCount <= 40) {
+      try {
+        await this.page.waitForTimeout(5000);
+        if (await this.page.waitForSelector('button[data-tracking-control-name="infinite-scroller_show-more"]')) {
+          await this.page.click('.load_more_jobs');
+        } else {
+          await this.autoScroll();
+        }
+        loadCount++;
+      } catch (e2) {
+        loadMore = false;
+        this.log.debug('Finished loading...');
+      }
+    }
   }
 
   async launch() {
@@ -56,34 +94,9 @@ export class ZipRecruiterScraper extends Scraper {
   async generateListings() {
     super.generateListings();
     const data = [];
-    await this.page.goto('https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25');
-    await this.page.waitForSelector('input[id="search1"]');
-    await this.page.waitForSelector('input[id="location1"]');
-    const searchQuery = 'computer science internship';
-    this.log.debug('Inputting search query:', searchQuery);
-    await this.page.type('input[id="search1"', searchQuery);
-    await this.page.$eval('input[id="location1"]', (el) => el.value = 'US');
-    await this.page.click('button.job_search_hide + input');
-    await this.page.mouse.click(1, 1);
-    await this.page.waitForSelector('.modal-dialog');
-    await this.page.mouse.click(1000, 800);
-    await this.page.waitForTimeout(5000);
-    this.log.debug('Setting filter by 10 days...');
-    await this.page.click('menu[id="select-menu-search_filters_tags"] > button[class="select-menu-header"]');
-    await this.page.click('menu[id="select-menu-search_filters_tags"] .select-menu-item:nth-child(3)');
-    await this.page.waitForTimeout(5000);
-    await this.page.waitForSelector('.job_content');
-    try {
-      // Click the "Load More" button
-      await this.page.click('.load_more_jobs');
-    } catch (err) {
-      this.log.debug('--- All jobs are Listed, no "Load More" button --- ');
-    }
-
-    // Generate a set of parallel arrays containing the fields to be put into each listing.
-    // Each array should be the same length, and each positional element should refer to the same listing.
-    // Start by creating an array of URLs.
-    let elements = await this.page.evaluate(
+    await this.reload();
+    // grab all links
+    const elements = await this.page.evaluate(
       () => Array.from(
         // eslint-disable-next-line no-undef
         document.querySelectorAll('.job_link.t_job_link'),
@@ -91,41 +104,35 @@ export class ZipRecruiterScraper extends Scraper {
       ),
     );
     this.log.debug(elements.length);
-    const skippedPages = [];
+    const skippedPages =[];
     for (let i = 0; i < elements; i++) {
       const element = elements[i];
       await this.page.goto(element, { waitUntil: 'domcontentloaded' });
-      const currentPage = this.page.url();
-      if (currentPage.startsWith('https://www.ziprecruiter.com')) {
-        await this.page.waitForSelector('.pc_message');
-        await this.page.click('.pc_message');
-        const date = new Date();
-        let daysBack = 0;
-        const lastScraped = new Date();
-        const [position, company, location, description, posted] = await getData(this.page);
-        if (posted.includes('yesterday')) {
-          daysBack = 1;
-        } else {
-          daysBack = posted.match(/\d+/g);
-        }
-        date.setDate(date.getDate() - daysBack);
-        data.push({
-          position: position.trim(),
-          company: company.trim(),
-          location: {
-            city: location.match(/([^,]*)/g)[0].trim(),
-            state: location.match(/([^,]*)/g)[2].trim(),
-            country: location.match(/([^,]*)/g)[4].trim(),
-          },
-          url: currentPage,
-          posted: date,
-          lastScraped: lastScraped,
-          description: description.trim(),
-        });
+      await this.page.waitForSelector('.pc_message');
+      await this.page.click('.pc_message');
+      const date = new Date();
+      let daysBack = 0;
+      const lastScraped = new Date();
+      const [position, company, location, description, posted] = await getData(this.page);
+      if (posted.includes('yesterday')) {
+        daysBack = 1;
       } else {
-        this.log.debug('--- Went off of ZipRecruiter, skipping ---');
-        skippedPages.push(currentPage);
+        daysBack = posted.match(/\d+/g);
       }
+      date.setDate(date.getDate() - daysBack);
+      data.push({
+        position: position.trim(),
+        company: company.trim(),
+        location: {
+          city: location.match(/([^,]*)/g)[0].trim(),
+          state: location.match(/([^,]*)/g)[2].trim(),
+          country: location.match(/([^,]*)/g)[4].trim(),
+        },
+        url: 'https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25',
+        posted: date,
+        lastScraped: lastScraped,
+        description: description.trim(),
+      });
     }
   }
 
