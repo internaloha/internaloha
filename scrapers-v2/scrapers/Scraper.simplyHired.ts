@@ -34,13 +34,6 @@ export class SimplyHiredScraper extends Scraper {
     super({ name: 'simplyHired', url: 'https://www.simplyhired.com' });
   }
 
-  /**
-   * Get the values associated with the passed selector and associated field.
-   */
-  private async getValues(selector, field) {
-    return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
-  }
-
   async launch() {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
@@ -101,12 +94,12 @@ export class SimplyHiredScraper extends Scraper {
         for (let i = 1; i <= elements.length; i++) {
           await this.page.waitForTimeout(this.timeout);
           const element = elements[i];
-          const positionVal = await this.getValues('div[class="viewjob-jobTitle h2"]', 'innerText');
+          const positionVal = await super.getValues('div[class="viewjob-jobTitle h2"]', 'innerText');
           let position;
           if (positionVal.length > 0) {
             position = positionVal[0].trim();
           }
-          const companyVal = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
+          const companyVal = await super.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
           let company;
           if (companyVal.length > 0) {
             company = companyVal[0];
@@ -119,13 +112,13 @@ export class SimplyHiredScraper extends Scraper {
             company = 'N/A';
             this.log.debug('No company found');
           }
-          const locationObj = await this.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+          const locationObj = await super.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
           if (locationObj.length > 1) {
             this.log.debug(`Multiple locations for ${company}: ${position}`);
           }
           const locationStr = `${locationObj}`;
-          const description = await this.getValues('div[class="viewjob-jobDescription"]', 'innerHTML');
-          const postedVal = await this.getValues('span[class="viewjob-labelWithIcon viewjob-age"]', 'innerText');
+          const description = await super.getValues('div[class="viewjob-jobDescription"]', 'innerHTML');
+          const postedVal = await super.getValues('span[class="viewjob-labelWithIcon viewjob-age"]', 'innerText');
           let posted = '';
           if (postedVal.length > 0) {
             posted = convertPostedToDate(postedVal[0].toLowerCase()).toLocaleDateString();

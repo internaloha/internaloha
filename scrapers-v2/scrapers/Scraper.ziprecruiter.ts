@@ -1,0 +1,144 @@
+import { Scraper } from './Scraper';
+const prefix = require('loglevel-plugin-prefix');
+import Logger from 'loglevel';
+
+async function waitForSelectorIfPresent(page, selector) {
+  try {
+    await page.waitForSelector(selector, { timeout: 10000 });
+  } catch (e) {
+    return null;
+  }
+  return true;
+}
+
+/**
+ * Fetches the information from the page.
+ * @param page The page we are scraping
+ * @param selector The CSS Selector
+ * @param DOM_Element The DOM element we want to use. Common ones are innerHTML, innerText, textContent
+ * @returns {Promise<*>} The information as a String.
+ */
+async function fetchInfo(page, selector, DOM_Element) {
+  let result = await waitForSelectorIfPresent(page, selector);
+  if (result) {
+    result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
+  } else {
+    // only prints trace when it's not in production
+    const oldLevel = Logger.getLevel();
+    if (oldLevel !== 3) {
+      console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
+    }
+    //result = 'N/A';
+  }
+  return result;
+}
+
+async function getData(page) {
+  const results = [];
+  for (let i = 0; i < 5; i++) {
+    results.push(fetchInfo(page, '.job_title', 'innerText'));
+    results.push(fetchInfo(page, '.hiring_company_text.t_company_name', 'innerText'));
+    results.push(fetchInfo(page, 'span[data-name="address"]', 'innerText'));
+    results.push(fetchInfo(page, '.jobDescriptionSection', 'innerHTML'));
+    results.push(fetchInfo(page, '.job_more span[class="data"]', 'innerText'));
+  }
+  return Promise.all(results);
+}
+
+export class ZipRecruiterScraper extends Scraper {
+  constructor() {
+    super({ name: 'ziprecruiter', url: 'https://www.ziprecruiter.com/' });
+  }
+
+  async launch() {
+    await super.launch();
+    prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
+    this.log.info('Launching scraper.');
+  }
+
+  async login() {
+    super.login();
+    await this.page.goto(this.url);
+  }
+
+  async generateListings() {
+    super.generateListings();
+    const data = [];
+    await this.page.goto('https://www.ziprecruiter.com/');
+    await this.page.waitForSelector('input[id="search1"]');
+    await this.page.waitForSelector('input[id="location1"]');
+    const searchQuery = 'computer science internship';
+    this.log.debug('Inputting search query:', searchQuery);
+    await this.page.type('input[id="search1"', searchQuery);
+    await this.page.$eval('input[id="location1"]', (el) => el.value = 'US');
+    await this.page.click('button.job_search_hide + input');
+    await this.page.mouse.click(1, 1);
+    await this.page.waitForSelector('.modal-dialog');
+    await this.page.mouse.click(1000, 800);
+    await this.page.waitForTimeout(5000);
+    this.log.debug('Setting filter by 10 days...');
+    await this.page.click('menu[id="select-menu-search_filters_tags"] > button[class="select-menu-header"]');
+    await this.page.click('menu[id="select-menu-search_filters_tags"] .select-menu-item:nth-child(3)');
+    await this.page.waitForTimeout(5000);
+    await this.page.waitForSelector('.job_content');
+    try {
+      // Click the "Load More" button
+      await this.page.click('.load_more_jobs');
+    } catch (err) {
+      this.log.debug('--- All jobs are Listed, no "Load More" button --- ');
+    }
+
+    // Generate a set of parallel arrays containing the fields to be put into each listing.
+    // Each array should be the same length, and each positional element should refer to the same listing.
+    // Start by creating an array of URLs.
+    let elements = await this.page.evaluate(
+      () => Array.from(
+        // eslint-disable-next-line no-undef
+        document.querySelectorAll('.job_link.t_job_link'),
+        a => a.getAttribute('href'),
+      ),
+    );
+    this.log.debug(elements.length);
+    const skippedPages = [];
+    for (let i = 0; i < elements; i++) {
+      const element = elements[i];
+      await this.page.goto(element, { waitUntil: 'domcontentloaded' });
+      const currentPage = this.page.url();
+      if (currentPage.startsWith('https://www.ziprecruiter.com')) {
+        await this.page.waitForSelector('.pc_message');
+        await this.page.click('.pc_message');
+        const date = new Date();
+        let daysBack = 0;
+        const lastScraped = new Date();
+        const [position, company, location, description, posted] = await getData(this.page);
+        if (posted.includes('yesterday')) {
+          daysBack = 1;
+        } else {
+          daysBack = posted.match(/\d+/g);
+        }
+        date.setDate(date.getDate() - daysBack);
+        data.push({
+          position: position.trim(),
+          company: company.trim(),
+          location: {
+            city: location.match(/([^,]*)/g)[0].trim(),
+            state: location.match(/([^,]*)/g)[2].trim(),
+            country: location.match(/([^,]*)/g)[4].trim(),
+          },
+          url: currentPage,
+          posted: date,
+          lastScraped: lastScraped,
+          description: description.trim(),
+        });
+      } else {
+        this.log.debug('--- Went off of ZipRecruiter, skipping ---');
+        skippedPages.push(currentPage);
+      }
+    }
+  }
+
+  async processListings() {
+    await super.processListings();
+    // No post-processing (yet) for NSF scraper results.
+  }
+}

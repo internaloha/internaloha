@@ -55,6 +55,22 @@ export class Scraper {
   }
 
   /**
+   * Return a list of field values based on selector.
+   * @param selector The nodes to be selected from the current page.
+   * @param field The field to extract from the nodes returned from the selector.
+   */
+  async getValues(selector, field) {
+    return await this.page.$$eval(selector, (nodes, field) => nodes.map(node => node[field]), field);
+  }
+
+  /**
+   * Return true if the passed selector appears on the page.
+   */
+  async selectorExists(selector) {
+    return !! await this.page.$(selector);
+  }
+
+  /**
    * Allow CLI access to the name of this scraper.
    * Subclass: do not override.
    */
@@ -124,7 +140,6 @@ export class Scraper {
    * Subclass: generally no need to override.
    */
   async writeListings() {
-    this.log.warn(`Writing ${this.listings.length()} listings`);
     this.listings.writeListings();
   }
 
