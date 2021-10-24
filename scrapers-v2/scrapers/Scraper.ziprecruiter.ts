@@ -2,15 +2,6 @@ import { Scraper } from './Scraper';
 const prefix = require('loglevel-plugin-prefix');
 import Logger from 'loglevel';
 
-async function waitForSelectorIfPresent(page, selector) {
-  try {
-    await page.waitForSelector(selector, { timeout: 10000 });
-  } catch (e) {
-    return null;
-  }
-  return true;
-}
-
 /**
  * Fetches the information from the page.
  * @param page The page we are scraping
@@ -19,7 +10,8 @@ async function waitForSelectorIfPresent(page, selector) {
  * @returns {Promise<*>} The information as a String.
  */
 async function fetchInfo(page, selector, DOM_Element) {
-  let result = await waitForSelectorIfPresent(page, selector);
+  // @ts-ignore
+  let result = await super.selectorExists(this.page);
   if (result) {
     result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
   } else {
@@ -47,7 +39,7 @@ async function getData(page) {
 
 export class ZipRecruiterScraper extends Scraper {
   constructor() {
-    super({ name: 'ziprecruiter', url: 'https://www.ziprecruiter.com/' });
+    super({ name: 'ziprecruiter', url: 'https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25' });
   }
 
   async launch() {
@@ -64,7 +56,7 @@ export class ZipRecruiterScraper extends Scraper {
   async generateListings() {
     super.generateListings();
     const data = [];
-    await this.page.goto('https://www.ziprecruiter.com/');
+    await this.page.goto('https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25');
     await this.page.waitForSelector('input[id="search1"]');
     await this.page.waitForSelector('input[id="location1"]');
     const searchQuery = 'computer science internship';
