@@ -15,7 +15,6 @@ export class LinkedinScraper extends Scraper {
 
   async login() {
     super.login();
-    await this.page.goto(this.url);
   }
 
   /**
@@ -42,7 +41,7 @@ export class LinkedinScraper extends Scraper {
   }
 
   async reload() {
-    await this.page.goto('https://www.linkedin.com/jobs/search?keywords=Computer%2BScience&location=United%2BStates&geoId=103644278&trk=public_jobs_jobs-search-bar_search-submit&f_TP=1%2C2%2C3%2C4&f_E=1&f_JT=I&redirect=false&position=1&pageNum=0');
+    await this.page.goto(this.url);
     await this.page.waitForSelector('a[class="base-card__full-link"]');
     this.log.info('Fetching jobs...');
     await this.autoScroll();
@@ -86,26 +85,20 @@ export class LinkedinScraper extends Scraper {
   }
 
   async generateListings() {
-    super.generateListings();
+    await super.generateListings();
     await this.reload();
     let totalInternships = 0;
     let elements = await this.page.$$('a[class="base-card__full-link"]');
-    // eslint-disable-next-line no-unused-vars
-    //   let times = await this.page.evaluate(
-    //       () => Array.from(
-    //           // eslint-disable-next-line no-undef
-    //           document.querySelectorAll('time[class="job-search-card__listdate--new"]'),
-    //           a => a.textContent,
-    //       ),
-    //   );
-    let urls = await this.page.evaluate(() => {
-      const vals = [];
-      const nodes = document.querySelectorAll('a[class="base-card__full-link"]');
-      nodes.forEach(node => vals.push(node['href']));
-      return vals;
-    });
+    this.log.info('Total Elements:', elements);
+    // let urls = await this.page.evaluate(() => {
+    //   const vals = [];
+    //   const nodes = document.querySelectorAll('a[class="base-card__full-link"]');
+    //   nodes.forEach(node => vals.push(node['href']));
+    //   return vals;
+    // });
+    let urls = await super.getValues('a[class="base-card__full-link"]', 'href');
 
-    this.log.info('Total Listings:', elements.length);
+    this.log.info('Total URLs:', urls.length);
     const skippedURLs = [];
     const lastScraped = new Date();
 
@@ -117,36 +110,41 @@ export class LinkedinScraper extends Scraper {
           await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', { timeout: 1500 });
           await this.page.waitForTimeout(1500);
           // eslint-disable-next-line prefer-const
-          const position = await this.page.evaluate(() => {
-            const vals = [];
-            const nodes = document.querySelectorAll('h2.topcard__title');
-            nodes.forEach(node => vals.push(node['innerText']));
-            return vals;
-          });
-          const company = await this.page.evaluate(() => {
-            const vals = [];
-            const nodes = document.querySelectorAll('a[class="topcard__org-name-link topcard__flavor--black-link"]');
-            nodes.forEach(node => vals.push(node['innerText']));
-            return vals;
-          });
-          const location = await this.page.evaluate(() => {
-            const vals = [];
-            const nodes = document.querySelectorAll('span[class="topcard__flavor topcard__flavor--bullet"]');
-            nodes.forEach(node => vals.push(node['innerText']));
-            return vals;
-          });
-          let posted = await this.page.evaluate(() => {
-            const vals = [];
-            const nodes = document.querySelectorAll('span.topcard__flavor--metadata.posted-time-ago__text');
-            nodes.forEach(node => vals.push(node['innerText']));
-            return vals;
-          });
-          const description = await this.page.evaluate(() => {
-            const vals = [];
-            const nodes = document.querySelectorAll('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]');
-            nodes.forEach(node => vals.push(node['innerText']));
-            return vals;
-          });
+          // const position = await this.page.evaluate(() => {
+          //   const vals = [];
+          //   const nodes = document.querySelectorAll('h1[class="topcard__title"]');
+          //   nodes.forEach(node => vals.push(node['innerText']));
+          //   return vals;
+          // });
+          const position = await super.getValues('h1[class="topcard__title"]', 'innerText');
+          // const company = await this.page.evaluate(() => {
+          //   const vals = [];
+          //   const nodes = document.querySelectorAll('a[class="topcard__org-name-link topcard__flavor--black-link"]');
+          //   nodes.forEach(node => vals.push(node['innerText']));
+          //   return vals;
+          // });
+          const company = await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerText');
+          // const location = await this.page.evaluate(() => {
+          //   const vals = [];
+          //   const nodes = document.querySelectorAll('span[class="topcard__flavor topcard__flavor--bullet"]');
+          //   nodes.forEach(node => vals.push(node['innerText']));
+          //   return vals;
+          // });
+          const location = await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
+          // let posted = await this.page.evaluate(() => {
+          //   const vals = [];
+          //   const nodes = document.querySelectorAll('span.topcard__flavor--metadata.posted-time-ago__text');
+          //   nodes.forEach(node => vals.push(node['innerText']));
+          //   return vals;
+          // });
+          let posted = await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
+          // const description = await this.page.evaluate(() => {
+          //   const vals = [];
+          //   const nodes = document.querySelectorAll('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]');
+          //   nodes.forEach(node => vals.push(node['innerText']));
+          //   return vals;
+          // });
+          const description = await super.getValues('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerText');
           posted = this.convertPostedToDate(posted);
           let state = '';
           if (!location.match(/([^,]*)/g)[2]) {
@@ -202,36 +200,15 @@ export class LinkedinScraper extends Scraper {
       await this.page.waitForSelector('section.core-rail');
       const skills = 'N/A';
       // eslint-disable-next-line prefer-const
-      const position = await this.page.evaluate(() => {
-        const vals = [];
-        const nodes = document.querySelectorAll('h1[class="topcard__title"]');
-        nodes.forEach(node => vals.push(node['innerText']));
-        return vals;
-      });
-      const company = await this.page.evaluate(() => {
-        const vals = [];
-        const nodes = document.querySelectorAll('a[class="topcard__org-name-link topcard__flavor--black-link"]');
-        nodes.forEach(node => vals.push(node['innerText']));
-        return vals;
-      });
-      const location = await this.page.evaluate(() => {
-        const vals = [];
-        const nodes = document.querySelectorAll('span[class="topcard__flavor topcard__flavor--bullet"]');
-        nodes.forEach(node => vals.push(node['innerText']));
-        return vals;
-      });
-      let posted = await this.page.evaluate(() => {
-        const vals = [];
-        const nodes = document.querySelectorAll('span.topcard__flavor--metadata.posted-time-ago__text');
-        nodes.forEach(node => vals.push(node['innerText']));
-        return vals;
-      });
-      const description = await this.page.evaluate(() => {
-        const vals = [];
-        const nodes = document.querySelectorAll('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]');
-        nodes.forEach(node => vals.push(node['innerText']));
-        return vals;
-      });
+      const position = await super.getValues('h1[class="topcard__title"]', 'innerText');
+
+      const company = await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerText');
+
+      const location = await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText');
+
+      let posted = await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
+
+      const description = await super.getValues('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerText');
       posted = this.convertPostedToDate(posted);
       let state = '';
       if (!location.match(/([^,]*)/g)[2]) {
