@@ -4,7 +4,7 @@ import { AngelListScraper } from './scrapers/Scraper.angellist';
 import { NsfScraper } from './scrapers/Scraper.nsf';
 import { CiscoScraper } from './scrapers/Scraper.cisco';
 import { DISCIPLINES } from './disciplines';
-import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
+// import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
 import { Apple } from './scrapers/Scraper.apple';
 import { LinkedinScraper } from './scrapers/Scraper.linkedin';
 import { ZipRecruiterScraper } from './scrapers/Scraper.ziprecruiter';
@@ -26,7 +26,7 @@ const scrapers = {
   cisco: new CiscoScraper(),
   linkedin: new LinkedinScraper(),
   nsf: new NsfScraper(),
-  simplyhired: new SimplyHiredScraper(),
+  // simplyhired: new SimplyHiredScraper(),
   ziprecruiter: new ZipRecruiterScraper(),
 };
 
