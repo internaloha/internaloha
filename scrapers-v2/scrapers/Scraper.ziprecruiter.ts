@@ -134,6 +134,13 @@ export class ZipRecruiterScraper extends Scraper {
       states.push(loc[1]);
     }
 
+    let urls = await this.page.evaluate(() => {
+      const vals = [];
+      const nodes = document.querySelectorAll('a[class="job_link t_job_link"]');
+      nodes.forEach(node => vals.push(node['href']));
+      return vals;
+    });
+
     // Now generate listings. All arrays are (hopefully!) the same length.
     for (let i = 0; i < this.urls.length; i++) {
       const location = { city: cities[i], state: states[i], country: '' };
