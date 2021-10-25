@@ -103,7 +103,21 @@ export class ZipRecruiterScraper extends Scraper {
       const date = new Date();
       let daysBack = 0;
       const lastScraped = new Date();
-      const [position, company, location, description, posted] = await this.getData(this.page);
+      const positions = await super.getValues('.job_title', 'innerText');
+      this.log.debug(`Positions: \n${positions}`);
+
+      const companies = await super.getValues('.hiring_company_text.t_company_name', 'innerText');
+      this.log.debug(`Companies: \n${companies}`);
+
+      const descriptions = await super.getValues('td[data-label="Additional Information: "] > div ', 'innerText');
+      this.log.debug(`Descriptions: \n${descriptions}`);
+
+      const locations = await super.getValues('td[data-label="Site Location: "] > div', 'innerText');
+      this.log.debug(`Locations: \n${locations}`);
+
+      const posted = await super.getValues('.job_more span[class="data"]', 'innerText');
+      this.log.debug(`Posted: \n${posted}`);
+      
       if (posted.includes('yesterday')) {
         daysBack = 1;
       } else {
