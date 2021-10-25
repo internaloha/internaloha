@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Listing } from './Listing';
 import { Scraper } from './Scraper';
 const prefix = require('loglevel-plugin-prefix');
@@ -134,6 +135,7 @@ export class ZipRecruiterScraper extends Scraper {
       states.push(loc[1]);
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     let urls = await this.page.evaluate(() => {
       const vals = [];
       const nodes = document.querySelectorAll('a[class="job_link t_job_link"]');
@@ -141,12 +143,6 @@ export class ZipRecruiterScraper extends Scraper {
       return vals;
     });
 
-    // Now generate listings. All arrays are (hopefully!) the same length.
-    for (let i = 0; i < this.urls.length; i++) {
-      const location = { city: cities[i], state: states[i], country: '' };
-      const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
-      this.listings.addListing(listing);
-    }
   }
 
   async processListings() {
