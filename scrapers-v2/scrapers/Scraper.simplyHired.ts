@@ -30,6 +30,8 @@ function convertPostedToDate(posted) {
 export class SimplyHiredScraper extends Scraper {
   private timeout: number;
 
+  private searchTerms: string;
+
   constructor() {
     super({ name: 'simplyHired', url: 'https://www.simplyhired.com' });
   }
@@ -38,10 +40,14 @@ export class SimplyHiredScraper extends Scraper {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
+    this.log.debug(`Discipline: ${this.discipline}`);
     // check the config file to set the timeouts.
     // @ts-ignore
     this.timeout = this.config?.additionalParams?.simplyHired?.timeout || 500;
     this.log.debug(`Timeout: ${this.timeout}`);
+    // @ts-ignore
+    this.searchTerms = this.config?.additionalParams?.simplyHired?.searchTerms[this.discipline] || 'computer science intern';
+    this.log.debug(`Search Terms: ${this.searchTerms}`);
   }
 
   async login() {
@@ -89,10 +95,12 @@ export class SimplyHiredScraper extends Scraper {
       let hasNext = true;
       do {
         await this.page.waitForSelector('.SerpJob-jobCard.card');
-        const elements = await this.page.$$('.SerpJob-jobCard.card');
+        let elements = await this.page.$$('.SerpJob-jobCard.card');
+        if (elements.length < 19) {
+          await this.page.waitForTimeout(this.timeout);
+          elements = await this.page.$$('.SerpJob-jobCard.card');
+        }
         this.log.debug('Results on page: ', elements.length);
-        this.log.debug('--- Trying to scrape with old UI layout ---');
-        // await this.page.waitForTimeout(1000);
         const urls = await super.getValues('a[class="SerpJob-link card-link"]', 'href');
         // this.log.debug(`URLS: \n${urls}`);
         for (let i = 1; i <= elements.length; i++) {
@@ -167,7 +175,9 @@ export class SimplyHiredScraper extends Scraper {
             this.page.waitForNavigation()
           ]);
           totalPages++;
-          this.log.info(`Processed page ${totalPages}, ${internshipsPerPage} internships`);
+          const message = `Processed page ${totalPages}, ${internshipsPerPage} internships`;
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          ((totalPages === 1) || (totalPages % 10 === 0)) ? this.log.info(message) : this.log.debug(message);
         }
       } while (hasNext === true);
       this.log.debug(`Found ${totalPages} pages.`);

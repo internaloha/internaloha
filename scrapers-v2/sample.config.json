@@ -11,7 +11,10 @@
   },
   "additionalParams": {
     "simplyHired": {
-      "timeout": 500
+      "timeout": 500,
+      "searchTerms": {
+        "compsci": "computer science intern"
+      }
     }
   }
 }
