@@ -1,3 +1,4 @@
+import { Listing } from './Listing';
 import { Scraper } from './Scraper';
 const prefix = require('loglevel-plugin-prefix');
 /**
@@ -103,6 +104,9 @@ export class ZipRecruiterScraper extends Scraper {
       const date = new Date();
       let daysBack = 0;
       const lastScraped = new Date();
+      let urls = await super.getValues('td[data-label="Site Information: "] > div > a', 'href');
+      this.log.debug(`URLS: \n${urls}`);
+
       const positions = await super.getValues('.job_title', 'innerText');
       this.log.debug(`Positions: \n${positions}`);
 
@@ -111,9 +115,6 @@ export class ZipRecruiterScraper extends Scraper {
 
       const descriptions = await super.getValues('td[data-label="Additional Information: "] > div ', 'innerText');
       this.log.debug(`Descriptions: \n${descriptions}`);
-
-      const locations = await super.getValues('td[data-label="Site Location: "] > div', 'innerText');
-      this.log.debug(`Locations: \n${locations}`);
 
       const posted = await super.getValues('.job_more span[class="data"]', 'innerText');
       this.log.debug(`Posted: \n${posted}`);
@@ -124,19 +125,24 @@ export class ZipRecruiterScraper extends Scraper {
         daysBack = posted.match(/\d+/g);
       }
       date.setDate(date.getDate() - daysBack);
-      data.push({
-        position: position.trim(),
-        company: company.trim(),
-        location: {
-          city: location.match(/([^,]*)/g)[0].trim(),
-          state: location.match(/([^,]*)/g)[2].trim(),
-          country: location.match(/([^,]*)/g)[4].trim(),
-        },
-        url: 'https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25',
-        posted: date,
-        lastScraped: lastScraped,
-        description: description.trim(),
-      });
+    }
+
+    const locations = await super.getValues('td[data-label="Site Location: "] > div', 'innerText');
+    this.log.debug(`Locations: \n${locations}`);
+
+    const cities = [];
+    const states = [];
+    for (let i = 0; i < locations.length; i++) {
+      const loc = locations[i].split(', ');
+      cities.push(loc[0]);
+      states.push(loc[1]);
+    }
+
+    // Now generate listings. All arrays are (hopefully!) the same length.
+    for (let i = 0; i < urls.length; i++) {
+      const location = { city: cities[i], state: states[i], country: '' };
+      const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
+      this.listings.addListing(listing);
     }
   }
 
