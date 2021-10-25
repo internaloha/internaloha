@@ -501,3 +501,36 @@ if (await super.selectorExists(loadJobsSelector) {
 ```
 
 It doesn't seem particularly interesting to provide the debugging log statement, so I've omitted it, but you could add it back in if you really wanted it as an else clause.
+
+## Tip 9: "Error: Navigation failed because browser has disconnected!"
+
+Occasionally, you might experience an intermittent error similar to this:
+
+```
+10:37:59 ERROR APPLE Execution context was destroyed, most likely because of a navigation.
+(node:95928) UnhandledPromiseRejectionWarning: Error: Navigation failed because browser has disconnected!
+    at /Users/philipjohnson/github/internaloha/internaloha/scrapers-v2/node_modules/puppeteer/lib/cjs/puppeteer/common/LifecycleWatcher.js:51:147
+```
+
+According to [this stackoverflow page](https://stackoverflow.com/questions/54527982/why-is-puppeteer-reporting-unhandledpromiserejectionwarning-error-navigation), *The "Navigation failed because browser has disconnected" error usually means that the node scripts that launched Puppeteer ends without waiting for the Puppeteer actions to be completed.*
+
+The stackoverflow answer goes on to debug the specific code in question, but there is a much more general answer:
+
+*Be sure that you preface every Puppeteer operation (i.e. `this.page.<operation>`) with await.*
+
+For example, there was some scraper code that generated this error occasionally. On review, the following lines were discovered:
+
+```js
+this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
+await this.page.waitForTimeout(3000);
+```
+
+Because the `this.page.goto` was not proceeded with an `await`, that line of code returned immediately. The next line of code forced a wait of 3 seconds, which might or might not be enough time for the `goto` to complete successfully. If it is enough time, then everything would be OK. If it is not enough time, then we'd get the error.
+
+The solution is to simply add the `await`, which then means we don't need the `waitForTimeout`:
+
+```js
+await this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
+```
+
+So, if you are getting this error intermittently, a quick thing to do is a search for every occurrence of `this.page` in your scraper code, and verify there are no occurrences of `this.page` not preceded by `await`.
