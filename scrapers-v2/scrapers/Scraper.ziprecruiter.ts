@@ -1,7 +1,5 @@
 import { Scraper } from './Scraper';
 const prefix = require('loglevel-plugin-prefix');
-import Logger from 'loglevel';
-
 /**
  * Fetches the information from the page.
  * @param page The page we are scraping
@@ -9,21 +7,7 @@ import Logger from 'loglevel';
  * @param DOM_Element The DOM element we want to use. Common ones are innerHTML, innerText, textContent
  * @returns {Promise<*>} The information as a String.
  */
-async function fetchInfo(page, selector, DOM_Element) {
-  // @ts-ignore
-  let result = await super.selectorExists(this.page);
-  if (result) {
-    result = await page.evaluate((select, element) => document.querySelector(select)[element], selector, DOM_Element);
-  } else {
-    // only prints trace when it's not in production
-    const oldLevel = Logger.getLevel();
-    if (oldLevel !== 3) {
-      console.trace('\x1b[4m\x1b[33m%s\x1b[0m', `${selector} does not exist.`);
-    }
-    //result = 'N/A';
-  }
-  return result;
-}
+
 export class ZipRecruiterScraper extends Scraper {
   constructor() {
     super({ name: 'ziprecruiter', url: 'https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25' });
@@ -34,6 +18,15 @@ export class ZipRecruiterScraper extends Scraper {
    * @param page The page we are scrolling.
    * @returns {Promise<void>}
    */
+  async getData(page) {
+    const results = [];
+    results.push(super.getValues(page, '.job_title'));
+    results.push(super.getValues(page, '.hiring_company_text.t_company_name'));
+    results.push(super.getValues(page, 'span[data-name="address"]'));
+    results.push(super.getValues(page, '.jobDescriptionSection'));
+    results.push(super.getValues(page, '.job_more span[class="data"]'));
+
+  }
   async autoScroll() {
     await this.page.evaluate(async () => {
       await new Promise<void>((resolve) => {
@@ -110,7 +103,7 @@ export class ZipRecruiterScraper extends Scraper {
       const date = new Date();
       let daysBack = 0;
       const lastScraped = new Date();
-      const [position, company, location, description, posted] = await getData(this.page);
+      const [position, company, location, description, posted] = await this.getData(this.page);
       if (posted.includes('yesterday')) {
         daysBack = 1;
       } else {
