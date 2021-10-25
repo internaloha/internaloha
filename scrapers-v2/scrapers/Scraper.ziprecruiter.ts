@@ -24,8 +24,6 @@ async function fetchInfo(page, selector, DOM_Element) {
   }
   return result;
 }
-
-
 export class ZipRecruiterScraper extends Scraper {
   constructor() {
     super({ name: 'ziprecruiter', url: 'https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25' });
@@ -104,7 +102,6 @@ export class ZipRecruiterScraper extends Scraper {
       ),
     );
     this.log.debug(elements.length);
-    const skippedPages =[];
     for (let i = 0; i < elements; i++) {
       const element = elements[i];
       await this.page.goto(element, { waitUntil: 'domcontentloaded' });
