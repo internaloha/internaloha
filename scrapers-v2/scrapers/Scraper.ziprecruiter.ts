@@ -85,7 +85,6 @@ export class ZipRecruiterScraper extends Scraper {
 
   async generateListings() {
     super.generateListings();
-    const data = [];
     await this.reload();
     // grab all links
     const elements = await this.page.evaluate(
@@ -103,7 +102,7 @@ export class ZipRecruiterScraper extends Scraper {
       await this.page.click('.pc_message');
       const date = new Date();
       let daysBack = 0;
-      const lastScraped = new Date();
+
       let urls = await super.getValues('td[data-label="Site Information: "] > div > a', 'href');
       this.log.debug(`URLS: \n${urls}`);
 
@@ -127,7 +126,7 @@ export class ZipRecruiterScraper extends Scraper {
       date.setDate(date.getDate() - daysBack);
     }
 
-    const locations = await super.getValues('td[data-label="Site Location: "] > div', 'innerText');
+    const locations = await super.getValues( 'span[data-name="address"]', 'innerText');
     this.log.debug(`Locations: \n${locations}`);
 
     const cities = [];
@@ -136,13 +135,6 @@ export class ZipRecruiterScraper extends Scraper {
       const loc = locations[i].split(', ');
       cities.push(loc[0]);
       states.push(loc[1]);
-    }
-
-    // Now generate listings. All arrays are (hopefully!) the same length.
-    for (let i = 0; i < urls.length; i++) {
-      const location = { city: cities[i], state: states[i], country: '' };
-      const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
-      this.listings.addListing(listing);
     }
   }
 
