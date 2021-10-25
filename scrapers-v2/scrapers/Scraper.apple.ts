@@ -56,8 +56,8 @@ export class Apple extends Scraper {
         this.listings.addListing(listing);
 
       }
-      
-      // Go to the next url.
+
+      // Go to the next page.
       this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
       // this is supposed to help with website naviagtion by considering navigationn to be finished if there are 2 network
       // connections for at least 500 ms
