@@ -117,7 +117,7 @@ export class ZipRecruiterScraper extends Scraper {
 
       const posted = await super.getValues('.job_more span[class="data"]', 'innerText');
       this.log.debug(`Posted: \n${posted}`);
-      
+
       if (posted.includes('yesterday')) {
         daysBack = 1;
       } else {
