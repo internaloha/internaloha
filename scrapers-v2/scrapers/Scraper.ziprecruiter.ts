@@ -103,7 +103,7 @@ export class ZipRecruiterScraper extends Scraper {
       const date = new Date();
       let daysBack = 0;
 
-      let urls = await super.getValues('td[data-label="Site Information: "] > div > a', 'href');
+      let urls = await super.getValues('td[data-label="job_link t_job_link"] > div > a', 'href');
       this.log.debug(`URLS: \n${urls}`);
 
       const positions = await super.getValues('.job_title', 'innerText');
