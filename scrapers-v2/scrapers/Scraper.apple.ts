@@ -37,6 +37,7 @@ export class Apple extends Scraper {
     let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
 
     while (await super.selectorExists(listingsTable)) {
+      this.log.info(`Processing page ${pageNum}`);
 
       //This for loop evaluates each url on the page
       for (let i = 0; i < urls.length; i++) {
@@ -50,23 +51,16 @@ export class Apple extends Scraper {
         const location = { city: cities, state: states, country: 'United States' };
 
         const listing = new Listing({
-          url: urls[i], position: positions, location, company: 'Apple', description:
-            descriptions
-        });
+          url: urls[i], position: positions, location, company: 'Apple', description: descriptions });
         this.listings.addListing(listing);
-
       }
 
       // Go to the next page.
-      this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
-      // this is supposed to help with website naviagtion by considering navigationn to be finished if there are 2 network
-      // connections for at least 500 ms
-      await this.page.waitForTimeout(3000); //Delay helps to stop websites from blocking pupetteer
+      await this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2', timeout: 0});
     }
   }
 
   async processListings() {
     await super.processListings();
   }
-
 }
