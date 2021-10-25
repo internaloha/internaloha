@@ -142,7 +142,6 @@ export class ZipRecruiterScraper extends Scraper {
       nodes.forEach(node => vals.push(node['href']));
       return vals;
     });
-
   }
 
   async processListings() {
