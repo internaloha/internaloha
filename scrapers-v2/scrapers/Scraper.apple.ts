@@ -56,7 +56,7 @@ export class Apple extends Scraper {
       }
 
       // Go to the next page.
-      await this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2', timeout: 0});
+      await this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
     }
   }
 
