@@ -99,6 +99,7 @@ export class LinkedinScraper extends Scraper {
     let urls = await super.getValues('a[class="base-card__full-link"]', 'href');
 
     this.log.info('Total URLs:', urls.length);
+    this.log.info('URLs:', urls);
     const skippedURLs = [];
     const lastScraped = new Date();
 
@@ -107,7 +108,8 @@ export class LinkedinScraper extends Scraper {
         const element = elements[i];
         // sometimes clicking it doesn't show the panel, try/catch to allow it to keep going
         try {
-          await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', { timeout: 1500 });
+          await this.page.goto(urls[i]);
+          // await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', { timeout: 1500 });
           await this.page.waitForTimeout(1500);
           // eslint-disable-next-line prefer-const
           // const position = await this.page.evaluate(() => {
@@ -137,7 +139,7 @@ export class LinkedinScraper extends Scraper {
           //   nodes.forEach(node => vals.push(node['innerText']));
           //   return vals;
           // });
-          let posted = await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
+          const posted = await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerText');
           // const description = await this.page.evaluate(() => {
           //   const vals = [];
           //   const nodes = document.querySelectorAll('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]');
@@ -145,7 +147,7 @@ export class LinkedinScraper extends Scraper {
           //   return vals;
           // });
           const description = await super.getValues('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerText');
-          posted = this.convertPostedToDate(posted);
+          // posted = this.convertPostedToDate(posted);
           let state = '';
           if (!location.match(/([^,]*)/g)[2]) {
             state = 'United States';
@@ -166,6 +168,7 @@ export class LinkedinScraper extends Scraper {
           });
           this.log.info(position);
           totalInternships++;
+          this.log.info(this.listings);
         } catch (err5) {
           // this.log.info('LinkedIn', err5.message);
           this.log.info('Skipping! Did not load...');
