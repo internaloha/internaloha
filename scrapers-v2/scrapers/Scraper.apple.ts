@@ -47,7 +47,7 @@ export class Apple extends Scraper {
         const descriptions = await super.getValues('div[id="jd-description"]', 'innerText');
         const states = await super.getValues('span[itemprop="addressRegion"]', 'innerText');
         const cities = await super.getValues('span[itemprop="addressLocality"]', 'innerText');
-        const location = { city: cities, state: states, country: 'United States' };
+        const location = { city: cities[0], state: states[0], country: 'United States' };
 
         const listing = new Listing({
           url: urls[i], position: positions[0], location, company: 'Apple', description:
