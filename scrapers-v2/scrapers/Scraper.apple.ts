@@ -43,6 +43,7 @@ export class Apple extends Scraper {
 
         await this.page.goto(urls[i]);
 
+        //getvalues saves the values into arrays, so need to access just the 0th element 
         const positions = await super.getValues('h1[itemprop="title"]', 'innerText');
         const descriptions = await super.getValues('div[id="jd-description"]', 'innerText');
         const states = await super.getValues('span[itemprop="addressRegion"]', 'innerText');
