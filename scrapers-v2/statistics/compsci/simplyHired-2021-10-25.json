@@ -1,0 +1,10 @@
+{
+  "date": "2021-10-25",
+  "elapsedTime": 133,
+  "numErrors": 1,
+  "numListings": 159,
+  "errorMessages": [
+    "Node is either not visible or not an HTMLElement"
+  ],
+  "scraper": "simplyHired"
+}
