@@ -29,7 +29,6 @@ function convertPostedToDate(posted) {
 
 export class SimplyHiredScraper extends Scraper {
   private timeout: number;
-
   private searchTerms: string;
 
   constructor() {
@@ -41,10 +40,10 @@ export class SimplyHiredScraper extends Scraper {
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
     this.log.debug(`Discipline: ${this.discipline}`);
-    // check the config file to set the timeouts.
+    // check the config file for timeout.
     // @ts-ignore
     this.timeout = this.config?.additionalParams?.simplyHired?.timeout || 500;
-    this.log.debug(`Timeout: ${this.timeout}`);
+    // check the config file to set the search terms.
     // @ts-ignore
     this.searchTerms = this.config?.additionalParams?.simplyHired?.searchTerms[this.discipline] || 'computer science intern';
     this.log.debug(`Search Terms: ${this.searchTerms}`);
@@ -56,15 +55,13 @@ export class SimplyHiredScraper extends Scraper {
     await this.page.goto(this.url);
   }
 
-  async generateListings() {
-    super.generateListings();
+  async setUpSearchCriteria() {
     await this.page.waitForSelector('input[name=q]');
     await this.page.$eval('input[name=l]', (el) => {
       // eslint-disable-next-line no-param-reassign
       el.value = '';
     }, {});
-    // TODO this should be in the config or other file for other instances.
-    await this.page.type('input[name=q]', 'computer science intern');
+    await this.page.type('input[name=q]', this.searchTerms);
     await Promise.all([
       this.page.click('button[type="submit"]'),
       this.page.waitForNavigation()
@@ -76,8 +73,10 @@ export class SimplyHiredScraper extends Scraper {
     if (internshipDropdown.length > 0) {
       const url = `${internshipDropdown[0]}`;
       this.log.debug(`Directing to: ${url}`);
-      await this.page.goto(url);
-      await this.page.waitForSelector('div[data-id=JobType]');
+      await Promise.all([
+        this.page.goto(url),
+        this.page.waitForSelector('div[data-id=JobType]'),
+      ]);
       // Setting filter as last '30 days'
       const lastPosted = await super.getValues('div[data-id=Date] a[href*="30"]', 'href');
       const lastPostedURL = `${lastPosted[0]}`;
@@ -90,100 +89,111 @@ export class SimplyHiredScraper extends Scraper {
       ]);
       // Filtering by most recent
       this.log.info('Filtering by: Most recent');
-      let totalPages = 0;
-      let internshipsPerPage = 0;
-      let hasNext = true;
-      do {
-        await this.page.waitForSelector('.SerpJob-jobCard.card');
-        let elements = await this.page.$$('.SerpJob-jobCard.card');
-        if (elements.length < 19) {
-          await this.page.waitForTimeout(this.timeout);
-          elements = await this.page.$$('.SerpJob-jobCard.card');
-        }
-        this.log.debug('Results on page: ', elements.length);
-        const urls = await super.getValues('a[class="SerpJob-link card-link"]', 'href');
-        // this.log.debug(`URLS: \n${urls}`);
-        for (let i = 1; i <= elements.length; i++) {
-          await this.page.waitForTimeout(this.timeout);
-          const element = elements[i];
-          const positionVal = await super.getValues('div[class="viewjob-jobTitle h2"]', 'innerText');
-          let position;
-          if (positionVal.length > 0) {
-            position = positionVal[0].trim();
-          }
-          const companyVal = await super.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
-          let company;
-          if (companyVal.length > 0) {
-            company = companyVal[0];
-            // strip off the rating for the company
-            const ratingIndex = company.lastIndexOf('-');
-            if (ratingIndex !== -1) {
-              company = company.substring(0, ratingIndex).trim();
-            }
-          } else {
-            company = 'N/A';
-            this.log.debug('No company found');
-          }
-          const locationObj = await super.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
-          if (locationObj.length > 1) {
-            this.log.debug(`Multiple locations for ${company}: ${position}`);
-          }
-          const locationStr = `${locationObj}`;
-          const description = await super.getValues('div[class="viewjob-jobDescription"]', 'innerHTML');
-          const postedVal = await super.getValues('span[class="viewjob-labelWithIcon viewjob-age"]', 'innerText');
-          let posted = '';
-          if (postedVal.length > 0) {
-            posted = convertPostedToDate(postedVal[0].toLowerCase()).toLocaleDateString();
-          } else {
-            posted = 'N/A';
-            this.log.debug('No date found. Setting posted as: N/A');
-          }
-          this.log.debug(`Position: ${position}`);
-          this.log.debug(`Company: ${company}`);
-          this.log.debug(`Posted: ${posted}`);
-          // this.log.debug(`LocationStr: ${locationStr} ${typeof locationStr}`);
-          // this.log.debug(`Description: ${description}`);
-          const url = urls[i - 1];
-          const lSplit = locationStr.split(', ');
-          // this.log.debug(`${lSplit.length}`);
-          const city = (lSplit.length > 0) ? lSplit[0] : '';
-          const state = (lSplit.length > 1) ? lSplit[1] : '';
-          const country = '';
-          this.log.debug(`Location: {${city}, ${state}, ${country}}`);
-          const location = { city, state, country };
-
-          // this.log.debug(`Position: \n${position}`);
-          // this.log.debug(`Company: \n${company}`);
-          // this.log.debug(`Location: \n${location}`);
-          // this.log.debug(`Description: \n${description}`);
-          const listing = new Listing({ url, location, position, description, company, posted });
-          // this.log.debug(`${listing}`);
-          this.listings.addListing(listing);
-          internshipsPerPage++;
-          // this.log.info(`Listing length: ${this.listings.length()}`);
-          if (i < elements.length) {
-            await element.click();
-          }
-        }
-        const nextPage = await this.page.$('a[class="Pagination-link next-pagination"]');
-        if (!nextPage) {
-          hasNext = false;
-          this.log.info('Reached the end of pages!');
-        } else {
-          await Promise.all([
-            nextPage.click(),
-            this.page.waitForNavigation()
-          ]);
-          totalPages++;
-          const message = `Processed page ${totalPages}, ${internshipsPerPage} internships`;
-          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-          ((totalPages === 1) || (totalPages % 10 === 0)) ? this.log.info(message) : this.log.debug(message);
-        }
-      } while (hasNext === true);
-      this.log.debug(`Found ${totalPages} pages.`);
     } else {
-      this.log.debug('There are no internships with the search query: \'computer science intern\'');
+      this.log.debug(`There are no internships with the search query: \'${this.searchTerms}\'`);
     }
+  }
+
+  async processPage(pageNumber) {
+    let internshipsPerPage = 0;
+    await this.page.waitForSelector('.SerpJob-jobCard.card');
+    const elements = await this.page.$$('.SerpJob-jobCard.card');
+    this.log.info('Processing page', (pageNumber + 1), ': ', elements.length, ' internships');
+    const urls = await super.getValues('a[class="SerpJob-link card-link"]', 'href');
+    // this.log.debug(`URLS: \n${urls}`);
+    for (let i = 1; i <= elements.length; i++) {
+      await this.page.waitForTimeout(this.timeout);
+      // await this.page.waitForSelector('div[class="viewjob-jobDescription"]');
+      const element = elements[i];
+      const positionVal = await super.getValues('div[class="viewjob-jobTitle h2"]', 'innerText');
+      let position;
+      if (positionVal.length > 0) {
+        position = positionVal[0].trim();
+      }
+      const companyVal = await super.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(1)', 'innerText');
+      let company;
+      if (companyVal.length > 0) {
+        company = companyVal[0];
+        // strip off the rating for the company
+        const ratingIndex = company.lastIndexOf('-');
+        if (ratingIndex !== -1) {
+          company = company.substring(0, ratingIndex).trim();
+        }
+      } else {
+        company = 'N/A';
+        this.log.debug('No company found');
+      }
+      const locationObj = await super.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
+      if (locationObj.length > 1) {
+        this.log.debug(`Multiple locations for ${company}: ${position}`);
+      }
+      const locationStr = `${locationObj}`;
+      const description = await super.getValues('div[class="viewjob-jobDescription"]', 'innerHTML');
+      const postedVal = await super.getValues('span[class="viewjob-labelWithIcon viewjob-age"]', 'innerText');
+      let posted = '';
+      if (postedVal.length > 0) {
+        posted = convertPostedToDate(postedVal[0].toLowerCase()).toLocaleDateString();
+      } else {
+        posted = 'N/A';
+        this.log.debug('No date found. Setting posted as: N/A');
+      }
+      this.log.debug(`Position: ${position}`);
+      this.log.debug(`Company: ${company}`);
+      this.log.debug(`Posted: ${posted}`);
+      // this.log.debug(`LocationStr: ${locationStr} ${typeof locationStr}`);
+      // this.log.debug(`Description: ${description}`);
+      const url = urls[i - 1];
+      const lSplit = locationStr.split(', ');
+      // this.log.debug(`${lSplit.length}`);
+      const city = (lSplit.length > 0) ? lSplit[0] : '';
+      const state = (lSplit.length > 1) ? lSplit[1] : '';
+      const country = '';
+      this.log.debug(`Location: {${city}, ${state}, ${country}}`);
+      const location = { city, state, country };
+
+      // this.log.debug(`Position: \n${position}`);
+      // this.log.debug(`Company: \n${company}`);
+      // this.log.debug(`Location: \n${location}`);
+      // this.log.debug(`Description: \n${description}`);
+      const listing = new Listing({ url, location, position, description, company, posted });
+      // this.log.debug(`${listing}`);
+      this.listings.addListing(listing);
+      internshipsPerPage++;
+      // this.log.info(`Listing length: ${this.listings.length()}`);
+      if (i < elements.length) {
+        await Promise.all([
+          element.click(),
+          this.page.waitForNavigation(),
+        ]);
+      }
+    }
+    return internshipsPerPage;
+  }
+
+  async generateListings() {
+    await super.generateListings();
+    await this.setUpSearchCriteria();
+    let totalPages = 0;
+    let totalInternships = 0;
+    let hasNext = true;
+    do {
+      totalInternships += await this.processPage(totalPages);
+      const nextPage = await this.page.$('a[class="Pagination-link next-pagination"]');
+      if (!nextPage) {
+        hasNext = false;
+        this.log.info('Reached the end of pages!');
+      } else {
+        await Promise.all([
+          nextPage.click(),
+          this.page.waitForNavigation()
+        ]);
+        totalPages++;
+        const message = `Processed page ${totalPages}, ${totalInternships} total internships`;
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+        ((totalPages === 1) || (totalPages % 10 === 0)) ? this.log.info(message) : this.log.debug(message);
+      }
+    } while (hasNext === true);
+    this.log.debug(`Found ${totalPages} pages.`);
   }
 
   async processListings() {
