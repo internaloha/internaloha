@@ -7,7 +7,10 @@ import { fetchInfo, writeToJSON } from './scraper-functions.js';
 async function autoScroll(page) {
   await page.waitForSelector('span[class="JobsPage_jobFilterListHeaderCount__2z-Nc"]');
   const elementResult = await page.$('span[class="JobsPage_jobFilterListHeaderCount__2z-Nc"]');
+  // We get the number of results from the page
+
   const totalResults = await page.evaluate(element => element.textContent, elementResult);
+
   let results = 0;
   const parsedNumber = totalResults.replace(',', '');
   const number = parseInt(parsedNumber, 10);
@@ -51,21 +54,25 @@ async function main() {
     await page.waitForSelector('input[id="jobsSearchSidebar-keywords-input"]', { timeout: 0 });
     await page.type('input[id="jobsSearchSidebar-keywords-input"]', 'computer science');
     await page.waitForTimeout(1000);
+
     // sort by date
     await page.waitForSelector('p.Menu_title__3xALk');
     await page.click('p.Menu_title__3xALk');
     await page.waitForSelector('ul[class="Menu_list__2x6Qo SortMenu_filterMenuList__26wPX"]:last-child');
     await page.click('ul[class="Menu_list__2x6Qo SortMenu_filterMenuList__26wPX"]:last-child');
     log.info('Sorting by date...');
+
     // sorting by Hawaii, can comment out
     await page.waitForSelector('input[placeholder="City, State, or ZIP Code"]');
     await page.type('input[placeholder="City, State, or ZIP Code"]', 'Hawaii');
     await page.keyboard.press('ArrowDown');
     await page.waitForTimeout(2000);
     await page.keyboard.press('Enter');
+
     // remove unpaid listings
     await page.waitForSelector('div[data-test-id="jobsSearchSidebar-unpaid-checkbox-click"]');
     await page.click('div[data-test-id="jobsSearchSidebar-unpaid-checkbox-click"]');
+
     // auto scroll to get all the listings
     const infiniteScroll = 'div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]';
     await page.waitForSelector(infiniteScroll);
