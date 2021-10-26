@@ -33,11 +33,10 @@ export class Apple extends Scraper {
       '=internship&page=1');
     await this.page.waitForTimeout(1000); //Delay helps to stop websites from blocking pupetteer
 
-    //We get the number of urls on the current page
-    let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
-
     while (await super.selectorExists(listingsTable)) {
-      this.log.info(`Processing page ${pageNum}`);
+
+      //We get the number of urls on the current page (this changes depending on the page we are on)
+      let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
 
       //This for loop evaluates each url on the page
       for (let i = 0; i < urls.length; i++) {
@@ -51,16 +50,22 @@ export class Apple extends Scraper {
         const location = { city: cities, state: states, country: 'United States' };
 
         const listing = new Listing({
-          url: urls[i], position: positions, location, company: 'Apple', description: descriptions });
+          url: urls[i], position: positions, location, company: 'Apple', description:
+            descriptions
+        });
         this.listings.addListing(listing);
+
       }
 
       // Go to the next page.
       await this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
+      // this is supposed to help with website naviagtion by considering navigation to be finished if there are 2 network
+      // connections for at least 500
     }
   }
 
   async processListings() {
     await super.processListings();
   }
+
 }
