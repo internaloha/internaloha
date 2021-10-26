@@ -504,7 +504,7 @@ It doesn't seem particularly interesting to provide the debugging log statement,
 
 ## Tip 9: "Error: Navigation failed because browser has disconnected!"
 
-Occasionally, you might experience an intermittent error similar to this:
+Are you experiencing an intermittent error similar to this?
 
 ```
 10:37:59 ERROR APPLE Execution context was destroyed, most likely because of a navigation.
@@ -516,7 +516,7 @@ According to [this stackoverflow page](https://stackoverflow.com/questions/54527
 
 The stackoverflow answer goes on to debug the specific code in question, but there is a much more general answer:
 
-*Be sure that you preface every Puppeteer operation (i.e. `this.page.<operation>`) with await.*
+*Be sure that you preface every Puppeteer operation (i.e. `this.page.<operation>`) with `await`.*
 
 For example, there was some scraper code that generated this error occasionally. On review, the following lines were discovered:
 
@@ -527,10 +527,47 @@ await this.page.waitForTimeout(3000);
 
 Because the `this.page.goto` was not proceeded with an `await`, that line of code returned immediately. The next line of code forced a wait of 3 seconds, which might or might not be enough time for the `goto` to complete successfully. If it is enough time, then everything would be OK. If it is not enough time, then we'd get the error.
 
-The solution is to simply add the `await`, which then means we don't need the `waitForTimeout`:
+The solution is to simply add the `await`, which also means we don't need the `waitForTimeout`:
 
 ```js
 await this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
 ```
 
-So, if you are getting this error intermittently, a quick thing to do is a search for every occurrence of `this.page` in your scraper code, and verify there are no occurrences of `this.page` not preceded by `await`.
+So, if you are getting this error intermittently, a quick thing to do is a search for every occurrence of `this.page` in your scraper code, and verify that every occurrence of `this.page` is preceded by `await`.
+
+## Tip 10: How to determine if a page has finished loading
+
+One issue with scraper design is to ensure that the scraper does not try to operate on a page until it has loaded.
+
+A common strategy in prior scraper implementations is to liberally insert code to insert pauses into script execution. For example, the following code pauses the script for 3 seconds each time it is executed:
+
+```
+await this.page.waitForTimeout(3000);
+```
+
+There are two problems with this approach:
+  1. It is hard to figure out the appropriate length of time to pause. Is 3 seconds enough for all situations?
+  2. It might slow down script execution significantly. If you insert a 3 second pause into a loop for each listing, and there are 500 listings, then you've just forced your script to require a minimum of 1500 seconds to execute.
+
+Some times these pauses are inserted to mimic human "speed" of page manipulation, but this is only needed for a few scrapers. More often, these pauses end up being inserted as a way to wait until the page is loaded.
+
+[This stackoverflow page](https://stackoverflow.com/questions/52497252/puppeteer-wait-until-page-is-completely-loaded) has a number of comments regarding this issue.  From it, we can get a number of hints about how to best wait until a page has loaded.
+
+### Case 1: When you know a selector will exist on the page
+
+If you are **sure** that a page, when finally loaded, will contain the selector of interest, then your best approach is to use [page.waitForSelector()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitforselectorselector-options). By default, the timeout is '0', which means that this command will wait indefinitely for the selector to be present on the page.
+
+### Case 2: When you know a selector will exist on the page
+
+If you are not sure that the selector of interest will exist, then things are more complicated, since you don't know if the absence of the selector is due to the selector not being present or the page not having completed loading.
+
+First, it is important to understand that completing the "loading" process has two phases:
+
+  1. Complete the downloading of all page resources (HTML, Javascript, Images, etc) from the server over the network.
+  2. Complete the execution of all Javascript scripts on the page, since these scripts might create DOM elements.
+
+To address (1), you can use the `waitUntil` option of commands like `page.goto`, as documented [here](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagegotourl-options).  If you experience loading issues, then you might add this option with a value of `networkidle0`.  Please note that you do not need to set `timeout`, as it is set to `0` globally by the scraper superclass.
+
+In some cases, a page might have time-consuming Javascript scripts that execute. If you can verify that this is an issue in the site you are scraping, then you might want to consider the `waitTillHTMLRendered` function, documented in [this stackoverflow answer](https://stackoverflow.com/a/61304202/2038293).
+
+
