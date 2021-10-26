@@ -33,10 +33,10 @@ export class Apple extends Scraper {
       '=internship&page=1');
     await this.page.waitForTimeout(1000); //Delay helps to stop websites from blocking pupetteer
 
-    //We get the number of urls on the current page
-    let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
-
     while (await super.selectorExists(listingsTable)) {
+
+      //We get the number of urls on the current page (this changes depending on the page we are on)
+      let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
 
       //This for loop evaluates each url on the page
       for (let i = 0; i < urls.length; i++) {
@@ -58,10 +58,9 @@ export class Apple extends Scraper {
       }
 
       // Go to the next page.
-      this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
-      // this is supposed to help with website naviagtion by considering navigationn to be finished if there are 2 network
-      // connections for at least 500 ms
-      await this.page.waitForTimeout(3000); //Delay helps to stop websites from blocking pupetteer
+      await this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
+      // this is supposed to help with website naviagtion by considering navigation to be finished if there are 2 network
+      // connections for at least 500
     }
   }
 
