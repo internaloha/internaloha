@@ -86,7 +86,8 @@ export class ZipRecruiterScraper extends Scraper {
 
   async generateListings() {
     super.generateListings();
-    await this.reload();
+    await this.page.goto('https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25');
+    await this.page.waitForNavigation;
     // grab all links
     const elements = await this.page.evaluate(
       () => Array.from(
@@ -96,6 +97,15 @@ export class ZipRecruiterScraper extends Scraper {
       ),
     );
     this.log.debug(elements.length);
+
+    let urls = await this.page.evaluate(() => {
+      const vals = [];
+      const nodes = document.querySelectorAll('a[class="job_link t_job_link"]');
+      nodes.forEach(node => vals.push(node['href']));
+      return vals;
+    });
+    this.log.debug(`URLS: \n${urls}`);
+
     for (let i = 0; i < elements; i++) {
       const element = elements[i];
       await this.page.goto(element, { waitUntil: 'domcontentloaded' });
@@ -135,13 +145,7 @@ export class ZipRecruiterScraper extends Scraper {
       states.push(loc[1]);
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    let urls = await this.page.evaluate(() => {
-      const vals = [];
-      const nodes = document.querySelectorAll('a[class="job_link t_job_link"]');
-      nodes.forEach(node => vals.push(node['href']));
-      return vals;
-    });
+
   }
 
   async processListings() {
