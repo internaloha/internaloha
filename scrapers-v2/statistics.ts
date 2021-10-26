@@ -25,6 +25,7 @@ const options = program.opts();
 const directory = path.join(options.statisticsDir, options.discipline);
 
 const statisticsFiles = fs.readdirSync(directory).filter(file => path.extname(file) === '.json');
+console.log(statisticsFiles);
 const statistics = [];
 
 // Initialize the statistics array with all statistics in the statistics dir.
