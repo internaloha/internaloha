@@ -50,8 +50,8 @@ export class Apple extends Scraper {
         const location = { city: cities, state: states, country: 'United States' };
 
         const listing = new Listing({
-          url: urls[i], position: positions, location, company: 'Apple', description:
-            descriptions
+          url: urls[i], position: positions[0], location, company: 'Apple', description:
+            descriptions[0]
         });
         this.listings.addListing(listing);
 
