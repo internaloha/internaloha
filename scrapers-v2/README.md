@@ -553,7 +553,11 @@ Some times these pauses are inserted to mimic human "speed" of page manipulation
 
 [This stackoverflow page](https://stackoverflow.com/questions/52497252/puppeteer-wait-until-page-is-completely-loaded) has a number of comments regarding this issue.  From it, we can get a number of hints about how to best wait until a page has loaded.
 
+### Case 1: When you know a selector will exist on the page
+
 If you are **sure** that a page, when finally loaded, will contain the selector of interest, then your best approach is to use [page.waitForSelector()](https://github.com/puppeteer/puppeteer/blob/main/docs/api.md#pagewaitforselectorselector-options). By default, the timeout is '0', which means that this command will wait indefinitely for the selector to be present on the page.
+
+### Case 2: When you know a selector will exist on the page
 
 If you are not sure that the selector of interest will exist, then things are more complicated, since you don't know if the absence of the selector is due to the selector not being present or the page not having completed loading.
 
