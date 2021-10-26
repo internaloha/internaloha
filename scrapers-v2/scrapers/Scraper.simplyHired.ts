@@ -66,7 +66,7 @@ export class SimplyHiredScraper extends Scraper {
       this.page.click('button[type="submit"]'),
       this.page.waitForNavigation()
     ]);
-    this.log.info('Inputted search query: computer science intern');
+    this.log.info(`Inputted search query: ${this.searchTerms}`);
     await this.page.waitForSelector('div[data-id=JobType]');
     // Getting href link for internship filter
     const internshipDropdown = await super.getValues('a[href*="internship"]', 'href');
@@ -90,7 +90,7 @@ export class SimplyHiredScraper extends Scraper {
       // Filtering by most recent
       this.log.info('Filtering by: Most recent');
     } else {
-      this.log.debug(`There are no internships with the search query: \'${this.searchTerms}\'`);
+      this.log.warn(`There are no internships with the search query: \'${this.searchTerms}\'`);
     }
   }
 
@@ -98,7 +98,7 @@ export class SimplyHiredScraper extends Scraper {
     let internshipsPerPage = 0;
     await this.page.waitForSelector('.SerpJob-jobCard.card');
     const elements = await this.page.$$('.SerpJob-jobCard.card');
-    this.log.info('Processing page', (pageNumber + 1), ': ', elements.length, ' internships');
+    this.log.debug('Processing page', (pageNumber + 1), ': ', elements.length, ' internships');
     const urls = await super.getValues('a[class="SerpJob-link card-link"]', 'href');
     // this.log.debug(`URLS: \n${urls}`);
     for (let i = 1; i <= elements.length; i++) {
@@ -121,7 +121,7 @@ export class SimplyHiredScraper extends Scraper {
         }
       } else {
         company = 'N/A';
-        this.log.debug('No company found');
+        this.log.trace('No company found');
       }
       const locationObj = await super.getValues('div[class="viewjob-header-companyInfo"] div:nth-child(2)', 'innerText');
       if (locationObj.length > 1) {
@@ -135,11 +135,11 @@ export class SimplyHiredScraper extends Scraper {
         posted = convertPostedToDate(postedVal[0].toLowerCase()).toLocaleDateString();
       } else {
         posted = 'N/A';
-        this.log.debug('No date found. Setting posted as: N/A');
+        this.log.trace('No date found. Setting posted as: N/A');
       }
-      this.log.debug(`Position: ${position}`);
-      this.log.debug(`Company: ${company}`);
-      this.log.debug(`Posted: ${posted}`);
+      this.log.trace(`Position: ${position}`);
+      this.log.trace(`Company: ${company}`);
+      this.log.trace(`Posted: ${posted}`);
       // this.log.debug(`LocationStr: ${locationStr} ${typeof locationStr}`);
       // this.log.debug(`Description: ${description}`);
       const url = urls[i - 1];
@@ -148,7 +148,7 @@ export class SimplyHiredScraper extends Scraper {
       const city = (lSplit.length > 0) ? lSplit[0] : '';
       const state = (lSplit.length > 1) ? lSplit[1] : '';
       const country = '';
-      this.log.debug(`Location: {${city}, ${state}, ${country}}`);
+      this.log.trace(`Location: {${city}, ${state}, ${country}}`);
       const location = { city, state, country };
 
       // this.log.debug(`Position: \n${position}`);
