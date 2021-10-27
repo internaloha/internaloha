@@ -69,7 +69,7 @@ export class ZipRecruiterScraper extends Scraper {
     // Positions
     const positions = await super.getValues('h1[class="job_title"]', 'innerText');
     this.log.debug(`Positions: \n${positions}`);
-    
+
     // Description
     const descriptions = await super.getValues('div[class="job_description_container"] ', 'innerText');
     this.log.debug(`Descriptions: \n${descriptions}`);
@@ -81,6 +81,7 @@ export class ZipRecruiterScraper extends Scraper {
     // Locations
     const locations = await super.getValues('a[class="t_location_link location"]', 'innerText');
     this.log.debug(`Locations: \n${locations}`);
+
     //break the cities and states of the locations
     const cities = [];
     const states = [];
@@ -89,6 +90,8 @@ export class ZipRecruiterScraper extends Scraper {
       cities.push(loc[0]);
       states.push(loc[1]);
     }
+
+    // Retrieve each URL, extract the internship listing info.
     for (let i = 0; i < urls.length; i++) {
       const location = { city: cities[i], state: states[i], country: 'United States' };
       const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
