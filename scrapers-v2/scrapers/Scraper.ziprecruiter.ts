@@ -95,14 +95,30 @@ export class ZipRecruiterScraper extends Scraper {
       loadMore = false;
       this.log.info('--- All jobs are Listed, no "Load More" button --- ');
     } else {
-      let elements = await this.page.evaluate(
-        () => Array.from(
-          // eslint-disable-next-line no-undef
-          document.querySelectorAll('.job_link.t_job_link'),
-          a => a.getAttribute('href'),
-        ),
-      );
+      await this.page.click('.load_more_jobs');
+      await this.page.evaluate(async () => {
+        await new Promise<void>((resolve) => {
+          let totalHeight = 0;
+          const distance = 400;
+          const timer = setInterval(() => {
+            const scrollHeight = document.body.scrollHeight;
+            window.scrollBy(0, distance);
+            totalHeight += distance;
+            if (totalHeight >= scrollHeight) {
+              clearInterval(timer);
+              resolve(); //????
+            }
+          }, 400);
+        });
+      });
     }
+    let elements = await this.page.evaluate(
+      () => Array.from(
+        // eslint-disable-next-line no-undef
+        document.querySelectorAll('.job_link.t_job_link'),
+        a => a.getAttribute('href'),
+      ),
+    );
   }
 
   async processListings() {
