@@ -8,6 +8,7 @@ import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
 import { Apple } from './scrapers/Scraper.apple';
 import { LinkedinScraper } from './scrapers/Scraper.linkedin';
 import { ZipRecruiterScraper } from './scrapers/Scraper.ziprecruiter';
+import { IndeedScrapper } from './scrapers/Scraper.indeed';
 
 
 /**
@@ -28,6 +29,7 @@ const scrapers = {
   nsf: new NsfScraper(),
   simplyhired: new SimplyHiredScraper(),
   ziprecruiter: new ZipRecruiterScraper(),
+  indeed: new IndeedScrapper(),
 };
 
 // You don't normally edit anything below.
