@@ -99,17 +99,30 @@ export class ZipRecruiterScraper extends Scraper {
       await this.autoScroll();
     }
 
-    let elements = await this.page.evaluate(
+    let urls = await this.page.evaluate(
       () => Array.from(
         // eslint-disable-next-line no-undef
         document.querySelectorAll('.job_link.t_job_link'),
         a => a.getAttribute('href'),
       ),
     );
-    elements = _.uniq(elements);
-    this.log.info(`Found ${elements.length} listings`);
+    urls = _.uniq(urls);
+    this.log.info(`Found ${urls.length} listings`);
 
-    for (let i = 0; i < elements.length; i++) {
+    // Positions
+    const positions = await super.getValues('span[itemprop="just_job_title"]', 'innerText');
+    this.log.debug(`Positions: \n${positions}`);
+    // Description
+    const descriptions = await super.getValues('div[id="job_description_container"] ', 'innerText');
+    this.log.debug(`Descriptions: \n${descriptions}`);
+
+    //Companies
+    const companies = await super.getValues('a[class="t_org_link name"]', 'innerText');
+    this.log.debug(`Companies: \n${companies}`);
+
+    // Locations
+    
+    for (let i = 0; i < urls.length; i++) {
 
     }
   }
