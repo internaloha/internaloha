@@ -191,7 +191,7 @@ export class Scraper {
     } catch (error) {
       const message = error['message'];
       this.errorMessages.push(message);
-      this.log.error(message);
+      this.log.error(`Error caught in scrape(): ${message}`);
     } finally {
       await this.close();
       await this.writeListings();

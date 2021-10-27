@@ -22,51 +22,39 @@ export class Apple extends Scraper {
   async generateListings() {
     await super.generateListings();
     let pageNum = 1;
-    const listingsTable= '#tblResultSet';
+    const listingsTable = '#tblResultSet';
 
-    //Create an function called pageUrl which puts the pageNum into the URL
+    // pageUrl returns an URL containing the specified page number.
     const pageUrl = (pageNum) =>
       `https://jobs.apple.com/en-us/search?location=united-states-USA&sort=relevance&search=internship&page=${pageNum}`;
 
-    //We navigate to the first page
-    await this.page.goto('https://jobs.apple.com/en-us/search?location=united-states-USA&sort=relevance&search' +
-      '=internship&page=1');
-    await this.page.waitForTimeout(1000); //Delay helps to stop websites from blocking pupetteer
-
-    //We get the number of urls on the current page
-    let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
+    // Get the first page of Internship listings.
+    await this.page.goto(pageUrl(pageNum), { waitUntil: 'networkidle0' });
 
     while (await super.selectorExists(listingsTable)) {
-
-      //This for loop evaluates each url on the page
+      // Collect the URLs to the listings on this page.
+      let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
+      this.log.info(`Processing page ${pageNum} with ${urls.length} listings.`);
+      // Retrieve each URL, extract the internship listing info.
       for (let i = 0; i < urls.length; i++) {
-
-        await this.page.goto(urls[i]);
-
-        const positions = await super.getValues('h1[itemprop="title"]', 'innerText');
-        const descriptions = await super.getValues('div[id="jd-description"]', 'innerText');
-        const states = await super.getValues('span[itemprop="addressRegion"]', 'innerText');
-        const cities = await super.getValues('span[itemprop="addressLocality"]', 'innerText');
-        const location = { city: cities, state: states, country: 'United States' };
-
-        const listing = new Listing({
-          url: urls[i], position: positions, location, company: 'Apple', description:
-            descriptions
-        });
+        const url = urls[i];
+        await this.page.goto(url);
+        const company = 'Apple';
+        const position = (await super.getValues('h1[itemprop="title"]', 'innerText'))[0];
+        const description = (await super.getValues('div[id="jd-description"]', 'innerText'))[0];
+        const state = await super.getValues('span[itemprop="addressRegion"]', 'innerText');
+        const city = await super.getValues('span[itemprop="addressLocality"]', 'innerText');
+        const location = { city: city[0], state: state[0], country: 'United States' };
+        const listing = new Listing({ url, position, location, company, description });
         this.listings.addListing(listing);
-
       }
 
-      // Go to the next page.
-      this.page.goto(pageUrl(++pageNum), {waitUntil: 'networkidle2'});
-      // this is supposed to help with website naviagtion by considering navigationn to be finished if there are 2 network
-      // connections for at least 500 ms
-      await this.page.waitForTimeout(3000); //Delay helps to stop websites from blocking pupetteer
+      // Increment the pageNum and get that page. If we get a page without listings, then listingsTable selector won't be on it.
+      await this.page.goto(pageUrl(++pageNum), { waitUntil: 'networkidle0' });
     }
   }
 
   async processListings() {
     await super.processListings();
   }
-
 }
