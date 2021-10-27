@@ -26,6 +26,7 @@ export class IndeedScrapper extends Scraper {
 
   async processListings() {
     await super.processListings();
+    let pageNum = 1;
     // here is where you do any additional processing on the raw data now available in the this.listings field.
   }
 
