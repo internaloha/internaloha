@@ -121,7 +121,9 @@ export class ZipRecruiterScraper extends Scraper {
     this.log.debug(`Companies: \n${companies}`);
 
     // Locations
-    
+    const locations = await super.getValues('a[class="t_location_link location"]', 'innerText');
+    this.log.debug(`Locations: \n${locations}`);
+
     for (let i = 0; i < urls.length; i++) {
 
     }
