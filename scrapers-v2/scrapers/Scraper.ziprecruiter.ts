@@ -113,8 +113,6 @@ export class ZipRecruiterScraper extends Scraper {
       cities.push(loc[0]);
       states.push(loc[1]);
     }
-
-
     for (let i = 0; i < urls.length; i++) {
       const location = { city: cities[i], state: states[i], country: 'United States' };
       const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
