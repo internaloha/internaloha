@@ -30,7 +30,7 @@ export class ZipRecruiterScraper extends Scraper {
     results.push(super.getValues(page, '.job_more span[class="data"]'));
 
   }
-  async autoScroll() {
+  public async autoScroll() {
     await this.page.evaluate(async () => {
       await new Promise<void>((resolve) => {
         let totalHeight = 0;
@@ -96,22 +96,9 @@ export class ZipRecruiterScraper extends Scraper {
       this.log.info('--- All jobs are Listed, no "Load More" button --- ');
     } else {
       await this.page.click('.load_more_jobs');
-      await this.page.evaluate(async () => {
-        await new Promise<void>((resolve) => {
-          let totalHeight = 0;
-          const distance = 400;
-          const timer = setInterval(() => {
-            const scrollHeight = document.body.scrollHeight;
-            window.scrollBy(0, distance);
-            totalHeight += distance;
-            if (totalHeight >= scrollHeight) {
-              clearInterval(timer);
-              resolve(); //????
-            }
-          }, 400);
-        });
-      });
+      await this.autoScroll();
     }
+
     let elements = await this.page.evaluate(
       () => Array.from(
         // eslint-disable-next-line no-undef
@@ -119,6 +106,12 @@ export class ZipRecruiterScraper extends Scraper {
         a => a.getAttribute('href'),
       ),
     );
+    elements = _.uniq(elements);
+    this.log.info(`Found ${elements.length} listings`);
+
+    for (let i = 0; i < elements.length; i++) {
+
+    }
   }
 
   async processListings() {
