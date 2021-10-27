@@ -45,7 +45,7 @@ statistics.forEach(statistic => {
   const date = statistic['date'];
   const numListings = statistic['numListings'];
   const numErrors = statistic['numErrors'];
-  const elapsedTime = statistic['elapsedTime'];
+  const elapsedTime = (parseInt(statistic['elapsedTime'], 10) / 60).toFixed(1);
 
   if (!numListingsInfo[name]) {
     numListingsInfo[name] = {};
