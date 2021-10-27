@@ -3,13 +3,6 @@ import { Scraper } from './Scraper';
 import _ from 'underscore';
 
 const prefix = require('loglevel-plugin-prefix');
-/**
- * Fetches the information from the page.
- * @param page The page we are scraping
- * @param selector The CSS Selector
- * @param DOM_Element The DOM element we want to use. Common ones are innerHTML, innerText, textContent
- * @returns {Promise<*>} The information as a String.
- */
 
 export class ZipRecruiterScraper extends Scraper {
   constructor() {
@@ -21,15 +14,6 @@ export class ZipRecruiterScraper extends Scraper {
    * @param page The page we are scrolling.
    * @returns {Promise<void>}
    */
-  async getData(page) {
-    const results = [];
-    results.push(super.getValues(page, '.job_title'));
-    results.push(super.getValues(page, '.hiring_company_text.t_company_name'));
-    results.push(super.getValues(page, 'span[data-name="address"]'));
-    results.push(super.getValues(page, '.jobDescriptionSection'));
-    results.push(super.getValues(page, '.job_more span[class="data"]'));
-
-  }
   public async autoScroll() {
     await this.page.evaluate(async () => {
       await new Promise<void>((resolve) => {
@@ -92,7 +76,6 @@ export class ZipRecruiterScraper extends Scraper {
 
     let loadMore = true;
     if (!loadMore) {
-      loadMore = false;
       this.log.info('--- All jobs are Listed, no "Load More" button --- ');
     } else {
       await this.page.click('.load_more_jobs');
@@ -101,7 +84,6 @@ export class ZipRecruiterScraper extends Scraper {
 
     let urls = await this.page.evaluate(
       () => Array.from(
-        // eslint-disable-next-line no-undef
         document.querySelectorAll('.job_link.t_job_link'),
         a => a.getAttribute('href'),
       ),
@@ -142,6 +124,5 @@ export class ZipRecruiterScraper extends Scraper {
 
   async processListings() {
     await super.processListings();
-    // No post-processing (yet) for NSF scraper results.
   }
 }
