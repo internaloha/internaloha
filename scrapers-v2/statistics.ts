@@ -25,7 +25,6 @@ const options = program.opts();
 const directory = path.join(options.statisticsDir, options.discipline);
 
 const statisticsFiles = fs.readdirSync(directory).filter(file => path.extname(file) === '.json');
-console.log(statisticsFiles);
 const statistics = [];
 
 // Initialize the statistics array with all statistics in the statistics dir.
@@ -61,8 +60,24 @@ statistics.forEach(statistic => {
   elapsedTimeInfo[name][date] = elapsedTime;
 });
 
+// console.log(numListingsInfo);
+
+// Returns an array of date fields in reverse chronological order.
+function getDateFields(infoObject) {
+  const scraperRowData = Object.values(infoObject);
+  let dateFields = [];
+  scraperRowData.forEach(rowObject => dateFields.push(Object.keys(rowObject)));
+  dateFields = dateFields.flat();
+  dateFields = dateFields.filter(element => element !== 'scraper');
+  let unique = [...new Set(dateFields)];
+  return unique.sort().reverse();
+}
+
+// Provide the fields to parse() where dates are in reverse chronological order
+const fields = ['scraper'].concat(getDateFields(numListingsInfo));
+
 function writeFile(name, data) {
-  const csv = parse(Object.values(data), { quote: ''});
+  const csv = parse(Object.values(data), { quote: '', fields });
   const suffix = options['commitFiles'] ? 'csv' : 'dev.csv';
   const file = path.join(directory, `statistics.${name}.${suffix}`);
   fs.writeFileSync(file, csv, 'utf-8');

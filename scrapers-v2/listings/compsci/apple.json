@@ -1,20 +1,5 @@
 [
   {
-    "url": "https://jobs.apple.com/en-us/details/200262865/hardware-technology-internship?team=STDNT",
-    "position": "Hardware Technology Internship",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "Some responsibilities in Hardware or Silicon Engineering may include: \n\nYou will work on real challenges the team faces as well as upcoming products. \n\nYou have a strong technical foundation, are able to show initiative.\n\nLearn new technologies quickly, and possess excellent interpersonal and communication skills. \n\nYou are motivated and prepared to work independently.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:20.362Z"
-  },
-  {
     "url": "https://jobs.apple.com/en-us/details/200253203/product-design-internship?team=STDNT",
     "position": "Product Design Internship",
     "location": {
@@ -27,7 +12,22 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:21.565Z"
+    "lastScraped": "2021-10-26T21:22:12.367Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200262865/hardware-technology-internship?team=STDNT",
+    "position": "Hardware Technology Internship",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "Some responsibilities in Hardware or Silicon Engineering may include: \n\nYou will work on real challenges the team faces as well as upcoming products. \n\nYou have a strong technical foundation, are able to show initiative.\n\nLearn new technologies quickly, and possess excellent interpersonal and communication skills. \n\nYou are motivated and prepared to work independently.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:13.241Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200253195/software-engineering-internship?team=STDNT",
@@ -42,7 +42,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:22.567Z"
+    "lastScraped": "2021-10-26T21:22:14.264Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200262863/engineering-program-management-internship?team=STDNT",
@@ -57,7 +57,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:23.438Z"
+    "lastScraped": "2021-10-26T21:22:15.352Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200256173/mba-internships-summer-2022?team=STDNT",
@@ -72,7 +72,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:24.433Z"
+    "lastScraped": "2021-10-26T21:22:16.552Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200253210/operations-manufacturing-design-engineer-internship?team=STDNT",
@@ -87,7 +87,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:25.463Z"
+    "lastScraped": "2021-10-26T21:22:17.457Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200295964/machine-learning-research-internship-siri?team=MLAI",
@@ -102,52 +102,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:26.410Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200295968/machine-learning-research-internship-siri?team=MLAI",
-    "position": "Machine Learning Research Internship, Siri",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "As an intern, you will work with a mentor and broader teams across Apple in order to advance Siri’s core machine learning capabilities in machine hearing, speech recognition, text-to-speech synthesis, and natural language understanding. You will have opportunities to broadly demonstrate your work, which may also lead to a conference publication.\n\nTo be successful in this position, you should have a strong technical foundation, be able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Interns are self-motivated, excellent problem solvers, quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:27.401Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200253211/machine-learning-ai-internship?team=STDNT",
-    "position": "Machine Learning / AI Internship",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "Some responsibilities in AI/ML may include:\n\nYou will research and develop innovative ML strategies for challenging problems that will affect future Apple products. You will collaborate with broader teams across Apple to transfer AI/ML solutions. You will have opportunities to provide technical mentorship and guidance and prepare technical reports for publication and conference talks. You are self-motivated, excellent problem solver, a go-getter. You are quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:28.171Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200291002/engineering-internship-opportunities-swe21?team=SFTWR",
-    "position": "Engineering Internship Opportunities - SWE21",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "Software and Services\nApple engineers have always focused on one person when they build software — the person who will use it. Working with them, you’ll see why every Apple product and service feels intuitive and simple, and why every aspect of this group’s work is built around a respect for the customer’s needs.\n\nMachine Learning and AI\nThe people working here in machine learning and AI are building amazing experiences into every Apple product, allowing millions to do what they never imagined. Because Apple fully integrates hardware and software across every device, these researchers and engineers collaborate more effectively to improve the user experience while protecting user data. Come make an impact with the products you create and the research you publish.\n\nHardware\nOur engineers have created some tough acts to follow, and they continue to lead us to innovative breakthroughs. Because they’re driven not by what would be easy, but by what would be amazing.\n\nDesign\nApple products work beautifully because our designers maintain an intense focus on simplicity and usability. They judge the success of their work not by everything they put into it, but by everything the user gets out of it.\n\nOperations\nApple's Operations teams ensure Apple’s cutting-edge designs become industry-leading products, delivered on time and on spec. They support the development, manufacturing, procurement, and fulfillment of all things Apple.\n\nAppleCare\nOur teams focus on developing industry-leading customer support experiences. Engineers working on our support platforms or analytics teams focused on providing data-driven hardware and software insights, you'll create product support experiences with customers at the core.  As part of the Service and Support teams at Apple you become part of the personal connection that strengthens the relationship people have with their Apple products.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:29.738Z"
+    "lastScraped": "2021-10-26T21:22:18.537Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200253214/business-marketing-and-g-a-internships?team=STDNT",
@@ -162,22 +117,52 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:30.766Z"
+    "lastScraped": "2021-10-26T21:22:19.368Z"
   },
   {
-    "url": "https://jobs.apple.com/en-us/details/200305292/apple-legal-internship-summer-2022?team=CORSV",
-    "position": "Apple Legal Internship - Summer 2022",
+    "url": "https://jobs.apple.com/en-us/details/200253211/machine-learning-ai-internship?team=STDNT",
+    "position": "Machine Learning / AI Internship",
     "location": {
       "city": "Santa Clara Valley (Cupertino)",
       "state": "California",
       "country": "United States"
     },
-    "description": "Some responsibilities may include:\nWorking with attorneys and paralegals, as well as our outside advisers around\nthe world, on domestic and international legal matters covering corporate law,\ngovernance, shareholder engagement, international expansion, financing, SEC\ncompliance, compensation and benefits, risk management, banking, credit, and\ninsolvency\n• Working with Apple business groups to understand and find efficient, practical\nsolutions to their legal requirements\n• Preparing legal memoranda and presentations on groundbreaking IP issues\n• Collaborating with Apple’s team of in-house attorneys, outside counsel, business\nand engineering groups\n• Working with the attorneys on a variety of issues, including procurement, joint\ndevelopment agreements, Licensing and regulatory clearance\n• Assisting with ad-hoc projects by researching legal issues and regulatory\ndevelopments and preparing summaries of research",
+    "description": "Some responsibilities in AI/ML may include:\n\nYou will research and develop innovative ML strategies for challenging problems that will affect future Apple products. You will collaborate with broader teams across Apple to transfer AI/ML solutions. You will have opportunities to provide technical mentorship and guidance and prepare technical reports for publication and conference talks. You are self-motivated, excellent problem solver, a go-getter. You are quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.",
     "company": "Apple",
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:32.168Z"
+    "lastScraped": "2021-10-26T21:22:20.111Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200295968/machine-learning-research-internship-siri?team=MLAI",
+    "position": "Machine Learning Research Internship, Siri",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "As an intern, you will work with a mentor and broader teams across Apple in order to advance Siri’s core machine learning capabilities in machine hearing, speech recognition, text-to-speech synthesis, and natural language understanding. You will have opportunities to broadly demonstrate your work, which may also lead to a conference publication.\n\nTo be successful in this position, you should have a strong technical foundation, be able to show initiative, learn new technologies quickly, and possess excellent interpersonal and communication skills. Interns are self-motivated, excellent problem solvers, quick to build relationships and work well with change and ambiguity. You have strong programming skills with tried experience crafting, prototyping, and delivering advanced algorithmic solutions.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:20.961Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200291002/engineering-internship-opportunities-swe21?team=SFTWR",
+    "position": "Engineering Internship Opportunities - SWE21",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "Software and Services\nApple engineers have always focused on one person when they build software — the person who will use it. Working with them, you’ll see why every Apple product and service feels intuitive and simple, and why every aspect of this group’s work is built around a respect for the customer’s needs.\n\nMachine Learning and AI\nThe people working here in machine learning and AI are building amazing experiences into every Apple product, allowing millions to do what they never imagined. Because Apple fully integrates hardware and software across every device, these researchers and engineers collaborate more effectively to improve the user experience while protecting user data. Come make an impact with the products you create and the research you publish.\n\nHardware\nOur engineers have created some tough acts to follow, and they continue to lead us to innovative breakthroughs. Because they’re driven not by what would be easy, but by what would be amazing.\n\nDesign\nApple products work beautifully because our designers maintain an intense focus on simplicity and usability. They judge the success of their work not by everything they put into it, but by everything the user gets out of it.\n\nOperations\nApple's Operations teams ensure Apple’s cutting-edge designs become industry-leading products, delivered on time and on spec. They support the development, manufacturing, procurement, and fulfillment of all things Apple.\n\nAppleCare\nOur teams focus on developing industry-leading customer support experiences. Engineers working on our support platforms or analytics teams focused on providing data-driven hardware and software insights, you'll create product support experiences with customers at the core.  As part of the Service and Support teams at Apple you become part of the personal connection that strengthens the relationship people have with their Apple products.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:22.076Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200253208/hardware-hardware-products-hardware-engineering-internship?team=STDNT",
@@ -192,7 +177,22 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:33.605Z"
+    "lastScraped": "2021-10-26T21:22:22.920Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200305292/apple-legal-internship-summer-2022?team=CORSV",
+    "position": "Apple Legal Internship - Summer 2022",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "Some responsibilities may include:\nWorking with attorneys and paralegals, as well as our outside advisers around\nthe world, on domestic and international legal matters covering corporate law,\ngovernance, shareholder engagement, international expansion, financing, SEC\ncompliance, compensation and benefits, risk management, banking, credit, and\ninsolvency\n• Working with Apple business groups to understand and find efficient, practical\nsolutions to their legal requirements\n• Preparing legal memoranda and presentations on groundbreaking IP issues\n• Collaborating with Apple’s team of in-house attorneys, outside counsel, business\nand engineering groups\n• Working with the attorneys on a variety of issues, including procurement, joint\ndevelopment agreements, Licensing and regulatory clearance\n• Assisting with ad-hoc projects by researching legal issues and regulatory\ndevelopments and preparing summaries of research",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:24.005Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200260748/ai-ml-research-scientist-health-ai?team=MLAI",
@@ -207,7 +207,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:34.705Z"
+    "lastScraped": "2021-10-26T21:22:25.520Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200303797/university-relations-recruiter?team=CORSV",
@@ -222,7 +222,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:36.257Z"
+    "lastScraped": "2021-10-26T21:22:26.442Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200294625/evolve-rotational-program-engineer?team=SFTWR",
@@ -237,22 +237,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:37.392Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200242305/interaction-algorithms-engineer?team=HRDWR",
-    "position": "Interaction Algorithms Engineer",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "In this role, you will:\n\n- Prototype and define interactions end-to-end, in collaboration with HW, SW, and design partners\n- Design user studies and leverage prototypes to define success criteria\n- Develop processes for measuring key performance indicators\n- Analyze data to identify and drive algorithm improvements\n- Create and maintain core algorithms for new interactions and root-cause issues throughout the stack\n- Communicate user impacts of technical challenges to cross-functional stakeholders",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:38.204Z"
+    "lastScraped": "2021-10-26T21:22:28.434Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200286929/speech-algorithm-research-intern?team=SFTWR",
@@ -267,22 +252,22 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:39.107Z"
+    "lastScraped": "2021-10-26T21:22:29.343Z"
   },
   {
-    "url": "https://jobs.apple.com/en-us/details/200286798/wifi-qa-engineer?team=SFTWR",
-    "position": "WiFi QA Engineer",
+    "url": "https://jobs.apple.com/en-us/details/200242305/interaction-algorithms-engineer?team=HRDWR",
+    "position": "Interaction Algorithms Engineer",
     "location": {
       "city": "Santa Clara Valley (Cupertino)",
       "state": "California",
       "country": "United States"
     },
-    "description": "You will join a dynamic quality assurance team, responsible for functional and performance validation of WiFi (and other Wireless technologies) features on WatchOS & other exciting products.\n\nYou will be delivering flawless connectivity user experience to our customers. Job responsibilities include crafting of test strategies using various test methodologies, building test setups, automating test framework and test plans to ensure the best quality in WiFi connectivity for exciting product line.",
+    "description": "In this role, you will:\n\n- Prototype and define interactions end-to-end, in collaboration with HW, SW, and design partners\n- Design user studies and leverage prototypes to define success criteria\n- Develop processes for measuring key performance indicators\n- Analyze data to identify and drive algorithm improvements\n- Create and maintain core algorithms for new interactions and root-cause issues throughout the stack\n- Communicate user impacts of technical challenges to cross-functional stakeholders",
     "company": "Apple",
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:40.426Z"
+    "lastScraped": "2021-10-26T21:22:30.206Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200286795/wifi-qa-engineer?team=SFTWR",
@@ -297,7 +282,22 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:41.541Z"
+    "lastScraped": "2021-10-26T21:22:31.138Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200286798/wifi-qa-engineer?team=SFTWR",
+    "position": "WiFi QA Engineer",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "You will join a dynamic quality assurance team, responsible for functional and performance validation of WiFi (and other Wireless technologies) features on WatchOS & other exciting products.\n\nYou will be delivering flawless connectivity user experience to our customers. Job responsibilities include crafting of test strategies using various test methodologies, building test setups, automating test framework and test plans to ensure the best quality in WiFi connectivity for exciting product line.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:32.364Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200297308/early-career-development-database-security-engineer?team=SFTWR",
@@ -312,37 +312,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:44.555Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200301300/ai-ml-residency-program?team=MLAI",
-    "position": "AI/ML Residency Program",
-    "location": {
-      "city": "Cambridge",
-      "state": "Massachusetts",
-      "country": "United States"
-    },
-    "description": "Apple’s AI/ML residency is a year-long program inviting experts in various fields to apply their own domain expertise to innovate and build revolutionary machine learning and AI-based products and experiences. As AI-based solutions spread across disciplines, the need for domain experts to understand machine learning and apply their expertise in ML settings grows. \n\nResidents will have the opportunity to attend machine learning and AI courses, learn from an Apple mentor, collaborate with fellow residents, gain hands-on experience working on high-impact projects, publish in premier academic conferences, and partner with Apple teams across hardware, software, and services.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:47.220Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200302820/wifi-quality-engineer?team=SFTWR",
-    "position": "WiFi Quality Engineer",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "You will join a dynamic quality assurance team, responsible for functional and performance validation of WiFi (and other Wireless technologies) features on iOS, tvOS and HomePod products\n\nYou will be delivering flawless connectivity user experience to our customers. Job responsibilities include crafting of test strategies using various test methodologies, building test setups, automating test framework and test plans to ensure the best quality in WiFi connectivity for exciting product line.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:48.617Z"
+    "lastScraped": "2021-10-26T21:22:35.047Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200286792/wifi-quality-engineer?team=SFTWR",
@@ -357,7 +327,37 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:49.878Z"
+    "lastScraped": "2021-10-26T21:22:35.960Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200302820/wifi-quality-engineer?team=SFTWR",
+    "position": "WiFi Quality Engineer",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "You will join a dynamic quality assurance team, responsible for functional and performance validation of WiFi (and other Wireless technologies) features on iOS, tvOS and HomePod products\n\nYou will be delivering flawless connectivity user experience to our customers. Job responsibilities include crafting of test strategies using various test methodologies, building test setups, automating test framework and test plans to ensure the best quality in WiFi connectivity for exciting product line.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:38.373Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200301300/ai-ml-residency-program?team=MLAI",
+    "position": "AI/ML Residency Program",
+    "location": {
+      "city": "Cambridge",
+      "state": "Massachusetts",
+      "country": "United States"
+    },
+    "description": "Apple’s AI/ML residency is a year-long program inviting experts in various fields to apply their own domain expertise to innovate and build revolutionary machine learning and AI-based products and experiences. As AI-based solutions spread across disciplines, the need for domain experts to understand machine learning and apply their expertise in ML settings grows. \n\nResidents will have the opportunity to attend machine learning and AI courses, learn from an Apple mentor, collaborate with fellow residents, gain hands-on experience working on high-impact projects, publish in premier academic conferences, and partner with Apple teams across hardware, software, and services.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:39.220Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200007574/apple-industrial-design-accepting-portfolios?team=DESGN",
@@ -372,7 +372,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:50.974Z"
+    "lastScraped": "2021-10-26T21:22:40.211Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200297406/chip-level-vlsi-pd-cad-engineer?team=HRDWR",
@@ -387,7 +387,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:51.900Z"
+    "lastScraped": "2021-10-26T21:22:40.954Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200297331/ai-ml-residency-program?team=MLAI",
@@ -402,7 +402,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:53.163Z"
+    "lastScraped": "2021-10-26T21:22:41.911Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200301296/ai-ml-residency-program?team=MLAI",
@@ -417,7 +417,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:54.186Z"
+    "lastScraped": "2021-10-26T21:22:45.597Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200251456/machine-learning-engineer-fraud-engineering-algorithms-and-risk?team=SFTWR",
@@ -432,37 +432,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:56.275Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200297435/product-design-engineer-interconnect?team=HRDWR",
-    "position": "Product Design Engineer - Interconnect",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "The people who work here have reinvented entire industries with the Mac, iPhone, iPad, and Apple TV, as well as the first three generations of Apple Watch. We have done the same with services, including iTunes, the App Store, Apple Music, and Apple Pay. The same passion for innovation that goes into our products also applies to our practices — strengthening our commitment to leave the world better than we found it. You should join us to help deliver the next groundbreaking Apple product.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:57.248Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200297441/product-design-engineer-interconnect?team=HRDWR",
-    "position": "Product Design Engineer - Interconnect",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "The people who work here have reinvented entire industries with the Mac, iPhone, iPad, and Apple TV, as well as the first three generations of Apple Watch. We have done the same with services, including iTunes, the App Store, Apple Music, and Apple Pay. The same passion for innovation that goes into our products also applies to our practices — strengthening our commitment to leave the world better than we found it. You should join us to help deliver the next groundbreaking Apple product.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:53:58.432Z"
+    "lastScraped": "2021-10-26T21:22:46.645Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200257537/identity-management-software-quality-engineer-early-career?team=SFTWR",
@@ -477,22 +447,37 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:53:59.433Z"
+    "lastScraped": "2021-10-26T21:22:48.048Z"
   },
   {
-    "url": "https://jobs.apple.com/en-us/details/200300759/product-design-engineer?team=HRDWR",
-    "position": "Product Design Engineer",
+    "url": "https://jobs.apple.com/en-us/details/200297435/product-design-engineer-interconnect?team=HRDWR",
+    "position": "Product Design Engineer - Interconnect",
     "location": {
       "city": "Santa Clara Valley (Cupertino)",
       "state": "California",
       "country": "United States"
     },
-    "description": "You will be working with many internal teams and contract partners, leading Design integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience. \n•\tDrive industry with advanced package solutions and specs",
+    "description": "The people who work here have reinvented entire industries with the Mac, iPhone, iPad, and Apple TV, as well as the first three generations of Apple Watch. We have done the same with services, including iTunes, the App Store, Apple Music, and Apple Pay. The same passion for innovation that goes into our products also applies to our practices — strengthening our commitment to leave the world better than we found it. You should join us to help deliver the next groundbreaking Apple product.",
     "company": "Apple",
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:00.558Z"
+    "lastScraped": "2021-10-26T21:22:48.879Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200297441/product-design-engineer-interconnect?team=HRDWR",
+    "position": "Product Design Engineer - Interconnect",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "The people who work here have reinvented entire industries with the Mac, iPhone, iPad, and Apple TV, as well as the first three generations of Apple Watch. We have done the same with services, including iTunes, the App Store, Apple Music, and Apple Pay. The same passion for innovation that goes into our products also applies to our practices — strengthening our commitment to leave the world better than we found it. You should join us to help deliver the next groundbreaking Apple product.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:49.792Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200294255/product-design-engineer?team=HRDWR",
@@ -507,7 +492,37 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:01.557Z"
+    "lastScraped": "2021-10-26T21:22:50.770Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200300759/product-design-engineer?team=HRDWR",
+    "position": "Product Design Engineer",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "You will be working with many internal teams and contract partners, leading Design integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience. \n•\tDrive industry with advanced package solutions and specs",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:51.727Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200305853/machine-learning-engineer?team=SFTWR",
+    "position": "Machine Learning Engineer",
+    "location": {
+      "city": "Austin",
+      "state": "Texas",
+      "country": "United States"
+    },
+    "description": "The role requires software engineering expertise to develop and deploy highly scalable algorithms that are used by hundreds of millions of users every day across the globe. We collaborate with other engineers, feature teams, and business partners across a wide range of groups within Apple to identify problems, define solutions, execute plans, measure results and communicate these results to our partners. We have end-to-end responsibility for our solutions to these problems, from initial investigation, to solution proposal, to implementation, to long-term maintenance. A successful candidate will have a bent for applied research with a broad knowledge of machine learning and expertise in anomaly detection, predictive modeling, classification and optimization. We encourage our team to stay abreast of current research by attending conferences. We cultivate a collaborative work environment, but allow solution autonomy on projects.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:22:52.550Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200273817/machine-learning-engineer-fear?team=SFTWR",
@@ -522,7 +537,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:03.886Z"
+    "lastScraped": "2021-10-26T21:22:53.385Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200240020/product-design-engineer-glass?team=HRDWR",
@@ -537,7 +552,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:05.212Z"
+    "lastScraped": "2021-10-26T21:22:54.291Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200302207/database-engineer-early-career?team=SFTWR",
@@ -552,7 +567,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:06.254Z"
+    "lastScraped": "2021-10-26T21:22:55.573Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200303605/database-engineer-early-career?team=SFTWR",
@@ -567,7 +582,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:07.322Z"
+    "lastScraped": "2021-10-26T21:22:56.684Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200253984/backend-engineer-early-career?team=SFTWR",
@@ -582,7 +597,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:08.785Z"
+    "lastScraped": "2021-10-26T21:22:57.387Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200297421/product-design-engineer-iphone?team=HRDWR",
@@ -597,37 +612,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:11.648Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200297421/product-design-engineer-iphone?team=HRDWR",
-    "position": "Product Design Engineer - iPhone",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "You will be working with many internal teams and contract partners, leading iPhone integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:54:17.806Z"
-  },
-  {
-    "url": "https://jobs.apple.com/en-us/details/200297457/product-design-engineer-iphone?team=HRDWR",
-    "position": "Product Design Engineer - iPhone",
-    "location": {
-      "city": "Santa Clara Valley (Cupertino)",
-      "state": "California",
-      "country": "United States"
-    },
-    "description": "You will be working with many internal teams and contract partners, leading iPhone integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience.",
-    "company": "Apple",
-    "contact": "",
-    "posted": "",
-    "due": "",
-    "lastScraped": "2021-10-26T02:54:18.787Z"
+    "lastScraped": "2021-10-26T21:23:00.421Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200297418/product-design-engineer-iphone?team=HRDWR",
@@ -642,7 +627,37 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:20.251Z"
+    "lastScraped": "2021-10-26T21:23:01.259Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200297457/product-design-engineer-iphone?team=HRDWR",
+    "position": "Product Design Engineer - iPhone",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "You will be working with many internal teams and contract partners, leading iPhone integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:23:02.778Z"
+  },
+  {
+    "url": "https://jobs.apple.com/en-us/details/200297410/product-design-engineer-iphone?team=HRDWR",
+    "position": "Product Design Engineer - iPhone",
+    "location": {
+      "city": "Santa Clara Valley (Cupertino)",
+      "state": "California",
+      "country": "United States"
+    },
+    "description": "You will be working with many internal teams and contract partners, leading iPhone integration and architecture efforts. You will demonstrate creativity in problem solving, ability to think dynamically and outside of standard convention, and adapt quickly to new technical areas. We promote innovation and new technology to further improve Apple's hardware performance and user experience.",
+    "company": "Apple",
+    "contact": "",
+    "posted": "",
+    "due": "",
+    "lastScraped": "2021-10-26T21:23:03.934Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200297099/cellular-rf-system-engineer-algorithms-control-architecture?team=HRDWR",
@@ -657,7 +672,7 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:21.900Z"
+    "lastScraped": "2021-10-26T21:23:04.953Z"
   },
   {
     "url": "https://jobs.apple.com/en-us/details/200301782/cellular-rf-system-engineer-algorithms-control-architecture?team=HRDWR",
@@ -672,6 +687,6 @@
     "contact": "",
     "posted": "",
     "due": "",
-    "lastScraped": "2021-10-26T02:54:23.260Z"
+    "lastScraped": "2021-10-26T21:23:05.985Z"
   }
 ]
