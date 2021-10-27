@@ -62,13 +62,14 @@ export class ZipRecruiterScraper extends Scraper {
         a => a.getAttribute('href'),
       ),
     );
-    
+
     urls = _.uniq(urls);
     this.log.info(`Found ${urls.length} listings`);
 
     // Positions
     const positions = await super.getValues('h1[class="job_title"]', 'innerText');
     this.log.debug(`Positions: \n${positions}`);
+    
     // Description
     const descriptions = await super.getValues('div[class="job_description_container"] ', 'innerText');
     this.log.debug(`Descriptions: \n${descriptions}`);
