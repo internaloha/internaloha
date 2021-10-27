@@ -14,7 +14,7 @@ export class ZipRecruiterScraper extends Scraper {
    * @param page The page we are scrolling.
    * @returns {Promise<void>}
    */
-  public async autoScroll() {
+  async autoScroll() {
     await this.page.evaluate(async () => {
       await new Promise<void>((resolve) => {
         let totalHeight = 0;
