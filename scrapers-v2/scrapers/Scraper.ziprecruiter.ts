@@ -32,32 +32,6 @@ export class ZipRecruiterScraper extends Scraper {
     });
   }
 
-  async reload() {
-    await this.page.goto('https://www.ziprecruiter.com/candidate/search?search=computer+science+internship&location=United+States&days=30&radius=25');
-    await this.page.waitForSelector('.job_content');
-    this.log.info('Fetching jobs...');
-    await this.autoScroll();
-    await this.page.waitForTimeout(5000);
-    await this.autoScroll();
-    let loadMore = true;
-    let loadCount = 0;
-    // Sometimes infinite scroll stops and switches to a "load more" button
-    while (loadMore === true && loadCount <= 40) {
-      try {
-        await this.page.waitForTimeout(5000);
-        if (await this.page.waitForSelector('button[data-tracking-control-name="infinite-scroller_show-more"]')) {
-          await this.page.click('.load_more_jobs');
-        } else {
-          await this.autoScroll();
-        }
-        loadCount++;
-      } catch (e2) {
-        loadMore = false;
-        this.log.debug('Finished loading...');
-      }
-    }
-  }
-
   async launch() {
     await super.launch();
     prefix.apply(this.log, { nameFormatter: () => this.name.toUpperCase() });
