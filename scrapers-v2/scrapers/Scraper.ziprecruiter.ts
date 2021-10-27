@@ -62,6 +62,7 @@ export class ZipRecruiterScraper extends Scraper {
         a => a.getAttribute('href'),
       ),
     );
+    
     urls = _.uniq(urls);
     this.log.info(`Found ${urls.length} listings`);
 
