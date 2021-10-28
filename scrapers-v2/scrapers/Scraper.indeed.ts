@@ -51,7 +51,13 @@ export class IndeedScrapper extends Scraper {
       // Retrieve the companies
       const companies = await super.getValues('span[class="companyName"', 'innerText');
       this.log.debug(`Companies: \n${companies}`);
+
+      // Retrieve the locations
+      const locations = await super.getValues('div[class="companyLocation"', 'innerText');
+      this.log.debug(`Locations: \n${locations}`);
+
       
+
 
     }
   }
