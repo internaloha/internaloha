@@ -1,4 +1,5 @@
 import { Scraper } from './Scraper';
+import _ from 'underscore';
 
 const prefix = require('loglevel-plugin-prefix');
 
@@ -36,14 +37,20 @@ export class IndeedScrapper extends Scraper {
     while (await super.selectorExists(listingsTable)) {
       // collect the URLs of the list of jobs
       let urls = await super.getValues('a[class="icl-Button icl-Button--primary icl-Button--lg icl-Button--block"]', 'href');
+      urls = _.uniq(urls);
       this.log.info(`Processing page ${pageNum} with ${urls.length} listings.`);
 
+      // Retrieve the Positions
+      const positions = await super.getValues('h2[class="jobTitle jobTitle-color-purple jobTitle-newJob"]', 'innerText');
+      this.log.debug(`Positions: \n${positions}`);
+
+      // Retrieve the descriptions
+      const descriptions = await super.getValues('div[class="job-snippet"]','innerText');
+      this.log.debug(`Descriptions: \n${descriptions}`);
+
+      
 
     }
-
-
-
-
   }
 
   async processListings() {
