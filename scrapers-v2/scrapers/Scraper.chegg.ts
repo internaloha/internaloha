@@ -1,3 +1,4 @@
+import { Listing } from './Listing';
 import { Scraper } from './Scraper';
 
 const prefix = require('loglevel-plugin-prefix');
@@ -69,19 +70,23 @@ export class CheggScraper extends Scraper {
     await this.page.click('div[class="GridItem_jobContent__ENwap"]');
     await this.page.waitForTimeout(1000); //Have to wait till page is loaded might need a better way to do this
 
-    let urls = await super.getValues('a[class="table--advanced-search__title"]', 'href');
+    let url = this.page.url();
 
     const position = (await super.getValues('h1[class="DesktopHeader_title__2ihuJ"]', 'innerText'))[0];
 
-    const description = (await super.getValues('div[class="ql-editor ql-snow ql-container ql-editor-display ' +         'Body_rteText__U3_Ce"]', 'innerText'))[0];
+    const description = (await super.getValues('div[class="ql-editor ql-snow ql-container ql-editor-display ' +        'Body_rteText__U3_Ce"]', 'innerText'))[0];
 
-    const company = (await super.getValues('a[class="Link_anchor__1oD5h Link_linkColoring__394wp Link_medium__25UK6     DesktopHeader_subTitle__3k6XA"]', 'innerText'))[0];
+    const company = (await super.getValues('a[class="Link_anchor__1oD5h Link_linkColoring__394wp ' +
+      'Link_medium__25UK6     DesktopHeader_subTitle__3k6XA"]', 'innerText'))[0];
 
-    const location = (await super.getValues('span[class="DesktopHeader_subTitle__3k6XA  ' +
-      'DesktopHeader_location__3jiWp"]', 'innerText'))[0];
+    const location = (await super.getValues('span[class="DesktopHeader_subTitle__3k6XA ' +
+      'DesktopHeader_location__3jiWp"]', 'innerText'));
+    const cities = [];
+    const states = [];
 
 
-
+    const listing = new Listing({ url, position, location, company, description });
+    this.listings.addListing(listing);
 
 
   }
