@@ -17,7 +17,6 @@ export class IndeedScrapper extends Scraper {
 
   async login() {
     await super.login();
-    // if you need to login, put that code here.
     await this.page.goto(this.url);
   }
 
@@ -26,7 +25,7 @@ export class IndeedScrapper extends Scraper {
     // variable to store the page count of the URL; for indeed the page count increments by 10
     let pageNum = 0;
 
-    const listingsTable = '#tblResultSet';
+    const listingsTable = '#resultsBody';
 
     // pageUrl returns an URL containing the specified page number.
     const pageUrl = (pageNum) =>
@@ -75,7 +74,7 @@ export class IndeedScrapper extends Scraper {
         const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
         this.listings.addListing(listing);
       }
-      
+
       // increment the pageNum by 10
       pageNum = pageNum + 10;
       // Increment the pageNum and get that page. If we get a page without listings, then listingsTable selector won't be on it.
