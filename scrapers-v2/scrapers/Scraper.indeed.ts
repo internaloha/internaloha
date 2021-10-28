@@ -4,7 +4,7 @@ const prefix = require('loglevel-plugin-prefix');
 
 export class IndeedScrapper extends Scraper {
   constructor() {
-    super({ name: 'indeed', url: 'https://www.indeed.com/jobs?q=USA%20(software%20or%20programmer)&explvl=entry_level&st=employer&vjk=6b53a7742ceabf5c' });
+    super({ name: 'indeed', url: 'https://www.indeed.com/jobs?q=computer%20science%20intern&vjk=9eff9928b08349d4' });
   }
 
   async launch() {
@@ -26,8 +26,6 @@ export class IndeedScrapper extends Scraper {
 
   async processListings() {
     await super.processListings();
-    let pageNum = 1;
-    // here is where you do any additional processing on the raw data now available in the this.listings field.
   }
 
 }
