@@ -40,7 +40,6 @@ export class IndeedScrapper extends Scraper {
     while (await super.selectorExists(listingsTable)) {
       // collect the URLs of the list of jobs
       //let urls = await super.getValues('a[class="icl-Button icl-Button--primary icl-Button--lg icl-Button--block"]', 'href');
-      urls = _.uniq(urls);
       this.log.info(`Processing page ${pageNum} with ${urls.length} listings.`);
 
       // Retrieve the Positions
