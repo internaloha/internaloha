@@ -45,9 +45,12 @@ export class IndeedScrapper extends Scraper {
       this.log.debug(`Positions: \n${positions}`);
 
       // Retrieve the descriptions
-      const descriptions = await super.getValues('div[class="job-snippet"]','innerText');
+      const descriptions = await super.getValues('div[class="job-snippet"]', 'innerText');
       this.log.debug(`Descriptions: \n${descriptions}`);
 
+      // Retrieve the companies
+      const companies = await super.getValues('span[class="companyName"', 'innerText');
+      this.log.debug(`Companies: \n${companies}`);
       
 
     }
