@@ -56,9 +56,14 @@ export class IndeedScrapper extends Scraper {
       const locations = await super.getValues('div[class="companyLocation"', 'innerText');
       this.log.debug(`Locations: \n${locations}`);
 
-      
-
-
+      //break the cities and states of the locations
+      const cities = [];
+      const states = [];
+      for (let i = 0; i < locations.length; i++) {
+        const loc = locations[i].split(', ');
+        cities.push(loc[0]);
+        states.push(loc[1]);
+      }
     }
   }
 
