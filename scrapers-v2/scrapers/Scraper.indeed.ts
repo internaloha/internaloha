@@ -1,3 +1,4 @@
+import { Listing } from './Listing';
 import { Scraper } from './Scraper';
 import _ from 'underscore';
 
@@ -67,6 +68,18 @@ export class IndeedScrapper extends Scraper {
         cities.push(loc[0]);
         states.push(loc[1]);
       }
+
+      // Retrieve each URL, extract the internship listing info.
+      for (let i = 0; i < urls.length; i++) {
+        const location = { city: cities[i], state: states[i], country: 'United States' };
+        const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
+        this.listings.addListing(listing);
+      }
+      
+      // increment the pageNum by 10
+      pageNum = pageNum + 10;
+      // Increment the pageNum and get that page. If we get a page without listings, then listingsTable selector won't be on it.
+      await this.page.goto(pageUrl(pageNum), { waitUntil: 'networkidle0' });
     }
   }
 
