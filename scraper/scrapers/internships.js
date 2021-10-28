@@ -96,6 +96,7 @@ async function main() {
       if (currentCounter >= elementLoaded.length) {
         let reachedTotal = false;
         // keep clicking until it is loaded
+
         while (reachedTotal === false) {
           const elements = await page.$$('div[class="GridItem_jobContent__ENwap"]');
           if (elements.length <= currentCounter) {
@@ -106,6 +107,7 @@ async function main() {
             reachedTotal = true;
           }
         }
+
       }
       // sometimes a job doesn't load properly so put it in try/catch to allow rest of script to run
       try {
@@ -166,6 +168,8 @@ async function main() {
         log.error('Error, skipping page:', err5.message);
       }
     }
+
+
     log.info('Total jobs:', finishedJobs);
     log.info('Total jobs skipped:', skipped);
     // write results to JSON file
