@@ -45,7 +45,7 @@ export class SimplyHiredScraper extends Scraper {
     this.timeout = super.getNested(this.config, 'additionalParams', 'simplyHired', 'timeout') || 500;
     // check the config file to set the search terms.
     //this.searchTerms = this.config?.additionalParams?.simplyHired?.searchTerms[this.discipline] || 'computer science intern';
-    this.timeout = super.getNested(this.config, 'additionalParams', 'simplyHired', 'searchTerms', this.discipline) || 'computer science intern';
+    this.searchTerms = super.getNested(this.config, 'additionalParams', 'simplyHired', 'searchTerms', this.discipline) || 'computer science intern';
     this.log.debug(`Search Terms: ${this.searchTerms}`);
   }
 

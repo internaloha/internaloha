@@ -1,0 +1,10 @@
+{
+  "date": "2021-10-28",
+  "elapsedTime": 2,
+  "numErrors": 1,
+  "numListings": 0,
+  "errorMessages": [
+    "text is not iterable"
+  ],
+  "scraper": "simplyHired"
+}
