@@ -16,7 +16,6 @@ export class AcmScraper extends Scraper {
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
     this.log.debug(`Discipline: ${this.discipline}`);
     // check the config file to set the search terms.
-    // @ts-ignore
     // this.searchTerms = this.config?.additionalParams?.acm?.searchTerms[this.discipline] || 'intern';
     this.searchTerms = super.getNested(this.config, 'additionalParams', 'acm', 'searchTerms', this.discipline) || 'internship';
     this.log.debug(`Search Terms: ${this.searchTerms}`);
@@ -24,7 +23,6 @@ export class AcmScraper extends Scraper {
 
   async login() {
     await super.login();
-    // https://jobs.acm.org/jobs/?keywords=Internship&pos_flt=0&location=United+States&location_completion=city%3D%24state%3D%24country%3DUnited+States&location_type=country&location_text=United+States&location_autocomplete=true
     const searchUrl = `https://jobs.acm.org/jobs/?keywords=${this.searchTerms}&pos_flt=0&location=United+States&location_completion=city%3D%24state%3D%24country%3DUnited+States&location_type=country&location_text=United+States&location_autocomplete=true`;
     this.log.debug(`Going to ${searchUrl}`);
     await this.page.goto(searchUrl);
