@@ -64,6 +64,18 @@ export class Scraper {
   }
 
   /**
+   * Return the nested property value or undefined if any of the intermediate structures don't exist.
+   * The "optional chaining proposal" is not currently supported in our typescript.
+   * See: https://stackoverflow.com/questions/2631001/test-for-existence-of-nested-javascript-object-key
+   *
+   * @param obj The object
+   * @param args The nested fields.
+   */
+  getNested(obj, ...args) {
+    return args.reduce((obj, level) => obj && obj[level], obj);
+  }
+
+  /**
    * Return true if the passed selector appears on the page.
    */
   async selectorExists(selector) {
@@ -191,7 +203,7 @@ export class Scraper {
     } catch (error) {
       const message = error['message'];
       this.errorMessages.push(message);
-      this.log.error(message);
+      this.log.error(`Error caught in scrape(): ${message}`);
     } finally {
       await this.close();
       await this.writeListings();

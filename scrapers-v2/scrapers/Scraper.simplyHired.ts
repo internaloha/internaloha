@@ -41,11 +41,11 @@ export class SimplyHiredScraper extends Scraper {
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
     this.log.debug(`Discipline: ${this.discipline}`);
     // check the config file for timeout.
-    // @ts-ignore
-    this.timeout = this.config?.additionalParams?.simplyHired?.timeout || 500;
+    // this.timeout = this.config?['additionalParams']?['simplyHired']?['timeout'] || 500;
+    this.timeout = super.getNested(this.config, 'additionalParams', 'simplyHired', 'timeout') || 500;
     // check the config file to set the search terms.
-    // @ts-ignore
-    this.searchTerms = this.config?.additionalParams?.simplyHired?.searchTerms[this.discipline] || 'computer science intern';
+    //this.searchTerms = this.config?.additionalParams?.simplyHired?.searchTerms[this.discipline] || 'computer science intern';
+    this.searchTerms = super.getNested(this.config, 'additionalParams', 'simplyHired', 'searchTerms', this.discipline) || 'computer science intern';
     this.log.debug(`Search Terms: ${this.searchTerms}`);
   }
 
