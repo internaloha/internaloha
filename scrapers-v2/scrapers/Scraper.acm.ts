@@ -17,30 +17,30 @@ export class AcmScraper extends Scraper {
     this.log.debug(`Discipline: ${this.discipline}`);
     // check the config file to set the search terms.
     // @ts-ignore
-    this.searchTerms = this.config?.additionalParams?.acm?.searchTerms[this.discipline] || 'intern';
+    // this.searchTerms = this.config?.additionalParams?.acm?.searchTerms[this.discipline] || 'intern';
+    this.searchTerms = super.getNested(this.config, 'additionalParams', 'acm', 'searchTerms', this.discipline) || 'internship';
     this.log.debug(`Search Terms: ${this.searchTerms}`);
   }
 
   async login() {
-    super.login();
-    this.log.debug(`Going to ${this.url}`);
-    await this.page.goto(this.url);
+    await super.login();
+    // https://jobs.acm.org/jobs/?keywords=Internship&pos_flt=0&location=United+States&location_completion=city%3D%24state%3D%24country%3DUnited+States&location_type=country&location_text=United+States&location_autocomplete=true
+    const searchUrl = `https://jobs.acm.org/jobs/?keywords=${this.searchTerms}&pos_flt=0&location=United+States&location_completion=city%3D%24state%3D%24country%3DUnited+States&location_type=country&location_text=United+States&location_autocomplete=true`;
+    this.log.debug(`Going to ${searchUrl}`);
+    await this.page.goto(searchUrl);
   }
 
-  async setUpSearchTerms() {
-    await this.page.waitForSelector('input[id=keyword]');
-    await this.page.type('input[id=keyword]', this.searchTerms);
-    await Promise.all([
-      this.page.click('button[type="submit"]'),
-      this.page.waitForNavigation()
-    ]);
-    this.log.debug(`Inputted search query: ${this.searchTerms}`);
+  async processPage() {
+    await this.page.waitForSelector('.job-result-tiles .job-tile');
+    const positions = await super.getValues('.job-result-tiles .job-tile .job-detail-row .job-title', 'innerText');
+    const companies = await super.getValues('.job-result-tiles .job-tile .job-company-row', 'innerText');
+    const locations = await super.getValues('.job-result-tiles .job-tile .job-location', 'innerText');
+    this.log.debug(positions.length, companies.length, locations.length);
   }
 
   async generateListings() {
     await super.generateListings();
-    await this.setUpSearchTerms();
-
+    await this.processPage();
   }
 
   async processListings() {
