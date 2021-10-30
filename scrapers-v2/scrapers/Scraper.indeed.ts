@@ -25,7 +25,7 @@ export class IndeedScrapper extends Scraper {
     // variable to store the page count of the URL; for indeed the page count increments by 10
     let pageNum = 0;
 
-    const listingsTable = '#resultsBody';
+    const listingsTable = '#mosaic-zone-jobcards';
 
     // pageUrl returns an URL containing the specified page number.
     const pageUrl = (pageNum) =>
@@ -34,14 +34,14 @@ export class IndeedScrapper extends Scraper {
     //go to the first page of job listings for Indeed
     await this.page.goto(pageUrl(pageNum), { waitUntil: 'networkidle0' });
 
-    // while there is still display of tables on the Indeed Page 
+    // while there is still display of tables on the Indeed Page
     while (await super.selectorExists(listingsTable)) {
       // collect the URLs of the list of jobs
-      let urls = await super.getValues('a[class="icl-Button icl-Button--primary icl-Button--lg icl-Button--block"]', 'href');
+      let urls = await super.getValues('a[class="jobsearch-SerpJobCard unifiedRow row result clickcard"]', 'href');
       this.log.info(`Processing page ${pageNum} with ${urls.length} listings.`);
 
       // Retrieve the Positions
-      const positions = await super.getValues('h2[class="jobTitle jobTitle-color-purple jobTitle-newJob"]', 'innerText');
+      const positions = await super.getValues('div[class="heading4 color-text-primary singleLineTitle tapItem-gutter"]', 'innerText');
       this.log.debug(`Positions: \n${positions}`);
 
       // Retrieve the descriptions
