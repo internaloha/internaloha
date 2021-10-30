@@ -1,5 +1,5 @@
-import puppeteer from 'puppeteer-extra';
-import * as randomUserAgent from 'random-useragent';
+//import puppeteer from 'puppeteer-extra';
+//import * as randomUserAgent from 'random-useragent';
 import { Scraper } from './Scraper';
 
 const prefix = require('loglevel-plugin-prefix');
@@ -20,9 +20,12 @@ export class TestScraper extends Scraper {
   }
 
   async checkRequestHeaders() {
-    this.log.info((await this.page.goto('https://example.org/')).request().headers());
-    await this.page.goto(this.url);
-    await this.page.waitForTimeout(100000);
+    this.log.info('Run checkRequestHeaders()');
+    const screenshotPath = 'headers.test.png';
+    await this.page.goto('https://headers.cloxy.net/request.php');
+    await this.page.waitForTimeout(5000);
+    await this.page.screenshot({ path: screenshotPath, fullPage: true });
+    this.log.info(`Screenshot at: ${screenshotPath}`);
   }
 
   async login() {
@@ -31,40 +34,10 @@ export class TestScraper extends Scraper {
   }
 
   // https://github.com/berstend/puppeteer-extra/blob/master/packages/puppeteer-extra-plugin-stealth/stealthtests/headless-chromium-stealth.js
-  async stealthTest() {
-    const screenshotPath = 'stealthTest.test.png';
-    this.log.info('Run stealthtest');
-    const browser = await puppeteer.launch({ headless: true });
-    const page = await browser.newPage();
-    await page.setViewport({ width: 800, height: 600 });
-    await page.goto('https://bot.sannysoft.com/');
-    await page.waitForTimeout(5000);
-    await page.screenshot({ path: screenshotPath, fullPage: true });
-
-    await browser.close();
-    this.log.info(`Screenshot at:, ${screenshotPath}`);
-  }
-
-  async stealthTest2() {
-    const screenshotPath = 'stealthTest2.test.png';
-    this.log.info('Run stealthtest2');
-    const browser = await puppeteer.launch({ headless: this.headless, devtools: this.devtools, slowMo: this.slowMo });
-    const context = await this.browser.createIncognitoBrowserContext();
-    const page = await context.newPage();
-    await page.setViewport({ width: this.viewportWidth, height: this.viewportHeight });
-    await page.setUserAgent(randomUserAgent.getRandom());
-    await page.setDefaultTimeout(this.defaultTimeout);
-    await page.goto('https://bot.sannysoft.com/');
-    await page.waitForTimeout(5000);
-    await page.screenshot({ path: screenshotPath, fullPage: true });
-    await browser.close();
-    this.log.info(`Screenshot at: ${screenshotPath}`);
-  }
-
   // https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth#usage
   async stealthUsage() {
+    this.log.info('Run stealthUsage()');
     const screenshotPath = 'stealthUsage.test.png';
-    this.log.info('Run stealthUsage');
     await this.page.goto('https://bot.sannysoft.com');
     await this.page.waitForTimeout(5000);
     await this.page.screenshot({ path: screenshotPath, fullPage: true });
@@ -74,6 +47,7 @@ export class TestScraper extends Scraper {
   async generateListings() {
     await super.generateListings();
     await this.stealthUsage();
+    await this.checkRequestHeaders();
   }
 
   async processListings() {
