@@ -30,20 +30,19 @@ export class CiscoScraper extends Scraper {
 
       await this.page.click('div[class="pagination autoClearer"] a:last-child');
     } while (await super.selectorExists(nextLink));
-    // this.log.info(`URLS: \n${urls}`);
-    // this.log.info(`URL length: \n${urls.length}`);
+    this.log.debug(`URLS: \n${urls}`);
+    this.log.debug(`URL length: \n${urls.length}`);
     const descriptions = [];
     const positions = [];
     const locations = [];
     const cities = [];
     const states = [];
-    // const urlArr = urls.split(',');
-    this.log.info(`URL: \n${urls[0]}`);
+    this.log.debug(`URL: \n${urls[0]}`);
     const urlTemp = urls[0];
     const urlArr = urlTemp.slice(',');
-    this.log.info(`URL length: \n${urlArr.length}`);
+    this.log.debug(`URL length: \n${urlArr.length}`);
     for (const url of urlArr) {
-      this.log.info(`URL: \n${url}`);
+      this.log.debug(`URL: \n${url}`);
 
       await this.page.goto(url);
       positions.push(await super.getValues('h2[itemprop="title"]', 'innerText'));
@@ -62,7 +61,7 @@ export class CiscoScraper extends Scraper {
     // Now we add listings. All arrays are (hopefully!) the same length.
     for (let i = 0; i < urlArr.length; i++) {
       const location = { city: cities[i], state: states[i], country: '' };
-      const listing = new Listing({ url: urls[i], position: positions[i], location, description: descriptions[i] });
+      const listing = new Listing({ url: urlArr[i], position: positions[i], location, company: 'Cisco', description: descriptions[i] });
       this.listings.addListing(listing);
     }
   }
