@@ -1,5 +1,5 @@
 import { Scraper } from './Scraper';
-import {Listing} from './Listing';
+import { Listing } from './Listing';
 
 const prefix = require('loglevel-plugin-prefix');
 
@@ -15,11 +15,11 @@ export class CiscoScraper extends Scraper {
   }
 
   async login() {
-    super.login();
+    await super.login();
   }
 
   async generateListings() {
-    super.generateListings();
+    await super.generateListings();
     await this.page.goto(this.url);
 
     const nextLink = 'div[class="pagination autoClearer"] a:last-child';
