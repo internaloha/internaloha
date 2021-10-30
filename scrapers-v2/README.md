@@ -584,27 +584,25 @@ What kinds of controls can be put on web scraping is unclear.
 
 For our purposes, the takeaway from these sites seems to be:
 
-1. Internship listings that we can access without logging in is "public" and probably protected under "fair use".
+1. Internship listings that we can access without logging in is "public" and our specific use is probably protected under "fair use".
 
 2. We must avoid violating the "Tresspass to Chattels" law. This means we need to limit our activities on the site, scrape it at a moderate ("human") rate, and not visit the site too frequently (even while doing development).
 
 3. If a site prohibits scraping under its terms of service, and we need to login to access the data, we need to request explicit permission from the service.
 
-4. It's not a bad idea to contact all sites anyway.  It's not like we're doing anything bad. In fact, we're doing something they should want to support.
+4. It's not a bad idea for us to contact all of the sites anyway.  It's not like we're doing anything bad. In fact, we're doing something they should want to support.
 
 ## Facilitating web scraping
 
 There are a few things I have discovered we can do to simplify the scraping task.
 
-### Use the Google Cache
+### Try using the Google Cache
 
-A popular technique is to not scrape the site, but rather scrape the cached version of the site made by Google.  Instructions are [here](https://webscraping.com/blog/Using-Google-Cache-to-crawl-a-website/).
+A popular technique is to not scrape the site, but rather scrape the cached version of the site made by Google.  Instructions are [here](https://webscraping.com/blog/Using-Google-Cache-to-crawl-a-website/). Basically, you just need to prepend “http://webcache.googleusercontent.com/search?q=cache:” to the beginning of the URL.
 
-Basically, you just need to prepend “http://webcache.googleusercontent.com/search?q=cache:” to the beginning of the URL.
+While this can result in a somewhat out-of-date version of the site, it's normally just a few days or weeks old, which is plenty recent enough for us.
 
-### Configure Puppeteer better
-
-The article [It is not possible to detect and block Chrome Headless](https://intoli.com/blog/not-possible-to-block-chrome-headless/) is a treasure-trove of information on how to configure Puppeteer in such a way that it passes many "Robot Detection" algorithms. Unfortunately, this article if four years old so it's not clear what the current state of affairs is.
+If you are getting blocked while accessing a "public" site (i.e. no login), definitely try this first.
 
 ## Set User Agent better
 
@@ -665,18 +663,15 @@ A reasonable value for the referer field is:
 “Referer”: “https://www.google.com/”
 ```
 
+### Configure Puppeteer better
 
+The article [It is not possible to detect and block Chrome Headless](https://intoli.com/blog/not-possible-to-block-chrome-headless/) is a treasure-trove of information on how to configure Puppeteer in such a way that it passes many "Robot Detection" algorithms. Unfortunately, this article if four years old so it's not clear what the current state of affairs is.
 
+That said, there are a bunch of pretty cool tricks, all available in [test-headless-final.js](https://intoli.com/blog/not-possible-to-block-chrome-headless/test-headless-final.js).
 
+### What to do next
 
-
-
-
-
-
-
-How
-
+We can try implementing most of these into the Scraper.ts superclass.  Using the google cache should be up to each scraper to decide on individually.
 
 
 
