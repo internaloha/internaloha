@@ -22,7 +22,7 @@ export class CheggScraper extends Scraper {
   /*
   * I don't need autoScroll but it might be useful for someone else
   */
-  async autoscroll(){
+  async autoscrollSOLUTION1(){
 
     const scrollable_section = 'div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]';
 
@@ -39,12 +39,24 @@ export class CheggScraper extends Scraper {
 
     await this.page.waitForTimeout(8000);
   }
+  scrollDown = async () => {
+    await this.page.hover('div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]:last-child');
+    document.querySelector('div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]:last-child')
+      .scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'end' });
+  };
+
+  async autoscrollSOLUTION2(){
+    await this.page.waitForSelector('div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]:last-child');
+
+    await this.page.$eval('div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]:last-child', e => {
+      e.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'end' });
+    });
+  }
 
   async extractItems() {
+
     await this.page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
     const elements = await this.page.$$('div[class="GridItem_jobContent__ENwap"]');
-
-    //Elements is an array of all the internship boxes 
     const items = [];
 
     for (let i = 0; i < elements; i++) {
@@ -79,8 +91,7 @@ export class CheggScraper extends Scraper {
     await super.generateListings();
     await this.page.goto('https://www.internships.com/app/search?keywords=computer+science&position-types=internship&location=Hawaii&context=seo&seo-mcid=33279397626109020301048056291448164886');
 
-    await this.page.waitForTimeout(1000);
-
+    await this.page.waitForTimeout(1000); //WAIT FOR PAGE TO FULLY LOAD 
 
     await this.page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
     //Elements is an array of all the internship boxes
@@ -117,7 +128,6 @@ export class CheggScraper extends Scraper {
       console.log(elements.length, i);
 
     }
-    this.autoscroll();
   }
 
   async processListings() {
