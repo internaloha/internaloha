@@ -604,7 +604,7 @@ While this can result in a somewhat out-of-date version of the site, it's normal
 
 If you are getting blocked while accessing a "public" site (i.e. no login), definitely try this first.
 
-## Set User Agent better
+### Set User Agent better
 
 We are currently using the NPM package random-useragent to set the User Agent. However, this package has not been updated in a year and it depends upon a system called User Agend Switcher which is no longer maintained. Thus, I am somewhat concerned that our User Agent strings are no longer valid.
 
@@ -614,50 +614,7 @@ We can use [whastmyua.info](https://www.whatsmyua.info/) to get a user agent str
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
 ```
 
-## Set the request headers better
-
-We can make the requst headers more realistic by using those from a regular web browser. Use [https://httpbin.org/anything](https://httpbin.org/anything) to obtain your request headers. Here are mine:
-
-```
-"headers": {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Accept-Language": "en-US,en;q=0.9,mt;q=0.8",
-    "Dnt": "1",
-    "Host": "httpbin.org",
-    "Referer": "https://www.scraperapi.com/",
-    "Sec-Ch-Ua": "\"Google Chrome\";v=\"95\", \"Chromium\";v=\"95\", \";Not A Brand\";v=\"99\"",
-    "Sec-Ch-Ua-Mobile": "?0",
-    "Sec-Ch-Ua-Platform": "\"macOS\"",
-    "Sec-Fetch-Dest": "document",
-    "Sec-Fetch-Mode": "navigate",
-    "Sec-Fetch-Site": "cross-site",
-    "Sec-Fetch-User": "?1",
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
-    "X-Amzn-Trace-Id": "Root=1-617ca937-3872b8731f04778b45f6248b"
-  },
-```
-
-I wrote a little program to see the request headers from our Puppeteer process following [this stackoverflow](https://stackoverflow.com/questions/60760385/how-to-get-all-request-headers-in-puppeteer) and they look like this:
-
-```
-Connection: close
-Host: headers.cloxy.net
-Accept-Language: en-US,en;q=0.9
-Accept-Encoding: gzip, deflate, br
-Sec-Fetch-Dest: document
-Sec-Fetch-User: ?1
-Sec-Fetch-Mode: navigate
-Sec-Fetch-Site: none
-Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
-User-Agent: Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13
-Upgrade-Insecure-Requests: 1
-```
-
-So there appear to be opportunities to make the request headers in puppeteer more realistic.
-
-## Set the referer better
+### Set the referer better
 
 Some sites recommend that setting the Referer field to Google is good because very few sites will block Google from accessing their content:
 
