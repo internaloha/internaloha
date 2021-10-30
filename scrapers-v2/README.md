@@ -604,7 +604,7 @@ While this can result in a somewhat out-of-date version of the site, it's normal
 
 If you are getting blocked while accessing a "public" site (i.e. no login), definitely try this first.
 
-### Set User Agent better
+### Improve the User Agent setting
 
 We are currently using the NPM package random-useragent to set the User Agent. However, this package has not been updated in a year and it depends upon a system called User Agend Switcher which is no longer maintained. Thus, I am somewhat concerned that our User Agent strings are no longer valid.
 
@@ -614,7 +614,7 @@ We can use [whastmyua.info](https://www.whatsmyua.info/) to get a user agent str
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
 ```
 
-### Set the request headers better
+### Improve the request headers
 
 We can make the requst headers more realistic by using those from a regular web browser. Use [https://httpbin.org/anything](https://httpbin.org/anything) to obtain your request headers. Here are mine:
 
@@ -657,7 +657,7 @@ Upgrade-Insecure-Requests: 1
 
 So there appear to be opportunities to make the request headers in puppeteer more realistic.
 
-### Set the referer better
+### Improve referer setting
 
 Some sites recommend that setting the Referer field to Google is good because very few sites will block Google from accessing their content:
 
@@ -665,11 +665,21 @@ Some sites recommend that setting the Referer field to Google is good because ve
 “Referer”: “https://www.google.com/”
 ```
 
-### Configure Puppeteer better
+### Improve scraper speed variation
+
+Some sites monitor how fast requests come from a particular IP address, and block if they come in too fast or are too regular.
+
+We can use `slomo` to create a lower bound on how fast the scraper issues HTTP requests.
+
+To create more variability, we can create a `super.randomWait()` method that calls `await page.waitForTimeout()` with a random value between 1 and 5 seconds.  Then clients can insert this call in strategic locations during scraping.
+
+### Improve Puppeteer configuration
 
 The article [It is not possible to detect and block Chrome Headless](https://intoli.com/blog/not-possible-to-block-chrome-headless/) is a treasure-trove of information on how to configure Puppeteer in such a way that it passes many "Robot Detection" algorithms. Unfortunately, this article if four years old so it's not clear what the current state of affairs is.
 
 That said, there are a bunch of pretty cool tricks, all available in [test-headless-final.js](https://intoli.com/blog/not-possible-to-block-chrome-headless/test-headless-final.js).
+
+Upon further investigation, it appears that [puppeteer-extra-plugin-stealth](https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth) implements all of these tactics/
 
 ### What to do next
 
