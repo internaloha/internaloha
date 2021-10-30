@@ -679,7 +679,11 @@ The article [It is not possible to detect and block Chrome Headless](https://int
 
 That said, there are a bunch of pretty cool tricks, all available in [test-headless-final.js](https://intoli.com/blog/not-possible-to-block-chrome-headless/test-headless-final.js).
 
-Upon further investigation, it appears that [puppeteer-extra-plugin-stealth](https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth) implements all of these tactics/
+Upon further investigation, it appears that [puppeteer-extra-plugin-stealth](https://github.com/berstend/puppeteer-extra/tree/master/packages/puppeteer-extra-plugin-stealth) implements all of these tactics.
+
+### Test scraper
+
+I have created a [Test Scraper](https://github.com/internaloha/internaloha/blob/master/scrapers-v2/scrapers/Scraper.test.ts) that we can use to play around with bot detection.  It generates screenshots with the suffix '.test.png', which are gitignored.
 
 ### What to do next
 
