@@ -34,12 +34,10 @@ export class IndeedScrapper extends Scraper {
     //go to the first page of job listings for Indeed
     await this.page.goto(pageUrl(pageNum), { waitUntil: 'networkidle0' });
 
-    // collect the URLs of the list of jobs
-    let urls = await super.getValues('a[class="icl-Button icl-Button--primary icl-Button--lg icl-Button--block"]', 'href');
-
+    // while there is still display of tables on the Indeed Page 
     while (await super.selectorExists(listingsTable)) {
       // collect the URLs of the list of jobs
-      //let urls = await super.getValues('a[class="icl-Button icl-Button--primary icl-Button--lg icl-Button--block"]', 'href');
+      let urls = await super.getValues('a[class="icl-Button icl-Button--primary icl-Button--lg icl-Button--block"]', 'href');
       this.log.info(`Processing page ${pageNum} with ${urls.length} listings.`);
 
       // Retrieve the Positions
