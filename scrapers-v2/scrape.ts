@@ -7,6 +7,7 @@ import { DISCIPLINES } from './disciplines';
 import { SimplyHiredScraper } from './scrapers/Scraper.simplyHired';
 import { Apple } from './scrapers/Scraper.apple';
 import { LinkedinScraper } from './scrapers/Scraper.linkedin';
+import { TestScraper } from './scrapers/Scraper.test';
 import { ZipRecruiterScraper } from './scrapers/Scraper.ziprecruiter';
 
 
@@ -27,6 +28,7 @@ const scrapers = {
   linkedin: new LinkedinScraper(),
   nsf: new NsfScraper(),
   simplyhired: new SimplyHiredScraper(),
+  test: new TestScraper(),
   ziprecruiter: new ZipRecruiterScraper(),
 };
 

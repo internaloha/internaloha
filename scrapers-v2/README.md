@@ -572,4 +572,111 @@ To address (1), you can use the `waitUntil` option of commands like `page.goto`,
 
 In some cases, a page might have time-consuming Javascript scripts that execute. If you can verify that this is an issue in the site you are scraping, then you might want to consider the `waitTillHTMLRendered` function, documented in [this stackoverflow answer](https://stackoverflow.com/a/61304202/2038293).
 
+## Legal issues regarding scraping internship listings
+
+Many sites have implemented mechanisms that attempt to detect and prevent web scraping. InternAloha is in an interesting situation in which we are attempting to increase the visibility of internship opportunities to students.  Thus, we are confident that any company who is offering an internship would be happy for InternAloha to make that opportunity more visible to students. Furthermore, we are using internship position data in a non-commercial manner.
+
+What kinds of controls can be put on web scraping is unclear.
+
+  * I reviewed the [Terms of Service](./TermsOfService.md) associated with many of our sites, and most of them have clauses that appear to prohibit scraping and republishing data.
+  * On the other hand, a 2019 decision by the US Court of Appeals "showed that any data that is publicly available and not copyrighted is fair game for web crawlers". (See [article by Tom Waterman](https://medium.com/@tjwaterman99/web-scraping-is-now-legal-6bf0e5730a78)).
+  * A site called ProWebScraper provided [9 issues to consider to determine if scraping is legal](https://prowebscraper.com/blog/is-web-scraping-legal/), and a similar article is [Is web scraping legal? The definitive guide (Sep. 2021)](https://www.crawlnow.com/blog/is-web-scraping-legal).
+
+For our purposes, the takeaway from these sites seems to be:
+
+1. Internship listings that we can access without logging in is "public" and probably protected under "fair use".
+
+2. We must avoid violating the "Tresspass to Chattels" law. This means we need to limit our activities on the site, scrape it at a moderate ("human") rate, and not visit the site too frequently (even while doing development).
+
+3. If a site prohibits scraping under its terms of service, and we need to login to access the data, we need to request explicit permission from the service.
+
+4. It's not a bad idea to contact all sites anyway.  It's not like we're doing anything bad. In fact, we're doing something they should want to support.
+
+## Facilitating web scraping
+
+There are a few things I have discovered we can do to simplify the scraping task.
+
+### Use the Google Cache
+
+A popular technique is to not scrape the site, but rather scrape the cached version of the site made by Google.  Instructions are [here](https://webscraping.com/blog/Using-Google-Cache-to-crawl-a-website/).
+
+Basically, you just need to prepend “http://webcache.googleusercontent.com/search?q=cache:” to the beginning of the URL.
+
+### Configure Puppeteer better
+
+The article [It is not possible to detect and block Chrome Headless](https://intoli.com/blog/not-possible-to-block-chrome-headless/) is a treasure-trove of information on how to configure Puppeteer in such a way that it passes many "Robot Detection" algorithms. Unfortunately, this article if four years old so it's not clear what the current state of affairs is.
+
+## Set User Agent better
+
+We are currently using the NPM package random-useragent to set the User Agent. However, this package has not been updated in a year and it depends upon a system called User Agend Switcher which is no longer maintained. Thus, I am somewhat concerned that our User Agent strings are no longer valid.
+
+We can use [whastmyua.info](https://www.whatsmyua.info/) to get a user agent string associated with a current browser. I just ran it and here is my User Agent string:
+
+```
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+```
+
+## Set the request headers better
+
+We can make the requst headers more realistic by using those from a regular web browser. Use [https://httpbin.org/anything](https://httpbin.org/anything) to obtain your request headers. Here are mine:
+
+```
+"headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9,mt;q=0.8",
+    "Dnt": "1",
+    "Host": "httpbin.org",
+    "Referer": "https://www.scraperapi.com/",
+    "Sec-Ch-Ua": "\"Google Chrome\";v=\"95\", \"Chromium\";v=\"95\", \";Not A Brand\";v=\"99\"",
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": "\"macOS\"",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "cross-site",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
+    "X-Amzn-Trace-Id": "Root=1-617ca937-3872b8731f04778b45f6248b"
+  },
+```
+
+I wrote a little program to see the request headers from our Puppeteer process following [this stackoverflow](https://stackoverflow.com/questions/60760385/how-to-get-all-request-headers-in-puppeteer) and they look like this:
+
+```
+Connection: close
+Host: headers.cloxy.net
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Sec-Fetch-Dest: document
+Sec-Fetch-User: ?1
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+User-Agent: Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13
+Upgrade-Insecure-Requests: 1
+```
+
+## Set the referer better
+
+A reasonable value for the referer field is:
+
+```
+“Referer”: “https://www.google.com/”
+```
+
+
+
+
+
+
+
+
+
+
+
+How
+
+
+
 
