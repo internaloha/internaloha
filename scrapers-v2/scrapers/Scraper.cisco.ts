@@ -27,18 +27,20 @@ export class CiscoScraper extends Scraper {
     do {
       // process page
       urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
-      this.log.info(`URLS: \n${urls}`);
-    } while (await super.selectorExists(nextLink));
 
+      await this.page.click('div[class="pagination autoClearer"] a:last-child');
+    } while (await super.selectorExists(nextLink));
+    this.log.info(`URLS: \n${urls}`);
+    this.log.info(`URL length: \n${urls.length}`);
     const descriptions = [];
     const positions = [];
     const locations = [];
     const cities = [];
     const states = [];
     for (const url of urls) {
-      await this.page.goTo(url);
-      positions.push(super.getValues('h2[itemprop="title"]', 'innerText'));
-      descriptions.push(super.getValues('div[itemprop="description"]', 'innerText'));
+      await this.page.goto(url);
+      positions.push(await super.getValues('h2[itemprop="title"]', 'innerText'));
+      descriptions.push(await super.getValues('div[itemprop="description"]', 'innerText'));
       let location: any[];
       location = await super.getValues('div[itemprop="jobLocation"]', 'innerText');
       locations.push(location);
