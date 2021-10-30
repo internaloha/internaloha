@@ -655,9 +655,11 @@ User-Agent: Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) 
 Upgrade-Insecure-Requests: 1
 ```
 
+So there appear to be opportunities to make the request headers in puppeteer more realistic.
+
 ## Set the referer better
 
-A reasonable value for the referer field is:
+Some sites recommend that setting the Referer field to Google is good because very few sites will block Google from accessing their content:
 
 ```
 “Referer”: “https://www.google.com/”
