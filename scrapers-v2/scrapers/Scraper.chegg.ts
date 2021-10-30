@@ -19,6 +19,9 @@ export class CheggScraper extends Scraper {
     await super.login();
   }
 
+  /*
+  * I don't need autoScroll but it might be useful for someone else
+  */
   async autoscroll(){
 
     const scrollable_section = 'div[class="GridItem_gridItem__1MSIc GridItem_clearfix__4PbqP GridItem_clearfix__4PbqP"]';
@@ -42,7 +45,6 @@ export class CheggScraper extends Scraper {
     const elements = await this.page.$$('div[class="GridItem_jobContent__ENwap"]');
 
     //Elements is an array of all the internship boxes 
-    //const elements = await this.page.$$('div[class="GridItem_jobContent__ENwap"]');
     const items = [];
 
     for (let i = 0; i < elements; i++) {
@@ -80,17 +82,17 @@ export class CheggScraper extends Scraper {
     await this.page.waitForTimeout(1000);
 
 
+    await this.page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
     //Elements is an array of all the internship boxes
-    const elements = await this.page.$$('div[class="GridItem_jobContent__ENwap"]');
+    let elements = await this.page.$$('div[class="GridItem_jobContent__ENwap"]');
     const items = [];
 
-
-    for (let i = 0; i < elements; i++) {
+    for (let i = 0; i < elements.length; i++) {
 
       //This clicks on the boxes that are on the page idea for extract elements
       await this.page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
       await elements[i].click();
-      await this.page.waitForTimeout(1000); //Have to wait till page is loaded might need a better way to do this
+      await this.page.waitForTimeout(3000); //Have to wait till page is loaded might need a better way to do this
 
       let url = this.page.url();
 
@@ -98,8 +100,7 @@ export class CheggScraper extends Scraper {
 
       const description = (await super.getValues('div[class="ql-editor ql-snow ql-container ql-editor-display '+        'Body_rteText__U3_Ce"]', 'innerText'))[0];
 
-      const company = (await super.getValues('a[class="Link_anchor__1oD5h Link_linkColoring__394wp ' +
-        'Link_medium__25UK6     DesktopHeader_subTitle__3k6XA"]', 'innerText'))[0];
+      const company = (await super.getValues('a[class="Link_anchor__1oD5h Link_linkColoring__394wp Link_medium__25UK6 DesktopHeader_subTitle__3k6XA"]', 'innerText'))[0];
 
       const location = (await super.getValues('span[class="DesktopHeader_subTitle__3k6XA ' +
         'DesktopHeader_location__3jiWp"]', 'innerText'));
@@ -108,9 +109,15 @@ export class CheggScraper extends Scraper {
       this.listings.addListing(listing);
 
       items.push(listing);
+
+      await this.page.goBack();
+      await this.page.waitForTimeout(3000); //Have to wait till page is loaded might need a better way to do this
+      await this.page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
+      elements = await this.page.$$('div[class="GridItem_jobContent__ENwap"]');
+      console.log(elements.length, i);
+
     }
-
-
+    this.autoscroll();
   }
 
   async processListings() {
