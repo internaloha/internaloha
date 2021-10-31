@@ -129,18 +129,18 @@ export class LinkedinScraper extends Scraper {
         try {
           this.log.debug("getting data for element ", i);
           // await this.page.goto(urls[i]);
-          await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', { timeout: 1500 });
+          await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]');
           // await this.page.waitForTimeout(1500);
           // eslint-disable-next-line prefer-const
 
           let [position, company, location, posted, description] = await this.getData();
-          this.log.debug(await this.getData());
-          this.log.debug('Got data:')
-          this.log.debug('position', position)
-          this.log.debug('company', company)
-          this.log.debug('location', location)
-          this.log.debug('posted', posted)
-          this.log.debug('description', description)
+          // this.log.debug(await this.getData());
+          this.log.debug('Got data:');
+          this.log.debug('position', position);
+          this.log.debug('company', company);
+          this.log.debug('location', location);
+          this.log.debug('posted', posted);
+          this.log.debug('description', description);
           // let state = '';
           // if (!location.match(/([^,]*)/g)[2]) {
           //   state = 'United States';
@@ -168,6 +168,7 @@ export class LinkedinScraper extends Scraper {
           skippedURLs.push(urls[i]);
         }
         await element.click();
+        this.log.debug("click happened")
       } catch (e2) {
         this.log.info('Navigated off site... Redirecting back...');
         await this.reload();
