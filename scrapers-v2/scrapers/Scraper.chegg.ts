@@ -91,12 +91,15 @@ export class CheggScraper extends Scraper {
     await super.generateListings();
     await this.page.goto('https://www.internships.com/app/search?keywords=computer+science&position-types=internship&location=Hawaii&context=seo&seo-mcid=33279397626109020301048056291448164886');
 
-    await this.page.waitForTimeout(1000); //WAIT FOR PAGE TO FULLY LOAD 
+    await this.page.waitForTimeout(1000); //WAIT FOR PAGE TO FULLY LOAD
 
     await this.page.waitForSelector('div[class="GridItem_jobContent__ENwap"]');
     //Elements is an array of all the internship boxes
     let elements = await this.page.$$('div[class="GridItem_jobContent__ENwap"]');
     const items = [];
+
+    await this.autoscrollSOLUTION2();
+    await this.page.waitForTimeout(8000);
 
     for (let i = 0; i < elements.length; i++) {
 
