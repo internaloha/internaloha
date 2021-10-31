@@ -21,10 +21,10 @@ export class LinkedinScraper extends Scraper {
   async getData() {
     const results = [];
     for (let i = 0; i < 5; i++) {
-      results.push(await super.getValues( 'h2.topcard__title', 'innerText'));
-      results.push(await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerText'));
-      results.push(await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText'));
-      results.push(await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerText'));
+      results.push(await super.getValues( 'h2[class="top-card-layout__title topcard__title"]', 'innerHTML'));
+      results.push(await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerHTML'));
+      results.push(await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerHTML'));
+      results.push(await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerHTML'));
       results.push(await super.getValues('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML'));
     }
     return Promise.all(results);
@@ -133,25 +133,26 @@ export class LinkedinScraper extends Scraper {
           // eslint-disable-next-line prefer-const
 
           let [position, company, location, posted, description] = await this.getData();
+          this.log.debug(await this.getData());
           this.log.debug('Got data:')
           this.log.debug('position', position)
           this.log.debug('company', company)
           this.log.debug('location', location)
           this.log.debug('posted', posted)
           this.log.debug('description', description)
-          let state = '';
-          if (!location.match(/([^,]*)/g)[2]) {
-            state = 'United States';
-          } else {
-            state = location.match(/([^,]*)/g)[2].trim();
-          }
+          // let state = '';
+          // if (!location.match(/([^,]*)/g)[2]) {
+          //   state = 'United States';
+          // } else {
+          //   state = location.match(/([^,]*)/g)[2].trim();
+          // }
           this.listings.addListing({
             position: position,
             company: company,
-            location: {
-              city: location.match(/([^,]*)/g)[0],
-              state: state,
-            },
+            // location: {
+            //   city: location.match(/([^,]*)/g)[0],
+            //   state: state,
+            // },
             posted: posted,
             url: urls[i],
             lastScraped: lastScraped,
