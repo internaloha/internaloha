@@ -127,6 +127,7 @@ export class LinkedinScraper extends Scraper {
         const element = elements[i];
         // sometimes clicking it doesn't show the panel, try/catch to allow it to keep going
         try {
+          this.log.debug("getting data for element ", i);
           // await this.page.goto(urls[i]);
           await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', { timeout: 1500 });
           // await this.page.waitForTimeout(1500);
@@ -162,7 +163,7 @@ export class LinkedinScraper extends Scraper {
           totalInternships++;
           this.log.info(this.listings);
         } catch (err5) {
-          // this.log.info('LinkedIn', err5.message);
+          this.log.info('LinkedIn', err5);
           this.log.info('Skipping! Did not load...');
           skippedURLs.push(urls[i]);
         }
