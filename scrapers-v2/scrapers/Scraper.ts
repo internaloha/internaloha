@@ -45,6 +45,8 @@ export class Scraper {
   protected startTime: Date;
   protected endTime: Date;
   protected errorMessages: string[];
+  protected requestHeaders: object;
+  protected maxRandomWait: number;
 
   /** Initialize the scraper state and provide configuration info. */
   constructor({ name, url }) {
@@ -52,6 +54,8 @@ export class Scraper {
     this.url = url;
     this.log = log;
     this.errorMessages = [];
+    this.requestHeaders = { referer: 'https://www.google.com/' };
+    this.maxRandomWait = 5000;
   }
 
   /**
@@ -117,8 +121,29 @@ export class Scraper {
     await this.page.setViewport({ width: this.viewportWidth, height: this.viewportHeight });
     await this.page.setUserAgent(randomUserAgent.getRandom());
     await this.page.setDefaultTimeout(this.defaultTimeout);
+    await this.page.setExtraHTTPHeaders(this.requestHeaders);
     // Echo console messages from puppeteer in this process
     this.page.on('console', (msg) => this.log.debug(`PUPPETEER CONSOLE: ${msg.text()}`));
+  }
+
+  async goto(url: string, options = {newUserAgent: true, randomWait: true}) {
+    if (options.newUserAgent) {
+      const newAgent = randomUserAgent.getRandom();
+      this.log.debug(`Setting User Agent to: ${newAgent}.`);
+      await this.page.setUserAgent(newAgent);
+    }
+    if (options.randomWait) {
+      await this.randomWait();
+    }
+    this.log.debug(`Going to ${url}`);
+    await this.page.goto(url);
+  }
+
+  async randomWait() {
+    // Wait a minimum of 1 second, and up to this.maxRandomWait additional milliseconds.
+    const wait = Math.floor(Math.random() * this.maxRandomWait) + 1000;
+    this.log.debug(`Waiting ${wait} milliseconds.`);
+    await this.page.waitForTimeout(wait);
   }
 
   /**
