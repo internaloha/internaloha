@@ -127,9 +127,9 @@ export class LinkedinScraper extends Scraper {
         const element = elements[i];
         // sometimes clicking it doesn't show the panel, try/catch to allow it to keep going
         try {
-          this.log.debug("getting data for element ", i);
+          this.log.debug('getting data for element ', i);
           // await this.page.goto(urls[i]);
-          await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]');
+          await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', {timeout: 1500});
           // await this.page.waitForTimeout(1500);
           // eslint-disable-next-line prefer-const
 
@@ -167,8 +167,9 @@ export class LinkedinScraper extends Scraper {
           this.log.info('Skipping! Did not load...');
           skippedURLs.push(urls[i]);
         }
+        this.log.debug('What is this element:', element);
         await element.click();
-        this.log.debug("click happened")
+        this.log.debug('click happened');
       } catch (e2) {
         this.log.info('Navigated off site... Redirecting back...');
         await this.reload();
@@ -176,7 +177,9 @@ export class LinkedinScraper extends Scraper {
 
         urls = await super.getValues('a.result-card__full-card-link', 'href');
       }
+      this.log.debug('What is this element 2:', elements[i + 1]);
       await elements[i + 1].click();
+      this.log.debug('click 2 happened');
     }
 
     this.log.info('--- Going back to scrape the ones previously skipped ---');
