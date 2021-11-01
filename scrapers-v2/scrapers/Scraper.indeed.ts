@@ -20,6 +20,12 @@ export class IndeedScrapper extends Scraper {
     await this.page.goto(this.url);
   }
 
+  async dateCalculator(posted) {
+    const date = new Date();
+    date.setDate(date.getDate() - posted);
+    return date;
+  }
+
   async setUpSearchCriteria() {
     // type in the word Computer Science in the "What" box
     await this.page.waitForSelector('input[id="text-input-what"]');
@@ -45,6 +51,22 @@ export class IndeedScrapper extends Scraper {
     await this.page.click('button[aria-controls="filter-jobtype-menu"]');
     await this.page.click('#filter-jobtype-menu > li:nth-child(1)');
     this.log.info('Filtering based on "Internships"');
+  }
+
+  async procressPage(pageNum) {
+    let internshipPerPage = 0;
+    await this.page.waitForSelector('div[class="jobsearch-SerpJobCard unifiedRow row result clickcard"] h2.title a');
+
+    let urls = await super.getValues('a[class="jobsearch-SerpJobCard unifiedRow row result clickcard"]', 'href');
+    this.log.info(`Processing page ${pageNum+1} with ${urls.length} listings.`);
+
+    // Retrieve each URL, extract the internship listing info.
+    for (let i = 0; i < urls.length; i++) {
+      const url = urls[i];
+      await this.page.goto(url);
+      const position = await super.getValues('div[class="jobsearch-JobInfoHeader-title-container"]','innerHTML');
+      this.log.debug(`Position: \n${position}`);
+    }
   }
 
   async generateListings() {
