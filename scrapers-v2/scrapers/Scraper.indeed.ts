@@ -6,7 +6,7 @@ const prefix = require('loglevel-plugin-prefix');
 
 export class IndeedScrapper extends Scraper {
   constructor() {
-    super({ name: 'indeed', url: 'https://www.indeed.com/jobs?q=computer%20science%20intern&jt=internship&sort=date&fromage=14&vjk=07a16fd583142467' });
+    super({ name: 'indeed', url: 'https://www.indeed.com/jobs?q=computer%20science%20intern&jt=internship&sort=date&fromage=14&start=0&vjk=dbc0c52cd8cc4e91' });
   }
 
   async launch() {
