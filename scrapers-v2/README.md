@@ -726,10 +726,19 @@ $ npm run scrape -- -s test
 11:57:40 INFO TEST Wrote statistics.
 ```
 
-I have changed the '.test.png' suffix to '.png' so that you can see results of these tests in the repo without running them yourself and to serve as a basis for discussion:
+I have changed the '.test.png' suffix to '.png' and moved them into the test-screenshots directory so that you can see results of these tests in the repo without running them yourself and to serve as a basis for discussion:
 
-*
+* https://github.com/internaloha/internaloha/tree/master/scrapers-v2/test-screenshots
+
 
 ### What to do next
+
+Here are some things to think about:
+
+1. Read the links and reference material to become more aware of web scraping issues.
+
+2. In your scraper, consider changing `this.page.goto()` to `super.goto()`. This will automatically add some delay and rotate the user agent. It will slow down scraping a bit, but add some variation to the delay.
+
+3. Review the Test scraper code, run it, inspect the screenshots, think about ways we can improve our code.
 
 
