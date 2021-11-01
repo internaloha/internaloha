@@ -6,7 +6,7 @@ const prefix = require('loglevel-plugin-prefix');
 
 export class IndeedScrapper extends Scraper {
   constructor() {
-    super({ name: 'indeed', url: 'https://www.indeed.com/jobs?q=computer%20science%20intern&jt=internship&sort=date&fromage=14&start=0&vjk=dbc0c52cd8cc4e91' });
+    super({ name: 'indeed', url: 'https://www.indeed.com' });
   }
 
   async launch() {
@@ -21,18 +21,35 @@ export class IndeedScrapper extends Scraper {
   }
 
   async setUpSearchCriteria() {
+    // type in the word Computer Science in the "What" box
     await this.page.waitForSelector('input[id="text-input-what"]');
     await this.page.waitForSelector('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
     await this.page.type('input[id="text-input-what"]', 'computer science intern');
+    this.log.info('Searching based on "Computer Science');
     await this.page.waitForTimeout(2000);
+    // set up the United States search field
     await this.page.waitForSelector('input[id="text-input-where"]');
     await this.page.click('input[id="text-input-where"]', { clickCount: 3 });
     await this.page.type('input[id="text-input-where"]', 'United States');
     await this.page.click('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
+    this.log.info('Setting up location by United States');
+    // set up the Last 14 day criteria
+    await this.page.waitForSelector('button[aria-controls="filter-dateposted-menu"]');
+    await this.page.click('button[aria-controls="filter-dateposted-menu"]');
+    await this.page.waitForTimeout(1000);
+    await this.page.click('#filter-dateposted-menu > li:nth-child(4)');
+    this.log.info('Filtering based on "Last 14 Days"');
+    // set up the internship criteria
+    await this.page.waitForSelector('button[aria-controls="filter-jobtype-menu"]');
+    await this.page.waitForTimeout(1000);
+    await this.page.click('button[aria-controls="filter-jobtype-menu"]');
+    await this.page.click('#filter-jobtype-menu > li:nth-child(1)');
+    this.log.info('Filtering based on "Internships"');
   }
 
   async generateListings() {
     await super.generateListings();
+    await this.setUpSearchCriteria();
     // variable to store the page count of the URL; for indeed the page count increments by 10
     let pageNum = 0;
 
