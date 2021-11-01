@@ -20,6 +20,17 @@ export class IndeedScrapper extends Scraper {
     await this.page.goto(this.url);
   }
 
+  async setUpSearchCriteria() {
+    await this.page.waitForSelector('input[id="text-input-what"]');
+    await this.page.waitForSelector('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
+    await this.page.type('input[id="text-input-what"]', 'computer science intern');
+    await this.page.waitForTimeout(2000);
+    await this.page.waitForSelector('input[id="text-input-where"]');
+    await this.page.click('input[id="text-input-where"]', { clickCount: 3 });
+    await this.page.type('input[id="text-input-where"]', 'United States');
+    await this.page.click('button[class="icl-Button icl-Button--primary icl-Button--md icl-WhatWhere-button"]');
+  }
+
   async generateListings() {
     await super.generateListings();
     // variable to store the page count of the URL; for indeed the page count increments by 10
