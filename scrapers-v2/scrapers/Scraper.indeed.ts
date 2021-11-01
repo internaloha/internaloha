@@ -60,73 +60,54 @@ export class IndeedScrapper extends Scraper {
     let urls = await super.getValues('a[class="jobsearch-SerpJobCard unifiedRow row result clickcard"]', 'href');
     this.log.info(`Processing page ${pageNum+1} with ${urls.length} listings.`);
 
+    // Retrieve the locations
+    const locations = await super.getValues('div[class="companyLocation"', 'innerText');
+    this.log.debug(`Locations: \n${locations}`);
+
+    //break the cities and states of the locations
+    const cities = [];
+    const states = [];
+    for (let i = 0; i < locations.length; i++) {
+      const loc = locations[i].split(', ');
+      cities.push(loc[0]);
+      states.push(loc[1]);
+    }
+
     // Retrieve each URL, extract the internship listing info.
     for (let i = 0; i < urls.length; i++) {
       const url = urls[i];
       await this.page.goto(url);
-      const position = await super.getValues('div[class="jobsearch-JobInfoHeader-title-container"]','innerHTML');
+      const position = await super.getValues('div[class="jobsearch-JobInfoHeader-title-container"]', 'innerHTML');
       this.log.debug(`Position: \n${position}`);
+      const company = await super.getValues('div[class="icl-u-lg-mr--sm icl-u-xs-mr--xs"]', 'innerText');
+      this.log.debug(`Company:\\n${company}`);
+      const description = await super.getValues('div[id="jobDescriptionText"]', 'innerText');
+      this.log.debug(`Description:\\n${description}`);
+      const location = { city: cities[i], state: states[i], country: 'United States' };
+      const listing = new Listing({ url, location, position, description, company });
+      this.listings.addListing(listing);
+      internshipPerPage++;
     }
+    return internshipPerPage;
   }
 
   async generateListings() {
     await super.generateListings();
     await this.setUpSearchCriteria();
-    // variable to store the page count of the URL; for indeed the page count increments by 10
-    let pageNum = 0;
-
-    const listingsTable = '#mosaic-zone-jobcards';
-
-    // pageUrl returns an URL containing the specified page number.
-    const pageUrl = (pageNum) =>
-      `https://www.indeed.com/jobs?q=computer%20science%20intern&jt=internship&sort=date&fromage=14&start=${pageNum}&vjk=dbc0c52cd8cc4e91`;
-
-    //go to the first page of job listings for Indeed
-    await this.page.goto(pageUrl(pageNum), { waitUntil: 'networkidle0' });
-
-    // while there is still display of tables on the Indeed Page
-    while (await super.selectorExists(listingsTable)) {
-      // collect the URLs of the list of jobs
-      let urls = await super.getValues('a[class="jobsearch-SerpJobCard unifiedRow row result clickcard"]', 'href');
-      this.log.info(`Processing page ${pageNum} with ${urls.length} listings.`);
-
-      // Retrieve the Positions
-      const positions = await super.getValues('div[class="heading4 color-text-primary singleLineTitle tapItem-gutter"]', 'innerText');
-      this.log.debug(`Positions: \n${positions}`);
-
-      // Retrieve the descriptions
-      const descriptions = await super.getValues('div[class="job-snippet"]', 'innerText');
-      this.log.debug(`Descriptions: \n${descriptions}`);
-
-      // Retrieve the companies
-      const companies = await super.getValues('span[class="companyName"', 'innerText');
-      this.log.debug(`Companies: \n${companies}`);
-
-      // Retrieve the locations
-      const locations = await super.getValues('div[class="companyLocation"', 'innerText');
-      this.log.debug(`Locations: \n${locations}`);
-
-      //break the cities and states of the locations
-      const cities = [];
-      const states = [];
-      for (let i = 0; i < locations.length; i++) {
-        const loc = locations[i].split(', ');
-        cities.push(loc[0]);
-        states.push(loc[1]);
+    let totalPages = 0;
+    let totalInternships = 0;
+    let hasNext = true;
+    while (hasNext) {
+      totalInternships = await this.procressPage(totalPages);
+      const nextPage = await this.page.$('li a[aria-label="Next"]');
+      if (!nextPage) {
+        hasNext = false;
+      } else {
+        await nextPage.click();
       }
-
-      // Retrieve each URL, extract the internship listing info.
-      for (let i = 0; i < urls.length; i++) {
-        const location = { city: cities[i], state: states[i], country: 'United States' };
-        const listing = new Listing({ url: urls[i], position: positions[i], location, company: companies[i], description: descriptions[i] });
-        this.listings.addListing(listing);
-      }
-
-      // increment the pageNum by 10
-      pageNum = pageNum + 10;
-      // Increment the pageNum and get that page. If we get a page without listings, then listingsTable selector won't be on it.
-      await this.page.goto(pageUrl(pageNum), { waitUntil: 'networkidle0' });
+      totalPages++;
     }
+    this.log.debug(`Processed Page Counts: ${totalPages} \n Processed Internship Count: ${totalInternships}`);
   }
 
   async processListings() {
