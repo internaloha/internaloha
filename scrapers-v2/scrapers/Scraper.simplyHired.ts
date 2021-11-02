@@ -41,11 +41,11 @@ export class SimplyHiredScraper extends Scraper {
     this.log.warn(`Launching ${this.name.toUpperCase()} scraper`);
     this.log.debug(`Discipline: ${this.discipline}`);
     // check the config file for timeout.
-    // @ts-ignore
-    this.timeout = this.config?.additionalParams?.simplyHired?.timeout || 500;
+    // this.timeout = this.config?['additionalParams']?['simplyHired']?['timeout'] || 500;
+    this.timeout = super.getNested(this.config, 'additionalParams', 'simplyHired', 'timeout') || 500;
     // check the config file to set the search terms.
-    // @ts-ignore
-    this.searchTerms = this.config?.additionalParams?.simplyHired?.searchTerms[this.discipline] || 'computer science intern';
+    //this.searchTerms = this.config?.additionalParams?.simplyHired?.searchTerms[this.discipline] || 'computer science intern';
+    this.searchTerms = super.getNested(this.config, 'additionalParams', 'simplyHired', 'searchTerms', this.discipline) || 'computer science intern';
     this.log.debug(`Search Terms: ${this.searchTerms}`);
   }
 
@@ -66,7 +66,7 @@ export class SimplyHiredScraper extends Scraper {
       this.page.click('button[type="submit"]'),
       this.page.waitForNavigation()
     ]);
-    this.log.info(`Inputted search query: ${this.searchTerms}`);
+    this.log.debug(`Inputted search query: ${this.searchTerms}`);
     await this.page.waitForSelector('div[data-id=JobType]');
     // Getting href link for internship filter
     const internshipDropdown = await super.getValues('a[href*="internship"]', 'href');
@@ -80,15 +80,15 @@ export class SimplyHiredScraper extends Scraper {
       // Setting filter as last '30 days'
       const lastPosted = await super.getValues('div[data-id=Date] a[href*="30"]', 'href');
       const lastPostedURL = `${lastPosted[0]}`;
-      this.log.info('Setting Date Relevance: 30 days');
-      this.log.info(`Directing to: ${lastPostedURL}`);
+      this.log.debug('Setting Date Relevance: 30 days');
+      this.log.debug(`Directing to: ${lastPostedURL}`);
       await this.page.goto(lastPostedURL);
       await Promise.all([
         this.page.click('a[class=SortToggle]'),
         this.page.waitForNavigation()
       ]);
       // Filtering by most recent
-      this.log.info('Filtering by: Most recent');
+      this.log.debug('Filtering by: Most recent');
     } else {
       this.log.warn(`There are no internships with the search query: \'${this.searchTerms}\'`);
     }

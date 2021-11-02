@@ -572,4 +572,181 @@ To address (1), you can use the `waitUntil` option of commands like `page.goto`,
 
 In some cases, a page might have time-consuming Javascript scripts that execute. If you can verify that this is an issue in the site you are scraping, then you might want to consider the `waitTillHTMLRendered` function, documented in [this stackoverflow answer](https://stackoverflow.com/a/61304202/2038293).
 
+## Legal issues regarding scraping internship listings
+
+Many sites have implemented mechanisms that attempt to detect and prevent web scraping. InternAloha is in an interesting situation in which we are attempting to increase the visibility of internship opportunities to students.  Thus, we are confident that any company who is offering an internship would be happy for InternAloha to make that opportunity more visible to students. Furthermore, we are using internship position data in a non-commercial manner.
+
+What kinds of controls can be put on web scraping is unclear.
+
+  * I reviewed the [Terms of Service](./TermsOfService.md) associated with many of our sites, and most of them have clauses that appear to prohibit scraping and republishing data.
+  * On the other hand, a 2019 decision by the US Court of Appeals "showed that any data that is publicly available and not copyrighted is fair game for web crawlers". (See [article by Tom Waterman](https://medium.com/@tjwaterman99/web-scraping-is-now-legal-6bf0e5730a78)).
+  * A site called ProWebScraper provided [9 issues to consider to determine if scraping is legal](https://prowebscraper.com/blog/is-web-scraping-legal/), and a similar article is [Is web scraping legal? The definitive guide (Sep. 2021)](https://www.crawlnow.com/blog/is-web-scraping-legal).
+  * The EFF has a nice article: [Scraping is just automated access, and everyone does it](https://www.eff.org/deeplinks/2018/04/scraping-just-automated-access-and-everyone-does-it)
+  * [Wikipedia on HIQ vs. LinkedIn](https://en.m.wikipedia.org/wiki/HiQ_Labs_v._LinkedIn)
+
+For our purposes, the takeaway from these sites seems to be:
+
+1. Internship listings that we can access without logging in are "public" and our specific use is probably protected under "fair use".
+
+2. We must avoid violating the "Trespass to Chattels" law. This means we need to limit our activities on the site, scrape it at a moderate ("human") rate, and not visit the site too frequently (even while doing development).
+
+3. If a site prohibits scraping under its terms of service, and we need to login to access the data, then we need to obtain explicit permission from the service.
+
+4. It's not a bad idea for us to contact all of the sites anyway.  It's not like we're doing anything bad. In fact, we're doing something they should want to support.
+
+## Web Scraping Design Notes
+
+### Resources
+
+Here are some helpful resources for learning about web scraping.
+
+First, here's a few general purpose articles with a lot of overlap, but which provide the basics:
+
+* [How To Scrape A Website Without Getting Blacklisted](https://hackernoon.com/how-to-scrape-a-website-without-getting-blacklisted-271a605a0d94)
+* [How to Scrape Websites Without Getting Blocked](https://www.scrapehero.com/how-to-prevent-getting-blacklisted-while-scraping/)
+* [How Websites Detect Web Scraper](https://www.worthwebscraping.com/how-websites-detect-web-scraper/)
+* [12 Web Scraping Best Practices You Should Follow in 2021](https://prowebscraper.com/blog/web-scraping-best-practices-you-should-follow/)
+
+Second, some more technical articles and sites, most with an accompanying test page:
+
+* [It is not possible to detect and block Chrome Headless](https://intoli.com/blog/not-possible-to-block-chrome-headless/)
+* [Show my request headers](https://headers.cloxy.net/request.php)
+* [Show entire request](https://httpbin.org/anything)
+* [What's my User Agent](https://www.whatsmyua.info/)
+* [Avoiding Bot detection: How to scrape the web without getting blocked](https://github.com/niespodd/browser-fingerprinting)
+* [https://niespodd.github.io/browser-fingerprinting/](https://niespodd.github.io/browser-fingerprinting/)
+* [Headless Chrome Detection Tests](https://bot.incolumitas.com/#botChallenge)
+* [Using Google Cache to crawl a website](https://webscraping.com/blog/Using-Google-Cache-to-crawl-a-website/)
+
+Here are some takeaways from this research:
+
+### Tip 1: Try using the Google Cache
+
+If you are getting blocked by the site, see if you can scrape the Google cache version.  Instructions are [here](https://webscraping.com/blog/Using-Google-Cache-to-crawl-a-website/). Basically, you just need to prepend “http://webcache.googleusercontent.com/search?q=cache:” to the beginning of the URL.
+
+While this can result in a somewhat out-of-date version of the site, it's normally just a few days or weeks old, which is plenty recent enough for us.
+
+### Improve the User Agent setting
+
+We are currently using the NPM package random-useragent to set the User Agent at the beginning of the session. There are a couple of issues with this approach:
+
+1. Some sites recommend that we rotate the User Agent each time we retrieve a page, not just once per session.
+2. However, this package has not been updated in a year and it depends upon a system called User Agent Switcher which is no longer maintained. Thus, it is somewhat possible that these randomly generated User Agent strings are not valid.
+
+To satisfy the first problem, there is now a Scraper method that you can invoke with `super.goto()`. This is intended as a drop-in replacement for `this.page.goto()`. One of the things it does is to reset the User Agent to a new random string before calling `this.page.goto()``.
+
+If the second problem is indeed a problem, then we need to generate valid User Agents.  If we want to generate a single known-good user agent string, then we can use [whastmyua.info](https://www.whatsmyua.info/) to get a user agent string associated with a current browser. For example, I just ran it and here is my User Agent string:
+
+```
+Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+```
+
+One result of testing is that randomUserAgent, when called without arguments, will return some UserAgents that state that Windows is the operating system, and others that say Mac.  This is an issue because the Proxy/VPN test shows that a site can compare the TCP/IP OS value against the UserAgent OS value and flag if there is an error. See [the screenshot](https://github.com/internaloha/internaloha/blob/master/scrapers-v2/test-screenshots/test-proxyvpn.png).
+
+We can fix this with a command line option to set the OS, which can be passed into the randomUserAgent as follows:
+
+```js
+randomUseragent.getRandom(function (ua) {
+    return ua.osName === 'mac';
+});
+```
+
+
+### Improve the request headers
+
+Some bot-detection algorithms investigate the request headers and flag those that appear suspicious. We can make the requst headers more realistic by making the scraper's request headers look similar to those from a regular web browser. You can use [https://httpbin.org/anything](https://httpbin.org/anything) to obtain your request headers. Here are mine:
+
+```
+"headers": {
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept-Language": "en-US,en;q=0.9,mt;q=0.8",
+    "Dnt": "1",
+    "Host": "httpbin.org",
+    "Referer": "https://www.scraperapi.com/",
+    "Sec-Ch-Ua": "\"Google Chrome\";v=\"95\", \"Chromium\";v=\"95\", \";Not A Brand\";v=\"99\"",
+    "Sec-Ch-Ua-Mobile": "?0",
+    "Sec-Ch-Ua-Platform": "\"macOS\"",
+    "Sec-Fetch-Dest": "document",
+    "Sec-Fetch-Mode": "navigate",
+    "Sec-Fetch-Site": "cross-site",
+    "Sec-Fetch-User": "?1",
+    "Upgrade-Insecure-Requests": "1",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36",
+    "X-Amzn-Trace-Id": "Root=1-617ca937-3872b8731f04778b45f6248b"
+  },
+```
+
+I wrote a little program to see the request headers from our Puppeteer process following [this stackoverflow](https://stackoverflow.com/questions/60760385/how-to-get-all-request-headers-in-puppeteer) and they look like this:
+
+```
+Connection: close
+Host: headers.cloxy.net
+Accept-Language: en-US,en;q=0.9
+Accept-Encoding: gzip, deflate, br
+Sec-Fetch-Dest: document
+Sec-Fetch-User: ?1
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+User-Agent: Mozilla/5.0 (MeeGo; NokiaN9) AppleWebKit/534.13 (KHTML, like Gecko) NokiaBrowser/8.5.0 Mobile Safari/534.13
+Upgrade-Insecure-Requests: 1
+```
+
+Some sites recommend that setting the Referer field to Google is good because very few sites will block Google from accessing their content.
+
+To deal with the request header issue, the Scraper superclass now has a field called requestHeaders with a default object that sets the referer field to Google. In the `launch()` method, these requestHeaders are added to each page. You can change the request headers for your scraper from the default value by setting that field within your constructor (after calling `super`).
+
+### Improve scraper speed by throttling and adding variation
+
+Some sites monitor how fast requests come from a particular IP address, and block if they come in too fast or are too regular.
+
+The `slomo` command line argument creates a lower bound on how fast the scraper issues HTTP requests. This is good when developing the system with `no-headless`. However, this is often more slow than is necessary for production, and does not support variation between navigation.
+
+To prevent the scraper from traversing to pages too quickly, the `super.goto()` method provides a drop-in replacement for `this.page.goto()` which adds a random delay between 1 second and `super.maxRandomWait` milliseconds (which currently defaults to 5000). So, use this method to automatically throttle your scraper's frequency of page requests, and to add some variation. You can change the `maxRandomWait` variable in your constructor if you determine you need a different level of variability.
+
+However, this approach won't work if you navigate using `this.page.click()`. In this case, you will have to manually insert a pause.  To make it easier to wait a random amount of time, you can use `super.randomWait()`.
+
+### Assessing our configuration
+
+As noted in the references section above, there are a number of sites that you can visit with your scraper which will assess its configuration and how likely it is to be tagged as a bot.  To facilitate this process, I have created a [Test Scraper](https://github.com/internaloha/internaloha/blob/master/scrapers-v2/scrapers/Scraper.test.ts) that visits these sites and takes snapshots of the results.  It generates screenshots with the suffix '.test.png', which are gitignored.
+
+You can run this assessment in the standard way. Here is an example run:
+
+```
+$ npm run scrape -- -s test
+
+> scraper@2.0.0 scrape
+> ts-node -P tsconfig.buildScripts.json scrape.ts "-s" "test"
+
+11:56:02 WARN TEST Launching TEST scraper
+11:56:02 INFO TEST Run checkStealthUsage()
+11:56:14 INFO TEST Screenshot at: test-stealthUsage.test.png
+11:56:14 INFO TEST Run checkRequestHeaders()
+11:56:25 INFO TEST Screenshot at: test-headers.test.png
+11:56:25 INFO TEST Run checkBrowserFingerPrint()
+11:56:36 INFO TEST Screenshot at: test-browserFingerPrint.test.png
+11:56:36 INFO TEST Run checkBotChallenge()
+11:57:31 INFO TEST Screenshot at: test-botChallenge.test.png
+11:57:31 INFO TEST Run checkProxyVPN()
+11:57:40 INFO TEST Screenshot at: test-proxyvpn.test.png
+11:57:40 INFO TEST Wrote 0 listings.
+11:57:40 INFO TEST Wrote statistics.
+```
+
+I have changed the '.test.png' suffix to '.png' and moved them into the test-screenshots directory so that you can see results of these tests in the repo without running them yourself and to serve as a basis for discussion:
+
+* https://github.com/internaloha/internaloha/tree/master/scrapers-v2/test-screenshots
+
+
+### What to do next
+
+Here are some things to think about:
+
+1. Read the links and reference material to become more aware of web scraping issues.
+
+2. In your scraper, consider changing `this.page.goto()` to `super.goto()`. This will automatically add some delay and rotate the user agent. It will slow down scraping a bit, but add some variation to the delay.
+
+3. Review the Test scraper code, run it, inspect the screenshots, think about ways we can improve our code.
+
 

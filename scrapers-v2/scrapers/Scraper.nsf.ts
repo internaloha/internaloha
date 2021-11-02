@@ -16,12 +16,12 @@ export class NsfScraper extends Scraper {
 
   async login() {
     super.login();
-    await this.page.goto(this.url);
+    await super.goto(this.url);
   }
 
   async generateListings() {
     super.generateListings();
-    await this.page.goto('https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5049');
+    await super.goto('https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5049');
     await this.page.waitForSelector('button[id="itemsperpage_top"]');
     await this.page.click('button[id="itemsperpage_top"]');
     await this.page.waitForSelector('a[onclick="showItemsPerPageForm(event, \'All\', \'?unitid=5049\')"]');

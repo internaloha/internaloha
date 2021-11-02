@@ -1,5 +1,5 @@
 import { Scraper } from './Scraper';
-import {Listing} from './Listing';
+import { Listing } from './Listing';
 
 const prefix = require('loglevel-plugin-prefix');
 
@@ -15,30 +15,38 @@ export class CiscoScraper extends Scraper {
   }
 
   async login() {
-    super.login();
+    await super.login();
   }
 
   async generateListings() {
-    super.generateListings();
+    await super.generateListings();
     await this.page.goto(this.url);
 
     const nextLink = 'div[class="pagination autoClearer"] a:last-child';
     const urls = [];
-    do {
+    urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
+    while (await super.selectorExists(nextLink)) {
       // process page
+      await this.page.click(nextLink);
       urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
-      this.log.info(`URLS: \n${urls}`);
-    } while (await super.selectorExists(nextLink));
-
+    }
+    this.log.debug(`URLS: \n${urls}`);
+    this.log.debug(`URL length: \n${urls.length}`);
     const descriptions = [];
     const positions = [];
     const locations = [];
     const cities = [];
     const states = [];
-    for (const url of urls) {
-      await this.page.goTo(url);
-      positions.push(super.getValues('h2[itemprop="title"]', 'innerText'));
-      descriptions.push(super.getValues('div[itemprop="description"]', 'innerText'));
+    this.log.debug(`URL: \n${urls[0]}`);
+    const urlTemp = urls[0];
+    const urlArr = urlTemp.slice(',');
+    this.log.debug(`URL length: \n${urlArr.length}`);
+    for (const url of urlArr) {
+      this.log.debug(`URL: \n${url}`);
+
+      await this.page.goto(url);
+      positions.push(await super.getValues('h2[itemprop="title"]', 'innerText'));
+      descriptions.push(await super.getValues('div[itemprop="description"]', 'innerText'));
       let location: any[];
       location = await super.getValues('div[itemprop="jobLocation"]', 'innerText');
       locations.push(location);
@@ -51,9 +59,9 @@ export class CiscoScraper extends Scraper {
     }
 
     // Now we add listings. All arrays are (hopefully!) the same length.
-    for (let i = 0; i < urls.length; i++) {
+    for (let i = 0; i < urlArr.length; i++) {
       const location = { city: cities[i], state: states[i], country: '' };
-      const listing = new Listing({ url: urls[i], position: positions[i], location, description: descriptions[i] });
+      const listing = new Listing({ url: urlArr[i], position: positions[i], location, company: 'Cisco', description: descriptions[i] });
       this.listings.addListing(listing);
     }
   }
