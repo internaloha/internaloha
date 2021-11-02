@@ -27,7 +27,7 @@ export class CiscoScraper extends Scraper {
     urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
     while (await super.selectorExists(nextLink)) {
       // process page
-      await this.page.click('div[class="pagination autoClearer"] a:last-child');
+      await this.page.click(nextLink);
       urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
     }
     this.log.debug(`URLS: \n${urls}`);

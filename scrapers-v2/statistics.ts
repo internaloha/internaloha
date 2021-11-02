@@ -24,7 +24,7 @@ const options = program.opts();
 // const directory = `${options.statisticsDir}/${options.discipline}`;
 const directory = path.join(options.statisticsDir, options.discipline);
 
-const statisticsFiles = fs.readdirSync(directory).filter(file => path.extname(file) === '.json');
+const statisticsFiles = fs.readdirSync(directory).filter(file => (path.extname(file) === '.json') && (!path.basename(file).endsWith('dev.json')));
 const statistics = [];
 
 // Initialize the statistics array with all statistics in the statistics dir.
