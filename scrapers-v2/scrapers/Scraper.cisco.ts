@@ -24,12 +24,12 @@ export class CiscoScraper extends Scraper {
 
     const nextLink = 'div[class="pagination autoClearer"] a:last-child';
     const urls = [];
-    do {
+    urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
+    while (await super.selectorExists(nextLink)) {
       // process page
-      urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
-
       await this.page.click('div[class="pagination autoClearer"] a:last-child');
-    } while (await super.selectorExists(nextLink));
+      urls.push(await super.getValues('table[class="table_basic-1 table_striped"] tbody tr td[data-th="Job Title"] a', 'href'));
+    }
     this.log.debug(`URLS: \n${urls}`);
     this.log.debug(`URL length: \n${urls.length}`);
     const descriptions = [];
