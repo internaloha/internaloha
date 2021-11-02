@@ -1,0 +1,10 @@
+{
+  "date": "2021-11-01",
+  "elapsedTime": 7,
+  "numErrors": 1,
+  "numListings": 0,
+  "errorMessages": [
+    "No node found for selector: div[class=\"pagination autoClearer\"] a:last-child"
+  ],
+  "scraper": "cisco"
+}

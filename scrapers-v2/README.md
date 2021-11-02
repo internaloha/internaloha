@@ -641,7 +641,15 @@ If the second problem is indeed a problem, then we need to generate valid User A
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
 ```
 
-We now have some sites we can test our Scraper against to see if it appears to be a bot. I suggest we not worry about bogus User Agents from random-useragent until these sites tell us to worry about it.
+One result of testing is that randomUserAgent, when called without arguments, will return some UserAgents that state that Windows is the operating system, and others that say Mac.  This is an issue because the Proxy/VPN test shows that a site can compare the TCP/IP OS value against the UserAgent OS value and flag if there is an error. See [the screenshot](https://github.com/internaloha/internaloha/blob/master/scrapers-v2/test-screenshots/test-proxyvpn.png).
+
+We can fix this with a command line option to set the OS, which can be passed into the randomUserAgent as follows:
+
+```js
+randomUseragent.getRandom(function (ua) {
+    return ua.osName === 'mac';
+});
+```
 
 
 ### Improve the request headers
