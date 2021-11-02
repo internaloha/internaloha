@@ -5,7 +5,7 @@ import { Listings } from './Listings';
 import * as prefix from 'loglevel-plugin-prefix';
 import * as moment from 'moment';
 import * as fs from 'fs';
-import * as randomUserAgent from 'random-useragent';
+import * as UserAgent from 'user-agents';
 
 // For some reason, the following package(s) generate TS errors if I use import.
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
@@ -119,18 +119,25 @@ export class Scraper {
     const context = await this.browser.createIncognitoBrowserContext();
     this.page = await context.newPage();
     await this.page.setViewport({ width: this.viewportWidth, height: this.viewportHeight });
-    await this.page.setUserAgent(randomUserAgent.getRandom());
+    await this.setUserAgent();
     await this.page.setDefaultTimeout(this.defaultTimeout);
     await this.page.setExtraHTTPHeaders(this.requestHeaders);
+    await this.page.evaluateOnNewDocument(() => { delete navigator['__proto__']['webdriver']; });
     // Echo console messages from puppeteer in this process
     this.page.on('console', (msg) => this.log.debug(`PUPPETEER CONSOLE: ${msg.text()}`));
   }
 
+  async setUserAgent() {
+    const platform = (process.platform === 'darwin') ? 'MacIntel' : 'Win32';
+    const options = { deviceCategory: 'desktop', platform };
+    const userAgent = new UserAgent(options);
+    this.log.debug(`Setting User Agent to: ${userAgent.toString()}.`);
+    await this.page.setUserAgent(userAgent.toString());
+  }
+
   async goto(url: string, options = {newUserAgent: true, randomWait: true}) {
     if (options.newUserAgent) {
-      const newAgent = randomUserAgent.getRandom();
-      this.log.debug(`Setting User Agent to: ${newAgent}.`);
-      await this.page.setUserAgent(newAgent);
+      await this.setUserAgent();
     }
     if (options.randomWait) {
       await this.randomWait();

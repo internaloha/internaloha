@@ -626,32 +626,6 @@ If you are getting blocked by the site, see if you can scrape the Google cache v
 
 While this can result in a somewhat out-of-date version of the site, it's normally just a few days or weeks old, which is plenty recent enough for us.
 
-### Improve the User Agent setting
-
-We are currently using the NPM package random-useragent to set the User Agent at the beginning of the session. There are a couple of issues with this approach:
-
-1. Some sites recommend that we rotate the User Agent each time we retrieve a page, not just once per session.
-2. However, this package has not been updated in a year and it depends upon a system called User Agent Switcher which is no longer maintained. Thus, it is somewhat possible that these randomly generated User Agent strings are not valid.
-
-To satisfy the first problem, there is now a Scraper method that you can invoke with `super.goto()`. This is intended as a drop-in replacement for `this.page.goto()`. One of the things it does is to reset the User Agent to a new random string before calling `this.page.goto()``.
-
-If the second problem is indeed a problem, then we need to generate valid User Agents.  If we want to generate a single known-good user agent string, then we can use [whastmyua.info](https://www.whatsmyua.info/) to get a user agent string associated with a current browser. For example, I just ran it and here is my User Agent string:
-
-```
-Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
-```
-
-One result of testing is that randomUserAgent, when called without arguments, will return some UserAgents that state that Windows is the operating system, and others that say Mac.  This is an issue because the Proxy/VPN test shows that a site can compare the TCP/IP OS value against the UserAgent OS value and flag if there is an error. See [the screenshot](https://github.com/internaloha/internaloha/blob/master/scrapers-v2/test-screenshots/test-proxyvpn.png).
-
-We can fix this with a command line option to set the OS, which can be passed into the randomUserAgent as follows:
-
-```js
-randomUseragent.getRandom(function (ua) {
-    return ua.osName === 'mac';
-});
-```
-
-
 ### Improve the request headers
 
 Some bot-detection algorithms investigate the request headers and flag those that appear suspicious. We can make the requst headers more realistic by making the scraper's request headers look similar to those from a regular web browser. You can use [https://httpbin.org/anything](https://httpbin.org/anything) to obtain your request headers. Here are mine:
