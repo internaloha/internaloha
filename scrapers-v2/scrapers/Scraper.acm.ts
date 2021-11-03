@@ -49,19 +49,20 @@ export class AcmScraper extends Scraper {
     await super.login();
     const searchUrl = `https://jobs.acm.org/jobs/?keywords=${this.searchTerms}&pos_flt=0&location=United+States&location_completion=city=$state=$country=United+States&location_type=country&location_text=United+States&location_autocomplete=true`;
     this.log.debug(`Going to ${searchUrl}`);
-    await this.page.goto(searchUrl);
+    await super.goto(searchUrl);
   }
 
   async processPage() {
     await this.page.waitForSelector('.job-result-tiles .job-tile');
     const tiles = await this.page.$$('.job-result-tiles .job-tile');
     const positions = await super.getValues('.job-result-tiles .job-tile .job-detail-row .job-title', 'innerText');
-    const urls = await super.getValues('.job-result-tiles .job-tile .job-detail-row .job-title', 'href');
+    const urls = await super.getValues('.job-result-tiles .job-tile .job-main-data .job-details .job-detail-row .job-title a', 'href');
+    this.log.debug(urls);
     const companies = await super.getValues('.job-result-tiles .job-tile .job-company-row', 'innerText');
     const locations = await super.getValues('.job-result-tiles .job-tile .job-location', 'innerText');
     this.log.debug(tiles.length, positions.length, companies.length, locations.length);
     for (let i = 0; i < positions.length; i++) {
-      await this.page.waitForTimeout(1000);
+      await super.randomWait();
       const position = positions[i];
 
       if (position.includes('intern') || position.includes('Intern')) {
@@ -69,7 +70,8 @@ export class AcmScraper extends Scraper {
         // if (i !== 0) {
         await Promise.all([
           tiles[i].click(),
-          this.page.waitForTimeout(2500), // 1500 is not long enough
+          this.page.waitForSelector('#job-search-spinner[style="display:none"]'),
+          // this.page.waitForTimeout(2500), // 1500 is not long enough
           // this.page.waitForNavigation({
           //   waitUntil: 'networkidle0',
           // }),
