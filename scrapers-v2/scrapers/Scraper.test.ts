@@ -109,6 +109,15 @@ export class TestScraper extends Scraper {
     this.log.info(`Screenshot at: ${screenshotPath}`);
   }
 
+  async checkDataDome() {
+    this.log.info('Run DataDome test page');
+    const screenshotPath = 'test-datadome.test.png';
+    await super.goto('https://antoinevastel.com/bots/datadome');
+    await this.page.waitForTimeout(5000);
+    await this.page.screenshot({ path: screenshotPath, fullPage: true });
+    this.log.info(`Screenshot at: ${screenshotPath}`);
+  }
+
   /** Run the tests as part of generateListings. */
   async generateListings() {
     await this.checkStealthUsage();
@@ -116,6 +125,7 @@ export class TestScraper extends Scraper {
     await this.checkBrowserFingerPrint();
     await this.checkBotChallenge();
     await this.checkProxyVPN();
+    await this.checkDataDome();
   }
 
 }
