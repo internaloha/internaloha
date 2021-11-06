@@ -20,23 +20,28 @@ export class LinkedinScraper extends Scraper {
 
   async getData() {
     const results = [];
-    for (let i = 0; i < 5; i++) {
-      results.push(await super.getValues( 'h2[class="top-card-layout__title topcard__title"]', 'innerHTML'));
-      results.push(await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerHTML'));
-      results.push(await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerHTML'));
-      results.push(await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerHTML'));
-      results.push(await super.getValues('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML'));
-    }
+    results.push(await super.getValues( 'h1[class="top-card-layout__title topcard__title"]', 'innerHTML'));
+    results.push(await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerHTML'));
+    results.push(await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerHTML'));
+    results.push(await super.getValues('span[class="posted-time-ago__text topcard__flavor--metadata"]', 'innerHTML'));
+    results.push(await super.getValues('div[class="show-more-less-html__markup"]', 'innerHTML'));
+    // for (let i = 0; i < 5; i++) {
+    //   results.push(await super.getValues( 'h1[class="top-card-layout__title topcard__title"]', 'innerHTML'));
+    //   results.push(await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerHTML'));
+    //   results.push(await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerHTML'));
+    //   results.push(await super.getValues('span[class="posted-time-ago__text topcard__flavor--metadata"]', 'innerHTML'));
+    //   results.push(await super.getValues('div[class="show-more-less-html__markup"]', 'innerHTML'));
+    // }
     return Promise.all(results);
   }
 
   async getDataTwo() {
     const results = [];
     for (let i = 0; i < 5; i++) {
-      results.push(await super.getValues('h1[class="topcard__title"]', 'innerText'));
-      results.push(await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerText'));
-      results.push(await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerText'));
-      results.push(await super.getValues('span.topcard__flavor--metadata.posted-time-ago__text', 'innerText'));
+      results.push(await super.getValues('h1[class="top-card-layout__title topcard__title"]', 'innerHTML'));
+      results.push(await super.getValues('a[class="topcard__org-name-link topcard__flavor--black-link"]', 'innerHTML'));
+      results.push(await super.getValues('span[class="topcard__flavor topcard__flavor--bullet"]', 'innerHTML'));
+      results.push(await super.getValues('span[class="posted-time-ago__text topcard__flavor--metadata"]', 'innerHTML'));
       results.push(await super.getValues('div[class="show-more-less-html__markup show-more-less-html__markup--clamp-after-5"]', 'innerHTML'));
     }
     return Promise.all(results);
@@ -122,16 +127,17 @@ export class LinkedinScraper extends Scraper {
     const skippedURLs = [];
     const lastScraped = new Date();
 
-    for (let i = 0; i < elements.length; i++) {
+    for (let i = 0; i < urls.length; i++) {
       try {
-        const element = elements[i];
+        // const element = elements[i];
         // sometimes clicking it doesn't show the panel, try/catch to allow it to keep going
         try {
           this.log.debug('getting data for element ', i);
-          // await this.page.goto(urls[i]);
-          await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', {timeout: 1500});
+          await this.page.goto(urls[i]);
+          // await this.page.waitForSelector('div[class="details-pane__content details-pane__content--show"]', {timeout: 1500});
           // await this.page.waitForTimeout(1500);
           // eslint-disable-next-line prefer-const
+          this.log.debug('url: ', urls[i]);
 
           let [position, company, location, posted, description] = await this.getData();
           // this.log.debug(await this.getData());
@@ -161,14 +167,14 @@ export class LinkedinScraper extends Scraper {
           });
           this.log.info(position);
           totalInternships++;
-          this.log.info(this.listings);
+          // this.log.info(this.listings);
         } catch (err5) {
           this.log.info('LinkedIn', err5);
           this.log.info('Skipping! Did not load...');
           skippedURLs.push(urls[i]);
         }
-        this.log.debug('What is this element:', element);
-        await element.click();
+        // this.log.debug('What is this element:', element);
+        // await element.click();
         this.log.debug('click happened');
       } catch (e2) {
         this.log.info('Navigated off site... Redirecting back...');
@@ -177,8 +183,8 @@ export class LinkedinScraper extends Scraper {
 
         urls = await super.getValues('a.result-card__full-card-link', 'href');
       }
-      this.log.debug('What is this element 2:', elements[i + 1]);
-      await elements[i + 1].click();
+      // this.log.debug('What is this element 2:', elements[i + 1]);
+      // await elements[i + 1].click();
       this.log.debug('click 2 happened');
     }
 
@@ -186,7 +192,7 @@ export class LinkedinScraper extends Scraper {
     // scraping the ones we skipped
     for (let i = 0; i < skippedURLs.length; i++) {
       await this.page.goto(skippedURLs[i]);
-      await this.page.waitForSelector('section.core-rail');
+      // await this.page.waitForSelector('section.core-rail');
       const skills = 'N/A';
       // eslint-disable-next-line prefer-const
       const position = await super.getValues('h1[class="topcard__title"]', 'innerText');
